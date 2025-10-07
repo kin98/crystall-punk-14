@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14MobCatBase
-  parent: CP14SimpleMobBase
+  id: CE14MobCatBase
+  parent: CE14SimpleMobBase
   name: cat
   description: A cute small feline, that purrs when you pet it. Meow!
   categories: [ ForkFiltered ]
@@ -8,7 +8,7 @@
   components:
   - type: NpcFactionMember
     factions:
-    - CP14Cat
+    - CE14Cat
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
@@ -17,7 +17,7 @@
     baseSprintSpeed: 5
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Mobs/Animals/cat.rsi
+    sprite: _CE14/Mobs/Animals/cat.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: walking
@@ -52,7 +52,7 @@
       0: Alive
       50: Critical
       75: Dead
-  - type: CP14NightVision # Why do carcats have night vision, but not cats?
+  - type: CE14NightVision # Why do carcats have night vision, but not cats?
   - type: DamageStateVisuals
     states:
       Alive:
@@ -74,9 +74,9 @@
       collection: AlienClaw
     wideAnimation: WeaponArcClaw
   - type: GhostRole
-    name: cp14-ghost-role-information-cat-name
-    description: cp14-ghost-role-information-cat-description
-    rules: cp14-ghost-role-information-rules-pet
+    name: CE14-ghost-role-information-cat-name
+    description: CE14-ghost-role-information-cat-description
+    rules: CE14-ghost-role-information-rules-pet
     raffle:
       settings: short
   - type: GhostTakeoverAvailable
@@ -105,20 +105,20 @@
         Toxin: -0.02
   - type: Bloodstream
     bloodMaxVolume: 80
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: Tag
     tags:
       - CannotSuicide
 
 - type: entity
-  parent: CP14MobCatBase
-  id: CP14MobCatColoredWithSpotsBase
+  parent: CE14MobCatBase
+  id: CE14MobCatColoredWithSpotsBase
   categories: [ ForkFiltered ]
   abstract: true
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Mobs/Animals/cat.rsi
+    sprite: _CE14/Mobs/Animals/cat.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: walking
@@ -127,17 +127,17 @@
   - type: SpriteMovement
     movementLayers:
       movement:
-        sprite: _CP14/Mobs/Animals/cat.rsi
+        sprite: _CE14/Mobs/Animals/cat.rsi
         state: walking
       overlay:
-        sprite: _CP14/Mobs/Animals/cat.rsi
+        sprite: _CE14/Mobs/Animals/cat.rsi
         state: walking-overlay
     noMovementLayers:
       movement:
-        sprite: _CP14/Mobs/Animals/cat.rsi
+        sprite: _CE14/Mobs/Animals/cat.rsi
         state: lying
       overlay:
-        sprite: _CP14/Mobs/Animals/cat.rsi
+        sprite: _CE14/Mobs/Animals/cat.rsi
         state: lying-overlay
   - type: DamageStateVisuals
     states:
@@ -149,25 +149,25 @@
         BaseUnshaded: dead-overlay
 
 - type: entity
-  parent: CP14MobCatBase
-  id: CP14MobCatRandomColored
+  parent: CE14MobCatBase
+  id: CE14MobCatRandomColored
   suffix: "Colored"
   categories: [ ForkFiltered ]
   components:
   - type: RandomSprite
     available:
     - enum.DamageStateVisualLayers.Base:
-        walking: CP14CatColors
+        walking: CE14CatColors
 
 - type: entity
-  parent: CP14MobCatColoredWithSpotsBase
-  id: CP14MobCatRandomColoredWithSpots
+  parent: CE14MobCatColoredWithSpotsBase
+  id: CE14MobCatRandomColoredWithSpots
   suffix: "Colored, Spotted"
   categories: [ ForkFiltered ]
   components:
   - type: RandomSprite
     available:
     - enum.DamageStateVisualLayers.Base:
-        walking: CP14CatColors
+        walking: CE14CatColors
     - enum.DamageStateVisualLayers.BaseUnshaded:
-        walking-overlay: CP14CatColors
+        walking-overlay: CE14CatColors

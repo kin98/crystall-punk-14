@@ -124,7 +124,7 @@ public sealed class ClothingSpeedModifierSystem : EntitySystem
         }
     }
 
-    //CP14 - Public API for edit component
+    //CE14 - Public API for edit component
     public void EditSpeedModifiers(EntityUid uid, float walkModifier, float sprintModifier, ClothingSpeedModifierComponent? component = null)
     {
         if (!Resolve(uid, ref component))
@@ -138,5 +138,5 @@ public sealed class ClothingSpeedModifierSystem : EntitySystem
             _movementSpeed.RefreshMovementSpeedModifiers(container.Owner);
         }
     }
-    //CP14 - Public API for edit component end
+    //CE14 - Public API for edit component end
 }

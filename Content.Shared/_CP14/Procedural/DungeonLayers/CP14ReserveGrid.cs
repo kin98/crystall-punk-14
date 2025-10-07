@@ -6,6 +6,6 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared.Procedural.DungeonLayers;
 
 [Virtual]
-public partial class CP14ReserveGrid : IDunGenLayer
+public partial class CE14ReserveGrid : IDunGenLayer
 {
 }

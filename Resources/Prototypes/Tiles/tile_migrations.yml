@@ -1,16 +1,16 @@
-### CP14 UPD
+### CE14 UPD
 - type: tileAlias
-  id: CP14FloorWoodPlanks
-  target: CP14FloorOakWoodPlanks
+  id: CE14FloorWoodPlanks
+  target: CE14FloorOakWoodPlanks
 
 - type: tileAlias
-  id: CP14FloorWoodPlanksBig
-  target: CP14FloorOakWoodPlanksBig
+  id: CE14FloorWoodPlanksBig
+  target: CE14FloorOakWoodPlanksBig
 
 - type: tileAlias
-  id: CP14FloorStonebricksWeather
+  id: CE14FloorStonebricksWeather
   target: FloorIce
-### /CP14 UPD
+### /CE14 UPD
 
 - type: tileAlias
   id: FloorBasaslt

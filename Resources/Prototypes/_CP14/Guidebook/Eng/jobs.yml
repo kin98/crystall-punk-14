@@ -1,45 +1,45 @@
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Jobs
+  id: CE14_EN_Jobs
   name: Jobs
-  text: "/ServerInfo/_CP14/Guidebook_EN/Jobs.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/Jobs.xml"
   children:
-  - CP14_EN_JobAdventurer
-  - CP14_EN_JobAlchemist
-  - CP14_EN_JobInnkeeper
-  - CP14_EN_Patrons
+  - CE14_EN_JobAdventurer
+  - CE14_EN_JobAlchemist
+  - CE14_EN_JobInnkeeper
+  - CE14_EN_Patrons
   filterEnabled: True
 
 
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_JobAdventurer
+  id: CE14_EN_JobAdventurer
   name: Adventurers
-  text: "/ServerInfo/_CP14/Guidebook_EN/JobsTabs/Adventurers.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/JobsTabs/Adventurers.xml"
   children:
-  - CP14_EN_Monster_Toxins
+  - CE14_EN_Monster_Toxins
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_JobAlchemist
+  id: CE14_EN_JobAlchemist
   name: Alchemist
-  text: "/ServerInfo/_CP14/Guidebook_EN/JobsTabs/Alchemist.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/JobsTabs/Alchemist.xml"
   children:
-  - CP14_EN_Alchemy
+  - CE14_EN_Alchemy
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_JobInnkeeper
+  id: CE14_EN_JobInnkeeper
   name: Innkeepers
-  text: "/ServerInfo/_CP14/Guidebook_EN/JobsTabs/Innkeepers.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/JobsTabs/Innkeepers.xml"
   children:
-  - CP14_EN_Cooking
+  - CE14_EN_Cooking
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Patrons
+  id: CE14_EN_Patrons
   name: Patrons
-  text: "/ServerInfo/_CP14/Guidebook_EN/JobsTabs/Patrons.xml" 
+  text: "/ServerInfo/_CE14/Guidebook_EN/JobsTabs/Patrons.xml" 
   filterEnabled: True

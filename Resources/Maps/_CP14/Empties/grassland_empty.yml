@@ -14,36 +14,36 @@ orphans: []
 nullspace: []
 tilemap:
   0: Space
-  9: CP14FloorBase
-  10: CP14FloorBirchWoodPlanks
-  15: CP14FloorBirchWoodPlanksBig
-  21: CP14FloorBirchWoodPlanksCruciform
-  20: CP14FloorDarkWoodPlanksBig
-  8: CP14FloorDarkWoodPlanksStairways
-  2: CP14FloorDirt
-  4: CP14FloorFoundation
-  28: CP14FloorGrass
-  29: CP14FloorGrassLight
-  30: CP14FloorGrassTall
-  31: CP14FloorIce
-  26: CP14FloorLucensWoodPlanksCruciform
-  27: CP14FloorLucensWoodPlanksStairways
-  14: CP14FloorMarble
-  5: CP14FloorOakWoodPlanks
-  19: CP14FloorOakWoodPlanksBig
-  6: CP14FloorOakWoodPlanksCruciform
-  7: CP14FloorOakWoodPlanksStairways
-  1: CP14FloorSand
-  23: CP14FloorSnow
-  24: CP14FloorSnowDeep
-  22: CP14FloorSnowDeepDeep
-  3: CP14FloorStonebricks
-  13: CP14FloorStonebricksSmallCarved1
-  17: CP14FloorStonebricksSmallCarved2
-  25: CP14FloorStonebricksSnowed
-  16: CP14FloorStonebricksSquareCarved
-  11: CP14FloorWoodPlanksBurned
-  12: CP14FloorWoodPlanksStairwaysBurned
+  9: CE14FloorBase
+  10: CE14FloorBirchWoodPlanks
+  15: CE14FloorBirchWoodPlanksBig
+  21: CE14FloorBirchWoodPlanksCruciform
+  20: CE14FloorDarkWoodPlanksBig
+  8: CE14FloorDarkWoodPlanksStairways
+  2: CE14FloorDirt
+  4: CE14FloorFoundation
+  28: CE14FloorGrass
+  29: CE14FloorGrassLight
+  30: CE14FloorGrassTall
+  31: CE14FloorIce
+  26: CE14FloorLucensWoodPlanksCruciform
+  27: CE14FloorLucensWoodPlanksStairways
+  14: CE14FloorMarble
+  5: CE14FloorOakWoodPlanks
+  19: CE14FloorOakWoodPlanksBig
+  6: CE14FloorOakWoodPlanksCruciform
+  7: CE14FloorOakWoodPlanksStairways
+  1: CE14FloorSand
+  23: CE14FloorSnow
+  24: CE14FloorSnowDeep
+  22: CE14FloorSnowDeepDeep
+  3: CE14FloorStonebricks
+  13: CE14FloorStonebricksSmallCarved1
+  17: CE14FloorStonebricksSmallCarved2
+  25: CE14FloorStonebricksSnowed
+  16: CE14FloorStonebricksSquareCarved
+  11: CE14FloorWoodPlanksBurned
+  12: CE14FloorWoodPlanksStairwaysBurned
   18: FloorIce
 entities:
 - proto: ""
@@ -61,12 +61,12 @@ entities:
       data: {}
 #    - type: BecomesStation
 #      id: Comoss # ENTER YOUR NAME OR DELETE IT
-    - type: CP14WeatherController
+    - type: CE14WeatherController
       entries:
       - weight: 3
         visuals: null
-      - visuals: CP14Mist
-      - visuals: CP14Rain
+      - visuals: CE14Mist
+      - visuals: CE14Rain
     - type: LightCycle
     - type: SunShadow
     - type: SunShadowCycle
@@ -101,7 +101,7 @@ entities:
     - type: SpreaderGrid
     - type: Shuttle
     - type: GridPathfinding
-    - type: CP14CloudShadows
+    - type: CE14CloudShadows
     - type: MapLight
       ambientLightColor: '#D8B059FF'
     - type: Gravity

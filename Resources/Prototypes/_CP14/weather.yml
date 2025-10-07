@@ -1,7 +1,7 @@
 - type: weather
-  id: CP14Rain
+  id: CE14Rain
   sprite:
-    sprite: /Textures/_CP14/Effects/weather.rsi
+    sprite: /Textures/_CE14/Effects/weather.rsi
     state: rain
   sound:
     collection: Rain
@@ -20,9 +20,9 @@
         Water: 5
 
 - type: weather
-  id: CP14Storm
+  id: CE14Storm
   sprite:
-    sprite: /Textures/_CP14/Effects/weather.rsi
+    sprite: /Textures/_CE14/Effects/weather.rsi
     state: storm
   sound:
     path: /Audio/Effects/Weather/rain_heavy.ogg
@@ -40,45 +40,45 @@
       - !type:ExtinguishReaction
     - !type:SpawnEntityOnTop
       prob: 0.25
-      entity: CP14SkyLightning
+      entity: CE14SkyLightning
     - !type:RefillSolutions
       prob: 0.5
       reagents:
         Water: 5
 
 - type: weather
-  id: CP14Mist
+  id: CE14Mist
   offsetSpeed: 0.04, 0.06
   color: "#a9c4bf"
   alpha: 0.8
   sprite:
-    sprite: /Textures/_CP14/Effects/parallax.rsi
+    sprite: /Textures/_CE14/Effects/parallax.rsi
     state: noise
 
 - type: weather
-  id: CP14ManaMist
+  id: CE14ManaMist
   offsetSpeed: 0.56, -0.36
   color: "#91a1bf"
   alpha: 0.7
   sprite:
-    sprite: /Textures/_CP14/Effects/parallax.rsi
+    sprite: /Textures/_CE14/Effects/parallax.rsi
     state: noise
   config:
   - effects:
     - !type:ApplyEntityEffect
       prob: 0.5
       effects:
-        - !type:CP14ManaChange
+        - !type:CE14ManaChange
           manaDelta: 8
           safe: true
 
 - type: weather
-  id: CP14AntiManaMist
+  id: CE14AntiManaMist
   offsetSpeed: -0.56, -0.31
   color: "#302a2a"
   alpha: 0.8
   sprite:
-    sprite: /Textures/_CP14/Effects/parallax.rsi
+    sprite: /Textures/_CE14/Effects/parallax.rsi
     state: noise
   sound:
     path: /Audio/Ambience/anomaly_scary.ogg
@@ -90,14 +90,14 @@
     - !type:ApplyEntityEffect
       prob: 0.5
       effects:
-        - !type:CP14ManaChange
+        - !type:CE14ManaChange
           manaDelta: -10
           safe: true
 
 - type: weather
-  id: CP14SnowLight
+  id: CE14SnowLight
   sprite:
-    sprite: /Textures/_CP14/Effects/weather.rsi
+    sprite: /Textures/_CE14/Effects/weather.rsi
     state: snowfall_light
   #config:
   #- effects:
@@ -108,9 +108,9 @@
     #    amount: -20000
 
 - type: weather
-  id: CP14SnowMedium
+  id: CE14SnowMedium
   sprite:
-    sprite: /Textures/_CP14/Effects/weather.rsi
+    sprite: /Textures/_CE14/Effects/weather.rsi
     state: snowfall_med
   sound:
     path: /Audio/Effects/Weather/snowstorm.ogg
@@ -126,9 +126,9 @@
     #    amount: -40000
 
 - type: weather
-  id: CP14SnowHeavy
+  id: CE14SnowHeavy
   sprite:
-    sprite: /Textures/_CP14/Effects/weather.rsi
+    sprite: /Textures/_CE14/Effects/weather.rsi
     state: snowfall_heavy
   sound:
     path: /Audio/Effects/Weather/snowstorm.ogg
@@ -144,9 +144,9 @@
     #    amount: -60000
 
 - type: weather
-  id: CP14SnowHeavyWithStorm
+  id: CE14SnowHeavyWithStorm
   sprite:
-    sprite: /Textures/_CP14/Effects/weather.rsi
+    sprite: /Textures/_CE14/Effects/weather.rsi
     state: snowfall_heavy
   sound:
     path: /Audio/Effects/Weather/snowstorm.ogg
@@ -160,7 +160,7 @@
     effects:
     - !type:SpawnEntityOnTop
       prob: 0.25
-      entity: CP14SkyLightning
+      entity: CE14SkyLightning
   #- effects:
     #- !type:ApplyEntityEffect
     #  prob: 1
@@ -169,7 +169,7 @@
     #    amount: -60000
 
 - type: weather
-  id: CP14FireStorm
+  id: CE14FireStorm
   sprite:
     sprite: /Textures/Effects/weather.rsi
     state: ashfall
@@ -193,7 +193,7 @@
       - !type:Ignite
 
 - type: weather
-  id: CP14DemiplaneDestructionStorm
+  id: CE14DemiplaneDestructionStorm
   sprite:
     sprite: /Textures/Effects/weather.rsi
     state: snowfall_heavy
@@ -207,5 +207,5 @@
     effects:
     - !type:SpawnEntityOnTop
       prob: 0.25
-      entity: CP14SkyLightningPurple
+      entity: CE14SkyLightningPurple
 

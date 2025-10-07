@@ -1,86 +1,86 @@
-- type: CP14Recipe
-  id: CP14SeedWheat
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14SeedWheat
+  tag: CE14RecipeCooking
   craftTime: 1
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14Wheat
+    protoId: CE14Wheat
     count: 1
-  result: CP14SeedWheat
+  result: CE14SeedWheat
   resultCount: 3
 
-- type: CP14Recipe
-  id: CP14SeedTomato
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14SeedTomato
+  tag: CE14RecipeCooking
   craftTime: 1
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodTomatoes
+    protoId: CE14FoodTomatoes
     count: 1
-  result: CP14SeedTomato
+  result: CE14SeedTomato
   resultCount: 3
 
-- type: CP14Recipe
-  id: CP14SeedCabbage
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14SeedCabbage
+  tag: CE14RecipeCooking
   craftTime: 1
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodCabbage
+    protoId: CE14FoodCabbage
     count: 1
-  result: CP14SeedCabbage
+  result: CE14SeedCabbage
   resultCount: 3
 
-- type: CP14Recipe
-  id: CP14SeedPumpkin
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14SeedPumpkin
+  tag: CE14RecipeCooking
   craftTime: 1
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodPumpkin
+    protoId: CE14FoodPumpkin
     count: 1
-  result: CP14SeedPumpkin
+  result: CE14SeedPumpkin
   resultCount: 3
 
-- type: CP14Recipe
-  id: CP14SeedCucumber
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14SeedCucumber
+  tag: CE14RecipeCooking
   craftTime: 1
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodCucumber
+    protoId: CE14FoodCucumber
     count: 1
-  result: CP14SeedCucumber
+  result: CE14SeedCucumber
 
-- type: CP14Recipe
-  id: CP14SeedPepper
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14SeedPepper
+  tag: CE14RecipeCooking
   craftTime: 1
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodPepper
+    protoId: CE14FoodPepper
     count: 1
-  result: CP14SeedPepper
+  result: CE14SeedPepper
   resultCount: 2
 
-- type: CP14Recipe
-  id: CP14SeedSage
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14SeedSage
+  tag: CE14RecipeCooking
   craftTime: 1
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14WildSage
+    protoId: CE14WildSage
     count: 1
-  result: CP14SeedSage
+  result: CE14SeedSage
   resultCount: 2
 
-- type: CP14Recipe
-  id: CP14SeedCotton
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14SeedCotton
+  tag: CE14RecipeCooking
   craftTime: 1
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14Cotton
+    protoId: CE14Cotton
     count: 1
-  result: CP14SeedCotton
+  result: CE14SeedCotton
   resultCount: 2

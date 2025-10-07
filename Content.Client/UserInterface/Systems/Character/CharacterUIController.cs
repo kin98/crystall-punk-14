@@ -168,8 +168,8 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
                 conditionControl.ProgressTexture.Progress = condition.Progress;
                 var titleMessage = new FormattedMessage();
                 var descriptionMessage = new FormattedMessage();
-                titleMessage.TryAddMarkup(condition.Title, out _); //CP14 colored objective text support
-                descriptionMessage.TryAddMarkup(condition.Description, out _); //CP14 colored objective text support
+                titleMessage.TryAddMarkup(condition.Title, out _); //CE14 colored objective text support
+                descriptionMessage.TryAddMarkup(condition.Description, out _); //CE14 colored objective text support
 
                 conditionControl.Title.SetMessage(titleMessage);
                 conditionControl.Description.SetMessage(descriptionMessage);

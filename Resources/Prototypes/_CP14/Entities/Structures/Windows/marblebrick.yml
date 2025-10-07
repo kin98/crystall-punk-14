@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14WindowMarbleBrick
-  parent: CP14WindowBase
+  id: CE14WindowMarbleBrick
+  parent: CE14WindowBase
   name: marble brick window
   description: A marble brick wall with a glass window in it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/marble_bricks_window.rsi
+    sprite: _CE14/Structures/Windows/marble_bricks_window.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/marble_bricks_window.rsi
+    sprite: _CE14/Structures/Windows/marble_bricks_window.rsi
     state: full
   - type: Destructible
     thresholds:
@@ -20,29 +20,29 @@
           collection: WindowShatter
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14GlassShard:
+          CE14GlassShard:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ChangeConstructionNodeBehavior
-        node: CP14WindowMarbleBrickBroken
+        node: CE14WindowMarbleBrickBroken
   - type: Construction
-    graph: CP14WindowMarbleBrick
-    node: CP14WindowMarbleBrick
+    graph: CE14WindowMarbleBrick
+    node: CE14WindowMarbleBrick
 
 - type: entity
-  id: CP14WindowFrameMarbleBrick
+  id: CE14WindowFrameMarbleBrick
   name: marble brick window frame
-  parent: CP14BaseWindowFrame
+  parent: CE14BaseWindowFrame
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/marble_bricks_window_frame.rsi
+    sprite: _CE14/Structures/Windows/marble_bricks_window_frame.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/marble_bricks_window_frame.rsi
+    sprite: _CE14/Structures/Windows/marble_bricks_window_frame.rsi
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14RockStructural
+    damageModifierSet: CE14RockStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -51,7 +51,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14MarbleBlock1:
+          CE14MarbleBlock1:
             min: 1
             max: 2
       - !type:PlaySoundBehavior
@@ -62,20 +62,20 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14WindowMarbleBrick
-    node: CP14WindowFrameMarbleBrick
+    graph: CE14WindowMarbleBrick
+    node: CE14WindowFrameMarbleBrick
 
 - type: entity
-  id: CP14WindowMarbleBrickBroken
+  id: CE14WindowMarbleBrickBroken
   name: shattered marble brick window
   parent:
-  - CP14BaseWindowFrameBroken
-  - CP14WindowFrameMarbleBrick
+  - CE14BaseWindowFrameBroken
+  - CE14WindowFrameMarbleBrick
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/marble_bricks_window_broken.rsi
+    sprite: _CE14/Structures/Windows/marble_bricks_window_broken.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/marble_bricks_window_broken.rsi
+    sprite: _CE14/Structures/Windows/marble_bricks_window_broken.rsi
   - type: Construction
-    graph: CP14WindowMarbleBrick
-    node: CP14WindowMarbleBrickBroken
+    graph: CE14WindowMarbleBrick
+    node: CE14WindowMarbleBrickBroken

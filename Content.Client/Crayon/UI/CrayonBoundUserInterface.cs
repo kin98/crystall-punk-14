@@ -29,7 +29,7 @@ namespace Content.Client.Crayon.UI
 
         private void PopulateCrayons()
         {
-            var crayonDecals = _protoManager.EnumeratePrototypes<DecalPrototype>().Where(x => x.Tags.Contains("CP14crayon")); //CP14 crayon
+            var crayonDecals = _protoManager.EnumeratePrototypes<DecalPrototype>().Where(x => x.Tags.Contains("CE14crayon")); //CE14 crayon
             _menu?.Populate(crayonDecals.ToList());
         }
 

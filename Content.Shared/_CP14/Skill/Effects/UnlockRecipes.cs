@@ -1,15 +1,15 @@
 using System.Text;
-using Content.Shared._CP14.Skill.Prototypes;
-using Content.Shared._CP14.Workbench.Prototypes;
-using Content.Shared._CP14.Workbench.Requirements;
+using Content.Shared._CE14.Skill.Prototypes;
+using Content.Shared._CE14.Workbench.Prototypes;
+using Content.Shared._CE14.Workbench.Requirements;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill.Effects;
+namespace Content.Shared._CE14.Skill.Effects;
 
 /// <summary>
 /// This effect only exists for parsing the description.
 /// </summary>
-public sealed partial class UnlockRecipes : CP14SkillEffect
+public sealed partial class UnlockRecipes : CE14SkillEffect
 {
     public override void AddSkill(IEntityManager entManager, EntityUid target)
     {
@@ -26,14 +26,14 @@ public sealed partial class UnlockRecipes : CP14SkillEffect
         return null;
     }
 
-    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CP14SkillPrototype> skill)
+    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CE14SkillPrototype> skill)
     {
-        var allRecipes = protoManager.EnumeratePrototypes<CP14WorkbenchRecipePrototype>();
+        var allRecipes = protoManager.EnumeratePrototypes<CE14WorkbenchRecipePrototype>();
 
         var sb = new StringBuilder();
-        sb.Append(Loc.GetString("cp14-skill-desc-unlock-recipes") + "\n");
+        sb.Append(Loc.GetString("CE14-skill-desc-unlock-recipes") + "\n");
 
-        var affectedRecipes = new List<CP14WorkbenchRecipePrototype>();
+        var affectedRecipes = new List<CE14WorkbenchRecipePrototype>();
         foreach (var recipe in allRecipes)
         {
             foreach (var req in recipe.RequiredSkills)

@@ -1,12 +1,12 @@
 - type: entity
   parent: BaseFoam
-  id: CP14Mist
+  id: CE14Mist
   name: mist
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
-    sprite: _CP14/Effects/mist.rsi
+    sprite: _CE14/Effects/mist.rsi
     state: chemmist
   - type: TimedDespawn
     lifetime: 20

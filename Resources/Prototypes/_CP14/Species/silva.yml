@@ -1,39 +1,39 @@
 - type: species
-  id: CP14Silva
-  name: cp14-species-name-silva
+  id: CE14Silva
+  name: CE14-species-name-silva
   roundStart: true
-  prototype: CP14MobSilva
-  sprites: CP14MobSilvaSprites
-  markingLimits: CP14MobSilvaMarkingLimits
-  dollPrototype: CP14MobSilvaDummy
-  skinColoration: CP14SilvasHues
+  prototype: CE14MobSilva
+  sprites: CE14MobSilvaSprites
+  markingLimits: CE14MobSilvaMarkingLimits
+  dollPrototype: CE14MobSilvaDummy
+  skinColoration: CE14SilvasHues
   defaultSkinTone: "#6c741d"
-  maleFirstNames: CP14_Names_Silva_Male_First
-  femaleFirstNames: CP14_Names_Silva_Female_First
+  maleFirstNames: CE14_Names_Silva_Male_First
+  femaleFirstNames: CE14_Names_Silva_Female_First
   naming: First
 
 - type: speciesBaseSprites
-  id: CP14MobSilvaSprites
+  id: CE14MobSilvaSprites
   sprites:
-    Head: CP14MobSilvaHead
-    HeadTop: CP14MobSilvaAnyMarking
-    Hair: CP14MobSilvaAnyMarking
-    FacialHair: CP14MobSilvaAnyMarking
-    Snout: CP14MobSilvaMarkingMatchSkin
-    Tail: CP14MobSilvaAnyMarking
-    Chest: CP14MobSilvaTorso
-    Eyes: CP14MobSilvaEyes
-    LArm: CP14MobSilvaLArm
-    RArm: CP14MobSilvaRArm
-    LHand: CP14MobSilvaLHand
-    RHand: CP14MobSilvaRHand
-    LLeg: CP14MobSilvaLLeg
-    RLeg: CP14MobSilvaRLeg
-    LFoot: CP14MobSilvaLFoot
-    RFoot: CP14MobSilvaRFoot
+    Head: CE14MobSilvaHead
+    HeadTop: CE14MobSilvaAnyMarking
+    Hair: CE14MobSilvaAnyMarking
+    FacialHair: CE14MobSilvaAnyMarking
+    Snout: CE14MobSilvaMarkingMatchSkin
+    Tail: CE14MobSilvaAnyMarking
+    Chest: CE14MobSilvaTorso
+    Eyes: CE14MobSilvaEyes
+    LArm: CE14MobSilvaLArm
+    RArm: CE14MobSilvaRArm
+    LHand: CE14MobSilvaLHand
+    RHand: CE14MobSilvaRHand
+    LLeg: CE14MobSilvaLLeg
+    RLeg: CE14MobSilvaRLeg
+    LFoot: CE14MobSilvaLFoot
+    RFoot: CE14MobSilvaRFoot
 
 - type: markingPoints
-  id: CP14MobSilvaMarkingLimits
+  id: CE14MobSilvaMarkingLimits
   points:
     Hair:
       points: 1
@@ -61,136 +61,136 @@
       required: false
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaEyes
+  id: CE14MobSilvaEyes
   baseSprite:
-    sprite: _CP14/Mobs/Customization/eyes.rsi
+    sprite: _CE14/Mobs/Customization/eyes.rsi
     state: silva_eyes
     shader: unshaded
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaAnyMarking
+  id: CE14MobSilvaAnyMarking
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaMarkingMatchSkin
+  id: CE14MobSilvaMarkingMatchSkin
   markingsMatchSkin: true
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaHead
+  id: CE14MobSilvaHead
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: head
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaHeadFemale
+  id: CE14MobSilvaHeadFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: head
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaTorso
+  id: CE14MobSilvaTorso
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: torso
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaTorsoFemale
+  id: CE14MobSilvaTorsoFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: torso
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaLLeg
+  id: CE14MobSilvaLLeg
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: l_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaLLegFemale
+  id: CE14MobSilvaLLegFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: l_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaLArm
+  id: CE14MobSilvaLArm
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: l_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaLArmFemale
+  id: CE14MobSilvaLArmFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: l_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaLHand
+  id: CE14MobSilvaLHand
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaLHandFemale
+  id: CE14MobSilvaLHandFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaLFoot
+  id: CE14MobSilvaLFoot
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: l_foot
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaLFootFemale
+  id: CE14MobSilvaLFootFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: l_foot
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaRLeg
+  id: CE14MobSilvaRLeg
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: r_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaRLegFemale
+  id: CE14MobSilvaRLegFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: r_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaRArm
+  id: CE14MobSilvaRArm
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: r_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaRArmFemale
+  id: CE14MobSilvaRArmFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: r_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaRHand
+  id: CE14MobSilvaRHand
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: r_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaRHandFemale
+  id: CE14MobSilvaRHandFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: r_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaRFoot
+  id: CE14MobSilvaRFoot
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/parts.rsi
     state: r_foot
 
 
 - type: humanoidBaseSprite
-  id: CP14MobSilvaRFootFemale
+  id: CE14MobSilvaRFootFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Silva/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Silva/female_parts.rsi
     state: r_foot

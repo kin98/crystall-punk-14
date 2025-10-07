@@ -4,7 +4,7 @@
   sound:
     params:
       volume: -6
-    collection: CP14LoopWinds
+    collection: CE14LoopWinds
   rules: OpenWinds
 
 - type: ambientLoop
@@ -12,7 +12,7 @@
   sound:
     params:
       volume: 18
-    collection: CP14LoopWater
+    collection: CE14LoopWater
   rules: NearWater
 
 - type: ambientLoop
@@ -20,7 +20,7 @@
   sound:
     params:
       volume: -12
-    path: /Audio/_CP14/Effects/Lurker/ambient.ogg
+    path: /Audio/_CE14/Effects/Lurker/ambient.ogg
   rules: NearLurker
 
 - type: ambientLoop
@@ -28,7 +28,7 @@
   sound:
     params:
       volume: 2
-    collection: CP14LoopCave
+    collection: CE14LoopCave
   rules: CaveFloor
 
 - type: ambientLoop
@@ -36,7 +36,7 @@
   sound:
     params:
       volume: 2
-    collection: CP14LoopNightGrass
+    collection: CE14LoopNightGrass
   rules: GrassNight
 
 - type: ambientLoop
@@ -44,34 +44,34 @@
   sound:
     params:
       volume: 2
-    collection: CP14LoopForestDay
+    collection: CE14LoopForestDay
   rules: DayForest
 
 # Sound collections
 - type: soundCollection
-  id: CP14LoopWinds
+  id: CE14LoopWinds
   files:
-    - /Audio/_CP14/Ambience/Loops/winds.ogg
+    - /Audio/_CE14/Ambience/Loops/winds.ogg
 
 - type: soundCollection
-  id: CP14LoopWater
+  id: CE14LoopWater
   files:
-    - /Audio/_CP14/Ambience/Loops/water.ogg
+    - /Audio/_CE14/Ambience/Loops/water.ogg
 
 - type: soundCollection
-  id: CP14LoopCave
+  id: CE14LoopCave
   files:
-    - /Audio/_CP14/Ambience/Loops/cave.ogg
+    - /Audio/_CE14/Ambience/Loops/cave.ogg
 
 - type: soundCollection
-  id: CP14LoopNightGrass
+  id: CE14LoopNightGrass
   files:
-    - /Audio/_CP14/Ambience/Loops/ambiforest_night.ogg
+    - /Audio/_CE14/Ambience/Loops/ambiforest_night.ogg
 
 - type: soundCollection
-  id: CP14LoopForestDay
+  id: CE14LoopForestDay
   files:
-    - /Audio/_CP14/Ambience/Loops/ambiforest_day.ogg
+    - /Audio/_CE14/Ambience/Loops/ambiforest_day.ogg
 
 # Rules
 - type: rules
@@ -81,36 +81,36 @@
       ignoreAnchored: true
       percent: 0.5
       tiles:
-      - CP14FloorGrass
-      - CP14FloorGrassLight
-      - CP14FloorGrassTall
-      - CP14FloorDirt
-      - CP14FloorSand
+      - CE14FloorGrass
+      - CE14FloorGrassLight
+      - CE14FloorGrassTall
+      - CE14FloorDirt
+      - CE14FloorSand
       range: 5
 
 - type: rules
   id: GrassNight
   rules:
-    - !type:CP14IsNight
+    - !type:CE14IsNight
     - !type:NearbyTilesPercentRule
       ignoreAnchored: true
       percent: 0.5
       tiles:
-      - CP14FloorGrass
-      - CP14FloorGrassLight
-      - CP14FloorGrassTall
+      - CE14FloorGrass
+      - CE14FloorGrassLight
+      - CE14FloorGrassTall
       range: 5
 
 - type: rules
   id: DayForest
   rules:
-    - !type:CP14IsNight
+    - !type:CE14IsNight
       inverted: true
     - !type:NearbyEntitiesRule
       count: 3
       whitelist:
         tags:
-          - CP14AmbientForest
+          - CE14AmbientForest
 
 - type: rules
   id: CaveFloor
@@ -119,7 +119,7 @@
       ignoreAnchored: true
       percent: 0.5
       tiles:
-      - CP14FloorBase
+      - CE14FloorBase
       range: 5
 
 - type: rules
@@ -129,7 +129,7 @@
       count: 5
       whitelist:
         tags:
-          - CP14AmbientWater
+          - CE14AmbientWater
       range: 4
 
 - type: rules
@@ -139,6 +139,6 @@
       count: 1
       whitelist:
         tags:
-          - CP14AmbientLurker
+          - CE14AmbientLurker
       range: 6
 

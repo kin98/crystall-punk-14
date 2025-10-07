@@ -1,1 +1,1 @@
-cp14-closed-door-interact-popup = Заперто.
+CE14-closed-door-interact-popup = Заперто.

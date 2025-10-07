@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Text;
-using Content.Shared._CP14.LockKey.Components;
+using Content.Shared._CE14.LockKey.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
 using Content.Shared.Lock;
@@ -17,9 +17,9 @@ using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.LockKey;
+namespace Content.Shared._CE14.LockKey;
 
-public sealed class SharedCP14LockKeySystem : EntitySystem
+public sealed class SharedCE14LockKeySystem : EntitySystem
 {
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
@@ -31,8 +31,8 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
     [Dependency] private readonly UseDelaySystem _useDelay = default!;
 
     private EntityQuery<LockComponent> _lockQuery;
-    private EntityQuery<CP14LockComponent> _cp14LockQuery;
-    private EntityQuery<CP14KeyComponent> _keyQuery;
+    private EntityQuery<CE14LockComponent> _CE14LockQuery;
+    private EntityQuery<CE14KeyComponent> _keyQuery;
     private EntityQuery<DoorComponent> _doorQuery;
 
     public const int DepthComplexity = 2;
@@ -42,29 +42,29 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         base.Initialize();
 
         _lockQuery = GetEntityQuery<LockComponent>();
-        _cp14LockQuery = GetEntityQuery<CP14LockComponent>();
-        _keyQuery = GetEntityQuery<CP14KeyComponent>();
+        _CE14LockQuery = GetEntityQuery<CE14LockComponent>();
+        _keyQuery = GetEntityQuery<CE14KeyComponent>();
         _doorQuery = GetEntityQuery<DoorComponent>();
 
         //Interact
-        SubscribeLocalEvent<CP14KeyComponent, AfterInteractEvent>(OnKeyInteract);
-        SubscribeLocalEvent<CP14KeyRingComponent, AfterInteractEvent>(OnKeyRingInteract);
-        SubscribeLocalEvent<CP14LockComponent, AfterInteractEvent>(OnLockInteract);
+        SubscribeLocalEvent<CE14KeyComponent, AfterInteractEvent>(OnKeyInteract);
+        SubscribeLocalEvent<CE14KeyRingComponent, AfterInteractEvent>(OnKeyRingInteract);
+        SubscribeLocalEvent<CE14LockComponent, AfterInteractEvent>(OnLockInteract);
 
         //Verbs
-        SubscribeLocalEvent<CP14KeyComponent, GetVerbsEvent<UtilityVerb>>(GetKeysVerbs);
-        SubscribeLocalEvent<CP14KeyFileComponent, GetVerbsEvent<UtilityVerb>>(GetKeyFileVerbs);
-        SubscribeLocalEvent<CP14LockpickComponent, GetVerbsEvent<UtilityVerb>>(GetLockpickVerbs);
-        SubscribeLocalEvent<CP14LockEditerComponent, GetVerbsEvent<UtilityVerb>>(GetLockEditerVerbs);
+        SubscribeLocalEvent<CE14KeyComponent, GetVerbsEvent<UtilityVerb>>(GetKeysVerbs);
+        SubscribeLocalEvent<CE14KeyFileComponent, GetVerbsEvent<UtilityVerb>>(GetKeyFileVerbs);
+        SubscribeLocalEvent<CE14LockpickComponent, GetVerbsEvent<UtilityVerb>>(GetLockpickVerbs);
+        SubscribeLocalEvent<CE14LockEditerComponent, GetVerbsEvent<UtilityVerb>>(GetLockEditerVerbs);
 
-        SubscribeLocalEvent<CP14LockComponent, LockPickHackDoAfterEvent>(OnLockHacked);
-        SubscribeLocalEvent<CP14LockComponent, LockInsertDoAfterEvent>(OnLockInserted);
+        SubscribeLocalEvent<CE14LockComponent, LockPickHackDoAfterEvent>(OnLockHacked);
+        SubscribeLocalEvent<CE14LockComponent, LockInsertDoAfterEvent>(OnLockInserted);
 
-        SubscribeLocalEvent<CP14KeyComponent, ExaminedEvent>(OnKeyExamine);
-        SubscribeLocalEvent<CP14LockComponent, ExaminedEvent>(OnLockExamine);
+        SubscribeLocalEvent<CE14KeyComponent, ExaminedEvent>(OnKeyExamine);
+        SubscribeLocalEvent<CE14LockComponent, ExaminedEvent>(OnLockExamine);
     }
 
-    private void OnKeyRingInteract(Entity<CP14KeyRingComponent> keyring, ref AfterInteractEvent args)
+    private void OnKeyRingInteract(Entity<CE14KeyRingComponent> keyring, ref AfterInteractEvent args)
     {
         if (args.Handled)
             return;
@@ -78,10 +78,10 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         if (!_lockQuery.TryComp(args.Target, out _))
             return;
 
-        if (!_cp14LockQuery.TryComp(args.Target, out var cp14LockComp))
+        if (!_CE14LockQuery.TryComp(args.Target, out var CE14LockComp))
             return;
 
-        if (cp14LockComp.LockShape == null)
+        if (CE14LockComp.LockShape == null)
             return;
 
         if (!_timing.IsFirstTimePredicted)
@@ -97,21 +97,21 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
             if (keyComp.LockShape == null)
                 continue;
 
-            if (!keyComp.LockShape.SequenceEqual(cp14LockComp.LockShape))
+            if (!keyComp.LockShape.SequenceEqual(CE14LockComp.LockShape))
                 continue;
 
             TryUseKeyOnLock(args.User,
-                new Entity<CP14LockComponent>(args.Target.Value, cp14LockComp),
-                new Entity<CP14KeyComponent>(key, keyComp));
+                new Entity<CE14LockComponent>(args.Target.Value, CE14LockComp),
+                new Entity<CE14KeyComponent>(key, keyComp));
             args.Handled = true;
             return;
         }
 
         if (_timing.IsFirstTimePredicted)
-            _popup.PopupPredicted(Loc.GetString("cp14-lock-key-no-fit"), args.Target.Value, args.User);
+            _popup.PopupPredicted(Loc.GetString("CE14-lock-key-no-fit"), args.Target.Value, args.User);
     }
 
-    private void OnKeyInteract(Entity<CP14KeyComponent> key, ref AfterInteractEvent args)
+    private void OnKeyInteract(Entity<CE14KeyComponent> key, ref AfterInteractEvent args)
     {
         if (args.Handled)
             return;
@@ -122,7 +122,7 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         if (!_lockQuery.TryComp(args.Target, out _))
             return;
 
-        if (!_cp14LockQuery.TryComp(args.Target, out var cp14LockComp))
+        if (!_CE14LockQuery.TryComp(args.Target, out var CE14LockComp))
             return;
 
         if (!_timing.IsFirstTimePredicted)
@@ -130,11 +130,11 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
 
         args.Handled = true;
 
-        TryUseKeyOnLock(args.User, new Entity<CP14LockComponent>(args.Target.Value, cp14LockComp), key);
+        TryUseKeyOnLock(args.User, new Entity<CE14LockComponent>(args.Target.Value, CE14LockComp), key);
         args.Handled = true;
     }
 
-    private void OnLockInteract(Entity<CP14LockComponent> ent, ref AfterInteractEvent args)
+    private void OnLockInteract(Entity<CE14LockComponent> ent, ref AfterInteractEvent args)
     {
         if (args.Handled)
             return;
@@ -148,14 +148,14 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         if (!_lockQuery.TryComp(args.Target, out _))
             return;
 
-        if (!_cp14LockQuery.TryComp(args.Target, out var targetCp14LockComp))
+        if (!_CE14LockQuery.TryComp(args.Target, out var targetCE14LockComp))
             return;
 
         args.Handled = true;
 
-        if (targetCp14LockComp.LockShape is not null)
+        if (targetCE14LockComp.LockShape is not null)
         {
-            _popup.PopupPredicted(Loc.GetString("cp14-lock-insert-fail-have-lock",
+            _popup.PopupPredicted(Loc.GetString("CE14-lock-insert-fail-have-lock",
                     ("name", MetaData(args.Target.Value).EntityName)),
                 ent,
                 args.User);
@@ -166,7 +166,7 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
 
         args.Handled = true;
 
-        _popup.PopupPredicted(Loc.GetString("cp14-lock-insert-start", ("name", MetaData(args.Target.Value).EntityName), ("player", Identity.Name(args.User, EntityManager))),
+        _popup.PopupPredicted(Loc.GetString("CE14-lock-insert-start", ("name", MetaData(args.Target.Value).EntityName), ("player", Identity.Name(args.User, EntityManager))),
             ent,
             args.User);
 
@@ -185,18 +185,18 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         });
     }
 
-    private void OnLockInserted(Entity<CP14LockComponent> ent, ref LockInsertDoAfterEvent args)
+    private void OnLockInserted(Entity<CE14LockComponent> ent, ref LockInsertDoAfterEvent args)
     {
         if (args.Cancelled || args.Handled)
             return;
 
-        if (!_cp14LockQuery.TryComp(args.Used, out var usedLock))
+        if (!_CE14LockQuery.TryComp(args.Used, out var usedLock))
             return;
 
         ent.Comp.LockShape = usedLock.LockShape;
-        DirtyField(ent, ent.Comp, nameof(CP14LockComponent.LockShape));
+        DirtyField(ent, ent.Comp, nameof(CE14LockComponent.LockShape));
 
-        _popup.PopupPredicted(Loc.GetString("cp14-lock-insert-success", ("name", MetaData(ent).EntityName)),
+        _popup.PopupPredicted(Loc.GetString("CE14-lock-insert-success", ("name", MetaData(ent).EntityName)),
             ent,
             args.User);
 
@@ -206,7 +206,7 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
             QueueDel(args.Used);
     }
 
-    private void OnLockHacked(Entity<CP14LockComponent> ent, ref LockPickHackDoAfterEvent args)
+    private void OnLockHacked(Entity<CE14LockComponent> ent, ref LockPickHackDoAfterEvent args)
     {
         if (args.Cancelled || args.Handled)
             return;
@@ -217,7 +217,7 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         if (!_lockQuery.TryComp(ent, out var lockComp))
             return;
 
-        if (!TryComp<CP14LockpickComponent>(args.Used, out var lockPick))
+        if (!TryComp<CE14LockpickComponent>(args.Used, out var lockPick))
             return;
 
         if (!_timing.IsFirstTimePredicted)
@@ -227,33 +227,33 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         {
             _audio.PlayPredicted(lockPick.SuccessSound, ent, args.User);
             ent.Comp.LockPickStatus++;
-            DirtyField(ent, ent.Comp, nameof(CP14LockComponent.LockPickStatus));
+            DirtyField(ent, ent.Comp, nameof(CE14LockComponent.LockPickStatus));
             if (ent.Comp.LockPickStatus >= ent.Comp.LockShape.Count) // Final success
             {
                 if (lockComp.Locked)
                 {
                     _lock.TryUnlock(ent, args.User, lockComp);
-                    _popup.PopupPredicted(Loc.GetString("cp14-lock-unlock", ("lock", MetaData(ent).EntityName)),
+                    _popup.PopupPredicted(Loc.GetString("CE14-lock-unlock", ("lock", MetaData(ent).EntityName)),
                         ent,
                         args.User);
 
                     ent.Comp.LockPickStatus = 0;
-                    DirtyField(ent, ent.Comp, nameof(CP14LockComponent.LockPickStatus));
+                    DirtyField(ent, ent.Comp, nameof(CE14LockComponent.LockPickStatus));
                     return;
                 }
 
                 _lock.TryLock(ent, args.User, lockComp);
 
-                _popup.PopupPredicted(Loc.GetString("cp14-lock-lock", ("lock", MetaData(ent).EntityName)),
+                _popup.PopupPredicted(Loc.GetString("CE14-lock-lock", ("lock", MetaData(ent).EntityName)),
                     ent,
                     args.User);
                 ent.Comp.LockPickStatus = 0;
 
-                DirtyField(ent, ent.Comp, nameof(CP14LockComponent.LockPickStatus));
+                DirtyField(ent, ent.Comp, nameof(CE14LockComponent.LockPickStatus));
                 return;
             }
 
-            _popup.PopupClient(Loc.GetString("cp14-lock-lock-pick-success") +
+            _popup.PopupClient(Loc.GetString("CE14-lock-lock-pick-success") +
                                $" ({ent.Comp.LockPickStatus}/{ent.Comp.LockShape.Count})",
                 ent,
                 args.User);
@@ -266,14 +266,14 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
                 lockPick.Health--;
                 if (lockPick.Health > 0)
                 {
-                    _popup.PopupEntity(Loc.GetString("cp14-lock-lock-pick-failed", ("lock", MetaData(ent).EntityName)),
+                    _popup.PopupEntity(Loc.GetString("CE14-lock-lock-pick-failed", ("lock", MetaData(ent).EntityName)),
                         ent,
                         args.User);
                 }
                 else
                 {
                     _popup.PopupEntity(
-                        Loc.GetString("cp14-lock-lock-pick-failed-break", ("lock", MetaData(ent).EntityName)),
+                        Loc.GetString("CE14-lock-lock-pick-failed-break", ("lock", MetaData(ent).EntityName)),
                         ent,
                         args.User);
                     QueueDel(args.Used);
@@ -281,11 +281,11 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
             }
 
             ent.Comp.LockPickStatus = 0;
-            DirtyField(ent, ent.Comp, nameof(CP14LockComponent.LockPickStatus));
+            DirtyField(ent, ent.Comp, nameof(CE14LockComponent.LockPickStatus));
         }
     }
 
-    private void GetKeysVerbs(Entity<CP14KeyComponent> key, ref GetVerbsEvent<UtilityVerb> args)
+    private void GetKeysVerbs(Entity<CE14KeyComponent> key, ref GetVerbsEvent<UtilityVerb> args)
     {
         if (!args.CanInteract || !args.CanAccess)
             return;
@@ -293,7 +293,7 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         if (!_lockQuery.TryComp(args.Target, out var lockComp))
             return;
 
-        if (!_cp14LockQuery.TryComp(args.Target, out var cp14LockComponent))
+        if (!_CE14LockQuery.TryComp(args.Target, out var CE14LockComponent))
             return;
 
         var target = args.Target;
@@ -303,19 +303,19 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         {
             Act = () =>
             {
-                TryUseKeyOnLock(user, new Entity<CP14LockComponent>(target, cp14LockComponent), key);
+                TryUseKeyOnLock(user, new Entity<CE14LockComponent>(target, CE14LockComponent), key);
             },
             IconEntity = GetNetEntity(key),
             Text = Loc.GetString(
-                lockComp.Locked ? "cp14-lock-verb-use-key-text-open" : "cp14-lock-verb-use-key-text-close",
+                lockComp.Locked ? "CE14-lock-verb-use-key-text-open" : "CE14-lock-verb-use-key-text-close",
                 ("item", MetaData(args.Target).EntityName)),
-            Message = Loc.GetString("cp14-lock-verb-use-key-message", ("item", MetaData(args.Target).EntityName)),
+            Message = Loc.GetString("CE14-lock-verb-use-key-message", ("item", MetaData(args.Target).EntityName)),
         };
 
         args.Verbs.Add(verb);
     }
 
-    private void GetKeyFileVerbs(Entity<CP14KeyFileComponent> ent, ref GetVerbsEvent<UtilityVerb> args)
+    private void GetKeyFileVerbs(Entity<CE14KeyFileComponent> ent, ref GetVerbsEvent<UtilityVerb> args)
     {
         if (!args.CanInteract || !args.CanAccess)
             return;
@@ -351,25 +351,25 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
                         return;
 
                     keyComp.LockShape[i1]--;
-                    DirtyField(target, keyComp, nameof(CP14KeyComponent.LockShape));
+                    DirtyField(target, keyComp, nameof(CE14KeyComponent.LockShape));
                     _audio.PlayPvs(ent.Comp.UseSound, Transform(target).Coordinates);
                     Spawn("EffectSparks", Transform(target).Coordinates);
                     var shapeString = "[" + string.Join(", ", keyComp.LockShape) + "]";
-                    _popup.PopupEntity(Loc.GetString("cp14-lock-key-file-updated") + shapeString, target, user);
+                    _popup.PopupEntity(Loc.GetString("CE14-lock-key-file-updated") + shapeString, target, user);
                     _useDelay.TryResetDelay(ent);
                 },
                 IconEntity = GetNetEntity(ent),
-                Category = VerbCategory.CP14KeyFile,
+                Category = VerbCategory.CE14KeyFile,
                 Priority = -i,
                 Disabled = keyComp.LockShape[i] <= -DepthComplexity,
-                Text = Loc.GetString("cp14-lock-key-file-use-hint", ("num", i)),
+                Text = Loc.GetString("CE14-lock-key-file-use-hint", ("num", i)),
                 CloseMenu = false,
             };
             args.Verbs.Add(verb);
         }
     }
 
-    private void GetLockpickVerbs(Entity<CP14LockpickComponent> lockPick, ref GetVerbsEvent<UtilityVerb> args)
+    private void GetLockpickVerbs(Entity<CE14LockpickComponent> lockPick, ref GetVerbsEvent<UtilityVerb> args)
     {
         if (!args.CanInteract || !args.CanAccess)
             return;
@@ -377,7 +377,7 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         if (!_lockQuery.TryComp(args.Target, out var lockComp) || !lockComp.Locked)
             return;
 
-        if (!_cp14LockQuery.HasComp(args.Target))
+        if (!_CE14LockQuery.HasComp(args.Target))
             return;
 
         var target = args.Target;
@@ -404,9 +404,9 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
                         BreakOnHandChange = true,
                     });
                 },
-                Text = Loc.GetString("cp14-lock-verb-lock-pick-use-text") + $" {height}",
-                Message = Loc.GetString("cp14-lock-verb-lock-pick-use-message"),
-                Category = VerbCategory.CP14LockPick,
+                Text = Loc.GetString("CE14-lock-verb-lock-pick-use-text") + $" {height}",
+                Message = Loc.GetString("CE14-lock-verb-lock-pick-use-message"),
+                Category = VerbCategory.CE14LockPick,
                 Priority = height,
                 CloseMenu = false,
             };
@@ -415,12 +415,12 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         }
     }
 
-    private void GetLockEditerVerbs(Entity<CP14LockEditerComponent> ent, ref GetVerbsEvent<UtilityVerb> args)
+    private void GetLockEditerVerbs(Entity<CE14LockEditerComponent> ent, ref GetVerbsEvent<UtilityVerb> args)
     {
         if (!args.CanInteract || !args.CanAccess)
             return;
 
-        if (!_cp14LockQuery.TryComp(args.Target, out var lockComp) || !lockComp.CanEmbedded)
+        if (!_CE14LockQuery.TryComp(args.Target, out var lockComp) || !lockComp.CanEmbedded)
             return;
 
         if (lockComp.LockShape is null)
@@ -451,23 +451,23 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
                     if (lockComp.LockShape[i1] < -DepthComplexity)
                         lockComp.LockShape[i1] = DepthComplexity; //Cycle back to max
 
-                    DirtyField(target, lockComp, nameof(CP14LockComponent.LockShape));
+                    DirtyField(target, lockComp, nameof(CE14LockComponent.LockShape));
                     _audio.PlayPvs(ent.Comp.UseSound, Transform(target).Coordinates);
                     var shapeString = "[" + string.Join(", ", lockComp.LockShape) + "]";
-                    _popup.PopupEntity(Loc.GetString("cp14-lock-editor-updated") + shapeString, target, user);
+                    _popup.PopupEntity(Loc.GetString("CE14-lock-editor-updated") + shapeString, target, user);
                     _useDelay.TryResetDelay(ent);
                 },
                 IconEntity = GetNetEntity(ent),
-                Category = VerbCategory.CP14EditLock,
+                Category = VerbCategory.CE14EditLock,
                 Priority = -i,
-                Text = Loc.GetString("cp14-lock-editor-use-hint", ("num", i)),
+                Text = Loc.GetString("CE14-lock-editor-use-hint", ("num", i)),
                 CloseMenu = false,
             };
             args.Verbs.Add(verb);
         }
     }
 
-    private void TryUseKeyOnLock(EntityUid user, Entity<CP14LockComponent> target, Entity<CP14KeyComponent> key)
+    private void TryUseKeyOnLock(EntityUid user, Entity<CE14LockComponent> target, Entity<CE14KeyComponent> key)
     {
         if (!TryComp<LockComponent>(target, out var lockComp))
             return;
@@ -483,12 +483,12 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
 
         var isEqual = keyShape.SequenceEqual(lockShape);
 
-        if (HasComp<CP14KeyUniversalComponent>(key) && !isEqual)
+        if (HasComp<CE14KeyUniversalComponent>(key) && !isEqual)
         {
             // Make new shape for key and force equality for this use
-            _popup.PopupClient(Loc.GetString("cp14-lock-key-transforming"), key, user);
+            _popup.PopupClient(Loc.GetString("CE14-lock-key-transforming"), key, user);
             key.Comp.LockShape = new List<int>(lockShape);
-            DirtyField(key, key.Comp, nameof(CP14KeyComponent.LockShape));
+            DirtyField(key, key.Comp, nameof(CE14KeyComponent.LockShape));
             isEqual = true;
         }
 
@@ -505,11 +505,11 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         }
         else
         {
-            _popup.PopupClient(Loc.GetString("cp14-lock-key-no-fit"), target, user);
+            _popup.PopupClient(Loc.GetString("CE14-lock-key-no-fit"), target, user);
         }
     }
 
-    private void OnKeyExamine(Entity<CP14KeyComponent> ent, ref ExaminedEvent args)
+    private void OnKeyExamine(Entity<CE14KeyComponent> ent, ref ExaminedEvent args)
     {
         var parent = Transform(ent).ParentUid;
         if (parent != args.Examiner)
@@ -518,7 +518,7 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         if (ent.Comp.LockShape == null)
             return;
 
-        var sb = new StringBuilder(Loc.GetString("cp14-lock-examine-key", ("item", MetaData(ent).EntityName)));
+        var sb = new StringBuilder(Loc.GetString("CE14-lock-examine-key", ("item", MetaData(ent).EntityName)));
         sb.Append(" (");
         foreach (var item in ent.Comp.LockShape)
         {
@@ -529,7 +529,7 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         args.PushMarkup(sb.ToString());
     }
 
-    private void OnLockExamine(Entity<CP14LockComponent> ent, ref ExaminedEvent args)
+    private void OnLockExamine(Entity<CE14LockComponent> ent, ref ExaminedEvent args)
     {
         if (!ent.Comp.CanEmbedded)
             return;
@@ -541,7 +541,7 @@ public sealed class SharedCP14LockKeySystem : EntitySystem
         if (ent.Comp.LockShape == null)
             return;
 
-        var sb = new StringBuilder(Loc.GetString("cp14-lock-examine-key", ("item", MetaData(ent).EntityName)));
+        var sb = new StringBuilder(Loc.GetString("CE14-lock-examine-key", ("item", MetaData(ent).EntityName)));
         sb.Append(" (");
         foreach (var item in ent.Comp.LockShape)
         {

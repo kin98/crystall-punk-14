@@ -1,5 +1,5 @@
-using Content.Shared._CP14.Vampire;
-using Content.Shared._CP14.Vampire.Components;
+using Content.Shared._CE14.Vampire;
+using Content.Shared._CE14.Vampire.Components;
 using Content.Shared.Construction;
 using Content.Shared.Examine;
 using Content.Shared.Mobs.Systems;
@@ -8,14 +8,14 @@ using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Server._CP14.Construction.Condition;
+namespace Content.Server._CE14.Construction.Condition;
 
 [UsedImplicitly]
 [DataDefinition]
-public sealed partial class CP14AllVampireClanRequired : IGraphCondition
+public sealed partial class CE14AllVampireClanRequired : IGraphCondition
 {
     [DataField(required: true)]
-    public ProtoId<CP14VampireFactionPrototype> Faction;
+    public ProtoId<CE14VampireFactionPrototype> Faction;
 
     public bool Condition(EntityUid craft, IEntityManager entityManager)
     {
@@ -24,7 +24,7 @@ public sealed partial class CP14AllVampireClanRequired : IGraphCondition
 
         var mobState = entityManager.System<MobStateSystem>();
 
-        var query = entityManager.EntityQueryEnumerator<CP14VampireComponent, TransformComponent>();
+        var query = entityManager.EntityQueryEnumerator<CE14VampireComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var vampire, out var xform))
         {
             if (vampire.Faction != Faction)
@@ -49,7 +49,7 @@ public sealed partial class CP14AllVampireClanRequired : IGraphCondition
         if (Condition(args.Examined, IoCManager.Resolve<IEntityManager>()))
             return false;
 
-        args.PushMarkup(Loc.GetString("cp14-magic-spell-need-all-vampires"));
+        args.PushMarkup(Loc.GetString("CE14-magic-spell-need-all-vampires"));
         return true;
     }
 
@@ -57,8 +57,8 @@ public sealed partial class CP14AllVampireClanRequired : IGraphCondition
     {
         yield return new ConstructionGuideEntry()
         {
-            Localization = "cp14-magic-spell-need-all-vampires",
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CP14/Actions/Spells/vampire.rsi"), "blood_moon"),
+            Localization = "CE14-magic-spell-need-all-vampires",
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CE14/Actions/Spells/vampire.rsi"), "blood_moon"),
         };
     }
 }

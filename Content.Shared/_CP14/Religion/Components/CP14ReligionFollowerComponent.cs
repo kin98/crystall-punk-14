@@ -1,28 +1,28 @@
-using Content.Shared._CP14.Religion.Prototypes;
-using Content.Shared._CP14.Religion.Systems;
+using Content.Shared._CE14.Religion.Prototypes;
+using Content.Shared._CE14.Religion.Systems;
 using Content.Shared.FixedPoint;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Religion.Components;
+namespace Content.Shared._CE14.Religion.Components;
 
 /// <summary>
 /// Determines whether the entity is a follower of God, or may never be able to become one
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, Access(typeof(CP14SharedReligionGodSystem))]
-public sealed partial class CP14ReligionFollowerComponent : Component
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, Access(typeof(CE14SharedReligionGodSystem))]
+public sealed partial class CE14ReligionFollowerComponent : Component
 {
     [DataField, AutoNetworkedField]
-    public ProtoId<CP14ReligionPrototype>? Religion;
+    public ProtoId<CE14ReligionPrototype>? Religion;
 
     [DataField, AutoNetworkedField]
-    public HashSet<ProtoId<CP14ReligionPrototype>> RejectedReligions = new();
+    public HashSet<ProtoId<CE14ReligionPrototype>> RejectedReligions = new();
 
     [DataField]
-    public EntProtoId RenounceActionProto = "CP14ActionRenounceFromGod";
+    public EntProtoId RenounceActionProto = "CE14ActionRenounceFromGod";
 
     [DataField]
-    public EntProtoId AppealToGofProto = "CP14ActionAppealToGod";
+    public EntProtoId AppealToGofProto = "CE14ActionAppealToGod";
 
     [DataField]
     public EntityUid? RenounceAction;

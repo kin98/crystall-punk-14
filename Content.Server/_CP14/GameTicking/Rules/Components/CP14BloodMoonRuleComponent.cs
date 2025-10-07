@@ -1,16 +1,16 @@
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.GameTicking.Rules.Components;
+namespace Content.Server._CE14.GameTicking.Rules.Components;
 
-[RegisterComponent, Access(typeof(CP14BloodMoonRule))]
-public sealed partial class CP14BloodMoonRuleComponent : Component
+[RegisterComponent, Access(typeof(CE14BloodMoonRule))]
+public sealed partial class CE14BloodMoonRuleComponent : Component
 {
     [DataField]
-    public EntProtoId CurseRule = "CP14BloodMoonCurseRule";
+    public EntProtoId CurseRule = "CE14BloodMoonCurseRule";
 
     [DataField]
-    public LocId StartAnnouncement = "cp14-bloodmoon-raising";
+    public LocId StartAnnouncement = "CE14-bloodmoon-raising";
 
     [DataField]
     public Color? AnnouncementColor = Color.FromHex("#e32759");

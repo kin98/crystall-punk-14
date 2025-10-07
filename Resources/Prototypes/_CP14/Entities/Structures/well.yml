@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14StoneWell
+  id: CE14StoneWell
   parent: BaseStructure
   categories: [ ForkFiltered ]
   name: well
@@ -9,7 +9,7 @@
     noRot: true
     offset: 0, 0.3
     drawdepth: Mobs
-    sprite: _CP14/Structures/Specific/Farming/well.rsi
+    sprite: _CE14/Structures/Specific/Farming/well.rsi
     layers:
     - state: icon
   - type: DrawableSolution
@@ -27,8 +27,8 @@
     solution: pool
 
 - type: entity
-  id: CP14StoneWellBroken
-  parent: CP14StoneWell
+  id: CE14StoneWellBroken
+  parent: CE14StoneWell
   categories: [ ForkFiltered ]
   name: broken well
   description: A barely surviving well that's been through too much, maybe there's still water left.
@@ -37,7 +37,7 @@
     noRot: true
     offset: 0, 0.3
     drawdepth: Mobs
-    sprite: _CP14/Structures/Specific/Farming/well.rsi
+    sprite: _CE14/Structures/Specific/Farming/well.rsi
     layers:
     - state: broken
   - type: SolutionContainerManager
@@ -49,8 +49,8 @@
           Quantity: 200
 
 - type: entity
-  id: CP14StoneWellGrovelling
-  parent: CP14StoneWell
+  id: CE14StoneWellGrovelling
+  parent: CE14StoneWell
   categories: [ ForkFiltered ]
   name: grovelling well
   description: A well ruined by time, overgrown with moss and grass, perhaps there was at least a couple of buckets of water left there.
@@ -59,7 +59,7 @@
     noRot: true
     offset: 0, 0.3
     drawdepth: Mobs
-    sprite: _CP14/Structures/Specific/Farming/well.rsi
+    sprite: _CE14/Structures/Specific/Farming/well.rsi
     layers:
     - state: grovelling
   - type: SolutionContainerManager

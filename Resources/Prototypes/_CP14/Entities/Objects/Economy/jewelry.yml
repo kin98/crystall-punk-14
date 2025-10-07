@@ -1,22 +1,22 @@
 - type: entity
   abstract: true
   parent: BaseItem
-  id: CP14BaseJewelry
+  id: CE14BaseJewelry
   categories: [ ForkFiltered ]
   components:
   - type: Tag
     tags:
-    - CP14Coin
+    - CE14Coin
   - type: Sprite
-    sprite: /Textures/_CP14/Objects/Economy/jewelry.rsi
+    sprite: /Textures/_CE14/Objects/Economy/jewelry.rsi
   - type: Item
     size: Tiny
   - type: StaticPrice
     price: 150
 
 - type: entity
-  parent: CP14BaseJewelry
-  id: CP14JewelryRuby
+  parent: CE14BaseJewelry
+  id: CE14JewelryRuby
   name: ruby
   description: A beautiful ruby stone that's worth a lot of money.
   components:
@@ -32,8 +32,8 @@
           ruby3: ""
 
 - type: entity
-  parent: CP14BaseJewelry
-  id: CP14JewelryEmerald
+  parent: CE14BaseJewelry
+  id: CE14JewelryEmerald
   name: emerald
   description: A beautiful emerald stone that's worth a lot of money.
   components:
@@ -50,8 +50,8 @@
           emerald4: ""
 
 - type: entity
-  parent: CP14BaseJewelry
-  id: CP14JewelrySapphire
+  parent: CE14BaseJewelry
+  id: CE14JewelrySapphire
   name: sapphire
   description: A beautiful sapphire stone that's worth a lot of money.
   components:
@@ -67,8 +67,8 @@
           sapphire3: ""
 
 - type: entity
-  parent: CP14BaseJewelry
-  id: CP14JewelryTopaz
+  parent: CE14BaseJewelry
+  id: CE14JewelryTopaz
   name: topaz
   description: A beautiful topaz stone that's worth a lot of money.
   components:

@@ -1,11 +1,11 @@
 # -2
 
 - type: trait
-  id: CP14Blindness
-  name: cp14-trait-blindness-name
-  description: cp14-trait-blindness-desc
+  id: CE14Blindness
+  name: CE14-trait-blindness-name
+  description: CE14-trait-blindness-desc
   #traitGear: WhiteCane
-  category: CP14PhysicalTraits
+  category: CE14PhysicalTraits
   cost: -2
   whitelist:
     components:
@@ -14,30 +14,30 @@
     - type: PermanentBlindness
 
 - type: trait
-  id: CP14ManaWasting
-  name: cp14-trait-mana-wasting-name
-  description: cp14-trait-mana-wasting-desc
-  category: CP14PhysicalTraits
+  id: CE14ManaWasting
+  name: CE14-trait-mana-wasting-name
+  description: CE14-trait-mana-wasting-desc
+  category: CE14PhysicalTraits
   cost: -2
   whitelist:
     components:
-      - CP14MagicEnergyContainer
+      - CE14MagicEnergyContainer
   components:
   - type: Accentless
     removes:
-    - type: CP14MagicEnergyContainer
-    - type: CP14MagicEnergyDraw
-    - type: CP14MagicUnsafeDamage
-    - type: CP14MagicUnsafeSleep
+    - type: CE14MagicEnergyContainer
+    - type: CE14MagicEnergyDraw
+    - type: CE14MagicUnsafeDamage
+    - type: CE14MagicUnsafeSleep
 
 # -1
 
 - type: trait
-  id: CP14PoorVision
-  name: cp14-trait-poor-vision-name
-  description: cp14-trait-poor-vision-desc
+  id: CE14PoorVision
+  name: CE14-trait-poor-vision-name
+  description: CE14-trait-poor-vision-desc
   #traitGear: ClothingEyesGlasses
-  category: CP14PhysicalTraits
+  category: CE14PhysicalTraits
   cost: -1
   whitelist:
     components:
@@ -47,10 +47,10 @@
       blindness: 4
 
 - type: trait
-  id: CP14Narcolepsy
-  name: cp14-trait-narcolepsy-name
-  description: cp14-trait-narcolepsy-desc
-  category: CP14PhysicalTraits
+  id: CE14Narcolepsy
+  name: CE14-trait-narcolepsy-name
+  description: CE14-trait-narcolepsy-desc
+  category: CE14PhysicalTraits
   cost: -1
   components:
     - type: Narcolepsy
@@ -58,30 +58,30 @@
       durationOfIncident: 10, 30
 
 - type: trait
-  id: CP14Muted
-  name: cp14-trait-muted-name
-  description: cp14-trait-muted-desc
+  id: CE14Muted
+  name: CE14-trait-muted-name
+  description: CE14-trait-muted-desc
   cost: -1
-  category: CP14PhysicalTraits
+  category: CE14PhysicalTraits
   components:
     - type: Muted
 
 - type: trait
-  id: CP14PainNumbness
+  id: CE14PainNumbness
   name: trait-painnumbness-name
   description: trait-painnumbness-desc
   cost: -1
-  category: CP14PhysicalTraits
+  category: CE14PhysicalTraits
   components:
   - type: PainNumbness
 
 # 0
 
 - type: trait
-  id: CP14Snoring
-  name: cp14-trait-snoring-name
-  description: cp14-trait-snoring-desc
-  category: CP14PhysicalTraits
+  id: CE14Snoring
+  name: CE14-trait-snoring-name
+  description: CE14-trait-snoring-desc
+  category: CE14PhysicalTraits
   components:
     - type: Snoring
 

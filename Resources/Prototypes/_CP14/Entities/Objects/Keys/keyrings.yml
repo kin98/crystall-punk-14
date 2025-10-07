@@ -1,14 +1,14 @@
 - type: entity
   parent: BaseItem
-  id: CP14BaseKeyRing
+  id: CE14BaseKeyRing
   suffix: Empty
   name: key ring
   description: Allows you to comfortably store a large number of keys in one place.
   categories: [ ForkFiltered ]
   components:
-  - type: CP14KeyRing
+  - type: CE14KeyRing
   - type: Sprite
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
     layers:
     - state: keyring
     - state: ring-0
@@ -16,7 +16,7 @@
   - type: Appearance
   - type: EmitSoundOnLand
     sound:
-      path: /Audio/_CP14/Items/key_drop.ogg
+      path: /Audio/_CE14/Items/key_drop.ogg
       params:
         variation: 0.05
   - type: StorageFillVisualizer
@@ -28,8 +28,8 @@
     maxItemSize: Small
     whitelist:
       tags:
-        - CP14Key
-        - CP14Lockpick
+        - CE14Key
+        - CE14Lockpick
   - type: UserInterface
     interfaces:
       enum.StorageUiKey.Key:
@@ -44,96 +44,96 @@
     - belt
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 5
+      CE14Iron: 5
 
 - type: entity
-  parent: CP14BaseKeyRing
-  id: CP14KeyRingInnkeeper
+  parent: CE14BaseKeyRing
+  id: CE14KeyRingInnkeeper
   suffix: Innkeeper
   components:
   - type: StorageFill
     contents:
-    - id: CP14KeyTavernHall
-    - id: CP14KeyTavernStaff
-    - id: CP14KeyTavernDormsAbstract # TODO: Move to main innkeeper
-    - id: CP14KeyTavernDormsAbstract
-    - id: CP14KeyTavernDormsAbstract
-    - id: CP14KeyTavernDormsAbstract
-    - id: CP14KeyTavernDormsAbstract
+    - id: CE14KeyTavernHall
+    - id: CE14KeyTavernStaff
+    - id: CE14KeyTavernDormsAbstract # TODO: Move to main innkeeper
+    - id: CE14KeyTavernDormsAbstract
+    - id: CE14KeyTavernDormsAbstract
+    - id: CE14KeyTavernDormsAbstract
+    - id: CE14KeyTavernDormsAbstract
 
 - type: entity
-  parent: CP14BaseKeyRing
-  id: CP14KeyRingBlacksmith
+  parent: CE14BaseKeyRing
+  id: CE14KeyRingBlacksmith
   suffix: Blacksmith
   components:
   - type: StorageFill
     contents:
-    - id: CP14KeyBlacksmithAbstract
+    - id: CE14KeyBlacksmithAbstract
 
 - type: entity
-  parent: CP14BaseKeyRing
-  id: CP14KeyRingPersonalHouse
+  parent: CE14BaseKeyRing
+  id: CE14KeyRingPersonalHouse
   suffix: Personal House
   components:
   - type: StorageFill
     contents:
-    - id: CP14KeyPersonalHouseAbstract
+    - id: CE14KeyPersonalHouseAbstract
 
 - type: entity
-  parent: CP14BaseKeyRing
-  id: CP14KeyRingAlchemist
+  parent: CE14BaseKeyRing
+  id: CE14KeyRingAlchemist
   suffix: Alchemist
   components:
   - type: StorageFill
     contents:
-    - id: CP14KeyTavernAlchemistAbstract
+    - id: CE14KeyTavernAlchemistAbstract
 
 - type: entity
-  parent: CP14BaseKeyRing
-  id: CP14KeyRingMerchant
+  parent: CE14BaseKeyRing
+  id: CE14KeyRingMerchant
   suffix: Merchant
   components:
   - type: StorageFill
     contents:
-    - id: CP14KeyMerchantShopPublic
-    - id: CP14KeyTavernMerchantShopAbstract
+    - id: CE14KeyMerchantShopPublic
+    - id: CE14KeyTavernMerchantShopAbstract
 
 - type: entity
-  parent: CP14BaseKeyRing
-  id: CP14KeyRingGuard
+  parent: CE14BaseKeyRing
+  id: CE14KeyRingGuard
   suffix: Guardian
   components:
   - type: StorageFill
     contents:
-    - id: CP14KeyCityGate
-    - id: CP14KeyGuardBarracks
+    - id: CE14KeyCityGate
+    - id: CE14KeyGuardBarracks
 
 - type: entity
-  parent: CP14BaseKeyRing
-  id: CP14KeyRingGuardCommander
+  parent: CE14BaseKeyRing
+  id: CE14KeyRingGuardCommander
   suffix: Guard Commander
   components:
   - type: StorageFill
     contents:
-    - id: CP14KeyCityGate
-    - id: CP14KeyGuardBarracks
-    - id: CP14KeyGuardCommander
+    - id: CE14KeyCityGate
+    - id: CE14KeyGuardBarracks
+    - id: CE14KeyGuardCommander
 
 - type: entity
-  parent: CP14BaseKeyRing
-  id: CP14KeyRingGuildmaster
+  parent: CE14BaseKeyRing
+  id: CE14KeyRingGuildmaster
   suffix: Guildmaster
   components:
   - type: StorageFill
     contents:
-    - id: CP14KeyGuildmaster
-    - id: CP14KeyAdventureGuild
+    - id: CE14KeyGuildmaster
+    - id: CE14KeyAdventureGuild
 
 - type: entity
-  parent: CP14BaseKeyRing
-  id: CP14KeyRingGuildworker
+  parent: CE14BaseKeyRing
+  id: CE14KeyRingGuildworker
   suffix: Guildworker
   components:
   - type: StorageFill
     contents:
-    - id: CP14KeyAdventureGuild
+    - id: CE14KeyAdventureGuild

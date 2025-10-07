@@ -1,9 +1,9 @@
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WoodenWall
-  graph: CP14WallWooden
+  id: CE14WoodenWall
+  graph: CE14WallWooden
   startNode: start
-  targetNode: CP14WallWooden
+  targetNode: CE14WallWooden
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -13,10 +13,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WoodenWallBirch
-  graph: CP14WallWoodenBirch
+  id: CE14WoodenWallBirch
+  graph: CE14WallWoodenBirch
   startNode: start
-  targetNode: CP14WallWoodenBirch
+  targetNode: CE14WallWoodenBirch
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -26,10 +26,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WoodenWallSpruce
-  graph: CP14WallWoodenSpruce
+  id: CE14WoodenWallSpruce
+  graph: CE14WallWoodenSpruce
   startNode: start
-  targetNode: CP14WallWoodenSpruce
+  targetNode: CE14WallWoodenSpruce
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -39,10 +39,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WallWoodenPalisade
-  graph: CP14WallWoodenPalisade
+  id: CE14WallWoodenPalisade
+  graph: CE14WallWoodenPalisade
   startNode: start
-  targetNode: CP14WallWoodenPalisade
+  targetNode: CE14WallWoodenPalisade
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -52,10 +52,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WindowWooden
-  graph: CP14WindowWooden
+  id: CE14WindowWooden
+  graph: CE14WindowWooden
   startNode: start
-  targetNode: CP14WindowWooden
+  targetNode: CE14WindowWooden
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -65,10 +65,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WindowWoodenBirch
-  graph: CP14WindowWooden
+  id: CE14WindowWoodenBirch
+  graph: CE14WindowWooden
   startNode: start
-  targetNode: CP14WindowWoodenBirch
+  targetNode: CE14WindowWoodenBirch
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -78,8 +78,8 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WallDirt
-  graph: CP14WallDirt
+  id: CE14WallDirt
+  graph: CE14WallDirt
   startNode: start
   targetNode: WallDirt
   category: construction-category-structures
@@ -91,10 +91,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WallStoneBrick
-  graph: CP14WallStoneBrick
+  id: CE14WallStoneBrick
+  graph: CE14WallStoneBrick
   startNode: start
-  targetNode: CP14WallStoneBrick
+  targetNode: CE14WallStoneBrick
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -104,10 +104,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WindowStoneBrick
-  graph: CP14WindowStoneBrick
+  id: CE14WindowStoneBrick
+  graph: CE14WindowStoneBrick
   startNode: start
-  targetNode: CP14WindowStoneBrick
+  targetNode: CE14WindowStoneBrick
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -117,10 +117,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WallMarbleBrick
-  graph: CP14WallMarbleBrick
+  id: CE14WallMarbleBrick
+  graph: CE14WallMarbleBrick
   startNode: start
-  targetNode: CP14WallMarbleBrick
+  targetNode: CE14WallMarbleBrick
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -130,10 +130,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WindowMarbleBrick
-  graph: CP14WindowMarbleBrick
+  id: CE14WindowMarbleBrick
+  graph: CE14WindowMarbleBrick
   startNode: start
-  targetNode: CP14WindowMarbleBrick
+  targetNode: CE14WindowMarbleBrick
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter

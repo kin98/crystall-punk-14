@@ -1,12 +1,12 @@
 - type: entity
-  id: CP14MobSlimeBase
-  parent: CP14SimpleMobBase
+  id: CE14MobSlimeBase
+  parent: CE14SimpleMobBase
   name: slime
   description: A clot of semi-intelligent slime sensitive to the elemental elements. And happy to slime the skin off your face.
   components:
   - type: HTN
     rootTask:
-      task: CP14MonsterCompound
+      task: CE14MonsterCompound
     blackboard:
       NavSmash: !type:Bool
         true
@@ -15,10 +15,10 @@
       AggroVisionRadius: !type:Single
         8
   - type: NPCUseActionOnTarget
-    actionId: CP14ActionSpellSlimeJump
+    actionId: CE14ActionSpellSlimeJump
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Mobs/Monster/slime.rsi
+    sprite: _CE14/Mobs/Monster/slime.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: base
@@ -42,7 +42,7 @@
         - MobLayer
   - type: NpcFactionMember
     factions:
-    - CP14Slimes
+    - CE14Slimes
   - type: MovementSpeedModifier
     baseWalkSpeed: 1
     baseSprintSpeed: 2
@@ -52,8 +52,8 @@
       params:
         volume: 3
   - type: Damageable
-    damageContainer: CP14BiologicalAnaerobic
-    damageModifierSet: CP14Slime
+    damageContainer: CE14BiologicalAnaerobic
+    damageModifierSet: CE14Slime
   - type: MeleeWeapon
     altDisarm: false
     soundHit:
@@ -79,9 +79,9 @@
       slime:
         maxVol: 50
         reagents:
-        - ReagentId: CP14ChromiumSlime
+        - ReagentId: CE14ChromiumSlime
           Quantity: 20
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 30
   - type: Destructible
     thresholds:
@@ -111,10 +111,10 @@
         children:
         - !type:GroupSelector
           children:
-          - id: CP14OreCopper1
-          - id: CP14OreIron1
-          - id: CP14ScrapCopper
-          - id: CP14ScrapIron
-          - id: CP14CopperCoin1
+          - id: CE14OreCopper1
+          - id: CE14OreIron1
+          - id: CE14ScrapCopper
+          - id: CE14ScrapIron
+          - id: CE14CopperCoin1
             weight: 3
-          - id: CP14Bone1
+          - id: CE14Bone1

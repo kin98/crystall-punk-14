@@ -3,50 +3,50 @@
  * https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT
  */
 
-using Content.Shared._CP14.Workbench.Prototypes;
+using Content.Shared._CE14.Workbench.Prototypes;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CP14.Workbench;
+namespace Content.Shared._CE14.Workbench;
 
 [Serializable, NetSerializable]
-public enum CP14WorkbenchUiKey
+public enum CE14WorkbenchUiKey
 {
     Key,
 }
 
 [Serializable, NetSerializable]
-public sealed class CP14WorkbenchUiCraftMessage(ProtoId<CP14WorkbenchRecipePrototype> recipe)
+public sealed class CE14WorkbenchUiCraftMessage(ProtoId<CE14WorkbenchRecipePrototype> recipe)
     : BoundUserInterfaceMessage
 {
-    public readonly ProtoId<CP14WorkbenchRecipePrototype> Recipe = recipe;
+    public readonly ProtoId<CE14WorkbenchRecipePrototype> Recipe = recipe;
 }
 
 
 [Serializable, NetSerializable]
-public sealed class CP14WorkbenchUiRecipesState(List<CP14WorkbenchUiRecipesEntry> recipes) : BoundUserInterfaceState
+public sealed class CE14WorkbenchUiRecipesState(List<CE14WorkbenchUiRecipesEntry> recipes) : BoundUserInterfaceState
 {
-    public readonly List<CP14WorkbenchUiRecipesEntry> Recipes = recipes;
+    public readonly List<CE14WorkbenchUiRecipesEntry> Recipes = recipes;
 }
 
 [Serializable, NetSerializable]
-public readonly struct CP14WorkbenchUiRecipesEntry(ProtoId<CP14WorkbenchRecipePrototype> protoId, bool craftable)
-    : IEquatable<CP14WorkbenchUiRecipesEntry>
+public readonly struct CE14WorkbenchUiRecipesEntry(ProtoId<CE14WorkbenchRecipePrototype> protoId, bool craftable)
+    : IEquatable<CE14WorkbenchUiRecipesEntry>
 {
-    public readonly ProtoId<CP14WorkbenchRecipePrototype> ProtoId = protoId;
+    public readonly ProtoId<CE14WorkbenchRecipePrototype> ProtoId = protoId;
     public readonly bool Craftable = craftable;
 
-    public int CompareTo(CP14WorkbenchUiRecipesEntry other)
+    public int CompareTo(CE14WorkbenchUiRecipesEntry other)
     {
         return Craftable.CompareTo(other.Craftable);
     }
 
     public override bool Equals(object? obj)
     {
-        return obj is CP14WorkbenchUiRecipesEntry other && Equals(other);
+        return obj is CE14WorkbenchUiRecipesEntry other && Equals(other);
     }
 
-    public bool Equals(CP14WorkbenchUiRecipesEntry other)
+    public bool Equals(CE14WorkbenchUiRecipesEntry other)
     {
         return ProtoId.Id == other.ProtoId.Id;
     }
@@ -61,7 +61,7 @@ public readonly struct CP14WorkbenchUiRecipesEntry(ProtoId<CP14WorkbenchRecipePr
         return $"{ProtoId} ({Craftable})";
     }
 
-    public static int CompareTo(CP14WorkbenchUiRecipesEntry left, CP14WorkbenchUiRecipesEntry right)
+    public static int CompareTo(CE14WorkbenchUiRecipesEntry left, CE14WorkbenchUiRecipesEntry right)
     {
         return right.CompareTo(left);
     }

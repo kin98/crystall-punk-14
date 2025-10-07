@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseSharpeningStoneStructure
+  id: CE14BaseSharpeningStoneStructure
   name: stationary sharpening stone
   description: A strong, durable sharpening stone capable of sharpening weapons without much damage to them.
   categories: [ ForkFiltered ]
@@ -10,13 +10,13 @@
   - type: UseDelay
   - type: InteractionOutline
   - type: Sprite
-    sprite: _CP14/Structures/Specific/Blacksmith/sharpening_stone.rsi
+    sprite: _CE14/Structures/Specific/Blacksmith/sharpening_stone.rsi
     state: base
   - type: PlaceableSurface
   - type: ItemPlacer
     whitelist:
       components:
-        - CP14Sharpened
+        - CE14Sharpened
   - type: Fixtures
     fixtures:
       fix1:
@@ -53,7 +53,7 @@
           collection: GlassCrack
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: CP14SharpeningStone
+  - type: CE14SharpeningStone
     sharpnessHeal: 0.1
     targetDamage:
       types:

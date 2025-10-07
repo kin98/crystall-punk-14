@@ -2,106 +2,106 @@
 
 - type: magicType
   id: Earth
-  name: cp14-essence-earth
+  name: CE14-essence-earth
   color: "#1cea42"
-  essenceProto: CP14EssenceEarth
+  essenceProto: CE14EssenceEarth
 
 - type: magicType
   id: Fire
-  name: cp14-essence-fire
+  name: CE14-essence-fire
   color: "#d9741c"
-  essenceProto: CP14EssenceFire
+  essenceProto: CE14EssenceFire
 
 - type: magicType
   id: Water
-  name: cp14-essence-water
+  name: CE14-essence-water
   color: "#1c94d9"
-  essenceProto: CP14EssenceWater
+  essenceProto: CE14EssenceWater
 
 - type: magicType
   id: Air
-  name: cp14-essence-air
+  name: CE14-essence-air
   color: "#def9ff"
-  essenceProto: CP14EssenceAir
+  essenceProto: CE14EssenceAir
 
 - type: magicType
   id: Order
-  name: cp14-essence-order
+  name: CE14-essence-order
   color: "#d9d9d9"
-  essenceProto: CP14EssenceOrder
+  essenceProto: CE14EssenceOrder
 
 - type: magicType
   id: Chaos
-  name: cp14-essence-chaos
+  name: CE14-essence-chaos
   color: "#5c5c5c"
-  essenceProto: CP14EssenceChaos
+  essenceProto: CE14EssenceChaos
 
 # Complex tier 1
 
 - type: magicType
   id: Frost
-  name: cp14-essence-frost
+  name: CE14-essence-frost
   color: "#4f91bd"
-  essenceProto: CP14EssenceFrost
+  essenceProto: CE14EssenceFrost
 
 - type: magicType
   id: Light
-  name: cp14-essence-light
+  name: CE14-essence-light
   color: "#ba97b8"
-  essenceProto: CP14EssenceLight
+  essenceProto: CE14EssenceLight
 
 - type: magicType
   id: Motion
-  name: cp14-essence-motion
+  name: CE14-essence-motion
   color: "#575100"
-  essenceProto: CP14EssenceMotion
+  essenceProto: CE14EssenceMotion
 
 - type: magicType
   id: Cycle
-  name: cp14-essence-cycle
+  name: CE14-essence-cycle
   color: "#063b1f"
-  essenceProto: CP14EssenceCycle
+  essenceProto: CE14EssenceCycle
 
 - type: magicType
   id: Energia
-  name: cp14-essence-energia
+  name: CE14-essence-energia
   color: "#caed72"
-  essenceProto: CP14EssenceEnergia
+  essenceProto: CE14EssenceEnergia
 
 - type: magicType
   id: Void
-  name: cp14-essence-void
+  name: CE14-essence-void
   color: "#12021c"
-  essenceProto: CP14EssenceVoid
+  essenceProto: CE14EssenceVoid
 
 - type: magicType
   id: Poison
-  name: cp14-essence-poison
+  name: CE14-essence-poison
   color: "#619e20"
-  essenceProto: CP14EssencePoison
+  essenceProto: CE14EssencePoison
 
 - type: magicType
   id: Life
-  name: cp14-essence-life
+  name: CE14-essence-life
   color: "#eb1a3d"
-  essenceProto: CP14EssenceLife
+  essenceProto: CE14EssenceLife
 
 - type: magicType
   id: Crystal
-  name: cp14-essence-crystal
+  name: CE14-essence-crystal
   color: "#538cb8"
-  essenceProto: CP14EssenceCrystal
+  essenceProto: CE14EssenceCrystal
 
 # Complex tier 2
 
 - type: magicType
   id: Magic
-  name: cp14-essence-magic
+  name: CE14-essence-magic
   color: "#5497d6"
-  essenceProto: CP14EssenceMagic
+  essenceProto: CE14EssenceMagic
 
 - type: magicType
   id: Beast
-  name: cp14-essence-beast
+  name: CE14-essence-beast
   color: "#5c3c0f"
-  essenceProto: CP14EssenceBeast
+  essenceProto: CE14EssenceBeast

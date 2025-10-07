@@ -1,7 +1,7 @@
 from LocalizationHelper import get_logger, LocalizationHelper
 
-YAML_FILES_PATH = "../../../Resources/Prototypes/_CP14/"
-FTL_FILES_PATH = "../../../Resources/Locale/ru-RU/_CP14/_PROTO/entities"
+YAML_FILES_PATH = "../../../Resources/Prototypes/_CE14/"
+FTL_FILES_PATH = "../../../Resources/Locale/ru-RU/_CE14/_PROTO/entities"
 
 if __name__ == '__main__':
     logger = get_logger(__name__)

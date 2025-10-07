@@ -1,9 +1,9 @@
 - type: entity
-  id: CP14ActionSpellSlimeJump
+  id: CE14ActionSpellSlimeJump
   name: Slime jump
   description: Jump! JUMP!
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.1
   - type: DoAfterArgs
     delay: 1
@@ -12,13 +12,13 @@
     itemIconStyle: BigAction
     useDelay: 8
     icon:
-      sprite: _CP14/Actions/Spells/slime.rsi
+      sprite: _CE14/Actions/Spells/slime.rsi
       state: jump
   - type: TargetAction
     checkCanAccess: false
     range: 10
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       effects:
-      - !type:CP14SpellThrowUserTo
+      - !type:CE14SpellThrowUserTo
         throwPower: 8

@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14BaseLockpick
+  id: CE14BaseLockpick
   name: iron lockpick
   description: A thief's tool that, with proper skill and skill, allows you to pick any lock.
   categories: [ ForkFiltered ]
@@ -8,39 +8,39 @@
   - type: Item
     storedRotation: -90
   - type: Sprite
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
     state: lockpick_iron
-  - type: CP14Lockpick
+  - type: CE14Lockpick
     health: 10
   - type: Tag
     tags:
-    - CP14Lockpick
+    - CE14Lockpick
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10
+      CE14Iron: 10
 
 - type: entity
-  parent: CP14BaseLockpick
-  id: CP14LockpickMithril
+  parent: CE14BaseLockpick
+  id: CE14LockpickMithril
   name: mithril lockpick
   components:
-  - type: CP14Lockpick
+  - type: CE14Lockpick
     health: 50
   - type: Sprite
     state: lockpick_mithril
   - type: PhysicalComposition
     materialComposition:
-      CP14Mithril: 10
+      CE14Mithril: 10
 
 - type: entity
-  parent: CP14BaseLockpick
-  id: CP14LockpickSkeletonArtifact
+  parent: CE14BaseLockpick
+  id: CE14LockpickSkeletonArtifact
   name: lockpick skeleton
   description: A lockpick made from the bone of an unknown creature, it can open anything... though not immediately.
   categories: [ DoNotMap ]
   suffix: Artifact
   components:
-  - type: CP14Lockpick
+  - type: CE14Lockpick
     health: 1000
   - type: Sprite
     state: lockpick_skeleton
@@ -49,7 +49,7 @@
 
 - type: entity
   parent: BaseItem
-  id: CP14KeyFile
+  id: CE14KeyFile
   name: key file
   description: A file, ideal for sharpening keys, and reshaping them.
   categories: [ ForkFiltered ]
@@ -57,11 +57,11 @@
   - type: Item
     storedRotation: 45
   - type: Sprite
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
     state: file
-  - type: CP14KeyFile
+  - type: CE14KeyFile
   - type: UseDelay
     delay: 1.0
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10
+      CE14Iron: 10

@@ -1,10 +1,10 @@
 - type: body
-  id: CP14Zombie
+  id: CE14Zombie
   name: zombie
   root: torso
   slots:
     head:
-      part: CP14HeadZombie
+      part: CE14HeadZombie
       connections:
       - torso
       organs:
@@ -24,26 +24,26 @@
         liver: OrganHumanLiver
         kidneys: OrganHumanKidneys
     right_arm:
-      part: CP14RightArmZombie
+      part: CE14RightArmZombie
       connections:
       - right_hand
     left_arm:
-      part: CP14LeftArmZombie
+      part: CE14LeftArmZombie
       connections:
       - left_hand
     right_hand:
-      part: CP14RightHandZombie
+      part: CE14RightHandZombie
     left_hand:
-      part: CP14LeftHandZombie
+      part: CE14LeftHandZombie
     right_leg:
-      part: CP14RightLegZombie
+      part: CE14RightLegZombie
       connections:
       - right_foot
     left_leg:
-      part: CP14LeftLegZombie
+      part: CE14LeftLegZombie
       connections:
       - left_foot
     right_foot:
-      part: CP14RightFootZombie
+      part: CE14RightFootZombie
     left_foot:
-      part: CP14LeftFootZombie
+      part: CE14LeftFootZombie

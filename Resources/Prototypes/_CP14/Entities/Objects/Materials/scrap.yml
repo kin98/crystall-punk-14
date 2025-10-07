@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseScrap
+  id: CE14BaseScrap
   parent: BaseItem
   abstract: true
   categories: [ ForkFiltered ]
@@ -14,62 +14,62 @@
           scrap_3: ""
 
 - type: entity
-  id: CP14ScrapCopper
-  parent: CP14BaseScrap
+  id: CE14ScrapCopper
+  parent: CE14BaseScrap
   name: copper scrap
   description: Crooked pieces of copper. Useless. Only to be melted down.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/copper_scrap.rsi
+    sprite: _CE14/Objects/Materials/copper_scrap.rsi
     layers:
       - state: scrap
         map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 10
+      CE14Copper: 10
 
 - type: entity
-  id: CP14ScrapIron
-  parent: CP14BaseScrap
+  id: CE14ScrapIron
+  parent: CE14BaseScrap
   name: iron scrap
   description: Crooked pieces of iron. Useless. Only to be melted down.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/iron_scrap.rsi
+    sprite: _CE14/Objects/Materials/iron_scrap.rsi
     layers:
       - state: scrap
         map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10
+      CE14Iron: 10
 
 - type: entity
-  id: CP14ScrapGold
-  parent: CP14BaseScrap
+  id: CE14ScrapGold
+  parent: CE14BaseScrap
   name: golden scrap
   description: Crooked pieces of gold. Useless. Only to be melted down.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/gold_scrap.rsi
+    sprite: _CE14/Objects/Materials/gold_scrap.rsi
     layers:
       - state: scrap
         map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      CP14Gold: 10
+      CE14Gold: 10
 
 - type: entity
-  id: CP14ScrapMithril
-  parent: CP14BaseScrap
+  id: CE14ScrapMithril
+  parent: CE14BaseScrap
   name: mithril scrap
   description: Crooked pieces of mithril. Useless. Only to be melted down.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/mithril_scrap.rsi
+    sprite: _CE14/Objects/Materials/mithril_scrap.rsi
     layers:
       - state: scrap
         map: ["random"]
   - type: PhysicalComposition
     materialComposition:
-      CP14Mithril: 10
+      CE14Mithril: 10
 

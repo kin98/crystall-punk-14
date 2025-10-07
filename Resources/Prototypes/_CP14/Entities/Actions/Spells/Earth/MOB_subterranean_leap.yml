@@ -1,21 +1,21 @@
 - type: entity
-  id: CP14ActionMoleSpellSubterraneanLeap
+  id: CE14ActionMoleSpellSubterraneanLeap
   name: Subterranean leap
   description: Make a subterranean leap, quickly approaching the victim.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: -1.0
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 5
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14ImpactEffectDigging
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14ImpactEffectDigging
   - type: Action
     useDelay: 8
     itemIconStyle: BigAction
     sound: !type:SoundPathSpecifier
       path: /Audio/Effects/gib3.ogg
     icon:
-      sprite: _CP14/Actions/Spells/earth.rsi
+      sprite: _CE14/Actions/Spells/earth.rsi
       state: subterranean_leap
   - type: DoAfterArgs
     breakOnMove: false
@@ -26,26 +26,26 @@
     checkCanAccess: false
     range: 10
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectDigging
+        - CE14ImpactEffectDigging
       effects:
-      - !type:CP14SpellCasterTeleport
+      - !type:CE14SpellCasterTeleport
         needVision: false
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectDigging
+        - CE14ImpactEffectDigging
 
 - type: entity
-  id: CP14ImpactEffectDigging
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectDigging
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
-    sprite: _CP14/Effects/material_splash.rsi
+    sprite: _CE14/Effects/material_splash.rsi
     layers:
     - state: dirt1
 

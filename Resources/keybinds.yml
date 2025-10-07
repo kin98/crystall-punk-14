@@ -86,8 +86,8 @@ binds:
   type: State
   key: NumpadNum5
 # Misc
-# CP14 Zone
-- function: CP14OpenSkillMenu
+# CE14 Zone
+- function: CE14OpenSkillMenu
   type: State
   key: R
 - function: OpenBelt2
@@ -97,7 +97,7 @@ binds:
   type: State
   key: F
   mod1: Shift
-# CP14 Zone end
+# CE14 Zone end
 - function: ShowEscapeMenu
   type: State
   key: F10

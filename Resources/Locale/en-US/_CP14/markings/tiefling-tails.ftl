@@ -1,2 +1,2 @@
-marking-CP14TieflingTail = Tail
-marking-CP14TieflingTailSpades = Pointed Tail
+marking-CE14TieflingTail = Tail
+marking-CE14TieflingTailSpades = Pointed Tail

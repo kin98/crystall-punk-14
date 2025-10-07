@@ -1,20 +1,20 @@
 - type: constructionGraph
-  id: CP14Furnace
+  id: CE14Furnace
   start: start
   graph:
     - node: start
       actions:
       - !type:DestroyEntity {}
       edges:
-        - to: CP14Furnace
+        - to: CE14Furnace
           completed:
             - !type:SnapToGrid
           steps:
-            - material: CP14IronBar
+            - material: CE14IronBar
               amount: 3
               doAfter: 4
-    - node: CP14Furnace
-      entity: CP14Furnace
+    - node: CE14Furnace
+      entity: CE14Furnace
       edges:
       - to: start
         steps:
@@ -24,5 +24,5 @@
           doAfter: 4
         completed:
         - !type:SpawnPrototype
-          prototype: CP14IronBar1
+          prototype: CE14IronBar1
           amount: 3

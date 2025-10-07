@@ -1,10 +1,10 @@
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Prototypes;
 using Content.Shared.Damage.Components;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill.Effects;
+namespace Content.Shared._CE14.Skill.Effects;
 
-public sealed partial class AddManaStamina : CP14SkillEffect
+public sealed partial class AddManaStamina : CE14SkillEffect
 {
     [DataField]
     public float AdditionalStamina = 0;
@@ -32,8 +32,8 @@ public sealed partial class AddManaStamina : CP14SkillEffect
         return null;
     }
 
-    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CP14SkillPrototype> skill)
+    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CE14SkillPrototype> skill)
     {
-        return Loc.GetString("cp14-skill-desc-add-stamina", ("stamina", AdditionalStamina.ToString()));
+        return Loc.GetString("CE14-skill-desc-add-stamina", ("stamina", AdditionalStamina.ToString()));
     }
 }

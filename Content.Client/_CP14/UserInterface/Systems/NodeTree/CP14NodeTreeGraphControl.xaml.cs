@@ -8,22 +8,22 @@ using Robust.Client.Utility;
 using Robust.Shared.Input;
 using Serilog;
 
-namespace Content.Client._CP14.UserInterface.Systems.NodeTree;
+namespace Content.Client._CE14.UserInterface.Systems.NodeTree;
 
 [GenerateTypedNameReferences]
-public sealed partial class CP14NodeTreeGraphControl : BoxContainer
+public sealed partial class CE14NodeTreeGraphControl : BoxContainer
 {
     private const float LocalUIScaleMax = 4f;
     private const float LocalUIScaleMin = 1f;
 
     [Dependency] private readonly IEntityManager _entManager = default!;
 
-    private CP14NodeTreeUiState? _state;
+    private CE14NodeTreeUiState? _state;
 
-    private CP14NodeTreeElement? _hoveredNode;
-    private CP14NodeTreeElement? _selectedNode;
+    private CE14NodeTreeElement? _hoveredNode;
+    private CE14NodeTreeElement? _selectedNode;
 
-    private Dictionary<string, CP14NodeTreeElement> _nodeDict = new();
+    private Dictionary<string, CE14NodeTreeElement> _nodeDict = new();
 
     private bool _dragging = false;
     private Vector2 _previousMousePosition = Vector2.Zero;
@@ -32,10 +32,10 @@ public sealed partial class CP14NodeTreeGraphControl : BoxContainer
 
     private float Scale => UIScale * _localUIScale;
 
-    public event Action<CP14NodeTreeElement?>? OnNodeSelected;
+    public event Action<CE14NodeTreeElement?>? OnNodeSelected;
     public event Action<Vector2>? OnOffsetChanged;
 
-    public CP14NodeTreeGraphControl()
+    public CE14NodeTreeGraphControl()
     {
         IoCManager.InjectDependencies(this);
         RobustXamlLoader.Load(this);
@@ -43,7 +43,7 @@ public sealed partial class CP14NodeTreeGraphControl : BoxContainer
         OnOffsetChanged?.Invoke(_globalOffset);
     }
 
-    public void UpdateState(CP14NodeTreeUiState state)
+    public void UpdateState(CE14NodeTreeUiState state)
     {
         _state = state;
 

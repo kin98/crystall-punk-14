@@ -3,18 +3,18 @@
  * https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT
  */
 
-using Content.Shared._CP14.Trading.Systems;
-using Content.Shared._CP14.Workbench.Prototypes;
+using Content.Shared._CE14.Trading.Systems;
+using Content.Shared._CE14.Workbench.Prototypes;
 using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Workbench.Requirements;
+namespace Content.Shared._CE14.Workbench.Requirements;
 
-public sealed partial class StackGroupResource : CP14WorkbenchCraftRequirement
+public sealed partial class StackGroupResource : CE14WorkbenchCraftRequirement
 {
     [DataField(required: true)]
-    public ProtoId<CP14StackGroupPrototype> Group;
+    public ProtoId<CE14StackGroupPrototype> Group;
 
     [DataField]
     public int Count = 1;
@@ -90,7 +90,7 @@ public sealed partial class StackGroupResource : CP14WorkbenchCraftRequirement
                 continue;
 
 
-            var priceSys = entManager.System<CP14SharedStationEconomySystem>();
+            var priceSys = entManager.System<CE14SharedStationEconomySystem>();
 
             var tempPrice = priceSys.GetEstimatedPrice(indexedProto);
             if (price > 0)

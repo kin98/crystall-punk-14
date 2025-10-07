@@ -1,7 +1,7 @@
 - type: entity
   parent:
   - BaseStructure
-  id: CP14TableBase
+  id: CE14TableBase
   categories: [ ForkFiltered ]
   abstract: true
   components:
@@ -36,14 +36,14 @@
 
 - type: entity
   parent:
-  - CP14TableBase
-  - CP14BaseFlammable
-  id: CP14WoodenTableBase
+  - CE14TableBase
+  - CE14BaseFlammable
+  id: CE14WoodenTableBase
   abstract: true
   components:
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -67,78 +67,78 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 1
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepWood
   - type: FireVisuals
-    sprite: _CP14/Effects/fire.rsi
+    sprite: _CE14/Effects/fire.rsi
     normalState: full
 
 - type: entity
-  parent: CP14WoodenTableBase
-  id: CP14TableWoodenFrame
+  parent: CE14WoodenTableBase
+  id: CE14TableWoodenFrame
   name: wooden table frame
   description: Base for any wooden table
   components:
   - type: Sprite
     snapCardinals: true
-    sprite: _CP14/Structures/Furniture/Tables/wood.rsi
+    sprite: _CE14/Structures/Furniture/Tables/wood.rsi
     state: frame
   - type: Icon
-    sprite: _CP14/Structures/Furniture/Tables/wood.rsi
+    sprite: _CE14/Structures/Furniture/Tables/wood.rsi
     state: frame
   - type: Construction
-    graph: CP14TableWooden
-    node: CP14TableWoodenFrame
+    graph: CE14TableWooden
+    node: CE14TableWoodenFrame
 
 - type: entity
-  parent: CP14TableWoodenFrame
-  id: CP14TableWoodenBirchFrame
+  parent: CE14TableWoodenFrame
+  id: CE14TableWoodenBirchFrame
   components:
   - type: Sprite
     snapCardinals: true
-    sprite: _CP14/Structures/Furniture/Tables/birch.rsi
+    sprite: _CE14/Structures/Furniture/Tables/birch.rsi
     state: frame
   - type: Icon
-    sprite: _CP14/Structures/Furniture/Tables/birch.rsi
+    sprite: _CE14/Structures/Furniture/Tables/birch.rsi
     state: frame
   - type: Construction
-    graph: CP14TableWooden
-    node: CP14TableWoodenBirchFrame
+    graph: CE14TableWooden
+    node: CE14TableWoodenBirchFrame
 
 - type: entity
-  parent: CP14WoodenTableBase
-  id: CP14TableWooden
+  parent: CE14WoodenTableBase
+  id: CE14TableWooden
   name: wooden table
   description: A simple table made of boards.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/Tables/wood.rsi
+    sprite: _CE14/Structures/Furniture/Tables/wood.rsi
   - type: Icon
-    sprite: _CP14/Structures/Furniture/Tables/wood.rsi
+    sprite: _CE14/Structures/Furniture/Tables/wood.rsi
     state: full
   - type: Construction
-    graph: CP14TableWooden
-    node: CP14TableWooden
+    graph: CE14TableWooden
+    node: CE14TableWooden
   - type: IconSmooth
     key: state
     base: state
 
 - type: entity
-  parent: CP14TableWooden
-  id: CP14TableWoodenBirch
+  parent: CE14TableWooden
+  id: CE14TableWoodenBirch
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/Tables/birch.rsi
+    sprite: _CE14/Structures/Furniture/Tables/birch.rsi
   - type: Icon
-    sprite: _CP14/Structures/Furniture/Tables/birch.rsi
+    sprite: _CE14/Structures/Furniture/Tables/birch.rsi
     state: full
   - type: Construction
-    graph: CP14TableWooden
-    node: CP14TableWoodenBirch
+    graph: CE14TableWooden
+    node: CE14TableWoodenBirch
   - type: Destructible
     thresholds:
     - trigger:
@@ -162,43 +162,43 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodenPlanks1:
+          CE14BirchWoodenPlanks1:
             min: 1
             max: 1
 
 - type: entity
-  parent: CP14WoodenTableBase
-  id: CP14TableWoodenRound
+  parent: CE14WoodenTableBase
+  id: CE14TableWoodenRound
   name: round wooden table
   description: A simple table made of boards.
   components:
   - type: Sprite
     snapCardinals: true
-    sprite: _CP14/Structures/Furniture/Tables/wood.rsi
+    sprite: _CE14/Structures/Furniture/Tables/wood.rsi
     state: round
   - type: Icon
-    sprite: _CP14/Structures/Furniture/Tables/wood.rsi
+    sprite: _CE14/Structures/Furniture/Tables/wood.rsi
     state: round
   - type: Construction
-    graph: CP14TableWoodenRound
-    node: CP14TableWoodenRound
+    graph: CE14TableWoodenRound
+    node: CE14TableWoodenRound
 
 - type: entity
-  parent: CP14WoodenTableBase
-  id: CP14TableWoodenBirchRound
+  parent: CE14WoodenTableBase
+  id: CE14TableWoodenBirchRound
   name: round birch table
   description: A simple table made of boards.
   components:
   - type: Sprite
     snapCardinals: true
-    sprite: _CP14/Structures/Furniture/Tables/birch.rsi
+    sprite: _CE14/Structures/Furniture/Tables/birch.rsi
     state: round
   - type: Icon
-    sprite: _CP14/Structures/Furniture/Tables/birch.rsi
+    sprite: _CE14/Structures/Furniture/Tables/birch.rsi
     state: round
   - type: Construction
-    graph: CP14TableWoodenBirchRound
-    node: CP14TableWoodenBirchRound
+    graph: CE14TableWoodenBirchRound
+    node: CE14TableWoodenBirchRound
   - type: Destructible
     thresholds:
     - trigger:
@@ -222,51 +222,51 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodenPlanks1:
+          CE14BirchWoodenPlanks1:
             min: 1
             max: 1
 
 - type: entity
-  parent: CP14TableWooden
-  id: CP14TableWoodenCounter
+  parent: CE14TableWooden
+  id: CE14TableWoodenCounter
   name: wooden counter
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/Tables/wood_counter.rsi
+    sprite: _CE14/Structures/Furniture/Tables/wood_counter.rsi
   - type: Icon
-    sprite: _CP14/Structures/Furniture/Tables/wood_counter.rsi
+    sprite: _CE14/Structures/Furniture/Tables/wood_counter.rsi
     state: full
   - type: Construction
-    graph: CP14TableWooden
-    node: CP14TableWoodenCounter
+    graph: CE14TableWooden
+    node: CE14TableWoodenCounter
 
 - type: entity
-  parent: CP14TableWoodenBirch
-  id: CP14TableWoodenBirchCounter
+  parent: CE14TableWoodenBirch
+  id: CE14TableWoodenBirchCounter
   name: birch counter
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/Tables/birch_counter.rsi
+    sprite: _CE14/Structures/Furniture/Tables/birch_counter.rsi
   - type: Icon
-    sprite: _CP14/Structures/Furniture/Tables/birch_counter.rsi
+    sprite: _CE14/Structures/Furniture/Tables/birch_counter.rsi
     state: full
   - type: Construction
-    graph: CP14TableWooden
-    node: CP14TableWoodenBirchCounter
+    graph: CE14TableWooden
+    node: CE14TableWoodenBirchCounter
 
 - type: entity
-  parent: CP14TableBase
-  id: CP14TableMarble
+  parent: CE14TableBase
+  id: CE14TableMarble
   name: marble table
   description: Exquisite white marble table.
   components:
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Rock
+    damageModifierSet: CE14Rock
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/Tables/marble.rsi
+    sprite: _CE14/Structures/Furniture/Tables/marble.rsi
   - type: Icon
-    sprite: _CP14/Structures/Furniture/Tables/marble.rsi
+    sprite: _CE14/Structures/Furniture/Tables/marble.rsi
     state: full
   - type: IconSmooth
     key: state

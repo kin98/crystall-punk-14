@@ -1,2 +1,2 @@
-cp14-potion-label-health = Зелье лечения
-cp14-potion-label-mana = Зелье маны
+CE14-potion-label-health = Зелье лечения
+CE14-potion-label-mana = Зелье маны

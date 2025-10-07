@@ -1,15 +1,15 @@
-- type: CP14LockGroup
+- type: CE14LockGroup
   id: TavernDorms
 
-- type: CP14LockGroup
+- type: CE14LockGroup
   id: Blacksmith
 
-- type: CP14LockGroup
+- type: CE14LockGroup
   id: Alchemist
 
-- type: CP14LockGroup
+- type: CE14LockGroup
   id: PersonalHouse
 
-- type: CP14LockGroup
+- type: CE14LockGroup
   id: Merchant
 

@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: Clothing
-  id: CP14ClothingGlovesBase
+  id: CE14ClothingGlovesBase
   categories: [ ForkFiltered ]
   components:
   - type: Clothing
@@ -16,15 +16,15 @@
     storedRotation: -90
 
 - type: entity
-  parent: CP14ClothingGlovesBase
-  id: CP14ClothingGlovesGirdles
+  parent: CE14ClothingGlovesBase
+  id: CE14ClothingGlovesGirdles
   name: iron girdles
   description: Armored combat girdles.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Gloves/girdles.rsi
+    sprite: _CE14/Clothing/Gloves/girdles.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Gloves/girdles.rsi
+    sprite: _CE14/Clothing/Gloves/girdles.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -33,26 +33,26 @@
         Piercing: 0.99
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10
+      CE14Iron: 10
 
 - type: entity
-  parent: CP14ClothingGlovesBase
-  id: CP14ClothingGlovesJagermeister
+  parent: CE14ClothingGlovesBase
+  id: CE14ClothingGlovesJagermeister
   name: jagermeister's gloves
   description: Leather gloves, a deep favourite of the local jagermeister's.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Gloves/jagermeister_gloves.rsi
+    sprite: _CE14/Clothing/Gloves/jagermeister_gloves.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Gloves/jagermeister_gloves.rsi
+    sprite: _CE14/Clothing/Gloves/jagermeister_gloves.rsi
 
 - type: entity
-  parent: CP14ClothingGlovesBase
-  id: CP14ClothingGlovesBlacksmith
+  parent: CE14ClothingGlovesBase
+  id: CE14ClothingGlovesBlacksmith
   name: blacksmith's gloves
   description: They say you can get your hands on a newly poured ingot in them. But it's still not worth checking.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Gloves/blacksmith_gloves.rsi
+    sprite: _CE14/Clothing/Gloves/blacksmith_gloves.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Gloves/blacksmith_gloves.rsi
+    sprite: _CE14/Clothing/Gloves/blacksmith_gloves.rsi

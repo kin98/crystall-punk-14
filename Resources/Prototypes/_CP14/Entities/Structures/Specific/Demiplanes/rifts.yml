@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14DemiplaneRiftCore
+  id: CE14DemiplaneRiftCore
   name: demiplane rift core
   description: Touch to open the door to a new world
   categories: [ ForkFiltered ]
@@ -9,11 +9,11 @@
   - type: Sprite
     noRot: true
     drawdepth: Mobs
-    sprite: /Textures/_CP14/Structures/Dungeon/demiplan_rift_core.rsi
+    sprite: /Textures/_CE14/Structures/Dungeon/demiplan_rift_core.rsi
     layers:
     - state: connective
       shader: unshaded
-  - type: CP14DemiplaneRift
+  - type: CE14DemiplaneRift
   - type: Clickable
   - type: InteractionOutline
   - type: PointLight
@@ -24,19 +24,19 @@
 
 - type: entity
   parent: MarkerBase
-  id: CP14DemiplaneEnterPointMarker
+  id: CE14DemiplaneEnterPointMarker
   name: demiplane enter point
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
     layers:
     - state: green
-    - sprite: /Textures/_CP14/Structures/Dungeon/demiplan_rift_core.rsi
+    - sprite: /Textures/_CE14/Structures/Dungeon/demiplan_rift_core.rsi
       state: core1
-  - type: CP14DemiplaneEnterPoint
+  - type: CE14DemiplaneEnterPoint
 
 - type: entity
-  id: CP14DemiplaneRiftAwaiting
+  id: CE14DemiplaneRiftAwaiting
   parent: BasePortal
   categories: [ ForkFiltered ]
   name: unstable demiplane rift
@@ -45,7 +45,7 @@
   - type: Sprite
     noRot: true
     drawdepth: Effects
-    sprite: /Textures/_CP14/Structures/Dungeon/demiplan_rift.rsi
+    sprite: /Textures/_CE14/Structures/Dungeon/demiplan_rift.rsi
     layers:
     - state: pulse
       shader: unshaded
@@ -76,10 +76,10 @@
     maxRandomRadius: 10
   - type: ConditionalSpawner
     prototypes:
-    - CP14SkyLightningPurple
+    - CE14SkyLightningPurple
 
 - type: entity
-  id: CP14DemiplaneRiftPortal
+  id: CE14DemiplaneRiftPortal
   parent: BasePortal
   categories: [ ForkFiltered ]
   name: demiplane rift
@@ -88,7 +88,7 @@
   - type: Sprite
     noRot: true
     drawdepth: Effects
-    sprite: /Textures/_CP14/Structures/Dungeon/demiplan_rift.rsi
+    sprite: /Textures/_CE14/Structures/Dungeon/demiplan_rift.rsi
     layers:
     - state: anom
       shader: unshaded
@@ -106,12 +106,12 @@
     canTeleportToOtherMaps: true
   - type: EmitSoundOnSpawn
     sound: 
-      path: /Audio/_CP14/Effects/ritual_end.ogg
+      path: /Audio/_CE14/Effects/ritual_end.ogg
       params:
         variation: 0.3
 
 - type: entity
-  id: CP14TempPortalToCity
+  id: CE14TempPortalToCity
   parent: BasePortal
   categories: [ ForkFiltered ]
   name: temporary rift
@@ -120,7 +120,7 @@
   - type: Sprite
     noRot: true
     drawdepth: Effects
-    sprite: /Textures/_CP14/Structures/Dungeon/demiplan_rift.rsi
+    sprite: /Textures/_CE14/Structures/Dungeon/demiplan_rift.rsi
     layers:
     - state: pulse
       shader: unshaded
@@ -139,12 +139,12 @@
     canTeleportToOtherMaps: true
   - type: EmitSoundOnSpawn
     sound: 
-      path: /Audio/_CP14/Effects/ritual_end.ogg
+      path: /Audio/_CE14/Effects/ritual_end.ogg
       params:
         variation: 0.125
   - type: TimedDespawn
     lifetime: 80
   - type: ConditionalSpawner
     prototypes:
-    - CP14SkyLightningPurple
+    - CE14SkyLightningPurple
   

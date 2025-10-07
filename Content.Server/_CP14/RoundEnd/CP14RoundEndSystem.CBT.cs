@@ -3,9 +3,9 @@ using Content.Shared.CCVar;
 using Robust.Shared.Audio;
 using Robust.Shared.Console;
 
-namespace Content.Server._CP14.RoundEnd;
+namespace Content.Server._CE14.RoundEnd;
 
-public sealed partial class CP14RoundEndSystem
+public sealed partial class CE14RoundEndSystem
 {
     [Dependency] private readonly IConsoleHost _consoleHost = default!;
     [Dependency] private readonly GameTicker _ticker = default!;
@@ -17,9 +17,9 @@ public sealed partial class CP14RoundEndSystem
 
     private void InitCbt()
     {
-        _enabled = _cfg.GetCVar(CCVars.CP14ClosedBetaTest);
-        _cfg.OnValueChanged(CCVars.CP14ClosedBetaTest,
-            _ => { _enabled = _cfg.GetCVar(CCVars.CP14ClosedBetaTest); },
+        _enabled = _cfg.GetCVar(CCVars.CE14ClosedBetaTest);
+        _cfg.OnValueChanged(CCVars.CE14ClosedBetaTest,
+            _ => { _enabled = _cfg.GetCVar(CCVars.CE14ClosedBetaTest); },
             true);
     }
 
@@ -120,7 +120,7 @@ public sealed partial class CP14RoundEndSystem
                     return;
 
                 _chatSystem.DispatchGlobalAnnouncement(
-                    Loc.GetString("cp14-cbt-close-15m"),
+                    Loc.GetString("CE14-cbt-close-15m"),
                     announcementSound: new SoundPathSpecifier("/Audio/Effects/beep1.ogg"),
                     sender: "Server"
                 );
@@ -145,7 +145,7 @@ public sealed partial class CP14RoundEndSystem
                     return;
 
                 _chatSystem.DispatchGlobalAnnouncement(
-                    Loc.GetString("cp14-cbt-close-15m"),
+                    Loc.GetString("CE14-cbt-close-15m"),
                     announcementSound: new SoundPathSpecifier("/Audio/Effects/beep1.ogg"),
                     sender: "Server"
                 );

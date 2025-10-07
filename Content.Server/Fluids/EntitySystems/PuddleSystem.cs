@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server._CP14.Cooking;
+using Content.Server._CE14.Cooking;
 using Content.Server.Administration.Logs;
 using Content.Server.Chemistry.TileReactions;
 using Content.Server.DoAfter;
@@ -328,7 +328,7 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
         _deletionQueue.Remove(entity);
         UpdateSlip((entity, entity.Comp), args.Solution);
         UpdateSlow(entity, args.Solution);
-        //UpdateEvaporation(entity, args.Solution); //CP14 Force evaporation under sky via YML
+        //UpdateEvaporation(entity, args.Solution); //CE14 Force evaporation under sky via YML
     }
 
     private void UpdateSlip(Entity<PuddleComponent> entity, Solution solution)

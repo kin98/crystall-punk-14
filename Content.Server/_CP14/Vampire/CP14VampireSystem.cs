@@ -4,9 +4,9 @@ using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Server.Temperature.Components;
 using Content.Server.Temperature.Systems;
-using Content.Shared._CP14.DayCycle;
-using Content.Shared._CP14.Vampire;
-using Content.Shared._CP14.Vampire.Components;
+using Content.Shared._CE14.DayCycle;
+using Content.Shared._CE14.Vampire;
+using Content.Shared._CE14.Vampire.Components;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
@@ -17,16 +17,16 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.Vampire;
+namespace Content.Server._CE14.Vampire;
 
-public sealed partial class CP14VampireSystem : CP14SharedVampireSystem
+public sealed partial class CE14VampireSystem : CE14SharedVampireSystem
 {
     [Dependency] private readonly BodySystem _body = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly TemperatureSystem _temperature = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly FlammableSystem _flammable = default!;
-    [Dependency] private readonly CP14DayCycleSystem _dayCycle = default!;
+    [Dependency] private readonly CE14DayCycleSystem _dayCycle = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
     public override void Initialize()
@@ -34,13 +34,13 @@ public sealed partial class CP14VampireSystem : CP14SharedVampireSystem
         base.Initialize();
         InitializeAnnounces();
 
-        SubscribeLocalEvent<CP14VampireClanHeartComponent, StartCollideEvent>(OnStartCollide);
-        SubscribeLocalEvent<CP14VampireClanHeartComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<CE14VampireClanHeartComponent, StartCollideEvent>(OnStartCollide);
+        SubscribeLocalEvent<CE14VampireClanHeartComponent, ExaminedEvent>(OnExamined);
     }
 
-    private void OnStartCollide(Entity<CP14VampireClanHeartComponent> ent, ref StartCollideEvent args)
+    private void OnStartCollide(Entity<CE14VampireClanHeartComponent> ent, ref StartCollideEvent args)
     {
-        if (!TryComp<CP14VampireTreeCollectableComponent>(args.OtherEntity, out var collectable))
+        if (!TryComp<CE14VampireTreeCollectableComponent>(args.OtherEntity, out var collectable))
             return;
 
         var collect = collectable.Essence;
@@ -54,35 +54,35 @@ public sealed partial class CP14VampireSystem : CP14SharedVampireSystem
         _audio.PlayPvs(collectable.CollectSound, ent);
     }
 
-    private void OnExamined(Entity<CP14VampireClanHeartComponent> ent, ref ExaminedEvent args)
+    private void OnExamined(Entity<CE14VampireClanHeartComponent> ent, ref ExaminedEvent args)
     {
-        if (!HasComp<CP14VampireComponent>(args.Examiner) && !HasComp<GhostComponent>(args.Examiner))
+        if (!HasComp<CE14VampireComponent>(args.Examiner) && !HasComp<GhostComponent>(args.Examiner))
             return;
 
         var sb = new StringBuilder();
 
         // Faction
         if (Proto.TryIndex(ent.Comp.Faction, out var indexedFaction))
-            sb.Append(Loc.GetString("cp14-vampire-tree-examine-faction", ("faction", Loc.GetString(indexedFaction.Name))) + "\n");
+            sb.Append(Loc.GetString("CE14-vampire-tree-examine-faction", ("faction", Loc.GetString(indexedFaction.Name))) + "\n");
 
         // Are they friend or foe?
-        if (TryComp<CP14VampireComponent>(args.Examiner, out var examinerVampire))
+        if (TryComp<CE14VampireComponent>(args.Examiner, out var examinerVampire))
         {
             if (examinerVampire.Faction == ent.Comp.Faction)
-                sb.Append(Loc.GetString("cp14-vampire-tree-examine-friend") + "\n");
+                sb.Append(Loc.GetString("CE14-vampire-tree-examine-friend") + "\n");
             else
-                sb.Append(Loc.GetString("cp14-vampire-tree-examine-enemy") + "\n");
+                sb.Append(Loc.GetString("CE14-vampire-tree-examine-enemy") + "\n");
         }
 
         //Progress
-        sb.Append(Loc.GetString("cp14-vampire-tree-examine-level",
+        sb.Append(Loc.GetString("CE14-vampire-tree-examine-level",
             ("level", ent.Comp.Level),
             ("essence", ent.Comp.EssenceFromLevelStart),
             ("left", ent.Comp.EssenceToNextLevel?.ToString() ?? "∞")) + "\n"+ "\n");
 
-        var query = EntityQueryEnumerator<CP14VampireClanHeartComponent>();
+        var query = EntityQueryEnumerator<CE14VampireClanHeartComponent>();
 
-        sb.Append(Loc.GetString("cp14-vampire-tree-other-title") + "\n");
+        sb.Append(Loc.GetString("CE14-vampire-tree-other-title") + "\n");
         while (query.MoveNext(out var uid, out var heart))
         {
             if (uid == ent.Owner)
@@ -91,7 +91,7 @@ public sealed partial class CP14VampireSystem : CP14SharedVampireSystem
             if (!Proto.TryIndex(heart.Faction, out var indexedOtherFaction))
                 continue;
 
-            sb.Append(Loc.GetString("cp14-vampire-tree-other-info",
+            sb.Append(Loc.GetString("CE14-vampire-tree-other-info",
                 ("name", Loc.GetString(indexedOtherFaction.Name)),
                 ("essence", heart.EssenceFromLevelStart),
                 ("left", heart.EssenceToNextLevel?.ToString() ?? "∞"),
@@ -101,7 +101,7 @@ public sealed partial class CP14VampireSystem : CP14SharedVampireSystem
         args.PushMarkup(sb.ToString());
     }
 
-    private void AddEssence(Entity<CP14VampireClanHeartComponent> ent, FixedPoint2 amount)
+    private void AddEssence(Entity<CE14VampireClanHeartComponent> ent, FixedPoint2 amount)
     {
         if (!Proto.TryIndex(ent.Comp.Faction, out var indexedFaction) || ent.Comp.Faction == null)
             return;
@@ -114,14 +114,14 @@ public sealed partial class CP14VampireSystem : CP14SharedVampireSystem
         if (level < ent.Comp.Level) //Level up!
         {
             _appearance.SetData(ent, VampireClanLevelVisuals.Level, ent.Comp.Level);
-            AnnounceToOpposingFactions(ent.Comp.Faction.Value, Loc.GetString("cp14-vampire-tree-growing", ("name", Loc.GetString(indexedFaction.Name)), ("level", ent.Comp.Level)));
-            AnnounceToFaction(ent.Comp.Faction.Value, Loc.GetString("cp14-vampire-tree-growing-self", ("level", ent.Comp.Level)));
+            AnnounceToOpposingFactions(ent.Comp.Faction.Value, Loc.GetString("CE14-vampire-tree-growing", ("name", Loc.GetString(indexedFaction.Name)), ("level", ent.Comp.Level)));
+            AnnounceToFaction(ent.Comp.Faction.Value, Loc.GetString("CE14-vampire-tree-growing-self", ("level", ent.Comp.Level)));
 
             SpawnAtPosition(ent.Comp.LevelUpVfx, Transform(ent).Coordinates);
         }
     }
 
-    protected override void OnVampireInit(Entity<CP14VampireComponent> ent, ref MapInitEvent args)
+    protected override void OnVampireInit(Entity<CE14VampireComponent> ent, ref MapInitEvent args)
     {
         base.OnVampireInit(ent, ref args);
 
@@ -140,7 +140,7 @@ public sealed partial class CP14VampireSystem : CP14SharedVampireSystem
         base.Update(frameTime);
 
         //Vampire under sun heating
-        var query = EntityQueryEnumerator<CP14VampireComponent, CP14VampireVisualsComponent, TemperatureComponent, FlammableComponent>();
+        var query = EntityQueryEnumerator<CE14VampireComponent, CE14VampireVisualsComponent, TemperatureComponent, FlammableComponent>();
         while (query.MoveNext(out var uid, out var vampire, out var visuals, out var temperature, out var flammable))
         {
             if (_timing.CurTime < vampire.NextHeatTime)
@@ -152,7 +152,7 @@ public sealed partial class CP14VampireSystem : CP14SharedVampireSystem
                 continue;
 
             _temperature.ChangeHeat(uid, vampire.HeatUnderSunTemperature);
-            _popup.PopupEntity(Loc.GetString("cp14-heat-under-sun"), uid, uid, PopupType.SmallCaution);
+            _popup.PopupEntity(Loc.GetString("CE14-heat-under-sun"), uid, uid, PopupType.SmallCaution);
 
             if (temperature.CurrentTemperature > vampire.IgniteThreshold && !flammable.OnFire)
             {
@@ -161,7 +161,7 @@ public sealed partial class CP14VampireSystem : CP14SharedVampireSystem
             }
         }
 
-        var heartQuery = EntityQueryEnumerator<CP14VampireClanHeartComponent>();
+        var heartQuery = EntityQueryEnumerator<CE14VampireClanHeartComponent>();
         //regen essence over time
         while (heartQuery.MoveNext(out var uid, out var heart))
         {

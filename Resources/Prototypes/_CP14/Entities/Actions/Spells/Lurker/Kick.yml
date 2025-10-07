@@ -1,46 +1,46 @@
 - type: entity
-  id: CP14ActionSpellLurkerKick
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellLurkerKick
+  parent: CE14ActionSpellBase
   name: Crushing attack
   description: You prepare a powerful melee strike that will knock your target back with force and stun them for a long time.
   components:
-  - type: CP14ActionStaminaCost
+  - type: CE14ActionStaminaCost
     stamina: 20
   - type: DoAfterArgs
     delay: 2.5
     distanceThreshold: 2.5
     breakOnDamage: true
-  - type: CP14ActionEmoting
-    startEmote: cp14-kick-lurker-start
-    endEmote: cp14-kick-lurker
-  - type: CP14ActionDangerous
+  - type: CE14ActionEmoting
+    startEmote: CE14-kick-lurker-start
+    endEmote: CE14-kick-lurker
+  - type: CE14ActionDangerous
   - type: Action
     useDelay: 20
     icon:
-      sprite: _CP14/Actions/Spells/lurker.rsi
+      sprite: _CE14/Actions/Spells/lurker.rsi
       state: kick
   - type: TargetAction
     range: 2
   - type: EntityTargetAction
     canTargetSelf: false
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellRevealStealthUser
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellRevealStealthUser
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14LurkerRitualSound
+        - CE14LurkerRitualSound
       effects:
-      - !type:CP14SpellRevealStealthUser
-      - !type:CP14SpellApplyEntityEffect
+      - !type:CE14SpellRevealStealthUser
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:Paralyze
           paralyzeTime: 15
-      - !type:CP14SpellThrowFromUser
+      - !type:CE14SpellThrowFromUser
         throwPower: 4
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14DustEffectKickSound
-      - !type:CP14SpellApplyEntityEffect
+        - CE14DustEffectKickSound
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:HealthChange
           ignoreResistances: false

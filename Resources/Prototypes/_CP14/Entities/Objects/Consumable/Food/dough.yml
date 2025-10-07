@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14FoodDoughLarge
+  id: CE14FoodDoughLarge
   parent: FoodInjectableBase
   name: large piece of dough
   description: The perfect ingredient for any flour product. The only thing left to do is to shape it.
@@ -12,7 +12,7 @@
     flavors:
       - bread #TODO smth disguisting. raw dough
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/dough.rsi
+    sprite: _CE14/Objects/Consumable/Food/dough.rsi
     state: dough_large
   - type: SolutionContainerManager
     solutions:
@@ -25,23 +25,23 @@
           Quantity: 2
   - type: SliceableFood
     count: 4
-    slice: CP14FoodDoughMedium
-  - type: CP14TemperatureTransformation
+    slice: CE14FoodDoughMedium
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodBread
+      transformTo: CE14FoodBread
   - type: Tag
     tags:
-    - CP14Dough
+    - CE14Dough
 
 - type: entity
-  id: CP14FoodBread
-  parent: CP14FoodDoughLarge
+  id: CE14FoodBread
+  parent: CE14FoodDoughLarge
   name: bread
   description: Crispy and so flavourful!
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/dough.rsi
+    sprite: _CE14/Objects/Consumable/Food/dough.rsi
     state: bread_cooked
   - type: SolutionContainerManager
     solutions:
@@ -54,23 +54,23 @@
           Quantity: 2
   - type: SliceableFood
     count: 4
-    slice: CP14FoodBreadSlice
-  - type: CP14TemperatureTransformation
+    slice: CE14FoodBreadSlice
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Dough
+    - CE14Dough
 
 - type: entity
-  id: CP14FoodBreadSlice
-  parent: CP14FoodDoughMedium
+  id: CE14FoodBreadSlice
+  parent: CE14FoodDoughMedium
   name: bread slice
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/dough.rsi
+    sprite: _CE14/Objects/Consumable/Food/dough.rsi
     state: bread_slice
   - type: SolutionContainerManager
     solutions:
@@ -81,17 +81,17 @@
           Quantity: 5
         - ReagentId: Protein
           Quantity: 0.5
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
       transformTo: null
   - type: Tag
     tags:
-    - CP14Dough
+    - CE14Dough
 
 - type: entity
-  id: CP14FoodDoughMedium
+  id: CE14FoodDoughMedium
   parent: FoodInjectableBase
   name: medium piece of dough
   categories: [ ForkFiltered ]
@@ -103,7 +103,7 @@
     flavors:
       - bread #TODO smth disguisting. raw dough
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/dough.rsi
+    sprite: _CE14/Objects/Consumable/Food/dough.rsi
     state: dough_medium
   - type: SolutionContainerManager
     solutions:
@@ -114,22 +114,22 @@
           Quantity: 5
         - ReagentId: UncookedAnimalProteins
           Quantity: 0.5
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodBreadBun
+      transformTo: CE14FoodBreadBun
   - type: Tag
     tags:
-    - CP14Dough
+    - CE14Dough
 
 - type: entity
-  id: CP14FoodBreadBun
-  parent: CP14FoodDoughMedium
+  id: CE14FoodBreadBun
+  parent: CE14FoodDoughMedium
   name: bread bun
   description: it's like regular bread, only smaller and funnier.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/dough.rsi
+    sprite: _CE14/Objects/Consumable/Food/dough.rsi
     state: bun_cooked
   - type: SolutionContainerManager
     solutions:
@@ -143,38 +143,38 @@
   - type: Butcherable
     butcherDelay: 1
     spawned:
-      - id: CP14FoodBreadBunBottom
+      - id: CE14FoodBreadBunBottom
         amount: 1
-      - id: CP14FoodBreadBunTop
+      - id: CE14FoodBreadBunTop
         amount: 1
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Dough
+    - CE14Dough
 
 - type: entity
-  id: CP14FoodBreadBunBottom
-  parent: CP14FoodDoughMedium
+  id: CE14FoodBreadBunBottom
+  parent: CE14FoodDoughMedium
   name: botton bread bun
   description: It's like regular bread, only smaller and funnier. And cut in half.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/dough.rsi
+    sprite: _CE14/Objects/Consumable/Food/dough.rsi
     layers:
     - state: bun_cooked_slice_bottom
     - map: ["foodSequenceLayers"]
   - type: FoodSequenceStartPoint
-    key: CP14Sandwich
+    key: CE14Sandwich
     maxLayers: 5
     startPosition: 0, 0
     offset: 0, 0.07
     minLayerOffset: -0.05, 0
     maxLayerOffset: 0.05, 0
-    nameGeneration: cp14-food-sequence-sandwich-gen
+    nameGeneration: CE14-food-sequence-sandwich-gen
     contentSeparator: ", "
   - type: Appearance
   - type: FoodMetamorphableByAdding
@@ -188,23 +188,23 @@
           Quantity: 2.6
         - ReagentId: Protein
           Quantity: 0.25
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Dough
+    - CE14Dough
 
 - type: entity
-  id: CP14FoodBreadBunTop
-  parent: CP14FoodDoughMedium
+  id: CE14FoodBreadBunTop
+  parent: CE14FoodDoughMedium
   name: top bread bun
   description: It's like regular bread, only smaller and funnier. And cut in half.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/dough.rsi
+    sprite: _CE14/Objects/Consumable/Food/dough.rsi
     state: bun_cooked_slice_top
   - type: SolutionContainerManager
     solutions:
@@ -217,19 +217,19 @@
           Quantity: 0.25
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14BunTopSandwich
-  - type: CP14TemperatureTransformation
+      CE14Sandwich: CE14BunTopSandwich
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Dough
+    - CE14Dough
 
 - type: entity
-  id: CP14FoodDoughMediumFlat
-  parent: CP14FoodDoughMedium
+  id: CE14FoodDoughMediumFlat
+  parent: CE14FoodDoughMedium
   name: rolled dough
   components:
   - type: Item
@@ -245,11 +245,11 @@
           Quantity: 5
         - ReagentId: UncookedAnimalProteins
           Quantity: 0.5
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1 #TODO: лаваш?
+      transformTo: CE14Ash1 #TODO: лаваш?
   - type: Tag
     tags:
-    - CP14Dough
+    - CE14Dough

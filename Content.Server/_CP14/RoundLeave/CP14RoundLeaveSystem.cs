@@ -18,9 +18,9 @@ using Robust.Shared.Network;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
 
-namespace Content.Server._CP14.RoundLeave;
+namespace Content.Server._CE14.RoundLeave;
 
-public sealed class CP14RoundLeaveSystem : EntitySystem
+public sealed class CE14RoundLeaveSystem : EntitySystem
 {
     [Dependency] private readonly ISharedAdminLogManager _adminLog = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
@@ -33,29 +33,29 @@ public sealed class CP14RoundLeaveSystem : EntitySystem
     [Dependency] private readonly MindSystem _mind = default!;
 
     private EntityQuery<MindContainerComponent> _mindContainerQuery;
-    private EntityQuery<CP14RoundLeavingComponent> _leavingQuery;
+    private EntityQuery<CE14RoundLeavingComponent> _leavingQuery;
     private EntityQuery<ActorComponent> _actorQuery;
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14RoundLeaveComponent, StartCollideEvent>(OnCollide);
-        SubscribeLocalEvent<CP14RoundLeaveComponent, EndCollideEvent>(EndCollide);
+        SubscribeLocalEvent<CE14RoundLeaveComponent, StartCollideEvent>(OnCollide);
+        SubscribeLocalEvent<CE14RoundLeaveComponent, EndCollideEvent>(EndCollide);
 
-        SubscribeLocalEvent<CP14RoundLeavingComponent, MapInitEvent>(OnStartLeaving);
-        SubscribeLocalEvent<CP14RoundLeavingComponent, MindRemovedMessage>(OnLeaveRound);
+        SubscribeLocalEvent<CE14RoundLeavingComponent, MapInitEvent>(OnStartLeaving);
+        SubscribeLocalEvent<CE14RoundLeavingComponent, MindRemovedMessage>(OnLeaveRound);
 
         _mindContainerQuery = GetEntityQuery<MindContainerComponent>();
-        _leavingQuery = GetEntityQuery<CP14RoundLeavingComponent>();
+        _leavingQuery = GetEntityQuery<CE14RoundLeavingComponent>();
         _actorQuery = GetEntityQuery<ActorComponent>();
     }
 
-    private void OnCollide(Entity<CP14RoundLeaveComponent> ent, ref StartCollideEvent args)
+    private void OnCollide(Entity<CE14RoundLeaveComponent> ent, ref StartCollideEvent args)
     {
         if (!_mindContainerQuery.HasComp(args.OtherEntity))
             return;
 
-        EnsureComp<CP14RoundLeavingComponent>(args.OtherEntity, out var leaving);
+        EnsureComp<CE14RoundLeavingComponent>(args.OtherEntity, out var leaving);
         leaving.Leaver.Add(ent);
 
         //Auto round remove
@@ -65,27 +65,27 @@ public sealed class CP14RoundLeaveSystem : EntitySystem
         }
     }
 
-    private void EndCollide(Entity<CP14RoundLeaveComponent> ent, ref EndCollideEvent args)
+    private void EndCollide(Entity<CE14RoundLeaveComponent> ent, ref EndCollideEvent args)
     {
         if (_leavingQuery.TryGetComponent(args.OtherEntity, out var leaving))
         {
             leaving.Leaver.Remove(ent);
             if (leaving.Leaver.Count == 0)
             {
-                RemComp<CP14RoundLeavingComponent>(args.OtherEntity);
+                RemComp<CE14RoundLeavingComponent>(args.OtherEntity);
             }
         }
     }
 
-    private void OnStartLeaving(Entity<CP14RoundLeavingComponent> ent, ref MapInitEvent args)
+    private void OnStartLeaving(Entity<CE14RoundLeavingComponent> ent, ref MapInitEvent args)
     {
-        var msg = Loc.GetString("cp14-earlyleave-warning");
+        var msg = Loc.GetString("CE14-earlyleave-warning");
 
         if (_actorQuery.TryComp(ent, out var actor))
             _chatManager.ChatMessageToOne(ChatChannel.Server, msg, msg, ent, false, actor.PlayerSession.Channel);
     }
 
-    private void OnLeaveRound(Entity<CP14RoundLeavingComponent> ent, ref MindRemovedMessage args)
+    private void OnLeaveRound(Entity<CE14RoundLeavingComponent> ent, ref MindRemovedMessage args)
     {
         var userId = args.Mind.Comp.UserId;
 
@@ -137,11 +137,11 @@ public sealed class CP14RoundLeaveSystem : EntitySystem
 
         //_chatSystem.DispatchStationAnnouncement(station.Value,
         //    Loc.GetString(
-        //        _mobState.IsAlive(uid) ? "cp14-earlyleave-ship-announcement" : "cp14-earlyleave-ship-announcement-dead",
+        //        _mobState.IsAlive(uid) ? "CE14-earlyleave-ship-announcement" : "CE14-earlyleave-ship-announcement-dead",
         //        ("character", name),
         //        ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobName))
         //    ),
-        //    Loc.GetString("cp14-ship-sender"),
+        //    Loc.GetString("CE14-ship-sender"),
         //    playDefaultSound: false
         //);
 

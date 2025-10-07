@@ -1,10 +1,10 @@
 using Content.Shared.Light.EntitySystems;
 using Robust.Shared.Map.Components;
 
-namespace Content.Server._CP14.Roof;
+namespace Content.Server._CE14.Roof;
 
 /// <inheritdoc/>
-public sealed class CP14RoofSystem : EntitySystem
+public sealed class CE14RoofSystem : EntitySystem
 {
     [Dependency] private readonly SharedMapSystem _maps = default!;
     [Dependency] private readonly SharedRoofSystem _roof = default!;
@@ -13,12 +13,12 @@ public sealed class CP14RoofSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14SetGridRoovedComponent, ComponentStartup>(OnRoofStartup);
-        SubscribeLocalEvent<CP14SetGridUnroovedComponent, ComponentStartup>(OnRoofStartup);
-        SubscribeLocalEvent<CP14SetGridRoovedComponent, TileChangedEvent>(OnTileChanged);
+        SubscribeLocalEvent<CE14SetGridRoovedComponent, ComponentStartup>(OnRoofStartup);
+        SubscribeLocalEvent<CE14SetGridUnroovedComponent, ComponentStartup>(OnRoofStartup);
+        SubscribeLocalEvent<CE14SetGridRoovedComponent, TileChangedEvent>(OnTileChanged);
     }
 
-    private void OnTileChanged(Entity<CP14SetGridRoovedComponent> ent, ref TileChangedEvent args)
+    private void OnTileChanged(Entity<CE14SetGridRoovedComponent> ent, ref TileChangedEvent args)
     {
         foreach (var changed in args.Changes)
         {
@@ -27,7 +27,7 @@ public sealed class CP14RoofSystem : EntitySystem
         }
     }
 
-    private void OnRoofStartup(Entity<CP14SetGridRoovedComponent> ent, ref ComponentStartup args)
+    private void OnRoofStartup(Entity<CE14SetGridRoovedComponent> ent, ref ComponentStartup args)
     {
         if (!TryComp<MapGridComponent>(ent.Owner, out var gridComp))
             return;
@@ -39,7 +39,7 @@ public sealed class CP14RoofSystem : EntitySystem
         }
     }
 
-    private void OnRoofStartup(Entity<CP14SetGridUnroovedComponent> ent, ref ComponentStartup args)
+    private void OnRoofStartup(Entity<CE14SetGridUnroovedComponent> ent, ref ComponentStartup args)
     {
         if (!TryComp<MapGridComponent>(ent.Owner, out var gridComp))
             return;

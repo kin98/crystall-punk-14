@@ -1,15 +1,15 @@
 - type: entity
-  id: CP14Target
+  id: CE14Target
   parent:
   - BaseStructureDynamic
-  - CP14BaseFlammable
+  - CE14BaseFlammable
   name: target
   description: A target for marksmanship practice.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Furniture/target.rsi
+    sprite: _CE14/Structures/Furniture/target.rsi
     layers:
       - state: target_stake
       - state: target
@@ -57,7 +57,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14TargetStake:
+          CE14TargetStake:
             min: 1
             max: 1
       - !type:PlaySoundBehavior
@@ -66,21 +66,21 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14TargetStake
-    node: CP14target
+    graph: CE14TargetStake
+    node: CE14target
 
 - type: entity
-  id: CP14TargetStake
+  id: CE14TargetStake
   parent:
   - BaseStructureDynamic
-  - CP14BaseFlammable
+  - CE14BaseFlammable
   name: target stake
   description: A wooden stand on which to fix a target for firing.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Furniture/target.rsi
+    sprite: _CE14/Structures/Furniture/target.rsi
     layers:
       - state: target_stake
   - type: Fixtures
@@ -113,7 +113,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:PlaySoundBehavior
@@ -122,20 +122,20 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14TargetStake
-    node: CP14targetStake
+    graph: CE14TargetStake
+    node: CE14targetStake
 
 - type: entity
-  id: CP14TargetEffigy
+  id: CE14TargetEffigy
   parent:
   - BaseStructureDynamic
-  - CP14BaseFlammable
+  - CE14BaseFlammable
   name: target effigy
   description: The target is a scarecrow for practising close combat strikes.... or magic.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/target.rsi
+    sprite: _CE14/Structures/Furniture/target.rsi
     layers:
       - state: target_effigy
   - type: DamagePopup
@@ -172,7 +172,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 3
             max: 4
       - !type:PlaySoundBehavior
@@ -181,5 +181,5 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14TargetEffigy
-    node: CP14targetEffigy
+    graph: CE14TargetEffigy
+    node: CE14targetEffigy

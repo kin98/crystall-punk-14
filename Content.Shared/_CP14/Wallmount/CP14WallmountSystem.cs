@@ -5,9 +5,9 @@ using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.Wallmount;
+namespace Content.Shared._CE14.Wallmount;
 
-public sealed class CP14WallmountSystem : EntitySystem
+public sealed class CE14WallmountSystem : EntitySystem
 {
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
@@ -21,17 +21,17 @@ public sealed class CP14WallmountSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14WallmountedComponent, ComponentShutdown>(OnWallmountShutdown);
-        SubscribeLocalEvent<CP14WallmountedComponent, AnchorStateChangedEvent>(OnWallmountAnchorChanged);
+        SubscribeLocalEvent<CE14WallmountedComponent, ComponentShutdown>(OnWallmountShutdown);
+        SubscribeLocalEvent<CE14WallmountedComponent, AnchorStateChangedEvent>(OnWallmountAnchorChanged);
     }
 
-    private void OnWallmountAnchorChanged(Entity<CP14WallmountedComponent> ent, ref AnchorStateChangedEvent args)
+    private void OnWallmountAnchorChanged(Entity<CE14WallmountedComponent> ent, ref AnchorStateChangedEvent args)
     {
         if (!args.Anchored)
             ClearWallmounts(ent);
     }
 
-    private void OnWallmountShutdown(Entity<CP14WallmountedComponent> ent, ref ComponentShutdown args)
+    private void OnWallmountShutdown(Entity<CE14WallmountedComponent> ent, ref ComponentShutdown args)
     {
         ClearWallmounts(ent);
     }
@@ -43,7 +43,7 @@ public sealed class CP14WallmountSystem : EntitySystem
         if (_net.IsClient)
             return;
 
-        var query = EntityQueryEnumerator<CP14WallmountComponent>();
+        var query = EntityQueryEnumerator<CE14WallmountComponent>();
         while (query.MoveNext(out var uid, out var wallmount))
         {
             if (!wallmount.Initialized)
@@ -63,12 +63,12 @@ public sealed class CP14WallmountSystem : EntitySystem
 
             if (TryAttachWallmount((uid, wallmount)))
             {
-                RemComp<CP14WallmountComponent>(uid);
+                RemComp<CE14WallmountComponent>(uid);
             }
         }
     }
 
-    private void ClearWallmounts(Entity<CP14WallmountedComponent> ent)
+    private void ClearWallmounts(Entity<CE14WallmountedComponent> ent)
     {
         foreach (var attached in ent.Comp.Attached)
         {
@@ -78,7 +78,7 @@ public sealed class CP14WallmountSystem : EntitySystem
         ent.Comp.Attached.Clear();
     }
 
-    private bool TryAttachWallmount(Entity<CP14WallmountComponent> wallmount)
+    private bool TryAttachWallmount(Entity<CE14WallmountComponent> wallmount)
     {
         var grid = Transform(wallmount).GridUid;
         if (grid == null || !TryComp<MapGridComponent>(grid, out var gridComp))
@@ -95,7 +95,7 @@ public sealed class CP14WallmountSystem : EntitySystem
             if (!_tag.HasAnyTag(entt, WallTags))
                 continue;
 
-            EnsureComp<CP14WallmountedComponent>(entt, out var wallmounted);
+            EnsureComp<CE14WallmountedComponent>(entt, out var wallmounted);
 
             if (!wallmounted.Attached.Contains(wallmount))
                 wallmounted.Attached.Add(wallmount);

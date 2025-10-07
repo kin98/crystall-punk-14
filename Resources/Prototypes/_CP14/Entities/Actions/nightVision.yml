@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14ActionToggleNightVision
+  id: CE14ActionToggleNightVision
   name: Toggle Night Vision
   parent: BaseMentalAction
   description: You begin to see the world in a special way that allows you to see even in total darkness.
@@ -9,10 +9,10 @@
     clientExclusive: true
     checkCanInteract: false
   - type: InstantAction
-    event: !type:CP14ToggleNightVisionEvent
+    event: !type:CE14ToggleNightVisionEvent
 
 - type: entity
-  id: CP14NightVisionLight
+  id: CE14NightVisionLight
   categories: [ HideSpawnMenu ]
   components:
   - type: Tag
@@ -27,22 +27,22 @@
     autoRot: true
 
 - type: entity
-  id: CP14ActionToggleNightVisionVampire
+  id: CE14ActionToggleNightVisionVampire
   name: Toggle Night Vision
   parent: BaseMentalAction
   description: You begin to see the world in a special way that allows you to see even in total darkness.
   components:
   - type: Action
     icon: 
-      sprite: _CP14/Actions/Spells/vampire.rsi
+      sprite: _CE14/Actions/Spells/vampire.rsi
       state: night_vision
     clientExclusive: true
     checkCanInteract: false
   - type: InstantAction
-    event: !type:CP14ToggleNightVisionEvent
+    event: !type:CE14ToggleNightVisionEvent
 
 - type: entity
-  id: CP14NightVisionVampire
+  id: CE14NightVisionVampire
   categories: [ HideSpawnMenu ]
   components:
   - type: Tag

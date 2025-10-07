@@ -2,13 +2,13 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Vampire.Components;
+namespace Content.Shared._CE14.Vampire.Components;
 
 [RegisterComponent]
 [NetworkedComponent]
 [AutoGenerateComponentState]
-[Access(typeof(CP14SharedVampireSystem))]
-public sealed partial class CP14VampireClanHeartComponent : Component
+[Access(typeof(CE14SharedVampireSystem))]
+public sealed partial class CE14VampireClanHeartComponent : Component
 {
     [DataField, AutoNetworkedField]
     public FixedPoint2 CollectedEssence = 0f;
@@ -17,10 +17,10 @@ public sealed partial class CP14VampireClanHeartComponent : Component
     public string LevelPrefix = "orb";
 
     [DataField]
-    public EntProtoId LevelUpVfx = "CP14SkyLightningRed";
+    public EntProtoId LevelUpVfx = "CE14SkyLightningRed";
 
     [DataField]
-    public ProtoId<CP14VampireFactionPrototype>? Faction;
+    public ProtoId<CE14VampireFactionPrototype>? Faction;
 
     [DataField]
     public FixedPoint2 Level2 = 5f;

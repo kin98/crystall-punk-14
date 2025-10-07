@@ -1,29 +1,29 @@
 - type: entity
-  id: CP14ActionSpellSpeedBallade
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellSpeedBallade
+  parent: CE14ActionSpellBase
   name: Speed ballade
   description: Your music is filled with accelerating magic, speeding up the movement of all creatures nearby
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 1
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 1
   - type: DoAfterArgs
     hidden: true
     repeat: true
     delay: 1
-  - type: CP14ActionRequiredMusicTool
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneSpeedBallade
+  - type: CE14ActionRequiredMusicTool
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneSpeedBallade
   - type: Action
     useDelay: 15
     icon:
-      sprite: _CP14/Actions/Spells/electromancy.rsi
+      sprite: _CE14/Actions/Spells/electromancy.rsi
       state: speed_music
   - type: InstantAction
-    event: !type:CP14InstantModularEffectEvent
+    event: !type:CE14InstantModularEffectEvent
       effects:
-      - !type:CP14SpellArea
+      - !type:CE14SpellArea
         affectCaster: true
         range: 5
         maxTargets: 4
@@ -31,10 +31,10 @@
           components:
           - MobState
         effects:
-        - !type:CP14SpellSpawnEntityOnTarget
+        - !type:CE14SpellSpawnEntityOnTarget
           spawns:
-          - CP14ImpactEffectSpeedBallade
-        - !type:CP14SpellApplyEntityEffect
+          - CE14ImpactEffectSpeedBallade
+        - !type:CE14SpellApplyEntityEffect
           effects:
           - !type:MovespeedModifier
             walkSpeedModifier: 1.2
@@ -42,28 +42,28 @@
             statusLifetime: 1.8
 
 - type: entity
-  id: CP14ImpactEffectSpeedBallade
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectSpeedBallade
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
-    sprite: _CP14/Effects/music.rsi
+    sprite: _CE14/Effects/music.rsi
     layers:
     - state: notes_5
       color: "#e8cb56"
       shader: unshaded
 
 - type: entity
-  id: CP14RuneSpeedBallade
-  parent: CP14BaseMagicRune
+  id: CE14RuneSpeedBallade
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: PointLight
     color: "#e8cb56"
   - type: Sprite
-    sprite: _CP14/Effects/music.rsi
+    sprite: _CE14/Effects/music.rsi
     layers:
     - state: notes_3
       color: "#e8cb56"

@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseTombstone
+  id: CE14BaseTombstone
   name: tombstone
   description: A piece of stone placed in memory of the dead.
   categories: [ ForkFiltered ]
@@ -7,7 +7,7 @@
   - type: Clickable
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Decoration/tombstone.rsi
+    sprite: _CE14/Structures/Decoration/tombstone.rsi
     drawdepth: Mobs
     offset: 0,0.3
     layers:
@@ -33,7 +33,7 @@
         - Opaque
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Rock
+    damageModifierSet: CE14Rock
   - type: Destructible
     thresholds:
     - trigger:
@@ -49,11 +49,11 @@
               volume: -4
         - !type:SpawnEntitiesBehavior
           spawn:
-            CP14StoneBlock1:
+            CE14StoneBlock1:
               min: 1
               max: 4
   - type: Climbable
   - type: Construction
-    graph: CP14BaseTombstone
-    node: CP14BaseTombstone
+    graph: CE14BaseTombstone
+    node: CE14BaseTombstone
 

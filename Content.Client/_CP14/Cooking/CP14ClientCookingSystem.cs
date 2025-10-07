@@ -5,15 +5,15 @@
 
 using System.Numerics;
 using Content.Client.DisplacementMap;
-using Content.Shared._CP14.Cooking;
-using Content.Shared._CP14.Cooking.Components;
+using Content.Shared._CE14.Cooking;
+using Content.Shared._CE14.Cooking.Components;
 using Content.Shared.DisplacementMap;
 using Content.Shared.Rounding;
 using Robust.Client.GameObjects;
 
-namespace Content.Client._CP14.Cooking;
+namespace Content.Client._CE14.Cooking;
 
-public sealed class CP14ClientCookingSystem : CP14SharedCookingSystem
+public sealed class CE14ClientCookingSystem : CE14SharedCookingSystem
 {
     [Dependency] private readonly SpriteSystem _sprite = default!;
     [Dependency] private readonly DisplacementMapSystem _displacement = default!;
@@ -22,21 +22,21 @@ public sealed class CP14ClientCookingSystem : CP14SharedCookingSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14FoodHolderComponent, AfterAutoHandleStateEvent>(OnAfterHandleState);
-        SubscribeLocalEvent<CP14FoodHolderComponent, AppearanceChangeEvent>(OnAppearanceChange);
+        SubscribeLocalEvent<CE14FoodHolderComponent, AfterAutoHandleStateEvent>(OnAfterHandleState);
+        SubscribeLocalEvent<CE14FoodHolderComponent, AppearanceChangeEvent>(OnAppearanceChange);
     }
 
-    private void OnAppearanceChange(Entity<CP14FoodHolderComponent> ent, ref AppearanceChangeEvent args)
+    private void OnAppearanceChange(Entity<CE14FoodHolderComponent> ent, ref AppearanceChangeEvent args)
     {
         UpdateVisuals(ent);
     }
 
-    private void OnAfterHandleState(Entity<CP14FoodHolderComponent> ent, ref AfterAutoHandleStateEvent args)
+    private void OnAfterHandleState(Entity<CE14FoodHolderComponent> ent, ref AfterAutoHandleStateEvent args)
     {
         UpdateVisuals(ent);
     }
 
-    private void UpdateVisuals(Entity<CP14FoodHolderComponent> ent)
+    private void UpdateVisuals(Entity<CE14FoodHolderComponent> ent)
     {
         if (!TryComp<SpriteComponent>(ent, out var sprite))
             return;
@@ -69,7 +69,7 @@ public sealed class CP14ClientCookingSystem : CP14SharedCookingSystem
         foreach (var layer in ent.Comp.FoodData.Visuals)
         {
             var layerIndex = index + counter;
-            var keyCode = $"cp14-food-layer-{counter}";
+            var keyCode = $"CE14-food-layer-{counter}";
             ent.Comp.RevealedLayers.Add(keyCode);
 
             _sprite.AddBlankLayer((ent, sprite), layerIndex);

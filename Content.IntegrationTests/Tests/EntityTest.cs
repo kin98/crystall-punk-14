@@ -42,10 +42,10 @@ namespace Content.IntegrationTests.Tests
                     .Where(p => !pair.IsTestPrototype(p))
                     .Where(p => !p.Components.ContainsKey("MapGrid")) // This will smash stuff otherwise.
                     .Where(p => !p.Components.ContainsKey("RoomFill")) // This comp can delete all entities, and spawn others
-                    //CP14
-                    .Where(p => !p.Components.ContainsKey("CP14BiomeSpawner")) // this component delete all entities on this tile
-                    .Where(p => !p.Components.ContainsKey("CP14AreaEntityEffect")) // lightning detonates entities
-                    //CP14 end
+                    //CE14
+                    .Where(p => !p.Components.ContainsKey("CE14BiomeSpawner")) // this component delete all entities on this tile
+                    .Where(p => !p.Components.ContainsKey("CE14AreaEntityEffect")) // lightning detonates entities
+                    //CE14 end
                     .Select(p => p.ID)
                     .ToList();
 
@@ -109,10 +109,10 @@ namespace Content.IntegrationTests.Tests
                     .Where(p => !pair.IsTestPrototype(p))
                     .Where(p => !p.Components.ContainsKey("MapGrid")) // This will smash stuff otherwise.
                     .Where(p => !p.Components.ContainsKey("RoomFill")) // This comp can delete all entities, and spawn others
-                    //CP14
-                    .Where(p => !p.Components.ContainsKey("CP14BiomeSpawner")) // CP14 this component delete all entities on this tile
-                    .Where(p => !p.Components.ContainsKey("CP14AreaEntityEffect")) // CP14 lightning detonates entities
-                    //CP14 end
+                    //CE14
+                    .Where(p => !p.Components.ContainsKey("CE14BiomeSpawner")) // CE14 this component delete all entities on this tile
+                    .Where(p => !p.Components.ContainsKey("CE14AreaEntityEffect")) // CE14 lightning detonates entities
+                    //CE14 end
                     .Select(p => p.ID)
                     .ToList();
                 foreach (var protoId in protoIds)
@@ -173,9 +173,9 @@ namespace Content.IntegrationTests.Tests
                 .Where(p => !p.Abstract)
                 .Where(p => !pair.IsTestPrototype(p))
                 .Where(p => !p.Components.ContainsKey("MapGrid")) // This will smash stuff otherwise.
-                //CP14
-                .Where(p => !p.Components.ContainsKey("CP14VampireClanHeart")) //Spawn announcement sound entities on init
-                //CP14 end
+                //CE14
+                .Where(p => !p.Components.ContainsKey("CE14VampireClanHeart")) //Spawn announcement sound entities on init
+                //CE14 end
                 .Select(p => p.ID)
                 .ToList();
 
@@ -255,9 +255,9 @@ namespace Content.IntegrationTests.Tests
 
                 // makes an announcement on mapInit.
                 "AnnounceOnSpawn",
-                //CP14
-                "CP14VampireClanHeart", //Also announce on spawn
-                //CP14 end
+                //CE14
+                "CE14VampireClanHeart", //Also announce on spawn
+                //CE14 end
             };
 
             Assert.That(server.CfgMan.GetCVar(CVars.NetPVS), Is.False);

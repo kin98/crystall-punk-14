@@ -1,14 +1,14 @@
 - type: entity
   name: produce sack
-  id: CP14SackFarming #Remove "Farming"
+  id: CE14SackFarming #Remove "Farming"
   parent: 
   - BaseStorageItem
-  - CP14ClothingHeadBase
+  - CE14ClothingHeadBase
   description: Bag for quick transport of items
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Storage/sack.rsi
+    sprite: _CE14/Objects/Storage/sack.rsi
     state: icon
   - type: Item
     size: Huge
@@ -23,7 +23,7 @@
   - type: Dumpable
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 55
+      CE14Cloth: 55
   - type: FlashImmunity
   - type: IdentityBlocker
   - type: EyeProtection
@@ -31,63 +31,63 @@
   - type: Blindfold
 
 - type: entity
-  id: CP14SackFarmingVegetables
-  parent: CP14SackFarming
+  id: CE14SackFarmingVegetables
+  parent: CE14SackFarming
   categories: [ ForkFiltered ]
   suffix: Vegetables
   components:
   - type: StorageFill
     contents:
-      - id: CP14Wheat
+      - id: CE14Wheat
         amount: 2
-      - id: CP14FoodCabbage
+      - id: CE14FoodCabbage
         orGroup: LargeVegetables
         amount: 2
-      - id: CP14FoodPumpkin
+      - id: CE14FoodPumpkin
         orGroup: LargeVegetables
         amount: 2
-      - id: CP14FoodPotato
+      - id: CE14FoodPotato
         amount: 2
-      - id: CP14FoodCucumber
+      - id: CE14FoodCucumber
         amount: 2
-      - id: CP14FoodTomatoes
+      - id: CE14FoodTomatoes
         amount: 2
 
 - type: entity
-  id: CP14SackFarmingApple
-  parent: CP14SackFarming
+  id: CE14SackFarmingApple
+  parent: CE14SackFarming
   suffix: Apple
   components:
   - type: StorageFill
     contents:
-      - id: CP14FoodApple
+      - id: CE14FoodApple
         amount: 3
-      - id: CP14FoodApple
+      - id: CE14FoodApple
         amount: 3
         prob: 0.6
 
 - type: entity
-  id: CP14SackFarmingWheat
-  parent: CP14SackFarming
+  id: CE14SackFarmingWheat
+  parent: CE14SackFarming
   suffix: Wheat
   components:
   - type: StorageFill
     contents:
-      - id: CP14Wheat
+      - id: CE14Wheat
         amount: 4
-      - id: CP14Wheat
+      - id: CE14Wheat
         amount: 2
         prob: 0.6
 
 - type: entity
-  id: CP14SackFarmingSeed
+  id: CE14SackFarmingSeed
   parent: BaseStorageItem
   name: seed sack
   description: A sack for various plant seeds.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Storage/sack.rsi
+    sprite: _CE14/Objects/Storage/sack.rsi
     state: seed
   - type: Item
     size: Normal
@@ -102,42 +102,42 @@
   - type: Dumpable
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 25
+      CE14Cloth: 25
 
 - type: entity
-  id: CP14SackFarmingSeedFull
-  parent: CP14SackFarmingSeed
+  id: CE14SackFarmingSeedFull
+  parent: CE14SackFarmingSeed
   suffix: Full
   components:
   - type: StorageFill
     contents:
-      - id: CP14SeedWheat
+      - id: CE14SeedWheat
         amount: 1
-      - id: CP14SeedWheat
+      - id: CE14SeedWheat
         amount: 1
         prob: 0.6
-      - id: CP14SeedPumpkin
+      - id: CE14SeedPumpkin
         amount: 1
-      - id: CP14SeedCucumber
+      - id: CE14SeedCucumber
         amount: 1
-      - id: CP14SeedTomato
+      - id: CE14SeedTomato
         amount: 1
-      - id: CP14SeedCabbage
+      - id: CE14SeedCabbage
         amount: 1
-      - id: CP14SeedPepper
+      - id: CE14SeedPepper
         amount: 1
-      - id: CP14SeedSage
+      - id: CE14SeedSage
         amount: 1
-      - id: CP14SeedCotton
+      - id: CE14SeedCotton
         amount: 1
         prob: 0.4
 
 - type: entity
-  id: CP14SackFarmingSeedSnail
-  parent: CP14SackFarmingSeed
+  id: CE14SackFarmingSeedSnail
+  parent: CE14SackFarmingSeed
   suffix: Snail
   components:
   - type: StorageFill
     contents:
-      - id: CP14FoodSnailShellCooked
+      - id: CE14FoodSnailShellCooked
         amount: 12

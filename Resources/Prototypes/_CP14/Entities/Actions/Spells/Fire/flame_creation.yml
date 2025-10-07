@@ -1,38 +1,38 @@
 - type: entity
-  id: CP14ActionSpellFlameCreation
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellFlameCreation
+  parent: CE14ActionSpellBase
   name: Flame creation
   description: A artificial flame forms in your hand, illuminating your surroundings. You can throw it to use it as a disposable weapon.
   components:
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 5
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Et conteret ignis..."
     endSpeech: "in manu mea"
-  - type: CP14ActionFreeHandsRequired
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneFlameCreation
+  - type: CE14ActionFreeHandsRequired
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneFlameCreation
   - type: Action
     useDelay: 10
     icon:
-      sprite: _CP14/Actions/Spells/fire.rsi
+      sprite: _CE14/Actions/Spells/fire.rsi
       state: flame_creation
   - type: DoAfterArgs
     breakOnHandChange: false
     delay: 1
   - type: InstantAction
-    event: !type:CP14InstantModularEffectEvent
+    event: !type:CE14InstantModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectFlameCreation
-      - !type:CP14SpellSpawnInHandEntity
+        - CE14ImpactEffectFlameCreation
+      - !type:CE14SpellSpawnInHandEntity
         spawns:
-        - CP14FlameCreationArtificialFlame
+        - CE14FlameCreationArtificialFlame
 
 - type: entity
-  id: CP14RuneFlameCreation
-  parent: CP14BaseMagicRune
+  id: CE14RuneFlameCreation
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -45,8 +45,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectFlameCreation
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectFlameCreation
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -57,7 +57,7 @@
       shader: unshaded
 
 - type: entity
-  id: CP14FlameCreationArtificialFlame
+  id: CE14FlameCreationArtificialFlame
   parent:
   - BaseItem
   - ItemHeftyBase
@@ -77,7 +77,7 @@
   - type: TimedDespawn
     lifetime: 120 # 2 min
   - type: Sprite
-    sprite: _CP14/Objects/Misc/artificial_flame.rsi
+    sprite: _CE14/Objects/Misc/artificial_flame.rsi
     layers:
     - state: icon
       shader: unshaded
@@ -118,7 +118,7 @@
   - type: ThrowingAngle
     angle: 0
   - type: LandAtCursor
-  - type: CP14MeleeSelfDamage
+  - type: CE14MeleeSelfDamage
     damageToSelf:
       types:
         Blunt: 0.5 # 2 hits
@@ -129,7 +129,7 @@
   - type: MeleeWeapon
     attackRate: 1.8
     wideAnimationRotation: 225
-    wideAnimation: CP14WeaponArcSlash
+    wideAnimation: CE14WeaponArcSlash
     damage:
       types:
         Heat: 8
@@ -139,15 +139,15 @@
         variation: 0.250
         volume: -12
     cPAnimationLength: 0.15
-  - type: CP14DelayedIgnitionSource
+  - type: CE14DelayedIgnitionSource
     enabled: true
 
 - type: entity
-  parent: CP14BaseSpellScrollFire
-  id: CP14SpellScrollFlameCreation
+  parent: CE14BaseSpellScrollFire
+  id: CE14SpellScrollFlameCreation
   name: flame creation spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellFlameCreation
+    - CE14ActionSpellFlameCreation
 

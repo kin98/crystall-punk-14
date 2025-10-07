@@ -1,106 +1,106 @@
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsTrouserWhite
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsTrouserWhite
   name: white trouser
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Pants/Trousers/white.rsi
+    sprite: _CE14/Clothing/Pants/Trousers/white.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Pants/Trousers/white.rsi
+    sprite: _CE14/Clothing/Pants/Trousers/white.rsi
 
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsTrouserDarkBlue
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsTrouserDarkBlue
   name: dark trouser
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Pants/Trousers/dark_blue.rsi
+    sprite: _CE14/Clothing/Pants/Trousers/dark_blue.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Pants/Trousers/dark_blue.rsi
+    sprite: _CE14/Clothing/Pants/Trousers/dark_blue.rsi
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 25
+      CE14Cloth: 25
   - type: StaticPrice
     price: 8.6
 
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsLoincloth
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsLoincloth
   name: loincloth
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Pants/loincloth.rsi
+    sprite: _CE14/Clothing/Pants/loincloth.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Pants/loincloth.rsi
+    sprite: _CE14/Clothing/Pants/loincloth.rsi
   - type: Butcherable
     butcheringType: Knife
     spawned:
-    - id: CP14ThinLeather1
+    - id: CE14ThinLeather1
       amount: 1
 
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsMercenaryTrousers
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsMercenaryTrousers
   name: mercenary trousers
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Pants/Trousers/trousers_mercenary.rsi
+    sprite: _CE14/Clothing/Pants/Trousers/trousers_mercenary.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Pants/Trousers/trousers_mercenary.rsi
+    sprite: _CE14/Clothing/Pants/Trousers/trousers_mercenary.rsi
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 25
+      CE14Cloth: 25
   - type: StaticPrice
     price: 12.6
 
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsGreen
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsGreen
   name: green pants
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Pants/green.rsi
+    sprite: _CE14/Clothing/Pants/green.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Pants/green.rsi
+    sprite: _CE14/Clothing/Pants/green.rsi
 
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsBrown
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsBrown
   name: brown pants
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Pants/brown.rsi
+    sprite: _CE14/Clothing/Pants/brown.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Pants/brown.rsi
+    sprite: _CE14/Clothing/Pants/brown.rsi
 
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsJestersPantaloons
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsJestersPantaloons
   name: jester's pantaloons
   description: It's like regular pantaloons. But you can be seen from two miles away.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Pants/Trousers/jesters_pantaloons.rsi
+    sprite: _CE14/Clothing/Pants/Trousers/jesters_pantaloons.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Pants/Trousers/jesters_pantaloons.rsi
+    sprite: _CE14/Clothing/Pants/Trousers/jesters_pantaloons.rsi
 
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsJagermeisterTrousers
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsJagermeisterTrousers
   name: jagermeister's trousers
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Pants/jagermeister_trousers.rsi
+    sprite: _CE14/Clothing/Pants/jagermeister_trousers.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Pants/jagermeister_trousers.rsi
+    sprite: _CE14/Clothing/Pants/jagermeister_trousers.rsi
 
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsHakama
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsHakama
   name: hakama
   description: Traditional long pants of a traveler from distant lands.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Pants/hakama.rsi
+    sprite: _CE14/Clothing/Pants/hakama.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Pants/hakama.rsi
+    sprite: _CE14/Clothing/Pants/hakama.rsi

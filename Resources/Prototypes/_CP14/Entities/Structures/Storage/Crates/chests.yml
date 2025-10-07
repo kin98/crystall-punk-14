@@ -1,16 +1,16 @@
 - type: entity
   parent:
-  - CP14ChestGeneric
-  - CP14BaseFlammable
-  id: CP14WoodenChest
+  - CE14ChestGeneric
+  - CE14BaseFlammable
+  id: CE14WoodenChest
   name: wooden chest
   description: A simple wooden chest for easy storage of junk.
   components:
   - type: Icon
-    sprite: _CP14/Structures/Storage/Crates/chest.rsi
+    sprite: _CE14/Structures/Storage/Crates/chest.rsi
     state: icon
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Crates/chest.rsi
+    sprite: _CE14/Structures/Storage/Crates/chest.rsi
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
@@ -18,7 +18,7 @@
       map: ["enum.StorageVisualLayers.Door"]
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -27,7 +27,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 3
             max: 5
       - !type:PlaySoundBehavior
@@ -36,26 +36,26 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14WoodenChest
-    node: CP14WoodenChest
+    graph: CE14WoodenChest
+    node: CE14WoodenChest
     containers:
     - entity_storage
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 50
-      CP14Iron: 10
+      CE14WoodenPlanks: 50
+      CE14Iron: 10
 
 - type: entity
-  parent: CP14WoodenChest
-  id: CP14WoodenChestOld
+  parent: CE14WoodenChest
+  id: CE14WoodenChestOld
   name: old wooden chest
   description: An old chest. It has seen a lot.
   components:
   - type: Icon
-    sprite: _CP14/Structures/Storage/Crates/chest_old.rsi
+    sprite: _CE14/Structures/Storage/Crates/chest_old.rsi
     state: icon
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Crates/chest_old.rsi
+    sprite: _CE14/Structures/Storage/Crates/chest_old.rsi
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
@@ -69,7 +69,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 3
             max: 5
       - !type:PlaySoundBehavior
@@ -80,17 +80,17 @@
 
 - type: entity
   parent:
-  - CP14ChestGeneric
-  - CP14BaseFlammable
-  id: CP14GoldChest
+  - CE14ChestGeneric
+  - CE14BaseFlammable
+  id: CE14GoldChest
   name: gold chest
   description: Someone spent a lot of money and effort to decorate this chest with gold. It didn't make the chest more functional, but it did make it beautiful.
   components:
   - type: Icon
-    sprite: _CP14/Structures/Storage/Crates/chest_gold.rsi
+    sprite: _CE14/Structures/Storage/Crates/chest_gold.rsi
     state: icon
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Crates/chest_gold.rsi
+    sprite: _CE14/Structures/Storage/Crates/chest_gold.rsi
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
@@ -98,7 +98,7 @@
       map: ["enum.StorageVisualLayers.Door"]
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -107,7 +107,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 3
             max: 5
       - !type:PlaySoundBehavior
@@ -116,12 +116,12 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14GoldChest
-    node: CP14GoldChest
+    graph: CE14GoldChest
+    node: CE14GoldChest
     containers:
     - entity_storage
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 50
-      CP14Iron: 10
-      CP14Gold: 10
+      CE14WoodenPlanks: 50
+      CE14Iron: 10
+      CE14Gold: 10

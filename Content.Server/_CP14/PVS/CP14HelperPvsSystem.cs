@@ -5,9 +5,9 @@ using Content.Shared.Mind.Components;
 using Robust.Shared;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.PVS;
+namespace Content.Server._CE14.PVS;
 
-public sealed partial class CP14HelperPvsSystem : EntitySystem
+public sealed partial class CE14HelperPvsSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
@@ -19,7 +19,7 @@ public sealed partial class CP14HelperPvsSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<CP14OutPVSDespawnComponent>();
+        var query = EntityQueryEnumerator<CE14OutPVSDespawnComponent>();
         while (query.MoveNext(out var uid, out var pvs))
         {
             if (_timing.CurTime <= pvs.NextUpdate)

@@ -1,13 +1,13 @@
-using Content.Shared._CP14.ModularCraft.Prototypes;
+using Content.Shared._CE14.ModularCraft.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.ModularCraft.Components;
+namespace Content.Shared._CE14.ModularCraft.Components;
 
-[RegisterComponent, Access(typeof(CP14SharedModularCraftSystem))]
-public sealed partial class CP14ModularCraftPartComponent : Component
+[RegisterComponent, Access(typeof(CE14SharedModularCraftSystem))]
+public sealed partial class CE14ModularCraftPartComponent : Component
 {
     [DataField(required: true)]
-    public HashSet<ProtoId<CP14ModularCraftPartPrototype>> PossibleParts = new();
+    public HashSet<ProtoId<CE14ModularCraftPartPrototype>> PossibleParts = new();
 
     [DataField]
     public float DoAfter = 1f;

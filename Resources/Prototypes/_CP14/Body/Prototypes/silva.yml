@@ -1,15 +1,15 @@
 - type: body
-  id: CP14Silva
+  id: CE14Silva
   name: silva
   root: torso
   slots:
     head:
-      part: CP14HeadHuman
+      part: CE14HeadHuman
       connections:
         - torso
       organs:
-        brain: CP14OrganSilvaBrain
-        eyes: CP14OrganSilvaEyes
+        brain: CE14OrganSilvaBrain
+        eyes: CE14OrganSilvaEyes
     torso:
       part: TorsoDiona
       connections:
@@ -18,29 +18,29 @@
         - right_leg
         - left_leg
       organs:
-        lungs: CP14OrganSilvaLungs
-        stomach: CP14OrganSilvaStomach
+        lungs: CE14OrganSilvaLungs
+        stomach: CE14OrganSilvaStomach
     right_arm:
-      part: CP14RightArmHuman
+      part: CE14RightArmHuman
       connections:
         - right_hand
     left_arm:
-      part: CP14LeftArmHuman
+      part: CE14LeftArmHuman
       connections:
         - left_hand
     right_hand:
-      part: CP14RightHandHuman
+      part: CE14RightHandHuman
     left_hand:
-      part: CP14LeftHandHuman
+      part: CE14LeftHandHuman
     right_leg:
-      part: CP14RightLegHuman
+      part: CE14RightLegHuman
       connections:
         - right_foot
     left_leg:
-      part: CP14LeftLegHuman
+      part: CE14LeftLegHuman
       connections:
         - left_foot
     right_foot:
-      part: CP14RightFootHuman
+      part: CE14RightFootHuman
     left_foot:
-      part: CP14LeftFootHuman
+      part: CE14LeftFootHuman

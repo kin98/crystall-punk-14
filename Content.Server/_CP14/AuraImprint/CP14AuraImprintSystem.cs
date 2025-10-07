@@ -1,42 +1,42 @@
-using Content.Shared._CP14.AuraDNA;
-using Content.Shared._CP14.MagicVision;
-using Content.Shared._CP14.MagicVision.Components;
+using Content.Shared._CE14.AuraDNA;
+using Content.Shared._CE14.MagicVision;
+using Content.Shared._CE14.MagicVision.Components;
 using Content.Shared.Mobs;
 using Content.Shared.StatusEffectNew;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
-namespace Content.Server._CP14.AuraImprint;
+namespace Content.Server._CE14.AuraImprint;
 
 /// <summary>
 /// This system handles the basic mechanics of spell use, such as doAfter, event invocation, and energy spending.
 /// </summary>
-public sealed partial class CP14AuraImprintSystem : CP14SharedAuraImprintSystem
+public sealed partial class CE14AuraImprintSystem : CE14SharedAuraImprintSystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly CP14SharedMagicVisionSystem _vision = default!;
+    [Dependency] private readonly CE14SharedMagicVisionSystem _vision = default!;
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14AuraImprintComponent, MapInitEvent>(OnMapInit);
-        SubscribeLocalEvent<CP14HideMagicAuraStatusEffectComponent, StatusEffectAppliedEvent>(OnShuffleStatusApplied);
-        SubscribeLocalEvent<CP14AuraImprintComponent, MobStateChangedEvent>(OnMobStateChanged);
+        SubscribeLocalEvent<CE14AuraImprintComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<CE14HideMagicAuraStatusEffectComponent, StatusEffectAppliedEvent>(OnShuffleStatusApplied);
+        SubscribeLocalEvent<CE14AuraImprintComponent, MobStateChangedEvent>(OnMobStateChanged);
     }
 
-    private void OnShuffleStatusApplied(Entity<CP14HideMagicAuraStatusEffectComponent> ent, ref StatusEffectAppliedEvent args)
+    private void OnShuffleStatusApplied(Entity<CE14HideMagicAuraStatusEffectComponent> ent, ref StatusEffectAppliedEvent args)
     {
         ent.Comp.Imprint = GenerateAuraImprint(args.Target);
         Dirty(ent);
     }
 
-    private void OnMapInit(Entity<CP14AuraImprintComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<CE14AuraImprintComponent> ent, ref MapInitEvent args)
     {
         ent.Comp.Imprint = GenerateAuraImprint((ent.Owner, ent.Comp));
         Dirty(ent);
     }
 
-    public string GenerateAuraImprint(Entity<CP14AuraImprintComponent?> ent)
+    public string GenerateAuraImprint(Entity<CE14AuraImprintComponent?> ent)
     {
         if (!Resolve(ent, ref ent.Comp))
             return string.Empty;
@@ -52,7 +52,7 @@ public sealed partial class CP14AuraImprintSystem : CP14SharedAuraImprintSystem
         return $"[color={ent.Comp.ImprintColor.ToHex()}]{imprint}[/color]";
     }
 
-    private void OnMobStateChanged(Entity<CP14AuraImprintComponent> ent, ref MobStateChangedEvent args)
+    private void OnMobStateChanged(Entity<CE14AuraImprintComponent> ent, ref MobStateChangedEvent args)
     {
         switch (args.NewMobState)
         {
@@ -60,8 +60,8 @@ public sealed partial class CP14AuraImprintSystem : CP14SharedAuraImprintSystem
             {
                 _vision.SpawnMagicTrace(
                     Transform(ent).Coordinates,
-                    new SpriteSpecifier.Rsi(new ResPath("_CP14/Actions/Spells/misc.rsi"), "skull"),
-                    Loc.GetString("cp14-magic-vision-crit"),
+                    new SpriteSpecifier.Rsi(new ResPath("_CE14/Actions/Spells/misc.rsi"), "skull"),
+                    Loc.GetString("CE14-magic-vision-crit"),
                     TimeSpan.FromMinutes(10),
                     ent);
                 break;
@@ -70,8 +70,8 @@ public sealed partial class CP14AuraImprintSystem : CP14SharedAuraImprintSystem
             {
                 _vision.SpawnMagicTrace(
                     Transform(ent).Coordinates,
-                    new SpriteSpecifier.Rsi(new ResPath("_CP14/Actions/Spells/misc.rsi"), "skull_red"),
-                    Loc.GetString("cp14-magic-vision-dead"),
+                    new SpriteSpecifier.Rsi(new ResPath("_CE14/Actions/Spells/misc.rsi"), "skull_red"),
+                    Loc.GetString("CE14-magic-vision-dead"),
                     TimeSpan.FromMinutes(10),
                     ent);
                 break;

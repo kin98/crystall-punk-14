@@ -57,14 +57,14 @@ public sealed partial class LabelSystem : EntitySystem
         label.CurrentLabel = text;
         _nameModifier.RefreshNameModifiers(uid);
 
-        //CP14 Events
-        var ev = new CP14LabeledEvent()
+        //CE14 Events
+        var ev = new CE14LabeledEvent()
         {
             LabeledEntity = uid,
             Text = text,
         };
         RaiseLocalEvent(uid, ev);
-        //CP14 Events end
+        //CE14 Events end
 
         Dirty(uid, label);
     }
@@ -172,8 +172,8 @@ public sealed partial class LabelSystem : EntitySystem
     }
 }
 
-//CP14 Labeling Event
-public sealed class CP14LabeledEvent : EntityEventArgs
+//CE14 Labeling Event
+public sealed class CE14LabeledEvent : EntityEventArgs
 {
     public EntityUid? LabeledEntity;
     public string? Text;

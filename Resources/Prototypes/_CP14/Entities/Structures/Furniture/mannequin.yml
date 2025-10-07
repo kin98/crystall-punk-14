@@ -1,20 +1,20 @@
 - type: entity
-  id: CP14Mannequin
+  id: CE14Mannequin
   categories: [ ForkFiltered ]
   parent:
   - Mannequin
-  - CP14BaseFlammable
+  - CE14BaseFlammable
   name: mannequin
   description: A handy stand for clothing or armour.
   components:
   - type: Appearance
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/mannequin.rsi
+    sprite: _CE14/Structures/Furniture/mannequin.rsi
     state: mannequin
     noRot: true
     layers:
     - map: [ "mannequin" ]
-      sprite: _CP14/Structures/Furniture/mannequin.rsi
+      sprite: _CE14/Structures/Furniture/mannequin.rsi
       state: mannequin
     - map: [ "pants" ]
     - map: [ "shoes" ]
@@ -43,11 +43,11 @@
         - BulletImpassable
   - type: InteractionOutline
   - type: Construction
-    graph: CP14Mannequin
-    node: CP14mannequin
+    graph: CE14Mannequin
+    node: CE14mannequin
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -115,7 +115,7 @@
         occludes: False
         ent: null
   - type: Inventory
-    templateId: CP14Partial
+    templateId: CE14Partial
   - type: InventorySlots
   - type: Strippable
   - type: UserInterface

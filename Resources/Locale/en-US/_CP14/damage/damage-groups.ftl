@@ -1,1 +1,1 @@
-cp14-damage-group-magic = Magic
+CE14-damage-group-magic = Magic

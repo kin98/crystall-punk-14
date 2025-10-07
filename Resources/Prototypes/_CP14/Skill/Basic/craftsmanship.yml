@@ -1,38 +1,38 @@
-- type: cp14Skill
+- type: CE14Skill
   id: TraderWit
   skillUiPosition: 0, 0
   tree: Craftsmanship
-  name: cp14-skill-trader-wit-name
-  desc: cp14-skill-trader-wit-desc
+  name: CE14-skill-trader-wit-name
+  desc: CE14-skill-trader-wit-desc
   learnCost: 1
   icon:
-    sprite: _CP14/Objects/Economy/pp_coin.rsi
+    sprite: _CE14/Objects/Economy/pp_coin.rsi
     state: coin8
   effects:
   - !type:AddComponents
     components:
-    - type: CP14PriceScanner
+    - type: CE14PriceScanner
 
-#- type: cp14Skill
+#- type: CE14Skill
 #  id: CopperMelting
 #  skillUiPosition: 4, 0
 #  tree: Craftsmanship
-#  name: cp14-skill-copper-melt-name
+#  name: CE14-skill-copper-melt-name
 #  learnCost: 0.5
 #  icon:
-#    sprite: _CP14/Objects/Materials/copper_ore.rsi
+#    sprite: _CE14/Objects/Materials/copper_ore.rsi
 #    state: ore3
 #  effects:
 #  - !type:UnlockRecipes
 #
-#- type: cp14Skill
+#- type: CE14Skill
 #  id: IronMelting
 #  skillUiPosition: 4, 2
 #  tree: Craftsmanship
-#  name: cp14-skill-iron-melt-name
+#  name: CE14-skill-iron-melt-name
 #  learnCost: 0.5
 #  icon:
-#    sprite: _CP14/Objects/Materials/iron_ore.rsi
+#    sprite: _CE14/Objects/Materials/iron_ore.rsi
 #    state: ore3
 #  effects:
 #  - !type:UnlockRecipes
@@ -40,14 +40,14 @@
 #  - !type:NeedPrerequisite
 #    prerequisite: CopperMelting
 #
-#- type: cp14Skill
+#- type: CE14Skill
 #  id: GoldMelting
 #  skillUiPosition: 3, 4
 #  tree: Craftsmanship
-#  name: cp14-skill-gold-melt-name
+#  name: CE14-skill-gold-melt-name
 #  learnCost: 0.5
 #  icon:
-#    sprite: _CP14/Objects/Materials/gold_ore.rsi
+#    sprite: _CE14/Objects/Materials/gold_ore.rsi
 #    state: ore3
 #  effects:
 #  - !type:UnlockRecipes
@@ -55,14 +55,14 @@
 #  - !type:NeedPrerequisite
 #    prerequisite: IronMelting
 #
-#- type: cp14Skill
+#- type: CE14Skill
 #  id: MithrilMelting
 #  skillUiPosition: 5, 4
 #  tree: Craftsmanship
-#  name: cp14-skill-mithril-melt-name
+#  name: CE14-skill-mithril-melt-name
 #  learnCost: 0.5
 #  icon:
-#    sprite: _CP14/Objects/Materials/mithril_ore.rsi
+#    sprite: _CE14/Objects/Materials/mithril_ore.rsi
 #    state: ore3
 #  effects:
 #  - !type:UnlockRecipes
@@ -70,27 +70,27 @@
 #  - !type:NeedPrerequisite
 #    prerequisite: IronMelting
 #
-#- type: cp14Skill
+#- type: CE14Skill
 #  id: GlassMelting
 #  skillUiPosition: 6, 0
 #  tree: Craftsmanship
-#  name: cp14-skill-glass-melt-name
+#  name: CE14-skill-glass-melt-name
 #  learnCost: 0.5
 #  icon:
-#    sprite: _CP14/Objects/Materials/glass.rsi
+#    sprite: _CE14/Objects/Materials/glass.rsi
 #    state: glass_3
 #  effects:
 #  - !type:UnlockRecipes
 
-- type: cp14Skill
+- type: CE14Skill
   id: AlchemyVision
   skillUiPosition: 10, 0
   tree: Craftsmanship
-  name: cp14-skill-alchemy-vision-name
-  desc: cp14-skill-alchemy-vision-desc
+  name: CE14-skill-alchemy-vision-name
+  desc: CE14-skill-alchemy-vision-desc
   learnCost: 1
   icon:
-    sprite: _CP14/Clothing/Eyes/alchemy_glasses.rsi
+    sprite: _CE14/Clothing/Eyes/alchemy_glasses.rsi
     state: icon
   effects:
   - !type:AddComponents

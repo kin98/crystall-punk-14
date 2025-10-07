@@ -1,6 +1,6 @@
 # TIER 1
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: Marble
   levels:
     min: 0
@@ -9,145 +9,145 @@
   categories:
     Ore: 0
   requiredTags:
-  - CP14DemiplaneOres
+  - CE14DemiplaneOres
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallMarbleStone
+      - CE14WallStone
+      entity: CE14WallMarbleStone
       count: 5
       minGroupSize: 5
       maxGroupSize: 10
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: IronOre
   levels:
     min: 1
     max: 10
-  name: cp14-modifier-iron-ore
+  name: CE14-modifier-iron-ore
   unique: false
   categories:
     Ore: 0.25
   requiredTags:
-  - CP14DemiplaneOres
-  - CP14DemiplaneOpenSky
+  - CE14DemiplaneOres
+  - CE14DemiplaneOpenSky
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallStoneIronOre
+      - CE14WallStone
+      entity: CE14WallStoneIronOre
       count: 20
       minGroupSize: 2
       maxGroupSize: 4
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: IronOreUnderground
   levels:
     min: 1
     max: 10
-  name: cp14-modifier-iron-ore
+  name: CE14-modifier-iron-ore
   unique: false
   categories:
     Ore: 0.25
   requiredTags:
-  - CP14DemiplaneOres
-  - CP14DemiplaneUnderground
+  - CE14DemiplaneOres
+  - CE14DemiplaneUnderground
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallStoneIronOre
+      - CE14WallStone
+      entity: CE14WallStoneIronOre
       count: 15
       minGroupSize: 4
       maxGroupSize: 6
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: CopperOre
   levels:
     min: 0
     max: 3
-  name: cp14-modifier-copper-ore
+  name: CE14-modifier-copper-ore
   unique: false
   categories:
     Ore: 0.25
   requiredTags:
-  - CP14DemiplaneOres
-  - CP14DemiplaneOpenSky
+  - CE14DemiplaneOres
+  - CE14DemiplaneOpenSky
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallStoneCopperOre
+      - CE14WallStone
+      entity: CE14WallStoneCopperOre
       count: 20
       minGroupSize: 2
       maxGroupSize: 4
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: CopperOreUnderground
   levels:
     min: 0
     max: 3
-  name: cp14-modifier-copper-ore
+  name: CE14-modifier-copper-ore
   unique: false
   categories:
     Ore: 0.25
   requiredTags:
-  - CP14DemiplaneOres
-  - CP14DemiplaneUnderground
+  - CE14DemiplaneOres
+  - CE14DemiplaneUnderground
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallStoneCopperOre
+      - CE14WallStone
+      entity: CE14WallStoneCopperOre
       count: 15
       minGroupSize: 4
       maxGroupSize: 6
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: CoalOre
   levels:
     min: 0
     max: 5
-  name: cp14-modifier-coal-ore
+  name: CE14-modifier-coal-ore
   unique: false
   categories:
     Ore: 0.25
   requiredTags:
-  - CP14DemiplaneOres
-  - CP14DemiplaneOpenSky
+  - CE14DemiplaneOres
+  - CE14DemiplaneOpenSky
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallStoneCoalOre
+      - CE14WallStone
+      entity: CE14WallStoneCoalOre
       count: 20
       minGroupSize: 4
       maxGroupSize: 6
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: CoalOreUnderground
   levels:
     min: 0
     max: 5
-  name: cp14-modifier-copper-ore
+  name: CE14-modifier-copper-ore
   unique: false
   categories:
     Ore: 0.25
   requiredTags:
-  - CP14DemiplaneOres
-  - CP14DemiplaneUnderground
+  - CE14DemiplaneOres
+  - CE14DemiplaneUnderground
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallStoneCoalOre
+      - CE14WallStone
+      entity: CE14WallStoneCoalOre
       count: 15
       minGroupSize: 6
       maxGroupSize: 8
 
 # TIER 2
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: GoldOre
   levels:
     min: 3
@@ -156,54 +156,54 @@
   categories:
     Ore: 0.25
   requiredTags:
-  - CP14DemiplaneOres
+  - CE14DemiplaneOres
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallStoneGoldOre
+      - CE14WallStone
+      entity: CE14WallStoneGoldOre
       count: 5
       minGroupSize: 1
       maxGroupSize: 2
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: MithrilOre
   levels:
     min: 4
     max: 10
-  name: cp14-modifier-mithril-ore
+  name: CE14-modifier-mithril-ore
   unique: false
   categories:
     Ore: 0.25
   requiredTags:
-  - CP14DemiplaneOres
-  - CP14DemiplaneOpenSky
+  - CE14DemiplaneOres
+  - CE14DemiplaneOpenSky
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallStoneMithrilOre
+      - CE14WallStone
+      entity: CE14WallStoneMithrilOre
       count: 10
       minGroupSize: 2
       maxGroupSize: 4
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: MithrilOreUnderground
   levels:
     min: 4
     max: 10
-  name: cp14-modifier-mithril-ore
+  name: CE14-modifier-mithril-ore
   unique: false
   categories:
     Ore: 0.25
   requiredTags:
-  - CP14DemiplaneOres
-  - CP14DemiplaneUnderground
+  - CE14DemiplaneOres
+  - CE14DemiplaneUnderground
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      entity: CP14WallStoneMithrilOre
+      - CE14WallStone
+      entity: CE14WallStoneMithrilOre
       count: 15
       minGroupSize: 2
       maxGroupSize: 4

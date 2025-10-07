@@ -1,10 +1,10 @@
-using Content.Shared._CP14.NightVision;
+using Content.Shared._CE14.NightVision;
 using Robust.Client.Player;
 using Robust.Shared.Player;
 
-namespace Content.Client._CP14.NightVision;
+namespace Content.Client._CE14.NightVision;
 
-public sealed class CP14ClientNightVisionSystem : CP14SharedNightVisionSystem
+public sealed class CE14ClientNightVisionSystem : CE14SharedNightVisionSystem
 {
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
@@ -13,28 +13,28 @@ public sealed class CP14ClientNightVisionSystem : CP14SharedNightVisionSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14NightVisionComponent, CP14ToggleNightVisionEvent>(OnToggleNightVision);
-        SubscribeLocalEvent<CP14NightVisionComponent, PlayerDetachedEvent>(OnPlayerDetached);
+        SubscribeLocalEvent<CE14NightVisionComponent, CE14ToggleNightVisionEvent>(OnToggleNightVision);
+        SubscribeLocalEvent<CE14NightVisionComponent, PlayerDetachedEvent>(OnPlayerDetached);
     }
 
-    protected override void OnRemove(Entity<CP14NightVisionComponent> ent, ref ComponentRemove args)
+    protected override void OnRemove(Entity<CE14NightVisionComponent> ent, ref ComponentRemove args)
     {
         base.OnRemove(ent, ref args);
 
         NightVisionOff(ent);
     }
 
-    private void OnPlayerDetached(Entity<CP14NightVisionComponent> ent, ref PlayerDetachedEvent args)
+    private void OnPlayerDetached(Entity<CE14NightVisionComponent> ent, ref PlayerDetachedEvent args)
     {
         NightVisionOff(ent);
     }
 
-    private void OnToggleNightVision(Entity<CP14NightVisionComponent> ent, ref CP14ToggleNightVisionEvent args)
+    private void OnToggleNightVision(Entity<CE14NightVisionComponent> ent, ref CE14ToggleNightVisionEvent args)
     {
         NightVisionToggle(ent);
     }
 
-    private void NightVisionOn(Entity<CP14NightVisionComponent> ent)
+    private void NightVisionOn(Entity<CE14NightVisionComponent> ent)
     {
         if (_playerManager.LocalSession?.AttachedEntity != ent)
             return;
@@ -45,13 +45,13 @@ public sealed class CP14ClientNightVisionSystem : CP14SharedNightVisionSystem
         ent.Comp.LocalLightEntity = nightVisionLight;
     }
 
-    private void NightVisionOff(Entity<CP14NightVisionComponent> ent)
+    private void NightVisionOff(Entity<CE14NightVisionComponent> ent)
     {
         QueueDel(ent.Comp.LocalLightEntity);
         ent.Comp.LocalLightEntity = null;
     }
 
-    private void NightVisionToggle(Entity<CP14NightVisionComponent> ent)
+    private void NightVisionToggle(Entity<CE14NightVisionComponent> ent)
     {
         if (ent.Comp.LocalLightEntity == null)
         {

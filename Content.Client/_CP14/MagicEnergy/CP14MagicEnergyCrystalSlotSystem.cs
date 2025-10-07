@@ -1,5 +1,5 @@
-using Content.Shared._CP14.MagicEnergy;
+using Content.Shared._CE14.MagicEnergy;
 
-namespace Content.Client._CP14.MagicEnergy;
+namespace Content.Client._CE14.MagicEnergy;
 
-public sealed class CP14MagicEnergyCrystalSlotSystem : SharedCP14MagicEnergyCrystalSlotSystem;
+public sealed class CE14MagicEnergyCrystalSlotSystem : SharedCE14MagicEnergyCrystalSlotSystem;

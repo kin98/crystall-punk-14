@@ -1,15 +1,15 @@
 - type: entity
-  id: CP14WindowWooden
+  id: CE14WindowWooden
   parent:
-  - CP14WindowBase
-  - CP14BaseFlammable
+  - CE14WindowBase
+  - CE14BaseFlammable
   name: wooden window
   description: A wooden wall with a glass window in it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/wooden_window.rsi
+    sprite: _CE14/Structures/Windows/wooden_window.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/wooden_window.rsi
+    sprite: _CE14/Structures/Windows/wooden_window.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -21,25 +21,25 @@
           collection: WindowShatter
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14GlassShard:
+          CE14GlassShard:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ChangeConstructionNodeBehavior
-        node: CP14WindowWoodenBroken
+        node: CE14WindowWoodenBroken
   - type: Construction
-    graph: CP14WindowWooden
-    node: CP14WindowWooden
+    graph: CE14WindowWooden
+    node: CE14WindowWooden
 
 - type: entity
-  id: CP14WindowWoodenBirch
-  parent: CP14WindowWooden
+  id: CE14WindowWoodenBirch
+  parent: CE14WindowWooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/birch_window.rsi
+    sprite: _CE14/Structures/Windows/birch_window.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/birch_window.rsi
+    sprite: _CE14/Structures/Windows/birch_window.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -51,31 +51,31 @@
           collection: WindowShatter
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14GlassShard:
+          CE14GlassShard:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ChangeConstructionNodeBehavior
-        node: CP14WindowWoodenBirchBroken
+        node: CE14WindowWoodenBirchBroken
   - type: Construction
-    graph: CP14WindowWooden
-    node: CP14WindowWoodenBirch
+    graph: CE14WindowWooden
+    node: CE14WindowWoodenBirch
 
 - type: entity
-  id: CP14WindowFrameWooden
+  id: CE14WindowFrameWooden
   name: wooden window frame
   parent:
-  - CP14BaseWindowFrame
-  - CP14BaseFlammable
+  - CE14BaseWindowFrame
+  - CE14BaseFlammable
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/wooden_window_frame.rsi
+    sprite: _CE14/Structures/Windows/wooden_window_frame.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/wooden_window_frame.rsi
+    sprite: _CE14/Structures/Windows/wooden_window_frame.rsi
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -84,7 +84,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:PlaySoundBehavior
@@ -93,17 +93,17 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14WindowWooden
-    node: CP14WindowFrameWooden
+    graph: CE14WindowWooden
+    node: CE14WindowFrameWooden
 
 - type: entity
-  id: CP14WindowFrameWoodenBirch
-  parent: CP14WindowFrameWooden
+  id: CE14WindowFrameWoodenBirch
+  parent: CE14WindowFrameWooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/birch_window_frame.rsi
+    sprite: _CE14/Structures/Windows/birch_window_frame.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/birch_window_frame.rsi
+    sprite: _CE14/Structures/Windows/birch_window_frame.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -112,7 +112,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodenPlanks1:
+          CE14BirchWoodenPlanks1:
             min: 1
             max: 2
       - !type:PlaySoundBehavior
@@ -121,32 +121,32 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14WindowWooden
-    node: CP14WindowFrameWoodenBirch
+    graph: CE14WindowWooden
+    node: CE14WindowFrameWoodenBirch
 
 - type: entity
-  id: CP14WindowWoodenBroken
+  id: CE14WindowWoodenBroken
   name: shattered wooden window
   parent:
-  - CP14BaseWindowFrameBroken
-  - CP14WindowFrameWooden
+  - CE14BaseWindowFrameBroken
+  - CE14WindowFrameWooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/wooden_window_broken.rsi
+    sprite: _CE14/Structures/Windows/wooden_window_broken.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/wooden_window_broken.rsi
+    sprite: _CE14/Structures/Windows/wooden_window_broken.rsi
   - type: Construction
-    graph: CP14WindowWooden
-    node: CP14WindowWoodenBroken
+    graph: CE14WindowWooden
+    node: CE14WindowWoodenBroken
 
 - type: entity
-  id: CP14WindowWoodenBirchBroken
-  parent: CP14WindowWoodenBroken
+  id: CE14WindowWoodenBirchBroken
+  parent: CE14WindowWoodenBroken
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/birch_window_broken.rsi
+    sprite: _CE14/Structures/Windows/birch_window_broken.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/birch_window_broken.rsi
+    sprite: _CE14/Structures/Windows/birch_window_broken.rsi
   - type: Construction
-    graph: CP14WindowWooden
-    node: CP14WindowWoodenBirchBroken
+    graph: CE14WindowWooden
+    node: CE14WindowWoodenBirchBroken

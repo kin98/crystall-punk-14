@@ -1,12 +1,12 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CP14.Temperature;
+namespace Content.Shared._CE14.Temperature;
 
 /// <summary>
 /// Allows you to fire entities through interacting with them after a delay.
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, Access(typeof(CP14SharedFireSpreadSystem))]
-public sealed partial class CP14DelayedIgnitionSourceComponent : Component
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, Access(typeof(CE14SharedFireSpreadSystem))]
+public sealed partial class CE14DelayedIgnitionSourceComponent : Component
 {
     [DataField, AutoNetworkedField]
     public bool Enabled;

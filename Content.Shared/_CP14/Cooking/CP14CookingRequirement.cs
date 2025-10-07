@@ -8,7 +8,7 @@ using Content.Shared.Tag;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Cooking;
+namespace Content.Shared._CE14.Cooking;
 
 /// <summary>
 /// An abstract condition that is a key element of the system. The more complex the conditions for a recipe,
@@ -17,7 +17,7 @@ namespace Content.Shared._CP14.Cooking;
 /// </summary>
 [ImplicitDataDefinitionForInheritors]
 [MeansImplicitUse]
-public abstract partial class CP14CookingCraftRequirement
+public abstract partial class CE14CookingCraftRequirement
 {
     public abstract bool CheckRequirement(IEntityManager entManager,
         IPrototypeManager protoManager,

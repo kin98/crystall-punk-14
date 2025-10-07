@@ -1,5 +1,5 @@
 using System.Numerics;
-using Content.Shared._CP14.CloudShadow;
+using Content.Shared._CE14.CloudShadow;
 using Robust.Client.Graphics;
 using Robust.Shared.Utility;
 
@@ -7,7 +7,7 @@ namespace Content.Client.Overlays;
 
 public sealed partial class StencilOverlay
 {
-    private void DrawCloudShadows(in OverlayDrawArgs args, CP14CloudShadowsComponent cloudComp, Matrix3x2 invMatrix)
+    private void DrawCloudShadows(in OverlayDrawArgs args, CE14CloudShadowsComponent cloudComp, Matrix3x2 invMatrix)
     {
         var worldHandle = args.WorldHandle;
         var mapId = args.MapId;

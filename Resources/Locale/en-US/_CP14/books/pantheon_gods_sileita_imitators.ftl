@@ -1,4 +1,4 @@
-cp14-book-text-pantheon-gods-sileita-imitators = [head=2]Imitators of the Gods[/head]
+CE14-book-text-pantheon-gods-sileita-imitators = [head=2]Imitators of the Gods[/head]
 
     • [bold]Names[/bold]: [italic]Echo-Spirits, Mask-Wearers, Pseudo-Divines.[/italic]
     

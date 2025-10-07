@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14Bucket
+  id: CE14Bucket
   name: bucket
   description: It's a boring old bucket.
   categories: [ ForkFiltered ]
@@ -9,7 +9,7 @@
     solution: bucket
     ignoreEmpty: true
   - type: Sprite
-    sprite: _CP14/Objects/Tools/wooden_bucket.rsi
+    sprite: _CE14/Objects/Tools/wooden_bucket.rsi
     layers:
     - state: icon
     - map: ["enum.SolutionContainerLayers.Fill"]
@@ -18,7 +18,7 @@
   - type: Item
     size: Ginormous
   - type: Clothing
-    sprite: _CP14/Objects/Tools/wooden_bucket.rsi
+    sprite: _CE14/Objects/Tools/wooden_bucket.rsi
     clothingVisuals:
       head:
       - state: equipped-HELMET
@@ -65,7 +65,7 @@
     solution: bucket
   - type: SpillWhenWorn
     solution: bucket
-  - type: CP14WeatherRefillable
+  - type: CE14WeatherRefillable
     solution: bucket
   - type: MixableSolution
     solution: bucket
@@ -86,19 +86,19 @@
       - Bucket
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 30
-      CP14Cloth: 20
+      CE14WoodenPlanks: 30
+      CE14Cloth: 20
 
 - type: entity
-  parent: CP14Bucket
-  id: CP14BucketLucens
+  parent: CE14Bucket
+  id: CE14BucketLucens
   name: lucens bucket
   description: It's a boring old bucket, made less boring by being blue.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Tools/lucens_bucket.rsi
+    sprite: _CE14/Objects/Tools/lucens_bucket.rsi
   - type: Clothing
-    sprite: _CP14/Objects/Tools/lucens_bucket.rsi
+    sprite: _CE14/Objects/Tools/lucens_bucket.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -108,5 +108,5 @@
     walkModifier: 0.98
   - type: PhysicalComposition
     materialComposition:
-      CP14LucensWoodenPlanks: 30
-      CP14Cloth: 20
+      CE14LucensWoodenPlanks: 30
+      CE14Cloth: 20

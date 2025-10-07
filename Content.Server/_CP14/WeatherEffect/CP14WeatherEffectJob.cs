@@ -1,16 +1,16 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Content.Shared._CP14.WeatherEffect.Effects;
+using Content.Shared._CE14.WeatherEffect.Effects;
 using Content.Shared.Weather;
 using Robust.Shared.CPUJob.JobQueues;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.WeatherEffect;
+namespace Content.Server._CE14.WeatherEffect;
 
-public sealed class CP14WeatherEffectJob : Job<bool>
+public sealed class CE14WeatherEffectJob : Job<bool>
 {
     private readonly IEntityManager _entManager;
     private readonly EntityLookupSystem _lookup;
@@ -21,14 +21,14 @@ public sealed class CP14WeatherEffectJob : Job<bool>
     private readonly Entity<MapGridComponent> _mapUid;
     private readonly MapId _mapId;
 
-    private readonly CP14WeatherEffectConfig _config;
+    private readonly CE14WeatherEffectConfig _config;
 
     private EntityQuery<BlockWeatherComponent> _weatherBlockQuery;
 
     private readonly HashSet<Entity<TransformComponent>> _entitiesOnMap = new();
     private List<Entity<TransformComponent>> _affectedEntities = new();
 
-    public CP14WeatherEffectJob(
+    public CE14WeatherEffectJob(
         double maxTime,
         IEntityManager entManager,
         EntityLookupSystem lookup,
@@ -37,7 +37,7 @@ public sealed class CP14WeatherEffectJob : Job<bool>
         IRobustRandom random,
         Entity<MapGridComponent> mapUid,
         MapId mapId,
-        CP14WeatherEffectConfig config,
+        CE14WeatherEffectConfig config,
         EntityQuery<BlockWeatherComponent> weatherBlockQuery,
         CancellationToken cancellation = default
     ) : base(maxTime, cancellation)

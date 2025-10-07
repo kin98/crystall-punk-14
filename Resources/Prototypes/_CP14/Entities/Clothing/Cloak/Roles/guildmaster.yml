@@ -1,12 +1,12 @@
 - type: entity
   parent:
-  - CP14ClothingCloakBase
-  id: CP14ClothingCloakGuildmasterCape
+  - CE14ClothingCloakBase
+  id: CE14ClothingCloakGuildmasterCape
   name: guildmaster cape
   description: The colors green and gold tell you that you're looking at a higher power.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/Roles/Mercenary/guildmaster_cape.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Mercenary/guildmaster_cape.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/Roles/Mercenary/guildmaster_cape.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Mercenary/guildmaster_cape.rsi
 

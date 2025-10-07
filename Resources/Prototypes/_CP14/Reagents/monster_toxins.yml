@@ -1,10 +1,10 @@
 
 - type: reagent
-  id: CP14MonsterToxinSpider
-  name: cp14-reagent-name-toxin-spider
-  desc: cp14-reagent-desc-toxin-spider
-  group: CP14MonsterToxins
-  flavor: CP14Vomit
+  id: CE14MonsterToxinSpider
+  name: CE14-reagent-name-toxin-spider
+  desc: CE14-reagent-desc-toxin-spider
+  group: CE14MonsterToxins
+  flavor: CE14Vomit
   color: "#00b408"
   physicalDesc: reagent-physical-desc-nondescript
   metabolisms:
@@ -18,27 +18,27 @@
       - !type:MovespeedModifier
         conditions:
         - !type:ReagentThreshold
-          reagent: CP14MonsterToxinSpider
+          reagent: CE14MonsterToxinSpider
           min: 1.5
         walkSpeedModifier: 0.8
         sprintSpeedModifier: 0.8
       - !type:MovespeedModifier
         conditions:
         - !type:ReagentThreshold
-          reagent: CP14MonsterToxinSpider
+          reagent: CE14MonsterToxinSpider
           min: 3
         walkSpeedModifier: 0.6
         sprintSpeedModifier: 0.6
   pricePerUnit: 4.0 #arbitrary for now
 
 - type: reagent
-  id: CP14MonsterToxinBleed
-  name: cp14-reagent-name-toxin-bleed
-  desc: cp14-reagent-desc-toxin-bleed
-  group: CP14MonsterToxins
-  flavor: CP14Metallic
+  id: CE14MonsterToxinBleed
+  name: CE14-reagent-name-toxin-bleed
+  desc: CE14-reagent-desc-toxin-bleed
+  group: CE14MonsterToxins
+  flavor: CE14Metallic
   color: "#872e2e"
-  physicalDesc: cp14-reagent-physical-desc-scarlet
+  physicalDesc: CE14-reagent-physical-desc-scarlet
   metabolisms:
     Poison:
       metabolismRate: 0.5
@@ -52,11 +52,11 @@
   pricePerUnit: 4.0 #arbitrary for now
 
 - type: reagent
-  id: CP14MonsterToxinVuln
-  name: cp14-reagent-name-toxin-vuln
-  desc: cp14-reagent-desc-toxin-vuln
-  group: CP14MonsterToxins
-  flavor: CP14Vomit
+  id: CE14MonsterToxinVuln
+  name: CE14-reagent-name-toxin-vuln
+  desc: CE14-reagent-desc-toxin-vuln
+  group: CE14MonsterToxins
+  flavor: CE14Vomit
   color: "#b545ff"
   physicalDesc: reagent-physical-desc-nondescript
   metabolisms:
@@ -66,11 +66,11 @@
       - !type:ModifyStatusEffect
         conditions:
         - !type:ReagentThreshold
-          reagent: CP14MonsterToxinVuln
+          reagent: CE14MonsterToxinVuln
           min: 2
-        effectProto: CP14StatusEffectVuln
+        effectProto: CE14StatusEffectVuln
         time: 5
         refresh: false
-      - !type:CP14StaminaChange
+      - !type:CE14StaminaChange
         staminaDelta: -5
   pricePerUnit: 4.0 #arbitrary for now

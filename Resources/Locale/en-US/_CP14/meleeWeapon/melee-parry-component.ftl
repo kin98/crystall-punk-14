@@ -1,1 +1,1 @@
-cp14-successful-parry = Parried!
+CE14-successful-parry = Parried!

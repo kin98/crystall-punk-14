@@ -20,7 +20,7 @@ public sealed partial class SpeciesRequirement : JobRequirement
     [DataField(required: true)]
     public HashSet<ProtoId<SpeciesPrototype>> Species = new();
 
-    public override bool Check(NetUserId? userId,  //CP14 Sponsorship Checks
+    public override bool Check(NetUserId? userId,  //CE14 Sponsorship Checks
         IEntityManager entManager,
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,

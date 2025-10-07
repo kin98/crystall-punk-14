@@ -1,5 +1,5 @@
-using Content.Shared._CP14.Trading.Components;
-using Content.Shared._CP14.Trading.Prototypes;
+using Content.Shared._CE14.Trading.Components;
+using Content.Shared._CE14.Trading.Prototypes;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Placeable;
 using Content.Shared.Popups;
@@ -10,9 +10,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.Trading.Systems;
+namespace Content.Shared._CE14.Trading.Systems;
 
-public abstract partial class CP14SharedTradingPlatformSystem : EntitySystem
+public abstract partial class CE14SharedTradingPlatformSystem : EntitySystem
 {
     [Dependency] private readonly SharedUserInterfaceSystem _userInterface = default!;
     [Dependency] protected readonly IPrototypeManager Proto = default!;
@@ -26,13 +26,13 @@ public abstract partial class CP14SharedTradingPlatformSystem : EntitySystem
         base.Initialize();
         InitializeUI();
 
-        SubscribeLocalEvent<CP14TradingReputationComponent, MapInitEvent>(OnReputationMapInit);
-        SubscribeLocalEvent<CP14TradingContractComponent, UseInHandEvent>(OnContractUse);
+        SubscribeLocalEvent<CE14TradingReputationComponent, MapInitEvent>(OnReputationMapInit);
+        SubscribeLocalEvent<CE14TradingContractComponent, UseInHandEvent>(OnContractUse);
     }
 
-    private void OnReputationMapInit(Entity<CP14TradingReputationComponent> ent, ref MapInitEvent args)
+    private void OnReputationMapInit(Entity<CE14TradingReputationComponent> ent, ref MapInitEvent args)
     {
-        foreach (var faction in Proto.EnumeratePrototypes<CP14TradingFactionPrototype>())
+        foreach (var faction in Proto.EnumeratePrototypes<CE14TradingFactionPrototype>())
         {
             if (faction.RoundStart is not null)
             {
@@ -42,7 +42,7 @@ public abstract partial class CP14SharedTradingPlatformSystem : EntitySystem
         Dirty(ent);
     }
 
-    private void OnContractUse(Entity<CP14TradingContractComponent> ent, ref UseInHandEvent args)
+    private void OnContractUse(Entity<CE14TradingContractComponent> ent, ref UseInHandEvent args)
     {
         if (args.Handled)
             return;
@@ -51,16 +51,16 @@ public abstract partial class CP14SharedTradingPlatformSystem : EntitySystem
 
         args.Handled = true;
 
-        var repComp = EnsureComp<CP14TradingReputationComponent>(args.User);
+        var repComp = EnsureComp<CE14TradingReputationComponent>(args.User);
         repComp.Reputation.TryAdd(ent.Comp.Faction, 0);
-        _audio.PlayLocal(new SoundCollectionSpecifier("CP14CoinImpact"), args.User, args.User);
-        _popup.PopupClient(Loc.GetString("cp14-trading-contract-use", ("name", Loc.GetString(indexedFaction.Name))), args.User, args.User);
+        _audio.PlayLocal(new SoundCollectionSpecifier("CE14CoinImpact"), args.User, args.User);
+        _popup.PopupClient(Loc.GetString("CE14-trading-contract-use", ("name", Loc.GetString(indexedFaction.Name))), args.User, args.User);
 
         if (_net.IsServer)
             QueueDel(ent);
     }
 
-    public bool CanBuyPosition(Entity<CP14TradingReputationComponent?> user, ProtoId<CP14TradingPositionPrototype> position)
+    public bool CanBuyPosition(Entity<CE14TradingReputationComponent?> user, ProtoId<CE14TradingPositionPrototype> position)
     {
         if (!Resolve(user.Owner, ref user.Comp, false))
             return false;
@@ -73,8 +73,8 @@ public abstract partial class CP14SharedTradingPlatformSystem : EntitySystem
         return true;
     }
 
-    public void AddReputation(Entity<CP14TradingReputationComponent?> user,
-        ProtoId<CP14TradingFactionPrototype> faction, float rep)
+    public void AddReputation(Entity<CE14TradingReputationComponent?> user,
+        ProtoId<CE14TradingFactionPrototype> faction, float rep)
     {
         if (!Resolve(user.Owner, ref user.Comp, false))
             return;
@@ -87,7 +87,7 @@ public abstract partial class CP14SharedTradingPlatformSystem : EntitySystem
         Dirty(user);
     }
 
-    public bool CanFulfillRequest(EntityUid platform, ProtoId<CP14TradingRequestPrototype> request)
+    public bool CanFulfillRequest(EntityUid platform, ProtoId<CE14TradingRequestPrototype> request)
     {
         if (!TryComp<ItemPlacerComponent>(platform, out var itemPlacer))
             return false;
@@ -106,20 +106,20 @@ public abstract partial class CP14SharedTradingPlatformSystem : EntitySystem
 }
 
 [Serializable, NetSerializable]
-public sealed class CP14TradingPositionBuyAttempt(ProtoId<CP14TradingPositionPrototype> position) : BoundUserInterfaceMessage
+public sealed class CE14TradingPositionBuyAttempt(ProtoId<CE14TradingPositionPrototype> position) : BoundUserInterfaceMessage
 {
-    public readonly ProtoId<CP14TradingPositionPrototype> Position = position;
+    public readonly ProtoId<CE14TradingPositionPrototype> Position = position;
 }
 
 [Serializable, NetSerializable]
-public sealed class CP14TradingRequestSellAttempt(ProtoId<CP14TradingRequestPrototype> request, ProtoId<CP14TradingFactionPrototype> faction) : BoundUserInterfaceMessage
+public sealed class CE14TradingRequestSellAttempt(ProtoId<CE14TradingRequestPrototype> request, ProtoId<CE14TradingFactionPrototype> faction) : BoundUserInterfaceMessage
 {
-    public readonly ProtoId<CP14TradingRequestPrototype> Request = request;
-    public readonly ProtoId<CP14TradingFactionPrototype> Faction = faction;
+    public readonly ProtoId<CE14TradingRequestPrototype> Request = request;
+    public readonly ProtoId<CE14TradingFactionPrototype> Faction = faction;
 }
 
 
 [Serializable, NetSerializable]
-public sealed class CP14TradingSellAttempt : BoundUserInterfaceMessage
+public sealed class CE14TradingSellAttempt : BoundUserInterfaceMessage
 {
 }

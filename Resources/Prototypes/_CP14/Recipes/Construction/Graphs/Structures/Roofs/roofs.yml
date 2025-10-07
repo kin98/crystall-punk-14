@@ -1,42 +1,42 @@
 - type: constructionGraph
-  id: CP14RoofWooden
+  id: CE14RoofWooden
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14RoofWooden
+        - to: CE14RoofWooden
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 1
               doAfter: 2
-        - to: CP14RoofWoodenBirch
+        - to: CE14RoofWoodenBirch
           steps:
-          - material: CP14BirchWoodenPlanks
+          - material: CE14BirchWoodenPlanks
             amount: 1
             doAfter: 2
 
-    - node: CP14RoofWooden
-      entity: CP14RoofWooden
+    - node: CE14RoofWooden
+      entity: CE14RoofWooden
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 1
             - !type:DeleteEntity {}
           steps:
             - tool: Prying
               doAfter: 2
 
-    - node: CP14RoofWoodenBirch
-      entity: CP14RoofWoodenBirch
+    - node: CE14RoofWoodenBirch
+      entity: CE14RoofWoodenBirch
       edges:
       - to: start
         completed:
         - !type:SpawnPrototype
-          prototype: CP14BirchWoodenPlanks1
+          prototype: CE14BirchWoodenPlanks1
           amount: 1
         - !type:DeleteEntity { }
         steps:
@@ -44,26 +44,26 @@
           doAfter: 2
 
 - type: constructionGraph
-  id: CP14RoofStone
+  id: CE14RoofStone
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14RoofStone
+        - to: CE14RoofStone
           steps:
-            - material: CP14Stone
+            - material: CE14Stone
               amount: 1
               doAfter: 2
 
-    - node: CP14RoofStone
-      entity: CP14RoofStone
+    - node: CE14RoofStone
+      entity: CE14RoofStone
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14StoneBlock1
+              prototype: CE14StoneBlock1
               amount: 1
             - !type:DeleteEntity {}
           steps:

@@ -21,7 +21,7 @@ public sealed partial class TraitsRequirement : JobRequirement
     [DataField(required: true)]
     public HashSet<ProtoId<TraitPrototype>> Traits = new();
 
-    public override bool Check(NetUserId? userId,  //CP14 Sponsorship Checks
+    public override bool Check(NetUserId? userId,  //CE14 Sponsorship Checks
         IEntityManager entManager,
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,

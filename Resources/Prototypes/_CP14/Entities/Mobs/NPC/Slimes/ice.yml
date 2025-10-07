@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14MobSlimeIce
-  parent: CP14MobSlimeBase
+  id: CE14MobSlimeIce
+  parent: CE14MobSlimeBase
   name: ice slime
   components:
   - type: Sprite
@@ -18,24 +18,24 @@
       slime:
         maxVol: 50
         reagents:
-        - ReagentId: CP14ChromiumSlime
+        - ReagentId: CE14ChromiumSlime
           Quantity: 20
-        - ReagentId: CP14EssenceFrost
+        - ReagentId: CE14EssenceFrost
           Quantity: 30
   - type: MeleeWeapon
     damage:
       types:
         Blunt: 3
         Cold: 3
-  - type: CP14SpellEffectOnHit
+  - type: CE14SpellEffectOnHit
     whitelist:
       components:
       - MobState
     effects:
-    - !type:CP14SpellSpawnEntityOnTarget
+    - !type:CE14SpellSpawnEntityOnTarget
       spawns:
-      - CP14ImpactEffectFreeze
-    - !type:CP14SpellApplyEntityEffect
+      - CE14ImpactEffectFreeze
+    - !type:CE14SpellApplyEntityEffect
       effects:
       - !type:MovespeedModifier
         walkSpeedModifier: 0.75
@@ -45,7 +45,7 @@
         amount: -6000
       - !type:ExtinguishReaction
   - type: Damageable
-    damageModifierSet: CP14SlimeIce
+    damageModifierSet: CE14SlimeIce
   - type: Temperature
     coldDamage:
       types:
@@ -63,7 +63,7 @@
         solution: slime
       - !type:SpawnEntitiesBehavior
         spawn:
-            CP14AreaEntityEffectSlimeFroze:
+            CE14AreaEntityEffectSlimeFroze:
               min: 1
               max: 1
       - !type:DoActsBehavior
@@ -74,16 +74,16 @@
         children:
         - !type:GroupSelector
           children:
-          - id: CP14OreCopper1
-          - id: CP14OreIron1
-          - id: CP14ScrapCopper
-          - id: CP14ScrapIron
-          - id: CP14Snowball
-          - id: CP14CopperCoin1
+          - id: CE14OreCopper1
+          - id: CE14OreIron1
+          - id: CE14ScrapCopper
+          - id: CE14ScrapIron
+          - id: CE14Snowball
+          - id: CE14CopperCoin1
 
 - type: entity
-  id: CP14AreaEntityEffectSlimeFroze
-  parent: CP14BaseMagicImpact
+  id: CE14AreaEntityEffectSlimeFroze
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   components:
   - type: PointLight
@@ -91,7 +91,7 @@
   - type: Sprite
     noRot: true
     drawdepth: BelowFloor
-    sprite: _CP14/Effects/Magic/area_impact.rsi
+    sprite: _CE14/Effects/Magic/area_impact.rsi
     layers:
     - state: area_impact_out
       color: "#0cb1f7"
@@ -99,16 +99,16 @@
       shader: unshaded
   - type: TimedDespawn
     lifetime: 0.2
-  - type: CP14AreaEntityEffect
+  - type: CE14AreaEntityEffect
     range: 2
     whitelist:
       components:
       - MobState
     effects:
-    - !type:CP14SpellSpawnEntityOnTarget
+    - !type:CE14SpellSpawnEntityOnTarget
       spawns:
-      - CP14ImpactEffectFreeze
-    - !type:CP14SpellApplyEntityEffect
+      - CE14ImpactEffectFreeze
+    - !type:CE14SpellApplyEntityEffect
       effects:
       - !type:MovespeedModifier
         walkSpeedModifier: 0.5

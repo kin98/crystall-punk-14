@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseLamppost
+  id: CE14BaseLamppost
   categories: [ ForkFiltered ]
   abstract: true
   placement:
@@ -24,7 +24,7 @@
         - WallLayer
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: MeleeSound
     soundGroups:
       Brute:
@@ -60,12 +60,12 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodLog:
+          CE14WoodLog:
             min: 2
             max: 2
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Furniture/lamppost.rsi
+    sprite: _CE14/Structures/Furniture/lamppost.rsi
     drawdepth: Mobs
     offset: 0,0.9
   - type: PointLight
@@ -73,8 +73,8 @@
     radius: 8
 
 - type: entity
-  parent: CP14BaseLamppost
-  id: CP14Lamppost
+  parent: CE14BaseLamppost
+  id: CE14Lamppost
   name: lamppost
   description: A lantern hanging from a pole.
   suffix: Always powered
@@ -88,8 +88,8 @@
     color: "#e67c34"
 
 - type: entity
-  parent: CP14BaseLamppost
-  id: CP14LamppostBlue
+  parent: CE14BaseLamppost
+  id: CE14LamppostBlue
   name: lamppost
   description: A lantern hanging from a pole.
   suffix: Always powered, Blue

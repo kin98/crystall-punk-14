@@ -1,100 +1,100 @@
 - type: npcFaction
-  id: CP14Adventurers #TODO - Change name to some lore-related
+  id: CE14Adventurers #TODO - Change name to some lore-related
   hostile:
-  - CP14AggressiveAnimals
-  - CP14Undead
-  - CP14HostileEveryone
-  - CP14Monster
-  - CP14Insects
-  - CP14Slimes
-  - CP14Fishies
+  - CE14AggressiveAnimals
+  - CE14Undead
+  - CE14HostileEveryone
+  - CE14Monster
+  - CE14Insects
+  - CE14Slimes
+  - CE14Fishies
 
 - type: npcFaction
-  id: CP14HostileEveryone
+  id: CE14HostileEveryone
   hostile:
-  - CP14Adventurers
-  - CP14Undead
-  - CP14PeacefulAnimals
-  - CP14AggressiveAnimals
-  - CP14Monster
-  - CP14Slimes
-  - CP14Fishies
-  - CP14Cat
-  - CP14Rodent
+  - CE14Adventurers
+  - CE14Undead
+  - CE14PeacefulAnimals
+  - CE14AggressiveAnimals
+  - CE14Monster
+  - CE14Slimes
+  - CE14Fishies
+  - CE14Cat
+  - CE14Rodent
 
 - type: npcFaction
-  id: CP14Undead
+  id: CE14Undead
   hostile:
-  - CP14Adventurers
-  - CP14HostileEveryone
-  - CP14PeacefulAnimals
-  - CP14AggressiveAnimals
-  - CP14Fishies
-  - CP14Cat
-  - CP14Rodent
+  - CE14Adventurers
+  - CE14HostileEveryone
+  - CE14PeacefulAnimals
+  - CE14AggressiveAnimals
+  - CE14Fishies
+  - CE14Cat
+  - CE14Rodent
 
 - type: npcFaction
-  id: CP14PeacefulAnimals
+  id: CE14PeacefulAnimals
 
 - type: npcFaction
-  id: CP14Neutrals
+  id: CE14Neutrals
 
 - type: npcFaction
-  id: CP14Cat
+  id: CE14Cat
   hostile:
-    - CP14Rodent
-    - CP14Fishies
+    - CE14Rodent
+    - CE14Fishies
 
 - type: npcFaction
-  id: CP14Rodent
+  id: CE14Rodent
 
 - type: npcFaction
-  id: CP14AggressiveAnimals
+  id: CE14AggressiveAnimals
   hostile:
-  - CP14Adventurers
-  - CP14Undead
-  - CP14PeacefulAnimals
-  - CP14Monster
-  - CP14Slimes
-  - CP14HostileEveryone
-  - CP14Fishies
-  - CP14Cat
-  - CP14Rodent
+  - CE14Adventurers
+  - CE14Undead
+  - CE14PeacefulAnimals
+  - CE14Monster
+  - CE14Slimes
+  - CE14HostileEveryone
+  - CE14Fishies
+  - CE14Cat
+  - CE14Rodent
 
 - type: npcFaction
-  id: CP14Monster
+  id: CE14Monster
   hostile:
-  - CP14Adventurers
-  - CP14HostileEveryone
-  - CP14AggressiveAnimals
-  - CP14PeacefulAnimals
-  - CP14Cat
-  - CP14Rodent
+  - CE14Adventurers
+  - CE14HostileEveryone
+  - CE14AggressiveAnimals
+  - CE14PeacefulAnimals
+  - CE14Cat
+  - CE14Rodent
 
 - type: npcFaction
-  id: CP14Insects
+  id: CE14Insects
   hostile:
-  - CP14Adventurers
-  - CP14AggressiveAnimals
-  - CP14PeacefulAnimals
-  - CP14Fishies
+  - CE14Adventurers
+  - CE14AggressiveAnimals
+  - CE14PeacefulAnimals
+  - CE14Fishies
 
 - type: npcFaction
-  id: CP14Slimes
+  id: CE14Slimes
   hostile:
-  - CP14Adventurers
-  - CP14HostileEveryone
-  - CP14PeacefulAnimals
-  - CP14AggressiveAnimals
-  - CP14Cat
-  - CP14Rodent
+  - CE14Adventurers
+  - CE14HostileEveryone
+  - CE14PeacefulAnimals
+  - CE14AggressiveAnimals
+  - CE14Cat
+  - CE14Rodent
 
 - type: npcFaction
-  id: CP14Fishies
+  id: CE14Fishies
   hostile:
-  - CP14Adventurers
-  - CP14HostileEveryone
-  - CP14PeacefulAnimals
-  - CP14AggressiveAnimals
-  - CP14Insects
-  - CP14Undead
+  - CE14Adventurers
+  - CE14HostileEveryone
+  - CE14PeacefulAnimals
+  - CE14AggressiveAnimals
+  - CE14Insects
+  - CE14Undead

@@ -5,62 +5,62 @@
     - sekrit
   name: secret-title
   showInVote: false
-  cP14Allowed: true
+  CE14Allowed: true
   description: secret-description
   rules:
     - Secret
 
 - type: gamePreset
-  id: CP14Sandbox
+  id: CE14Sandbox
   alias:
     - sandbox
   name: sandbox-title
   description: sandbox-description
   showInVote: false
-  cP14Allowed: true
+  CE14Allowed: true
   rules:
-    - CP14BasicStationEventScheduler
+    - CE14BasicStationEventScheduler
     - Sandbox
 
 - type: gamePreset
-  id: CP14Peaceful
-  name: cp14-peaceful-title
-  description: cp14-peaceful-description
+  id: CE14Peaceful
+  name: CE14-peaceful-title
+  description: CE14-peaceful-description
   showInVote: true
-  cP14Allowed: true
+  CE14Allowed: true
   rules:
-    - CP14BasicStationEventScheduler
+    - CE14BasicStationEventScheduler
 
 - type: gamePreset
-  id: CP14VampireClansBattleDouble
-  name: cp14-vampire-clans-battle
-  description: cp14-vampire-clans-description
+  id: CE14VampireClansBattleDouble
+  name: CE14-vampire-clans-battle
+  description: CE14-vampire-clans-description
   showInVote: true
-  cP14Allowed: true
+  CE14Allowed: true
   minPlayers: 20
   maxPlayers: 29
   rules:
-    - CP14BasicStationEventScheduler
-    - CP14GameRuleVampireClanBattleDouble
+    - CE14BasicStationEventScheduler
+    - CE14GameRuleVampireClanBattleDouble
 
 - type: gamePreset
-  id: CP14VampireClansBattleTriple
-  name: cp14-vampire-clans-battle
-  description: cp14-vampire-clans-description
+  id: CE14VampireClansBattleTriple
+  name: CE14-vampire-clans-battle
+  description: CE14-vampire-clans-description
   showInVote: true
-  cP14Allowed: true
+  CE14Allowed: true
   minPlayers: 30
   rules:
-    - CP14BasicStationEventScheduler
-    - CP14GameRuleVampireClanBattleTriple
+    - CE14BasicStationEventScheduler
+    - CE14GameRuleVampireClanBattleTriple
 
 #- type: gamePreset
-#  id: CP14Survival
-#  name: cp14-gamemode-survival-title
-#  description: cp14-gamemode-survival-description
+#  id: CE14Survival
+#  name: CE14-gamemode-survival-title
+#  description: CE14-gamemode-survival-description
 #  showInVote: true
-#  cP14Allowed: true
+#  CE14Allowed: true
 #  supportedMaps: ShipMapPool
 #  rules:
 #    - Sandbox
-#    - CP14CrashToWindlandsRule
+#    - CE14CrashToWindlandsRule

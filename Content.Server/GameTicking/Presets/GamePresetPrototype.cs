@@ -45,6 +45,6 @@ namespace Content.Server.GameTicking.Presets
         /// filters the displayed events in the console
         /// </summary>
         [DataField]
-        public bool CP14Allowed = false;
+        public bool CE14Allowed = false;
     }
 }

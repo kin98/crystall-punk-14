@@ -6,9 +6,9 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.TileEditTool;
+namespace Content.Shared._CE14.TileEditTool;
 
-public sealed class CP14EditTileToolSystem : EntitySystem
+public sealed class CE14EditTileToolSystem : EntitySystem
 {
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
@@ -20,11 +20,11 @@ public sealed class CP14EditTileToolSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<CP14EditTileToolComponent, AfterInteractEvent>(OnTileClick);
-        SubscribeLocalEvent<CP14EditTileToolComponent, CP14TileToolReplaceDoAfter>(OnDoAfterEnd);
+        SubscribeLocalEvent<CE14EditTileToolComponent, AfterInteractEvent>(OnTileClick);
+        SubscribeLocalEvent<CE14EditTileToolComponent, CE14TileToolReplaceDoAfter>(OnDoAfterEnd);
     }
 
-    private void OnTileClick(Entity<CP14EditTileToolComponent> ent, ref AfterInteractEvent args)
+    private void OnTileClick(Entity<CE14EditTileToolComponent> ent, ref AfterInteractEvent args)
     {
         if (args.Handled || !args.CanReach)
             return;
@@ -33,7 +33,7 @@ public sealed class CP14EditTileToolSystem : EntitySystem
             new DoAfterArgs(EntityManager,
                 args.User,
                 ent.Comp.Delay,
-                new CP14TileToolReplaceDoAfter(GetNetCoordinates(args.ClickLocation)),
+                new CE14TileToolReplaceDoAfter(GetNetCoordinates(args.ClickLocation)),
                 ent)
             {
                 BreakOnDamage = true,
@@ -45,7 +45,7 @@ public sealed class CP14EditTileToolSystem : EntitySystem
         _doAfter.TryStartDoAfter(doAfterArgs);
     }
 
-    private void OnDoAfterEnd(Entity<CP14EditTileToolComponent> ent, ref CP14TileToolReplaceDoAfter args)
+    private void OnDoAfterEnd(Entity<CE14EditTileToolComponent> ent, ref CE14TileToolReplaceDoAfter args)
     {
         if (args.Cancelled || args.Handled)
             return;

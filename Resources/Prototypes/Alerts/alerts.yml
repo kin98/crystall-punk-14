@@ -5,7 +5,7 @@
   id: BaseAlertOrder
   order:
     - category: Health
-    - alertType: CP14MagicEnergy
+    - alertType: CE14MagicEnergy
     - category: Stamina
     - alertType: SuitPower
     - category: Internals
@@ -90,7 +90,7 @@
 
 - type: alert
   id: Fire
-  icons: [ /Textures/_CP14/Interface/Alerts/vanilla/Fire/fire.png ]
+  icons: [ /Textures/_CE14/Interface/Alerts/vanilla/Fire/fire.png ]
   clickEvent: !type:ResistFireAlertEvent
   name: alerts-on-fire-name
   description: alerts-on-fire-desc
@@ -100,11 +100,11 @@
   id: Cold
   category: Temperature
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/temperature.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/temperature.rsi
     state: cold1
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/temperature.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/temperature.rsi
     state: cold2
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/temperature.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/temperature.rsi
     state: cold3
   maxSeverity: 3
   name: alerts-too-cold-name
@@ -114,11 +114,11 @@
   id: Hot
   category: Temperature
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/temperature.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/temperature.rsi
     state: hot1
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/temperature.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/temperature.rsi
     state: hot2
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/temperature.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/temperature.rsi
     state: hot3
   maxSeverity: 3
   name: alerts-too-hot-name
@@ -184,7 +184,7 @@
   id: HumanCrit
   category: Health
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/critical.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/critical.rsi
     state: critical
   name: alerts-crit-name
   description: alerts-crit-desc
@@ -193,7 +193,7 @@
   id: HumanDead
   category: Health
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/dead.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/dead.rsi
     state: dead
   name: alerts-dead-name
   description: alerts-dead-desc
@@ -202,30 +202,30 @@
   id: HumanHealth
   category: Health
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health9    
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health8
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health7
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health6    
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health5    
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health4
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health3
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health2
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health1
-  - sprite: /Textures/_CP14/Interface/Alerts/alive.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/alive.rsi
     state: health0
-  - sprite: /Textures/_CP14/Interface/Alerts/empty.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/empty.rsi
     state: empty
-  name: cp14-alerts-health-name #CP14 replaced
-  description: cp14-alerts-health-desc #CP14 replaced
+  name: CE14-alerts-health-name #CE14 replaced
+  description: CE14-alerts-health-desc #CE14 replaced
   minSeverity: 0
   maxSeverity: 10
 
@@ -345,19 +345,19 @@
   id: Stamina
   category: Stamina
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/stamina.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/stamina.rsi
     state: stamina0
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/stamina.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/stamina.rsi
     state: stamina1
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/stamina.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/stamina.rsi
     state: stamina2
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/stamina.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/stamina.rsi
     state: stamina3
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/stamina.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/stamina.rsi
     state: stamina4
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/stamina.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/stamina.rsi
     state: stamina5
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/stamina.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/stamina.rsi
     state: stamina6
   name: alerts-stamina-name
   description: alerts-stamina-desc
@@ -428,27 +428,27 @@
 - type: alert
   id: Bleed
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed0
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed1
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed2
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed3
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed4
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed5
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed6
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed7
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed8
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed9
-  - sprite: /Textures/_CP14/Interface/Alerts/vanilla/bleed.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vanilla/bleed.rsi
     state: bleed10
   name: alerts-bleed-name
   description: alerts-bleed-desc

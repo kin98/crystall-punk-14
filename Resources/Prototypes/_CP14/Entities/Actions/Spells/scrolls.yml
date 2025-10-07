@@ -1,13 +1,13 @@
 - type: entity
   parent: BaseItem
-  id: CP14BaseSpellScroll
+  id: CE14BaseSpellScroll
   categories: [ ForkFiltered ]
   name: spell scroll
   description: A piece of paper with a spell embedded in it. The use of magic destroys the fragile paper, making these scrolls short-lived consumables.
   abstract: true
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Bureaucracy/paper.rsi
+    sprite: _CE14/Objects/Bureaucracy/paper.rsi
   - type: Item
     size: Tiny
   - type: Flammable
@@ -29,7 +29,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-            CP14Ash1:
+            CE14Ash1:
               min: 1
               max: 1
       - !type:DoActsBehavior
@@ -41,7 +41,7 @@
   - type: FlavorProfile
     flavors:
     - paper
-    - CP14Magic
+    - CE14Magic
   - type: BadFood
   - type: SolutionContainerManager
     solutions:
@@ -53,23 +53,23 @@
   - type: Tag
     tags:
     - Document
-    - CP14SpellScroll
-  - type: CP14SpellStorageAccessHolding
-  - type: CP14SpellStorageUseDamage
+    - CE14SpellScroll
+  - type: CE14SpellStorageAccessHolding
+  - type: CE14SpellStorageUseDamage
     damagePerMana:
       types:
         Heat: 1
-  - type: CP14MagicEnergyContainer
+  - type: CE14MagicEnergyContainer
     energy: 30
     maxEnergy: 50
-  - type: CP14MagicUnsafeDamage
+  - type: CE14MagicUnsafeDamage
   - type: StaticPrice
     price: 5
 
 - type: entity
   abstract: true
-  id: CP14BaseSpellScrollEarth
-  parent: CP14BaseSpellScroll
+  id: CE14BaseSpellScrollEarth
+  parent: CE14BaseSpellScroll
   components:
   - type: Sprite
     layers:
@@ -80,8 +80,8 @@
 
 - type: entity
   abstract: true
-  id: CP14BaseSpellScrollFire
-  parent: CP14BaseSpellScroll
+  id: CE14BaseSpellScrollFire
+  parent: CE14BaseSpellScroll
   components:
   - type: Sprite
     layers:
@@ -92,8 +92,8 @@
 
 - type: entity
   abstract: true
-  id: CP14BaseSpellScrollHealing
-  parent: CP14BaseSpellScroll
+  id: CE14BaseSpellScrollHealing
+  parent: CE14BaseSpellScroll
   components:
   - type: Sprite
     layers:
@@ -104,8 +104,8 @@
 
 - type: entity
   abstract: true
-  id: CP14BaseSpellScrollLight
-  parent: CP14BaseSpellScroll
+  id: CE14BaseSpellScrollLight
+  parent: CE14BaseSpellScroll
   components:
   - type: Sprite
     layers:
@@ -116,8 +116,8 @@
 
 - type: entity
   abstract: true
-  id: CP14BaseSpellScrollMeta
-  parent: CP14BaseSpellScroll
+  id: CE14BaseSpellScrollMeta
+  parent: CE14BaseSpellScroll
   components:
   - type: Sprite
     layers:
@@ -128,8 +128,8 @@
 
 - type: entity
   abstract: true
-  id: CP14BaseSpellScrollDimension
-  parent: CP14BaseSpellScroll
+  id: CE14BaseSpellScrollDimension
+  parent: CE14BaseSpellScroll
   components:
   - type: Sprite
     layers:
@@ -140,8 +140,8 @@
 
 - type: entity
   abstract: true
-  id: CP14BaseSpellScrollWater
-  parent: CP14BaseSpellScroll
+  id: CE14BaseSpellScrollWater
+  parent: CE14BaseSpellScroll
   components:
   - type: Sprite
     layers:
@@ -152,8 +152,8 @@
 
 - type: entity
   abstract: true
-  id: CP14BaseSpellScrollElectric
-  parent: CP14BaseSpellScroll
+  id: CE14BaseSpellScrollElectric
+  parent: CE14BaseSpellScroll
   components:
   - type: Sprite
     layers:

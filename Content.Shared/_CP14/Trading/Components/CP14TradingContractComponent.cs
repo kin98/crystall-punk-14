@@ -1,12 +1,12 @@
-using Content.Shared._CP14.Trading.Prototypes;
-using Content.Shared._CP14.Trading.Systems;
+using Content.Shared._CE14.Trading.Prototypes;
+using Content.Shared._CE14.Trading.Systems;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Trading.Components;
+namespace Content.Shared._CE14.Trading.Components;
 
-[RegisterComponent, Access(typeof(CP14SharedTradingPlatformSystem))]
-public sealed partial class CP14TradingContractComponent : Component
+[RegisterComponent, Access(typeof(CE14SharedTradingPlatformSystem))]
+public sealed partial class CE14TradingContractComponent : Component
 {
     [DataField]
-    public ProtoId<CP14TradingFactionPrototype> Faction;
+    public ProtoId<CE14TradingFactionPrototype> Faction;
 }

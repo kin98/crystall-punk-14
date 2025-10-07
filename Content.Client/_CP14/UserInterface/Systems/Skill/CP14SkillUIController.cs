@@ -1,17 +1,17 @@
 using System.Linq;
 using System.Numerics;
 using System.Text;
-using Content.Client._CP14.Skill;
-using Content.Client._CP14.Skill.Ui;
-using Content.Client._CP14.UserInterface.Systems.NodeTree;
-using Content.Client._CP14.UserInterface.Systems.Skill.Window;
+using Content.Client._CE14.Skill;
+using Content.Client._CE14.Skill.Ui;
+using Content.Client._CE14.UserInterface.Systems.NodeTree;
+using Content.Client._CE14.UserInterface.Systems.Skill.Window;
 using Content.Client.Gameplay;
 using Content.Client.UserInterface.Controls;
-using Content.Shared._CP14.Skill.Components;
-using Content.Shared._CP14.Skill.Prototypes;
-using Content.Shared._CP14.Skill.Restrictions;
+using Content.Shared._CE14.Skill.Components;
+using Content.Shared._CE14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Restrictions;
 using Content.Shared.Input;
-using Content.Shared._CP14.Input;
+using Content.Shared._CE14.Input;
 using JetBrains.Annotations;
 using Robust.Client.Player;
 using Robust.Client.UserInterface;
@@ -22,40 +22,40 @@ using Robust.Shared.Input.Binding;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Client._CP14.UserInterface.Systems.Skill;
+namespace Content.Client._CE14.UserInterface.Systems.Skill;
 
 [UsedImplicitly]
-public sealed class CP14SkillUIController : UIController, IOnStateEntered<GameplayState>, IOnStateExited<GameplayState>,
-    IOnSystemChanged<CP14ClientSkillSystem>
+public sealed class CE14SkillUIController : UIController, IOnStateEntered<GameplayState>, IOnStateExited<GameplayState>,
+    IOnSystemChanged<CE14ClientSkillSystem>
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IEntityManager _entManager = default!;
-    [UISystemDependency] private readonly CP14ClientSkillSystem _skill = default!;
+    [UISystemDependency] private readonly CE14ClientSkillSystem _skill = default!;
 
-    private CP14SkillWindow? _window;
+    private CE14SkillWindow? _window;
     private EntityUid? _targetPlayer;
 
-    private IEnumerable<CP14SkillPrototype> _allSkills = [];
+    private IEnumerable<CE14SkillPrototype> _allSkills = [];
 
-    private CP14SkillPrototype? _selectedSkill;
-    private CP14SkillTreePrototype? _selectedSkillTree;
+    private CE14SkillPrototype? _selectedSkill;
+    private CE14SkillTreePrototype? _selectedSkillTree;
 
     private MenuButton? SkillButton => UIManager
         .GetActiveUIWidgetOrNull<Client.UserInterface.Systems.MenuBar.Widgets.GameTopMenuBar>()
-        ?.CP14SkillButton;
+        ?.CE14SkillButton;
 
     public void OnStateEntered(GameplayState state)
     {
         DebugTools.Assert(_window == null);
 
-        _window = UIManager.CreateWindow<CP14SkillWindow>();
+        _window = UIManager.CreateWindow<CE14SkillWindow>();
         LayoutContainer.SetAnchorPreset(_window, LayoutContainer.LayoutPreset.CenterTop);
 
         CommandBinds.Builder
-            .Bind(CP14ContentKeyFunctions.CP14OpenSkillMenu,
+            .Bind(CE14ContentKeyFunctions.CE14OpenSkillMenu,
                 InputCmdHandler.FromDelegate(_ => ToggleWindow()))
-            .Register<CP14SkillUIController>();
+            .Register<CE14SkillUIController>();
 
         CacheSkillProto();
         _proto.PrototypesReloaded += _ => CacheSkillProto();
@@ -70,7 +70,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
 
     private void CacheSkillProto()
     {
-        _allSkills = _proto.EnumeratePrototypes<CP14SkillPrototype>();
+        _allSkills = _proto.EnumeratePrototypes<CE14SkillPrototype>();
     }
 
     public void OnStateExited(GameplayState state)
@@ -83,16 +83,16 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
             _window = null;
         }
 
-        CommandBinds.Unregister<CP14SkillUIController>();
+        CommandBinds.Unregister<CE14SkillUIController>();
     }
 
-    public void OnSystemLoaded(CP14ClientSkillSystem system)
+    public void OnSystemLoaded(CE14ClientSkillSystem system)
     {
         system.OnSkillUpdate += UpdateState;
         _playerManager.LocalPlayerDetached += CharacterDetached;
     }
 
-    public void OnSystemUnloaded(CP14ClientSkillSystem system)
+    public void OnSystemUnloaded(CE14ClientSkillSystem system)
     {
         system.OnSkillUpdate -= UpdateState;
         _playerManager.LocalPlayerDetached -= CharacterDetached;
@@ -130,7 +130,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
         SkillButton!.Pressed = true;
     }
 
-    private void SelectNode(CP14NodeTreeElement? node)
+    private void SelectNode(CE14NodeTreeElement? node)
     {
         if (_window is null)
             return;
@@ -144,7 +144,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
             return;
         }
 
-        if (!_proto.TryIndex<CP14SkillPrototype>(node.NodeKey, out var skill))
+        if (!_proto.TryIndex<CE14SkillPrototype>(node.NodeKey, out var skill))
         {
             DeselectNode();
             return;
@@ -153,7 +153,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
         SelectNode(skill);
     }
 
-    private void SelectNode(CP14SkillPrototype? skill)
+    private void SelectNode(CE14SkillPrototype? skill)
     {
         if (skill is null)
         {
@@ -182,7 +182,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
         _window.SkillView.Texture = skill.Icon.Frame0();
         _window.LearnButton.Disabled = !_skill.CanLearnSkill(_targetPlayer.Value, skill);
         _window.SkillPointText.Text =
-            Loc.GetString("cp14-skill-menu-learncost", ("type", Loc.GetString(indexedSkillType.Name)));
+            Loc.GetString("CE14-skill-menu-learncost", ("type", Loc.GetString(indexedSkillType.Name)));
         _window.SkillCost.Text = skill.LearnCost.ToString();
         _window.SkillPointIcon.Texture = indexedSkillType.Icon?.Frame0();
 
@@ -201,7 +201,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
         _window.LearnButton.Disabled = true;
     }
 
-    private FormattedMessage GetSkillDescription(CP14SkillPrototype skill)
+    private FormattedMessage GetSkillDescription(CE14SkillPrototype skill)
     {
         var msg = new FormattedMessage();
 
@@ -237,7 +237,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
         if (_selectedSkillTree == null)
             return;
 
-        if (!EntityManager.TryGetComponent<CP14SkillStorageComponent>(_targetPlayer, out var storage))
+        if (!EntityManager.TryGetComponent<CE14SkillStorageComponent>(_targetPlayer, out var storage))
             return;
 
         if (!_proto.TryIndex(_selectedSkillTree.SkillType, out var indexedSkillType))
@@ -251,7 +251,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
 
         _window.LevelTexture.Texture = indexedSkillType.Icon?.Frame0();
 
-        HashSet<CP14NodeTreeElement> nodeTreeElements = new();
+        HashSet<CE14NodeTreeElement> nodeTreeElements = new();
 
         HashSet<(string, string)> nodeTreeEdges = new();
 
@@ -286,7 +286,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
 
             if (!hide)
             {
-                var nodeTreeElement = new CP14NodeTreeElement(
+                var nodeTreeElement = new CE14NodeTreeElement(
                     skill.ID,
                     gained: learned.Contains(skill),
                     active: _skill.CanLearnSkill(_targetPlayer.Value, skill),
@@ -297,7 +297,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
         }
 
         _window.GraphControl.UpdateState(
-            new CP14NodeTreeUiState(
+            new CE14NodeTreeUiState(
                 nodes: nodeTreeElements,
                 edges: nodeTreeEdges,
                 frameIcon: _selectedSkillTree.FrameIcon,
@@ -315,7 +315,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
         if (_window is null)
             return;
 
-        if (!EntityManager.TryGetComponent<CP14SkillStorageComponent>(_targetPlayer, out var storage))
+        if (!EntityManager.TryGetComponent<CE14SkillStorageComponent>(_targetPlayer, out var storage))
             return;
 
         //If tree not selected, select the first one
@@ -354,7 +354,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
                 }
             }
 
-            var treeButton2 = new CP14SkillTreeButtonControl(indexedTree.Color,
+            var treeButton2 = new CE14SkillTreeButtonControl(indexedTree.Color,
                 Loc.GetString(indexedTree.Name),
                 learnedPoints,
                 indexedSkillType.Icon?.Frame0());
@@ -368,7 +368,7 @@ public sealed class CP14SkillUIController : UIController, IOnStateEntered<Gamepl
         }
     }
 
-    private void SelectTree(ProtoId<CP14SkillTreePrototype> tree)
+    private void SelectTree(ProtoId<CE14SkillTreePrototype> tree)
     {
         if (_window == null)
             return;

@@ -1,12 +1,12 @@
 - type: entity
-  id: CP14BowlBase
+  id: CE14BowlBase
   parent: BaseItem
   description: This is your bowl for a delicious soups!
   categories: [ ForkFiltered ]
   abstract: true
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/Soups/bowls.rsi
+    sprite: _CE14/Objects/Consumable/Food/Soups/bowls.rsi
   - type: Item
     shape:
     - 0,0,1,0
@@ -14,10 +14,10 @@
     solutions:
       food:
         maxVol: 30
-  - type: CP14FoodHolder
+  - type: CE14FoodHolder
     foodType: Soup
     solutionId: food
-    displacementRsiPath: _CP14/Objects/Consumable/Food/Soups/displacement.rsi
+    displacementRsiPath: _CE14/Objects/Consumable/Food/Soups/displacement.rsi
     canAcceptFood: true
   - type: Appearance
   - type: SolutionContainerVisuals
@@ -29,65 +29,65 @@
     solution: food
 
 - type: entity
-  id: CP14BowlWooden
-  parent: CP14BowlBase
+  id: CE14BowlWooden
+  parent: CE14BowlBase
   name: wooden bowl
   components:
   - type: Sprite
     layers:
     - state: wooden
-    - map: ["cp14_foodLayers"]
+    - map: ["CE14_foodLayers"]
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 20
+      CE14WoodenPlanks: 20
   - type: Food
     trash: 
-    - CP14BowlWooden
+    - CE14BowlWooden
 
 - type: entity
-  id: CP14BowlIron
-  parent: CP14BowlBase
+  id: CE14BowlIron
+  parent: CE14BowlBase
   name: iron bowl
   components:
   - type: Sprite
     layers:
     - state: iron
-    - map: ["cp14_foodLayers"]
+    - map: ["CE14_foodLayers"]
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 20
+      CE14Iron: 20
   - type: Food
     trash: 
-    - CP14BowlIron
+    - CE14BowlIron
 
 - type: entity
-  id: CP14BowlGold
-  parent: CP14BowlBase
+  id: CE14BowlGold
+  parent: CE14BowlBase
   name: gold bowl
   components:
   - type: Sprite
     layers:
     - state: gold
-    - map: ["cp14_foodLayers"]
+    - map: ["CE14_foodLayers"]
   - type: PhysicalComposition
     materialComposition:
-      CP14Gold: 20
+      CE14Gold: 20
   - type: Food
     trash: 
-    - CP14BowlGold
+    - CE14BowlGold
 
 - type: entity
-  id: CP14BowlCopper
-  parent: CP14BowlBase
+  id: CE14BowlCopper
+  parent: CE14BowlBase
   name: copper bowl
   components:
   - type: Sprite
     layers:
     - state: copper
-    - map: ["cp14_foodLayers"]
+    - map: ["CE14_foodLayers"]
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 20
+      CE14Copper: 20
   - type: Food
     trash: 
-    - CP14BowlCopper
+    - CE14BowlCopper

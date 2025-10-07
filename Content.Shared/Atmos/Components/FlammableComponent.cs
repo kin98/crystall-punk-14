@@ -88,7 +88,7 @@ namespace Content.Shared.Atmos.Components
         /// CrystallEdge fireplace fuel
         /// </summary>
         [DataField]
-        public float CP14FireplaceFuel = 10f;
+        public float CE14FireplaceFuel = 10f;
 
         /// <summary>
         /// the value is cached to check if it has changed

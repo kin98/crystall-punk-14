@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14GatherableWildSage
-  parent: CP14GatherableBase
+  id: CE14GatherableWildSage
+  parent: CE14GatherableBase
   name: wild sage
   description: Root of this ubiquitous medicinal plant not bad at healing physical injuries, and inducing coughing.
   suffix: Gatherable
   components:
   - type: Sprite
     drawdepth: FloorTiles
-    sprite: _CP14/Structures/Flora/Wild/wild_sage.rsi
+    sprite: _CE14/Structures/Flora/Wild/wild_sage.rsi
     layers:
       - state: world1
         map: ["random"]
@@ -17,10 +17,10 @@
         world1: ""
         world2: ""
         world3: ""
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     deleteAfterHarvest: true
     loot:
       All: !type:GroupSelector
         children:
-        - id: CP14WildSage
+        - id: CE14WildSage
 

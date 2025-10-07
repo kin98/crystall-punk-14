@@ -1,129 +1,129 @@
 - type: species
-  id: CP14Dwarf
-  name: cp14-species-name-dwarf
+  id: CE14Dwarf
+  name: CE14-species-name-dwarf
   roundStart: true
-  prototype: CP14MobDwarf
-  sprites: CP14MobDwarfSprites
+  prototype: CE14MobDwarf
+  sprites: CE14MobDwarfSprites
   markingLimits: MobHumanMarkingLimits
-  dollPrototype: CP14MobDwarfDummy
+  dollPrototype: CE14MobDwarfDummy
   skinColoration: HumanToned
-  maleFirstNames: CP14_Names_Dwarf_Male_First #TODO
-  femaleFirstNames: CP14_Names_Dwarf_Female_First #TODO
-  lastNames: CP14_Names_Dwarf_Last #TODO
+  maleFirstNames: CE14_Names_Dwarf_Male_First #TODO
+  femaleFirstNames: CE14_Names_Dwarf_Female_First #TODO
+  lastNames: CE14_Names_Dwarf_Last #TODO
 
 - type: speciesBaseSprites
-  id: CP14MobDwarfSprites
+  id: CE14MobDwarfSprites
   sprites:
-    Head: CP14MobDwarfHead
-    HeadTop: CP14MobDwarfMarkingMatchSkin
-    Hair: CP14MobDwarfAnyMarking
-    FacialHair: CP14MobDwarfAnyMarking
-    Snout: CP14MobDwarfMarkingMatchSkin
-    Tail: CP14MobDwarfMarkingMatchSkin
-    Chest: CP14MobDwarfTorso
-    Eyes: CP14MobDwarfEyes
-    LArm: CP14MobDwarfLArm
-    RArm: CP14MobDwarfRArm
-    LHand: CP14MobDwarfLHand
-    RHand: CP14MobDwarfRHand
-    LLeg: CP14MobDwarfLLeg
-    RLeg: CP14MobDwarfRLeg
-    LFoot: CP14MobDwarfLFoot
-    RFoot: CP14MobDwarfRFoot
+    Head: CE14MobDwarfHead
+    HeadTop: CE14MobDwarfMarkingMatchSkin
+    Hair: CE14MobDwarfAnyMarking
+    FacialHair: CE14MobDwarfAnyMarking
+    Snout: CE14MobDwarfMarkingMatchSkin
+    Tail: CE14MobDwarfMarkingMatchSkin
+    Chest: CE14MobDwarfTorso
+    Eyes: CE14MobDwarfEyes
+    LArm: CE14MobDwarfLArm
+    RArm: CE14MobDwarfRArm
+    LHand: CE14MobDwarfLHand
+    RHand: CE14MobDwarfRHand
+    LLeg: CE14MobDwarfLLeg
+    RLeg: CE14MobDwarfRLeg
+    LFoot: CE14MobDwarfLFoot
+    RFoot: CE14MobDwarfRFoot
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfEyes
+  id: CE14MobDwarfEyes
   baseSprite:
-    sprite: _CP14/Mobs/Customization/eyes.rsi
+    sprite: _CE14/Mobs/Customization/eyes.rsi
     state: eyes
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfAnyMarking
+  id: CE14MobDwarfAnyMarking
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfMarkingMatchSkin
+  id: CE14MobDwarfMarkingMatchSkin
   markingsMatchSkin: true
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfHead
+  id: CE14MobDwarfHead
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: head_m
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfHeadMale
+  id: CE14MobDwarfHeadMale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: head_m
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfHeadFemale
+  id: CE14MobDwarfHeadFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: head_f
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfTorso
+  id: CE14MobDwarfTorso
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: torso_m
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfTorsoMale
+  id: CE14MobDwarfTorsoMale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: torso_m
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfTorsoFemale
+  id: CE14MobDwarfTorsoFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: torso_f
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfLLeg
+  id: CE14MobDwarfLLeg
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: l_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfLArm
+  id: CE14MobDwarfLArm
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: l_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfLHand
+  id: CE14MobDwarfLHand
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfLFoot
+  id: CE14MobDwarfLFoot
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: l_foot
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfRLeg
+  id: CE14MobDwarfRLeg
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: r_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfRArm
+  id: CE14MobDwarfRArm
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: r_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfRHand
+  id: CE14MobDwarfRHand
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: r_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobDwarfRFoot
+  id: CE14MobDwarfRFoot
   baseSprite:
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: r_foot

@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14BaseLock
+  id: CE14BaseLock
   abstract: true
   categories: [ ForkFiltered ]
   name: lock
@@ -9,37 +9,37 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/welder_drop.ogg
       params:
         variation: 0.05
-  - type: CP14Lock
+  - type: CE14Lock
     canEmbedded: true
 
 - type: entity
-  parent: CP14BaseLock
-  id: CP14LockCopper
+  parent: CE14BaseLock
+  id: CE14LockCopper
   components:
   - type: Sprite
     state: lock_copper
-  - type: CP14Lock
+  - type: CE14Lock
     lockShape:
     - 2
     - 2
     - 2
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 10
+      CE14Copper: 10
 
 - type: entity
-  parent: CP14BaseLock
-  id: CP14LockIron
+  parent: CE14BaseLock
+  id: CE14LockIron
   components:
   - type: Sprite
     state: lock_iron
-  - type: CP14Lock
+  - type: CE14Lock
     lockShape:
     - 2
     - 2
@@ -48,15 +48,15 @@
     - 2
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10
+      CE14Iron: 10
 
 - type: entity
-  parent: CP14BaseLock
-  id: CP14LockGold
+  parent: CE14BaseLock
+  id: CE14LockGold
   components:
   - type: Sprite
     state: lock_gold
-  - type: CP14Lock
+  - type: CE14Lock
     lockShape:
     - 2
     - 2
@@ -66,15 +66,15 @@
     - 2
   - type: PhysicalComposition
     materialComposition:
-      CP14Gold: 10
+      CE14Gold: 10
 
 - type: entity
-  parent: CP14BaseLock
-  id: CP14LockMithril
+  parent: CE14BaseLock
+  id: CE14LockMithril
   components:
   - type: Sprite
     state: lock_mithril
-  - type: CP14Lock
+  - type: CE14Lock
     lockShape:
     - 2
     - 2
@@ -85,5 +85,5 @@
     - 2
   - type: PhysicalComposition
     materialComposition:
-      CP14Mithril: 10
+      CE14Mithril: 10
 

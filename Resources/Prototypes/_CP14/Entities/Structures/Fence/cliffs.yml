@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseStructure
-  id: CP14Cliff
+  id: CE14Cliff
   name: cliff
   suffix: Straight
   description: Severe unevenness of the natural landscape.
@@ -8,10 +8,10 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: cliff
   - type: Icon
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: cliff
   - type: Physics
     bodyType: Static
@@ -29,16 +29,16 @@
   - type: Climbable
 
 - type: entity
-  parent: CP14Cliff
-  id: CP14CliffCorner
+  parent: CE14Cliff
+  id: CE14CliffCorner
   suffix: Corner
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: smallcorner
   - type: Icon
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: smallcorner
   - type: Fixtures
     fixtures:
@@ -62,16 +62,16 @@
         - TableLayer
 
 - type: entity
-  parent: CP14Cliff
-  id: CP14CliffCornerSmall
+  parent: CE14Cliff
+  id: CE14CliffCornerSmall
   suffix: CornerSmall
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: corner
   - type: Icon
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: corner
   - type: Fixtures
     fixtures:
@@ -86,28 +86,28 @@
         - TableLayer
 
 - type: entity
-  parent: CP14Cliff
-  id: CP14CliffEndLeft
+  parent: CE14Cliff
+  id: CE14CliffEndLeft
   suffix: Left End
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: end_left
   - type: Icon
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: end_left
 
 - type: entity
-  parent: CP14Cliff
-  id: CP14CliffEndRight
+  parent: CE14Cliff
+  id: CE14CliffEndRight
   suffix: Right End
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: end_right
   - type: Icon
-    sprite: _CP14/Structures/Fences/cliff_dirt.rsi
+    sprite: _CE14/Structures/Fences/cliff_dirt.rsi
     state: end_right
 

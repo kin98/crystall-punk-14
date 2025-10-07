@@ -1,6 +1,6 @@
 - type: damageType
-  id: CP14ManaDepletion
-  name: cp14-damage-type-manadepletion
+  id: CE14ManaDepletion
+  name: CE14-damage-type-manadepletion
   armorCoefficientPrice: 5
   armorFlatPrice: 20
 

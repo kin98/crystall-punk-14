@@ -1,7 +1,7 @@
-using Content.Server._CP14.Temperature;
+using Content.Server._CE14.Temperature;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
-using Content.Shared._CP14.Temperature;
+using Content.Shared._CE14.Temperature;
 using Content.Shared.Audio;
 using Content.Shared.Mobs;
 using Content.Shared.Power;
@@ -15,7 +15,7 @@ public sealed class AmbientSoundSystem : SharedAmbientSoundSystem
         base.Initialize();
         SubscribeLocalEvent<AmbientOnPoweredComponent, PowerChangedEvent>(HandlePowerChange);
         SubscribeLocalEvent<AmbientOnPoweredComponent, PowerNetBatterySupplyEvent>(HandlePowerSupply);
-        SubscribeLocalEvent<CP14FlammableAmbientSoundComponent, OnFireChangedEvent>(OnFireChanged); //CrystallEdge bonfire moment
+        SubscribeLocalEvent<CE14FlammableAmbientSoundComponent, OnFireChangedEvent>(OnFireChanged); //CrystallEdge bonfire moment
     }
 
     private void HandlePowerSupply(EntityUid uid, AmbientOnPoweredComponent component, ref PowerNetBatterySupplyEvent args)
@@ -29,7 +29,7 @@ public sealed class AmbientSoundSystem : SharedAmbientSoundSystem
     }
 
     //CrystallEdge bonfire moment
-    private void OnFireChanged(Entity<CP14FlammableAmbientSoundComponent> ent, ref OnFireChangedEvent args)
+    private void OnFireChanged(Entity<CE14FlammableAmbientSoundComponent> ent, ref OnFireChangedEvent args)
     {
         SetAmbience(ent, args.OnFire);
     }

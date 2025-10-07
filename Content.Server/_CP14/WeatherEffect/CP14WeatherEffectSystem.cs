@@ -7,9 +7,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.WeatherEffect;
+namespace Content.Server._CE14.WeatherEffect;
 
-public sealed class CP14WeatherEffectSystem : EntitySystem
+public sealed class CE14WeatherEffectSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
@@ -19,7 +19,7 @@ public sealed class CP14WeatherEffectSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
 
     private readonly JobQueue _weatherQueue = new();
-    private readonly List<(CP14WeatherEffectJob Job, CancellationTokenSource CancelToken)> _weatherJobs = new();
+    private readonly List<(CE14WeatherEffectJob Job, CancellationTokenSource CancelToken)> _weatherJobs = new();
     private const double JobMaxTime = 0.002;
 
     private EntityQuery<BlockWeatherComponent> _weatherBlockQuery;
@@ -66,7 +66,7 @@ public sealed class CP14WeatherEffectSystem : EntitySystem
                     config.NextEffectTime = _timing.CurTime + config.Frequency;
 
                     var cancelToken = new CancellationTokenSource();
-                    var job = new CP14WeatherEffectJob(
+                    var job = new CE14WeatherEffectJob(
                         JobMaxTime,
                         EntityManager,
                         _lookup,

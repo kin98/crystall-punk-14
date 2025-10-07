@@ -1,8 +1,8 @@
-﻿namespace Content.Client._CP14.Wave;
+﻿namespace Content.Client._CE14.Wave;
 
 [RegisterComponent]
-[Access(typeof(CP14WaveShaderSystem))]
-public sealed partial class CP14WaveShaderComponent : Component
+[Access(typeof(CE14WaveShaderSystem))]
+public sealed partial class CE14WaveShaderComponent : Component
 {
     [DataField]
     public float Speed = 10f;

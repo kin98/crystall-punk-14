@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
-using Content.Client._CP14.IdentityRecognition;
+using Content.Client._CE14.IdentityRecognition;
 using Content.Client.Administration.Managers;
 using Content.Client.Chat;
 using Content.Client.Chat.Managers;
@@ -821,10 +821,10 @@ public sealed partial class ChatUIController : UIController
 
     public void ProcessChatMessage(ChatMessage msg, bool speechBubble = true)
     {
-        //CP14 transform message on clientside
+        //CE14 transform message on clientside
         if (_player.LocalEntity is not null && msg.SenderEntity.IsValid())
         {
-            var ev = new CP14ClientTransformNameEvent(msg.SenderEntity);
+            var ev = new CE14ClientTransformNameEvent(msg.SenderEntity);
             _ent.EventBus.RaiseLocalEvent(_player.LocalEntity.Value, ev);
 
             if (ev.Handled)
@@ -834,7 +834,7 @@ public sealed partial class ChatUIController : UIController
                 msg.WrappedMessage = msg.WrappedMessage.Replace($"[Name]{oldName}[/Name]", $"[Name]{newName}[/Name]");
             }
         }
-        //CP14 end
+        //CE14 end
 
         // color the name unless it's something like "the old man"
         if ((msg.Channel == ChatChannel.Local || msg.Channel == ChatChannel.Whisper) && _chatNameColorsEnabled)

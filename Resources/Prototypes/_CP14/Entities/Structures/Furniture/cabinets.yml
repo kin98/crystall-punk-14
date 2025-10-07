@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14CabinetBase
+  id: CE14CabinetBase
   parent: BaseStructure
   categories: [ ForkFiltered ]
   abstract: true
@@ -50,17 +50,17 @@
 - type: entity
   name: wooden cabinet
   parent:
-  - CP14CabinetBase
-  - CP14BaseFlammableSpreading
-  id: CP14WoodenCabinet
+  - CE14CabinetBase
+  - CE14BaseFlammableSpreading
+  id: CE14WoodenCabinet
   description: A regular wooden cabinet.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Dressers/wood_cabinet.rsi
+    sprite: _CE14/Structures/Storage/Dressers/wood_cabinet.rsi
     state: icons
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -69,27 +69,27 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 3
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14WoodenCabinet
-    node: CP14WoodenCabinet
+    graph: CE14WoodenCabinet
+    node: CE14WoodenCabinet
 
 - type: entity
-  parent: CP14CabinetBase
-  id: CP14IronCabinet
+  parent: CE14CabinetBase
+  id: CE14IronCabinet
   name: iron cabinet
   description: an iron cabinet. Sturdy, lockable. You can store your valuables here without fear of some burglar taking it all for himself.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Dressers/iron_cabinet.rsi
+    sprite: _CE14/Structures/Storage/Dressers/iron_cabinet.rsi
     state: icons
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Metallic
+    damageModifierSet: CE14Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -101,12 +101,12 @@
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14ScrapIron:
+          CE14ScrapIron:
             min: 1
             max: 3
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14IronCabinet
-    node: CP14IronCabinet
+    graph: CE14IronCabinet
+    node: CE14IronCabinet
 

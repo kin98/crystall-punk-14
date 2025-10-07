@@ -3,13 +3,13 @@ using Content.Shared.Procedural;
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Procedural.Prototypes;
+namespace Content.Shared._CE14.Procedural.Prototypes;
 
 /// <summary>
 /// Location modifier prototype. The answer to the question “What's inside" from the point of view of the combinatorics of creating locations
 /// </summary>
-[Prototype("cp14LocationModifier")]
-public sealed partial class CP14ProceduralModifierPrototype : IPrototype
+[Prototype("CE14LocationModifier")]
+public sealed partial class CE14ProceduralModifierPrototype : IPrototype
 {
     [IdDataField] public string ID { get; } = default!;
 
@@ -23,7 +23,7 @@ public sealed partial class CP14ProceduralModifierPrototype : IPrototype
     /// Each modifier belongs to specific categories. Used by the generator to determine what to generate
     /// </summary>
     [DataField]
-    public Dictionary<ProtoId<CP14ProceduralModifierCategoryPrototype>, float> Categories = new();
+    public Dictionary<ProtoId<CE14ProceduralModifierCategoryPrototype>, float> Categories = new();
 
     /// <summary>
     /// How often can this modifier be generated? Determined by weight from all modifiers available for the location

@@ -1,14 +1,14 @@
 - type: constructionGraph
-  id: CP14HerbBandage
+  id: CE14HerbBandage
   start: start
   graph:
   - node: start
     edges:
-    - to: cp14herbbandage
+    - to: CE14herbbandage
       steps:
-      - material: CP14FloraMaterial
+      - material: CE14FloraMaterial
         amount: 3
         doAfter: 3
 
-  - node: cp14herbbandage
-    entity: CP14HerbalBandage1
+  - node: CE14herbbandage
+    entity: CE14HerbalBandage1

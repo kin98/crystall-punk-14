@@ -1,16 +1,16 @@
 - type: entity
-  id: CP14ActionSpellShadowGrab
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellShadowGrab
+  parent: CE14ActionSpellBase
   name: Shadow grab
   description: You attract a ghostly hand that draws an object or entity to you
   components:
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 20
-  - type: CP14ActionFreeHandsRequired
+  - type: CE14ActionFreeHandsRequired
   - type: Action
     useDelay: 5
     icon:
-      sprite: _CP14/Actions/Spells/dimension.rsi
+      sprite: _CE14/Actions/Spells/dimension.rsi
       state: shadow_grab
   - type: DoAfterArgs
     breakOnHandChange: false
@@ -22,24 +22,24 @@
       components:
       - Item
     canTargetSelf: false
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectShadowStep
-      - !type:CP14SpellSpawnEntityOnUser
+        - CE14ImpactEffectShadowStep
+      - !type:CE14SpellSpawnEntityOnUser
         spawns:
-        - CP14ImpactEffectShadowGrab
+        - CE14ImpactEffectShadowGrab
       effects:
-      - !type:CP14SpellThrowToUser
+      - !type:CE14SpellThrowToUser
         throwPower: 10
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectShadowStep
+        - CE14ImpactEffectShadowStep
 
 - type: entity
-  id: CP14ImpactEffectShadowGrab
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectShadowGrab
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -49,10 +49,10 @@
       color: "#5e427e"
 
 - type: entity
-  parent: CP14BaseSpellScrollDimension
-  id: CP14SpellScrollShadowGrab
+  parent: CE14BaseSpellScrollDimension
+  id: CE14SpellScrollShadowGrab
   name: shadow grab spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellShadowGrab
+    - CE14ActionSpellShadowGrab

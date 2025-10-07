@@ -1,37 +1,37 @@
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: EnemySkeletonT1
   levels:
     min: 2
     max: 3
-  name: cp14-modifier-skeleton
+  name: CE14-modifier-skeleton
   generationWeight: 1.5
   generationProb: 0.5
   categories:
     GhostRoleDanger: 1
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14SpawnPointGhostDemiplaneSkeletonT1
+    - !type:CE14OreDunGen
+      entity: CE14SpawnPointGhostDemiplaneSkeletonT1
       count: 1
       minGroupSize: 1
       maxGroupSize: 3
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: EnemySkeletonT2
   levels:
     min: 4
     max: 10
-  name: cp14-modifier-skeleton
+  name: CE14-modifier-skeleton
   generationWeight: 2.0
   categories:
     GhostRoleDanger: 1
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14SpawnPointGhostDemiplaneSkeletonT2
+    - !type:CE14OreDunGen
+      entity: CE14SpawnPointGhostDemiplaneSkeletonT2
       count: 1
       minGroupSize: 2
       maxGroupSize: 3
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: EnemyLurker
   levels:
     min: 0
@@ -41,7 +41,7 @@
   categories:
     GhostRoleDanger: 1
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entity: SpawnPointGhostDemiplaneLurker
       count: 1
       minGroupSize: 1

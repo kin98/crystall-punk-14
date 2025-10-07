@@ -87,7 +87,7 @@ public sealed partial class EntityStorageComponent : Component, IGasMixtureHolde
     /// Whether or not the container is sealed and traps air inside of it
     /// </summary>
     [DataField]
-    public bool Airtight = false; //CP14 false - bandaid fix: dont work with MapAtmosphere
+    public bool Airtight = false; //CE14 false - bandaid fix: dont work with MapAtmosphere
 
     /// <summary>
     /// Whether or not the entitystorage is open or closed

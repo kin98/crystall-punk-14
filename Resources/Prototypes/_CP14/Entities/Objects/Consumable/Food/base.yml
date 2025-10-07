@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  id: CP14BurnsAsh
+  id: CE14BurnsAsh
   categories: [ ForkFiltered ]
   components:
   - type: Temperature
@@ -8,7 +8,7 @@
   - type: InternalTemperature
     thickness: 0.02
     area: 0.02
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1

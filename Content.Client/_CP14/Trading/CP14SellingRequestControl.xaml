@@ -22,7 +22,7 @@
                                   VerticalExpand="True" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                         <TextureRect VerticalAlignment="Center" Visible="True" HorizontalAlignment="Center"
                                      Margin="10" TextureScale="2, 2"
-                                     TexturePath="/Textures/_CP14/Interface/Misc/star.png" />
+                                     TexturePath="/Textures/_CE14/Interface/Misc/star.png" />
                         <Label Name="Reputation" />
                     </BoxContainer>
                     <BoxContainer Orientation="Horizontal" Margin="0 0 0 10">
@@ -34,7 +34,7 @@
         </PanelContainer>
         <!-- Request Button -->
         <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
-            <Button Name="RequestButton" HorizontalExpand="True" Text="{Loc cp14-trading-ui-request-sell}" ToolTip="{Loc cp14-trading-ui-request-sell-tooltip}"/>
+            <Button Name="RequestButton" HorizontalExpand="True" Text="{Loc CE14-trading-ui-request-sell}" ToolTip="{Loc CE14-trading-ui-request-sell-tooltip}"/>
         </BoxContainer>
     </BoxContainer>
 </Control>

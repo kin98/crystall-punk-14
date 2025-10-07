@@ -1,4 +1,4 @@
-cp14-book-text-pantheon-gods-sileita = The pantheon of Sileita is divided into three great ranks: [bold]Absolutes, Elder Gods and Younger Gods[/bold]. Faith in the gods affects the political, spiritual and magical life of all the peoples of Sileita. Some deities are forbidden to worship, others are revered as official patrons of countries or organizations.
+CE14-book-text-pantheon-gods-sileita = The pantheon of Sileita is divided into three great ranks: [bold]Absolutes, Elder Gods and Younger Gods[/bold]. Faith in the gods affects the political, spiritual and magical life of all the peoples of Sileita. Some deities are forbidden to worship, others are revered as official patrons of countries or organizations.
     {"[italic]'I am a Watcher, a templar of the Order of the Guardians of Truth, charged with gathering information on all the gods of Sileita without bias. We do not pray. We record. No god is worthy of worship until fully understood. None is superior to another. All are part of a complex picture.'[/italic]"}
 
     {"[head=2]Absolutes — First Forces[/head]"}

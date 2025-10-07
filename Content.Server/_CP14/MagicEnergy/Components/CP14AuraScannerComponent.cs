@@ -1,6 +1,6 @@
-namespace Content.Server._CP14.MagicEnergy.Components;
+namespace Content.Server._CE14.MagicEnergy.Components;
 
-[RegisterComponent, Access(typeof(CP14MagicEnergySystem))]
-public sealed partial class CP14AuraScannerComponent : Component
+[RegisterComponent, Access(typeof(CE14MagicEnergySystem))]
+public sealed partial class CE14AuraScannerComponent : Component
 {
 }

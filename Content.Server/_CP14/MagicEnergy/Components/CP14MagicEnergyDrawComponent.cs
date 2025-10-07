@@ -1,12 +1,12 @@
 using Content.Shared.FixedPoint;
 
-namespace Content.Server._CP14.MagicEnergy.Components;
+namespace Content.Server._CE14.MagicEnergy.Components;
 
 /// <summary>
 /// Allows you to restore or deplete the magical energy in the item
 /// </summary>
-[RegisterComponent, Access(typeof(CP14MagicEnergySystem))]
-public sealed partial class CP14MagicEnergyDrawComponent : Component
+[RegisterComponent, Access(typeof(CE14MagicEnergySystem))]
+public sealed partial class CE14MagicEnergyDrawComponent : Component
 {
     [DataField]
     public bool Enable = true;

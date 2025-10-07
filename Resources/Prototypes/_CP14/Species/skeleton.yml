@@ -1,95 +1,95 @@
 - type: species
-  id: CP14Skeleton
-  name: cp14-species-name-skeleton
+  id: CE14Skeleton
+  name: CE14-species-name-skeleton
   roundStart: false
-  prototype: CP14BaseMobSkeleton
-  sprites: CP14MobSkeletonSprites
+  prototype: CE14BaseMobSkeleton
+  sprites: CE14MobSkeletonSprites
   markingLimits: MobHumanMarkingLimits
-  dollPrototype: CP14MobSkeletonDummy
+  dollPrototype: CE14MobSkeletonDummy
   skinColoration: TintedHues
   defaultSkinTone: "#ffffff"
-  maleFirstNames: CP14_Names_Human_Male_First
-  femaleFirstNames: CP14_Names_Human_Female_First
-  lastNames: CP14_Names_Human_Last
+  maleFirstNames: CE14_Names_Human_Male_First
+  femaleFirstNames: CE14_Names_Human_Female_First
+  lastNames: CE14_Names_Human_Last
 
 - type: speciesBaseSprites
-  id: CP14MobSkeletonSprites
+  id: CE14MobSkeletonSprites
   sprites:
-    Head: CP14MobSkeletonHead
-    Chest: CP14MobSkeletonTorso
-    Eyes: CP14MobSkeletonEyes
-    LArm: CP14MobSkeletonLArm
-    RArm: CP14MobSkeletonRArm
-    LHand: CP14MobSkeletonLHand
-    RHand: CP14MobSkeletonRHand
-    LLeg: CP14MobSkeletonLLeg
-    RLeg: CP14MobSkeletonRLeg
-    LFoot: CP14MobSkeletonLFoot
-    RFoot: CP14MobSkeletonRFoot
+    Head: CE14MobSkeletonHead
+    Chest: CE14MobSkeletonTorso
+    Eyes: CE14MobSkeletonEyes
+    LArm: CE14MobSkeletonLArm
+    RArm: CE14MobSkeletonRArm
+    LHand: CE14MobSkeletonLHand
+    RHand: CE14MobSkeletonRHand
+    LLeg: CE14MobSkeletonLLeg
+    RLeg: CE14MobSkeletonRLeg
+    LFoot: CE14MobSkeletonLFoot
+    RFoot: CE14MobSkeletonRFoot
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonEyes
+  id: CE14MobSkeletonEyes
   baseSprite:
-    sprite: _CP14/Mobs/Customization/eyes.rsi
+    sprite: _CE14/Mobs/Customization/eyes.rsi
     state: eyes
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonHead
+  id: CE14MobSkeletonHead
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: head
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonTorso
+  id: CE14MobSkeletonTorso
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: torso
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonLLeg
+  id: CE14MobSkeletonLLeg
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: l_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonLArm
+  id: CE14MobSkeletonLArm
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: l_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonLHand
+  id: CE14MobSkeletonLHand
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonLFoot
+  id: CE14MobSkeletonLFoot
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: l_foot
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonRLeg
+  id: CE14MobSkeletonRLeg
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: r_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonRArm
+  id: CE14MobSkeletonRArm
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: r_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonRHand
+  id: CE14MobSkeletonRHand
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: r_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobSkeletonRFoot
+  id: CE14MobSkeletonRFoot
   baseSprite:
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: r_foot
 

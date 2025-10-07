@@ -1,4 +1,4 @@
-cp14-book-text-tiefling-gambit = [head=1]Гамбит Тифлинга[/head]
+CE14-book-text-tiefling-gambit = [head=1]Гамбит Тифлинга[/head]
     Рекомендуется 3+ игроков
     
     •[bold]Цель:[/bold] Выбросить наибольшее количество очков в раунде

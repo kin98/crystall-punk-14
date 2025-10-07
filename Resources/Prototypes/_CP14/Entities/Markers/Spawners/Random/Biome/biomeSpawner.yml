@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseBiomeSpawner
+  id: CE14BaseBiomeSpawner
   name: biome spawner
   description: Spawns of various biomes on the map.
   abstract: true
@@ -14,120 +14,120 @@
   - type: Sprite
     snapCardinals: true
     drawdepth: BelowFloor
-    sprite: _CP14/Markers/biome.rsi
-  - type: CP14BiomeSpawner
+    sprite: _CE14/Markers/biome.rsi
+  - type: CE14BiomeSpawner
     deleteBlacklist:
       components:
       - Portal
       - MindContainer
   - type: PlacementReplacement
-    key: CP14BiomeSpawner
+    key: CE14BiomeSpawner
 
 - type: entity
-  id: CP14BiomeSpawnerGrassland
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerGrassland
+  parent: CE14BaseBiomeSpawner
   suffix: T0 Resources, Grassland
   components:
   - type: Sprite
     layers:
       - state: grass
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14GrasslandComossResources
+  - type: CE14BiomeSpawner
+    biome: CE14GrasslandComossResources
 
 - type: entity
-  id: CP14BiomeSpawnerCave
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerCave
+  parent: CE14BaseBiomeSpawner
   suffix: T0 Resources, Cave Tunnels
   components:
   - type: Sprite
     layers:
       - state: cave
-      - sprite: _CP14/Structures/Flora/Rocks/rocks_small.rsi
+      - sprite: _CE14/Structures/Flora/Rocks/rocks_small.rsi
         state: rock0
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14CavesComossResources
+  - type: CE14BiomeSpawner
+    biome: CE14CavesComossResources
 
 - type: entity
-  id: CP14BiomeSpawnerCaveEmpty
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerCaveEmpty
+  parent: CE14BaseBiomeSpawner
   suffix: Cave Open
   components:
   - type: Sprite
     layers:
       - state: cave
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14CavesFloor
+  - type: CE14BiomeSpawner
+    biome: CE14CavesFloor
 
 - type: entity
-  id: CP14BiomeSpawnerCaveGeneric
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerCaveGeneric
+  parent: CE14BaseBiomeSpawner
   suffix: Cave Generic
   components:
   - type: Sprite
     layers:
       - state: cave
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14CavesGeneric
+  - type: CE14BiomeSpawner
+    biome: CE14CavesGeneric
 
 - type: entity
-  id: CP14BiomeSpawnerForest
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerForest
+  parent: CE14BaseBiomeSpawner
   suffix: Forest
   components:
   - type: Sprite
     layers:
       - state: forest
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14GrasslandHills
+  - type: CE14BiomeSpawner
+    biome: CE14GrasslandHills
 
 - type: entity
-  id: CP14BiomeSpawnerSnowland
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerSnowland
+  parent: CE14BaseBiomeSpawner
   suffix: Snowland
   components:
   - type: Sprite
     layers:
       - state: snow
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14SnowlandTestResult
+  - type: CE14BiomeSpawner
+    biome: CE14SnowlandTestResult
 
 - type: entity
-  id: CP14BiomeSpawnerSwamp
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerSwamp
+  parent: CE14BaseBiomeSpawner
   suffix: Swamp
   components:
   - type: Sprite
     layers:
       - state: forest
-      - sprite: _CP14/Tiles/Water/water.rsi
+      - sprite: _CE14/Tiles/Water/water.rsi
         state: full
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14SwampFill
+  - type: CE14BiomeSpawner
+    biome: CE14SwampFill
 
 - type: entity
-  id: CP14BiomeSpawnerFrozenSwamp
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerFrozenSwamp
+  parent: CE14BaseBiomeSpawner
   suffix: Frozen swamp
   components:
   - type: Sprite
     layers:
       - state: snow
-      - sprite: _CP14/Tiles/Water/water.rsi
+      - sprite: _CE14/Tiles/Water/water.rsi
         state: full
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14SnowlandSwamp
+  - type: CE14BiomeSpawner
+    biome: CE14SnowlandSwamp
 
 - type: entity
-  id: CP14BiomeSpawnerFrozenCave
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerFrozenCave
+  parent: CE14BaseBiomeSpawner
   suffix: Frozen cave
   components:
   - type: Sprite
@@ -135,12 +135,12 @@
       - state: snow
         color: blue
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14IceCavesGeneric
+  - type: CE14BiomeSpawner
+    biome: CE14IceCavesGeneric
 
 - type: entity
-  id: CP14BiomeSpawnerLeafMaze
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerLeafMaze
+  parent: CE14BaseBiomeSpawner
   suffix: Leaf maze
   components:
   - type: Sprite
@@ -148,46 +148,46 @@
       - state: snow
         color: green
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14LeafMaze
+  - type: CE14BiomeSpawner
+    biome: CE14LeafMaze
 
 - type: entity
-  id: CP14BiomeSpawnerMarbleCave
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerMarbleCave
+  parent: CE14BaseBiomeSpawner
   suffix: Marble cave
   components:
   - type: Sprite
     layers:
       - state: cave
       - state: frame
-      - sprite: _CP14/Objects/Materials/marble_block.rsi
+      - sprite: _CE14/Objects/Materials/marble_block.rsi
         state: stone_3
-  - type: CP14BiomeSpawner
-    biome: CP14MarbleCaves
+  - type: CE14BiomeSpawner
+    biome: CE14MarbleCaves
 
 - type: entity
-  id: CP14BiomeSpawnerWastelands
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerWastelands
+  parent: CE14BaseBiomeSpawner
   suffix: Wastelands
   components:
   - type: Sprite
     layers:
       - state: dirt
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14Wastelands
+  - type: CE14BiomeSpawner
+    biome: CE14Wastelands
 
 - type: entity
-  id: CP14BiomeSpawnerCavesMushroom
-  parent: CP14BaseBiomeSpawner
+  id: CE14BiomeSpawnerCavesMushroom
+  parent: CE14BaseBiomeSpawner
   suffix: Mushroom cave
   components:
   - type: Sprite
     layers:
       - state: cave
-      - sprite: _CP14/Structures/Flora/Wild/agaric.rsi
+      - sprite: _CE14/Structures/Flora/Wild/agaric.rsi
         state: world4
       - state: frame
-  - type: CP14BiomeSpawner
-    biome: CP14MushroomsCaveResult
+  - type: CE14BiomeSpawner
+    biome: CE14MushroomsCaveResult
 

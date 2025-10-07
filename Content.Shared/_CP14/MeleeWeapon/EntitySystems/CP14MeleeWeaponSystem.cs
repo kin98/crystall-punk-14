@@ -1,5 +1,5 @@
 using System.Numerics;
-using Content.Shared._CP14.MeleeWeapon.Components;
+using Content.Shared._CE14.MeleeWeapon.Components;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Hands.EntitySystems;
@@ -11,9 +11,9 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.MeleeWeapon.EntitySystems;
+namespace Content.Shared._CE14.MeleeWeapon.EntitySystems;
 
-public sealed class CP14MeleeWeaponSystem : EntitySystem
+public sealed class CE14MeleeWeaponSystem : EntitySystem
 {
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
@@ -28,21 +28,21 @@ public sealed class CP14MeleeWeaponSystem : EntitySystem
 
     public override void Initialize()
     {
-        SubscribeLocalEvent<CP14MeleeSelfDamageComponent, MeleeHitEvent>(OnMeleeHit);
-        SubscribeLocalEvent<CP14BonusDistanceMeleeDamageComponent, MeleeHitEvent>(OnDistanceBonusDamage);
-        SubscribeLocalEvent<CP14ComboBonusMeleeDamageComponent, MeleeHitEvent>(OnComboBonusDamage);
-        SubscribeLocalEvent<CP14LightMeleeKnockdownComponent, MeleeHitEvent>(OnKnockdownAttack);
-        SubscribeLocalEvent<CP14MeleeParryComponent, MeleeHitEvent>(OnMeleeParryHit);
-        SubscribeLocalEvent<CP14MeleeParriableComponent, AttemptMeleeEvent>(OnMeleeParriableHitAttmpt);
-        SubscribeLocalEvent<CP14MeleeWeaponStaminaCostComponent, MeleeHitEvent>(OnMeleeStaminaCost);
+        SubscribeLocalEvent<CE14MeleeSelfDamageComponent, MeleeHitEvent>(OnMeleeHit);
+        SubscribeLocalEvent<CE14BonusDistanceMeleeDamageComponent, MeleeHitEvent>(OnDistanceBonusDamage);
+        SubscribeLocalEvent<CE14ComboBonusMeleeDamageComponent, MeleeHitEvent>(OnComboBonusDamage);
+        SubscribeLocalEvent<CE14LightMeleeKnockdownComponent, MeleeHitEvent>(OnKnockdownAttack);
+        SubscribeLocalEvent<CE14MeleeParryComponent, MeleeHitEvent>(OnMeleeParryHit);
+        SubscribeLocalEvent<CE14MeleeParriableComponent, AttemptMeleeEvent>(OnMeleeParriableHitAttmpt);
+        SubscribeLocalEvent<CE14MeleeWeaponStaminaCostComponent, MeleeHitEvent>(OnMeleeStaminaCost);
     }
 
-    private void OnMeleeStaminaCost(Entity<CP14MeleeWeaponStaminaCostComponent> ent, ref MeleeHitEvent args)
+    private void OnMeleeStaminaCost(Entity<CE14MeleeWeaponStaminaCostComponent> ent, ref MeleeHitEvent args)
     {
         _stamina.TakeStaminaDamage(args.User, ent.Comp.Stamina);
     }
 
-    private void OnMeleeParryHit(Entity<CP14MeleeParryComponent> ent, ref MeleeHitEvent args)
+    private void OnMeleeParryHit(Entity<CE14MeleeParryComponent> ent, ref MeleeHitEvent args)
     {
         if (args.HitEntities.Count != 1)
             return;
@@ -55,7 +55,7 @@ public sealed class CP14MeleeWeaponSystem : EntitySystem
         if (heldItem is null)
             return;
 
-        if (!TryComp<CP14MeleeParriableComponent>(heldItem, out var meleeParriable))
+        if (!TryComp<CE14MeleeParriableComponent>(heldItem, out var meleeParriable))
             return;
 
         if (_timing.CurTime > meleeParriable.LastMeleeHit + ent.Comp.ParryWindow)
@@ -63,18 +63,18 @@ public sealed class CP14MeleeWeaponSystem : EntitySystem
 
         _hands.TryDrop(target, heldItem.Value);
         _throw.TryThrow(heldItem.Value, _random.NextAngle().ToWorldVec(), ent.Comp.ParryPower, target);
-        _popup.PopupPredicted( Loc.GetString("cp14-successful-parry"), args.User, args.User);
+        _popup.PopupPredicted( Loc.GetString("CE14-successful-parry"), args.User, args.User);
         _audio.PlayPredicted(meleeParriable.ParrySound, heldItem.Value, args.User);
     }
 
-    private void OnMeleeParriableHitAttmpt(Entity<CP14MeleeParriableComponent> ent, ref AttemptMeleeEvent args)
+    private void OnMeleeParriableHitAttmpt(Entity<CE14MeleeParriableComponent> ent, ref AttemptMeleeEvent args)
     {
         ent.Comp.LastMeleeHit = _timing.CurTime;
     }
 
-    private void OnKnockdownAttack(Entity<CP14LightMeleeKnockdownComponent> ent, ref MeleeHitEvent args)
+    private void OnKnockdownAttack(Entity<CE14LightMeleeKnockdownComponent> ent, ref MeleeHitEvent args)
     {
-        if (args.CP14Heavy)
+        if (args.CE14Heavy)
             return;
 
         foreach (var hit in args.HitEntities)
@@ -91,7 +91,7 @@ public sealed class CP14MeleeWeaponSystem : EntitySystem
         }
     }
 
-    private void OnComboBonusDamage(Entity<CP14ComboBonusMeleeDamageComponent> ent, ref MeleeHitEvent args)
+    private void OnComboBonusDamage(Entity<CE14ComboBonusMeleeDamageComponent> ent, ref MeleeHitEvent args)
     {
         // Resets combo state
         void Reset()
@@ -114,7 +114,7 @@ public sealed class CP14MeleeWeaponSystem : EntitySystem
         if (comp.CurrentHeavyAttacks < comp.HeavyAttackNeed)
         {
             // Light attack before threshold → reset combo
-            if (!args.CP14Heavy)
+            if (!args.CE14Heavy)
             {
                 Reset();
                 return;
@@ -145,7 +145,7 @@ public sealed class CP14MeleeWeaponSystem : EntitySystem
         }
 
         // Light attack after enough heavies → check if it hits any tracked target
-        if (comp.HitEntities.Overlaps(args.HitEntities) && !args.CP14Heavy)
+        if (comp.HitEntities.Overlaps(args.HitEntities) && !args.CE14Heavy)
         {
             if (_timing.IsFirstTimePredicted)
             {
@@ -162,7 +162,7 @@ public sealed class CP14MeleeWeaponSystem : EntitySystem
         }
     }
 
-    private void OnDistanceBonusDamage(Entity<CP14BonusDistanceMeleeDamageComponent> ent, ref MeleeHitEvent args)
+    private void OnDistanceBonusDamage(Entity<CE14BonusDistanceMeleeDamageComponent> ent, ref MeleeHitEvent args)
     {
         var critical = true;
 
@@ -199,7 +199,7 @@ public sealed class CP14MeleeWeaponSystem : EntitySystem
         }
     }
 
-    private void OnMeleeHit(Entity<CP14MeleeSelfDamageComponent> ent, ref MeleeHitEvent args)
+    private void OnMeleeHit(Entity<CE14MeleeSelfDamageComponent> ent, ref MeleeHitEvent args)
     {
         if (!args.IsHit)
             return;

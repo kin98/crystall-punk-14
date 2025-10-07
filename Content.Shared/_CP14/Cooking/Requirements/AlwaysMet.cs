@@ -7,9 +7,9 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Cooking.Requirements;
+namespace Content.Shared._CE14.Cooking.Requirements;
 
-public sealed partial class AlwaysMet : CP14CookingCraftRequirement
+public sealed partial class AlwaysMet : CE14CookingCraftRequirement
 {
     public override bool CheckRequirement(IEntityManager entManager,
         IPrototypeManager protoManager,

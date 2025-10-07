@@ -5,9 +5,9 @@ using Content.Shared.Throwing;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 
-namespace Content.Shared._CP14.Dash;
+namespace Content.Shared._CE14.Dash;
 
-public sealed partial class CP14DashSystem : EntitySystem
+public sealed partial class CE14DashSystem : EntitySystem
 {
     [Dependency] private readonly ActionBlockerSystem _blocker = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
@@ -18,28 +18,28 @@ public sealed partial class CP14DashSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14DashComponent, UpdateCanMoveEvent>(OnMoveAttempt);
-        SubscribeLocalEvent<CP14DashComponent, ComponentInit>(OnInit);
-        SubscribeLocalEvent<CP14DashComponent, ComponentShutdown>(OnShutdown);
-        SubscribeLocalEvent<CP14DashComponent, LandEvent>(OnLand);
+        SubscribeLocalEvent<CE14DashComponent, UpdateCanMoveEvent>(OnMoveAttempt);
+        SubscribeLocalEvent<CE14DashComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<CE14DashComponent, ComponentShutdown>(OnShutdown);
+        SubscribeLocalEvent<CE14DashComponent, LandEvent>(OnLand);
     }
 
-    private void OnShutdown(Entity<CP14DashComponent> ent, ref ComponentShutdown args)
+    private void OnShutdown(Entity<CE14DashComponent> ent, ref ComponentShutdown args)
     {
         _blocker.UpdateCanMove(ent);
     }
 
-    private void OnInit(Entity<CP14DashComponent> ent, ref ComponentInit args)
+    private void OnInit(Entity<CE14DashComponent> ent, ref ComponentInit args)
     {
         _blocker.UpdateCanMove(ent);
     }
 
-    private void OnLand(Entity<CP14DashComponent> ent, ref LandEvent args)
+    private void OnLand(Entity<CE14DashComponent> ent, ref LandEvent args)
     {
-        RemCompDeferred<CP14DashComponent>(ent);
+        RemCompDeferred<CE14DashComponent>(ent);
     }
 
-    private void OnMoveAttempt(Entity<CP14DashComponent> ent, ref UpdateCanMoveEvent args)
+    private void OnMoveAttempt(Entity<CE14DashComponent> ent, ref UpdateCanMoveEvent args)
     {
         if (ent.Comp.LifeStage > ComponentLifeStage.Running)
             return;
@@ -50,7 +50,7 @@ public sealed partial class CP14DashSystem : EntitySystem
 
     public void PerformDash(EntityUid ent, EntityCoordinates targetPosition, float speed = 10f, float maxDistance = 3.5f)
     {
-        EnsureComp<CP14DashComponent>(ent, out var dash);
+        EnsureComp<CE14DashComponent>(ent, out var dash);
         _audio.PlayPredicted(dash.DashSound, ent, ent);
 
         var entMapPos = _transform.ToMapCoordinates(Transform(ent).Coordinates);

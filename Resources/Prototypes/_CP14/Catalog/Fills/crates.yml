@@ -1,150 +1,150 @@
 - type: entity
-  id: CP14SmallWoodenCrateFilled
+  id: CE14SmallWoodenCrateFilled
   parent:
-  - CP14SmallWoodenCrate
+  - CE14SmallWoodenCrate
   suffix: Filled, Tools and Fluff
   components:
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:NestedSelector
-        tableId: CP14StationCrateLootTools
+        tableId: CE14StationCrateLootTools
         rolls: !type:RangeNumberSelector
           range: 1, 5
 
 - type: entity
-  id: CP14LargeWoodenCrateFilled
+  id: CE14LargeWoodenCrateFilled
   suffix: Filled, Tools and Fluff
   parent:
-  - CP14LargeWoodenCrate
+  - CE14LargeWoodenCrate
   components:
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:NestedSelector
-        tableId: CP14StationCrateLoot
+        tableId: CE14StationCrateLoot
 
 - type: entityTable
-  id: CP14StationCrateLoot
+  id: CE14StationCrateLoot
   table: !type:AllSelector
     children:
     # Tools
     - !type:NestedSelector
-      tableId: CP14StationCrateLootTools
+      tableId: CE14StationCrateLootTools
       rolls: !type:RangeNumberSelector
         range: 4, 5
     # Fluff
     - !type:NestedSelector
-      tableId: CP14StationCrateLootFluff
+      tableId: CE14StationCrateLootFluff
       prob: 0.5
       rolls: !type:RangeNumberSelector
         range: 4, 5
 
 - type: entityTable
-  id: CP14StationCrateLootTools
+  id: CE14StationCrateLootTools
   table: !type:GroupSelector
     children:
     - !type:GroupSelector
       children:
-      - id: CP14Screwdriver
+      - id: CE14Screwdriver
         weight: 2
-      - id: CP14BaseWrench
+      - id: CE14BaseWrench
         weight: 2
-      - id: CP14Scissors
-      - id: CP14Torch
-      - id: CP14Lighter
-      - id: CP14KeyFile
-      - id: CP14LockCopper
+      - id: CE14Scissors
+      - id: CE14Torch
+      - id: CE14Lighter
+      - id: CE14KeyFile
+      - id: CE14LockCopper
         weight: 0.3
 
 
       - !type:GroupSelector
         children:
-        - id: CP14FluteInstrument
-        - id: CP14LyraInstrument
-        - id: CP14LuteInstrument
-        - id: CP14Candle
+        - id: CE14FluteInstrument
+        - id: CE14LyraInstrument
+        - id: CE14LuteInstrument
+        - id: CE14Candle
       - !type:GroupSelector
         children:
-        - id: CP14CrystalLampBlueEmpty
-        - id: CP14CrystalLampOrangeEmpty
-      - id: CP14Rope
-      - id: CP14EnergyCrystalMediumEmpty
-      - id: CP14BookTieflingGambit
+        - id: CE14CrystalLampBlueEmpty
+        - id: CE14CrystalLampOrangeEmpty
+      - id: CE14Rope
+      - id: CE14EnergyCrystalMediumEmpty
+      - id: CE14BookTieflingGambit
         weight: 0.3 # too often
-      - id: CP14d20Dice
-      - id: CP14d6Dice
-      - id: CP14CopperCoin5
+      - id: CE14d20Dice
+      - id: CE14d6Dice
+      - id: CE14CopperCoin5
         weight: 0.5
       - !type:NestedSelector
-        tableId: CP14RandomVials
+        tableId: CE14RandomVials
 
 - type: entityTable
-  id: CP14StationCrateLootFluff
+  id: CE14StationCrateLootFluff
   table: !type:GroupSelector
     children:
-    - id: CP14PaperFolderBlue
-    - id: CP14PaperFolderRed
-    - id: CP14PenFeather
-    - id: CP14FoodPotato
-    - id: CP14FoodOnion
-    - id: CP14Cloth10
-    - id: CP14CrayonWhite
+    - id: CE14PaperFolderBlue
+    - id: CE14PaperFolderRed
+    - id: CE14PenFeather
+    - id: CE14FoodPotato
+    - id: CE14FoodOnion
+    - id: CE14Cloth10
+    - id: CE14CrayonWhite
     # Cheeese!
     - !type:GroupSelector
       children:
-      - id: CP14FoodBlueCheeseWheel
+      - id: CE14FoodBlueCheeseWheel
         weight: 0.1
-      - id: CP14FoodAgedCheeseWheel
+      - id: CE14FoodAgedCheeseWheel
         weight: 0.05
-      - id: CP14FoodAgedCheesePart
+      - id: CE14FoodAgedCheesePart
         weight: 0.3
-      - id: CP14FoodBlueCheesePart
+      - id: CE14FoodBlueCheesePart
         weight: 0.5
-      - id: CP14FoodCheeseSlice
+      - id: CE14FoodCheeseSlice
       weight: 0.3 # groop chance
-    - id: CP14FoodBlueCheeseSlice
+    - id: CE14FoodBlueCheeseSlice
       weight: 0.4
-    - id: CP14FoodAgedCheeseSlice
+    - id: CE14FoodAgedCheeseSlice
       weight: 0.3
     - !type:GroupSelector
       children:
-      - id: CP14ClothingCloakGreen
-      - id: CP14ClothingCloakWhite
-      - id: CP14ClothingCloakFurcapeBlack
-      - id: CP14ClothingCloakFurcapeBlue
-      - id: CP14ClothingCloakRitualAttireLeather
-      - id: CP14ClothingHeadBeretMercenary
-      - id: CP14ClothingPantsMercenaryTrousers
-      - id: CP14ClothingShirtMercenary
-      - id: CP14ClothingShirtYellowWizardDress
+      - id: CE14ClothingCloakGreen
+      - id: CE14ClothingCloakWhite
+      - id: CE14ClothingCloakFurcapeBlack
+      - id: CE14ClothingCloakFurcapeBlue
+      - id: CE14ClothingCloakRitualAttireLeather
+      - id: CE14ClothingHeadBeretMercenary
+      - id: CE14ClothingPantsMercenaryTrousers
+      - id: CE14ClothingShirtMercenary
+      - id: CE14ClothingShirtYellowWizardDress
     - !type:GroupSelector
       children:
-      - id: CP14DyeYellow
-      - id: CP14DyeGreen
-      - id: CP14DyeRed
-      - id: CP14DyePurple
-      - id: CP14DyeBlack
-      - id: CP14DyeBlue
+      - id: CE14DyeYellow
+      - id: CE14DyeGreen
+      - id: CE14DyeRed
+      - id: CE14DyePurple
+      - id: CE14DyeBlack
+      - id: CE14DyeBlue
     - !type:GroupSelector
       children:
-      - id: CP14BloodFlower
-      - id: CP14AgaricMushroom
-      - id: CP14ChromiumSlime
+      - id: CE14BloodFlower
+      - id: CE14AgaricMushroom
+      - id: CE14ChromiumSlime
         weight: 0.5
-      - id: CP14WildSage
-      - id: CP14LumiMushroom
-      - id: CP14BlueAmanita
-      - id: CP14Dayflin
-      - id: CP14AirLily
+      - id: CE14WildSage
+      - id: CE14LumiMushroom
+      - id: CE14BlueAmanita
+      - id: CE14Dayflin
+      - id: CE14AirLily
 
 - type: entityTable
-  id: CP14RandomVials
+  id: CE14RandomVials
   table: !type:GroupSelector
     children:
-    - id: CP14VialSmall
-    - id: CP14VialTiny
-    - id: CP14GreenBottle
-    - id: CP14GreenBottle2
-    - id: CP14BlueBottle
-    - id: CP14OrangeBottle
-    - id: CP14RedBottle
+    - id: CE14VialSmall
+    - id: CE14VialTiny
+    - id: CE14GreenBottle
+    - id: CE14GreenBottle2
+    - id: CE14BlueBottle
+    - id: CE14OrangeBottle
+    - id: CE14RedBottle
 

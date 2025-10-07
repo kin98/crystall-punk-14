@@ -1,23 +1,23 @@
 - type: marking
-  id: CP14TieflingTail
+  id: CE14TieflingTail
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [ CP14Tiefling ]
+  speciesRestriction: [ CE14Tiefling ]
   followSkinColor: true
   forcedColoring: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/tiefling_tails.rsi
+    - sprite: _CE14/Mobs/Customization/tiefling_tails.rsi
       state: tail
 
 - type: marking
-  id: CP14TieflingTailSpades
+  id: CE14TieflingTailSpades
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [ CP14Tiefling ]
+  speciesRestriction: [ CE14Tiefling ]
   followSkinColor: true
   forcedColoring: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/tiefling_tails.rsi
+    - sprite: _CE14/Mobs/Customization/tiefling_tails.rsi
       state: tail_spades
 
 
@@ -26,23 +26,23 @@
 # Animation
 
 - type: marking
-  id: CP14TieflingTailAnimated
+  id: CE14TieflingTailAnimated
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: []
   followSkinColor: true
   forcedColoring: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/tiefling_tails.rsi
+    - sprite: _CE14/Mobs/Customization/tiefling_tails.rsi
       state: tail_waggin
 
 - type: marking
-  id: CP14TieflingTailSpadesAnimated
+  id: CE14TieflingTailSpadesAnimated
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: []
   followSkinColor: true
   forcedColoring: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/tiefling_tails.rsi
+    - sprite: _CE14/Mobs/Customization/tiefling_tails.rsi
       state: tail_spades_waggin

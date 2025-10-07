@@ -1,12 +1,12 @@
 - type: entity
-  id: CP14ActionSpellBloodEssenceCreation
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellBloodEssenceCreation
+  parent: CE14ActionSpellBase
   name: Form the essence of blood
   description: You extract the essence of life stolen from other beings from your body to pass on to other vampires or use in rituals.
   components:
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 15
-  - type: CP14ActionSkillPointCost
+  - type: CE14ActionSkillPointCost
     skillPoint: Blood
     count: 1
   - type: DoAfterArgs
@@ -14,20 +14,20 @@
   - type: Action
     useDelay: 1
     icon:
-      sprite: _CP14/Actions/Spells/vampire.rsi
+      sprite: _CE14/Actions/Spells/vampire.rsi
       state: essence_create
     sound: !type:SoundPathSpecifier
-      path: /Audio/_CP14/Effects/essence_consume.ogg
+      path: /Audio/_CE14/Effects/essence_consume.ogg
   - type: InstantAction
-    event: !type:CP14InstantModularEffectEvent
+    event: !type:CE14InstantModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellApplyEntityEffect
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:Jitter
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectBloodEssence
-      - !type:CP14SpellSpawnInHandEntity
+        - CE14ImpactEffectBloodEssence
+      - !type:CE14SpellSpawnInHandEntity
         spawns:
-        - CP14BloodEssence
+        - CE14BloodEssence

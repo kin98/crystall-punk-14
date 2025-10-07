@@ -231,7 +231,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
     // Here so server can properly tell all clients in PVS range to start the animation
     protected virtual void SetStaminaAnimation(Entity<StaminaComponent> entity){}
 
-    public void SetStaminaAlert(EntityUid uid, StaminaComponent? component = null) //CP14 public. Need proper RestoreStaminaFunction in upstream.
+    public void SetStaminaAlert(EntityUid uid, StaminaComponent? component = null) //CE14 public. Need proper RestoreStaminaFunction in upstream.
     {
         if (!Resolve(uid, ref component, false) || component.Deleted)
             return;

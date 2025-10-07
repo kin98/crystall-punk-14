@@ -1,15 +1,15 @@
 - type: entity
   parent:
-  - CP14ClothingCloakBase
-  - CP14ClothingBaseContainer
-  id: CP14ClothingCloakAlchemist
+  - CE14ClothingCloakBase
+  - CE14ClothingBaseContainer
+  id: CE14ClothingCloakAlchemist
   name: alchemist's cloak
   description: An expensive fabric that can withstand acid splashes - the standard for alchemist experts.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/Roles/Alchemist/alchemist_cloak.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Alchemist/alchemist_cloak.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/Roles/Alchemist/alchemist_cloak.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Alchemist/alchemist_cloak.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -22,20 +22,20 @@
     - 0,0,1,1
     whitelist:
       tags:
-        - CP14Vial
+        - CE14Vial
 
 - type: entity
   parent:
-  - CP14ClothingCloakBase
-  - CP14ClothingBaseContainer
-  id: CP14ClothingCloakAlchemistMantle
+  - CE14ClothingCloakBase
+  - CE14ClothingBaseContainer
+  id: CE14ClothingCloakAlchemistMantle
   name: alchemist's mantle
   description: An expensive fabric that can withstand acid splashes - the standard for alchemist experts.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/Roles/Alchemist/alchemist_cloak2.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Alchemist/alchemist_cloak2.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/Roles/Alchemist/alchemist_cloak2.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Alchemist/alchemist_cloak2.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -48,5 +48,5 @@
     - 0,0,1,1
     whitelist:
       tags:
-        - CP14Vial
+        - CE14Vial
 

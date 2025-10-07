@@ -14,19 +14,19 @@ orphans: []
 nullspace: []
 tilemap:
   0: Space
-  20: CP14FloorBase
-  9: CP14FloorFoundation
-  13: CP14FloorGrass
-  14: CP14FloorGrassLight
-  15: CP14FloorGrassTall
-  21: CP14FloorMarbleCave
-  10: CP14FloorOakWoodPlanksBig
-  12: CP14FloorOakWoodPlanksBroken
-  11: CP14FloorOakWoodPlanksCruciform
-  17: CP14FloorStonebricks
-  16: CP14FloorStonebricksSmallCarved1
-  19: CP14FloorStonebricksSmallCarved2
-  18: CP14FloorStonebricksSquareCarved
+  20: CE14FloorBase
+  9: CE14FloorFoundation
+  13: CE14FloorGrass
+  14: CE14FloorGrassLight
+  15: CE14FloorGrassTall
+  21: CE14FloorMarbleCave
+  10: CE14FloorOakWoodPlanksBig
+  12: CE14FloorOakWoodPlanksBroken
+  11: CE14FloorOakWoodPlanksCruciform
+  17: CE14FloorStonebricks
+  16: CE14FloorStonebricksSmallCarved1
+  19: CE14FloorStonebricksSmallCarved2
+  18: CE14FloorStonebricksSquareCarved
   2: FloorAsteroidSand
   6: FloorAsteroidSandUnvariantized
   5: FloorAsteroidTile
@@ -124,38 +124,38 @@ entities:
         nodes:
         - node:
             color: '#FFFFFFFF'
-            id: CP14FloraGrass4
+            id: CE14FloraGrass4
           decals:
             4: 18,4
         - node:
             color: '#FFFFFFFF'
-            id: CP14FloraGrass9
+            id: CE14FloraGrass9
           decals:
             3: 20,4
         - node:
             color: '#FFFFFFFF'
-            id: CP14FloraRock01
+            id: CE14FloraRock01
           decals:
             5: 20,3
         - node:
             color: '#FFFFFFFF'
-            id: CP14GrassBushes2
+            id: CE14GrassBushes2
           decals:
             1: 20,1
         - node:
             color: '#FFFFFFFF'
-            id: CP14GrassBushes3
+            id: CE14GrassBushes3
           decals:
             2: 17,3
         - node:
             color: '#FFFFFFFF'
-            id: CP14GrassBushes5
+            id: CE14GrassBushes5
           decals:
             6: 19,2
     - type: SpreaderGrid
     - type: GridPathfinding
     - type: RadiationGridResistance
-- proto: CP14CrystalQuartzAir
+- proto: CE14CrystalQuartzAir
   entities:
   - uid: 159
     components:
@@ -202,7 +202,7 @@ entities:
     - type: Transform
       pos: 27.424252,2.4897652
       parent: 1
-- proto: CP14CrystalQuartzChaos
+- proto: CE14CrystalQuartzChaos
   entities:
   - uid: 226
     components:
@@ -259,7 +259,7 @@ entities:
     - type: Transform
       pos: 14.460234,10.31836
       parent: 1
-- proto: CP14CrystalQuartzEarth
+- proto: CE14CrystalQuartzEarth
   entities:
   - uid: 123
     components:
@@ -306,7 +306,7 @@ entities:
     - type: Transform
       pos: 19.635473,4.324651
       parent: 1
-- proto: CP14CrystalQuartzFire
+- proto: CE14CrystalQuartzFire
   entities:
   - uid: 6
     components:
@@ -358,7 +358,7 @@ entities:
     - type: Transform
       pos: 10.810475,5.007892
       parent: 1
-- proto: CP14CrystalQuartzOrder
+- proto: CE14CrystalQuartzOrder
   entities:
   - uid: 197
     components:
@@ -400,7 +400,7 @@ entities:
     - type: Transform
       pos: 4.457356,12.451044
       parent: 1
-- proto: CP14CrystalQuartzWater
+- proto: CE14CrystalQuartzWater
   entities:
   - uid: 5
     components:
@@ -472,49 +472,49 @@ entities:
     - type: Transform
       pos: 3.760735,5.247372
       parent: 1
-- proto: CP14EssenceNodeAir
+- proto: CE14EssenceNodeAir
   entities:
   - uid: 168
     components:
     - type: Transform
       pos: 27.6121,3.535492
       parent: 1
-- proto: CP14EssenceNodeChaos
+- proto: CE14EssenceNodeChaos
   entities:
   - uid: 172
     components:
     - type: Transform
       pos: 11.491451,11.51274
       parent: 1
-- proto: CP14EssenceNodeEarth
+- proto: CE14EssenceNodeEarth
   entities:
   - uid: 132
     components:
     - type: Transform
       pos: 19.579233,3.3126569
       parent: 1
-- proto: CP14EssenceNodeFire
+- proto: CE14EssenceNodeFire
   entities:
   - uid: 102
     components:
     - type: Transform
       pos: 11.18166,3.7035446
       parent: 1
-- proto: CP14EssenceNodeOrder
+- proto: CE14EssenceNodeOrder
   entities:
   - uid: 171
     components:
     - type: Transform
       pos: 3.4435139,11.630806
       parent: 1
-- proto: CP14EssenceNodeWater
+- proto: CE14EssenceNodeWater
   entities:
   - uid: 97
     components:
     - type: Transform
       pos: 3.4120474,3.7743587
       parent: 1
-- proto: CP14FloorLava
+- proto: CE14FloorLava
   entities:
   - uid: 25
     components:
@@ -556,7 +556,7 @@ entities:
     - type: Transform
       pos: 10.5,3.5
       parent: 1
-- proto: CP14FloorWater
+- proto: CE14FloorWater
   entities:
   - uid: 11
     components:
@@ -618,7 +618,7 @@ entities:
     - type: Transform
       pos: 3.5,1.5
       parent: 1
-- proto: CP14WallMarbleStone
+- proto: CE14WallMarbleStone
   entities:
   - uid: 135
     components:
@@ -750,7 +750,7 @@ entities:
     - type: Transform
       pos: 29.5,4.5
       parent: 1
-- proto: CP14WallStone
+- proto: CE14WallStone
   entities:
   - uid: 2
     components:

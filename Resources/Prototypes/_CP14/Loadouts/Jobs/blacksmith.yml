@@ -1,32 +1,32 @@
 # Cloak
 
 - type: loadoutGroup
-  id: CP14BlacksmithCloak
-  name: cp14-loadout-blacksmith-cloak
+  id: CE14BlacksmithCloak
+  name: CE14-loadout-blacksmith-cloak
   loadouts:
-  - CP14ClothingCloakBlacksmithArpon
+  - CE14ClothingCloakBlacksmithArpon
 
 - type: loadout
-  id: CP14ClothingCloakBlacksmithArpon
+  id: CE14ClothingCloakBlacksmithArpon
   equipment:
-    cloak: CP14ClothingCloakBlacksmithArpon
+    cloak: CE14ClothingCloakBlacksmithArpon
 
 # Gloves
 
 - type: loadoutGroup
-  id: CP14BlacksmithGloves
-  name: cp14-loadout-blacksmith-gloves
+  id: CE14BlacksmithGloves
+  name: CE14-loadout-blacksmith-gloves
   loadouts:
-  - CP14ClothingGlovesBlacksmith
-  - CP14ClothingGlovesGirdles
+  - CE14ClothingGlovesBlacksmith
+  - CE14ClothingGlovesGirdles
 
 - type: loadout
-  id: CP14ClothingGlovesBlacksmith
+  id: CE14ClothingGlovesBlacksmith
   equipment:
-    gloves: CP14ClothingGlovesBlacksmith
+    gloves: CE14ClothingGlovesBlacksmith
 
 - type: loadout
-  id: CP14ClothingGlovesGirdles
+  id: CE14ClothingGlovesGirdles
   equipment:
-    gloves: CP14ClothingGlovesGirdles
+    gloves: CE14ClothingGlovesGirdles
 

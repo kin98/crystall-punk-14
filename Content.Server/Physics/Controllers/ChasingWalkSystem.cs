@@ -75,13 +75,13 @@ public sealed class ChasingWalkSystem : VirtualController
         //if (_potentialChaseTargets.Count <= 0)
         //    return;
 
-        //CP14 clear chasing ent
+        //CE14 clear chasing ent
         if (_potentialChaseTargets.Count <= 0)
         {
             component.ChasingEntity = null;
             return;
         }
-        //CP14 end
+        //CE14 end
 
         //In the case of finding required components, we choose a random one of them and remember its uid.
         component.ChasingEntity = _random.Pick(_potentialChaseTargets).Owner;

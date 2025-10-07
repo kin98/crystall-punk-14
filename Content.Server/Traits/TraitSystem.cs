@@ -48,7 +48,7 @@ public sealed class TraitSystem : EntitySystem
                 continue;
 
             // Add all components required by the prototype
-            if (traitPrototype.Components.Count > 0) //CP14 added check
+            if (traitPrototype.Components.Count > 0) //CE14 added check
                 EntityManager.AddComponents(args.Mob, traitPrototype.Components, false);
 
             // Add item required by the trait

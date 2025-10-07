@@ -1,13 +1,13 @@
 - type: entity
   abstract: true
-  id: CP14BaseWeaponDagger
+  id: CE14BaseWeaponDagger
   parent:
   - BaseItem
-  - CP14BaseWeaponChemical
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
-  - CP14BaseWeaponSharp
-  - CP14BaseWeaponThrowable
+  - CE14BaseWeaponChemical
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
+  - CE14BaseWeaponSharp
+  - CE14BaseWeaponThrowable
   components:
   - type: Item
     size: Normal
@@ -32,8 +32,8 @@
       types:
         Slash: 2
         Piercing: 3
-    animation: CP14WeaponArcThrust
-    wideAnimation: CP14WeaponArcSlash
+    animation: CE14WeaponArcThrust
+    wideAnimation: CE14WeaponArcSlash
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
     cPAnimationLength: 0.15
@@ -46,43 +46,43 @@
     unequipDelay: 0.5
 
 - type: entity
-  parent: CP14BaseWeaponDagger
-  id: CP14WeaponDaggerIron
+  parent: CE14BaseWeaponDagger
+  id: CE14WeaponDaggerIron
   name: iron dagger
   description: A standard dagger made of iron.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Dagger/iron.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Dagger/iron.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 10
-      CP14Iron: 5
+      CE14WoodenPlanks: 10
+      CE14Iron: 5
 
 - type: entity
-  parent: CP14BaseWeaponDagger
-  id: CP14WeaponDaggerHatchet
+  parent: CE14BaseWeaponDagger
+  id: CE14WeaponDaggerHatchet
   name: hatchet
   description: A small hatchet, commonly used as a kitchen utensil for preparing food.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Dagger/hatchet.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Dagger/hatchet.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 10
-      CP14Iron: 10
+      CE14WoodenPlanks: 10
+      CE14Iron: 10
 
 - type: entity
-  parent: CP14BaseWeaponDagger
-  id: CP14WeaponDaggerSickle
+  parent: CE14BaseWeaponDagger
+  id: CE14WeaponDaggerSickle
   name: sickle
   description: A curved blade used for harvesting crops, but can be deadly in skilled hands.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Dagger/sickle.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Dagger/sickle.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 10
-      CP14Iron: 10
+      CE14WoodenPlanks: 10
+      CE14Iron: 10

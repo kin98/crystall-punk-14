@@ -1,18 +1,18 @@
 - type: constructionGraph
-  id: CP14BaseBarrel
+  id: CE14BaseBarrel
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14BaseBarrel
+        - to: CE14BaseBarrel
           steps:
             - stackGroup: WoodenPlanks
               amount: 3
               doAfter: 3
-    - node: CP14BaseBarrel
-      entity: CP14BaseBarrel
+    - node: CE14BaseBarrel
+      entity: CE14BaseBarrel
       edges:
       - to: start
         steps:
@@ -20,24 +20,24 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 3
 
 - type: constructionGraph
-  id: CP14CraneBarrel
+  id: CE14CraneBarrel
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14CraneBarrel
+        - to: CE14CraneBarrel
           steps:
             - stackGroup: WoodenPlanks
               amount: 5
               doAfter: 3
-    - node: CP14CraneBarrel
-      entity: CP14CraneBarrel
+    - node: CE14CraneBarrel
+      entity: CE14CraneBarrel
       edges:
       - to: start
         steps:
@@ -47,24 +47,24 @@
           doAfter: 5
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 5
 
 - type: constructionGraph
-  id: CP14CraneBarrelSmall
+  id: CE14CraneBarrelSmall
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14CraneBarrelSmall
+        - to: CE14CraneBarrelSmall
           steps:
             - stackGroup: WoodenPlanks
               amount: 3
               doAfter: 3
-    - node: CP14CraneBarrelSmall
-      entity: CP14CraneBarrelSmall
+    - node: CE14CraneBarrelSmall
+      entity: CE14CraneBarrelSmall
       edges:
       - to: start
         steps:
@@ -74,5 +74,5 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 3

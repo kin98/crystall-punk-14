@@ -1,10 +1,10 @@
 using Content.Shared.Stealth;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellRevealStealthUser : CP14SpellEffect
+public sealed partial class CE14SpellRevealStealthUser : CE14SpellEffect
 {
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         if (args.User is null)
             return;

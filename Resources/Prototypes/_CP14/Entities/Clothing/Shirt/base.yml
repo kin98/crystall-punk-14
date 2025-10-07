@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: Clothing
-  id: CP14ClothingShirtBase
+  id: CE14ClothingShirtBase
   description: Pleasant to the touch material, in a comfortable loose shirt shape.
   categories: [ ForkFiltered ]
   components:
@@ -15,5 +15,5 @@
   - type: Butcherable
     butcheringType: Knife
     spawned:
-    - id: CP14Cloth1
+    - id: CE14Cloth1
       amount: 2

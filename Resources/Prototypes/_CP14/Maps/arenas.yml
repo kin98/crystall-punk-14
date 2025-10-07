@@ -11,5 +11,5 @@
           mapNameTemplate: "Meteor Arena"
         - type: StationJobs
           availableJobs:
-            CP14Adventurer: [ -1, -1 ]
+            CE14Adventurer: [ -1, -1 ]
 

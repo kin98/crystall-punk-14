@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CP14.Trading.Components;
+namespace Content.Shared._CE14.Trading.Components;
 
 [RegisterComponent, NetworkedComponent]
-public sealed partial class CP14PriceScannerComponent : Component { }
+public sealed partial class CE14PriceScannerComponent : Component { }

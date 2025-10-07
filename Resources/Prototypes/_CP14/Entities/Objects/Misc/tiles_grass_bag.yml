@@ -1,20 +1,20 @@
 - type: entity
-  parent: CP14FloorTileBase
-  id: CP14FloorTileGrassBagBase
+  parent: CE14FloorTileBase
+  id: CE14FloorTileGrassBagBase
   description: A bag of grass seed. A pinch of natural magic and the dirt is covered with a beautiful lawn in the blink of an eye!
   abstract: true
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Farming/grass_seeds.rsi
+    sprite: _CE14/Objects/Specific/Farming/grass_seeds.rsi
   - type: Item
-    sprite: _CP14/Objects/Tile/tile.rsi
+    sprite: _CE14/Objects/Tile/tile.rsi
     size: Tiny
   - type: Stack
     count: 1
   - type: FloorTile
     placeTileSound:
-      collection: CP14GrassGathering
+      collection: CE14GrassGathering
       params:
         variation: 0.05
   - type: Destructible
@@ -27,40 +27,40 @@
           acts: [ "Destruction" ]
 
 - type: entity
-  parent: CP14FloorTileGrassBagBase
-  id: CP14FloorTileGrassBag
+  parent: CE14FloorTileGrassBagBase
+  id: CE14FloorTileGrassBag
   name: grass bag
   components:
   - type: Sprite
     state: grass2
   - type: FloorTile
     outputs:
-      - CP14FloorGrass
+      - CE14FloorGrass
   - type: Stack
-    stackType: CP14FloorTileGrassBag
+    stackType: CE14FloorTileGrassBag
 
 - type: entity
-  parent: CP14FloorTileGrassBagBase
-  id: CP14FloorTileGrassBagLight
+  parent: CE14FloorTileGrassBagBase
+  id: CE14FloorTileGrassBagLight
   name: light grass bag
   components:
   - type: Sprite
     state: grass
   - type: FloorTile
     outputs:
-      - CP14FloorGrassLight
+      - CE14FloorGrassLight
   - type: Stack
-    stackType: CP14FloorTileGrassBagLight
+    stackType: CE14FloorTileGrassBagLight
 
 - type: entity
-  parent: CP14FloorTileGrassBagBase
-  id: CP14FloorTileGrassBagTall
+  parent: CE14FloorTileGrassBagBase
+  id: CE14FloorTileGrassBagTall
   name: tall grass bag
   components:
   - type: Sprite
     state: grass3
   - type: FloorTile
     outputs:
-      - CP14FloorGrassTall
+      - CE14FloorGrassTall
   - type: Stack
-    stackType: CP14FloorTileGrassBagTall
+    stackType: CE14FloorTileGrassBagTall

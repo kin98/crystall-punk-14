@@ -1,31 +1,31 @@
 - type: entity
-  id: CP14ActionZLevelUp
+  id: CE14ActionZLevelUp
   name: Move up
   description: Move up one Z-Level
   components:
   - type: Action
     checkCanInteract: false
     icon:
-      sprite: _CP14/Actions/zLevel.rsi
+      sprite: _CE14/Actions/zLevel.rsi
       state: up
   - type: InstantAction
-    event: !type:CP14ZLevelActionUp
+    event: !type:CE14ZLevelActionUp
 
 - type: entity
-  id: CP14ActionZLevelDown
+  id: CE14ActionZLevelDown
   name: Move down
   description: Move down one Z-Level
   components:
   - type: Action
     checkCanInteract: false
     icon:
-      sprite: _CP14/Actions/zLevel.rsi
+      sprite: _CE14/Actions/zLevel.rsi
       state: down
   - type: InstantAction
-    event: !type:CP14ZLevelActionDown
+    event: !type:CE14ZLevelActionDown
 
 - type: entity
-  id: CP14ActionToggleRoofs
+  id: CE14ActionToggleRoofs
   name: Toggle roofs
   description: Show or hide roofs
   components:
@@ -33,13 +33,13 @@
     clientExclusive: true
     checkCanInteract: false
     icon:
-      sprite: _CP14/Actions/zLevel.rsi
+      sprite: _CE14/Actions/zLevel.rsi
       state: roof
   - type: InstantAction
-    event: !type:CP14ToggleRoofVisibilityAction
+    event: !type:CE14ToggleRoofVisibilityAction
 
 - type: entity
-  id: CP14ActionRespawn
+  id: CE14ActionRespawn
   name: Respawn
   description: Return to the lobby to connect with a new character.
   components:
@@ -49,9 +49,9 @@
     useDelay: 300
     checkCanInteract: false
     icon:
-      sprite: _CP14/Actions/zLevel.rsi
+      sprite: _CE14/Actions/zLevel.rsi
       state: respawn
   - type: ConfirmableAction
-    popup: cp14-respawn-action-popup
+    popup: CE14-respawn-action-popup
   - type: InstantAction
-    event: !type:CP14RespawnAction
+    event: !type:CE14RespawnAction

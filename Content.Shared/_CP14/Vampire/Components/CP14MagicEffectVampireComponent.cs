@@ -1,11 +1,11 @@
-using Content.Shared._CP14.MagicSpell;
+using Content.Shared._CE14.MagicSpell;
 
-namespace Content.Shared._CP14.Vampire.Components;
+namespace Content.Shared._CE14.Vampire.Components;
 
 /// <summary>
 /// Use is only available if the vampire is in a “visible” dangerous form.
 /// </summary>
-[RegisterComponent, Access(typeof(CP14SharedVampireSystem))]
-public sealed partial class CP14MagicEffectVampireComponent : Component
+[RegisterComponent, Access(typeof(CE14SharedVampireSystem))]
+public sealed partial class CE14MagicEffectVampireComponent : Component
 {
 }

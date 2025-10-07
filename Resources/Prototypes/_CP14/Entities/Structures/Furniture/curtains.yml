@@ -1,10 +1,10 @@
 - type: entity
-  id: CP14BaseCurtains
+  id: CE14BaseCurtains
   abstract: true
   categories: [ ForkFiltered ]
   parent:
   - BaseStructure
-  - CP14BaseFlammableSpreadingStrong
+  - CE14BaseFlammableSpreadingStrong
   name: curtains
   description: Hides what others shouldn't see.
   placement:
@@ -42,7 +42,7 @@
   - type: Appearance
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -53,16 +53,16 @@
         acts: ["Destruction"]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14Cloth1:
+          CE14Cloth1:
             min: 1
             max: 2
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/curtains.rsi
+    sprite: _CE14/Structures/Furniture/curtains.rsi
   - type: InteractionOutline
 
 - type: entity
-  id: CP14CurtainsWhite
-  parent: CP14BaseCurtains
+  id: CE14CurtainsWhite
+  parent: CE14BaseCurtains
   suffix: White
   components:
   - type: Door
@@ -73,12 +73,12 @@
     - state: white_closed
       map: ["enum.DoorVisualLayers.Base"]
   #- type: Construction
-  #  graph: CP14Curtains
-  #  node: CP14CurtainsWhite
+  #  graph: CE14Curtains
+  #  node: CE14CurtainsWhite
 
 - type: entity
-  id: CP14CurtainsWhiteOpened
-  parent: CP14CurtainsWhite
+  id: CE14CurtainsWhiteOpened
+  parent: CE14CurtainsWhite
   suffix: White, Open
   components:
   - type: Door
@@ -93,8 +93,8 @@
     canCollide: false
 
 - type: entity
-  id: CP14CurtainsBlue
-  parent: CP14BaseCurtains
+  id: CE14CurtainsBlue
+  parent: CE14BaseCurtains
   suffix: Blue
   components:
   - type: Door
@@ -105,12 +105,12 @@
     - state: blue_closed
       map: ["enum.DoorVisualLayers.Base"]
   #- type: Construction
-  #  graph: CP14Curtains
-  #  node: CP14CurtainsBlue
+  #  graph: CE14Curtains
+  #  node: CE14CurtainsBlue
 
 - type: entity
-  id: CP14CurtainsBlueOpened
-  parent: CP14CurtainsBlue
+  id: CE14CurtainsBlueOpened
+  parent: CE14CurtainsBlue
   suffix: Blue, Open
   components:
   - type: Door
@@ -125,8 +125,8 @@
     canCollide: false
 
 - type: entity
-  id: CP14CurtainsRed
-  parent: CP14BaseCurtains
+  id: CE14CurtainsRed
+  parent: CE14BaseCurtains
   suffix: Red
   components:
   - type: Door
@@ -137,12 +137,12 @@
     - state: red_closed
       map: ["enum.DoorVisualLayers.Base"]
   #- type: Construction
-  #  graph: CP14Curtains
-  #  node: CP14CurtainsRed
+  #  graph: CE14Curtains
+  #  node: CE14CurtainsRed
 
 - type: entity
-  id: CP14CurtainsRedOpened
-  parent: CP14CurtainsRed
+  id: CE14CurtainsRedOpened
+  parent: CE14CurtainsRed
   suffix: Red, Open
   components:
   - type: Door

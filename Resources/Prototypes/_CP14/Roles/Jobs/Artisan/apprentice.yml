@@ -1,13 +1,13 @@
 - type: job
-  id: CP14Apprentice
-  name: cp14-job-name-apprentice
-  description: cp14-job-desc-apprentice
-  playTimeTracker: CP14JobApprentice
-  startingGear: CP14ApprenticeGear
-  icon: "CP14JobIconApprentice"
-  supervisors: cp14-job-supervisors-command
+  id: CE14Apprentice
+  name: CE14-job-name-apprentice
+  description: CE14-job-desc-apprentice
+  playTimeTracker: CE14JobApprentice
+  startingGear: CE14ApprenticeGear
+  icon: "CE14JobIconApprentice"
+  supervisors: CE14-job-supervisors-command
   special:
-    - !type:CP14AddTradingReputationSpecial
+    - !type:CE14AddTradingReputationSpecial
       factions:
       - DwarfMining
       - HomeDecor
@@ -15,17 +15,17 @@
       - Horticulture
       - Butchers
       - Dairy
-    - !type:CP14LearnSkillsSpecial
+    - !type:CE14LearnSkillsSpecial
       skills:
       #- CopperMelting
       - AlchemyVision
 
 - type: startingGear
-  id: CP14ApprenticeGear
+  id: CE14ApprenticeGear
   storage:
     back:
-    - CP14EnergyCrystalMedium
-    - CP14EnergyCrystalMedium
+    - CE14EnergyCrystalMedium
+    - CE14EnergyCrystalMedium
   equipment:
-    keys: CP14BaseKeyRing
-    belt: CP14WalletFilledTest
+    keys: CE14BaseKeyRing
+    belt: CE14WalletFilledTest

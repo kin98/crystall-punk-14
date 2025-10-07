@@ -1,2 +1,2 @@
-marking-CP14CarcatTail = Хвост
-marking-CP14CarcatTailFluffy = Пушистый хвост
+marking-CE14CarcatTail = Хвост
+marking-CE14CarcatTailFluffy = Пушистый хвост

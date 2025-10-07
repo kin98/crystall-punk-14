@@ -1,10 +1,10 @@
-namespace Content.Shared._CP14.MeleeWeapon.Components;
+namespace Content.Shared._CE14.MeleeWeapon.Components;
 
 /// <summary>
-/// attacks with this item may knock CP14ParriableComponent items out of your hand on a hit
+/// attacks with this item may knock CE14ParriableComponent items out of your hand on a hit
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14MeleeParryComponent : Component
+public sealed partial class CE14MeleeParryComponent : Component
 {
     [DataField]
     public TimeSpan ParryWindow = TimeSpan.FromSeconds(1f);

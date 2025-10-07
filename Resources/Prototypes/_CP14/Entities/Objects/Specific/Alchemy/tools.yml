@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14Cauldron
+  id: CE14Cauldron
   name: cauldron
   description: A heavy cauldron. It is not as bulky as a vat, but can be carried in your hands.
   categories: [ ForkFiltered ]
@@ -13,13 +13,13 @@
     sprintModifier: 0.6
   - type: HeldSpeedModifier
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Alchemy/cauldron.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/cauldron.rsi
     layers:
       - state: icon
       - state: liq-1
         map: ["enum.SolutionContainerLayers.Fill"]
         visible: false
-  - type: CP14SolutionTemperature
+  - type: CE14SolutionTemperature
   - type: SolutionContainerManager
     solutions:
       vat:
@@ -74,10 +74,10 @@
         Blunt: 5
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 30
+      CE14Iron: 30
 
 - type: entity
-  id: CP14Pestle
+  id: CE14Pestle
   name: pestle
   description: A device for conveniently grinding various materials into liquid
   parent: BaseItem
@@ -85,23 +85,23 @@
   components:
   - type: Tag
     tags:
-    - CP14Pestle
+    - CE14Pestle
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Alchemy/mortar_pestle.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/mortar_pestle.rsi
     state: pestle
-  - type: CP14Pestle
+  - type: CE14Pestle
   - type: GuideHelp
     guides:
-    - CP14_RU_Alchemy
-    - CP14_EN_Alchemy
+    - CE14_RU_Alchemy
+    - CE14_EN_Alchemy
   - type: PhysicalComposition
     materialComposition:
-      CP14Stone: 5
+      CE14Stone: 5
 
 - type: entity
-  id: CP14Mortar
+  id: CE14Mortar
   name: mortar
   description: Alchemical sturdy plate for grinding reagents
   parent: BaseStorageItem
@@ -110,7 +110,7 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Alchemy/mortar_pestle.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/mortar_pestle.rsi
     layers:
       - state: mortar_base
       - state: liq-1
@@ -120,7 +120,7 @@
     solutions:
       mortar:
         maxVol: 30
-  - type: CP14SolutionTemperature
+  - type: CE14SolutionTemperature
   - type: Spillable
     solution: mortar
   - type: DrainableSolution
@@ -162,30 +162,30 @@
     fillBaseName: liq-
   - type: Storage
     maxItemSize: Normal
-    cP14Ignorelist:
+    CE14Ignorelist:
       components:
         - Injector
       tags:
-        - CP14Pestle
+        - CE14Pestle
     whitelist:
       tags:
-        - CP14FitInMortar
+        - CE14FitInMortar
     grid:
     - 0,0,1,1
-  - type: CP14Mortar
+  - type: CE14Mortar
     solution: mortar
     containerId: storagebase
   - type: GuideHelp
     guides:
-    - CP14_RU_Alchemy
-    - CP14_EN_Alchemy
+    - CE14_RU_Alchemy
+    - CE14_EN_Alchemy
   - type: PhysicalComposition
     materialComposition:
-      CP14Stone: 10
+      CE14Stone: 10
 
 - type: entity
   parent: BaseItem
-  id: CP14Dropper
+  id: CE14Dropper
   name: dropper
   description: Small dropper for managing very small values of liquids
   categories: [ ForkFiltered ]
@@ -206,7 +206,7 @@
     solution: vial
   - type: SolutionItemStatus
     solution: vial
-  - type: CP14SolutionTemperature
+  - type: CE14SolutionTemperature
   - type: SolutionContainerManager
     solutions:
       vial:
@@ -228,7 +228,7 @@
     currentTransferAmount: 0.25
     toggleState: 1 # draw
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Alchemy/dropper.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/dropper.rsi
     layers:
       - state: dropper
       - state: liq-1
@@ -241,14 +241,14 @@
     size: Tiny
 
 - type: entity
-  id: CP14Syringe
+  id: CE14Syringe
   parent: BaseItem
   name: syringe
   description: Used to draw blood samples from mobs, or to inject them with reagents.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Alchemy/syringe.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/syringe.rsi
     layers:
       - state: syringe1
         map: ["enum.SolutionContainerLayers.Fill"]
@@ -256,11 +256,11 @@
       - state: base
         map: ["enum.SolutionContainerLayers.Base"]
   - type: Icon
-    sprite: _CP14/Objects/Specific/Alchemy/syringe.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/syringe.rsi
     state: base
   - type: Item
     size: Tiny
-    sprite: _CP14/Objects/Specific/Alchemy/syringe.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/syringe.rsi
   - type: SolutionContainerManager
     solutions:
       injector:
@@ -285,6 +285,6 @@
     - Syringe
   - type: PhysicalComposition
     materialComposition:
-      CP14Glass: 10
-      CP14Iron: 10
+      CE14Glass: 10
+      CE14Iron: 10
 

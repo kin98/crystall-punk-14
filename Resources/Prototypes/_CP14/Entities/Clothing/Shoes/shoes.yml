@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: Clothing
-  id: CP14ClothingShoesBase
+  id: CE14ClothingShoesBase
   categories: [ ForkFiltered ]
   components:
   - type: Clothing
@@ -16,56 +16,56 @@
   - type: ProtectedFromStepTriggers
 
 - type: entity
-  parent: CP14ClothingShoesBase
-  id: CP14ClothingShoesBlack
+  parent: CE14ClothingShoesBase
+  id: CE14ClothingShoesBlack
   name: simple black boots
   description: They won't hold moisture, but it's better than going barefoot.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Shoes/black.rsi
+    sprite: _CE14/Clothing/Shoes/black.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Shoes/black.rsi
+    sprite: _CE14/Clothing/Shoes/black.rsi
 
 - type: entity
-  parent: CP14ClothingShoesBase
-  id: CP14ClothingShoesAristocraticBlack
+  parent: CE14ClothingShoesBase
+  id: CE14ClothingShoesAristocraticBlack
   name: aristocratic black boots
   description: They're expensive enough that you don't want to go caving in them.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Shoes/aristocratic_black.rsi
+    sprite: _CE14/Clothing/Shoes/aristocratic_black.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Shoes/aristocratic_black.rsi
+    sprite: _CE14/Clothing/Shoes/aristocratic_black.rsi
 
 - type: entity
-  parent: CP14ClothingShoesBase
-  id: CP14ClothingShoesSandals
+  parent: CE14ClothingShoesBase
+  id: CE14ClothingShoesSandals
   name: sandals
   description: Sandals made of rough leather and metal fastenings
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Shoes/sandals.rsi
+    sprite: _CE14/Clothing/Shoes/sandals.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Shoes/sandals.rsi
+    sprite: _CE14/Clothing/Shoes/sandals.rsi
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: CP14Slippers
+      collection: CE14Slippers
       params:
         volume: -8
         variation: 0.07
 
 - type: entity
-  parent: CP14ClothingShoesBase
-  id: CP14ClothingShoesArtifactFlightboots
+  parent: CE14ClothingShoesBase
+  id: CE14ClothingShoesArtifactFlightboots
   name: flight boots
   categories: [ DoNotMap ]
   suffix: Artifact
   description: Enchanted boots that allow their wearer to walk through the air a short distance from the ground. It looks extremely spectacular!
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Shoes/flightboots.rsi
+    sprite: _CE14/Clothing/Shoes/flightboots.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Shoes/flightboots.rsi
+    sprite: _CE14/Clothing/Shoes/flightboots.rsi
   - type: AntiGravityClothing
   - type: ClothingSpeedModifier
     walkModifier: 2
@@ -74,54 +74,54 @@
     price: 300
 
 - type: entity
-  parent: CP14ClothingShoesBase
-  id: CP14ClothingShoesArtifactSpeedboots
+  parent: CE14ClothingShoesBase
+  id: CE14ClothingShoesArtifactSpeedboots
   name: hermes boots
   categories: [ DoNotMap ]
   suffix: Artifact
   description: Enchanted boots that allow their wearer to walk through the air a short distance from the ground. It looks extremely spectacular!
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Shoes/speedboots.rsi
+    sprite: _CE14/Clothing/Shoes/speedboots.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Shoes/speedboots.rsi
-  - type: CP14SpellStorageAccessWearing
-  - type: CP14SpellStorage
+    sprite: _CE14/Clothing/Shoes/speedboots.rsi
+  - type: CE14SpellStorageAccessWearing
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellMagicalAcceleration
+    - CE14ActionSpellMagicalAcceleration
   - type: StaticPrice
     price: 400
 
 - type: entity
-  parent: CP14ClothingShoesBase
-  id: CP14ClothingShoesLongLeatherBoots
+  parent: CE14ClothingShoesBase
+  id: CE14ClothingShoesLongLeatherBoots
   name: long leather boots
   description: the perfect tool for kicking left and right
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Shoes/long_leather_boots.rsi
+    sprite: _CE14/Clothing/Shoes/long_leather_boots.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Shoes/long_leather_boots.rsi
+    sprite: _CE14/Clothing/Shoes/long_leather_boots.rsi
   - type: PhysicalComposition
     materialComposition:
-      CP14Leather: 5
-      CP14Cloth: 5
+      CE14Leather: 5
+      CE14Cloth: 5
   - type: Butcherable
     butcheringType: Knife
     spawned:
-    - id: CP14ThinLeather1
+    - id: CE14ThinLeather1
       amount: 1
 
 - type: entity
-  parent: CP14ClothingShoesBase
-  id: CP14ClothingShoesJestersRingers
+  parent: CE14ClothingShoesBase
+  id: CE14ClothingShoesJestersRingers
   name: jester's ringers
   description: Everyone around you should know that you exist, buddy.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Shoes/jesters_ringers.rsi
+    sprite: _CE14/Clothing/Shoes/jesters_ringers.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Shoes/jesters_ringers.rsi
+    sprite: _CE14/Clothing/Shoes/jesters_ringers.rsi
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepJester
@@ -129,17 +129,17 @@
         variation: 0.07
 
 - type: entity
-  parent: CP14ClothingShoesBase
-  id: CP14ClothingShoesArtifactFrogs
+  parent: CE14ClothingShoesBase
+  id: CE14ClothingShoesArtifactFrogs
   name: frog's slippers
   categories: [ DoNotMap ]
   suffix: Artifact
   description: For wednesday's lovers.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Shoes/frogs_slippers.rsi
+    sprite: _CE14/Clothing/Shoes/frogs_slippers.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Shoes/frogs_slippers.rsi
+    sprite: _CE14/Clothing/Shoes/frogs_slippers.rsi
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FrogsSlippers
@@ -150,18 +150,18 @@
     price: 500
 
 - type: entity
-  parent: CP14ClothingShoesBase
-  id: CP14ClothingShoesPinkSlippers
+  parent: CE14ClothingShoesBase
+  id: CE14ClothingShoesPinkSlippers
   name: pink slippers
   description: Pink slippers made of the rarest pink llama fur. Despite its peculiar appearance, it is a very expensive shoe.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Shoes/pink_slippers.rsi
+    sprite: _CE14/Clothing/Shoes/pink_slippers.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Shoes/pink_slippers.rsi
+    sprite: _CE14/Clothing/Shoes/pink_slippers.rsi
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: CP14Slippers
+      collection: CE14Slippers
       params:
         volume: -9
         variation: 0.07

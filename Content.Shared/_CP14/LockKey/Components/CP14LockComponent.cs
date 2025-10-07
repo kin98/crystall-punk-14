@@ -2,13 +2,13 @@ using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.LockKey.Components;
+namespace Content.Shared._CE14.LockKey.Components;
 
 /// <summary>
 /// A component of a lock that stores its keyhole shape, complexity, and current state.
 /// </summary>
 [RegisterComponent, AutoGenerateComponentState(fieldDeltas: true), NetworkedComponent]
-public sealed partial class CP14LockComponent : Component
+public sealed partial class CE14LockComponent : Component
 {
     [DataField, AutoNetworkedField]
     public List<int>? LockShape = null;
@@ -23,7 +23,7 @@ public sealed partial class CP14LockComponent : Component
     /// If not null, automatically generates a lock for the specified category on initialization. This ensures that the lock will be opened with a key of the same category.
     /// </summary>
     [DataField]
-    public ProtoId<CP14LockTypePrototype>? AutoGenerateShape = null;
+    public ProtoId<CE14LockTypePrototype>? AutoGenerateShape = null;
 
     /// <summary>
     /// If not null, the lock will automatically generate a random shape on initialization with selected numbers of elements. Useful for random dungeons doors or chests for example.
@@ -40,7 +40,7 @@ public sealed partial class CP14LockComponent : Component
     public bool CanEmbedded = false;
 
     [DataField]
-    public SoundSpecifier EmbedSound = new SoundPathSpecifier("/Audio/_CP14/Items/lockpick_use.ogg")
+    public SoundSpecifier EmbedSound = new SoundPathSpecifier("/Audio/_CE14/Items/lockpick_use.ogg")
     {
         Params = AudioParams.Default
         .WithVariation(0.05f)

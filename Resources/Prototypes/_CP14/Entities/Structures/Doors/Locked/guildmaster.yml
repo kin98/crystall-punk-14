@@ -1,26 +1,26 @@
 - type: entity
-  parent: CP14IronDoor
-  id: CP14IronDoorGuardGuildmaster
+  parent: CE14IronDoor
+  id: CE14IronDoorGuardGuildmaster
   suffix: Guildmaster
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateShape: Guildmaster
   - type: Lock
     locked: true
 
 - type: entity
-  parent: CP14WoodenDoor
-  id: CP14WoodenDoorAdventureGuild
+  parent: CE14WoodenDoor
+  id: CE14WoodenDoorAdventureGuild
   suffix: Adventure guild
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateShape: AdventureGuild
   - type: Lock
     locked: true
 
 - type: entity
-  parent: CP14WoodenDoorAdventureGuild
-  id: CP14WoodenDoorAdventureGuildOpen
+  parent: CE14WoodenDoorAdventureGuild
+  id: CE14WoodenDoorAdventureGuildOpen
   suffix: Adventure guild Open
   components:
   - type: Lock
@@ -28,14 +28,14 @@
 
 - type: entity
   parent:
-  - CP14WoodenDoorAdventureGuild
-  - CP14WoodenDoorMirrored
-  id: CP14WoodenDoorAdventureGuildMirrored
+  - CE14WoodenDoorAdventureGuild
+  - CE14WoodenDoorMirrored
+  id: CE14WoodenDoorAdventureGuildMirrored
   suffix: Adventure guild, Mirrored
 
 - type: entity
   parent:
-  - CP14WoodenDoorAdventureGuildOpen
-  - CP14WoodenDoorMirrored
-  id: CP14WoodenDoorAdventureGuildMirroredOpen
+  - CE14WoodenDoorAdventureGuildOpen
+  - CE14WoodenDoorMirrored
+  id: CE14WoodenDoorAdventureGuildMirroredOpen
   suffix: Adventure guild, Mirrored, Open

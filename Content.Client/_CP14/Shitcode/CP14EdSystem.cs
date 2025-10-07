@@ -2,12 +2,12 @@ using Content.Shared.CCVar;
 using Robust.Shared;
 using Robust.Shared.Configuration;
 
-namespace Content.Client._CP14.Shitcode;
+namespace Content.Client._CE14.Shitcode;
 
 /// <summary>
 /// Эта система - сборник разного мелкого барахла, который слишком мелкий чтобы иметь свои собственные системы. В идеале в будущем разнести по отдельным файлам.
 /// </summary>
-public sealed class CP14EdSystem : EntitySystem
+public sealed class CE14EdSystem : EntitySystem
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 

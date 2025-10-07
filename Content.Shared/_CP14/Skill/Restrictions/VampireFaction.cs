@@ -1,19 +1,19 @@
-using Content.Shared._CP14.Vampire;
-using Content.Shared._CP14.Vampire.Components;
+using Content.Shared._CE14.Vampire;
+using Content.Shared._CE14.Vampire.Components;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill.Restrictions;
+namespace Content.Shared._CE14.Skill.Restrictions;
 
-public sealed partial class VampireFaction : CP14SkillRestriction
+public sealed partial class VampireFaction : CE14SkillRestriction
 {
     public override bool HideFromUI => true;
 
     [DataField(required: true)]
-    public ProtoId<CP14VampireFactionPrototype> Clan;
+    public ProtoId<CE14VampireFactionPrototype> Clan;
 
     public override bool Check(IEntityManager entManager, EntityUid target)
     {
-        if (!entManager.TryGetComponent<CP14VampireComponent>(target, out var vampire))
+        if (!entManager.TryGetComponent<CE14VampireComponent>(target, out var vampire))
             return false;
 
         return vampire.Faction == Clan;
@@ -23,6 +23,6 @@ public sealed partial class VampireFaction : CP14SkillRestriction
     {
         var clan = protoManager.Index(Clan);
 
-        return Loc.GetString("cp14-skill-req-vampire-clan", ("name", Loc.GetString(clan.Name)));
+        return Loc.GetString("CE14-skill-req-vampire-clan", ("name", Loc.GetString(clan.Name)));
     }
 }

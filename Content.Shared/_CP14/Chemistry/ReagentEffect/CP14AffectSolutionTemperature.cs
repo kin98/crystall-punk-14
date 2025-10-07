@@ -2,11 +2,11 @@ using Content.Shared.EntityEffects;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Chemistry.ReagentEffect;
+namespace Content.Shared._CE14.Chemistry.ReagentEffect;
 
 [UsedImplicitly]
 [DataDefinition]
-public sealed partial class CP14AffectSolutionTemperature : EntityEffect
+public sealed partial class CE14AffectSolutionTemperature : EntityEffect
 {
     /// <summary>
     /// Temperature added to the solution. If negative, the solution is cooling.
@@ -16,7 +16,7 @@ public sealed partial class CP14AffectSolutionTemperature : EntityEffect
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
     {
-        return Loc.GetString("cp14-reagent-effect-guidebook-temp-affect",
+        return Loc.GetString("CE14-reagent-effect-guidebook-temp-affect",
             ("chance", Probability),
             ("temperature", AddTemperature));
     }

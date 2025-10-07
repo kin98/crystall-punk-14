@@ -1,8 +1,8 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill.Restrictions;
+namespace Content.Shared._CE14.Skill.Restrictions;
 
-public sealed partial class Impossible : CP14SkillRestriction
+public sealed partial class Impossible : CE14SkillRestriction
 {
     public override bool Check(IEntityManager entManager, EntityUid target)
     {
@@ -11,6 +11,6 @@ public sealed partial class Impossible : CP14SkillRestriction
 
     public override string GetDescription(IEntityManager entManager, IPrototypeManager protoManager)
     {
-        return Loc.GetString("cp14-skill-req-impossible");
+        return Loc.GetString("CE14-skill-req-impossible");
     }
 }

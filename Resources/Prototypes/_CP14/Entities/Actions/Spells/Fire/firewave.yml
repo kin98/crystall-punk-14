@@ -1,41 +1,41 @@
 - type: entity
-  id: CP14ActionSpellFirewave
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellFirewave
+  parent: CE14ActionSpellBase
   name: Firewave
   description: You release a wave of hot fire that strikes multiple targets in an area.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.75
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 10
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     endSpeech: "Ignis acus!"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneFirebolt
-  - type: CP14ActionDangerous
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneFirebolt
+  - type: CE14ActionDangerous
   - type: DoAfterArgs
     delay: 0.5
   - type: Action
     useDelay: 1
     icon:
-      sprite: _CP14/Actions/Spells/fire.rsi
+      sprite: _CE14/Actions/Spells/fire.rsi
       state: firewave
   - type: TargetAction
     repeat: true
     checkCanAccess: false
     range: 60
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       effects:
-      - !type:CP14SpellProjectile
-        prototype: CP14Firebolt
+      - !type:CE14SpellProjectile
+        prototype: CE14Firebolt
         spread: 2
         projectileSpeed: 5
         projectileCount: 8
 
 - type: entity
-  id: CP14RuneFirebolt
-  parent: CP14BaseMagicRune
+  id: CE14RuneFirebolt
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -48,13 +48,13 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectFirebolt
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectFirebolt
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
-    sprite: _CP14/Effects/fire.rsi
+    sprite: _CE14/Effects/fire.rsi
     layers:
     - state: small
       visible: false
@@ -66,7 +66,7 @@
   - type: LightFade
 
 - type: entity
-  id: CP14Firebolt
+  id: CE14Firebolt
   parent: BaseBullet
   name: firebolt
   categories: [ HideSpawnMenu ]
@@ -75,31 +75,31 @@
   - type: TimedDespawn
     lifetime: 1
   - type: SpawnOnDespawn
-    prototype: CP14ImpactEffectFirebolt
+    prototype: CE14ImpactEffectFirebolt
   - type: PointLight
     color: "#E25822"
     radius: 2.0
     energy: 2.0
   - type: Projectile
-    impactEffect: CP14ImpactEffectFirebolt
+    impactEffect: CE14ImpactEffectFirebolt
     damage:
       types:
         Heat: 2
     soundHit:
       path: /Audio/Weapons/Guns/Hits/energy_metal1.ogg
   - type: Sprite
-    sprite: _CP14/Effects/fire.rsi
+    sprite: _CE14/Effects/fire.rsi
     layers:
     - state: small
       shader: unshaded
 
 
 - type: entity
-  parent: CP14BaseSpellScrollFire
-  id: CP14SpellScrollFirewave
+  parent: CE14BaseSpellScrollFire
+  id: CE14SpellScrollFirewave
   name: firewave spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellFirewave
+    - CE14ActionSpellFirewave
 

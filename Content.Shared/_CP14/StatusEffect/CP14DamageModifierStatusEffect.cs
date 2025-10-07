@@ -2,11 +2,11 @@ using Content.Shared.Damage.Prototypes;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.StatusEffect;
+namespace Content.Shared._CE14.StatusEffect;
 
 [RegisterComponent, NetworkedComponent]
-[Access(typeof(CP14ApplySpellStatusEffectSystem))]
-public sealed partial class CP14DamageModifierStatusEffectComponent : Component
+[Access(typeof(CE14ApplySpellStatusEffectSystem))]
+public sealed partial class CE14DamageModifierStatusEffectComponent : Component
 {
     [DataField]
     public Dictionary<ProtoId<DamageTypePrototype>, float>? Defence = null;

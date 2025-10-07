@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14ClosetBase
+  id: CE14ClosetBase
   parent: BaseStructureDynamic
   categories: [ ForkFiltered ]
   name: closet
@@ -55,18 +55,18 @@
 
 - type: entity
   parent:
-  - CP14ClosetBase
-  - CP14BaseFlammable
-  id: CP14WoodenCloset
+  - CE14ClosetBase
+  - CE14BaseFlammable
+  id: CE14WoodenCloset
   name: wooden closet
   description: It's a regular wooden closet.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Dressers/wood_cupboard.rsi
+    sprite: _CE14/Structures/Storage/Dressers/wood_cupboard.rsi
     state: icons
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -88,12 +88,12 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 2
             max: 4
   - type: Construction
-    graph: CP14WoodenCloset
-    node: CP14WoodenCloset
+    graph: CE14WoodenCloset
+    node: CE14WoodenCloset
     containers:
     - entity_storage
 

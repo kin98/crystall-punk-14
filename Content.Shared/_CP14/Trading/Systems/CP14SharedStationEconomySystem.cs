@@ -1,14 +1,14 @@
-using Content.Shared._CP14.Trading.Components;
-using Content.Shared._CP14.Trading.Prototypes;
+using Content.Shared._CE14.Trading.Components;
+using Content.Shared._CE14.Trading.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Trading.Systems;
+namespace Content.Shared._CE14.Trading.Systems;
 
-public abstract partial class CP14SharedStationEconomySystem : EntitySystem
+public abstract partial class CE14SharedStationEconomySystem : EntitySystem
 {
-    public int? GetPrice(ProtoId<CP14TradingPositionPrototype> position)
+    public int? GetPrice(ProtoId<CE14TradingPositionPrototype> position)
     {
-        var query = EntityQueryEnumerator<CP14StationEconomyComponent>();
+        var query = EntityQueryEnumerator<CE14StationEconomyComponent>();
 
         while (query.MoveNext(out var uid, out var economy))
         {
@@ -21,9 +21,9 @@ public abstract partial class CP14SharedStationEconomySystem : EntitySystem
         return null;
     }
 
-    public int? GetPrice(ProtoId<CP14TradingRequestPrototype> request)
+    public int? GetPrice(ProtoId<CE14TradingRequestPrototype> request)
     {
-        var query = EntityQueryEnumerator<CP14StationEconomyComponent>();
+        var query = EntityQueryEnumerator<CE14StationEconomyComponent>();
 
         while (query.MoveNext(out var uid, out var economy))
         {
@@ -36,9 +36,9 @@ public abstract partial class CP14SharedStationEconomySystem : EntitySystem
         return null;
     }
 
-    public HashSet<ProtoId<CP14TradingRequestPrototype>> GetRequests(ProtoId<CP14TradingFactionPrototype> faction)
+    public HashSet<ProtoId<CE14TradingRequestPrototype>> GetRequests(ProtoId<CE14TradingFactionPrototype> faction)
     {
-        var query = EntityQueryEnumerator<CP14StationEconomyComponent>();
+        var query = EntityQueryEnumerator<CE14StationEconomyComponent>();
 
         while (query.MoveNext(out var uid, out var economy))
         {

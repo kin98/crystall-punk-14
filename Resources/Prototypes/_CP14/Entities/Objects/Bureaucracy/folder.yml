@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14PaperFolderBase
+  id: CE14PaperFolderBase
   abstract: true
   parent: BaseStorageItem
   categories: [ ForkFiltered ]
@@ -20,17 +20,17 @@
     - Folder
   - type: StorageFill
     contents:
-      - id: CP14Paper
+      - id: CE14Paper
         prob: 1
-      - id: CP14Paper
+      - id: CE14Paper
         prob: 1
-      - id: CP14Paper
+      - id: CE14Paper
         prob: 0.8
-      - id: CP14Paper
+      - id: CE14Paper
         prob: 0.6
-      - id: CP14Paper
+      - id: CE14Paper
         prob: 0.4
-      - id: CP14Paper
+      - id: CE14Paper
         prob: 0.2
   - type: ContainerContainer
     containers:
@@ -39,18 +39,18 @@
     price: 1
 
 - type: entity
-  id: CP14PaperFolderBlue
-  parent: CP14PaperFolderBase
+  id: CE14PaperFolderBlue
+  parent: CE14PaperFolderBase
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Bureaucracy/paper.rsi
+    sprite: _CE14/Objects/Bureaucracy/paper.rsi
     state: folder_blue
 
 - type: entity
-  id: CP14PaperFolderRed
-  parent: CP14PaperFolderBase
+  id: CE14PaperFolderRed
+  parent: CE14PaperFolderBase
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Bureaucracy/paper.rsi
+    sprite: _CE14/Objects/Bureaucracy/paper.rsi
     state: folder_red
 

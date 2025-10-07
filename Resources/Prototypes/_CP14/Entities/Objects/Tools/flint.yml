@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14Lighter
+  id: CE14Lighter
   name: flint and steel
   description: Setting things on fire
   categories: [ ForkFiltered ]
@@ -8,15 +8,15 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Tools/flint.rsi
+    sprite: _CE14/Objects/Tools/flint.rsi
     state: icon
-  - type: CP14DelayedIgnitionSource
+  - type: CE14DelayedIgnitionSource
     enabled: true
   # TODO: Damageable, Ignite attempt self damage, Ignite prob
   - type: Tag
     tags:
-    - CP14Lighter
+    - CE14Lighter
   - type: PhysicalComposition
     materialComposition:
-      CP14Stone: 20
-      CP14Iron: 10
+      CE14Stone: 20
+      CE14Iron: 10

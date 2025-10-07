@@ -1,6 +1,6 @@
 using System.Text;
-using Content.Server._CP14.GameTicking.Rules.Components;
-using Content.Server._CP14.StationCommonObjectives;
+using Content.Server._CE14.GameTicking.Rules.Components;
+using Content.Server._CE14.StationCommonObjectives;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Mind;
@@ -14,9 +14,9 @@ using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.GameTicking.Rules;
+namespace Content.Server._CE14.GameTicking.Rules;
 
-public sealed class CP14CommonObjectivesRule : GameRuleSystem<CP14CommonObjectivesRuleComponent>
+public sealed class CE14CommonObjectivesRule : GameRuleSystem<CE14CommonObjectivesRuleComponent>
 {
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
@@ -31,13 +31,13 @@ public sealed class CP14CommonObjectivesRule : GameRuleSystem<CP14CommonObjectiv
     }
 
     protected override void Started(EntityUid uid,
-        CP14CommonObjectivesRuleComponent component,
+        CE14CommonObjectivesRuleComponent component,
         GameRuleComponent gameRule,
         GameRuleStartedEvent args)
     {
         base.Started(uid, component, gameRule, args);
 
-        var query = EntityQueryEnumerator<CP14StationCommonObjectivesComponent>();
+        var query = EntityQueryEnumerator<CE14StationCommonObjectivesComponent>();
         while (query.MoveNext(out var stationUid, out var stationObj))
         {
             var mindComp = EnsureComp<MindComponent>(stationUid);
@@ -80,7 +80,7 @@ public sealed class CP14CommonObjectivesRule : GameRuleSystem<CP14CommonObjectiv
     private void OnPlayerSpawning(PlayerSpawnCompleteEvent args)
     {
         //TODO: Multiply station support required
-        if (!TryComp<CP14StationCommonObjectivesComponent>(args.Station, out var stationCommonObjectives))
+        if (!TryComp<CE14StationCommonObjectivesComponent>(args.Station, out var stationCommonObjectives))
             return;
 
         if (!_mind.TryGetMind(args.Mob, out var mindId, out var mind))
@@ -111,7 +111,7 @@ public sealed class CP14CommonObjectivesRule : GameRuleSystem<CP14CommonObjectiv
     }
 
     protected override void AppendRoundEndText(EntityUid uid,
-        CP14CommonObjectivesRuleComponent component,
+        CE14CommonObjectivesRuleComponent component,
         GameRuleComponent gameRule,
         ref RoundEndTextAppendEvent args)
     {
@@ -119,7 +119,7 @@ public sealed class CP14CommonObjectivesRule : GameRuleSystem<CP14CommonObjectiv
 
         EnsureComp<MindComponent>(uid, out var stationMind);
 
-        var query = EntityQueryEnumerator<CP14StationCommonObjectivesComponent>();
+        var query = EntityQueryEnumerator<CE14StationCommonObjectivesComponent>();
         while (query.MoveNext(out var objectives))
         {
             var grouped = new Dictionary<DepartmentPrototype, List<EntityUid>>();
@@ -148,15 +148,15 @@ public sealed class CP14CommonObjectivesRule : GameRuleSystem<CP14CommonObjectiv
 
                     var progress = _objectives.GetProgress(objEnt, (component.StationMind.Value, stationMind)) ?? 0;
 
-                    var status = "cp14-objective-endtext-status-failure";
+                    var status = "CE14-objective-endtext-status-failure";
                     if (progress > 0.75f)
-                        status = "cp14-objective-endtext-status-success-a";
+                        status = "CE14-objective-endtext-status-success-a";
                     if (progress > 0.99f)
-                        status = "cp14-objective-endtext-status-success";
+                        status = "CE14-objective-endtext-status-success";
 
                     var meta = MetaData(objEnt);
                     sb.Append($"{Loc.GetString(objComp.LocIssuer)}: {meta.EntityName}\n");
-                    sb.Append($"{Loc.GetString("cp14-objective-endtext-progress", ("value", (int)(progress * 100)))} - {Loc.GetString(status)}\n");
+                    sb.Append($"{Loc.GetString("CE14-objective-endtext-progress", ("value", (int)(progress * 100)))} - {Loc.GetString(status)}\n");
                 }
 
                 args.AddLine(sb.ToString());

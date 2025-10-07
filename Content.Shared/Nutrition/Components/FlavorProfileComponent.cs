@@ -20,6 +20,6 @@ public sealed partial class FlavorProfileComponent : Component
         "Nutriment",
         "Vitamin",
         "Protein",
-        "Fat", //CP14
+        "Fat", //CE14
     };
 }

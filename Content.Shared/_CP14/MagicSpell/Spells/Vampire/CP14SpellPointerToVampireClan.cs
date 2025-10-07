@@ -1,14 +1,14 @@
-using Content.Shared._CP14.Vampire.Components;
+using Content.Shared._CE14.Vampire.Components;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
 /// <summary>
 /// Indicates all vampires within range belonging to the same faction as the caster. If inverted, it indicates enemy vampires.
 /// </summary>
-public sealed partial class CP14SpellPointerToVampireClan : CP14SpellEffect
+public sealed partial class CE14SpellPointerToVampireClan : CE14SpellEffect
 {
     [DataField(required: true)]
     public EntProtoId PointerEntity;
@@ -19,7 +19,7 @@ public sealed partial class CP14SpellPointerToVampireClan : CP14SpellEffect
     [DataField]
     public bool Inversed = false;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         var net = IoCManager.Resolve<INetManager>();
         if (net.IsClient)
@@ -28,7 +28,7 @@ public sealed partial class CP14SpellPointerToVampireClan : CP14SpellEffect
         if (args.User is null)
             return;
 
-        if (!entManager.TryGetComponent<CP14VampireComponent>(args.User.Value, out var vampireComponent))
+        if (!entManager.TryGetComponent<CE14VampireComponent>(args.User.Value, out var vampireComponent))
             return;
 
         var lookup = entManager.System<EntityLookupSystem>();
@@ -37,7 +37,7 @@ public sealed partial class CP14SpellPointerToVampireClan : CP14SpellEffect
         var originPosition = transform.GetWorldPosition(args.User.Value);
         var originEntPosition = transform.GetMoverCoordinates(args.User.Value);
 
-        var entitiesInRange = lookup.GetEntitiesInRange<CP14VampireComponent>(originEntPosition, SearchRange);
+        var entitiesInRange = lookup.GetEntitiesInRange<CE14VampireComponent>(originEntPosition, SearchRange);
         foreach (var ent in entitiesInRange)
         {
             if (ent.Owner == args.User.Value)
@@ -64,7 +64,7 @@ public sealed partial class CP14SpellPointerToVampireClan : CP14SpellEffect
             transform.SetWorldRotation(pointer, angle + Angle.FromDegrees(90));
         }
 
-        var heartsInRange = lookup.GetEntitiesInRange<CP14VampireClanHeartComponent>(originEntPosition, SearchRange);
+        var heartsInRange = lookup.GetEntitiesInRange<CE14VampireClanHeartComponent>(originEntPosition, SearchRange);
         foreach (var heart in heartsInRange)
         {
             if (!Inversed)

@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14WindowStoneBrick
-  parent: CP14WindowBase
+  id: CE14WindowStoneBrick
+  parent: CE14WindowBase
   name: stone brick window
   description: A stone brick wall with a glass window in it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/stone_bricks_window.rsi
+    sprite: _CE14/Structures/Windows/stone_bricks_window.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/stone_bricks_window.rsi
+    sprite: _CE14/Structures/Windows/stone_bricks_window.rsi
     state: full
   - type: Destructible
     thresholds:
@@ -20,29 +20,29 @@
           collection: WindowShatter
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14GlassShard:
+          CE14GlassShard:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ChangeConstructionNodeBehavior
-        node: CP14WindowStoneBrickBroken
+        node: CE14WindowStoneBrickBroken
   - type: Construction
-    graph: CP14WindowStoneBrick
-    node: CP14WindowStoneBrick
+    graph: CE14WindowStoneBrick
+    node: CE14WindowStoneBrick
 
 - type: entity
-  id: CP14WindowFrameStoneBrick
+  id: CE14WindowFrameStoneBrick
   name: stone brick window frame
-  parent: CP14BaseWindowFrame
+  parent: CE14BaseWindowFrame
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/stone_bricks_window_frame.rsi
+    sprite: _CE14/Structures/Windows/stone_bricks_window_frame.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/stone_bricks_window_frame.rsi
+    sprite: _CE14/Structures/Windows/stone_bricks_window_frame.rsi
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14RockStructural
+    damageModifierSet: CE14RockStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -51,7 +51,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14StoneBlock1:
+          CE14StoneBlock1:
             min: 1
             max: 2
       - !type:PlaySoundBehavior
@@ -62,20 +62,20 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14WindowStoneBrick
-    node: CP14WindowFrameStoneBrick
+    graph: CE14WindowStoneBrick
+    node: CE14WindowFrameStoneBrick
 
 - type: entity
-  id: CP14WindowStoneBrickBroken
+  id: CE14WindowStoneBrickBroken
   name: shattered stone brick window
   parent:
-  - CP14BaseWindowFrameBroken
-  - CP14WindowFrameStoneBrick
+  - CE14BaseWindowFrameBroken
+  - CE14WindowFrameStoneBrick
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/stone_bricks_window_broken.rsi
+    sprite: _CE14/Structures/Windows/stone_bricks_window_broken.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/stone_bricks_window_broken.rsi
+    sprite: _CE14/Structures/Windows/stone_bricks_window_broken.rsi
   - type: Construction
-    graph: CP14WindowStoneBrick
-    node: CP14WindowStoneBrickBroken
+    graph: CE14WindowStoneBrick
+    node: CE14WindowStoneBrickBroken

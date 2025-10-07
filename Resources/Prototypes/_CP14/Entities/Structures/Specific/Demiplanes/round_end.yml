@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14DemiplaneLinkCrystal
+  id: CE14DemiplaneLinkCrystal
   parent: BaseStructure
   categories: [ ForkFiltered ]
   name: demiplane link crystal
@@ -17,7 +17,7 @@
         - WallLayer
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Specific/Thaumaturgy/energy_monolith_big.rsi
+    sprite: _CE14/Structures/Specific/Thaumaturgy/energy_monolith_big.rsi
     layers:
     - state: dimension
     - state: frame
@@ -39,29 +39,29 @@
         property: Energy
         isLooped: true
         enabled: true
-  - type: CP14MagicContainerRoundFinisher
-  - type: CP14MagicEnergyExaminable
-  - type: CP14MagicEnergyContainer
+  - type: CE14MagicContainerRoundFinisher
+  - type: CE14MagicEnergyExaminable
+  - type: CE14MagicEnergyContainer
     maxEnergy: 1000
     energy: 1000
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: -10
     delay: 60 # 1h 30 minutes to full discharge
   - type: AmbientSound
     volume: 5
     range: 10
     sound:
-      path: /Audio/_CP14/Effects/demiplane_heartbeat.ogg
+      path: /Audio/_CE14/Effects/demiplane_heartbeat.ogg
   - type: ActivatableUI
-    key: enum.CP14DemiplaneMapUiKey.Key
-  - type: CP14DemiplaneNavigationMap
+    key: enum.CE14DemiplaneMapUiKey.Key
+  - type: CE14DemiplaneNavigationMap
   - type: UserInterface
     interfaces:
-      enum.CP14DemiplaneMapUiKey.Key:
-        type: CP14DemiplaneMapBoundUserInterface
+      enum.CE14DemiplaneMapUiKey.Key:
+        type: CE14DemiplaneMapBoundUserInterface
 
 - type: entity
-  id: CP14PortalFrameCrystal
+  id: CE14PortalFrameCrystal
   categories: [ ForkFiltered ]
   parent: BaseStructure
   name: portal frame
@@ -89,22 +89,22 @@
       - Structure
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Specific/Thaumaturgy/energy_monolith_small.rsi
+    sprite: _CE14/Structures/Specific/Thaumaturgy/energy_monolith_small.rsi
     layers:
     - state: dimension
     - state: frame
     drawdepth: Mobs
     offset: 0,0.4
-  - type: CP14MagicEnergyContainer
+  - type: CE14MagicEnergyContainer
     maxEnergy: 100
     energy: 100
-  - type: CP14MagicEnergyExaminable
-  - type: CP14MagicEnergyPortRelay
+  - type: CE14MagicEnergyExaminable
+  - type: CE14MagicEnergyPortRelay
 
 - type: entity
-  id: CP14PortalFrameCrystalLight
+  id: CE14PortalFrameCrystalLight
   categories: [ ForkFiltered ]
-  parent: CP14PortalFrameCrystal
+  parent: CE14PortalFrameCrystal
   suffix: Glow
   components:
   - type: PointLight

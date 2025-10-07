@@ -1,15 +1,15 @@
 using Content.Server.Chat.Systems;
 using Content.Server.RoundEnd;
-using Content.Shared._CP14.MagicEnergy;
+using Content.Shared._CE14.MagicEnergy;
 using Content.Shared.GameTicking;
 using Content.Shared.CCVar;
 using Robust.Shared.Configuration;
 using Robust.Shared.Audio;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.RoundEnd;
+namespace Content.Server._CE14.RoundEnd;
 
-public sealed partial class CP14RoundEndSystem : EntitySystem
+public sealed partial class CE14RoundEndSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly ChatSystem _chatSystem = default!;
@@ -25,7 +25,7 @@ public sealed partial class CP14RoundEndSystem : EntitySystem
 
         InitCbt();
 
-        SubscribeLocalEvent<CP14MagicContainerRoundFinisherComponent, CP14MagicEnergyLevelChangeEvent>(OnFinisherMagicEnergyLevelChange);
+        SubscribeLocalEvent<CE14MagicContainerRoundFinisherComponent, CE14MagicEnergyLevelChangeEvent>(OnFinisherMagicEnergyLevelChange);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
     }
 
@@ -46,21 +46,21 @@ public sealed partial class CP14RoundEndSystem : EntitySystem
         if (_roundEndMoment > _timing.CurTime)
             return;
 
-        _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("cp14-round-end"),
-            announcementSound: new SoundPathSpecifier("/Audio/_CP14/Announce/event_boom.ogg"));
+        _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("CE14-round-end"),
+            announcementSound: new SoundPathSpecifier("/Audio/_CE14/Announce/event_boom.ogg"));
         _roundEnd.EndRound();
         _roundEndMoment = TimeSpan.Zero;
     }
 
-    private void OnFinisherMagicEnergyLevelChange(Entity<CP14MagicContainerRoundFinisherComponent> ent,
-        ref CP14MagicEnergyLevelChangeEvent args)
+    private void OnFinisherMagicEnergyLevelChange(Entity<CE14MagicContainerRoundFinisherComponent> ent,
+        ref CE14MagicEnergyLevelChangeEvent args)
     {
         //Alarm 50% magic energy left
         if (args.NewValue < args.OldValue && args.OldValue > args.MaxValue / 2 && args.NewValue <= args.MaxValue / 2)
         {
             _chatSystem.DispatchGlobalAnnouncement(
-                Loc.GetString("cp14-round-end-monolith-50"),
-                announcementSound: new SoundPathSpecifier("/Audio/_CP14/Announce/event_boom.ogg"));
+                Loc.GetString("CE14-round-end-monolith-50"),
+                announcementSound: new SoundPathSpecifier("/Audio/_CE14/Announce/event_boom.ogg"));
         }
 
         //We initiate round end timer
@@ -74,7 +74,7 @@ public sealed partial class CP14RoundEndSystem : EntitySystem
 
     private void StartRoundEndTimer()
     {
-        var roundEndDelay = TimeSpan.FromMinutes(_cfg.GetCVar(CCVars.CP14RoundEndMinutes));
+        var roundEndDelay = TimeSpan.FromMinutes(_cfg.GetCVar(CCVars.CE14RoundEndMinutes));
 
         _roundEndMoment = _timing.CurTime + roundEndDelay;
 
@@ -93,17 +93,17 @@ public sealed partial class CP14RoundEndSystem : EntitySystem
 
         _chatSystem.DispatchGlobalAnnouncement(
             Loc.GetString(
-                "cp14-round-end-monolith-discharged",
+                "CE14-round-end-monolith-discharged",
                 ("time", time),
                 ("units", Loc.GetString(unitsLocString))),
-            announcementSound: new SoundPathSpecifier("/Audio/_CP14/Announce/event_boom.ogg"));
+            announcementSound: new SoundPathSpecifier("/Audio/_CE14/Announce/event_boom.ogg"));
     }
 
     private void CancelRoundEndTimer()
     {
         _roundEndMoment = TimeSpan.Zero;
 
-        _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("cp14-round-end-monolith-recharged"),
-            announcementSound: new SoundPathSpecifier("/Audio/_CP14/Announce/event_boom.ogg"));
+        _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("CE14-round-end-monolith-recharged"),
+            announcementSound: new SoundPathSpecifier("/Audio/_CE14/Announce/event_boom.ogg"));
     }
 }

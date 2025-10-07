@@ -1,10 +1,10 @@
-namespace Content.Shared._CP14.Wallpaper;
+namespace Content.Shared._CE14.Wallpaper;
 
 /// <summary>
 /// After a delay, it removes all wallpaper from the entity.
 /// </summary>
-[RegisterComponent, Access(typeof(CP14SharedWallpaperSystem))]
-public sealed partial class CP14WallpaperRemoverComponent : Component
+[RegisterComponent, Access(typeof(CE14SharedWallpaperSystem))]
+public sealed partial class CE14WallpaperRemoverComponent : Component
 {
     [DataField]
     public float Delay = 1f;

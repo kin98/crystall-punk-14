@@ -1,4 +1,4 @@
-cp14-daycycle-sunrise = sunrise
-cp14-daycycle-day = day
-cp14-daycycle-night = night
-cp14-daycycle-evening = evening
+CE14-daycycle-sunrise = sunrise
+CE14-daycycle-day = day
+CE14-daycycle-night = night
+CE14-daycycle-evening = evening

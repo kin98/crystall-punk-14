@@ -14,9 +14,9 @@ public sealed partial class StatusEffectsSystem
 {
     private void InitializeRelay()
     {
-        //CP14 Zone
+        //CE14 Zone
         SubscribeLocalEvent<StatusEffectContainerComponent, DamageModifyEvent>(RelayStatusEffectEvent);
-        //CP14 Zone end
+        //CE14 Zone end
 
         SubscribeLocalEvent<StatusEffectContainerComponent, LocalPlayerAttachedEvent>(RelayStatusEffectEvent);
         SubscribeLocalEvent<StatusEffectContainerComponent, LocalPlayerDetachedEvent>(RelayStatusEffectEvent);

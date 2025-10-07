@@ -1,11 +1,11 @@
 using System.Threading;
-using Content.Shared._CP14.Discord;
+using Content.Shared._CE14.Discord;
 using Robust.Client.State;
 using Robust.Client.UserInterface;
 using Robust.Shared.Network;
 using Timer = Robust.Shared.Timing.Timer;
 
-namespace Content.Client._CP14.Discord;
+namespace Content.Client._CE14.Discord;
 
 public sealed class DiscordAuthState : State
 {

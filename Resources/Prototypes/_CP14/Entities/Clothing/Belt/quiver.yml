@@ -1,12 +1,12 @@
 ﻿- type: entity
   parent: ClothingBeltStorageBase
-  id: CP14ClothingBeltQuiver
+  id: CE14ClothingBeltQuiver
   name: quiver
   description: Holds many crossbow bolts, and fits snug around your waist.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Belt/quiver.rsi
+    sprite: _CE14/Clothing/Belt/quiver.rsi
     layers:
     - state: icon
     - map: [ "enum.StorageContainerVisualLayers.Fill" ]
@@ -24,26 +24,26 @@
     maxItemSize: Small
     whitelist:
       tags:
-      - CP14CrossbowBolt
-      - CP14Arrow
-      - CP14BigCrossbowBolt
+      - CE14CrossbowBolt
+      - CE14Arrow
+      - CE14BigCrossbowBolt
   - type: Appearance
   - type: StorageContainerVisuals
     maxFillLevels: 3
     fillBaseName: fill-
   - type: PhysicalComposition
     materialComposition:
-      CP14Leather: 20 # 20u CP14Leather (2x10u)
-      CP14Cloth: 20 # 20u CP14String (4x5u)
+      CE14Leather: 20 # 20u CE14Leather (2x10u)
+      CE14Cloth: 20 # 20u CE14String (4x5u)
   # Cost: (20×1.2) + (20×0.3) = 24 + 6 = 30 copper coins
 
 - type: entity
-  parent: CP14ClothingBeltQuiver
-  id: CP14ClothingBeltQuiverArrows
+  parent: CE14ClothingBeltQuiver
+  id: CE14ClothingBeltQuiverArrows
   categories: [ ForkFiltered ]
   suffix: Filled with arrows
   components:
   - type: StorageFill
     contents:
-    - id: CP14Arrow
+    - id: CE14Arrow
       amount: 16

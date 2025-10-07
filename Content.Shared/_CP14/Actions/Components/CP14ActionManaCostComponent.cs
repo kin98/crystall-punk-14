@@ -1,12 +1,12 @@
 using Content.Shared.FixedPoint;
 
-namespace Content.Shared._CP14.Actions.Components;
+namespace Content.Shared._CE14.Actions.Components;
 
 /// <summary>
 /// Restricts the use of this action, by spending mana or user requirements.
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14ActionManaCostComponent : Component
+public sealed partial class CE14ActionManaCostComponent : Component
 {
     [DataField]
     public FixedPoint2 ManaCost = 0f;

@@ -1,10 +1,10 @@
 using Content.Shared.StatusIcon;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Vampire;
+namespace Content.Shared._CE14.Vampire;
 
-[Prototype("cp14VampireFaction")]
-public sealed partial class CP14VampireFactionPrototype : IPrototype
+[Prototype("CE14VampireFaction")]
+public sealed partial class CE14VampireFactionPrototype : IPrototype
 {
     [IdDataField] public string ID { get; private set; } = default!;
 

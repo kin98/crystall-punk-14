@@ -1,40 +1,40 @@
 # species
 - type: emoteSounds
-  id: CP14UnisexGoblin
+  id: CE14UnisexGoblin
   params:
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/_CP14/Voice/Goblin/goblin_scream.ogg
+      path: /Audio/_CE14/Voice/Goblin/goblin_scream.ogg
     Laugh:
-      path: /Audio/_CP14/Voice/Goblin/goblin_laugh.ogg
+      path: /Audio/_CE14/Voice/Goblin/goblin_laugh.ogg
     Snore:
-      path: /Audio/_CP14/Voice/Goblin/goblin_sleep.ogg
+      path: /Audio/_CE14/Voice/Goblin/goblin_sleep.ogg
     DefaultDeathgasp:
-      path: /Audio/_CP14/Voice/Goblin/goblin_death.ogg
+      path: /Audio/_CE14/Voice/Goblin/goblin_death.ogg
     Whistle:
       collection: Whistles
 
 - type: emoteSounds
-  id: CP14UnisexCarcat
+  id: CE14UnisexCarcat
   params:
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/_CP14/Voice/Carcat/carcat_scream.ogg
+      path: /Audio/_CE14/Voice/Carcat/carcat_scream.ogg
     Laugh:
-      collection: CP14CarcatLaugh
+      collection: CE14CarcatLaugh
     Gasp:
-      path: /Audio/_CP14/Voice/Carcat/carcat_gasp.ogg
+      path: /Audio/_CE14/Voice/Carcat/carcat_gasp.ogg
     DefaultDeathgasp:
-      path: /Audio/_CP14/Voice/Carcat/carcat_gasp.ogg
+      path: /Audio/_CE14/Voice/Carcat/carcat_gasp.ogg
     Whistle:
       collection: Whistles
 
 - type: emoteSounds
-  id: CP14Bear
+  id: CE14Bear
   params:
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/_CP14/Voice/Animal/bear_scream.ogg
+      path: /Audio/_CE14/Voice/Animal/bear_scream.ogg

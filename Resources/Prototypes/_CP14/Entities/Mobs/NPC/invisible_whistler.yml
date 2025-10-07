@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14MobMonsterInvisibleWhistler
-  parent: CP14SimpleMobBase
+  id: CE14MobMonsterInvisibleWhistler
+  parent: CE14SimpleMobBase
   name: invisible whistler
   description: A monster invisible to the ordinary eye, adoring to devour victims consumed by fear and misunderstanding.
   categories: [ ForkFiltered ]
@@ -17,12 +17,12 @@
         12
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Monster/invisible_whistler.rsi #Temporary monster sprite, you need your own
+      sprite: _CE14/Mobs/Monster/invisible_whistler.rsi #Temporary monster sprite, you need your own
       state: live
   - type: Fixtures
     fixtures:
@@ -68,19 +68,19 @@
         Base: dead
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatMonster
+    - id: CE14FoodMeatMonster
       amount: 3
-    - id: CP14PartsMonsterGlands
+    - id: CE14PartsMonsterGlands
       amount: 1
       prob: 0.7
   - type: Bloodstream
     bloodMaxVolume: 200
-    bloodReagent: CP14BloodMonster
+    bloodReagent: CE14BloodMonster
   - type: Grammar
     attributes:
       gender: epicene
   - type: BasicEntityAmmoProvider
-    proto: CP14SpikeWhistle
+    proto: CE14SpikeWhistle
     capacity: 1
     count: 1
   - type: RechargeBasicEntityAmmo
@@ -102,13 +102,13 @@
   - type: StealthOnMove
     passiveVisibilityRate: -0.40
     movementVisibilityRate: 0.10
-  - type: CP14MagicEnergyContainer
-    magicAlert: CP14MagicEnergy
+  - type: CE14MagicEnergyContainer
+    magicAlert: CE14MagicEnergy
     maxEnergy: 50
     energy: 50
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 2
     delay: 4
   - type: Tag
     tags:
-      - CP14Mosquito
+      - CE14Mosquito

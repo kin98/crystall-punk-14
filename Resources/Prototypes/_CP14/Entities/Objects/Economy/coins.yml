@@ -1,12 +1,12 @@
 - type: entity
-  id: CP14BaseCoin
+  id: CE14BaseCoin
   parent: BaseItem
   abstract: true
   categories: [ ForkFiltered ]
   components:
   - type: Tag
     tags:
-    - CP14Coin
+    - CE14Coin
   - type: Item
     size: Tiny
   - type: Stack
@@ -26,40 +26,40 @@
   - type: Appearance
   - type: StaticPrice
     price: 0
-  - type: CP14CurrencyExaminable
+  - type: CE14CurrencyExaminable
   - type: EmitSoundOnLand
     sound:
-      path: /Audio/_CP14/Items/coins_fall.ogg
+      path: /Audio/_CE14/Items/coins_fall.ogg
   - type: EmitSoundOnDrop
     sound:
-      collection: CP14Coins
+      collection: CE14Coins
   - type: EmitSoundOnPickup
     sound:
-      collection: CP14Coins
+      collection: CE14Coins
 
 # Copper
 
 - type: entity
-  id: CP14CopperCoin
-  parent: CP14BaseCoin
+  id: CE14CopperCoin
+  parent: CE14BaseCoin
   name: copper coin
   description: The smallest denomination coin. Copper.
   suffix: 10 coins - trade
   components:
   - type: Sprite
-    sprite: /Textures/_CP14/Objects/Economy/cp_coin.rsi
+    sprite: /Textures/_CE14/Objects/Economy/cp_coin.rsi
     layers:
     - state: coin10
       map: ["base"]
   - type: Stack
-    stackType: CP14CopperCoin
+    stackType: CE14CopperCoin
     count: 10
   - type: StackPrice
     price: 1
 
 - type: entity
-  id: CP14CopperCoin5
-  parent: CP14CopperCoin
+  id: CE14CopperCoin5
+  parent: CE14CopperCoin
   suffix: 5 coins - trade
   components:
   - type: Sprite
@@ -68,8 +68,8 @@
     count: 5
 
 - type: entity
-  id: CP14CopperCoin1
-  parent: CP14CopperCoin
+  id: CE14CopperCoin1
+  parent: CE14CopperCoin
   suffix: 1 coin - trade
   components:
   - type: Sprite
@@ -80,26 +80,26 @@
 # Silver
 
 - type: entity
-  id: CP14SilverCoin
-  parent: CP14BaseCoin
+  id: CE14SilverCoin
+  parent: CE14BaseCoin
   name: silver coin
   description: A valuable coin made from a precisely calibrated silver alloy..... and something else. Equal in value to ten coppers.
   suffix: 10 coins - trade
   components:
   - type: Sprite
-    sprite: /Textures/_CP14/Objects/Economy/sp_coin.rsi
+    sprite: /Textures/_CE14/Objects/Economy/sp_coin.rsi
     layers:
     - state: coin10
       map: ["base"]
   - type: Stack
-    stackType: CP14SilverCoin
+    stackType: CE14SilverCoin
     count: 10
   - type: StackPrice
     price: 10
 
 - type: entity
-  id: CP14SilverCoin5
-  parent: CP14SilverCoin
+  id: CE14SilverCoin5
+  parent: CE14SilverCoin
   suffix: 5 coins - trade
   components:
   - type: Sprite
@@ -108,8 +108,8 @@
     count: 5
 
 - type: entity
-  id: CP14SilverCoin1
-  parent: CP14SilverCoin
+  id: CE14SilverCoin1
+  parent: CE14SilverCoin
   suffix: 1 coin
   components:
   - type: Sprite
@@ -120,26 +120,26 @@
 # Gold
 
 - type: entity
-  id: CP14GoldCoin
-  parent: CP14BaseCoin
+  id: CE14GoldCoin
+  parent: CE14BaseCoin
   name: gold coin
   description: A gold, big, beautiful coin. Valuable enough to be stolen by bandits. Equal in value to ten silver coins.
   suffix: 10 coins - trade
   components:
   - type: Sprite
-    sprite: /Textures/_CP14/Objects/Economy/gp_coin.rsi
+    sprite: /Textures/_CE14/Objects/Economy/gp_coin.rsi
     layers:
     - state: coin10
       map: ["base"]
   - type: Stack
-    stackType: CP14GoldCoin
+    stackType: CE14GoldCoin
     count: 10
   - type: StackPrice
     price: 100
 
 - type: entity
-  id: CP14GoldCoin5
-  parent: CP14GoldCoin
+  id: CE14GoldCoin5
+  parent: CE14GoldCoin
   suffix: 5 coins - trade
   components:
   - type: Sprite
@@ -148,8 +148,8 @@
     count: 5
 
 - type: entity
-  id: CP14GoldCoin1
-  parent: CP14GoldCoin
+  id: CE14GoldCoin1
+  parent: CE14GoldCoin
   suffix: 1 coin - trade
   components:
   - type: Sprite
@@ -160,26 +160,26 @@
 # Platinum
 
 - type: entity
-  id: CP14PlatinumCoin
-  parent: CP14BaseCoin
+  id: CE14PlatinumCoin
+  parent: CE14BaseCoin
   name: platinum coin
   description: A platinum coin? It's so rare. Ten gold pieces is the price of one.
   suffix: 10 coins - trade
   components:
   - type: Sprite
-    sprite: /Textures/_CP14/Objects/Economy/pp_coin.rsi
+    sprite: /Textures/_CE14/Objects/Economy/pp_coin.rsi
     layers:
     - state: coin10
       map: ["base"]
   - type: Stack
-    stackType: CP14PlatinumCoin
+    stackType: CE14PlatinumCoin
     count: 10
   - type: StackPrice
     price: 1000
 
 - type: entity
-  id: CP14PlatinumCoin5
-  parent: CP14PlatinumCoin
+  id: CE14PlatinumCoin5
+  parent: CE14PlatinumCoin
   suffix: 5 coins - trade
   components:
   - type: Sprite
@@ -188,8 +188,8 @@
     count: 5
 
 - type: entity
-  id: CP14PlatinumCoin1
-  parent: CP14PlatinumCoin
+  id: CE14PlatinumCoin1
+  parent: CE14PlatinumCoin
   suffix: 1 coin - trade
   components:
   - type: Sprite

@@ -1,45 +1,45 @@
 - type: entity
-  id: CP14ActionSpellEarthWall
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellEarthWall
+  parent: CE14ActionSpellBase
   name: Earth wall
   description: Raises a solid wall of earth from the bowels.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.3
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 15
-  - type: CP14ActionMaterialCost
+  - type: CE14ActionMaterialCost
     requirement: !type:StackResource
-      stack: CP14Dirt
+      stack: CE14Dirt
       count: 2
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Surgite terram..."
     endSpeech: "de profundis terrae"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneEarthWall
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneEarthWall
   - type: DoAfterArgs
     delay: 1.5
   - type: Action
     useDelay: 10
     icon:
-      sprite: _CP14/Actions/Spells/earth.rsi
+      sprite: _CE14/Actions/Spells/earth.rsi
       state: earth_wall
   - type: TargetAction
     range: 10
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectEarthWall
+        - CE14ImpactEffectEarthWall
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14WallSpawnEarthWall
+        - CE14WallSpawnEarthWall
 
 - type: entity
-  id: CP14RuneEarthWall
-  parent: CP14BaseMagicRune
+  id: CE14RuneEarthWall
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -55,8 +55,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectEarthWall
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectEarthWall
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -67,7 +67,7 @@
       shader: unshaded
 
 - type: entity
-  id: CP14WallSpawnEarthWall
+  id: CE14WallSpawnEarthWall
   categories: [ HideSpawnMenu ]
   save: false
   placement:
@@ -80,7 +80,7 @@
     bodyType: Static
   - type: Sprite
     offset: 0, 0.2
-    sprite: _CP14/Effects/cubeup.rsi
+    sprite: _CE14/Effects/cubeup.rsi
     state: cube_up
   - type: Fixtures
     fixtures:
@@ -96,14 +96,14 @@
   - type: TimedDespawn
     lifetime: 1.2
   - type: SpawnOnDespawn
-    prototype: CP14WallDirt
+    prototype: CE14WallDirt
 
 - type: entity
-  parent: CP14BaseSpellScrollEarth
-  id: CP14SpellScrollEarthWall
+  parent: CE14BaseSpellScrollEarth
+  id: CE14SpellScrollEarthWall
   name: earth wall spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellEarthWall
+    - CE14ActionSpellEarthWall
 

@@ -26,10 +26,10 @@
     - cough!
     - coughs!
     - coughed!
-    # CP14-RU-Localization-start
+    # CE14-RU-Localization-start
     - кашель
     - кашляет
-    # CP14-RU-Localization-end
+    # CE14-RU-Localization-end
 
 - type: emote
   id: CatMeow
@@ -70,10 +70,10 @@
   chatTriggers:
     - yawn
     - yawns
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - зевок
     - зевает
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: Snore

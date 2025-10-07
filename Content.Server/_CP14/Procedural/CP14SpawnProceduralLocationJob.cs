@@ -2,7 +2,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Procedural;
-using Content.Shared._CP14.Procedural.Prototypes;
+using Content.Shared._CE14.Procedural.Prototypes;
 using Content.Shared.Atmos;
 using Content.Shared.Gravity;
 using Content.Shared.Procedural;
@@ -12,9 +12,9 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.Procedural;
+namespace Content.Server._CE14.Procedural;
 
-public sealed class CP14SpawnProceduralLocationJob(
+public sealed class CE14SpawnProceduralLocationJob(
     double maxTime,
     IEntityManager entManager,
     ILogManager logManager,
@@ -25,8 +25,8 @@ public sealed class CP14SpawnProceduralLocationJob(
     MapId mapId,
     Vector2i position,
     int seed,
-    ProtoId<CP14ProceduralLocationPrototype> config,
-    List<ProtoId<CP14ProceduralModifierPrototype>> modifiers,
+    ProtoId<CE14ProceduralLocationPrototype> config,
+    List<ProtoId<CE14ProceduralModifierPrototype>> modifiers,
     string? jobName = null,
     CancellationToken cancellation = default)
     : Job<bool>(maxTime, cancellation)
@@ -34,7 +34,7 @@ public sealed class CP14SpawnProceduralLocationJob(
     public readonly EntityUid MapUid = mapUid;
     public string? JobName = jobName;
 
-    private readonly ISawmill _sawmill = logManager.GetSawmill("cp14_procedural_location_job");
+    private readonly ISawmill _sawmill = logManager.GetSawmill("CE14_procedural_location_job");
 
     protected override async Task<bool> Process()
     {
@@ -45,7 +45,7 @@ public sealed class CP14SpawnProceduralLocationJob(
         DungeonConfigPrototype dungeonConfig = new();
 
         //Boilerplate: reserve all old grid tiles
-        dungeonConfig.Layers.Add(new CP14ReserveGrid());
+        dungeonConfig.Layers.Add(new CE14ReserveGrid());
 
         //Setup location config
         var locationConfig = protoManager.Index(config);

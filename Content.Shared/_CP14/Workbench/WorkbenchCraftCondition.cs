@@ -2,11 +2,11 @@ using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Workbench;
+namespace Content.Shared._CE14.Workbench;
 
 [ImplicitDataDefinitionForInheritors]
 [MeansImplicitUse]
-public abstract partial class CP14WorkbenchCraftCondition
+public abstract partial class CE14WorkbenchCraftCondition
 {
     public abstract bool CheckCondition(
         EntityManager entManager,

@@ -1,9 +1,9 @@
 using System.Linq;
-using Content.Shared._CP14.Actions.Components;
-using Content.Shared._CP14.MagicEnergy.Components;
-using Content.Shared._CP14.MagicSpell.Events;
-using Content.Shared._CP14.Religion.Components;
-using Content.Shared._CP14.Skill.Components;
+using Content.Shared._CE14.Actions.Components;
+using Content.Shared._CE14.MagicEnergy.Components;
+using Content.Shared._CE14.MagicSpell.Events;
+using Content.Shared._CE14.Religion.Components;
+using Content.Shared._CE14.Skill.Components;
 using Content.Shared.Actions.Components;
 using Content.Shared.Actions.Events;
 using Content.Shared.CombatMode.Pacification;
@@ -15,29 +15,29 @@ using Content.Shared.Popups;
 using Content.Shared.Speech.Muting;
 using Content.Shared.SSDIndicator;
 
-namespace Content.Shared._CP14.Actions;
+namespace Content.Shared._CE14.Actions;
 
-public abstract partial class CP14SharedActionSystem
+public abstract partial class CE14SharedActionSystem
 {
     private void InitializeAttempts()
     {
-        SubscribeLocalEvent<CP14ActionFreeHandsRequiredComponent, ActionAttemptEvent>(OnSomaticActionAttempt);
-        SubscribeLocalEvent<CP14ActionSpeakingComponent, ActionAttemptEvent>(OnVerbalActionAttempt);
-        SubscribeLocalEvent<CP14ActionMaterialCostComponent, ActionAttemptEvent>(OnMaterialActionAttempt);
-        SubscribeLocalEvent<CP14ActionManaCostComponent, ActionAttemptEvent>(OnManacostActionAttempt);
-        SubscribeLocalEvent<CP14ActionStaminaCostComponent, ActionAttemptEvent>(OnStaminaCostActionAttempt);
-        SubscribeLocalEvent<CP14ActionDangerousComponent, ActionAttemptEvent>(OnDangerousActionAttempt);
-        SubscribeLocalEvent<CP14ActionSkillPointCostComponent, ActionAttemptEvent>(OnSkillPointActionAttempt);
+        SubscribeLocalEvent<CE14ActionFreeHandsRequiredComponent, ActionAttemptEvent>(OnSomaticActionAttempt);
+        SubscribeLocalEvent<CE14ActionSpeakingComponent, ActionAttemptEvent>(OnVerbalActionAttempt);
+        SubscribeLocalEvent<CE14ActionMaterialCostComponent, ActionAttemptEvent>(OnMaterialActionAttempt);
+        SubscribeLocalEvent<CE14ActionManaCostComponent, ActionAttemptEvent>(OnManacostActionAttempt);
+        SubscribeLocalEvent<CE14ActionStaminaCostComponent, ActionAttemptEvent>(OnStaminaCostActionAttempt);
+        SubscribeLocalEvent<CE14ActionDangerousComponent, ActionAttemptEvent>(OnDangerousActionAttempt);
+        SubscribeLocalEvent<CE14ActionSkillPointCostComponent, ActionAttemptEvent>(OnSkillPointActionAttempt);
 
-        SubscribeLocalEvent<CP14ActionSSDBlockComponent, ActionValidateEvent>(OnActionSSDAttempt);
-        SubscribeLocalEvent<CP14ActionTargetMobStatusRequiredComponent, ActionValidateEvent>(OnTargetMobStatusRequiredValidate);
-        SubscribeLocalEvent<CP14ActionReligionRestrictedComponent, ActionValidateEvent>(OnReligionActionValidate);
+        SubscribeLocalEvent<CE14ActionSSDBlockComponent, ActionValidateEvent>(OnActionSSDAttempt);
+        SubscribeLocalEvent<CE14ActionTargetMobStatusRequiredComponent, ActionValidateEvent>(OnTargetMobStatusRequiredValidate);
+        SubscribeLocalEvent<CE14ActionReligionRestrictedComponent, ActionValidateEvent>(OnReligionActionValidate);
     }
 
     /// <summary>
     /// Before using a spell, a mana check is made for the amount of mana to show warnings.
     /// </summary>
-    private void OnManacostActionAttempt(Entity<CP14ActionManaCostComponent> ent, ref ActionAttemptEvent args)
+    private void OnManacostActionAttempt(Entity<CE14ActionManaCostComponent> ent, ref ActionAttemptEvent args)
     {
         if (args.Cancelled)
             return;
@@ -50,7 +50,7 @@ public abstract partial class CP14SharedActionSystem
 
         if (ent.Comp.CanModifyManacost)
         {
-            var manaEv = new CP14CalculateManacostEvent(args.User, ent.Comp.ManaCost);
+            var manaEv = new CE14CalculateManacostEvent(args.User, ent.Comp.ManaCost);
 
             RaiseLocalEvent(args.User, manaEv);
 
@@ -62,28 +62,28 @@ public abstract partial class CP14SharedActionSystem
 
         //First - trying get mana from item
         if (action.Container is not null &&
-            TryComp<CP14MagicEnergyContainerComponent>(action.Container, out var magicContainer))
+            TryComp<CE14MagicEnergyContainerComponent>(action.Container, out var magicContainer))
             requiredMana = MathF.Max(0, (float)(requiredMana - magicContainer.Energy));
 
         if (requiredMana <= 0)
             return;
 
         //Second - trying get mana from performer
-        if (!TryComp<CP14MagicEnergyContainerComponent>(args.User, out var playerMana))
+        if (!TryComp<CE14MagicEnergyContainerComponent>(args.User, out var playerMana))
         {
-            Popup.PopupClient(Loc.GetString("cp14-magic-spell-no-mana-component"), args.User, args.User);
+            Popup.PopupClient(Loc.GetString("CE14-magic-spell-no-mana-component"), args.User, args.User);
             args.Cancelled = true;
             return;
         }
 
         if (!_magicEnergy.HasEnergy(args.User, requiredMana, playerMana, true) && _timing.IsFirstTimePredicted)
-            Popup.PopupClient(Loc.GetString($"cp14-magic-spell-not-enough-mana-cast-warning-{_random.Next(5)}"),
+            Popup.PopupClient(Loc.GetString($"CE14-magic-spell-not-enough-mana-cast-warning-{_random.Next(5)}"),
                 args.User,
                 args.User,
                 PopupType.SmallCaution);
     }
 
-    private void OnStaminaCostActionAttempt(Entity<CP14ActionStaminaCostComponent> ent, ref ActionAttemptEvent args)
+    private void OnStaminaCostActionAttempt(Entity<CE14ActionStaminaCostComponent> ent, ref ActionAttemptEvent args)
     {
         if (!TryComp<StaminaComponent>(args.User, out var staminaComp))
             return;
@@ -91,11 +91,11 @@ public abstract partial class CP14SharedActionSystem
         if (!staminaComp.Critical)
             return;
 
-        Popup.PopupClient(Loc.GetString("cp14-magic-spell-stamina-not-enough"), args.User, args.User);
+        Popup.PopupClient(Loc.GetString("CE14-magic-spell-stamina-not-enough"), args.User, args.User);
         args.Cancelled = true;
     }
 
-    private void OnSomaticActionAttempt(Entity<CP14ActionFreeHandsRequiredComponent> ent, ref ActionAttemptEvent args)
+    private void OnSomaticActionAttempt(Entity<CE14ActionFreeHandsRequiredComponent> ent, ref ActionAttemptEvent args)
     {
         if (args.Cancelled)
             return;
@@ -106,20 +106,20 @@ public abstract partial class CP14SharedActionSystem
                 return;
         }
 
-        Popup.PopupClient(Loc.GetString("cp14-magic-spell-need-somatic-component"), args.User, args.User);
+        Popup.PopupClient(Loc.GetString("CE14-magic-spell-need-somatic-component"), args.User, args.User);
         args.Cancelled = true;
     }
 
-    private void OnVerbalActionAttempt(Entity<CP14ActionSpeakingComponent> ent, ref ActionAttemptEvent args)
+    private void OnVerbalActionAttempt(Entity<CE14ActionSpeakingComponent> ent, ref ActionAttemptEvent args)
     {
         if (!HasComp<MutedComponent>(args.User))
             return;
 
-        Popup.PopupClient(Loc.GetString("cp14-magic-spell-need-verbal-component"), args.User, args.User);
+        Popup.PopupClient(Loc.GetString("CE14-magic-spell-need-verbal-component"), args.User, args.User);
         args.Cancelled = true;
     }
 
-    private void OnMaterialActionAttempt(Entity<CP14ActionMaterialCostComponent> ent, ref ActionAttemptEvent args)
+    private void OnMaterialActionAttempt(Entity<CE14ActionMaterialCostComponent> ent, ref ActionAttemptEvent args)
     {
         if (args.Cancelled)
             return;
@@ -138,31 +138,31 @@ public abstract partial class CP14SharedActionSystem
 
         if (!ent.Comp.Requirement.CheckRequirement(EntityManager, _proto, heldedItems))
         {
-            Popup.PopupClient(Loc.GetString("cp14-magic-spell-need-material-component"), args.User, args.User);
+            Popup.PopupClient(Loc.GetString("CE14-magic-spell-need-material-component"), args.User, args.User);
             args.Cancelled = true;
         }
     }
 
-    private void OnDangerousActionAttempt(Entity<CP14ActionDangerousComponent> ent, ref ActionAttemptEvent args)
+    private void OnDangerousActionAttempt(Entity<CE14ActionDangerousComponent> ent, ref ActionAttemptEvent args)
     {
         if (args.Cancelled)
             return;
 
         if (HasComp<PacifiedComponent>(args.User))
         {
-            Popup.PopupClient(Loc.GetString("cp14-magic-spell-pacified"), args.User, args.User);
+            Popup.PopupClient(Loc.GetString("CE14-magic-spell-pacified"), args.User, args.User);
             args.Cancelled = true;
         }
     }
 
-    private void OnSkillPointActionAttempt(Entity<CP14ActionSkillPointCostComponent> ent, ref ActionAttemptEvent args)
+    private void OnSkillPointActionAttempt(Entity<CE14ActionSkillPointCostComponent> ent, ref ActionAttemptEvent args)
     {
         if (!_proto.TryIndex(ent.Comp.SkillPoint, out var indexedSkillPoint) || ent.Comp.SkillPoint is null)
             return;
 
-        if (!TryComp<CP14SkillStorageComponent>(args.User, out var skillStorage))
+        if (!TryComp<CE14SkillStorageComponent>(args.User, out var skillStorage))
         {
-            Popup.PopupClient(Loc.GetString("cp14-magic-spell-skillpoint-not-enough",
+            Popup.PopupClient(Loc.GetString("CE14-magic-spell-skillpoint-not-enough",
                     ("name", Loc.GetString(indexedSkillPoint.Name)),
                     ("count", ent.Comp.Count)),
                 args.User,
@@ -180,7 +180,7 @@ public abstract partial class CP14SharedActionSystem
             {
                 var d = ent.Comp.Count - freePoints;
 
-                Popup.PopupClient(Loc.GetString("cp14-magic-spell-skillpoint-not-enough",
+                Popup.PopupClient(Loc.GetString("CE14-magic-spell-skillpoint-not-enough",
                         ("name", Loc.GetString(indexedSkillPoint.Name)),
                         ("count", d)),
                     args.User,
@@ -190,7 +190,7 @@ public abstract partial class CP14SharedActionSystem
         }
     }
 
-    private void OnTargetMobStatusRequiredValidate(Entity<CP14ActionTargetMobStatusRequiredComponent> ent,
+    private void OnTargetMobStatusRequiredValidate(Entity<CE14ActionTargetMobStatusRequiredComponent> ent,
         ref ActionValidateEvent args)
     {
         if (args.Invalid)
@@ -200,7 +200,7 @@ public abstract partial class CP14SharedActionSystem
 
         if (!TryComp<MobStateComponent>(target, out var mobStateComp))
         {
-            Popup.PopupClient(Loc.GetString("cp14-magic-spell-target-not-mob"), args.User, args.User);
+            Popup.PopupClient(Loc.GetString("CE14-magic-spell-target-not-mob"), args.User, args.User);
             args.Invalid = true;
             return;
         }
@@ -210,19 +210,19 @@ public abstract partial class CP14SharedActionSystem
             var states = string.Join(", ",
                 ent.Comp.AllowedStates.Select(state => state switch
                 {
-                    MobState.Alive => Loc.GetString("cp14-magic-spell-target-mob-state-live"),
-                    MobState.Dead => Loc.GetString("cp14-magic-spell-target-mob-state-dead"),
-                    MobState.Critical => Loc.GetString("cp14-magic-spell-target-mob-state-critical")
+                    MobState.Alive => Loc.GetString("CE14-magic-spell-target-mob-state-live"),
+                    MobState.Dead => Loc.GetString("CE14-magic-spell-target-mob-state-dead"),
+                    MobState.Critical => Loc.GetString("CE14-magic-spell-target-mob-state-critical")
                 }));
 
-            Popup.PopupClient(Loc.GetString("cp14-magic-spell-target-mob-state", ("state", states)),
+            Popup.PopupClient(Loc.GetString("CE14-magic-spell-target-mob-state", ("state", states)),
                 args.User,
                 args.User);
             args.Invalid = true;
         }
     }
 
-    private void OnActionSSDAttempt(Entity<CP14ActionSSDBlockComponent> ent, ref ActionValidateEvent args)
+    private void OnActionSSDAttempt(Entity<CE14ActionSSDBlockComponent> ent, ref ActionValidateEvent args)
     {
         if (args.Invalid)
             return;
@@ -232,17 +232,17 @@ public abstract partial class CP14SharedActionSystem
 
         if (ssdIndication.IsSSD)
         {
-            Popup.PopupClient(Loc.GetString("cp14-magic-spell-ssd"), args.User, args.User);
+            Popup.PopupClient(Loc.GetString("CE14-magic-spell-ssd"), args.User, args.User);
             args.Invalid = true;
         }
     }
 
-    private void OnReligionActionValidate(Entity<CP14ActionReligionRestrictedComponent> ent, ref ActionValidateEvent args)
+    private void OnReligionActionValidate(Entity<CE14ActionReligionRestrictedComponent> ent, ref ActionValidateEvent args)
     {
         if (args.Invalid)
             return;
 
-        if (!TryComp<CP14ReligionEntityComponent>(args.User, out var religionComp))
+        if (!TryComp<CE14ReligionEntityComponent>(args.User, out var religionComp))
             return;
 
         var position = GetCoordinates(args.Input.EntityCoordinatesTarget);
@@ -261,9 +261,9 @@ public abstract partial class CP14SharedActionSystem
 
         if (ent.Comp.OnlyOnFollowers)
         {
-            if (target is null || !TryComp<CP14ReligionFollowerComponent>(target, out var follower) || follower.Religion != religionComp.Religion)
+            if (target is null || !TryComp<CE14ReligionFollowerComponent>(target, out var follower) || follower.Religion != religionComp.Religion)
             {
-                Popup.PopupClient(Loc.GetString("cp14-magic-spell-target-god-follower"), args.User, args.User);
+                Popup.PopupClient(Loc.GetString("CE14-magic-spell-target-god-follower"), args.User, args.User);
                 args.Invalid = true;
             }
         }

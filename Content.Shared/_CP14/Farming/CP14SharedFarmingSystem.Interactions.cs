@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Shared._CP14.Farming.Components;
+using Content.Shared._CE14.Farming.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.EntityTable;
 using Content.Shared.Interaction;
@@ -10,9 +10,9 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.Farming;
+namespace Content.Shared._CE14.Farming;
 
-public abstract partial class CP14SharedFarmingSystem
+public abstract partial class CE14SharedFarmingSystem
 {
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -22,14 +22,14 @@ public abstract partial class CP14SharedFarmingSystem
 
     private void InitializeInteractions()
     {
-        SubscribeLocalEvent<CP14SeedComponent, AfterInteractEvent>(OnSeedInteract);
-        SubscribeLocalEvent<CP14PlantGatherableComponent, InteractUsingEvent>(OnActivate);
-        SubscribeLocalEvent<CP14PlantGatherableComponent, CP14PlantGatherDoAfterEvent>(OnGatherDoAfter);
+        SubscribeLocalEvent<CE14SeedComponent, AfterInteractEvent>(OnSeedInteract);
+        SubscribeLocalEvent<CE14PlantGatherableComponent, InteractUsingEvent>(OnActivate);
+        SubscribeLocalEvent<CE14PlantGatherableComponent, CE14PlantGatherDoAfterEvent>(OnGatherDoAfter);
 
-        SubscribeLocalEvent<CP14SeedComponent, CP14PlantSeedDoAfterEvent>(OnSeedPlantedDoAfter);
+        SubscribeLocalEvent<CE14SeedComponent, CE14PlantSeedDoAfterEvent>(OnSeedPlantedDoAfter);
     }
 
-    private void OnActivate(Entity<CP14PlantGatherableComponent> gatherable, ref InteractUsingEvent args)
+    private void OnActivate(Entity<CE14PlantGatherableComponent> gatherable, ref InteractUsingEvent args)
     {
         if (args.Handled)
             return;
@@ -41,7 +41,7 @@ public abstract partial class CP14SharedFarmingSystem
         args.Handled = true;
     }
 
-    private bool CanHarvestPlant(Entity<CP14PlantGatherableComponent> gatherable)
+    private bool CanHarvestPlant(Entity<CE14PlantGatherableComponent> gatherable)
     {
         if (PlantQuery.TryComp(gatherable, out var plant))
         {
@@ -55,7 +55,7 @@ public abstract partial class CP14SharedFarmingSystem
         return true;
     }
 
-    private bool TryHarvestPlant(Entity<CP14PlantGatherableComponent> gatherable,
+    private bool TryHarvestPlant(Entity<CE14PlantGatherableComponent> gatherable,
         EntityUid used,
         EntityUid user)
     {
@@ -68,7 +68,7 @@ public abstract partial class CP14SharedFarmingSystem
             new DoAfterArgs(EntityManager,
                 user,
                 gatherable.Comp.GatherDelay,
-                new CP14PlantGatherDoAfterEvent(),
+                new CE14PlantGatherDoAfterEvent(),
                 gatherable,
                 used: used)
             {
@@ -84,7 +84,7 @@ public abstract partial class CP14SharedFarmingSystem
         return true;
     }
 
-    private void OnGatherDoAfter(Entity<CP14PlantGatherableComponent> gatherable, ref CP14PlantGatherDoAfterEvent args)
+    private void OnGatherDoAfter(Entity<CE14PlantGatherableComponent> gatherable, ref CE14PlantGatherDoAfterEvent args)
     {
         if (args.Cancelled || args.Handled)
             return;
@@ -97,7 +97,7 @@ public abstract partial class CP14SharedFarmingSystem
         HarvestPlant(gatherable, out _, args.Used);
     }
 
-    public void HarvestPlant(Entity<CP14PlantGatherableComponent> gatherable,
+    public void HarvestPlant(Entity<CE14PlantGatherableComponent> gatherable,
         out HashSet<EntityUid> result,
         EntityUid? used)
     {
@@ -140,7 +140,7 @@ public abstract partial class CP14SharedFarmingSystem
         }
     }
 
-    private void OnSeedInteract(Entity<CP14SeedComponent> seed, ref AfterInteractEvent args)
+    private void OnSeedInteract(Entity<CE14SeedComponent> seed, ref AfterInteractEvent args)
     {
         if (args.Handled || !args.CanReach)
             return;
@@ -152,7 +152,7 @@ public abstract partial class CP14SharedFarmingSystem
             new DoAfterArgs(EntityManager,
                 args.User,
                 seed.Comp.PlantingTime,
-                new CP14PlantSeedDoAfterEvent(GetNetCoordinates(args.ClickLocation)),
+                new CE14PlantSeedDoAfterEvent(GetNetCoordinates(args.ClickLocation)),
                 seed)
             {
                 BreakOnDamage = true,
@@ -166,7 +166,7 @@ public abstract partial class CP14SharedFarmingSystem
         args.Handled = true;
     }
 
-    private void OnSeedPlantedDoAfter(Entity<CP14SeedComponent> ent, ref CP14PlantSeedDoAfterEvent args)
+    private void OnSeedPlantedDoAfter(Entity<CE14SeedComponent> ent, ref CE14PlantSeedDoAfterEvent args)
     {
         if (_net.IsClient || args.Handled || args.Cancelled)
             return;
@@ -181,7 +181,7 @@ public abstract partial class CP14SharedFarmingSystem
         QueueDel(ent);
     }
 
-    public bool CanPlantSeed(Entity<CP14SeedComponent> seed, EntityCoordinates position, EntityUid? user)
+    public bool CanPlantSeed(Entity<CE14SeedComponent> seed, EntityCoordinates position, EntityUid? user)
     {
         var map = _transform.GetMap(position);
         if (!TryComp<MapGridComponent>(map, out var gridComp))
@@ -195,7 +195,7 @@ public abstract partial class CP14SharedFarmingSystem
         {
             if (user is not null && _timing.IsFirstTimePredicted && _net.IsClient)
             {
-                _popup.PopupEntity(Loc.GetString("cp14-farming-soil-wrong", ("seed", MetaData(seed).EntityName)),
+                _popup.PopupEntity(Loc.GetString("CE14-farming-soil-wrong", ("seed", MetaData(seed).EntityName)),
                     user.Value,
                     user.Value);
             }
@@ -208,7 +208,7 @@ public abstract partial class CP14SharedFarmingSystem
             if (PlantQuery.TryComp(anchored, out var plant))
             {
                 if (user is not null && _timing.IsFirstTimePredicted && _net.IsClient)
-                    _popup.PopupEntity(Loc.GetString("cp14-farming-soil-occupied"), user.Value, user.Value);
+                    _popup.PopupEntity(Loc.GetString("CE14-farming-soil-occupied"), user.Value, user.Value);
                 return false;
             }
         }

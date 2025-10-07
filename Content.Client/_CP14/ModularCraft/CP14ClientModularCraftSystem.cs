@@ -1,6 +1,6 @@
 using Content.Client.Clothing;
-using Content.Shared._CP14.ModularCraft;
-using Content.Shared._CP14.ModularCraft.Components;
+using Content.Shared._CE14.ModularCraft;
+using Content.Shared._CE14.ModularCraft.Components;
 using Content.Shared.Clothing;
 using Content.Shared.Hands;
 using Content.Shared.Inventory;
@@ -11,9 +11,9 @@ using Robust.Client.ResourceManagement;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Client._CP14.ModularCraft;
+namespace Content.Client._CE14.ModularCraft;
 
-public sealed class CP14ClientModularCraftSystem : CP14SharedModularCraftSystem
+public sealed class CE14ClientModularCraftSystem : CE14SharedModularCraftSystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IResourceCache _resCache = default!;
@@ -22,12 +22,12 @@ public sealed class CP14ClientModularCraftSystem : CP14SharedModularCraftSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14ModularCraftStartPointComponent, AfterAutoHandleStateEvent>(OnAfterHandleState);
-        SubscribeLocalEvent<CP14ModularCraftStartPointComponent, GetInhandVisualsEvent>(OnGetInhandVisuals);
-        SubscribeLocalEvent<CP14ModularCraftStartPointComponent, GetEquipmentVisualsEvent>(OnGetEquipmentVisuals);
+        SubscribeLocalEvent<CE14ModularCraftStartPointComponent, AfterAutoHandleStateEvent>(OnAfterHandleState);
+        SubscribeLocalEvent<CE14ModularCraftStartPointComponent, GetInhandVisualsEvent>(OnGetInhandVisuals);
+        SubscribeLocalEvent<CE14ModularCraftStartPointComponent, GetEquipmentVisualsEvent>(OnGetEquipmentVisuals);
     }
 
-    private void OnAfterHandleState(Entity<CP14ModularCraftStartPointComponent> start,
+    private void OnAfterHandleState(Entity<CE14ModularCraftStartPointComponent> start,
         ref AfterAutoHandleStateEvent args)
     {
         if (!TryComp<SpriteComponent>(start, out var sprite))
@@ -36,7 +36,7 @@ public sealed class CP14ClientModularCraftSystem : CP14SharedModularCraftSystem
         UpdateIcon(start, sprite);
     }
 
-    private void UpdateIcon(Entity<CP14ModularCraftStartPointComponent> start, SpriteComponent? sprite = null)
+    private void UpdateIcon(Entity<CE14ModularCraftStartPointComponent> start, SpriteComponent? sprite = null)
     {
         if (!Resolve(start, ref sprite, false))
             return;
@@ -76,7 +76,7 @@ public sealed class CP14ClientModularCraftSystem : CP14SharedModularCraftSystem
                     State = state,
                 };
 
-                var keyCode = $"cp14-modular-icon-layer-{counterPart}-default";
+                var keyCode = $"CE14-modular-icon-layer-{counterPart}-default";
                 start.Comp.RevealedLayers.Add(keyCode);
                 var index = sprite.AddLayer(defaultLayer);
                 sprite.LayerMapSet(keyCode, index);
@@ -89,7 +89,7 @@ public sealed class CP14ClientModularCraftSystem : CP14SharedModularCraftSystem
                 var counter = 0;
                 foreach (var layer in indexedPart.IconSprite)
                 {
-                    var keyCode = $"cp14-modular-icon-layer-{counterPart}-{counter}";
+                    var keyCode = $"CE14-modular-icon-layer-{counterPart}-{counter}";
                     start.Comp.RevealedLayers.Add(keyCode);
                     var index = sprite.AddLayer(layer);
                     sprite.LayerMapSet(keyCode, index);
@@ -102,9 +102,9 @@ public sealed class CP14ClientModularCraftSystem : CP14SharedModularCraftSystem
         }
     }
 
-    private void OnGetInhandVisuals(Entity<CP14ModularCraftStartPointComponent> start, ref GetInhandVisualsEvent args)
+    private void OnGetInhandVisuals(Entity<CE14ModularCraftStartPointComponent> start, ref GetInhandVisualsEvent args)
     {
-        var defaultKey = $"cp14-modular-inhand-layer-{args.Location.ToString().ToLowerInvariant()}";
+        var defaultKey = $"CE14-modular-inhand-layer-{args.Location.ToString().ToLowerInvariant()}";
 
         if (!TryComp<ItemComponent>(start, out var item))
             return;
@@ -162,13 +162,13 @@ public sealed class CP14ClientModularCraftSystem : CP14SharedModularCraftSystem
         }
     }
 
-    private void OnGetEquipmentVisuals(Entity<CP14ModularCraftStartPointComponent> start,
+    private void OnGetEquipmentVisuals(Entity<CE14ModularCraftStartPointComponent> start,
         ref GetEquipmentVisualsEvent args)
     {
         if (!TryComp(args.Equipee, out InventoryComponent? inventory))
             return;
 
-        var defaultKey = $"cp14-modular-clothing-layer-{args.Slot}";
+        var defaultKey = $"CE14-modular-clothing-layer-{args.Slot}";
 
         foreach (var part in start.Comp.InstalledParts)
         {

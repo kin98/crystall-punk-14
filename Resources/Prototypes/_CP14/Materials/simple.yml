@@ -1,158 +1,158 @@
 - type: material
-  id: CP14WoodenPlanks
-  stackEntity: CP14WoodenPlanks1
-  name: cp14-material-wooden-planks
+  id: CE14WoodenPlanks
+  stackEntity: CE14WoodenPlanks1
+  name: CE14-material-wooden-planks
   unit: materials-unit-plank
-  icon: { sprite: _CP14/Objects/Materials/wood.rsi, state: planks_2 }
+  icon: { sprite: _CE14/Objects/Materials/wood.rsi, state: planks_2 }
   color: "#874d3a"
   price: 0.1
 
 - type: material
-  id: CP14LucensWoodenPlanks
-  stackEntity: CP14LucensWoodenPlanks1
-  name: cp14-material-lucens-planks
+  id: CE14LucensWoodenPlanks
+  stackEntity: CE14LucensWoodenPlanks1
+  name: CE14-material-lucens-planks
   unit: materials-unit-bar
-  icon: { sprite: _CP14/Objects/Materials/wood_lucens.rsi, state: planks_2 }
+  icon: { sprite: _CE14/Objects/Materials/wood_lucens.rsi, state: planks_2 }
   color: "#1a1e22"
   price: 1
 
 - type: material
-  id: CP14Dirt
-  stackEntity: CP14DirtBlock1
-  name: cp14-material-dirt-block
+  id: CE14Dirt
+  stackEntity: CE14DirtBlock1
+  name: CE14-material-dirt-block
   unit: materials-unit-chunk
-  icon: { sprite: _CP14/Objects/Materials/dirt_block.rsi, state: dirt_2 }
+  icon: { sprite: _CE14/Objects/Materials/dirt_block.rsi, state: dirt_2 }
   color: "#5e3f31"
   price: 0
 
 - type: material
-  id: CP14Stone
-  stackEntity: CP14StoneBlock1
-  name: cp14-material-stone-block
+  id: CE14Stone
+  stackEntity: CE14StoneBlock1
+  name: CE14-material-stone-block
   unit: materials-unit-chunk
-  icon: { sprite: _CP14/Objects/Materials/stone_block.rsi, state: stone_2 }
+  icon: { sprite: _CE14/Objects/Materials/stone_block.rsi, state: stone_2 }
   color: "#555963"
   price: 0.02
 
 - type: material
-  id: CP14Glass
-  stackEntity: CP14GlassSheet1
+  id: CE14Glass
+  stackEntity: CE14GlassSheet1
   name: materials-glass
-  icon: { sprite: _CP14/Objects/Materials/glass.rsi, state: glass_2 }
+  icon: { sprite: _CE14/Objects/Materials/glass.rsi, state: glass_2 }
   color: "#555963"
   price: 0.15
 
 - type: material
-  id: CP14MarbleStone
-  stackEntity: CP14MarbleBlock1
-  name: cp14-material-stone-block #TODO
+  id: CE14MarbleStone
+  stackEntity: CE14MarbleBlock1
+  name: CE14-material-stone-block #TODO
   unit: materials-unit-chunk
-  icon: { sprite: _CP14/Objects/Materials/marble_block.rsi, state: stone_2 }
+  icon: { sprite: _CE14/Objects/Materials/marble_block.rsi, state: stone_2 }
   color: "#555963"
   price: 0.15
 
 - type: material
-  id: CP14Cloth
-  stackEntity: CP14Cloth1
-  name: cp14-material-cloth
+  id: CE14Cloth
+  stackEntity: CE14Cloth1
+  name: CE14-material-cloth
   unit: materials-unit-roll
-  icon: { sprite: _CP14/Objects/Materials/cloth.rsi, state: cloth_3 }
+  icon: { sprite: _CE14/Objects/Materials/cloth.rsi, state: cloth_3 }
   color: "#d8e3e2"
   price: 0.3
 
 - type: material
-  id: CP14Copper
-  stackEntity: CP14CopperBar1
-  name: cp14-material-copper
+  id: CE14Copper
+  stackEntity: CE14CopperBar1
+  name: CE14-material-copper
   unit: materials-unit-bar
-  icon: { sprite: _CP14/Objects/Materials/copper_scrap.rsi, state: scrap }
+  icon: { sprite: _CE14/Objects/Materials/copper_scrap.rsi, state: scrap }
   color: "#9a5e22"
   price: 1
 
 - type: material
-  id: CP14Iron
-  stackEntity: CP14IronBar1
-  name: cp14-material-iron
+  id: CE14Iron
+  stackEntity: CE14IronBar1
+  name: CE14-material-iron
   unit: materials-unit-bar
-  icon: { sprite: _CP14/Objects/Materials/iron_scrap.rsi, state: scrap_2 }
+  icon: { sprite: _CE14/Objects/Materials/iron_scrap.rsi, state: scrap_2 }
   color: "#9093a1"
   price: 2
 
 - type: material
-  id: CP14Brass
-  stackEntity: CP14IronBar1
-  name: cp14-material-brass
+  id: CE14Brass
+  stackEntity: CE14IronBar1
+  name: CE14-material-brass
   unit: materials-unit-bar
-  icon: { sprite: _CP14/Objects/Materials/brass_bar.rsi, state: bar_2 }
+  icon: { sprite: _CE14/Objects/Materials/brass_bar.rsi, state: bar_2 }
   color: "#bb7547"
   price: 2.5
 
 - type: material
-  id: CP14Gold
-  stackEntity: CP14GoldBar1
-  name: cp14-material-gold
+  id: CE14Gold
+  stackEntity: CE14GoldBar1
+  name: CE14-material-gold
   unit: materials-unit-bar
-  icon: { sprite: _CP14/Objects/Materials/gold_scrap.rsi, state: scrap_3 }
+  icon: { sprite: _CE14/Objects/Materials/gold_scrap.rsi, state: scrap_3 }
   color: "#FFD700"
   price: 8
 
 - type: material
-  id: CP14Mithril
-  stackEntity: CP14MithrilBar1
-  name: cp14-material-mithril
+  id: CE14Mithril
+  stackEntity: CE14MithrilBar1
+  name: CE14-material-mithril
   unit: materials-unit-bar
-  icon: { sprite: _CP14/Objects/Materials/mithril_scrap.rsi, state: scrap }
+  icon: { sprite: _CE14/Objects/Materials/mithril_scrap.rsi, state: scrap }
   color: "#006c83"
   price: 5
 
 - type: material
-  id: CP14OreCoal
-  stackEntity: CP14OreCoal1
-  name: cp14-material-coal
-  icon: { sprite: _CP14/Objects/Materials/coal_ore.rsi, state: ore2 }
+  id: CE14OreCoal
+  stackEntity: CE14OreCoal1
+  name: CE14-material-coal
+  icon: { sprite: _CE14/Objects/Materials/coal_ore.rsi, state: ore2 }
   color: "#232526"
   price: 0.8
 
 - type: material
-  id: CP14FloraMaterial
-  stackEntity: CP14FloraMaterial1
-  name: cp14-material-flora
+  id: CE14FloraMaterial
+  stackEntity: CE14FloraMaterial1
+  name: CE14-material-flora
   unit: materials-unit-bunch
-  icon: { sprite: _CP14/Objects/Materials/flora.rsi, state: grass_material1 }
+  icon: { sprite: _CE14/Objects/Materials/flora.rsi, state: grass_material1 }
   color: "#85903e"
   price: 0.01
 
 - type: material
-  id: CP14Ash
-  stackEntity: CP14Ash1
-  name: cp14-material-ash
-  unit: cp14-materials-unit-pile
-  icon: { sprite: _CP14/Objects/Materials/ash.rsi, state: ash_1 }
+  id: CE14Ash
+  stackEntity: CE14Ash1
+  name: CE14-material-ash
+  unit: CE14-materials-unit-pile
+  icon: { sprite: _CE14/Objects/Materials/ash.rsi, state: ash_1 }
   color: "#2d313c"
   price: 0
 
 - type: material
-  id: CP14Leather
-  stackEntity: CP14Leather1
-  name: cp14-material-leather
+  id: CE14Leather
+  stackEntity: CE14Leather1
+  name: CE14-material-leather
   unit: materials-unit-roll
-  icon: { sprite: _CP14/Objects/Ingredients/leather.rsi, state: leather }
+  icon: { sprite: _CE14/Objects/Ingredients/leather.rsi, state: leather }
   color: "#a78a63"
   price: 1.2
 
 - type: material
-  id: CP14BloodEssence
-  stackEntity: CP14BloodEssence
-  name: cp14-stack-blood-essence
+  id: CE14BloodEssence
+  stackEntity: CE14BloodEssence
+  name: CE14-stack-blood-essence
   unit: materials-unit-bar
-  icon: { sprite: _CP14/Objects/Materials/blood_essence.rsi, state: drop }
+  icon: { sprite: _CE14/Objects/Materials/blood_essence.rsi, state: drop }
   color: "#a78a63"
   price: 8
 
 - type: material
-  id: CP14Bone
-  stackEntity: CP14Bone1
-  name: cp14-material-bone
-  icon: { sprite: _CP14/Objects/Materials/bones.rsi, state: bone_1 }
+  id: CE14Bone
+  stackEntity: CE14Bone1
+  name: CE14-material-bone
+  icon: { sprite: _CE14/Objects/Materials/bones.rsi, state: bone_1 }
   color: "#ccb495"
   price: 0.15

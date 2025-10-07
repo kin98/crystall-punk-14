@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14FoodCabbage
+  id: CE14FoodCabbage
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: cabbage
@@ -11,7 +11,7 @@
     flavors:
       - cabbage
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/cabbage.rsi
+    sprite: _CE14/Objects/Flora/Farm/cabbage.rsi
     layers:
       - state: base1
         map: [ "random" ]
@@ -33,16 +33,16 @@
   - type: SliceableFood
     count: 4
     sliceTime: 1.5
-    slice: CP14FoodCabbageSlice
+    slice: CE14FoodCabbageSlice
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
-    - CP14Salad
-    - CP14Cabbage
+    - CE14FarmFood
+    - CE14Vegetable
+    - CE14Salad
+    - CE14Cabbage
 
 - type: entity
-  id: CP14FoodCabbageSlice
+  id: CE14FoodCabbageSlice
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: cabbage leaf
@@ -54,7 +54,7 @@
     flavors:
       - cabbage
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/cabbage.rsi
+    sprite: _CE14/Objects/Flora/Farm/cabbage.rsi
     layers:
       - state: slice1
         map: [ "random" ]
@@ -76,16 +76,16 @@
           Quantity: 0.14
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14CabbageSandwich
+      CE14Sandwich: CE14CabbageSandwich
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
-    - CP14Salad
-    - CP14Cabbage
+    - CE14FarmFood
+    - CE14Vegetable
+    - CE14Salad
+    - CE14Cabbage
 
 - type: entity
-  id: CP14FoodPumpkin
+  id: CE14FoodPumpkin
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: pumpkin
@@ -97,7 +97,7 @@
     flavors:
       - pumpkin
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/pumpkin.rsi
+    sprite: _CE14/Objects/Flora/Farm/pumpkin.rsi
     layers:
       - state: base1
         map: [ "random" ]
@@ -120,15 +120,15 @@
   - type: SliceableFood
     count: 5
     sliceTime: 2
-    slice: CP14FoodPumpkinSlice
+    slice: CE14FoodPumpkinSlice
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
-    - CP14Pumpkin
+    - CE14FarmFood
+    - CE14Vegetable
+    - CE14Pumpkin
 
 - type: entity
-  id: CP14FoodPumpkinSlice
+  id: CE14FoodPumpkinSlice
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: pumpkin slice
@@ -140,7 +140,7 @@
     flavors:
       - pumpkin
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/pumpkin.rsi
+    sprite: _CE14/Objects/Flora/Farm/pumpkin.rsi
     layers:
       - state: slice1
         map: [ "random" ]
@@ -162,15 +162,15 @@
           Quantity: 0.57
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14PumpkinSandwich
+      CE14Sandwich: CE14PumpkinSandwich
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
-    - CP14Pumpkin
+    - CE14FarmFood
+    - CE14Vegetable
+    - CE14Pumpkin
 
 - type: entity
-  id: CP14FoodPotato
+  id: CE14FoodPotato
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: potato
@@ -182,7 +182,7 @@
     flavors:
       - potatoes
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/potato.rsi
+    sprite: _CE14/Objects/Flora/Farm/potato.rsi
     layers:
       - state: base1
         map: [ "random" ]
@@ -202,25 +202,25 @@
           Quantity: 2.33
         - ReagentId: Vitamin
           Quantity: 1.14
-  - type: CP14Seed
-    plantProto: CP14PlantPotato #TODO sliceable potato
+  - type: CE14Seed
+    plantProto: CE14PlantPotato #TODO sliceable potato
   - type: Temperature
     currentTemperature: 290
   - type: InternalTemperature
     thickness: 0.006
     area: 0.006
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodPotatoHot
+      transformTo: CE14FoodPotatoHot
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
-    - CP14Potato
+    - CE14FarmFood
+    - CE14Vegetable
+    - CE14Potato
 
 - type: entity
-  id: CP14FoodCucumber
+  id: CE14FoodCucumber
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: cucumber
@@ -230,10 +230,10 @@
     size: Tiny
   - type: FlavorProfile
     flavors:
-      - CP14Water
-      - CP14cucumber
+      - CE14Water
+      - CE14cucumber
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/cucumber.rsi
+    sprite: _CE14/Objects/Flora/Farm/cucumber.rsi
     layers:
       - state: base1
         map: [ "random" ]
@@ -258,14 +258,14 @@
   - type: SliceableFood
     count: 2
     sliceTime: 1
-    slice: CP14FoodCucumberSlice
+    slice: CE14FoodCucumberSlice
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
+    - CE14FarmFood
+    - CE14Vegetable
 
 - type: entity
-  id: CP14FoodCucumberSlice
+  id: CE14FoodCucumberSlice
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: cucumber slice
@@ -275,10 +275,10 @@
     size: Tiny
   - type: FlavorProfile
     flavors:
-      - CP14Water
-      - CP14cucumber
+      - CE14Water
+      - CE14cucumber
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/cucumber.rsi
+    sprite: _CE14/Objects/Flora/Farm/cucumber.rsi
     layers:
       - state: slice1
   - type: SolutionContainerManager
@@ -294,14 +294,14 @@
           Quantity: 1.5
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14CucumberSandwich
+      CE14Sandwich: CE14CucumberSandwich
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
+    - CE14FarmFood
+    - CE14Vegetable
 
 - type: entity
-  id: CP14FoodTomatoes
+  id: CE14FoodTomatoes
   parent: [FoodInjectableBase, ItemHeftyBase]
   categories: [ ForkFiltered ]
   name: tomatoes
@@ -313,7 +313,7 @@
     flavors:
       - tomato
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/tomatoes.rsi
+    sprite: _CE14/Objects/Flora/Farm/tomatoes.rsi
     layers:
       - state: base1
         map: [ "random" ]
@@ -337,7 +337,7 @@
   - type: SliceableFood
     count: 3
     sliceTime: 1
-    slice: CP14FoodTomatoesSlice
+    slice: CE14FoodTomatoesSlice
   - type: Destructible
     thresholds:
     - trigger:
@@ -366,11 +366,11 @@
         Blunt: 1
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
+    - CE14FarmFood
+    - CE14Vegetable
 
 - type: entity
-  id: CP14FoodTomatoesSlice
+  id: CE14FoodTomatoesSlice
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: tomato slice
@@ -382,7 +382,7 @@
     flavors:
       - tomato
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/tomatoes.rsi
+    sprite: _CE14/Objects/Flora/Farm/tomatoes.rsi
     layers:
       - state: slice1
         map: [ "random" ]
@@ -401,14 +401,14 @@
           Quantity: 0.57
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14TomatoesSandwich
+      CE14Sandwich: CE14TomatoesSandwich
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
+    - CE14FarmFood
+    - CE14Vegetable
 
 - type: entity
-  id: CP14FoodApple
+  id: CE14FoodApple
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: apple
@@ -429,7 +429,7 @@
         - ReagentId: Vitamin
           Quantity: 2.29
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/apple.rsi
+    sprite: _CE14/Objects/Flora/Farm/apple.rsi
     layers:
       - state: base1
   - type: Extractable
@@ -440,14 +440,14 @@
   - type: SliceableFood
     count: 4
     sliceTime: 1.5
-    slice: CP14FoodAppleSlice
+    slice: CE14FoodAppleSlice
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Fruits
+    - CE14FarmFood
+    - CE14Fruits
 
 - type: entity
-  id: CP14FoodAppleSlice
+  id: CE14FoodAppleSlice
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: apple slice
@@ -459,7 +459,7 @@
     flavors:
       - apple
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/apple.rsi
+    sprite: _CE14/Objects/Flora/Farm/apple.rsi
     layers:
       - state: slice1
   - type: SolutionContainerManager
@@ -473,14 +473,14 @@
           Quantity: 0.57
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14AppleSandwich
+      CE14Sandwich: CE14AppleSandwich
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Fruits
+    - CE14FarmFood
+    - CE14Fruits
 
 - type: entity
-  id: CP14FoodPepper
+  id: CE14FoodPepper
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: pepper
@@ -492,7 +492,7 @@
     flavors:
       - peppery
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/pepper.rsi
+    sprite: _CE14/Objects/Flora/Farm/pepper.rsi
     layers:
       - state: base1
         map: [ "random" ]
@@ -505,7 +505,7 @@
   - type: SliceableFood
     count: 4
     sliceTime: 2
-    slice: CP14FoodPepperSlice
+    slice: CE14FoodPepperSlice
   - type: SolutionContainerManager
     solutions:
       food:
@@ -517,11 +517,11 @@
           Quantity: 3.43
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
+    - CE14FarmFood
+    - CE14Vegetable
 
 - type: entity
-  id: CP14FoodPepperSlice
+  id: CE14FoodPepperSlice
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: pepper slice
@@ -533,7 +533,7 @@
     flavors:
       - peppery
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/pepper.rsi
+    sprite: _CE14/Objects/Flora/Farm/pepper.rsi
     layers:
       - state: slice1
   - type: SolutionContainerManager
@@ -547,14 +547,14 @@
           Quantity: 1
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14PepperSandwich
+      CE14Sandwich: CE14PepperSandwich
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
+    - CE14FarmFood
+    - CE14Vegetable
 
 - type: entity
-  id: CP14FoodOnion
+  id: CE14FoodOnion
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: onion
@@ -566,7 +566,7 @@
     flavors:
       - onion
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/onion.rsi
+    sprite: _CE14/Objects/Flora/Farm/onion.rsi
     layers:
       - state: base1
         map: [ "random" ]
@@ -590,16 +590,16 @@
   - type: SliceableFood
     count: 4
     sliceTime: 2
-    slice: CP14FoodOnionSlice
-  - type: CP14Seed
-    plantProto: CP14PlantOnion
+    slice: CE14FoodOnionSlice
+  - type: CE14Seed
+    plantProto: CE14PlantOnion
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
+    - CE14FarmFood
+    - CE14Vegetable
 
 - type: entity
-  id: CP14FoodOnionSlice
+  id: CE14FoodOnionSlice
   parent: FoodInjectableBase
   categories: [ ForkFiltered ]
   name: onion ring
@@ -611,7 +611,7 @@
     flavors:
       - onion
   - type: Sprite
-    sprite: _CP14/Objects/Flora/Farm/onion.rsi
+    sprite: _CE14/Objects/Flora/Farm/onion.rsi
     layers:
       - state: slice1
   - type: SolutionContainerManager
@@ -627,8 +627,8 @@
           Quantity: 0.8
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14OnionSandwich
+      CE14Sandwich: CE14OnionSandwich
   - type: Tag
     tags:
-    - CP14FarmFood
-    - CP14Vegetable
+    - CE14FarmFood
+    - CE14Vegetable

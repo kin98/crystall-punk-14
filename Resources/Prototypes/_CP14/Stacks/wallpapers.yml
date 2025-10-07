@@ -1,63 +1,63 @@
 - type: stack
-  id: CP14WallpaperBlack
-  name: cp14-stack-wallpaper
-  spawn: CP14WallpaperBlack
-  icon: { sprite: _CP14/Structures/Wallpaper/icons.rsi, state: black }
+  id: CE14WallpaperBlack
+  name: CE14-stack-wallpaper
+  spawn: CE14WallpaperBlack
+  icon: { sprite: _CE14/Structures/Wallpaper/icons.rsi, state: black }
   maxCount: 30
 
 - type: stack
-  id: CP14WallpaperGreen
-  name: cp14-stack-wallpaper
-  spawn: CP14WallpaperGreen
-  icon: { sprite: _CP14/Structures/Wallpaper/icons.rsi, state: green }
+  id: CE14WallpaperGreen
+  name: CE14-stack-wallpaper
+  spawn: CE14WallpaperGreen
+  icon: { sprite: _CE14/Structures/Wallpaper/icons.rsi, state: green }
   maxCount: 30
 
 - type: stack
-  id: CP14WallpaperPurple
-  name: cp14-stack-wallpaper
-  spawn: CP14WallpaperPurple
-  icon: { sprite: _CP14/Structures/Wallpaper/icons.rsi, state: purple }
+  id: CE14WallpaperPurple
+  name: CE14-stack-wallpaper
+  spawn: CE14WallpaperPurple
+  icon: { sprite: _CE14/Structures/Wallpaper/icons.rsi, state: purple }
   maxCount: 30
 
 - type: stack
-  id: CP14WallpaperRed
-  name: cp14-stack-wallpaper
-  spawn: CP14WallpaperRed
-  icon: { sprite: _CP14/Structures/Wallpaper/icons.rsi, state: red }
+  id: CE14WallpaperRed
+  name: CE14-stack-wallpaper
+  spawn: CE14WallpaperRed
+  icon: { sprite: _CE14/Structures/Wallpaper/icons.rsi, state: red }
   maxCount: 30
 
 - type: stack
-  id: CP14WallpaperWhite
-  name: cp14-stack-wallpaper
-  spawn: CP14WallpaperWhite
-  icon: { sprite: _CP14/Structures/Wallpaper/icons.rsi, state: white }
+  id: CE14WallpaperWhite
+  name: CE14-stack-wallpaper
+  spawn: CE14WallpaperWhite
+  icon: { sprite: _CE14/Structures/Wallpaper/icons.rsi, state: white }
   maxCount: 30
 
 - type: stack
-  id: CP14WallpaperWhite2
-  name: cp14-stack-wallpaper
-  spawn: CP14WallpaperWhite2
-  icon: { sprite: _CP14/Structures/Wallpaper/icons.rsi, state: white2 }
+  id: CE14WallpaperWhite2
+  name: CE14-stack-wallpaper
+  spawn: CE14WallpaperWhite2
+  icon: { sprite: _CE14/Structures/Wallpaper/icons.rsi, state: white2 }
   maxCount: 30
 
 - type: stack
-  id: CP14WallpaperYellow
-  name: cp14-stack-wallpaper
-  spawn: CP14WallpaperYellow
-  icon: { sprite: _CP14/Structures/Wallpaper/icons.rsi, state: yellow }
+  id: CE14WallpaperYellow
+  name: CE14-stack-wallpaper
+  spawn: CE14WallpaperYellow
+  icon: { sprite: _CE14/Structures/Wallpaper/icons.rsi, state: yellow }
   maxCount: 30
 
 - type: stack
-  id: CP14WallpaperBank
-  name: cp14-stack-wallpaper
-  spawn: CP14WallpaperBank
-  icon: { sprite: _CP14/Structures/Wallpaper/icons.rsi, state: bank }
+  id: CE14WallpaperBank
+  name: CE14-stack-wallpaper
+  spawn: CE14WallpaperBank
+  icon: { sprite: _CE14/Structures/Wallpaper/icons.rsi, state: bank }
   maxCount: 30
 
 - type: stack
-  id: CP14WallpaperBank2
-  name: cp14-stack-wallpaper
-  spawn: CP14WallpaperBank2
-  icon: { sprite: _CP14/Structures/Wallpaper/icons.rsi, state: bank2 }
+  id: CE14WallpaperBank2
+  name: CE14-stack-wallpaper
+  spawn: CE14WallpaperBank2
+  icon: { sprite: _CE14/Structures/Wallpaper/icons.rsi, state: bank2 }
   maxCount: 30
 

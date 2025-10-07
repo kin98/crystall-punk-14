@@ -1,10 +1,10 @@
 - type: biomeTemplate
-  id: CP14CavesMushroomFloor
+  id: CE14CavesMushroomFloor
   layers:
     - !type:BiomeMetaLayer
-      template: CP14CavesFloor
+      template: CE14CavesFloor
     - !type:BiomeTileLayer
-      tile: CP14FloorMycelium
+      tile: CE14FloorMycelium
       threshold: 0
       noise:
         seed: 0
@@ -17,7 +17,7 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
     - !type:BiomeTileLayer
-      tile: CP14FloorMyceliumLight
+      tile: CE14FloorMyceliumLight
       threshold: 0.45
       noise:
         seed: 0
@@ -31,10 +31,10 @@
         domainWarpAmp: 120
 
 - type: biomeTemplate
-  id: CP14CavesMushroom
+  id: CE14CavesMushroom
   layers:
     - !type:BiomeMetaLayer
-      template: CP14CavesMushroomFloor
+      template: CE14CavesMushroomFloor
     #Walls
     - !type:BiomeEntityLayer
       threshold: -0.75
@@ -47,12 +47,12 @@
         frequency: 0.05
         gain: 0.5
       allowedTiles:
-        - CP14FloorBase
-        - CP14FloorMycelium
-        - CP14FloorMyceliumLight
-        - CP14FloorCobblestone
+        - CE14FloorBase
+        - CE14FloorMycelium
+        - CE14FloorMyceliumLight
+        - CE14FloorCobblestone
       entities:
-        - CP14WallStone
+        - CE14WallStone
     - !type:BiomeEntityLayer
       threshold: -0.79
       invert: true
@@ -64,9 +64,9 @@
         frequency: 0.05
         gain: 0.5
       allowedTiles:
-        - CP14FloorDirt
+        - CE14FloorDirt
       entities:
-        - CP14WallDirt
+        - CE14WallDirt
       #Mazy mini tunenls
     - !type:BiomeEntityLayer
       threshold: 0.40
@@ -78,12 +78,12 @@
         fractalType: Ridged
         octaves: 1
       allowedTiles:
-        - CP14FloorBase
-        - CP14FloorMycelium
-        - CP14FloorMyceliumLight
-        - CP14FloorCobblestone
+        - CE14FloorBase
+        - CE14FloorMycelium
+        - CE14FloorMyceliumLight
+        - CE14FloorCobblestone
       entities:
-        - CP14RoofRemover #Lol, i just wanna air here. TODO: fix
+        - CE14RoofRemover #Lol, i just wanna air here. TODO: fix
      # Rare Trees
     - !type:BiomeEntityLayer
       threshold: 0.8
@@ -93,21 +93,21 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorMycelium
-        - CP14FloorMyceliumLight
+        - CE14FloorMycelium
+        - CE14FloorMyceliumLight
       entities:
-        - CP14MushroomTree1
-        - CP14MushroomTree2
-        - CP14MushroomTree3
-        - CP14MushroomTree4
+        - CE14MushroomTree1
+        - CE14MushroomTree2
+        - CE14MushroomTree3
+        - CE14MushroomTree4
 
 # Subbiomes
 
 - type: biomeTemplate
-  id: CP14MushroomCaveForest # Лес
+  id: CE14MushroomCaveForest # Лес
   layers:
     - !type:BiomeMetaLayer
-      template: CP14CavesMushroom
+      template: CE14CavesMushroom
     - !type:BiomeEntityLayer # More Trees
       threshold: 0.2
       noise:
@@ -116,29 +116,29 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorMycelium
-        - CP14FloorMyceliumLight
+        - CE14FloorMycelium
+        - CE14FloorMyceliumLight
       entities:
-        - CP14MushroomTree1
-        - CP14MushroomTree2
-        - CP14MushroomTree3
-        - CP14MushroomTree4
-        - CP14MushroomTree1
-        - CP14MushroomTree2
-        - CP14MushroomTree3
-        - CP14MushroomTree4
-        - CP14MushroomTree1Glowing
-        - CP14MushroomTree2Glowing
-        - CP14MushroomTree3Glowing
-        - CP14MushroomTree4Glowing
+        - CE14MushroomTree1
+        - CE14MushroomTree2
+        - CE14MushroomTree3
+        - CE14MushroomTree4
+        - CE14MushroomTree1
+        - CE14MushroomTree2
+        - CE14MushroomTree3
+        - CE14MushroomTree4
+        - CE14MushroomTree1Glowing
+        - CE14MushroomTree2Glowing
+        - CE14MushroomTree3Glowing
+        - CE14MushroomTree4Glowing
 
 - type: biomeTemplate
-  id: CP14MushroomsCaveResult
+  id: CE14MushroomsCaveResult
   layers:
     - !type:BiomeMetaLayer
-      template: CP14CavesMushroom
+      template: CE14CavesMushroom
     - !type:BiomeMetaLayer
-      template: CP14MushroomCaveForest
+      template: CE14MushroomCaveForest
       threshold: 0.2
       noise:
         seed: 18

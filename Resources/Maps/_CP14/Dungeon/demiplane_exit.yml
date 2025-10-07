@@ -14,17 +14,17 @@ orphans: []
 nullspace: []
 tilemap:
   0: Space
-  9: CP14FloorFoundation
-  13: CP14FloorGrass
-  14: CP14FloorGrassLight
-  15: CP14FloorGrassTall
-  10: CP14FloorOakWoodPlanksBig
-  12: CP14FloorOakWoodPlanksBroken
-  11: CP14FloorOakWoodPlanksCruciform
-  17: CP14FloorStonebricks
-  16: CP14FloorStonebricksSmallCarved1
-  19: CP14FloorStonebricksSmallCarved2
-  18: CP14FloorStonebricksSquareCarved
+  9: CE14FloorFoundation
+  13: CE14FloorGrass
+  14: CE14FloorGrassLight
+  15: CE14FloorGrassTall
+  10: CE14FloorOakWoodPlanksBig
+  12: CE14FloorOakWoodPlanksBroken
+  11: CE14FloorOakWoodPlanksCruciform
+  17: CE14FloorStonebricks
+  16: CE14FloorStonebricksSmallCarved1
+  19: CE14FloorStonebricksSmallCarved2
+  18: CE14FloorStonebricksSquareCarved
   2: FloorAsteroidSand
   6: FloorAsteroidSandUnvariantized
   5: FloorAsteroidTile
@@ -123,7 +123,7 @@ entities:
     - type: SpreaderGrid
     - type: GridPathfinding
     - type: RadiationGridResistance
-- proto: CP14DemiplanePassway
+- proto: CE14DemiplanePassway
   entities:
   - uid: 3
     components:
@@ -132,7 +132,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14FenceBigIron
+- proto: CE14FenceBigIron
   entities:
   - uid: 2
     components:
@@ -179,7 +179,7 @@ entities:
     - type: Transform
       pos: 1.5,2.5
       parent: 1
-- proto: CP14WallStonebrickOld
+- proto: CE14WallStonebrickOld
   entities:
   - uid: 4
     components:

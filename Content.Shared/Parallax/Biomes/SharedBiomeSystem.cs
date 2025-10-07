@@ -129,7 +129,7 @@ public abstract class SharedBiomeSystem : EntitySystem
             if (layer is BiomeMetaLayer meta)
             {
                 if (TryGetTile(indices, ProtoManager.Index<BiomeTemplatePrototype>(meta.Template).Layers, seed, grid, out tile))
-                    //CP14 bandage - replaced from TryGetBiomeTile (not working for biomespawner)
+                    //CE14 bandage - replaced from TryGetBiomeTile (not working for biomespawner)
                 {
                     return true;
                 }

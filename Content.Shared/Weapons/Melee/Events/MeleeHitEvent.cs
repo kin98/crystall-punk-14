@@ -67,9 +67,9 @@ public sealed class MeleeHitEvent : HandledEntityEventArgs
     public bool IsHit = true;
 
     /// <summary>
-    /// CP14 Heavy attack flag.
+    /// CE14 Heavy attack flag.
     /// </summary>
-    public bool CP14Heavy;
+    public bool CE14Heavy;
 
     public MeleeHitEvent(List<EntityUid> hitEntities, EntityUid user, EntityUid weapon, DamageSpecifier baseDamage, Vector2? direction, bool heavy = false)
     {
@@ -78,7 +78,7 @@ public sealed class MeleeHitEvent : HandledEntityEventArgs
         Weapon = weapon;
         BaseDamage = baseDamage;
         Direction = direction;
-        CP14Heavy = heavy; //CP14
+        CE14Heavy = heavy; //CE14
     }
 }
 

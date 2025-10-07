@@ -1,8 +1,8 @@
 - type: entity
-  id: CP14AlchemySolutionCleaner
+  id: CE14AlchemySolutionCleaner
   parent:
   - BaseStructureDynamic
-  - CP14BaseCrystalSlot
+  - CE14BaseCrystalSlot
   name: solution cleaner
   description: An alchemical device that destroys from a solution poured into it the reagent that is least in the solution. Requires an energy crystal to operate.
   categories: [ ForkFiltered ]
@@ -12,7 +12,7 @@
     drawdepth: Items
     noRot: true
     offset: 0, 0.2
-    sprite: _CP14/Structures/Specific/Alchemy/cleaner.rsi
+    sprite: _CE14/Structures/Specific/Alchemy/cleaner.rsi
     layers:
       - state: rotate_back_stop
         map: ["poweredBack"]
@@ -28,11 +28,11 @@
         visible: false
   - type: GenericVisualizer
     visuals:
-      enum.CP14MagicSlotVisuals.Inserted:
+      enum.CE14MagicSlotVisuals.Inserted:
         crystal:
           True: { visible: true }
           False: { visible: false }
-      enum.CP14MagicSlotVisuals.Powered:
+      enum.CE14MagicSlotVisuals.Powered:
         poweredFront:
           True: { state: rotate_front }
           False: { state: rotate_front_stop }
@@ -52,7 +52,7 @@
     solutions:
       cleaner:
         maxVol: 50
-  - type: CP14SolutionTemperature
+  - type: CE14SolutionTemperature
   - type: DrainableSolution
     solution: cleaner
   - type: ExaminableSolution
@@ -65,21 +65,21 @@
     solution: cleaner
   - type: DumpableSolution
     solution: cleaner
-  - type: CP14SolutionCleaner
+  - type: CE14SolutionCleaner
     solution: cleaner
     leakageQuantity: 1
-  - type: CP14MagicEnergyAmbientSound
+  - type: CE14MagicEnergyAmbientSound
   - type: AmbientSound
     enabled: false
     range: 6
     volume: -3
     sound:
-      path: /Audio/_CP14/Ambience/normalizer_working.ogg
+      path: /Audio/_CE14/Ambience/normalizer_working.ogg
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 5
     fillBaseName: liq-
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: -0.8
     delay: 1
 

@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14ClosetGlassShowcase
-  parent: CP14ClosetBase
+  id: CE14ClosetGlassShowcase
+  parent: CE14ClosetBase
   name: glass showcase
   description: Something of value can be placed here without fear of it being discreetly stolen!
   abstract: true
@@ -8,7 +8,7 @@
   - type: Sprite
     drawdepth: Mobs
     snapCardinals: true
-    sprite: _CP14/Structures/Storage/glass_showcase.rsi
+    sprite: _CE14/Structures/Storage/glass_showcase.rsi
     state: base
   - type: EntityStorage
     isCollidableWhenOpen: true
@@ -54,7 +54,7 @@
           collection: WindowShatter
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14GlassShard:
+          CE14GlassShard:
             min: 1
             max: 2
       - !type:DoActsBehavior
@@ -71,34 +71,34 @@
     locked: true
 
 - type: entity
-  parent: CP14ClosetGlassShowcase
-  id: CP14ClosetGlassShowcaseGuildmaster
+  parent: CE14ClosetGlassShowcase
+  id: CE14ClosetGlassShowcaseGuildmaster
   name: guildmaster showcase
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateShape: Guildmaster
 
 - type: entity
-  parent: CP14ClosetGlassShowcase
-  id: CP14ClosetGlassShowcaseMerchant1
+  parent: CE14ClosetGlassShowcase
+  id: CE14ClosetGlassShowcaseMerchant1
   name: merchant shop 1 showcase
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateShape: Shop1
 
 - type: entity
-  parent: CP14ClosetGlassShowcase
-  id: CP14ClosetGlassShowcaseMerchant2
+  parent: CE14ClosetGlassShowcase
+  id: CE14ClosetGlassShowcaseMerchant2
   name: merchant shop 2 showcase
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateShape: Shop2
 
 - type: entity
-  parent: CP14ClosetGlassShowcase
-  id: CP14ClosetGlassShowcaseMerchant3
+  parent: CE14ClosetGlassShowcase
+  id: CE14ClosetGlassShowcaseMerchant3
   name: merchant shop 3 showcase
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateShape: Shop3
 

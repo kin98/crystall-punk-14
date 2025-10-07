@@ -5,18 +5,18 @@ using Content.Shared.FixedPoint;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Chemistry.ReagentEffect;
+namespace Content.Shared._CE14.Chemistry.ReagentEffect;
 
 [UsedImplicitly]
 [DataDefinition]
-public sealed partial class CP14InverseEffect : EntityEffect
+public sealed partial class CE14InverseEffect : EntityEffect
 {
     [DataField]
     public Dictionary<ProtoId<ReagentPrototype>, ProtoId<ReagentPrototype>> Inversion = new();
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
     {
-        return Loc.GetString("cp14-reagent-effect-guidebook-inverse-effect", ("chance", Probability));
+        return Loc.GetString("CE14-reagent-effect-guidebook-inverse-effect", ("chance", Probability));
     }
 
     public override void Effect(EntityEffectBaseArgs args)

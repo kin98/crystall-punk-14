@@ -1,83 +1,83 @@
 
 - type: entity
-  id: CP14TorsoHuman
+  id: CE14TorsoHuman
   parent: TorsoHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
     state: torso
 
 - type: entity
-  id: CP14HeadHuman
+  id: CE14HeadHuman
   parent: HeadHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
     state: head
 
 - type: entity
-  id: CP14LeftArmHuman
+  id: CE14LeftArmHuman
   parent: LeftArmHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
 
 - type: entity
-  id: CP14RightArmHuman
+  id: CE14RightArmHuman
   parent: RightArmHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
 
 - type: entity
-  id: CP14LeftHandHuman
+  id: CE14LeftHandHuman
   parent: LeftHandHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
 
 - type: entity
-  id: CP14RightHandHuman
+  id: CE14RightHandHuman
   parent: RightHandHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
 
 - type: entity
-  id: CP14LeftLegHuman
+  id: CE14LeftLegHuman
   parent: LeftLegHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
 
 - type: entity
-  id: CP14RightLegHuman
+  id: CE14RightLegHuman
   parent: RightLegHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
 
 - type: entity
-  id: CP14LeftFootHuman
+  id: CE14LeftFootHuman
   parent: LeftFootHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
 
 - type: entity
-  id: CP14RightFootHuman
+  id: CE14RightFootHuman
   parent: RightFootHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
 

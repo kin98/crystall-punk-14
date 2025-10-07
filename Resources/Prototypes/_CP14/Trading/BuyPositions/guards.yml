@@ -1,16 +1,16 @@
 # Rep 0
 
-- type: cp14TradingPosition
-  id: CP14TradeContractGuards
+- type: CE14TradingPosition
+  id: CE14TradeContractGuards
   faction: Guards
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Specific/Economy/trade_contracts.rsi
+    sprite: _CE14/Objects/Specific/Economy/trade_contracts.rsi
     state: guard
-  service: !type:CP14BuyItemsService
-    product: CP14TradeContractGuards
+  service: !type:CE14BuyItemsService
+    product: CE14TradeContractGuards
 
-- type: cp14TradingPosition
+- type: CE14TradingPosition
   id: Bola
   faction: Guards
   uiPosition: 3
@@ -18,28 +18,28 @@
   icon:
     sprite: Objects/Weapons/Throwable/bola.rsi
     state: icon
-  service: !type:CP14BuyItemsService
+  service: !type:CE14BuyItemsService
     product: Bola
     count: 1
 
-- type: cp14TradingPosition
-  id: CP14RopeGuards
+- type: CE14TradingPosition
+  id: CE14RopeGuards
   faction: Guards
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/Tools/rope.rsi
+    sprite: _CE14/Objects/Tools/rope.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14Rope
+  service: !type:CE14BuyItemsService
+    product: CE14Rope
     count: 1
 
-- type: cp14TradingPosition
-  id: CP14MagicGuardElectroStaff
+- type: CE14TradingPosition
+  id: CE14MagicGuardElectroStaff
   faction: Guards
   uiPosition: 5
   icon:
-    sprite: _CP14/Objects/Weapons/Magic/TwoHandedStaff/guard_electro_staff.rsi
+    sprite: _CE14/Objects/Weapons/Magic/TwoHandedStaff/guard_electro_staff.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14MagicGuardElectroStaff
+  service: !type:CE14BuyItemsService
+    product: CE14MagicGuardElectroStaff
     count: 1

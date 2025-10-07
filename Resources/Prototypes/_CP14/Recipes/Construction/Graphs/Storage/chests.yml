@@ -1,30 +1,30 @@
 - type: constructionGraph
-  id: CP14WoodenChest
+  id: CE14WoodenChest
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14WoodenChest
+        - to: CE14WoodenChest
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 5
               doAfter: 2
-            - material: CP14IronBar
+            - material: CE14IronBar
               amount: 1
               doAfter: 2
 
-    - node: CP14WoodenChest
-      entity: CP14WoodenChest
+    - node: CE14WoodenChest
+      entity: CE14WoodenChest
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 2
             - !type:SpawnPrototype
-              prototype: CP14IronBar1
+              prototype: CE14IronBar1
               amount: 1
           conditions:
           - !type:Locked
@@ -36,38 +36,38 @@
               doAfter: 3
 
 - type: constructionGraph
-  id: CP14GoldChest
+  id: CE14GoldChest
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14GoldChest
+        - to: CE14GoldChest
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 5
               doAfter: 2
-            - material: CP14IronBar
+            - material: CE14IronBar
               amount: 1
               doAfter: 2
-            - material: CP14GoldBar
+            - material: CE14GoldBar
               amount: 1
               doAfter: 2
 
-    - node: CP14GoldChest
-      entity: CP14GoldChest
+    - node: CE14GoldChest
+      entity: CE14GoldChest
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 2
             - !type:SpawnPrototype
-              prototype: CP14IronBar1
+              prototype: CE14IronBar1
               amount: 1
             - !type:SpawnPrototype
-              prototype: CP14GoldBar1
+              prototype: CE14GoldBar1
               amount: 1
           conditions:
           - !type:Locked

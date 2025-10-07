@@ -1,13 +1,13 @@
-using Content.Shared._CP14.Workbench;
+using Content.Shared._CE14.Workbench;
 
-namespace Content.Shared._CP14.Actions.Components;
+namespace Content.Shared._CE14.Actions.Components;
 
 /// <summary>
 /// Requires the caster to hold a specific resource in their hand, which will be spent to use the spell.
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14ActionMaterialCostComponent : Component
+public sealed partial class CE14ActionMaterialCostComponent : Component
 {
     [DataField(required: true)]
-    public CP14WorkbenchCraftRequirement? Requirement;
+    public CE14WorkbenchCraftRequirement? Requirement;
 }

@@ -1,9 +1,9 @@
 - type: entity
-  id: CP14ActionSpiderTrap
+  id: CE14ActionSpiderTrap
   name: web trap
   description: You wrap a web around the target, slowing its movement.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.3
   - type: Action
     itemIconStyle: BigAction
@@ -11,7 +11,7 @@
     sound: !type:SoundPathSpecifier
       path: /Audio/Animals/snake_hiss.ogg
     icon:
-      sprite: _CP14/Structures/Dungeon/floor_web.rsi
+      sprite: _CE14/Structures/Dungeon/floor_web.rsi
       state: full
   - type: DoAfterArgs
     breakOnMove: false
@@ -22,26 +22,26 @@
     range: 10
     checkCanAccess: false
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactSpiderTrap
+        - CE14ImpactSpiderTrap
       effects:
-      - !type:CP14SpellSpawnEntitiesOnTargetInRadius
-        spawn: CP14SpiderWeb
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntitiesOnTargetInRadius
+        spawn: CE14SpiderWeb
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactSpiderTrap
+        - CE14ImpactSpiderTrap
 
 - type: entity
-  id: CP14ImpactSpiderTrap
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactSpiderTrap
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
     layers:
     - state: circle_increase
-    - sprite: _CP14/Effects/Magic/area_impact.rsi
+    - sprite: _CE14/Effects/Magic/area_impact.rsi
       state: area_impact_out

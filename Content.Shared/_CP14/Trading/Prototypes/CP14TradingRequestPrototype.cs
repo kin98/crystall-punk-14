@@ -1,15 +1,15 @@
-using Content.Shared._CP14.Workbench;
+using Content.Shared._CE14.Workbench;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Trading.Prototypes;
+namespace Content.Shared._CE14.Trading.Prototypes;
 
-[Prototype("cp14TradingRequest")]
-public sealed partial class CP14TradingRequestPrototype : IPrototype
+[Prototype("CE14TradingRequest")]
+public sealed partial class CE14TradingRequestPrototype : IPrototype
 {
     [IdDataField] public string ID { get; private set; } = default!;
 
     [DataField]
-    public HashSet<ProtoId<CP14TradingFactionPrototype>> PossibleFactions = [];
+    public HashSet<ProtoId<CE14TradingFactionPrototype>> PossibleFactions = [];
 
     [DataField]
     public float GenerationWeight = 1f;
@@ -27,5 +27,5 @@ public sealed partial class CP14TradingRequestPrototype : IPrototype
     public float ReputationCashback = 0.015f;
 
     [DataField(required: true)]
-    public List<CP14WorkbenchCraftRequirement> Requirements = new();
+    public List<CE14WorkbenchCraftRequirement> Requirements = new();
 }

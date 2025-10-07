@@ -4,9 +4,9 @@ using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellPointerToAlive : CP14SpellEffect
+public sealed partial class CE14SpellPointerToAlive : CE14SpellEffect
 {
     [DataField(required: true)]
     public EntProtoId PointerEntity;
@@ -14,7 +14,7 @@ public sealed partial class CP14SpellPointerToAlive : CP14SpellEffect
     [DataField(required: true)]
     public float SearchRange = 30f;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         var net = IoCManager.Resolve<INetManager>();
         if (net.IsClient)

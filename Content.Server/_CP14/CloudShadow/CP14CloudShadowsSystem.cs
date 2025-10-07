@@ -1,9 +1,9 @@
-using Content.Shared._CP14.CloudShadow;
+using Content.Shared._CE14.CloudShadow;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.CloudShadow;
+namespace Content.Server._CE14.CloudShadow;
 
-public sealed class CP14CloudShadowsSystem : EntitySystem
+public sealed class CE14CloudShadowsSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
 
@@ -11,10 +11,10 @@ public sealed class CP14CloudShadowsSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14CloudShadowsComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<CE14CloudShadowsComponent, MapInitEvent>(OnMapInit);
     }
 
-    private void OnMapInit(Entity<CP14CloudShadowsComponent> entity, ref MapInitEvent args)
+    private void OnMapInit(Entity<CE14CloudShadowsComponent> entity, ref MapInitEvent args)
     {
         entity.Comp.CloudSpeed = _random.NextVector2(-entity.Comp.MaxSpeed, entity.Comp.MaxSpeed);
     }

@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14MobMonsterFlem
-  parent: CP14SimpleMobBase
+  id: CE14MobMonsterFlem
+  parent: CE14SimpleMobBase
   name: flem
   description: An odd looking fish standing on two stubby legs. you know what that means...
   categories: [ ForkFiltered ]
   components:
   - type: HTN
     rootTask:
-      task: CP14MonsterCompound
+      task: CE14MonsterCompound
     blackboard:
       NavSmash: !type:Bool
         true
@@ -17,12 +17,12 @@
         1
   - type: NpcFactionMember
     factions:
-    - CP14Fishies
+    - CE14Fishies
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Monster/flem.rsi
+      sprite: _CE14/Mobs/Monster/flem.rsi
       state: flem_live
   - type: Fixtures
     fixtures:
@@ -63,37 +63,37 @@
         Base: flem_dead
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatFlemHead
+    - id: CE14FoodMeatFlemHead
       amount: 1
-    - id: CP14FoodMeatFlemTorso
+    - id: CE14FoodMeatFlemTorso
       amount: 1
-    - id: CP14FoodMeatFlemLeg
+    - id: CE14FoodMeatFlemLeg
       amount: 2
       prob: 0.6
   - type: Bloodstream
     bloodMaxVolume: 200
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: Grammar
     attributes:
       gender: epicene
   - type: TypingIndicator
     proto: alien
-  - type: CP14MagicEnergyContainer
-    magicAlert: CP14MagicEnergy
+  - type: CE14MagicEnergyContainer
+    magicAlert: CE14MagicEnergy
     maxEnergy: 100
     energy: 100
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 2
     delay: 4
   - type: SpamEmitSound
     minInterval: 10
     maxInterval: 30
     sound:
-      collection: CP14Flem
+      collection: CE14Flem
       params:
         variation: 0.125
   - type: SoundWhileAlive
   - type: Tag
     tags:
       - FootstepSound
-      - CP14Mosquito
+      - CE14Mosquito

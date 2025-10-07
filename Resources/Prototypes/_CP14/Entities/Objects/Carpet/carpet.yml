@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14FloorTileItemBase
+  id: CE14FloorTileItemBase
   name: carpet
   description: Rolled up carpet for easy transport.
   abstract: true
@@ -8,7 +8,7 @@
   - type: Stack
     count: 1
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/Carpets/icons.rsi
+    sprite: _CE14/Structures/Furniture/Carpets/icons.rsi
   - type: StackPrice
     price: 0.5
   - type: SpawnAfterInteract 
@@ -17,27 +17,27 @@
 
 - type: entity
   name: blue carpet
-  parent: CP14FloorTileItemBase
-  id: CP14FloorCarpetItemBlue1
+  parent: CE14FloorTileItemBase
+  id: CE14FloorCarpetItemBlue1
   categories: [ ForkFiltered ]
   suffix: Blue
   components:
   - type: Sprite
     state: blue
   - type: Stack
-    stackType: CP14FloorCarpetBlue
+    stackType: CE14FloorCarpetBlue
   - type: SpawnAfterInteract 
-    prototype: CP14CarpetBlue
+    prototype: CE14CarpetBlue
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
   - type: StaticPrice
     price: 8.6
 
 - type: entity
   name: red carpet
-  parent: CP14FloorTileItemBase
-  id: CP14FloorCarpetItemRed1
+  parent: CE14FloorTileItemBase
+  id: CE14FloorCarpetItemRed1
   categories: [ ForkFiltered ]
   suffix: Red
   components:
@@ -46,19 +46,19 @@
   - type: Item
     heldPrefix: carpet-Red
   - type: Stack
-    stackType: CP14FloorCarpetRed
+    stackType: CE14FloorCarpetRed
   - type: SpawnAfterInteract 
-    prototype: CP14CarpetRed
+    prototype: CE14CarpetRed
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
   - type: StaticPrice
     price: 4
 
 - type: entity
   name: cyan carpet
-  parent: CP14FloorTileItemBase
-  id: CP14FloorCarpetItemCyan1
+  parent: CE14FloorTileItemBase
+  id: CE14FloorCarpetItemCyan1
   categories: [ ForkFiltered ]
   suffix: Cyan
   components:
@@ -67,19 +67,19 @@
   - type: Item
     heldPrefix: carpet-Cyan
   - type: Stack
-    stackType: CP14FloorCarpetCyan
+    stackType: CE14FloorCarpetCyan
   - type: SpawnAfterInteract 
-    prototype: CP14CarpetCyan
+    prototype: CE14CarpetCyan
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
   - type: StaticPrice
     price: 14.6
 
 - type: entity
   name: green carpet
-  parent: CP14FloorTileItemBase
-  id: CP14FloorCarpetItemGreen1
+  parent: CE14FloorTileItemBase
+  id: CE14FloorCarpetItemGreen1
   categories: [ ForkFiltered ]
   suffix: Green
   components:
@@ -88,19 +88,19 @@
   - type: Item
     heldPrefix: carpet-Green
   - type: Stack
-    stackType: CP14FloorCarpetGreen
+    stackType: CE14FloorCarpetGreen
   - type: SpawnAfterInteract 
-    prototype: CP14CarpetGreen
+    prototype: CE14CarpetGreen
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
   - type: StaticPrice
     price: 6
 
 - type: entity
   name: orange carpet
-  parent: CP14FloorTileItemBase
-  id: CP14FloorCarpetItemOrange1
+  parent: CE14FloorTileItemBase
+  id: CE14FloorCarpetItemOrange1
   categories: [ ForkFiltered ]
   suffix: Orange
   components:
@@ -109,19 +109,19 @@
   - type: Item
     heldPrefix: carpet-Orange
   - type: Stack
-    stackType: CP14FloorCarpetOrange
+    stackType: CE14FloorCarpetOrange
   - type: SpawnAfterInteract 
-    prototype: CP14CarpetOrange
+    prototype: CE14CarpetOrange
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
   - type: StaticPrice
     price: 7.5
 
 - type: entity
   name: purpule carpet
-  parent: CP14FloorTileItemBase
-  id: CP14FloorCarpetItemPurple1
+  parent: CE14FloorTileItemBase
+  id: CE14FloorCarpetItemPurple1
   categories: [ ForkFiltered ]
   suffix: Purple
   components:
@@ -130,114 +130,114 @@
   - type: Item
     heldPrefix: carpet-Purple
   - type: Stack
-    stackType: CP14FloorCarpetPurple
+    stackType: CE14FloorCarpetPurple
   - type: SpawnAfterInteract 
-    prototype: CP14CarpetPurple
+    prototype: CE14CarpetPurple
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
   - type: StaticPrice
     price: 4.4
 
 - type: entity
   name: black carpet
-  parent: CP14FloorTileItemBase
-  id: CP14FloorCarpetItemBlack1
+  parent: CE14FloorTileItemBase
+  id: CE14FloorCarpetItemBlack1
   categories: [ ForkFiltered ]
   suffix: Black
   components:
   - type: Sprite
     state: black
   - type: Stack
-    stackType: CP14FloorCarpetBlack
+    stackType: CE14FloorCarpetBlack
   - type: SpawnAfterInteract 
-    prototype: CP14CarpetBlack
+    prototype: CE14CarpetBlack
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
   - type: StaticPrice
     price: 6
 
 - type: entity
   name: yellow carpet
-  parent: CP14FloorTileItemBase
-  id: CP14FloorCarpetItemYellow1
+  parent: CE14FloorTileItemBase
+  id: CE14FloorCarpetItemYellow1
   categories: [ ForkFiltered ]
   suffix: Yellow
   components:
   - type: Sprite
     state: yellow
   - type: Stack
-    stackType: CP14FloorCarpetYellow
+    stackType: CE14FloorCarpetYellow
   - type: SpawnAfterInteract 
-    prototype: CP14CarpetYellow
+    prototype: CE14CarpetYellow
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
   - type: StaticPrice
     price: 3.5
 
 #staks
 
 - type: entity
-  id: CP14FloorCarpetItemBlue10
-  parent: CP14FloorCarpetItemBlue1
+  id: CE14FloorCarpetItemBlue10
+  parent: CE14FloorCarpetItemBlue1
   suffix: Blue 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14FloorCarpetItemRed10
-  parent: CP14FloorCarpetItemRed1
+  id: CE14FloorCarpetItemRed10
+  parent: CE14FloorCarpetItemRed1
   suffix: Red 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14FloorCarpetItemCyan10
-  parent: CP14FloorCarpetItemCyan1
+  id: CE14FloorCarpetItemCyan10
+  parent: CE14FloorCarpetItemCyan1
   suffix: Cyan 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14FloorCarpetItemGreen10
-  parent: CP14FloorCarpetItemGreen1
+  id: CE14FloorCarpetItemGreen10
+  parent: CE14FloorCarpetItemGreen1
   suffix: Green 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14FloorCarpetItemOrange10
-  parent: CP14FloorCarpetItemOrange1
+  id: CE14FloorCarpetItemOrange10
+  parent: CE14FloorCarpetItemOrange1
   suffix: Orange 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14FloorCarpetItemPurple10
-  parent: CP14FloorCarpetItemPurple1
+  id: CE14FloorCarpetItemPurple10
+  parent: CE14FloorCarpetItemPurple1
   suffix: Purple 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14FloorCarpetItemBlack10
-  parent: CP14FloorCarpetItemBlack1
+  id: CE14FloorCarpetItemBlack10
+  parent: CE14FloorCarpetItemBlack1
   suffix: Black 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14FloorCarpetItemYellow10
-  parent: CP14FloorCarpetItemYellow1
+  id: CE14FloorCarpetItemYellow10
+  parent: CE14FloorCarpetItemYellow1
   suffix: Yellow 10
   components:
   - type: Stack

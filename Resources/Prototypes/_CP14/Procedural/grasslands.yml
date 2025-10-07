@@ -2,13 +2,13 @@
 # Базовый биом лугов.
 
 - type: biomeTemplate
-  id: CP14GrassFill
+  id: CE14GrassFill
   layers:
     - !type:BiomeTileLayer
       threshold: -1.0
-      tile: CP14FloorGrass
+      tile: CE14FloorGrass
     - !type:BiomeTileLayer
-      tile: CP14FloorGrassLight
+      tile: CE14FloorGrassLight
       threshold: 0
       noise:
         seed: 0
@@ -21,7 +21,7 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
     - !type:BiomeTileLayer
-      tile: CP14FloorGrassTall
+      tile: CE14FloorGrassTall
       threshold: 0.45
       noise:
         seed: 0
@@ -35,15 +35,15 @@
         domainWarpAmp: 120
 
 - type: biomeTemplate
-  id: CP14Grassland
+  id: CE14Grassland
   layers:
     - !type:BiomeMetaLayer
-      template: CP14GrassFill
+      template: CE14GrassFill
     - !type:BiomeDecalLayer #Rock decal
       allowedTiles:
-      - CP14FloorGrass
-      - CP14FloorGrassLight
-      - CP14FloorGrassTall
+      - CE14FloorGrass
+      - CE14FloorGrassLight
+      - CE14FloorGrassTall
       threshold: 0.6
       divisions: 1
       noise:
@@ -57,16 +57,16 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
       decals:
-        - CP14FloraRock01
-        - CP14FloraRock02
-        - CP14FloraRock03
-        - CP14FloraRock04
-        - CP14FloraRock05
+        - CE14FloraRock01
+        - CE14FloraRock02
+        - CE14FloraRock03
+        - CE14FloraRock04
+        - CE14FloraRock05
     - !type:BiomeDecalLayer #Grass decal
       allowedTiles:
-      - CP14FloorGrass
-      - CP14FloorGrassLight
-      - CP14FloorGrassTall
+      - CE14FloorGrass
+      - CE14FloorGrassLight
+      - CE14FloorGrassTall
       threshold: 0
       divisions: 1
       noise:
@@ -80,25 +80,25 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
       decals:
-        - CP14FloraGrass1
-        - CP14FloraGrass2
-        - CP14FloraGrass3
-        - CP14FloraGrass4
-        - CP14FloraGrass5
-        - CP14FloraGrass6
-        - CP14FloraGrass7
-        - CP14FloraGrass8
-        - CP14FloraGrass9
-        - CP14FloraGrass10
-        - CP14FloraGrass11
-        - CP14FloraGrass12
-        - CP14FloraGrass13
-        - CP14FloraGrass14
+        - CE14FloraGrass1
+        - CE14FloraGrass2
+        - CE14FloraGrass3
+        - CE14FloraGrass4
+        - CE14FloraGrass5
+        - CE14FloraGrass6
+        - CE14FloraGrass7
+        - CE14FloraGrass8
+        - CE14FloraGrass9
+        - CE14FloraGrass10
+        - CE14FloraGrass11
+        - CE14FloraGrass12
+        - CE14FloraGrass13
+        - CE14FloraGrass14
     - !type:BiomeDecalLayer #Bush decal
       allowedTiles:
-      - CP14FloorGrass
-      - CP14FloorGrassLight
-      - CP14FloorGrassTall
+      - CE14FloorGrass
+      - CE14FloorGrassLight
+      - CE14FloorGrassTall
       threshold: 0.35
       divisions: 1
       noise:
@@ -112,15 +112,15 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
       decals:
-        - CP14GrassBushes1
-        - CP14GrassBushes2
-        - CP14GrassBushes3
-        - CP14GrassBushes4
-        - CP14GrassBushes5
-        - CP14GrassBushes6
-        - CP14GrassBushes7
-        - CP14GrassBushes8
-        - CP14GrassBushes9
+        - CE14GrassBushes1
+        - CE14GrassBushes2
+        - CE14GrassBushes3
+        - CE14GrassBushes4
+        - CE14GrassBushes5
+        - CE14GrassBushes6
+        - CE14GrassBushes7
+        - CE14GrassBushes8
+        - CE14GrassBushes9
     - !type:BiomeEntityLayer # Tall grass!
       threshold: 0.3
       noise:
@@ -134,9 +134,9 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
       allowedTiles:
-        - CP14FloorGrassTall
+        - CE14FloorGrassTall
       entities:
-        - CP14RandomBushOffsetSpawner
+        - CE14RandomBushOffsetSpawner
     - !type:BiomeEntityLayer # Rare Trees
       threshold: 0.8
       noise:
@@ -145,24 +145,24 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       entities:
-        - CP14FloraTreeBirchLarge
-        - CP14FloraTreeBirchSmall
-        - CP14FloraTreeBirchMedium
-        - CP14FloraTreeSpruceSmall
-        - CP14FloraTreeSpruceSmall
-        - CP14FloraTreeSpruceMedium
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreenLarge
-        - CP14FloraTreeDead
-        - CP14FloraTreeDeadSmall
+        - CE14FloraTreeBirchLarge
+        - CE14FloraTreeBirchSmall
+        - CE14FloraTreeBirchMedium
+        - CE14FloraTreeSpruceSmall
+        - CE14FloraTreeSpruceSmall
+        - CE14FloraTreeSpruceMedium
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreenLarge
+        - CE14FloraTreeDead
+        - CE14FloraTreeDeadSmall
     - !type:BiomeEntityLayer # More Rocks
       threshold: 0.7
       noise:
@@ -171,11 +171,11 @@
         fractalType: FBm
         frequency: 3
       allowedTiles:
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       entities:
-        - CP14RockSmall
+        - CE14RockSmall
     - !type:BiomeEntityLayer # More Rocks
       threshold: 0.8
       noise:
@@ -184,20 +184,20 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       entities:
-        - CP14RockBig
-        - CP14RockBigMoss
+        - CE14RockBig
+        - CE14RockBigMoss
 
 # Подбиомы лугов
 
 - type: biomeTemplate
-  id: CP14GrasslandForest # Лес
+  id: CE14GrasslandForest # Лес
   layers:
     - !type:BiomeMetaLayer
-      template: CP14Grassland
+      template: CE14Grassland
     - !type:BiomeEntityLayer # More Trees
       threshold: 0.2
       noise:
@@ -206,31 +206,31 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       entities:
-        - CP14FloraTreeBirchLarge
-        - CP14FloraTreeBirchSmall
-        - CP14FloraTreeBirchMedium
-        - CP14FloraTreeSpruceSmall
-        - CP14FloraTreeSpruceSmall
-        - CP14FloraTreeSpruceMedium
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreenLarge
-        - CP14FloraTreeDead
-        - CP14FloraTreeDeadSmall
+        - CE14FloraTreeBirchLarge
+        - CE14FloraTreeBirchSmall
+        - CE14FloraTreeBirchMedium
+        - CE14FloraTreeSpruceSmall
+        - CE14FloraTreeSpruceSmall
+        - CE14FloraTreeSpruceMedium
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreenLarge
+        - CE14FloraTreeDead
+        - CE14FloraTreeDeadSmall
 
 - type: biomeTemplate
-  id: CP14GrasslandHills # Холмы
+  id: CE14GrasslandHills # Холмы
   layers:
     - !type:BiomeMetaLayer
-      template: CP14GrasslandForest
+      template: CE14GrasslandForest
     - !type:BiomeTileLayer
-      tile: CP14FloorBase
+      tile: CE14FloorBase
       invert: true
       threshold: 0.5
       noise:
@@ -247,25 +247,25 @@
         domainWarpAmp: 285
     - !type:BiomeEntityLayer # Walls
       allowedTiles:
-        - CP14FloorBase
+        - CE14FloorBase
       threshold: -1.0
       entities:
-        - CP14WallDirt
+        - CE14WallDirt
 
 - type: biomeTemplate
-  id: CP14GrasslandTestResult
+  id: CE14GrasslandTestResult
   layers:
     - !type:BiomeMetaLayer
-      template: CP14Grassland
+      template: CE14Grassland
     - !type:BiomeMetaLayer
-      template: CP14GrasslandForest
+      template: CE14GrasslandForest
       threshold: 0.2
       noise:
         seed: 18
         frequency: 0.02
         fractalType: None
     - !type:BiomeMetaLayer
-      template: CP14GrasslandHills
+      template: CE14GrasslandHills
       threshold: 0.4
       noise:
         seed: 14
@@ -273,7 +273,7 @@
         fractalType: None
     # Lakes start
     - !type:BiomeTileLayer
-      tile: CP14FloorSand
+      tile: CE14FloorSand
       threshold: 0.55
       noise:
         seed: 14
@@ -283,7 +283,7 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 150
     - !type:BiomeTileLayer
-      tile: CP14FloorDirt
+      tile: CE14FloorDirt
       threshold: 0.68
       noise:
         seed: 14
@@ -294,8 +294,8 @@
         domainWarpAmp: 150
     - !type:BiomeEntityLayer
       allowedTiles:
-        - CP14FloorDirt
-        - CP14FloorSand
+        - CE14FloorDirt
+        - CE14FloorSand
       threshold: 0.6
       noise:
         seed: 14
@@ -305,14 +305,14 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 150
       entities:
-        - CP14FloorWater
+        - CE14FloorWater
     # Lakes end
 
 - type: biomeTemplate
-  id: CP14GrasslandComossResources
+  id: CE14GrasslandComossResources
   layers:
     - !type:BiomeMetaLayer
-      template: CP14Grassland
+      template: CE14Grassland
     - !type:BiomeEntityLayer # blood flowers
       threshold: 0.7
       noise:
@@ -326,11 +326,11 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
       allowedTiles:
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       entities:
-        - CP14GatherableBloodFlower
+        - CE14GatherableBloodFlower
     - !type:BiomeEntityLayer # wild sage
       threshold: 0.7
       noise:
@@ -344,20 +344,20 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
       allowedTiles:
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       entities:
-        - CP14GatherableWildSage
+        - CE14GatherableWildSage
     - !type:BiomeMetaLayer
-      template: CP14GrasslandForest
+      template: CE14GrasslandForest
       threshold: 0.2
       noise:
         seed: 18
         frequency: 0.02
         fractalType: None
     - !type:BiomeMetaLayer
-      template: CP14GrasslandHills
+      template: CE14GrasslandHills
       threshold: 0.4
       noise:
         seed: 14
@@ -365,7 +365,7 @@
         fractalType: None
     # Lakes start
     - !type:BiomeTileLayer
-      tile: CP14FloorSand
+      tile: CE14FloorSand
       threshold: 0.55
       noise:
         seed: 14
@@ -375,7 +375,7 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 150
     - !type:BiomeTileLayer
-      tile: CP14FloorDirt
+      tile: CE14FloorDirt
       threshold: 0.68
       noise:
         seed: 14
@@ -386,8 +386,8 @@
         domainWarpAmp: 150
     - !type:BiomeEntityLayer
       allowedTiles:
-        - CP14FloorDirt
-        - CP14FloorSand
+        - CE14FloorDirt
+        - CE14FloorSand
       threshold: 0.6
       noise:
         seed: 14
@@ -397,5 +397,5 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 150
       entities:
-        - CP14FloorWater
+        - CE14FloorWater
     # Lakes end

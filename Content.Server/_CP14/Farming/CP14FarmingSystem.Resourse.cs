@@ -1,21 +1,21 @@
-using Content.Shared._CP14.DayCycle;
-using Content.Shared._CP14.Farming.Components;
+using Content.Shared._CE14.DayCycle;
+using Content.Shared._CE14.Farming.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 
-namespace Content.Server._CP14.Farming;
+namespace Content.Server._CE14.Farming;
 
-public sealed partial class CP14FarmingSystem
+public sealed partial class CE14FarmingSystem
 {
-    [Dependency] private readonly CP14DayCycleSystem _dayCycle = default!;
+    [Dependency] private readonly CE14DayCycleSystem _dayCycle = default!;
     private void InitializeResources()
     {
-        SubscribeLocalEvent<CP14PlantEnergyFromLightComponent, CP14PlantUpdateEvent>(OnTakeEnergyFromLight);
-        SubscribeLocalEvent<CP14PlantMetabolizerComponent, CP14PlantUpdateEvent>(OnPlantMetabolizing);
+        SubscribeLocalEvent<CE14PlantEnergyFromLightComponent, CE14PlantUpdateEvent>(OnTakeEnergyFromLight);
+        SubscribeLocalEvent<CE14PlantMetabolizerComponent, CE14PlantUpdateEvent>(OnPlantMetabolizing);
 
-        SubscribeLocalEvent<CP14PlantGrowingComponent, CP14AfterPlantUpdateEvent>(OnPlantGrowing);
+        SubscribeLocalEvent<CE14PlantGrowingComponent, CE14AfterPlantUpdateEvent>(OnPlantGrowing);
     }
 
-    private void OnTakeEnergyFromLight(Entity<CP14PlantEnergyFromLightComponent> regeneration, ref CP14PlantUpdateEvent args)
+    private void OnTakeEnergyFromLight(Entity<CE14PlantEnergyFromLightComponent> regeneration, ref CE14PlantUpdateEvent args)
     {
         var gainEnergy = false;
         var daylight = _dayCycle.UnderSunlight(regeneration);
@@ -30,7 +30,7 @@ public sealed partial class CP14FarmingSystem
             args.EnergyDelta += regeneration.Comp.Energy;
     }
 
-    private void OnPlantGrowing(Entity<CP14PlantGrowingComponent> growing, ref CP14AfterPlantUpdateEvent args)
+    private void OnPlantGrowing(Entity<CE14PlantGrowingComponent> growing, ref CE14AfterPlantUpdateEvent args)
     {
         if (args.Plant.Comp.Energy < growing.Comp.EnergyCost)
             return;
@@ -47,7 +47,7 @@ public sealed partial class CP14FarmingSystem
         AffectGrowth(args.Plant, growing.Comp.GrowthPerUpdate);
     }
 
-    private void OnPlantMetabolizing(Entity<CP14PlantMetabolizerComponent> ent, ref CP14PlantUpdateEvent args)
+    private void OnPlantMetabolizing(Entity<CE14PlantMetabolizerComponent> ent, ref CE14PlantUpdateEvent args)
     {
         if (!PlantQuery.TryComp(ent, out var plant) ||
             !SolutionQuery.TryComp(args.Plant, out var solmanager))

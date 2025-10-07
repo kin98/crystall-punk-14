@@ -1,50 +1,50 @@
 
 - type: entity
-  parent: CP14WoodenDoor
-  id: CP14WoodenDoorRandomLocked
+  parent: CE14WoodenDoor
+  id: CE14WoodenDoorRandomLocked
   suffix: Random Locked (Complex 3)
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateRandomShape: 3
   - type: Lock
     locked: true
 
 - type: entity
-  parent: CP14WoodenDoorWindowed
-  id: CP14WoodenDoorWindowedRandomLocked
+  parent: CE14WoodenDoorWindowed
+  id: CE14WoodenDoorWindowedRandomLocked
   suffix: Random Locked (Complex 3)
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateRandomShape: 3
   - type: Lock
     locked: true
 
 - type: entity
-  parent: CP14IronDoor
-  id: CP14IronDoorRandomLocked
+  parent: CE14IronDoor
+  id: CE14IronDoorRandomLocked
   suffix: Random Locked (Complex 5)
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateRandomShape: 5
   - type: Lock
     locked: true
 
 - type: entity
-  parent: CP14IronDoorWindowed
-  id: CP14IronDoorWindowedRandomLocked
+  parent: CE14IronDoorWindowed
+  id: CE14IronDoorWindowedRandomLocked
   suffix: Random Locked (Complex 5)
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateRandomShape: 5
   - type: Lock
     locked: true
 
 - type: entity
-  parent: CP14FenceGateBigIron
-  id: CP14FenceGateBigIronRandomLocked
+  parent: CE14FenceGateBigIron
+  id: CE14FenceGateBigIronRandomLocked
   suffix: Random Locked (Complex 5)
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateRandomShape: 5
   - type: Lock
     locked: true

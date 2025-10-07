@@ -76,8 +76,8 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] DoNotMapWhitelist =
         {
             //CrystallEdge Maps
-            "/Maps/_CP14/dev_map.yml",
-            "/Maps/_CP14/Dungeon/artifact_room.yml",
+            "/Maps/_CE14/dev_map.yml",
+            "/Maps/_CE14/Dungeon/artifact_room.yml",
             //CrystallEdge Maps end
             "/Maps/centcomm.yml",
             "/Maps/Shuttles/AdminSpawn/**" // admin gaming
@@ -428,7 +428,7 @@ namespace Content.IntegrationTests.Tests
                 mapSystem.DeleteMap(shuttleMap);
 
                 mapManager.DeleteMap(shuttleMap);
-                */ //CP14 Disable FTL test
+                */ //CE14 Disable FTL test
                 if (entManager.HasComponent<StationJobsComponent>(station))
                 {
                     // Test that the map has valid latejoin spawn points or container spawn points
@@ -448,7 +448,7 @@ namespace Content.IntegrationTests.Tests
                     var jobs = new HashSet<ProtoId<JobPrototype>>(comp.SetupAvailableJobs.Keys);
 
                     var spawnPoints = entManager.EntityQuery<SpawnPointComponent>()
-                        .Where(x => x.SpawnType is SpawnPointType.Job or SpawnPointType.Unset && x.Job != null) //CP14 Job or Unset (only Job in upstream)
+                        .Where(x => x.SpawnType is SpawnPointType.Job or SpawnPointType.Unset && x.Job != null) //CE14 Job or Unset (only Job in upstream)
                         .Select(x => x.Job.Value);
 
                     jobs.ExceptWith(spawnPoints);

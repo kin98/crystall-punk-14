@@ -1,47 +1,47 @@
 - type: entity
-  id: CP14ActionSpellCallBoneHound
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellCallBoneHound
+  parent: CE14ActionSpellBase
   name: Call of the Bone hound
   description: The spell creates a bloodthirsty bone hound from bones. With luck, it may even gain a mind as cunning as your own.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.5
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 50
-  - type: CP14ActionMaterialCost
+  - type: CE14ActionMaterialCost
     requirement: !type:StackResource
-      stack: CP14Bone
+      stack: CE14Bone
       count: 10
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Ossa mortuorum..."
     endSpeech: "incipiunt mihi quasi canis canis servire"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneCallBoneHound
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneCallBoneHound
   - type: DoAfterArgs
     delay: 5
   - type: Action
     useDelay: 20
     icon:
-      sprite: _CP14/Actions/Spells/skeleton.rsi
+      sprite: _CE14/Actions/Spells/skeleton.rsi
       state: bone_hound
   - type: LimitedCharges
     maxCharges: 3
   - type: TargetAction
     range: 10
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectCallBoneHound
+        - CE14ImpactEffectCallBoneHound
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14MobMonsterBoneHound
+        - CE14MobMonsterBoneHound
 
 - type: entity
-  id: CP14RuneCallBoneHound
-  parent: CP14BaseMagicRune
+  id: CE14RuneCallBoneHound
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -57,8 +57,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectCallBoneHound
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectCallBoneHound
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -67,7 +67,7 @@
     - state: particles_up
       color: "#ae9c86"
       shader: unshaded
-    - sprite: _CP14/Effects/Magic/cast_rune.rsi
+    - sprite: _CE14/Effects/Magic/cast_rune.rsi
       state: medium_circle
       color: "#ae9c86"
       shader: unshaded

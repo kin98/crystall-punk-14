@@ -1,18 +1,18 @@
 - type: entity
-  id: CP14WallmountFlagBase
+  id: CE14WallmountFlagBase
   abstract: true
   parent:
-  - CP14BaseWallmount
-  - CP14BaseFlammableSpreadingStrong
+  - CE14BaseWallmount
+  - CE14BaseFlammableSpreadingStrong
   categories: [ ForkFiltered ]
   name: tapestry
   description: A piece of cloth pinned to the wall.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Decoration/flags_wallmount.rsi
+    sprite: _CE14/Structures/Decoration/flags_wallmount.rsi
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -23,15 +23,15 @@
         acts: ["Destruction"]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14Cloth1:
+          CE14Cloth1:
             min: 1
             max: 2
 
 # Mercenary
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagAlchemist
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagAlchemist
   name: alchemist tapestry
   description: A tapestry with a potion symbol indicating that alchemists dwell here.
   components:
@@ -41,8 +41,8 @@
     - state: icon_potion
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagBlacksmith
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagBlacksmith
   name: blacksmith tapestry
   description: A tapestry with an anvil symbol indicating that blacksmiths dwell here.
   components:
@@ -52,8 +52,8 @@
     - state: icon_anvil
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagTavern
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagTavern
   name: tavern tapestry
   description: A tapestry with a beer symbol indicating that the tavern is here.
   components:
@@ -65,8 +65,8 @@
 # Bank
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagBank
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagBank
   name: bank tapestry
   description: A tapestry with a coins symbol indicating that this is where the bankers live.
   components:
@@ -77,8 +77,8 @@
       color: "#ad633b"
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagBankVault
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagBankVault
   name: bank vault tapestry
   description: A tapestry with a vault symbol indicating that this is where the bank vaults reside.
   components:
@@ -89,8 +89,8 @@
       color: "#ad633b"
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagBankCrates
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagBankCrates
   name: bank crates tapestry
   description: A tapestry with a crates symbol indicating that this is where the bank vaults reside.
   components:
@@ -101,8 +101,8 @@
       color: "#ad633b"
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagBankShip
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagBankShip
   name: bank ship tapestry
   description: A tapestry with a ship symbol denoting that there is a ship here to trade with the city.
   components:
@@ -113,8 +113,8 @@
       color: "#ad633b"
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagBankCommandant
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagBankCommandant
   name: commandant tapestry
   description: A tapestry with a star symbol indicating that the commandant lives here.
   components:
@@ -127,8 +127,8 @@
 # Guard
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagGuardSwords
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagGuardSwords
   name: guard tapestry
   description: A tapestry with a swords symbol denoting that the guards are here.
   components:
@@ -138,8 +138,8 @@
     - state: icon_swords
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagGuardShield
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagGuardShield
   name: guard tapestry
   description: A tapestry with a shield symbol denoting that the guards are here.
   components:
@@ -149,8 +149,8 @@
     - state: icon_shield
 
 - type: entity
-  parent: CP14WallmountFlagBase
-  id: CP14WallmountFlagGuardCommander
+  parent: CE14WallmountFlagBase
+  id: CE14WallmountFlagGuardCommander
   name: guard commander tapestry
   description: A tapestry with a star symbol indicating that the Guard Commandant lives here.
   components:

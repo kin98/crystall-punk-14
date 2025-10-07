@@ -1,13 +1,13 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Wallpaper;
+namespace Content.Shared._CE14.Wallpaper;
 
 /// <summary>
 /// Stores all wallpapers added to the wall
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true), Access(typeof(CP14SharedWallpaperSystem))]
-public sealed partial class CP14WallpaperHolderComponent : Component
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true), Access(typeof(CE14SharedWallpaperSystem))]
+public sealed partial class CE14WallpaperHolderComponent : Component
 {
     [DataField, AutoNetworkedField]
     public List<SpriteSpecifier> Layers = new();

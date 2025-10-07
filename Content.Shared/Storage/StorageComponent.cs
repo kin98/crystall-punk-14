@@ -154,7 +154,7 @@ namespace Content.Shared.Storage
         /// these items will be interrupted as early as the attempted interaction stage. Allows you to use some tools
         /// </summary>
         [DataField]
-        public EntityWhitelist? CP14Ignorelist;
+        public EntityWhitelist? CE14Ignorelist;
 
         /// <summary>
         /// Entities with this tag won't trigger storage sound.

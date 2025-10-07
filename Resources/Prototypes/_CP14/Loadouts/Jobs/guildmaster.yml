@@ -1,70 +1,70 @@
 
 # Head
 - type: loadoutGroup
-  id: CP14GuildmasterHead
-  name: cp14-loadout-guildmaster-head
+  id: CE14GuildmasterHead
+  name: CE14-loadout-guildmaster-head
   loadouts:
-  - CP14ClothingHeadGildmaster
+  - CE14ClothingHeadGildmaster
 
 - type: loadout
-  id: CP14ClothingHeadGildmaster
+  id: CE14ClothingHeadGildmaster
   equipment:
-    head: CP14ClothingHeadGildmaster
+    head: CE14ClothingHeadGildmaster
 
 # Cloak
 
 - type: loadoutGroup
-  id: CP14GuildmasterCloak
-  name: cp14-loadout-guildmaster-cloak
+  id: CE14GuildmasterCloak
+  name: CE14-loadout-guildmaster-cloak
   loadouts:
-  - CP14ClothingCloakGuildmasterCape
+  - CE14ClothingCloakGuildmasterCape
 
 - type: loadout
-  id: CP14ClothingCloakGuildmasterCape
+  id: CE14ClothingCloakGuildmasterCape
   equipment:
-    cloak: CP14ClothingCloakGuildmasterCape
+    cloak: CE14ClothingCloakGuildmasterCape
 
 # OuterClothing
 
 - type: loadoutGroup
-  id: CP14GuildmasterOuterClothing
-  name: cp14-loadout-guildmaster-outer
+  id: CE14GuildmasterOuterClothing
+  name: CE14-loadout-guildmaster-outer
   loadouts:
-  - CP14ClothingOuterClothingGreenVest
-  - CP14ClothingOuterClothingGreenVest2
+  - CE14ClothingOuterClothingGreenVest
+  - CE14ClothingOuterClothingGreenVest2
 
 - type: loadout
-  id: CP14ClothingOuterClothingGreenVest
+  id: CE14ClothingOuterClothingGreenVest
   equipment:
-    outerClothing: CP14ClothingOuterClothingGreenVest
+    outerClothing: CE14ClothingOuterClothingGreenVest
 
 - type: loadout
-  id: CP14ClothingOuterClothingGreenVest2
+  id: CE14ClothingOuterClothingGreenVest2
   equipment:
-    outerClothing: CP14ClothingOuterClothingGreenVest2
+    outerClothing: CE14ClothingOuterClothingGreenVest2
 
 
 # Shirt
 
 - type: loadoutGroup
-  id: CP14GuildmasterShirt
-  name: cp14-loadout-guildmaster-shirt
+  id: CE14GuildmasterShirt
+  name: CE14-loadout-guildmaster-shirt
   loadouts:
-  - CP14ClothingShirtCottonWhite
+  - CE14ClothingShirtCottonWhite
 
 # Pants
 
 - type: loadoutGroup
-  id: CP14GuildmasterPants
-  name: cp14-loadout-guildmaster-pants
+  id: CE14GuildmasterPants
+  name: CE14-loadout-guildmaster-pants
   loadouts:
-  - CP14ClothingPantsAristocratic
+  - CE14ClothingPantsAristocratic
 
 # Shoes
 
 - type: loadoutGroup
-  id: CP14GuildmasterShoes
-  name: cp14-loadout-guildmaster-shoes
+  id: CE14GuildmasterShoes
+  name: CE14-loadout-guildmaster-shoes
   loadouts:
-  - CP14ShoesAristocraticBlack
+  - CE14ShoesAristocraticBlack
 

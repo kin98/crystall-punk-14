@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14PlantSage
-  parent: CP14GatherablePlantSingleHarvestBase
+  id: CE14PlantSage
+  parent: CE14GatherablePlantSingleHarvestBase
   name: sage
   description: Medicinal sage. Some love it for its medicinal properties, others for its narcotic properties. Which side are you on?
   components:
@@ -10,18 +10,18 @@
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
     - state: grow-1
-      sprite: _CP14/Structures/Flora/Farm/sage.rsi
+      sprite: _CE14/Structures/Flora/Farm/sage.rsi
       map: ["enum.PlantVisualLayers.Base"]
-  - type: CP14PlantVisuals
+  - type: CE14PlantVisuals
     growthSteps: 4
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     loot:
       All: !type:AllSelector
         children:
-        - id: CP14WildSage
+        - id: CE14WildSage
           rolls: !type:RangeNumberSelector
             range: 4, 6
-        - id: CP14SeedSage
+        - id: CE14SeedSage
           rolls: !type:RangeNumberSelector
             range: 1, 2
 

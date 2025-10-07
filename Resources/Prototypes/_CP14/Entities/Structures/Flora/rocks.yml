@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseRock
+  id: CE14BaseRock
   name: rock
   description: A piece of rock. Hard, heavy, useless.
   categories: [ ForkFiltered ]
@@ -20,8 +20,8 @@
     damageModifierSet: Rock
 
 - type: entity
-  id: CP14RockSmall
-  parent: CP14BaseRock
+  id: CE14RockSmall
+  parent: CE14BaseRock
   suffix: Small
   components:
   - type: Climbable
@@ -36,7 +36,7 @@
         - HalfWallLayer
         - Opaque
   - type: Sprite
-    sprite: _CP14/Structures/Flora/Rocks/rocks_small.rsi
+    sprite: _CE14/Structures/Flora/Rocks/rocks_small.rsi
     offset: 0,0.2
     layers:
       - state: rock0
@@ -70,15 +70,15 @@
                 volume: -6
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14StoneBlock1:
+              CE14StoneBlock1:
                 min: 2
                 max: 3
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14RockBig
-  parent: CP14BaseRock
+  id: CE14RockBig
+  parent: CE14BaseRock
   suffix: Big
   components:
   - type: Fixtures
@@ -91,7 +91,7 @@
         layer:
         - WallLayer
   - type: Sprite
-    sprite: _CP14/Structures/Flora/Rocks/rocks_big.rsi
+    sprite: _CE14/Structures/Flora/Rocks/rocks_big.rsi
     offset: 0,0.5
     layers:
       - state: rock0
@@ -124,19 +124,19 @@
                 volume: -6
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14StoneBlock1:
+              CE14StoneBlock1:
                 min: 5
                 max: 8
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14RockBigMoss
-  parent: CP14RockBig
+  id: CE14RockBigMoss
+  parent: CE14RockBig
   suffix: Big. Moss.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Flora/Rocks/rocks_big.rsi
+    sprite: _CE14/Structures/Flora/Rocks/rocks_big.rsi
     offset: 0,0.5
     layers:
       - state: moss_rock1

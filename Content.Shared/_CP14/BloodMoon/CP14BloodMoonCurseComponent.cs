@@ -1,17 +1,17 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.BloodMoon;
+namespace Content.Shared._CE14.BloodMoon;
 
 
 [RegisterComponent, NetworkedComponent]
-public sealed partial class CP14BloodMoonCurseComponent : Component
+public sealed partial class CE14BloodMoonCurseComponent : Component
 {
     [DataField]
     public EntityUid? CurseRule;
 
     [DataField]
-    public EntProtoId CurseEffect = "CP14BloodMoonCurseEffect";
+    public EntProtoId CurseEffect = "CE14BloodMoonCurseEffect";
 
     [DataField]
     public EntityUid? SpawnedEffect;
@@ -20,7 +20,7 @@ public sealed partial class CP14BloodMoonCurseComponent : Component
     public TimeSpan EndStunDuration = TimeSpan.FromSeconds(60f);
 
     [DataField]
-    public EntProtoId Action = "CP14ActionSpellBloodlust";
+    public EntProtoId Action = "CE14ActionSpellBloodlust";
 
     [DataField]
     public EntityUid? ActionEntity;

@@ -10,7 +10,7 @@ namespace Content.Shared.Roles;
 public static class JobRequirements
 {
     public static bool TryRequirementsMet(
-        NetUserId userId,  //CP14 add NetUserId for sponsorship checks
+        NetUserId userId,  //CE14 add NetUserId for sponsorship checks
         JobPrototype job,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
         [NotNullWhen(false)] out FormattedMessage? reason,
@@ -26,7 +26,7 @@ public static class JobRequirements
 
         foreach (var requirement in requirements)
         {
-            if (!requirement.Check(userId, entManager, protoManager, profile, playTimes, out reason)) //CP14 add NetUserId for sponsorship checks
+            if (!requirement.Check(userId, entManager, protoManager, profile, playTimes, out reason)) //CE14 add NetUserId for sponsorship checks
                 return false;
         }
 
@@ -45,7 +45,7 @@ public abstract partial class JobRequirement
     public bool Inverted;
 
     public abstract bool Check(
-        NetUserId? userId, //CP14 Sponsorship Checks
+        NetUserId? userId, //CE14 Sponsorship Checks
         IEntityManager entManager,
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,

@@ -1,4 +1,4 @@
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: MeatSoup
   possibleFactions:
   - Dairy
@@ -7,7 +7,7 @@
     recipe: MeatSoup
     count: 20
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: CheeseSoup
   possibleFactions:
   - Dairy
@@ -16,7 +16,7 @@
     recipe: CheeseSoup
     count: 20
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: PumpkinPuree
   possibleFactions:
   - Dairy
@@ -25,7 +25,7 @@
     recipe: PumpkinPuree
     count: 20
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: VegSoup
   possibleFactions:
   - Dairy
@@ -34,7 +34,7 @@
     recipe: VegSoup
     count: 20
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: GreenSaladMeat
   possibleFactions:
   - Dairy
@@ -43,7 +43,7 @@
     recipe: GreenSaladMeat
     count: 20
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: CheeseBread
   possibleFactions:
   - Dairy
@@ -55,7 +55,7 @@
 
 # 30 minutes
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: MeatCheeseSoup
   possibleFactions:
   - Dairy
@@ -64,7 +64,7 @@
     recipe: MeatCheeseSoup
     count: 20
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: MeatSaladSoup
   possibleFactions:
   - Dairy
@@ -73,7 +73,7 @@
     recipe: MeatSaladSoup
     count: 20
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: MonsterEgg
   possibleFactions:
   - Dairy
@@ -82,7 +82,7 @@
     recipe: MonsterEgg
     count: 20
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: ZellasianBreakfast
   possibleFactions:
   - Dairy
@@ -91,7 +91,7 @@
     recipe: ZellasianBreakfast
     count: 20
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: HamInCheese
   possibleFactions:
   - Dairy

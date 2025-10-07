@@ -5,9 +5,9 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Client._CP14.Wave;
+namespace Content.Client._CE14.Wave;
 
-public sealed class CP14WaveShaderSystem : EntitySystem
+public sealed class CE14WaveShaderSystem : EntitySystem
 {
     [Dependency] private readonly IConfigurationManager _configuration = default!;
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
@@ -23,18 +23,18 @@ public sealed class CP14WaveShaderSystem : EntitySystem
         _shader = _protoMan.Index<ShaderPrototype>("Wave").InstanceUnique();
         _enabled = _configuration.GetCVar(CCVars.WaveShaderEnabled);
 
-        SubscribeLocalEvent<CP14WaveShaderComponent, ComponentStartup>(OnStartup);
-        SubscribeLocalEvent<CP14WaveShaderComponent, ComponentShutdown>(OnShutdown);
-        SubscribeLocalEvent<CP14WaveShaderComponent, BeforePostShaderRenderEvent>(OnBeforeShaderPost);
+        SubscribeLocalEvent<CE14WaveShaderComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<CE14WaveShaderComponent, ComponentShutdown>(OnShutdown);
+        SubscribeLocalEvent<CE14WaveShaderComponent, BeforePostShaderRenderEvent>(OnBeforeShaderPost);
     }
 
-    private void OnStartup(Entity<CP14WaveShaderComponent> entity, ref ComponentStartup args)
+    private void OnStartup(Entity<CE14WaveShaderComponent> entity, ref ComponentStartup args)
     {
         entity.Comp.Offset = _random.NextFloat(0, 1000);
         SetShader(entity.Owner, _shader);
     }
 
-    private void OnShutdown(Entity<CP14WaveShaderComponent> entity, ref ComponentShutdown args)
+    private void OnShutdown(Entity<CE14WaveShaderComponent> entity, ref ComponentShutdown args)
     {
         SetShader(entity.Owner, null);
     }
@@ -49,7 +49,7 @@ public sealed class CP14WaveShaderSystem : EntitySystem
         entity.Comp.RaiseShaderEvent = instance is not null;
     }
 
-    private void OnBeforeShaderPost(Entity<CP14WaveShaderComponent> entity, ref BeforePostShaderRenderEvent args)
+    private void OnBeforeShaderPost(Entity<CE14WaveShaderComponent> entity, ref BeforePostShaderRenderEvent args)
     {
         if (!_enabled)
             return;

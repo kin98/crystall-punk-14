@@ -324,7 +324,7 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
 
     private bool CanLoad(EntityUid uid)
     {
-        return !_ghostQuery.HasComp(uid);// CP14 - Admin biome loading break mapping || _tags.HasTag(uid, AllowBiomeLoadingTag);
+        return !_ghostQuery.HasComp(uid);// CE14 - Admin biome loading break mapping || _tags.HasTag(uid, AllowBiomeLoadingTag);
     }
 
     public override void Update(float frameTime)

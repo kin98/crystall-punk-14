@@ -5,8 +5,8 @@
 
 using System.Linq;
 using System.Numerics;
-using Content.Shared._CP14.Cooking.Components;
-using Content.Shared._CP14.Cooking.Prototypes;
+using Content.Shared._CE14.Cooking.Components;
+using Content.Shared._CE14.Cooking.Prototypes;
 using Content.Shared.Audio;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -22,9 +22,9 @@ using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CP14.Cooking;
+namespace Content.Shared._CE14.Cooking;
 
-public abstract partial class CP14SharedCookingSystem : EntitySystem
+public abstract partial class CE14SharedCookingSystem : EntitySystem
 {
     [Dependency] protected readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -41,7 +41,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
     /// <summary>
     /// When overcooking food, we will replace the reagents inside with this reagent.
     /// </summary>
-    private readonly ProtoId<ReagentPrototype> _burntFoodReagent = "CP14BurntFood";
+    private readonly ProtoId<ReagentPrototype> _burntFoodReagent = "CE14BurntFood";
 
     /// <summary>
     /// Stores a list of all recipes sorted by complexity: the most complex ones at the beginning.
@@ -50,7 +50,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
     /// The easiest recipes are usually the most “abstract,”
     /// so they will be suitable for the largest number of recipes.
     /// </summary>
-    protected List<CP14CookingRecipePrototype> OrderedRecipes = [];
+    protected List<CE14CookingRecipePrototype> OrderedRecipes = [];
 
     public override void Initialize()
     {
@@ -61,7 +61,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
         CacheAndOrderRecipes();
 
         SubscribeLocalEvent<PrototypesReloadedEventArgs>(OnPrototypesReloaded);
-        SubscribeLocalEvent<CP14FoodHolderComponent, ExaminedEvent>(OnExaminedEvent);
+        SubscribeLocalEvent<CE14FoodHolderComponent, ExaminedEvent>(OnExaminedEvent);
     }
 
     public override void Update(float frameTime)
@@ -71,7 +71,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
 
     private void CacheAndOrderRecipes()
     {
-        OrderedRecipes = _proto.EnumeratePrototypes<CP14CookingRecipePrototype>()
+        OrderedRecipes = _proto.EnumeratePrototypes<CE14CookingRecipePrototype>()
             .Where(recipe => recipe.Requirements.Count > 0) // Only include recipes with requirements
             .OrderByDescending(recipe => recipe.Requirements.Sum(condition => condition.GetComplexity()))
             .ToList();
@@ -85,7 +85,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
         CacheAndOrderRecipes();
     }
 
-    private void OnExaminedEvent(Entity<CP14FoodHolderComponent> ent, ref ExaminedEvent args)
+    private void OnExaminedEvent(Entity<CE14FoodHolderComponent> ent, ref ExaminedEvent args)
     {
         if (ent.Comp.FoodData?.Name is null)
             return;
@@ -98,7 +98,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
 
         var remaining = solution.Volume;
 
-        args.PushMarkup(Loc.GetString("cp14-cooking-examine",
+        args.PushMarkup(Loc.GetString("CE14-cooking-examine",
             ("name", Loc.GetString(ent.Comp.FoodData.Name)),
             ("count", remaining)));
     }
@@ -107,8 +107,8 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
     /// <summary>
     /// Transfer food data from cooker to holder
     /// </summary>
-    protected virtual bool TryTransferFood(Entity<CP14FoodHolderComponent> target,
-        Entity<CP14FoodHolderComponent> source)
+    protected virtual bool TryTransferFood(Entity<CE14FoodHolderComponent> target,
+        Entity<CE14FoodHolderComponent> source)
     {
         if (!source.Comp.CanGiveFood || !target.Comp.CanAcceptFood)
             return false;
@@ -130,7 +130,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
         {
             if (solution.Volume > 0)
             {
-                _popup.PopupEntity(Loc.GetString("cp14-cooking-popup-not-empty", ("name", MetaData(target).EntityName)),
+                _popup.PopupEntity(Loc.GetString("CE14-cooking-popup-not-empty", ("name", MetaData(target).EntityName)),
                     target);
                 return false;
             }
@@ -169,7 +169,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
     }
 
     private void UpdateFoodDataVisuals(
-        Entity<CP14FoodHolderComponent> ent,
+        Entity<CE14FoodHolderComponent> ent,
         bool rename = true)
     {
         var data = ent.Comp.FoodData;
@@ -181,8 +181,8 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
     }
 
     protected virtual void UpdateFoodDataVisuals(
-        Entity<CP14FoodHolderComponent> ent,
-        CP14FoodData data,
+        Entity<CE14FoodHolderComponent> ent,
+        CE14FoodData data,
         bool rename = true)
     {
         //Name and Description
@@ -202,20 +202,20 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
         }
 
         //Visuals
-        ent.Comp.FoodData = new CP14FoodData(data);
+        ent.Comp.FoodData = new CE14FoodData(data);
         foreach (var layer in data.Visuals)
         {
             if (_random.Prob(0.5f))
                 layer.Scale = new Vector2(-1, 1);
         }
 
-        DirtyField(ent, ent.Comp, nameof(CP14FoodHolderComponent.FoodData));
+        DirtyField(ent, ent.Comp, nameof(CE14FoodHolderComponent.FoodData));
 
         //Sliceable
         // > on server overrided side
     }
 
-    public CP14CookingRecipePrototype? GetRecipe(Entity<CP14FoodCookerComponent> ent)
+    public CE14CookingRecipePrototype? GetRecipe(Entity<CE14FoodCookerComponent> ent)
     {
         if (!_container.TryGetContainer(ent, ent.Comp.ContainerId, out var container))
             return null;
@@ -235,17 +235,17 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
         return GetRecipe(ent.Comp.FoodType, solution, allTags);
     }
 
-    public CP14CookingRecipePrototype? GetRecipe(ProtoId<CP14FoodTypePrototype> foodType,
+    public CE14CookingRecipePrototype? GetRecipe(ProtoId<CE14FoodTypePrototype> foodType,
         Solution? solution,
         List<ProtoId<TagPrototype>> allTags)
     {
         if (OrderedRecipes.Count == 0)
         {
             throw new InvalidOperationException(
-                "No cooking recipes found. Please ensure that the CP14CookingRecipePrototype is defined and loaded.");
+                "No cooking recipes found. Please ensure that the CE14CookingRecipePrototype is defined and loaded.");
         }
 
-        CP14CookingRecipePrototype? selectedRecipe = null;
+        CE14CookingRecipePrototype? selectedRecipe = null;
         foreach (var recipe in OrderedRecipes)
         {
             if (recipe.FoodType != foodType)
@@ -271,7 +271,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
         return selectedRecipe;
     }
 
-    protected void CreateFoodData(Entity<CP14FoodCookerComponent> ent, CP14CookingRecipePrototype recipe)
+    protected void CreateFoodData(Entity<CE14FoodCookerComponent> ent, CE14CookingRecipePrototype recipe)
     {
         if (!_solution.TryGetSolution(ent.Owner, ent.Comp.SolutionId, out var soln, out var solution))
             return;
@@ -279,7 +279,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
         if (!_container.TryGetContainer(ent, ent.Comp.ContainerId, out var container))
             return;
 
-        var newData = new CP14FoodData(recipe.FoodData);
+        var newData = new CE14FoodData(recipe.FoodData);
 
         //Assign recipe to the FoodData
         newData.CurrentRecipe = recipe.ID;
@@ -318,7 +318,7 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
         if (solution.Volume <= 0)
             return;
 
-        if (TryComp<CP14FoodHolderComponent>(ent.Owner, out var holder))
+        if (TryComp<CE14FoodHolderComponent>(ent.Owner, out var holder))
         {
             holder.FoodData = newData;
             Dirty(ent.Owner, holder);
@@ -327,9 +327,9 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
         Dirty(ent);
     }
 
-    protected void BurntFood(Entity<CP14FoodCookerComponent> ent)
+    protected void BurntFood(Entity<CE14FoodCookerComponent> ent)
     {
-        if (!TryComp<CP14FoodHolderComponent>(ent, out var holder) || holder.FoodData is null)
+        if (!TryComp<CE14FoodHolderComponent>(ent, out var holder) || holder.FoodData is null)
             return;
 
         if (!_solution.TryGetSolution(ent.Owner, ent.Comp.SolutionId, out var soln, out var solution))
@@ -341,13 +341,13 @@ public abstract partial class CP14SharedCookingSystem : EntitySystem
             visuals.Color = Color.FromHex("#212121");
         }
 
-        holder.FoodData.Name = Loc.GetString("cp14-meal-recipe-burned-trash-name");
-        holder.FoodData.Desc = Loc.GetString("cp14-meal-recipe-burned-trash-desc");
+        holder.FoodData.Name = Loc.GetString("CE14-meal-recipe-burned-trash-name");
+        holder.FoodData.Desc = Loc.GetString("CE14-meal-recipe-burned-trash-desc");
 
         var replacedVolume = solution.Volume / 2;
         solution.SplitSolution(replacedVolume);
         solution.AddReagent(_burntFoodReagent, replacedVolume / 2);
 
-        DirtyField(ent.Owner, holder, nameof(CP14FoodHolderComponent.FoodData));
+        DirtyField(ent.Owner, holder, nameof(CE14FoodHolderComponent.FoodData));
     }
 }

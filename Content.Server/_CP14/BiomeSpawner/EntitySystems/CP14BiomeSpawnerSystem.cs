@@ -4,7 +4,7 @@
  */
 
 using System.Linq;
-using Content.Server._CP14.BiomeSpawner.Components;
+using Content.Server._CE14.BiomeSpawner.Components;
 using Content.Server.Decals;
 using Content.Server.Parallax;
 using Content.Shared.Whitelist;
@@ -14,9 +14,9 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.BiomeSpawner.EntitySystems;
+namespace Content.Server._CE14.BiomeSpawner.EntitySystems;
 
-public sealed class CP14BiomeSpawnerSystem : EntitySystem
+public sealed class CE14BiomeSpawnerSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly BiomeSystem _biome = default!;
@@ -30,7 +30,7 @@ public sealed class CP14BiomeSpawnerSystem : EntitySystem
     private int _globalSeed = 0;
     public override void Initialize()
     {
-        SubscribeLocalEvent<CP14BiomeSpawnerComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<CE14BiomeSpawnerComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<Shared.GameTicking.RoundEndMessageEvent>(OnRoundEnd);
 
         UpdateSeed();
@@ -41,7 +41,7 @@ public sealed class CP14BiomeSpawnerSystem : EntitySystem
         UpdateSeed();
     }
 
-    private void OnMapInit(Entity<CP14BiomeSpawnerComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<CE14BiomeSpawnerComponent> ent, ref MapInitEvent args)
     {
         SpawnBiome(ent);
         QueueDel(ent);
@@ -52,7 +52,7 @@ public sealed class CP14BiomeSpawnerSystem : EntitySystem
         _globalSeed = _random.Next(int.MinValue, int.MaxValue);
     }
 
-    private void SpawnBiome(Entity<CP14BiomeSpawnerComponent> ent)
+    private void SpawnBiome(Entity<CE14BiomeSpawnerComponent> ent)
     {
         var biome = _proto.Index(ent.Comp.Biome);
         var spawnerTransform = Transform(ent);

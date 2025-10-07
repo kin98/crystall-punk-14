@@ -1,9 +1,9 @@
 - type: entity
   name: wood bench
-  id: CP14BenchWood
+  id: CE14BenchWood
   parent:
   - SeatBase
-  - CP14BaseFlammable
+  - CE14BaseFlammable
   description: A bench carved from wood, a comfortable part of the interior designed for sitting and relaxing.
   categories: [ ForkFiltered ]
   components:
@@ -11,10 +11,10 @@
     anchored: true
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Rotatable
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/bench.rsi
+    sprite: _CE14/Structures/Furniture/bench.rsi
     layers:
     - state: wooden
   - type: Physics
@@ -38,24 +38,24 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
   - type: Construction
-    graph: CP14BenchWood
-    node: CP14BenchWood
+    graph: CE14BenchWood
+    node: CE14BenchWood
 
 - type: entity
-  id: CP14BenchWoodBirch
-  parent: CP14BenchWood
+  id: CE14BenchWoodBirch
+  parent: CE14BenchWood
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/bench.rsi
+    sprite: _CE14/Structures/Furniture/bench.rsi
     layers:
     - state: birch
   - type: Construction
-    graph: CP14BenchWood
-    node: CP14BenchWoodBirch
+    graph: CE14BenchWood
+    node: CE14BenchWoodBirch
   - type: Destructible
     thresholds:
     - trigger:
@@ -69,6 +69,6 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodenPlanks1:
+          CE14BirchWoodenPlanks1:
             min: 1
             max: 2

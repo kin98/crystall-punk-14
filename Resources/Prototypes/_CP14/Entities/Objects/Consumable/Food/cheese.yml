@@ -1,6 +1,6 @@
 # Cheeses
 - type: entity
-  id: CP14FoodCheeseWheel
+  id: CE14FoodCheeseWheel
   parent: FoodInjectableBase
   name: cheese wheel
   description: A large wheel of soft, fragrant piece of cheese.
@@ -12,7 +12,7 @@
     flavors:
       - cheesy
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/cheese.rsi
+    sprite: _CE14/Objects/Consumable/Food/cheese.rsi
     layers:
       - state: cheese_wheel
   - type: SolutionContainerManager
@@ -26,13 +26,13 @@
           Quantity: 15 # 5 parts * 3 slices * 1 protein
   - type: SliceableFood
     count: 5
-    slice: CP14FoodCheesePart
+    slice: CE14FoodCheesePart
   - type: Tag
     tags:
-    - CP14Cheese
+    - CE14Cheese
 
 - type: entity
-  id: CP14FoodCheesePart
+  id: CE14FoodCheesePart
   parent: FoodInjectableBase
   name: cheese
   description: A triangle of soft, fragrant cheese.
@@ -44,7 +44,7 @@
     flavors:
       - cheesy
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/cheese.rsi
+    sprite: _CE14/Objects/Consumable/Food/cheese.rsi
     layers:
       - state: cheese_part
         map: [ "random" ]
@@ -64,13 +64,13 @@
           Quantity: 3 # 3 slices * 1 protein
   - type: SliceableFood
     count: 3
-    slice: CP14FoodCheeseSlice
+    slice: CE14FoodCheeseSlice
   - type: Tag
     tags:
-    - CP14Cheese
+    - CE14Cheese
 
 - type: entity
-  id: CP14FoodCheeseSlice
+  id: CE14FoodCheeseSlice
   parent: FoodInjectableBase
   name: cheese slice
   description: A thin slice of delicious smelling cheese.
@@ -82,7 +82,7 @@
     flavors:
       - cheesy
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/cheese.rsi
+    sprite: _CE14/Objects/Consumable/Food/cheese.rsi
     layers:
       - state: cheese_slice
         map: [ "random" ]
@@ -103,15 +103,15 @@
           Quantity: 1
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14CheeseSandwich
+      CE14Sandwich: CE14CheeseSandwich
   - type: Tag
     tags:
-    - CP14Cheese
+    - CE14Cheese
 
 # Blue Cheese (50% more protein)
 - type: entity
-  id: CP14FoodBlueCheeseWheel
-  parent: CP14FoodCheeseWheel
+  id: CE14FoodBlueCheeseWheel
+  parent: CE14FoodCheeseWheel
   name: blue cheese wheel
   description: A wheel of cheese with distinctive blue veins. Strong aroma!
   components:
@@ -133,16 +133,16 @@
           Quantity: 22.5 # 15 * 1.5 (50% more)
   - type: SliceableFood
     count: 5
-    slice: CP14FoodBlueCheesePart
+    slice: CE14FoodBlueCheesePart
   - type: StaticPrice
     price: 20
   - type: Tag
     tags:
-    - CP14Cheese
+    - CE14Cheese
 
 - type: entity
-  id: CP14FoodBlueCheesePart
-  parent: CP14FoodCheesePart
+  id: CE14FoodBlueCheesePart
+  parent: CE14FoodCheesePart
   name: blue cheese wedge
   description: A triangle of pungent blue-veined cheese.
   components:
@@ -171,16 +171,16 @@
           Quantity: 4.5 # 22.5/5
   - type: SliceableFood
     count: 3
-    slice: CP14FoodBlueCheeseSlice
+    slice: CE14FoodBlueCheeseSlice
   - type: StaticPrice
     price: 4
   - type: Tag
     tags:
-    - CP14Cheese
+    - CE14Cheese
 
 - type: entity
-  id: CP14FoodBlueCheeseSlice
-  parent: CP14FoodCheeseSlice
+  id: CE14FoodBlueCheeseSlice
+  parent: CE14FoodCheeseSlice
   name: blue cheese slice
   description: A thin slice of pungent blue cheese.
   components:
@@ -211,12 +211,12 @@
     price: 1
   - type: Tag
     tags:
-    - CP14Cheese
+    - CE14Cheese
 
 # Aged Cheese (100% more protein)
 - type: entity
-  id: CP14FoodAgedCheeseWheel
-  parent: CP14FoodCheeseWheel
+  id: CE14FoodAgedCheeseWheel
+  parent: CE14FoodCheeseWheel
   name: aged cheese wheel
   description: Hard cheese aged for months to develop rich flavor.
   components:
@@ -238,16 +238,16 @@
           Quantity: 30 # 15 * 2 (100% more)
   - type: SliceableFood
     count: 5
-    slice: CP14FoodAgedCheesePart
+    slice: CE14FoodAgedCheesePart
   - type: StaticPrice
     price: 35
   - type: Tag
     tags:
-    - CP14Cheese
+    - CE14Cheese
 
 - type: entity
-  id: CP14FoodAgedCheesePart
-  parent: CP14FoodCheesePart
+  id: CE14FoodAgedCheesePart
+  parent: CE14FoodCheesePart
   name: aged cheese wedge
   description: A triangle of richly flavored aged cheese.
   components:
@@ -276,16 +276,16 @@
           Quantity: 6 # 30/5
   - type: SliceableFood
     count: 3
-    slice: CP14FoodAgedCheeseSlice
+    slice: CE14FoodAgedCheeseSlice
   - type: StaticPrice
     price: 7
   - type: Tag
     tags:
-    - CP14Cheese
+    - CE14Cheese
 
 - type: entity
-  id: CP14FoodAgedCheeseSlice
-  parent: CP14FoodCheeseSlice
+  id: CE14FoodAgedCheeseSlice
+  parent: CE14FoodCheeseSlice
   name: aged cheese slice
   description: A thin slice of richly flavored aged cheese.
   components:
@@ -316,4 +316,4 @@
     price: 2
   - type: Tag
     tags:
-    - CP14Cheese
+    - CE14Cheese

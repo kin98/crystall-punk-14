@@ -1,21 +1,21 @@
 using System.Linq;
-using Content.Server._CP14.Demiplane.Components;
-using Content.Server._CP14.Procedural;
-using Content.Shared._CP14.Demiplane;
-using Content.Shared._CP14.Demiplane.Components;
-using Content.Shared._CP14.Procedural.Prototypes;
+using Content.Server._CE14.Demiplane.Components;
+using Content.Server._CE14.Procedural;
+using Content.Shared._CE14.Demiplane;
+using Content.Shared._CE14.Demiplane.Components;
+using Content.Shared._CE14.Procedural.Prototypes;
 using Content.Shared.Interaction;
 using Content.Shared.Teleportation.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.Demiplane;
+namespace Content.Server._CE14.Demiplane;
 
-public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
+public sealed partial class CE14DemiplaneSystem : CE14SharedDemiplaneSystem
 {
     [Dependency] private readonly SharedMapSystem _map = default!;
-    [Dependency] private readonly CP14LocationGenerationSystem _generation = default!;
+    [Dependency] private readonly CE14LocationGenerationSystem _generation = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
@@ -33,14 +33,14 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
 
         _sawmill = _logManager.GetSawmill("demiplane_map_gen");
 
-        SubscribeLocalEvent<CP14DemiplaneRiftComponent, InteractHandEvent>(OnRiftInteracted);
+        SubscribeLocalEvent<CE14DemiplaneRiftComponent, InteractHandEvent>(OnRiftInteracted);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<CP14DemiplaneRiftComponent>();
+        var query = EntityQueryEnumerator<CE14DemiplaneRiftComponent>();
         while (query.MoveNext(out var uid, out var demiplaneRift))
         {
             if (demiplaneRift.ScanningTargetMap is null)
@@ -51,7 +51,7 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
 
             demiplaneRift.NextScanTime = _timing.CurTime + TimeSpan.FromSeconds(5);
 
-            var targetQuery = EntityQueryEnumerator<CP14DemiplaneEnterPointComponent>();
+            var targetQuery = EntityQueryEnumerator<CE14DemiplaneEnterPointComponent>();
             while (targetQuery.MoveNext(out var enterUid, out var enterComp))
             {
                 if (Transform(enterUid).MapUid != demiplaneRift.ScanningTargetMap)
@@ -74,18 +74,18 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
         }
     }
 
-    private void OnRiftInteracted(Entity<CP14DemiplaneRiftComponent> ent, ref InteractHandEvent args)
+    private void OnRiftInteracted(Entity<CE14DemiplaneRiftComponent> ent, ref InteractHandEvent args)
     {
-        if (HasComp<CP14DemiplaneBlockInteractionsComponent>(args.User))
+        if (HasComp<CE14DemiplaneBlockInteractionsComponent>(args.User))
             return;
 
         if (!ent.Comp.CanCreate)
             return;
 
         var station = _station.GetStations().First();
-        if (!TryComp<CP14StationDemiplaneMapComponent>(station, out var stationMap))
+        if (!TryComp<CE14StationDemiplaneMapComponent>(station, out var stationMap))
         {
-            _sawmill.Error($"Station {station} does not have a CP14StationDemiplaneMapComponent!");
+            _sawmill.Error($"Station {station} does not have a CE14StationDemiplaneMapComponent!");
             QueueDel(ent);
             return;
         }
@@ -93,7 +93,7 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
         var currentPosition = Vector2i.Zero;
         var originMap = Transform(ent).MapUid;
 
-        if (TryComp<CP14DemiplaneMapComponent>(originMap, out var originDemiplaneComp))
+        if (TryComp<CE14DemiplaneMapComponent>(originMap, out var originDemiplaneComp))
             currentPosition = originDemiplaneComp.Position;
 
         var targetPosition = GetRandomNeighbourNotGeneratedMap((station, stationMap), currentPosition);
@@ -118,7 +118,7 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
         stationMap.GeneratedNodes.Add(targetPosition.Value);
         _map.CreateMap(out var mapId, runMapInit: true);
         var mapUid = _map.GetMap(mapId);
-        EnsureComp<CP14DemiplaneMapComponent>(mapUid).Position = targetPosition.Value;
+        EnsureComp<CE14DemiplaneMapComponent>(mapUid).Position = targetPosition.Value;
 
         _meta.SetEntityName(mapUid, $"Demi: [{targetPosition}] - {nextMapNode.LocationConfig}");
 
@@ -138,12 +138,12 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
     /// <summary>
     /// Returns a suitable location for the specified difficulty level.
     /// </summary>
-    public CP14ProceduralLocationPrototype SelectLocation(int level)
+    public CE14ProceduralLocationPrototype SelectLocation(int level)
     {
-        CP14ProceduralLocationPrototype? selectedConfig = null;
+        CE14ProceduralLocationPrototype? selectedConfig = null;
 
-        HashSet<CP14ProceduralLocationPrototype> suitableConfigs = new();
-        foreach (var locationConfig in _proto.EnumeratePrototypes<CP14ProceduralLocationPrototype>())
+        HashSet<CE14ProceduralLocationPrototype> suitableConfigs = new();
+        foreach (var locationConfig in _proto.EnumeratePrototypes<CE14ProceduralLocationPrototype>())
         {
             suitableConfigs.Add(locationConfig);
         }
@@ -191,16 +191,16 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
     /// <summary>
     /// Returns a set of modifiers under the specified difficulty level that are appropriate for the specified location
     /// </summary>
-    public List<ProtoId<CP14ProceduralModifierPrototype>> SelectModifiers(
+    public List<ProtoId<CE14ProceduralModifierPrototype>> SelectModifiers(
         int level,
-        CP14ProceduralLocationPrototype location,
-        Dictionary<ProtoId<CP14ProceduralModifierCategoryPrototype>, float> modifierLimits)
+        CE14ProceduralLocationPrototype location,
+        Dictionary<ProtoId<CE14ProceduralModifierCategoryPrototype>, float> modifierLimits)
     {
-        List<ProtoId<CP14ProceduralModifierPrototype>> selectedModifiers = new();
+        List<ProtoId<CE14ProceduralModifierPrototype>> selectedModifiers = new();
 
         //Modifier generation
-        Dictionary<CP14ProceduralModifierPrototype, float> suitableModifiersWeights = new();
-        foreach (var modifier in _proto.EnumeratePrototypes<CP14ProceduralModifierPrototype>())
+        Dictionary<CE14ProceduralModifierPrototype, float> suitableModifiersWeights = new();
+        foreach (var modifier in _proto.EnumeratePrototypes<CE14ProceduralModifierPrototype>())
         {
             var passed = true;
 
@@ -251,7 +251,7 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
 
 
         //Limits calculation
-        Dictionary<ProtoId<CP14ProceduralModifierCategoryPrototype>, float> limits = new();
+        Dictionary<ProtoId<CE14ProceduralModifierCategoryPrototype>, float> limits = new();
         foreach (var limit in modifierLimits)
         {
             limits.Add(limit.Key, limit.Value);
@@ -301,8 +301,8 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
     /// <summary>
     /// Optimization moment: avoid re-indexing for weight selection
     /// </summary>
-    private static CP14ProceduralModifierPrototype ModifierPick(
-        Dictionary<CP14ProceduralModifierPrototype, float> weights,
+    private static CE14ProceduralModifierPrototype ModifierPick(
+        Dictionary<CE14ProceduralModifierPrototype, float> weights,
         IRobustRandom random)
     {
         var picks = weights;
@@ -322,10 +322,10 @@ public sealed partial class CP14DemiplaneSystem : CP14SharedDemiplaneSystem
         }
 
         // Shouldn't happen
-        throw new InvalidOperationException($"Invalid weighted pick in CP14DemiplanSystem.Generation!");
+        throw new InvalidOperationException($"Invalid weighted pick in CE14DemiplanSystem.Generation!");
     }
 }
 
-public sealed class CP14LocationGeneratedEvent : EntityEventArgs
+public sealed class CE14LocationGeneratedEvent : EntityEventArgs
 {
 }

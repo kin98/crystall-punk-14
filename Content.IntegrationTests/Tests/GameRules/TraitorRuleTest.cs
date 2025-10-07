@@ -133,5 +133,5 @@ public sealed class TraitorRuleTest
         var meta = entMan.GetComponent<MetaDataComponent>(entity);
         var objective = entMan.GetComponent<ObjectiveComponent>(entity);
         return $"{meta.EntityName} ({objective.Difficulty})";
-    }*/ //Disabled in CP14
+    }*/ //Disabled in CE14
 }

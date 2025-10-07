@@ -1,5 +1,5 @@
-using Content.Shared._CP14.MagicEnergy.Components;
-using Content.Shared._CP14.MagicEssence;
+using Content.Shared._CE14.MagicEnergy.Components;
+using Content.Shared._CE14.MagicEssence;
 using Content.Shared.Alert;
 using Content.Shared.Audio;
 using Content.Shared.Examine;
@@ -7,34 +7,34 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Rejuvenate;
 using Content.Shared.Rounding;
 
-namespace Content.Shared._CP14.MagicEnergy;
+namespace Content.Shared._CE14.MagicEnergy;
 
-public abstract class CP14SharedMagicEnergySystem : EntitySystem
+public abstract class CE14SharedMagicEnergySystem : EntitySystem
 {
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly SharedAmbientSoundSystem _ambient = default!;
 
     public override void Initialize()
     {
-        SubscribeLocalEvent<CP14MagicEnergyContainerComponent, ComponentStartup>(OnComponentStartup);
-        SubscribeLocalEvent<CP14MagicEnergyContainerComponent, ComponentShutdown>(OnComponentShutdown);
-        SubscribeLocalEvent<CP14MagicEnergyContainerComponent, RejuvenateEvent>(OnRejuvenate);
+        SubscribeLocalEvent<CE14MagicEnergyContainerComponent, ComponentStartup>(OnComponentStartup);
+        SubscribeLocalEvent<CE14MagicEnergyContainerComponent, ComponentShutdown>(OnComponentShutdown);
+        SubscribeLocalEvent<CE14MagicEnergyContainerComponent, RejuvenateEvent>(OnRejuvenate);
 
-        SubscribeLocalEvent<CP14MagicEnergyExaminableComponent, ExaminedEvent>(OnExamined);
-        SubscribeLocalEvent<CP14MagicEnergyAmbientSoundComponent, CP14SlotCrystalPowerChangedEvent>(OnSlotPowerChanged);
+        SubscribeLocalEvent<CE14MagicEnergyExaminableComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<CE14MagicEnergyAmbientSoundComponent, CE14SlotCrystalPowerChangedEvent>(OnSlotPowerChanged);
     }
 
-    private void OnRejuvenate(Entity<CP14MagicEnergyContainerComponent> ent, ref RejuvenateEvent args)
+    private void OnRejuvenate(Entity<CE14MagicEnergyContainerComponent> ent, ref RejuvenateEvent args)
     {
         ChangeEnergy((ent, ent.Comp), ent.Comp.MaxEnergy - ent.Comp.Energy, out var deltaEnergy, out var overloadEnergy, true);
     }
 
-    private void OnComponentStartup(Entity<CP14MagicEnergyContainerComponent> ent, ref ComponentStartup args)
+    private void OnComponentStartup(Entity<CE14MagicEnergyContainerComponent> ent, ref ComponentStartup args)
     {
         UpdateMagicAlert(ent);
     }
 
-    private void OnComponentShutdown(Entity<CP14MagicEnergyContainerComponent> ent, ref ComponentShutdown args)
+    private void OnComponentShutdown(Entity<CE14MagicEnergyContainerComponent> ent, ref ComponentShutdown args)
     {
         if (ent.Comp.MagicAlert is null)
             return;
@@ -42,9 +42,9 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
         _alerts.ClearAlert(ent.Owner, ent.Comp.MagicAlert.Value);
     }
 
-    private void OnExamined(Entity<CP14MagicEnergyExaminableComponent> ent, ref ExaminedEvent args)
+    private void OnExamined(Entity<CE14MagicEnergyExaminableComponent> ent, ref ExaminedEvent args)
     {
-        if (!TryComp<CP14MagicEnergyContainerComponent>(ent, out var magicContainer))
+        if (!TryComp<CE14MagicEnergyContainerComponent>(ent, out var magicContainer))
             return;
 
         if (!args.IsInDetailsRange)
@@ -53,12 +53,12 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
         args.PushMarkup(GetEnergyExaminedText((ent, magicContainer)));
     }
 
-    private void OnSlotPowerChanged(Entity<CP14MagicEnergyAmbientSoundComponent> ent, ref CP14SlotCrystalPowerChangedEvent args)
+    private void OnSlotPowerChanged(Entity<CE14MagicEnergyAmbientSoundComponent> ent, ref CE14SlotCrystalPowerChangedEvent args)
     {
         _ambient.SetAmbience(ent, args.Powered);
     }
 
-    private void UpdateMagicAlert(Entity<CP14MagicEnergyContainerComponent> ent)
+    private void UpdateMagicAlert(Entity<CE14MagicEnergyContainerComponent> ent)
     {
         if (ent.Comp.MagicAlert is null)
             return;
@@ -71,7 +71,7 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
         _alerts.ShowAlert(ent.Owner, ent.Comp.MagicAlert.Value, (short) level);
     }
 
-    public void ChangeEnergy(Entity<CP14MagicEnergyContainerComponent?> ent,
+    public void ChangeEnergy(Entity<CE14MagicEnergyContainerComponent?> ent,
         FixedPoint2 energy,
         out FixedPoint2 deltaEnergy,
         out FixedPoint2 overloadEnergy,
@@ -89,14 +89,14 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
             if (ent.Comp.Energy + energy > ent.Comp.MaxEnergy && ent.Comp.UnsafeSupport)
             {
                 overloadEnergy = ent.Comp.Energy + energy - ent.Comp.MaxEnergy;
-                RaiseLocalEvent(ent, new CP14MagicEnergyOverloadEvent(overloadEnergy));
+                RaiseLocalEvent(ent, new CE14MagicEnergyOverloadEvent(overloadEnergy));
             }
 
             // Burn out
             if (ent.Comp.Energy + energy < 0 && ent.Comp.UnsafeSupport)
             {
                 overloadEnergy = ent.Comp.Energy + energy;
-                RaiseLocalEvent(ent, new CP14MagicEnergyBurnOutEvent(-energy - ent.Comp.Energy));
+                RaiseLocalEvent(ent, new CE14MagicEnergyBurnOutEvent(-energy - ent.Comp.Energy));
             }
         }
 
@@ -108,7 +108,7 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
         Dirty(ent);
 
         if (oldEnergy != newEnergy)
-            RaiseLocalEvent(ent, new CP14MagicEnergyLevelChangeEvent(oldEnergy, newEnergy, ent.Comp.MaxEnergy));
+            RaiseLocalEvent(ent, new CE14MagicEnergyLevelChangeEvent(oldEnergy, newEnergy, ent.Comp.MaxEnergy));
 
         UpdateMagicAlert((ent, ent.Comp));
     }
@@ -116,7 +116,7 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
     /// <summary>
     /// Set energy to 0
     /// </summary>
-    public void ClearEnergy(Entity<CP14MagicEnergyContainerComponent?> ent)
+    public void ClearEnergy(Entity<CE14MagicEnergyContainerComponent?> ent)
     {
         if (!Resolve(ent, ref ent.Comp, false))
             return;
@@ -124,8 +124,8 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
         ChangeEnergy(ent, -ent.Comp.Energy, out _, out _);
     }
 
-    public void TransferEnergy(Entity<CP14MagicEnergyContainerComponent?> sender,
-        Entity<CP14MagicEnergyContainerComponent?> receiver,
+    public void TransferEnergy(Entity<CE14MagicEnergyContainerComponent?> sender,
+        Entity<CE14MagicEnergyContainerComponent?> receiver,
         FixedPoint2 energy,
         out FixedPoint2 deltaEnergy,
         out FixedPoint2 overloadEnergy,
@@ -149,7 +149,7 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
         ChangeEnergy(receiver , -(change + overload), out deltaEnergy, out overloadEnergy, safe);
     }
 
-    public bool HasEnergy(EntityUid uid, FixedPoint2 energy, CP14MagicEnergyContainerComponent? component = null, bool safe = false)
+    public bool HasEnergy(EntityUid uid, FixedPoint2 energy, CE14MagicEnergyContainerComponent? component = null, bool safe = false)
     {
         if (!Resolve(uid, ref component))
             return false;
@@ -160,7 +160,7 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
         return component.Energy >= energy;
     }
 
-    public string GetEnergyExaminedText(Entity<CP14MagicEnergyContainerComponent> ent)
+    public string GetEnergyExaminedText(Entity<CE14MagicEnergyContainerComponent> ent)
     {
         var power = (int) (ent.Comp.Energy / ent.Comp.MaxEnergy * 100);
 
@@ -173,13 +173,13 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
         if (power < 33)
             color = "#c23030";
 
-        return Loc.GetString("cp14-magic-energy-scan-result",
+        return Loc.GetString("CE14-magic-energy-scan-result",
             ("item", MetaData(ent).EntityName),
             ("power", power),
             ("color", color));
     }
 
-    public void ChangeMaximumEnergy(Entity<CP14MagicEnergyContainerComponent?> ent, FixedPoint2 energy)
+    public void ChangeMaximumEnergy(Entity<CE14MagicEnergyContainerComponent?> ent, FixedPoint2 energy)
     {
         if (!Resolve(ent, ref ent.Comp, false))
             return;
@@ -193,13 +193,13 @@ public abstract class CP14SharedMagicEnergySystem : EntitySystem
 /// <summary>
 /// It's triggered when the energy change in MagicEnergyContainer
 /// </summary>
-public sealed class CP14MagicEnergyLevelChangeEvent : EntityEventArgs
+public sealed class CE14MagicEnergyLevelChangeEvent : EntityEventArgs
 {
     public readonly FixedPoint2 OldValue;
     public readonly FixedPoint2 NewValue;
     public readonly FixedPoint2 MaxValue;
 
-    public CP14MagicEnergyLevelChangeEvent(FixedPoint2 oldValue, FixedPoint2 newValue, FixedPoint2 maxValue)
+    public CE14MagicEnergyLevelChangeEvent(FixedPoint2 oldValue, FixedPoint2 newValue, FixedPoint2 maxValue)
     {
         OldValue = oldValue;
         NewValue = newValue;
@@ -210,11 +210,11 @@ public sealed class CP14MagicEnergyLevelChangeEvent : EntityEventArgs
 /// <summary>
 /// It's triggered when more energy enters the MagicEnergyContainer than it can hold.
 /// </summary>
-public sealed class CP14MagicEnergyOverloadEvent : EntityEventArgs
+public sealed class CE14MagicEnergyOverloadEvent : EntityEventArgs
 {
     public readonly FixedPoint2 OverloadEnergy;
 
-    public CP14MagicEnergyOverloadEvent(FixedPoint2 overloadEnergy)
+    public CE14MagicEnergyOverloadEvent(FixedPoint2 overloadEnergy)
     {
         OverloadEnergy = overloadEnergy;
     }
@@ -223,11 +223,11 @@ public sealed class CP14MagicEnergyOverloadEvent : EntityEventArgs
 /// <summary>
 /// It's triggered they something try to get energy out of MagicEnergyContainer that is lacking there.
 /// </summary>
-public sealed class CP14MagicEnergyBurnOutEvent : EntityEventArgs
+public sealed class CE14MagicEnergyBurnOutEvent : EntityEventArgs
 {
     public readonly FixedPoint2 BurnOutEnergy;
 
-    public CP14MagicEnergyBurnOutEvent(FixedPoint2 burnOutEnergy)
+    public CE14MagicEnergyBurnOutEvent(FixedPoint2 burnOutEnergy)
     {
         BurnOutEnergy = burnOutEnergy;
     }

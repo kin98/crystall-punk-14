@@ -1,21 +1,21 @@
 - type: entity
-  id: CP14ActionVulnSpikes
-  parent: CP14ActionSpellBase
+  id: CE14ActionVulnSpikes
+  parent: CE14ActionSpellBase
   name: Weakness Spikes
   description: You throw out several small spikes that cause weakness.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.8
   - type: DoAfterArgs
     delay: 1
     hidden: true
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneVulnSpikes
-  - type: CP14ActionDangerous
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneVulnSpikes
+  - type: CE14ActionDangerous
   - type: Action
     useDelay: 7.5
     icon:
-      sprite: _CP14/Actions/Spells/misc.rsi
+      sprite: _CE14/Actions/Spells/misc.rsi
       state: vulnerability
       color: "#a81e33"
   - type: TargetAction
@@ -23,17 +23,17 @@
     checkCanAccess: false
     range: 60
   - type: EntityTargetAction
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellProjectile
-        prototype: CP14SpikeVuln
+      - !type:CE14SpellProjectile
+        prototype: CE14SpikeVuln
         spread: 1.5
         projectileSpeed: 10
         projectileCount: 10
 
 - type: entity
-  id: CP14RuneVulnSpikes
-  parent: CP14BaseMagicRune
+  id: CE14RuneVulnSpikes
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -47,13 +47,13 @@
 
 - type: entity
   parent: BaseBullet
-  id: CP14SpikeVuln
+  id: CE14SpikeVuln
   name: weakness quill
   description: Organically spiked with a weakening liquid inside.
   categories: [ ForkFiltered ]
   components:
     - type: Sprite
-      sprite: _CP14/Objects/Weapons/Ranged/Projectiles/spike.rsi
+      sprite: _CE14/Objects/Weapons/Ranged/Projectiles/spike.rsi
       layers:
         - state: spike
           shader: unshaded
@@ -74,7 +74,7 @@
         melee:
           maxVol: 1
           reagents:
-            - ReagentId: CP14MonsterToxinVuln
+            - ReagentId: CE14MonsterToxinVuln
               Quantity: 1
     - type: SolutionInjectOnEmbed
       transferAmount: 1

@@ -1,17 +1,17 @@
 using Content.Shared.Damage;
 
-namespace Content.Shared._CP14.Damageable;
+namespace Content.Shared._CE14.Damageable;
 
-public sealed class CP14DamageableModifierSystem : EntitySystem
+public sealed class CE14DamageableModifierSystem : EntitySystem
 {
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14DamageableModifierComponent, DamageModifyEvent>(OnDamageModify);
+        SubscribeLocalEvent<CE14DamageableModifierComponent, DamageModifyEvent>(OnDamageModify);
     }
 
-    private void OnDamageModify(Entity<CP14DamageableModifierComponent> ent, ref DamageModifyEvent args)
+    private void OnDamageModify(Entity<CE14DamageableModifierComponent> ent, ref DamageModifyEvent args)
     {
         args.Damage *= ent.Comp.Modifier;
     }

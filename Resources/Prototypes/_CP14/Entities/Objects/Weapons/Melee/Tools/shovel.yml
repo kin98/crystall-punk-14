@@ -1,12 +1,12 @@
 - type: entity
   abstract: true
-  id: CP14BaseWeaponShovel
+  id: CE14BaseWeaponShovel
   parent:
   - BaseItem
-  - CP14BaseWeaponChemical
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
-  - CP14BaseWeaponSharp
+  - CE14BaseWeaponChemical
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
+  - CE14BaseWeaponSharp
   components:
   - type: Item
     size: Ginormous
@@ -18,8 +18,8 @@
     damage:
       types:
         Slash: 3
-    animation: CP14WeaponArcThrust
-    wideAnimation: CP14WeaponArcSlash
+    animation: CE14WeaponArcThrust
+    wideAnimation: CE14WeaponArcSlash
     soundHit:
       collection: MetalThud
     cPAnimationLength: 0.5
@@ -39,23 +39,23 @@
   - type: ToolTileCompatible
   - type: Tool
     qualities:
-      - CP14Digging
+      - CE14Digging
     useSound:
-      collection: CP14Digging
+      collection: CE14Digging
       params:
         variation: 0.03
         volume: 2
 
 - type: entity
-  parent: CP14BaseWeaponShovel
-  id: CP14WeaponShovelIron
+  parent: CE14BaseWeaponShovel
+  id: CE14WeaponShovelIron
   name: iron shovel
   description: A sturdy iron shovel, perfect for digging and not for combat.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Shovel/iron.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Shovel/iron.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 20
-      CP14Iron: 10
+      CE14WoodenPlanks: 20
+      CE14Iron: 10

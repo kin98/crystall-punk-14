@@ -1,63 +1,63 @@
 # Util
 
 - type: Tag
-  id: CP14FitInFryingPan
+  id: CE14FitInFryingPan
 
 # Meat
 
 - type: Tag
-  id: CP14Meat
+  id: CE14Meat
 
 - type: Tag
-  id: CP14MeatLeg
+  id: CE14MeatLeg
 
 - type: Tag
-  id: CP14MeatSlice
+  id: CE14MeatSlice
 
 - type: Tag
-  id: CP14MeatCutlet
+  id: CE14MeatCutlet
 
 - type: Tag
-  id: CP14MeatMonster
+  id: CE14MeatMonster
 
 - type: Tag
-  id: CP14MeatPig
+  id: CE14MeatPig
 
 # Vegetable
 
 - type: Tag
-  id: CP14Vegetable
+  id: CE14Vegetable
 
 - type: Tag
-  id: CP14Salad
+  id: CE14Salad
 
 - type: Tag
-  id: CP14Cabbage
+  id: CE14Cabbage
 
 - type: Tag
-  id: CP14Potato
+  id: CE14Potato
 
 - type: Tag
-  id: CP14Pumpkin
+  id: CE14Pumpkin
 
 # Fruits
 
 - type: Tag
-  id: CP14Fruits
+  id: CE14Fruits
 
 # Misc 
 
 - type: Tag
-  id: CP14Wheat
+  id: CE14Wheat
 
 - type: Tag
-  id: CP14Egg
+  id: CE14Egg
 
 - type: Tag
-  id: CP14Dough
+  id: CE14Dough
 
 - type: Tag
-  id: CP14Cheese
+  id: CE14Cheese
 
 - type: Tag
-  id: CP14Sandwich
+  id: CE14Sandwich

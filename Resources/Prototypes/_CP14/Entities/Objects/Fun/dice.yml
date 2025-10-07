@@ -1,20 +1,20 @@
 ﻿- type: entity
   abstract: true
   parent: BaseDice
-  id: CP14BaseDice
+  id: CE14BaseDice
   categories: [ ForkFiltered ]
   components:
   - type: Dice
   - type: Sprite
-    sprite: _CP14/Objects/Fun/dice.rsi
+    sprite: _CE14/Objects/Fun/dice.rsi
     noRot: true
   - type: Tag
     tags:
     - Dice
 
 - type: entity
-  parent: CP14BaseDice
-  id: CP14d20Dice
+  parent: CE14BaseDice
+  id: CE14d20Dice
   name: d20
   description: What are the odds of me drinking wine and choking and dropping the candle on the dwarf's head?
   components:
@@ -25,8 +25,8 @@
     state: d20_20
 
 - type: entity
-  parent: CP14BaseDice
-  id: CP14d6Dice
+  parent: CE14BaseDice
+  id: CE14d6Dice
   name: d6
   description: A bone cube for board games.
   components:

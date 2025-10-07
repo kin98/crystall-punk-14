@@ -1,6 +1,6 @@
 - type: entity
-  parent: CP14SimpleMobBase
-  id: CP14MobMonsterCackle
+  parent: CE14SimpleMobBase
+  id: CE14MobMonsterCackle
   name: cackle
   description: A monster that hunts for blood as a source of sustenance.
   categories: [ ForkFiltered ]
@@ -17,7 +17,7 @@
         6
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Mobs/Monster/cackle.rsi
+    sprite: _CE14/Mobs/Monster/cackle.rsi
     layers:
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: live
@@ -37,11 +37,11 @@
         - MobLayer
   - type: Butcherable
     spawned:
-    - id: CP14FoodCabbageSlice
+    - id: CE14FoodCabbageSlice
       amount: 4
-    - id: CP14BloodFlower
+    - id: CE14BloodFlower
       amount: 2
-    - id: CP14FoodCabbage
+    - id: CE14FoodCabbage
       amount: 1
       prob: 0.6
   - type: CombatMode
@@ -55,8 +55,8 @@
   - type: Body
     prototype: Animal
   - type: Damageable
-    damageContainer: CP14Biological
-    damageModifierSet: CP14Cackle
+    damageContainer: CE14Biological
+    damageModifierSet: CE14Cackle
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -82,7 +82,7 @@
     solution: melee
     generated:
       reagents:
-      - ReagentId: CP14MonsterToxinBleed
+      - ReagentId: CE14MonsterToxinBleed
         Quantity: 1
   - type: MeleeChemicalInjector
     transferAmount: 1
@@ -98,7 +98,7 @@
       path: /Audio/Voice/Diona/diona_rustle2.ogg
   - type: Bloodstream
     bloodMaxVolume: 200
-    bloodReagent: CP14BloodFlowerSap
+    bloodReagent: CE14BloodFlowerSap
   - type: Tag
     tags:
     - FootstepSound
@@ -113,7 +113,7 @@
         Brute: -0.07
         Burn: -0.07
   - type: BasicEntityAmmoProvider
-    proto: CP14SpikeCackleSpread
+    proto: CE14SpikeCackleSpread
     capacity: 2
     count: 2
   - type: RechargeBasicEntityAmmo
@@ -131,4 +131,4 @@
       path: /Audio/Weapons/Guns/Gunshots/water_spray.ogg
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster

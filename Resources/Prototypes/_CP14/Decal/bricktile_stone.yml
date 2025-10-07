@@ -1,135 +1,135 @@
 ﻿- type: decal
-  id: CP14BrickTileStoneBox
+  id: CE14BrickTileStoneBox
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_box
 
 - type: decal
-  id: CP14BrickTileStoneCornerNe
+  id: CE14BrickTileStoneCornerNe
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_corner_ne
 
 - type: decal
-  id: CP14BrickTileStoneCornerSe
+  id: CE14BrickTileStoneCornerSe
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_corner_se
 
 - type: decal
-  id: CP14BrickTileStoneCornerNw
+  id: CE14BrickTileStoneCornerNw
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_corner_nw
 
 - type: decal
-  id: CP14BrickTileStoneCornerSw
+  id: CE14BrickTileStoneCornerSw
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_corner_sw
 
 - type: decal
-  id: CP14BrickTileStoneInnerNe
+  id: CE14BrickTileStoneInnerNe
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_inner_ne
 
 - type: decal
-  id: CP14BrickTileStoneInnerSe
+  id: CE14BrickTileStoneInnerSe
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_inner_se
 
 - type: decal
-  id: CP14BrickTileStoneInnerNw
+  id: CE14BrickTileStoneInnerNw
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_inner_nw
 
 - type: decal
-  id: CP14BrickTileStoneInnerSw
+  id: CE14BrickTileStoneInnerSw
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_inner_sw
 
 - type: decal
-  id: CP14BrickTileStoneEndN
+  id: CE14BrickTileStoneEndN
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_end_n
 
 - type: decal
-  id: CP14BrickTileStoneEndE
+  id: CE14BrickTileStoneEndE
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_end_e
 
 - type: decal
-  id: CP14BrickTileStoneEndS
+  id: CE14BrickTileStoneEndS
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_end_s
 
 - type: decal
-  id: CP14BrickTileStoneEndW
+  id: CE14BrickTileStoneEndW
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_end_w
 
 - type: decal
-  id: CP14BrickTileStoneLineN
+  id: CE14BrickTileStoneLineN
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_line_n
 
 - type: decal
-  id: CP14BrickTileStoneLineE
+  id: CE14BrickTileStoneLineE
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_line_e
 
 - type: decal
-  id: CP14BrickTileStoneLineS
+  id: CE14BrickTileStoneLineS
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_line_s
 
 - type: decal
-  id: CP14BrickTileStoneLineW
+  id: CE14BrickTileStoneLineW
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/Stone.rsi
+    sprite: _CE14/Decals/Stone.rsi
     state: stone_line_w

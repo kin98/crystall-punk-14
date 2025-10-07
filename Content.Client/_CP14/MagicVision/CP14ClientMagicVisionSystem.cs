@@ -1,5 +1,5 @@
 using System.Numerics;
-using Content.Shared._CP14.MagicVision;
+using Content.Shared._CE14.MagicVision;
 using Content.Shared.Examine;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -11,9 +11,9 @@ using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
 
-namespace Content.Client._CP14.MagicVision;
+namespace Content.Client._CE14.MagicVision;
 
-public sealed class CP14ClientMagicVisionSystem : CP14SharedMagicVisionSystem
+public sealed class CE14ClientMagicVisionSystem : CE14SharedMagicVisionSystem
 {
     [Dependency] private readonly IClientGameTiming _timing = default!;
     [Dependency] private readonly SpriteSystem _sprite = default!;
@@ -22,8 +22,8 @@ public sealed class CP14ClientMagicVisionSystem : CP14SharedMagicVisionSystem
     [Dependency] private readonly IOverlayManager _overlayMan = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
-    private CP14MagicVisionOverlay? _overlay;
-    private CP14MagicVisionNoirOverlay? _overlay2;
+    private CE14MagicVisionOverlay? _overlay;
+    private CE14MagicVisionNoirOverlay? _overlay2;
 
     private TimeSpan _nextUpdate = TimeSpan.Zero;
 
@@ -34,16 +34,16 @@ public sealed class CP14ClientMagicVisionSystem : CP14SharedMagicVisionSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14MagicVisionMarkerComponent, AfterAutoHandleStateEvent>(OnHandleStateMarker);
+        SubscribeLocalEvent<CE14MagicVisionMarkerComponent, AfterAutoHandleStateEvent>(OnHandleStateMarker);
 
-        SubscribeLocalEvent<CP14MagicVisionComponent, LocalPlayerAttachedEvent>(OnPlayerAttached);
-        SubscribeLocalEvent<CP14MagicVisionComponent, LocalPlayerDetachedEvent>(OnPlayerDetached);
+        SubscribeLocalEvent<CE14MagicVisionComponent, LocalPlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<CE14MagicVisionComponent, LocalPlayerDetachedEvent>(OnPlayerDetached);
 
-        SubscribeLocalEvent<CP14MagicVisionComponent, ComponentInit>(OnComponentInit);
-        SubscribeLocalEvent<CP14MagicVisionComponent, ComponentShutdown>(OnComponentShutdown);
+        SubscribeLocalEvent<CE14MagicVisionComponent, ComponentInit>(OnComponentInit);
+        SubscribeLocalEvent<CE14MagicVisionComponent, ComponentShutdown>(OnComponentShutdown);
     }
 
-    private void OnComponentShutdown(Entity<CP14MagicVisionComponent> ent, ref ComponentShutdown args)
+    private void OnComponentShutdown(Entity<CE14MagicVisionComponent> ent, ref ComponentShutdown args)
     {
         if (_player.LocalEntity != ent)
             return;
@@ -61,34 +61,34 @@ public sealed class CP14ClientMagicVisionSystem : CP14SharedMagicVisionSystem
         _audio.PlayGlobal(_endSound, ent);
     }
 
-    private void OnComponentInit(Entity<CP14MagicVisionComponent> ent, ref ComponentInit args)
+    private void OnComponentInit(Entity<CE14MagicVisionComponent> ent, ref ComponentInit args)
     {
         if (_player.LocalEntity != ent)
             return;
 
-        _overlay = new CP14MagicVisionOverlay();
+        _overlay = new CE14MagicVisionOverlay();
         _overlayMan.AddOverlay(_overlay);
         _overlay.StartOverlay = _timing.CurTime;
 
-        _overlay2 = new CP14MagicVisionNoirOverlay();
+        _overlay2 = new CE14MagicVisionNoirOverlay();
         _overlayMan.AddOverlay(_overlay2);
 
         _audio.PlayGlobal(_startSound, ent);
     }
 
-    private void OnPlayerAttached(Entity<CP14MagicVisionComponent> ent, ref LocalPlayerAttachedEvent args)
+    private void OnPlayerAttached(Entity<CE14MagicVisionComponent> ent, ref LocalPlayerAttachedEvent args)
     {
-        _overlay = new CP14MagicVisionOverlay();
+        _overlay = new CE14MagicVisionOverlay();
         _overlayMan.AddOverlay(_overlay);
         _overlay.StartOverlay = _timing.CurTime;
 
-        _overlay2 = new CP14MagicVisionNoirOverlay();
+        _overlay2 = new CE14MagicVisionNoirOverlay();
         _overlayMan.AddOverlay(_overlay2);
 
         _audio.PlayGlobal(_startSound, ent);
     }
 
-    private void OnPlayerDetached(Entity<CP14MagicVisionComponent> ent, ref LocalPlayerDetachedEvent args)
+    private void OnPlayerDetached(Entity<CE14MagicVisionComponent> ent, ref LocalPlayerDetachedEvent args)
     {
         if (_overlay != null)
         {
@@ -103,7 +103,7 @@ public sealed class CP14ClientMagicVisionSystem : CP14SharedMagicVisionSystem
         _audio.PlayGlobal(_endSound, ent);
     }
 
-    protected override void OnExamined(Entity<CP14MagicVisionMarkerComponent> ent, ref ExaminedEvent args)
+    protected override void OnExamined(Entity<CE14MagicVisionMarkerComponent> ent, ref ExaminedEvent args)
     {
         base.OnExamined(ent, ref args);
 
@@ -123,7 +123,7 @@ public sealed class CP14ClientMagicVisionSystem : CP14SharedMagicVisionSystem
         _transform.SetWorldRotation(pointer, angle + Angle.FromDegrees(90));
     }
 
-    private void OnHandleStateMarker(Entity<CP14MagicVisionMarkerComponent> ent, ref AfterAutoHandleStateEvent args)
+    private void OnHandleStateMarker(Entity<CE14MagicVisionMarkerComponent> ent, ref AfterAutoHandleStateEvent args)
     {
         if (!TryComp<SpriteComponent>(ent, out var sprite))
             return;
@@ -143,14 +143,14 @@ public sealed class CP14ClientMagicVisionSystem : CP14SharedMagicVisionSystem
             return;
 
         _nextUpdate = _timing.CurTime + TimeSpan.FromSeconds(0.5f);
-        var queryFade = EntityQueryEnumerator<CP14MagicVisionMarkerComponent, SpriteComponent>();
+        var queryFade = EntityQueryEnumerator<CE14MagicVisionMarkerComponent, SpriteComponent>();
         while (queryFade.MoveNext(out var uid, out var fade, out var sprite))
         {
             UpdateOpaque((uid, fade), sprite);
         }
     }
 
-    private void UpdateOpaque(Entity<CP14MagicVisionMarkerComponent> ent, SpriteComponent sprite)
+    private void UpdateOpaque(Entity<CE14MagicVisionMarkerComponent> ent, SpriteComponent sprite)
     {
         var progress = Math.Clamp((_timing.CurTime.TotalSeconds - ent.Comp.SpawnTime.TotalSeconds) / (ent.Comp.EndTime.TotalSeconds - ent.Comp.SpawnTime.TotalSeconds), 0, 1);
         var alpha = 1 - progress;

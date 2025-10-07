@@ -11,7 +11,7 @@ namespace Content.Server.Fluids.EntitySystems;
 
 public sealed partial class PuddleSystem
 {
-    [Dependency] private readonly WeatherSystem _weather = default!; //CP14
+    [Dependency] private readonly WeatherSystem _weather = default!; //CE14
     private static readonly TimeSpan EvaporationCooldown = TimeSpan.FromSeconds(1);
 
     private void OnEvaporationMapInit(Entity<EvaporationComponent> entity, ref MapInitEvent args)
@@ -19,14 +19,14 @@ public sealed partial class PuddleSystem
         entity.Comp.NextTick = _timing.CurTime + EvaporationCooldown;
 
 
-        //CP14 Force evaporation under sky
+        //CE14 Force evaporation under sky
         var xform = Transform(entity);
         if (TryComp<MapGridComponent>(xform.GridUid, out var mapGrid))
         {
             var tileRef = _map.GetTileRef(xform.GridUid.Value, mapGrid, xform.Coordinates);
-            entity.Comp.CP14ForceEvaporation = _weather.CanWeatherAffect(xform.GridUid.Value, mapGrid, tileRef);
+            entity.Comp.CE14ForceEvaporation = _weather.CanWeatherAffect(xform.GridUid.Value, mapGrid, tileRef);
         }
-        //CP14 End force evaporation under sky
+        //CE14 End force evaporation under sky
     }
 
     private void UpdateEvaporation(EntityUid uid, Solution solution)
@@ -68,13 +68,13 @@ public sealed partial class PuddleSystem
                 puddleSolution.SplitSolutionWithOnly(reagentTick, evaporatingReagent);
             }
 
-            //CP14 force evaporation under sky
-            if (evaporation.CP14ForceEvaporation)
+            //CE14 force evaporation under sky
+            if (evaporation.CE14ForceEvaporation)
             {
                 var reagentTick = evaporation.EvaporationAmount * EvaporationCooldown.TotalSeconds;
                 puddleSolution.SplitSolution(reagentTick);
             }
-            //CP14 force evaporation under sky end
+            //CE14 force evaporation under sky end
 
             // Despawn if we're done
             if (puddleSolution.Volume == FixedPoint2.Zero)

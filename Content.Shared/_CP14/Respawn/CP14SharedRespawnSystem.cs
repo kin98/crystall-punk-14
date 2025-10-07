@@ -1,7 +1,7 @@
 using Content.Shared.Actions;
 
-namespace Content.Shared._CP14.Respawn;
+namespace Content.Shared._CE14.Respawn;
 
-public sealed partial class CP14RespawnAction : InstantActionEvent
+public sealed partial class CE14RespawnAction : InstantActionEvent
 {
 }

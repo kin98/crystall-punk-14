@@ -14,7 +14,7 @@ public sealed class ChatSanitizationManager : IChatSanitizationManager
 {
     private static readonly (Regex regex, string emoteKey)[] ShorthandToEmote =
     [
-        // CP14-RU-Localization-Start
+        // CE14-RU-Localization-Start
         Entry( "лол", "chatsan-laughs" ),
         Entry( "хд", "chatsan-laughs" ),
         Entry( "о-о", "chatsan-wide-eyed" ), // cyrillic о
@@ -36,7 +36,7 @@ public sealed class ChatSanitizationManager : IChatSanitizationManager
         Entry( ")", "chatsan-smiles" ),
         Entry( "((", "chatsan-frowns-deeply" ),
         Entry( "(", "chatsan-frowns" ),
-        // CP14-RU-Localization-End
+        // CE14-RU-Localization-End
         Entry(":)", "chatsan-smiles"),
         Entry(":]", "chatsan-smiles"),
         Entry("=)", "chatsan-smiles"),

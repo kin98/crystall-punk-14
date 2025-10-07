@@ -14,27 +14,27 @@ orphans: []
 nullspace: []
 tilemap:
   0: Space
-  9: CP14FloorBase
-  12: CP14FloorBirchWoodPlanksCruciform
-  8: CP14FloorDirt
-  27: CP14FloorFoundation
-  28: CP14FloorGrass
-  29: CP14FloorGrassLight
-  10: CP14FloorGrassTall
-  14: CP14FloorIce
-  13: CP14FloorLucensWoodPlanks
-  32: CP14FloorOakWoodPlanks
-  2: CP14FloorOakWoodPlanksBig
-  4: CP14FloorOakWoodPlanksBroken
-  1: CP14FloorOakWoodPlanksCruciform
-  3: CP14FloorOakWoodPlanksStairways
-  11: CP14FloorRedWoodPlanksCruciform
-  49: CP14FloorStonebricks
-  50: CP14FloorStonebricksSmallCarved1
-  51: CP14FloorStonebricksSmallCarved2
-  7: CP14FloorStonebricksSquareCarved
-  6: CP14FloorWoodPlanksBurned
-  5: CP14FloorWoodPlanksStairwaysBurned
+  9: CE14FloorBase
+  12: CE14FloorBirchWoodPlanksCruciform
+  8: CE14FloorDirt
+  27: CE14FloorFoundation
+  28: CE14FloorGrass
+  29: CE14FloorGrassLight
+  10: CE14FloorGrassTall
+  14: CE14FloorIce
+  13: CE14FloorLucensWoodPlanks
+  32: CE14FloorOakWoodPlanks
+  2: CE14FloorOakWoodPlanksBig
+  4: CE14FloorOakWoodPlanksBroken
+  1: CE14FloorOakWoodPlanksCruciform
+  3: CE14FloorOakWoodPlanksStairways
+  11: CE14FloorRedWoodPlanksCruciform
+  49: CE14FloorStonebricks
+  50: CE14FloorStonebricksSmallCarved1
+  51: CE14FloorStonebricksSmallCarved2
+  7: CE14FloorStonebricksSquareCarved
+  6: CE14FloorWoodPlanksBurned
+  5: CE14FloorWoodPlanksStairwaysBurned
   53: FloorIce
 entities:
 - proto: ""
@@ -66,11 +66,11 @@ entities:
         - 0
         - 0
         - 0
-    - type: CP14WeatherController
+    - type: CE14WeatherController
       entries:
       - weight: 2
         visuals: null
-      - visuals: CP14Mist
+      - visuals: CE14Mist
     - type: MapGrid
       chunks:
         0,0:

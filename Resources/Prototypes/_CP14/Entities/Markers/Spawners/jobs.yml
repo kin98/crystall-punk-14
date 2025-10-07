@@ -1,52 +1,52 @@
 - type: entity
-  id: CP14SpawnPointJobBase
+  id: CE14SpawnPointJobBase
   parent: SpawnPointJobBase
   abstract: true
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Markers/jobs.rsi
+    sprite: _CE14/Markers/jobs.rsi
     snapCardinals: true
 
 # Security
 
 - type: entity
-  id: CP14SpawnPointGuardCommander
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointGuardCommander
+  parent: CE14SpawnPointJobBase
   name: guard commander
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14GuardCommander
+    job_id: CE14GuardCommander
   - type: Sprite
     layers:
       - state: green
       - state: guard_commander
 
 - type: entity
-  id: CP14SpawnPointGuard
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointGuard
+  parent: CE14SpawnPointJobBase
   name: guard
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14Guard
+    job_id: CE14Guard
   - type: Sprite
     layers:
       - state: green
       - state: guard
 
 - type: entity
-  id: CP14SpawnPointInvestigator
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointInvestigator
+  parent: CE14SpawnPointJobBase
   name: investigator
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14Investigator
+    job_id: CE14Investigator
   - type: Sprite
     layers:
       - state: green
@@ -55,42 +55,42 @@
 # Mercenary
 
 - type: entity
-  id: CP14SpawnPointAdventurer
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointAdventurer
+  parent: CE14SpawnPointJobBase
   name: adventurer
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14Adventurer
+    job_id: CE14Adventurer
   - type: Sprite
     layers:
       - state: green
       - state: adventurer
 
 - type: entity
-  id: CP14SpawnPointGuildmaster
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointGuildmaster
+  parent: CE14SpawnPointJobBase
   name: guildmaster
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14Guildmaster
+    job_id: CE14Guildmaster
   - type: Sprite
     layers:
       - state: green
       - state: guildmaster
 
 - type: entity
-  id: CP14SpawnPointGuildworker
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointGuildworker
+  parent: CE14SpawnPointJobBase
   name: guildworker
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14GuildWorker
+    job_id: CE14GuildWorker
   - type: Sprite
     layers:
       - state: green
@@ -99,70 +99,70 @@
 # Artisans
 
 - type: entity
-  id: CP14SpawnPointApprentice
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointApprentice
+  parent: CE14SpawnPointJobBase
   name: apprentice
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14Apprentice
+    job_id: CE14Apprentice
   - type: Sprite
     layers:
       - state: green
       - state: workman #TODO Replace
 
 - type: entity
-  id: CP14SpawnPointMerchant
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointMerchant
+  parent: CE14SpawnPointJobBase
   name: merchant
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14Merchant
+    job_id: CE14Merchant
   - type: Sprite
     layers:
       - state: green
       - state: merchant
 
 - type: entity
-  id: CP14SpawnPointAlchemist
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointAlchemist
+  parent: CE14SpawnPointJobBase
   name: alchemist
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14Alchemist
+    job_id: CE14Alchemist
   - type: Sprite
     layers:
       - state: green
       - state: alchemist
 
 - type: entity
-  id: CP14SpawnPointBlacksmith
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointBlacksmith
+  parent: CE14SpawnPointJobBase
   name: blacksmith
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14Blacksmith
+    job_id: CE14Blacksmith
   - type: Sprite
     layers:
       - state: green
       - state: blacksmith
 
 - type: entity
-  id: CP14SpawnPointInnkeeper
-  parent: CP14SpawnPointJobBase
+  id: CE14SpawnPointInnkeeper
+  parent: CE14SpawnPointJobBase
   name: innkeeper
   categories:
   - Spawner
   components:
   - type: SpawnPoint
-    job_id: CP14Innkeeper
+    job_id: CE14Innkeeper
   - type: Sprite
     layers:
       - state: green

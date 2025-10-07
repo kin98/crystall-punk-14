@@ -1,6 +1,6 @@
 - type: entity
-  parent: CP14BaseFence
-  id: CP14BaseFenceGate
+  parent: CE14BaseFence
+  id: CE14BaseFenceGate
   abstract: true
   categories: [ ForkFiltered ]
   name: fence gate
@@ -37,27 +37,27 @@
       path: /Audio/Effects/door_open.ogg
     closeSound:
       path: /Audio/Effects/door_close.ogg
-  - type: CP14DoorInteractionPopup
+  - type: CE14DoorInteractionPopup
     interactSound:
-      collection: CP14Doorknob
+      collection: CE14Doorknob
       params:
         variation: 0.03
         volume: -5
   - type: Lock
     locked: false
-  - type: CP14Lock #Empty, for installing new locks
+  - type: CE14Lock #Empty, for installing new locks
 
 - type: entity
   parent:
-  - CP14BaseFenceGate
-  - CP14BaseFlammableSpreading
-  id: CP14FenceGateWooden
+  - CE14BaseFenceGate
+  - CE14BaseFlammableSpreading
+  id: CE14FenceGateWooden
   suffix: Wooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Fence/wooden.rsi
+    sprite: _CE14/Structures/Fence/wooden.rsi
   - type: Icon
-    sprite: _CP14/Structures/Fence/wooden.rsi
+    sprite: _CE14/Structures/Fence/wooden.rsi
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Wood
@@ -72,24 +72,24 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14FenceGateWooden
-    node: CP14FenceGateWooden
+    graph: CE14FenceGateWooden
+    node: CE14FenceGateWooden
 
 - type: entity
-  parent: CP14FenceGateWooden
-  id: CP14FenceGateWoodenBirch
+  parent: CE14FenceGateWooden
+  id: CE14FenceGateWoodenBirch
   suffix: Wooden Birch
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Fence/wooden_birch.rsi
+    sprite: _CE14/Structures/Fence/wooden_birch.rsi
   - type: Icon
-    sprite: _CP14/Structures/Fence/wooden_birch.rsi
+    sprite: _CE14/Structures/Fence/wooden_birch.rsi
   - type: Construction
-    graph: CP14FenceGateWooden
-    node: CP14FenceGateWooden
+    graph: CE14FenceGateWooden
+    node: CE14FenceGateWooden

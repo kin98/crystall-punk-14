@@ -1,26 +1,26 @@
 - type: construction
   crystallPunkAllowed: true
-  id: cp14herbbandage
-  graph: CP14HerbBandage
+  id: CE14herbbandage
+  graph: CE14HerbBandage
   startNode: start
-  targetNode: cp14herbbandage
+  targetNode: CE14herbbandage
   category: construction-category-tools
   objectType: Item
 
 - type: construction
   crystallPunkAllowed: true
-  id: cp14gauze
-  graph: CP14Gauze
+  id: CE14gauze
+  graph: CE14Gauze
   startNode: start
-  targetNode: cp14gauze
+  targetNode: CE14gauze
   category: construction-category-tools
   objectType: Item
 
 - type: construction
   crystallPunkAllowed: true
-  id: cp14torch
-  graph: CP14Torch
+  id: CE14torch
+  graph: CE14Torch
   startNode: start
-  targetNode: cp14torch
+  targetNode: CE14torch
   category: construction-category-tools
   objectType: Item

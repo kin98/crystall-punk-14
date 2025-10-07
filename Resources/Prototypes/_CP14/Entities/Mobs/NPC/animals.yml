@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14MobRabbit
-  parent: CP14SimpleMobBase
+  id: CE14MobRabbit
+  parent: CE14SimpleMobBase
   name: rabbit
   description: A little fluffy rabbit. I could eat it.
   categories: [ ForkFiltered ]
@@ -10,12 +10,12 @@
       task: RuminantCompound
   - type: NpcFactionMember
     factions:
-    - CP14PeacefulAnimals
+    - CE14PeacefulAnimals
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Animals/rabbit.rsi
+      sprite: _CE14/Mobs/Animals/rabbit.rsi
       state: rabbit
   - type: Fixtures
     fixtures:
@@ -30,13 +30,13 @@
         - MobLayer
   - type: Tag
     tags:
-    - CP14Rabbit
+    - CE14Rabbit
   - type: Reproductive
     partnerWhitelist:
       tags:
-      - CP14Rabbit
+      - CE14Rabbit
     offspring:
-    - id: CP14MobRabbit
+    - id: CE14MobRabbit
       maxAmount: 2
   - type: ReproductivePartner
   - type: Speech
@@ -67,28 +67,28 @@
         Base: rabbit_dead
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatRabbit
+    - id: CE14FoodMeatRabbit
       amount: 4
-    - id: CP14ThinLeather1
+    - id: CE14ThinLeather1
       amount: 1
       maxAmount: 2
-    - id: CP14Fur
+    - id: CE14Fur
       amount: 1
       prob: 0.75
   - type: Bloodstream
     bloodMaxVolume: 50
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: InteractionPopup
     successChance: 0.5
-    interactSuccessString: cp14-petting-success-rabbit
-    interactFailureString: cp14-petting-failure-rabbit
+    interactSuccessString: CE14-petting-success-rabbit
+    interactFailureString: CE14-petting-failure-rabbit
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/fox_squeak.ogg
 
 - type: entity
-  id: CP14MobPig
-  parent: CP14SimpleMobBase
+  id: CE14MobPig
+  parent: CE14SimpleMobBase
   name: pig
   description: An omnivorous and unpretentious animal that is sure to make juicy cuts of meat.
   categories: [ ForkFiltered ]
@@ -98,12 +98,12 @@
       task: RuminantCompound
   - type: NpcFactionMember
     factions:
-    - CP14PeacefulAnimals
+    - CE14PeacefulAnimals
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Animals/pig.rsi
+      sprite: _CE14/Mobs/Animals/pig.rsi
       state: live
   - type: Fixtures
     fixtures:
@@ -118,13 +118,13 @@
         - MobLayer
   - type: Tag
     tags:
-    - CP14Pig
+    - CE14Pig
   - type: Reproductive
     partnerWhitelist:
       tags:
-      - CP14Pig
+      - CE14Pig
     offspring:
-    - id: CP14MobPig
+    - id: CE14MobPig
       maxAmount: 2
   - type: ReproductivePartner
   - type: Appearance
@@ -151,25 +151,25 @@
         Base: dead
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatPig
+    - id: CE14FoodMeatPig
       amount: 3
-    - id: CP14FoodMeatPig
+    - id: CE14FoodMeatPig
       amount: 1
       prob: 0.5
-    - id: CP14FoodMeatPigLeg
+    - id: CE14FoodMeatPigLeg
       amount: 1
-    - id: CP14FoodMeatPigLeg
+    - id: CE14FoodMeatPigLeg
       amount: 1
       prob: 0.3
-    - id: CP14Leather1
+    - id: CE14Leather1
       amount: 1
       maxAmount: 3
-    - id: CP14Bone1
+    - id: CE14Bone1
       amount: 2
       maxAmount: 3
   - type: Bloodstream
     bloodMaxVolume: 150
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: Grammar
     attributes:
       gender: epicene
@@ -184,8 +184,8 @@
       path: /Audio/Animals/pig_oink.ogg
 
 - type: entity
-  id: CP14MobBoar
-  parent: CP14MobPig
+  id: CE14MobBoar
+  parent: CE14MobPig
   name: boar
   description: A distant relative of pigs, same pros, but unlike its peaceful relatives, will definitely try to pick you up on its fangs if you show aggression towards it.
   categories: [ ForkFiltered ]
@@ -196,7 +196,7 @@
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Animals/boar.rsi
+      sprite: _CE14/Mobs/Animals/boar.rsi
       state: live
   - type: MeleeWeapon
     angle: 0
@@ -207,33 +207,33 @@
         Slash: 2
   - type: Tag
     tags:
-    - CP14Boar
+    - CE14Boar
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatBoar
+    - id: CE14FoodMeatBoar
       amount: 4
-    - id: CP14Leather1
+    - id: CE14Leather1
       amount: 2
       maxAmount: 4
-    - id: CP14ScrapLeather
+    - id: CE14ScrapLeather
       amount: 1
       maxAmount: 3
       prob: 0.5
-    - id: CP14RuggedLeather1
+    - id: CE14RuggedLeather1
       amount: 1
       prob: 0.1
-    - id: CP14CheapFur
+    - id: CE14CheapFur
       amount: 1
       prob: 0.25
-    - id: CP14Bone1
+    - id: CE14Bone1
       amount: 2
       maxAmount: 4
   - type: Reproductive
     partnerWhitelist:
       tags:
-      - CP14Boar
+      - CE14Boar
     offspring:
-    - id: CP14MobBoar
+    - id: CE14MobBoar
       maxAmount: 1
   - type: ReproductivePartner
   - type: MovementSpeedModifier
@@ -251,14 +251,14 @@
 
 - type: entity
   name: frog
-  parent: CP14SimpleMobBase
-  id: CP14MobFrog
+  parent: CE14SimpleMobBase
+  id: CE14MobFrog
   description: Green and constantly jumping frog, and perhaps thanks to it mosquitoes have not completely filled the marshes.
   categories: [ ForkFiltered ]
   components:
   - type: NpcFactionMember
     factions:
-    - CP14Neutrals
+    - CE14Neutrals
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
     baseSprintSpeed: 5
@@ -266,11 +266,11 @@
     drawdepth: SmallMobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
-      sprite: _CP14/Mobs/Animals/frog.rsi
+      sprite: _CE14/Mobs/Animals/frog.rsi
       state: frog
   - type: Clothing
     quickEquip: false
-    sprite: _CP14/Mobs/Animals/frog_helmet.rsi
+    sprite: _CE14/Mobs/Animals/frog_helmet.rsi
     equippedPrefix: 0
     slots:
     - HEAD
@@ -315,9 +315,9 @@
   - type: Butcherable
     butcherDelay: 2
     spawned:
-    - id: CP14FoodMeatFrogLeg
+    - id: CE14FoodMeatFrogLeg
       amount: 2
-    - id: CP14ScrapLeather
+    - id: CE14ScrapLeather
       amount: 1
       prob: 0.5
   - type: MeleeWeapon
@@ -336,10 +336,10 @@
   - type: CanEscapeInventory
   - type: Bloodstream
     bloodMaxVolume: 30
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: Tag
     tags:
-    - CP14Mosquito
+    - CE14Mosquito
   - type: Destructible
     thresholds:
     - trigger:
@@ -353,15 +353,15 @@
     minInterval: 10
     maxInterval: 20
     sound:
-      collection: CP14Frog
+      collection: CE14Frog
       params:
         volume: -8
         variation: 0.125
   - type: SoundWhileAlive
 
 - type: entity
-  id: CP14MobSheep
-  parent: CP14SimpleMobBase
+  id: CE14MobSheep
+  parent: CE14SimpleMobBase
   name: sheep
   description: White and fluffy as a cloud sheep.
   categories: [ ForkFiltered ]
@@ -371,12 +371,12 @@
       task: RuminantCompound
   - type: NpcFactionMember
     factions:
-    - CP14PeacefulAnimals
+    - CE14PeacefulAnimals
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Animals/sheep.rsi
+      sprite: _CE14/Mobs/Animals/sheep.rsi
       state: sheep
   - type: Fixtures
     fixtures:
@@ -391,13 +391,13 @@
         - MobLayer
   - type: Tag
     tags:
-    - CP14Sheep
+    - CE14Sheep
   - type: Reproductive
     partnerWhitelist:
       tags:
-      - CP14Sheep
+      - CE14Sheep
     offspring:
-    - id: CP14MobSheep
+    - id: CE14MobSheep
       maxAmount: 1
   - type: ReproductivePartner
   - type: Speech
@@ -431,24 +431,24 @@
         Base: dead
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatLamb
+    - id: CE14FoodMeatLamb
       amount: 4
-    - id: CP14String # As long as there are no mechanics to shearing wool, the only way to get string.
+    - id: CE14String # As long as there are no mechanics to shearing wool, the only way to get string.
       amount: 4
       maxAmount: 16
-    - id: CP14ThinLeather1
+    - id: CE14ThinLeather1
       amount: 2
       maxAmount: 5
-    - id: CP14ScrapLeather
+    - id: CE14ScrapLeather
       amount: 1
       maxAmount: 5
       prob: 0.3
-    - id: CP14Bone1
+    - id: CE14Bone1
       amount: 1
       maxAmount: 2
   - type: Bloodstream
     bloodMaxVolume: 150
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-goat
@@ -458,8 +458,8 @@
       path: /Audio/Animals/goat_bah.ogg
 
 - type: entity
-  id: CP14MobBigBear
-  parent: CP14SimpleMobBase
+  id: CE14MobBigBear
+  parent: CE14SimpleMobBase
   name: big bear
   description: A big, angry-looking bear. Maybe he didn't get enough sleep.
   categories: [ ForkFiltered ]
@@ -474,14 +474,14 @@
         true
   - type: NpcFactionMember
     factions:
-    - CP14AggressiveAnimals
+    - CE14AggressiveAnimals
   #- type: NPCUseActionOnTarget # TODO: add support for non-target actions
-  #  actionId: CP14ActionBearSpellSprint
+  #  actionId: CE14ActionBearSpellSprint
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Animals/bear.rsi
+      sprite: _CE14/Mobs/Animals/bear.rsi
       state: live
   - type: Fixtures
     fixtures:
@@ -526,23 +526,23 @@
     critThreshold: 300
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatBoar # TODO
+    - id: CE14FoodMeatBoar # TODO
       amount: 5
-    - id: CP14RuggedLeather1
+    - id: CE14RuggedLeather1
       amount: 2
       maxAmount: 5
-    - id: CP14ScrapLeather
+    - id: CE14ScrapLeather
       amount: 2
       maxAmount: 6
       prob: 0.5
-    - id: CP14GoodFur
+    - id: CE14GoodFur
       amount: 1
-    - id: CP14Bone1
+    - id: CE14Bone1
       amount: 8
       maxAmount: 10
   - type: Bloodstream
     bloodMaxVolume: 350
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: Puller
     needsHands: false
   - type: Tag
@@ -555,20 +555,20 @@
     accent: genericAggressive
   - type: Vocal
     sounds:
-      Unsexed: CP14Bear
+      Unsexed: CE14Bear
   - type: SpamEmitSound
     minInterval: 20
     maxInterval: 40
     sound:
-      collection: CP14Bear
+      collection: CE14Bear
       params:
         volume: -2
         variation: 0.125
   - type: SoundWhileAlive
 
 - type: entity
-  id: CP14MobSnail
-  parent: CP14SimpleMobBase
+  id: CE14MobSnail
+  parent: CE14SimpleMobBase
   name: snail
   description: A small and slow snail. It seems that any touch could crush it.
   categories: [ ForkFiltered ]
@@ -577,8 +577,8 @@
     makeSentient: true
     allowSpeech: true
     allowMovement: true
-    name: cp14-ghost-role-information-name-snail
-    description: cp14-ghost-role-information-description-snail
+    name: CE14-ghost-role-information-name-snail
+    description: CE14-ghost-role-information-description-snail
     rules: ghost-role-information-freeagent-rules
     mindRoles:
     - MindRoleGhostRoleFreeAgentHarmless
@@ -589,11 +589,11 @@
       task: MouseCompound
   - type: NpcFactionMember
     factions:
-      - CP14PeacefulAnimals
+      - CE14PeacefulAnimals
   - type: Sprite
     drawdepth: SmallMobs
     layers:
-    - sprite: _CP14/Mobs/Animals/snail.rsi
+    - sprite: _CE14/Mobs/Animals/snail.rsi
       state: live
   - type: Item
     size: Tiny
@@ -643,7 +643,7 @@
     combatToggleAction: ActionCombatModeToggleOff
   - type: Bloodstream
     bloodMaxVolume: 10
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: CanEscapeInventory
   - type: BadFood
   - type: FireVisuals
@@ -669,7 +669,7 @@
       - !type:SpawnEntitiesBehavior
         spawnInContainer: true
         spawn:
-          CP14FoodSnailShell:
+          CE14FoodSnailShell:
             min: 1
             max: 1
     - trigger:
@@ -694,7 +694,7 @@
       - !type:SpawnEntitiesBehavior
         spawnInContainer: true
         spawn:
-          CP14Ash1:
+          CE14Ash1:
             min: 1
             max: 1
       - !type:BurnBodyBehavior { }

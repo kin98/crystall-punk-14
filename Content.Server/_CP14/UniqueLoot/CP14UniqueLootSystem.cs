@@ -1,19 +1,19 @@
 using System.Linq;
-using Content.Shared._CP14.UniqueLoot;
+using Content.Shared._CE14.UniqueLoot;
 using Content.Shared.GameTicking;
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.UniqueLoot;
+namespace Content.Server._CE14.UniqueLoot;
 
-public sealed partial class CP14UniqueLootSystem : EntitySystem
+public sealed partial class CE14UniqueLootSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
 
-    private readonly Dictionary<CP14UniqueLootPrototype, int> _uniqueLootCount = new();
+    private readonly Dictionary<CE14UniqueLootPrototype, int> _uniqueLootCount = new();
 
     public override void Initialize()
     {
@@ -21,15 +21,15 @@ public sealed partial class CP14UniqueLootSystem : EntitySystem
 
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnCleanup);
 
-        SubscribeLocalEvent<CP14UniqueLootSpawnerComponent, MapInitEvent>(OnMapInit);
-        SubscribeLocalEvent<CP14SingletonComponent, MapInitEvent>(OnSingletonMapInit);
+        SubscribeLocalEvent<CE14UniqueLootSpawnerComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<CE14SingletonComponent, MapInitEvent>(OnSingletonMapInit);
 
         RefreshUniqueLoot();
     }
 
-    private void OnSingletonMapInit(Entity<CP14SingletonComponent> ent, ref MapInitEvent args)
+    private void OnSingletonMapInit(Entity<CE14SingletonComponent> ent, ref MapInitEvent args)
     {
-        var query = EntityQueryEnumerator<CP14SingletonComponent>();
+        var query = EntityQueryEnumerator<CE14SingletonComponent>();
         while (query.MoveNext(out var existingEnt, out var existingComp))
         {
             if (existingEnt == ent.Owner || existingComp.Key != ent.Comp.Key)
@@ -40,7 +40,7 @@ public sealed partial class CP14UniqueLootSystem : EntitySystem
         }
     }
 
-    private void OnMapInit(Entity<CP14UniqueLootSpawnerComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<CE14UniqueLootSpawnerComponent> ent, ref MapInitEvent args)
     {
         var loot = GetNextUniqueLoot(ent.Comp.Tag);
 
@@ -66,7 +66,7 @@ public sealed partial class CP14UniqueLootSystem : EntitySystem
     {
         _uniqueLootCount.Clear();
 
-        foreach (var loot in _proto.EnumeratePrototypes<CP14UniqueLootPrototype>())
+        foreach (var loot in _proto.EnumeratePrototypes<CE14UniqueLootPrototype>())
         {
             _uniqueLootCount[loot] = loot.Count;
         }
@@ -79,7 +79,7 @@ public sealed partial class CP14UniqueLootSystem : EntitySystem
 
         var possibleLoot = _uniqueLootCount.Keys.ToList();
 
-        CP14UniqueLootPrototype? selectedLoot = null;
+        CE14UniqueLootPrototype? selectedLoot = null;
 
         while (selectedLoot is null)
         {

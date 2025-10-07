@@ -1,10 +1,10 @@
 - type: roleType
-  id: CP14DemiplaneAntagonist
-  name: cp14-role-type-demiplane-antag-name
+  id: CE14DemiplaneAntagonist
+  name: CE14-role-type-demiplane-antag-name
   color: '#e03876'
 
 - type: roleType
-  id: CP14RaidAntagonist
-  name: cp14-role-type-raid-antag-name
+  id: CE14RaidAntagonist
+  name: CE14-role-type-raid-antag-name
   color: '#a81b24'
 

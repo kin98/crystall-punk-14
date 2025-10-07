@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CP14.Temperature;
+namespace Content.Shared._CE14.Temperature;
 
 // Appearance Data key
 [Serializable, NetSerializable]

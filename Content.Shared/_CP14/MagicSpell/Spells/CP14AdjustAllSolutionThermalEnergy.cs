@@ -1,12 +1,12 @@
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
 /// <summary>
 ///     Adjusts the thermal energy of all the solutions inside the container.
 /// </summary>
-public sealed partial class CP14AdjustAllSolutionThermalEnergy : CP14SpellEffect
+public sealed partial class CE14AdjustAllSolutionThermalEnergy : CE14SpellEffect
 {
     /// <summary>
     ///     The change in energy.
@@ -26,7 +26,7 @@ public sealed partial class CP14AdjustAllSolutionThermalEnergy : CP14SpellEffect
     [DataField]
     public float? MaxTemp;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         var solutionContainer = entManager.System<SharedSolutionContainerSystem>();
 

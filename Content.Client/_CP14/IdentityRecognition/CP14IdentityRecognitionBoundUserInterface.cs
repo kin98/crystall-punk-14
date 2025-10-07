@@ -1,22 +1,22 @@
-using Content.Shared._CP14.IdentityRecognition;
+using Content.Shared._CE14.IdentityRecognition;
 using Content.Shared.Labels.Components;
 using Content.Shared.Mind.Components;
 using Robust.Client.Player;
 using Robust.Client.UserInterface;
 
-namespace Content.Client._CP14.IdentityRecognition;
+namespace Content.Client._CE14.IdentityRecognition;
 
-public sealed class CP14IdentityRecognitionBoundUserInterface : BoundUserInterface
+public sealed class CE14IdentityRecognitionBoundUserInterface : BoundUserInterface
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
 
     [ViewVariables]
-    private CP14RememberNameWindow? _window;
+    private CE14RememberNameWindow? _window;
 
     private NetEntity? _rememberedTarget;
 
-    public CP14IdentityRecognitionBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
+    public CE14IdentityRecognitionBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
         IoCManager.InjectDependencies(this);
     }
@@ -25,7 +25,7 @@ public sealed class CP14IdentityRecognitionBoundUserInterface : BoundUserInterfa
     {
         base.Open();
 
-        _window = this.CreateWindow<CP14RememberNameWindow>();
+        _window = this.CreateWindow<CE14RememberNameWindow>();
 
         if (_entManager.TryGetComponent(Owner, out HandLabelerComponent? labeler))
         {
@@ -47,7 +47,7 @@ public sealed class CP14IdentityRecognitionBoundUserInterface : BoundUserInterfa
         if (currentName is not null && currentName.Equals(newLabel))
             return;
 
-        SendPredictedMessage(new CP14RememberedNameChangedMessage(newLabel, _rememberedTarget.Value));
+        SendPredictedMessage(new CE14RememberedNameChangedMessage(newLabel, _rememberedTarget.Value));
     }
 
     public void Reload()
@@ -69,7 +69,7 @@ public sealed class CP14IdentityRecognitionBoundUserInterface : BoundUserInterfa
             return null;
         if (!_entManager.TryGetComponent<MindContainerComponent>(_player.LocalEntity, out var mindContainer))
             return null;
-        if (!_entManager.TryGetComponent<CP14RememberedNamesComponent>(mindContainer.Mind, out var knownNames))
+        if (!_entManager.TryGetComponent<CE14RememberedNamesComponent>(mindContainer.Mind, out var knownNames))
             return null;
 
         var netId = _rememberedTarget.Value.Id;
@@ -85,7 +85,7 @@ public sealed class CP14IdentityRecognitionBoundUserInterface : BoundUserInterfa
 
         switch (state)
         {
-            case CP14RememberNameUiState rememberNameUiState:
+            case CE14RememberNameUiState rememberNameUiState:
                 _rememberedTarget = rememberNameUiState.Target;
                 break;
         }

@@ -1,10 +1,10 @@
-using Content.Shared._CP14.MagicEnergy;
-using Content.Shared._CP14.MagicEnergy.Components;
+using Content.Shared._CE14.MagicEnergy;
+using Content.Shared._CE14.MagicEnergy.Components;
 using Content.Shared.FixedPoint;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellConsumeManaEffect : CP14SpellEffect
+public sealed partial class CE14SpellConsumeManaEffect : CE14SpellEffect
 {
     [DataField]
     public FixedPoint2 Mana = 0;
@@ -12,17 +12,17 @@ public sealed partial class CP14SpellConsumeManaEffect : CP14SpellEffect
     [DataField]
     public bool Safe = false;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         if (args.Target is null)
             return;
 
         var targetEntity = args.Target.Value;
 
-        if (!entManager.HasComponent<CP14MagicEnergyContainerComponent>(targetEntity))
+        if (!entManager.HasComponent<CE14MagicEnergyContainerComponent>(targetEntity))
             return;
 
-        var magicEnergy = entManager.System<CP14SharedMagicEnergySystem>();
+        var magicEnergy = entManager.System<CE14SharedMagicEnergySystem>();
 
         //First - used object
         if (args.Used is not null)

@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  id: CP14ClothingBaseContainer
+  id: CE14ClothingBaseContainer
   categories: [ ForkFiltered ]
   components:
   - type: ContainerContainer

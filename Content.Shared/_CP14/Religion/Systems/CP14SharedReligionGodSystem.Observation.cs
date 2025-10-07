@@ -1,50 +1,50 @@
 using System.Numerics;
-using Content.Shared._CP14.Religion.Components;
-using Content.Shared._CP14.Religion.Prototypes;
+using Content.Shared._CE14.Religion.Components;
+using Content.Shared._CE14.Religion.Prototypes;
 using Content.Shared.Interaction;
 using Content.Shared.Verbs;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Religion.Systems;
+namespace Content.Shared._CE14.Religion.Systems;
 
-public abstract partial class CP14SharedReligionGodSystem
+public abstract partial class CE14SharedReligionGodSystem
 {
     private void InitializeObservation()
     {
-        SubscribeLocalEvent<CP14ReligionEntityComponent, InRangeOverrideEvent>(OnGodInRange);
-        SubscribeLocalEvent<CP14ReligionEntityComponent, MenuVisibilityEvent>(OnGodMenu);
+        SubscribeLocalEvent<CE14ReligionEntityComponent, InRangeOverrideEvent>(OnGodInRange);
+        SubscribeLocalEvent<CE14ReligionEntityComponent, MenuVisibilityEvent>(OnGodMenu);
     }
 
-    private void OnGodInRange(Entity<CP14ReligionEntityComponent> ent, ref InRangeOverrideEvent args)
+    private void OnGodInRange(Entity<CE14ReligionEntityComponent> ent, ref InRangeOverrideEvent args)
     {
         args.Handled = true;
 
         args.InRange = InVision(args.Target, ent);
     }
 
-    private void OnGodMenu(Entity<CP14ReligionEntityComponent> ent, ref MenuVisibilityEvent args)
+    private void OnGodMenu(Entity<CE14ReligionEntityComponent> ent, ref MenuVisibilityEvent args)
     {
         args.Visibility &= ~MenuVisibility.NoFov;
     }
 
-    public bool InVision(EntityUid target, Entity<CP14ReligionEntityComponent> user)
+    public bool InVision(EntityUid target, Entity<CE14ReligionEntityComponent> user)
     {
         var position = Transform(target).Coordinates;
 
         return InVision(position, user);
     }
 
-    public bool InVision(EntityCoordinates coords, Entity<CP14ReligionEntityComponent> user)
+    public bool InVision(EntityCoordinates coords, Entity<CE14ReligionEntityComponent> user)
     {
-        if (!HasComp<CP14ReligionVisionComponent>(user))
+        if (!HasComp<CE14ReligionVisionComponent>(user))
             return true;
 
         if (user.Comp.Religion is null)
             return true;
 
         var userXform = Transform(user);
-        var query = EntityQueryEnumerator<CP14ReligionObserverComponent, TransformComponent>();
+        var query = EntityQueryEnumerator<CE14ReligionObserverComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var observer, out var xform))
         {
             if (!observer.Active || observer.Religion is null || observer.Radius <= 0f)

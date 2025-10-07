@@ -1,49 +1,49 @@
-using Content.Shared._CP14.Religion.Components;
-using Content.Shared._CP14.Religion.Prototypes;
-using Content.Shared._CP14.Religion.Systems;
+using Content.Shared._CE14.Religion.Components;
+using Content.Shared._CE14.Religion.Prototypes;
+using Content.Shared._CE14.Religion.Systems;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._CP14.Religion;
+namespace Content.Client._CE14.Religion;
 
-public sealed partial class CP14ClientReligionGodSystem : CP14SharedReligionGodSystem
+public sealed partial class CE14ClientReligionGodSystem : CE14SharedReligionGodSystem
 {
     [Dependency] private readonly IOverlayManager _overlayMgr = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
 
-    private CP14ReligionVisionOverlay? _overlay;
+    private CE14ReligionVisionOverlay? _overlay;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14ReligionVisionComponent, LocalPlayerAttachedEvent>(OnPlayerAttached);
-        SubscribeLocalEvent<CP14ReligionVisionComponent, LocalPlayerDetachedEvent>(OnPlayerDetached);
-        SubscribeLocalEvent<CP14ReligionVisionComponent, ComponentInit>(OnOverlayInit);
-        SubscribeLocalEvent<CP14ReligionVisionComponent, ComponentRemove>(OnOverlayRemove);
+        SubscribeLocalEvent<CE14ReligionVisionComponent, LocalPlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<CE14ReligionVisionComponent, LocalPlayerDetachedEvent>(OnPlayerDetached);
+        SubscribeLocalEvent<CE14ReligionVisionComponent, ComponentInit>(OnOverlayInit);
+        SubscribeLocalEvent<CE14ReligionVisionComponent, ComponentRemove>(OnOverlayRemove);
     }
 
-    public override void SendMessageToGods(ProtoId<CP14ReligionPrototype> religion, string msg, EntityUid source) { }
+    public override void SendMessageToGods(ProtoId<CE14ReligionPrototype> religion, string msg, EntityUid source) { }
 
     public override void Shutdown()
     {
         base.Shutdown();
-        _overlayMgr.RemoveOverlay<CP14ReligionVisionOverlay>();
+        _overlayMgr.RemoveOverlay<CE14ReligionVisionOverlay>();
     }
 
-    private void OnPlayerAttached(Entity<CP14ReligionVisionComponent> ent, ref LocalPlayerAttachedEvent args)
+    private void OnPlayerAttached(Entity<CE14ReligionVisionComponent> ent, ref LocalPlayerAttachedEvent args)
     {
         AddOverlay();
     }
 
-    private void OnPlayerDetached(Entity<CP14ReligionVisionComponent> ent, ref LocalPlayerDetachedEvent args)
+    private void OnPlayerDetached(Entity<CE14ReligionVisionComponent> ent, ref LocalPlayerDetachedEvent args)
     {
         RemoveOverlay();
     }
 
-    private void OnOverlayInit(Entity<CP14ReligionVisionComponent> ent, ref ComponentInit args)
+    private void OnOverlayInit(Entity<CE14ReligionVisionComponent> ent, ref ComponentInit args)
     {
         var attachedEnt = _player.LocalEntity;
 
@@ -53,7 +53,7 @@ public sealed partial class CP14ClientReligionGodSystem : CP14SharedReligionGodS
         AddOverlay();
     }
 
-    private void OnOverlayRemove(Entity<CP14ReligionVisionComponent> ent, ref ComponentRemove args)
+    private void OnOverlayRemove(Entity<CE14ReligionVisionComponent> ent, ref ComponentRemove args)
     {
         var attachedEnt = _player.LocalEntity;
 
@@ -68,7 +68,7 @@ public sealed partial class CP14ClientReligionGodSystem : CP14SharedReligionGodS
         if (_overlay != null)
             return;
 
-        _overlay = new CP14ReligionVisionOverlay();
+        _overlay = new CE14ReligionVisionOverlay();
         _overlayMgr.AddOverlay(_overlay);
     }
 

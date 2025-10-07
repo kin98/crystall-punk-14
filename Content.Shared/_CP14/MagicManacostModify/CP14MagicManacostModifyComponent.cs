@@ -1,14 +1,14 @@
-using Content.Shared._CP14.MagicRitual.Prototypes;
+using Content.Shared._CE14.MagicRitual.Prototypes;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.MagicManacostModify;
+namespace Content.Shared._CE14.MagicManacostModify;
 
 /// <summary>
 /// Changes the manacost of spells for the bearer
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14MagicManacostModifyComponent : Component
+public sealed partial class CE14MagicManacostModifyComponent : Component
 {
     [DataField]
     public FixedPoint2 GlobalModifier = 1f;

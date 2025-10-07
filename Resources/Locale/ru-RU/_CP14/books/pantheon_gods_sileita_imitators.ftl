@@ -1,4 +1,4 @@
-cp14-book-text-pantheon-gods-sileita-imitators = [head=2]Подражатели Богов[/head]
+CE14-book-text-pantheon-gods-sileita-imitators = [head=2]Подражатели Богов[/head]
 
     • [bold]Имена[/bold]: [italic]Эхо-Духи, Масконосцы, Псевдобожественные.[/italic]
     

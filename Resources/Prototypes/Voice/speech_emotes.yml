@@ -25,7 +25,7 @@
     - yells
     - yelled
     - yelling
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - кричит
     - кричит.
     - кричит!
@@ -35,7 +35,7 @@
     - визжит
     - визжит.
     - визжит!
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: Laugh
@@ -65,7 +65,7 @@
     - chortle
     - chortles
     - chortling
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - смеется
     - смеётся
     - хохочет
@@ -74,7 +74,7 @@
     - хихикнула
     - ржёт
     - ржет
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: Honk
@@ -110,11 +110,11 @@
     - sigh
     - sighs
     - sighed
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - вздыхает
     - вздохнул
     - вздохнула
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: Whistle
@@ -132,10 +132,10 @@
     - whistle
     - whistles
     - whistleblowing
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - свистит
     - свистнул
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: Crying
@@ -156,10 +156,10 @@
     - sob
     - sobs
     - sobbing
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - плачет
     - рыдает
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: Squish
@@ -178,9 +178,9 @@
     - squish
     - squishing
     - squishes
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - хлюпает
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: Chitter
@@ -199,9 +199,9 @@
    - chitter
    - chitters
    - chittered
-   # CP14-RU-Localization-Start
+   # CE14-RU-Localization-Start
    - стрекочет
-   # CP14-RU-Localization-End
+   # CE14-RU-Localization-End
 
 - type: emote
   id: Squeak
@@ -220,9 +220,9 @@
    - squeak
    - squeaks
    - squeaked
-   # CP14-RU-Localization-Start
+   # CE14-RU-Localization-Start
    - пищит
-   # CP14-RU-Localization-End
+   # CE14-RU-Localization-End
 
 - type: emote
   id: Click
@@ -240,10 +240,10 @@
   chatTriggers:
    - click
    - clicks
-   # CP14-RU-Localization-Start
+   # CE14-RU-Localization-Start
    - клац
    - клацает
-   # CP14-RU-Localization-End
+   # CE14-RU-Localization-End
 
 # Vulpkanin
 - type: emote
@@ -353,7 +353,7 @@
     - claps
     - clapping
     - clapped
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - хлопает
     - хлопнул
     - хлопнула
@@ -361,7 +361,7 @@
     - хлопнул в ладоши
     - хлопнула в ладоши
     - апплодирует
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: ClapSingle
@@ -407,7 +407,7 @@
     - snaps its fingers
     - snapping fingers
     - snapped fingers
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - щелкает
     - щелкнул
     - щелкнула
@@ -420,7 +420,7 @@
     - щёлкает пальцами
     - щёлкнул пальцами
     - щёлкнула пальцами
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: Thump
@@ -462,12 +462,12 @@
   chatTriggers:
     - salute
     - salutes
-    # CP14-RU-Localization-Start
+    # CE14-RU-Localization-Start
     - салютует
     - отдаёт честь
     - отдал честь
     - отдала честь
-    # CP14-RU-Localization-End
+    # CE14-RU-Localization-End
 
 - type: emote
   id: Gasp
@@ -480,9 +480,9 @@
    - gasp
    - gasps
    - gasped
-   # CP14-RU-Localization-Start
+   # CE14-RU-Localization-Start
    - задыхается
-   # CP14-RU-Localization-End
+   # CE14-RU-Localization-End
 
 - type: emote
   id: DefaultDeathgasp

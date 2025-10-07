@@ -1,17 +1,17 @@
 - type: entity
   parent: BaseItem
-  id: CP14CrystalShardQuartz
+  id: CE14CrystalShardQuartz
   name: quartz shard
   description: Natural quartz crystals that can absorb the magical energy of the world around them.
   categories: [ ForkFiltered ]
   components:
   - type: Tag
     tags:
-    - CP14FitInMortar
+    - CE14FitInMortar
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Structures/Flora/Crystal/crystal_shard.rsi
+    sprite: _CE14/Structures/Flora/Crystal/crystal_shard.rsi
     layers:
       - state: shard0
         map: ["random"]
@@ -25,17 +25,17 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: CP14GroundQuartz
+      - ReagentId: CE14GroundQuartz
         Quantity: 5
   - type: PhysicalComposition
     materialComposition:
-      CP14Glass: 10
+      CE14Glass: 10
 
 # Basic 6
 
 - type: entity
-  parent: CP14CrystalShardQuartz
-  id: CP14CrystalShardQuartzEarth
+  parent: CE14CrystalShardQuartz
+  id: CE14CrystalShardQuartzEarth
   name: terra shard
   suffix: Earth
   components:
@@ -44,14 +44,14 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: CP14GroundQuartz
+      - ReagentId: CE14GroundQuartz
         Quantity: 5
-      - ReagentId: CP14EssenceEarth
+      - ReagentId: CE14EssenceEarth
         Quantity: 5
 
 - type: entity
-  parent: CP14CrystalShardQuartz
-  id: CP14CrystalShardQuartzFire
+  parent: CE14CrystalShardQuartz
+  id: CE14CrystalShardQuartzFire
   name: ignis shard
   suffix: Fire
   components:
@@ -60,14 +60,14 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: CP14GroundQuartz
+      - ReagentId: CE14GroundQuartz
         Quantity: 5
-      - ReagentId: CP14EssenceFire
+      - ReagentId: CE14EssenceFire
         Quantity: 5
 
 - type: entity
-  parent: CP14CrystalShardQuartz
-  id: CP14CrystalShardQuartzWater
+  parent: CE14CrystalShardQuartz
+  id: CE14CrystalShardQuartzWater
   name: aqua shard
   suffix: Water
   components:
@@ -76,14 +76,14 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: CP14GroundQuartz
+      - ReagentId: CE14GroundQuartz
         Quantity: 5
-      - ReagentId: CP14EssenceWater
+      - ReagentId: CE14EssenceWater
         Quantity: 5
 
 - type: entity
-  parent: CP14CrystalShardQuartz
-  id: CP14CrystalShardQuartzAir
+  parent: CE14CrystalShardQuartz
+  id: CE14CrystalShardQuartzAir
   name: aer shard
   suffix: Air
   components:
@@ -92,14 +92,14 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: CP14GroundQuartz
+      - ReagentId: CE14GroundQuartz
         Quantity: 5
-      - ReagentId: CP14EssenceAir
+      - ReagentId: CE14EssenceAir
         Quantity: 5
 
 - type: entity
-  parent: CP14CrystalShardQuartz
-  id: CP14CrystalShardQuartzOrder
+  parent: CE14CrystalShardQuartz
+  id: CE14CrystalShardQuartzOrder
   name: ordo shard
   suffix: Order
   components:
@@ -108,14 +108,14 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: CP14GroundQuartz
+      - ReagentId: CE14GroundQuartz
         Quantity: 5
-      - ReagentId: CP14EssenceOrder
+      - ReagentId: CE14EssenceOrder
         Quantity: 5
 
 - type: entity
-  parent: CP14CrystalShardQuartz
-  id: CP14CrystalShardQuartzChaos
+  parent: CE14CrystalShardQuartz
+  id: CE14CrystalShardQuartzChaos
   name: perditio shard
   suffix: Chaos
   components:
@@ -124,16 +124,16 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: CP14GroundQuartz
+      - ReagentId: CE14GroundQuartz
         Quantity: 5
-      - ReagentId: CP14EssenceChaos
+      - ReagentId: CE14EssenceChaos
         Quantity: 5
 
 # Complex tier 2
 
 - type: entity
-  parent: CP14CrystalShardQuartz
-  id: CP14CrystalShardQuartzMagic
+  parent: CE14CrystalShardQuartz
+  id: CE14CrystalShardQuartzMagic
   name: praecantatio shard
   suffix: Magic
   components:
@@ -142,7 +142,7 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: CP14GroundQuartz
+      - ReagentId: CE14GroundQuartz
         Quantity: 5
-      - ReagentId: CP14EssenceMagic
+      - ReagentId: CE14EssenceMagic
         Quantity: 5

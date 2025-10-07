@@ -1,14 +1,14 @@
-using Content.Server._CP14.Alchemy.EntitySystems;
+using Content.Server._CE14.Alchemy.EntitySystems;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 
-namespace Content.Server._CP14.Alchemy.Components;
+namespace Content.Server._CE14.Alchemy.Components;
 
 /// <summary>
 /// gradually rounds down all reagents in the specified solution
 /// </summary>
-[RegisterComponent, Access(typeof(CP14SolutionCleanerSystem))]
-public sealed partial class CP14SolutionCleanerComponent : Component
+[RegisterComponent, Access(typeof(CE14SolutionCleanerSystem))]
+public sealed partial class CE14SolutionCleanerComponent : Component
 {
     [DataField(required: true)]
     public string Solution = string.Empty;

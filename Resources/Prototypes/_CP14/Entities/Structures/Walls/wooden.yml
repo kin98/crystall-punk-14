@@ -1,24 +1,24 @@
 # Wooden
 
 - type: entity
-  id: CP14WallFrameWooden
+  id: CE14WallFrameWooden
   name: wooden wall frame
   parent:
-  - CP14BaseWallFrame
-  - CP14BaseFlammableSpreading
+  - CE14BaseWallFrame
+  - CE14BaseFlammableSpreading
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/wooden_wall.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall.rsi
     state: frame
   - type: Icon
-    sprite: _CP14/Structures/Walls/wooden_wall.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall.rsi
     state: frame
   - type: Construction
-    graph: CP14WallWooden
-    node: CP14WallFrameWooden
+    graph: CE14WallWooden
+    node: CE14WallFrameWooden
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -27,7 +27,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:PlaySoundBehavior
@@ -37,21 +37,21 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14WallWooden
+  id: CE14WallWooden
   name: wooden wall
   parent:
-  - CP14BaseWall
-  - CP14BaseFlammableSpreading
+  - CE14BaseWall
+  - CE14BaseFlammableSpreading
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/wooden_wall.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/wooden_wall.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall.rsi
   - type: IconSmooth
     base: wood
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -63,31 +63,31 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:ChangeConstructionNodeBehavior
-        node: CP14WallFrameWooden
+        node: CE14WallFrameWooden
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14WallWooden
-    node: CP14WallWooden
-  - type: CP14WallpaperHolder
+    graph: CE14WallWooden
+    node: CE14WallWooden
+  - type: CE14WallpaperHolder
 
 # Wooden birch
 
 - type: entity
-  id: CP14WallFrameWoodenBirch
-  parent: CP14WallFrameWooden
+  id: CE14WallFrameWoodenBirch
+  parent: CE14WallFrameWooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/wooden_wall_birch.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall_birch.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/wooden_wall_birch.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall_birch.rsi
   - type: Construction
-    graph: CP14WallWoodenBirch
-    node: CP14WallFrameWoodenBirch
+    graph: CE14WallWoodenBirch
+    node: CE14WallFrameWoodenBirch
   - type: Destructible
     thresholds:
     - trigger:
@@ -96,7 +96,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodenPlanks1:
+          CE14BirchWoodenPlanks1:
             min: 1
             max: 2
       - !type:PlaySoundBehavior
@@ -106,16 +106,16 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14WallWoodenBirch
-  parent: CP14WallWooden
+  id: CE14WallWoodenBirch
+  parent: CE14WallWooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/wooden_wall_birch.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall_birch.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/wooden_wall_birch.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall_birch.rsi
   - type: Construction
-    graph: CP14WallWoodenBirch
-    node: CP14WallWoodenBirch
+    graph: CE14WallWoodenBirch
+    node: CE14WallWoodenBirch
   - type: Destructible
     thresholds:
     - trigger:
@@ -127,27 +127,27 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodenPlanks1:
+          CE14BirchWoodenPlanks1:
             min: 1
             max: 2
       - !type:ChangeConstructionNodeBehavior
-        node: CP14WallFrameWoodenBirch
+        node: CE14WallFrameWoodenBirch
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
 # Wooden spruce
 
 - type: entity
-  id: CP14WallFrameWoodenSpruce
-  parent: CP14WallFrameWooden
+  id: CE14WallFrameWoodenSpruce
+  parent: CE14WallFrameWooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/wooden_wall_spruce.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall_spruce.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/wooden_wall_spruce.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall_spruce.rsi
   - type: Construction
-    graph: CP14WallWoodenSpruce
-    node: CP14WallFrameWoodenSpruce
+    graph: CE14WallWoodenSpruce
+    node: CE14WallFrameWoodenSpruce
   - type: Destructible
     thresholds:
     - trigger:
@@ -156,7 +156,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SpruceWoodenPlanks1:
+          CE14SpruceWoodenPlanks1:
             min: 1
             max: 2
       - !type:PlaySoundBehavior
@@ -166,16 +166,16 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14WallWoodenSpruce
-  parent: CP14WallWooden
+  id: CE14WallWoodenSpruce
+  parent: CE14WallWooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/wooden_wall_spruce.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall_spruce.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/wooden_wall_spruce.rsi
+    sprite: _CE14/Structures/Walls/wooden_wall_spruce.rsi
   - type: Construction
-    graph: CP14WallWoodenSpruce
-    node: CP14WallWoodenSpruce
+    graph: CE14WallWoodenSpruce
+    node: CE14WallWoodenSpruce
   - type: Destructible
     thresholds:
     - trigger:
@@ -187,10 +187,10 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SpruceWoodenPlanks1:
+          CE14SpruceWoodenPlanks1:
             min: 1
             max: 2
       - !type:ChangeConstructionNodeBehavior
-        node: CP14WallFrameWoodenSpruce
+        node: CE14WallFrameWoodenSpruce
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

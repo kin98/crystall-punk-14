@@ -1,26 +1,26 @@
-- type: CP14Recipe
-  id: CP14CandelabraBloodIgnited
-  tag: CP14RecipeVampire
+- type: CE14Recipe
+  id: CE14CandelabraBloodIgnited
+  tag: CE14RecipeVampire
   craftTime: 1
   requirements:
   - !type:SolutionResource
-    reagent: CP14BloodTiefling
+    reagent: CE14BloodTiefling
     amount: 10
     purity: 0.8
   - !type:StackResource
-    stack: CP14IronBar
+    stack: CE14IronBar
     count: 1
-  result: CP14CandelabraBloodIgnited
+  result: CE14CandelabraBloodIgnited
   resultCount: 1
 
-- type: CP14Recipe
-  id: CP14CandleBloodIgnited
-  tag: CP14RecipeVampire
+- type: CE14Recipe
+  id: CE14CandleBloodIgnited
+  tag: CE14RecipeVampire
   craftTime: 1
   requirements:
   - !type:SolutionResource
-    reagent: CP14BloodTiefling
+    reagent: CE14BloodTiefling
     amount: 10
     purity: 0.8
-  result: CP14CandleBloodIgnited
+  result: CE14CandleBloodIgnited
   resultCount: 1 

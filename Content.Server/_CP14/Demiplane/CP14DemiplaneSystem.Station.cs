@@ -1,57 +1,57 @@
 using System.Linq;
 using System.Numerics;
-using Content.Server._CP14.Demiplane.Components;
+using Content.Server._CE14.Demiplane.Components;
 using Content.Server.Station.Systems;
-using Content.Shared._CP14.Demiplane;
-using Content.Shared._CP14.Demiplane.Components;
-using Content.Shared._CP14.Procedural.Prototypes;
+using Content.Shared._CE14.Demiplane;
+using Content.Shared._CE14.Demiplane.Components;
+using Content.Shared._CE14.Procedural.Prototypes;
 using Content.Shared.UserInterface;
 using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.Demiplane;
+namespace Content.Server._CE14.Demiplane;
 
-public sealed partial class CP14DemiplaneSystem
+public sealed partial class CE14DemiplaneSystem
 {
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly StationSystem _station = default!;
 
-    private readonly ProtoId<CP14ProceduralModifierPrototype> _firstPointProto = "DemiplaneArcSingle";
-    private readonly ProtoId<CP14ProceduralModifierPrototype> _secondPointProto = "CP14DemiplanEnterRoom";
+    private readonly ProtoId<CE14ProceduralModifierPrototype> _firstPointProto = "DemiplaneArcSingle";
+    private readonly ProtoId<CE14ProceduralModifierPrototype> _secondPointProto = "CE14DemiplanEnterRoom";
 
     private void InitializeStation()
     {
-        SubscribeLocalEvent<CP14StationDemiplaneMapComponent, MapInitEvent>(OnMapInit);
-        SubscribeLocalEvent<CP14DemiplaneNavigationMapComponent, BeforeActivatableUIOpenEvent>(
+        SubscribeLocalEvent<CE14StationDemiplaneMapComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<CE14DemiplaneNavigationMapComponent, BeforeActivatableUIOpenEvent>(
             OnBeforeActivatableUiOpen);
     }
 
-    private void OnMapInit(Entity<CP14StationDemiplaneMapComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<CE14StationDemiplaneMapComponent> ent, ref MapInitEvent args)
     {
         GenerateDemiplaneMap(ent);
     }
 
-    private void OnBeforeActivatableUiOpen(Entity<CP14DemiplaneNavigationMapComponent> ent,
+    private void OnBeforeActivatableUiOpen(Entity<CE14DemiplaneNavigationMapComponent> ent,
         ref BeforeActivatableUIOpenEvent args)
     {
         var station = _station.GetOwningStation(ent, Transform(ent));
 
-        if (!TryComp<CP14StationDemiplaneMapComponent>(station, out var stationMap))
+        if (!TryComp<CE14StationDemiplaneMapComponent>(station, out var stationMap))
             return;
 
         UpdateNodesStatus((station.Value, stationMap));
 
         _userInterface.SetUiState(ent.Owner,
-            CP14DemiplaneMapUiKey.Key,
-            new CP14DemiplaneMapUiState(stationMap.Nodes, stationMap.Edges));
+            CE14DemiplaneMapUiKey.Key,
+            new CE14DemiplaneMapUiState(stationMap.Nodes, stationMap.Edges));
     }
 
-    private void UpdateNodesStatus(Entity<CP14StationDemiplaneMapComponent> ent)
+    private void UpdateNodesStatus(Entity<CE14StationDemiplaneMapComponent> ent)
     {
         var openedMaps = new List<Vector2i>();
 
-        var query = EntityQueryEnumerator<CP14DemiplaneMapComponent>();
+        var query = EntityQueryEnumerator<CE14DemiplaneMapComponent>();
         while (query.MoveNext(out var uid, out var demiplane))
         {
             openedMaps.Add(demiplane.Position);
@@ -63,7 +63,7 @@ public sealed partial class CP14DemiplaneSystem
         }
     }
 
-    private void GenerateDemiplaneMap(Entity<CP14StationDemiplaneMapComponent> ent)
+    private void GenerateDemiplaneMap(Entity<CE14StationDemiplaneMapComponent> ent)
     {
         ent.Comp.Nodes.Clear();
         ent.Comp.Edges.Clear();
@@ -71,7 +71,7 @@ public sealed partial class CP14DemiplaneSystem
         var directions = new[] { new Vector2i(1, 0), new Vector2i(-1, 0), new Vector2i(0, 1), new Vector2i(0, -1) };
 
         // Generate village node
-        var villageNode = new CP14DemiplaneMapNode(Vector2.Zero, null, null)
+        var villageNode = new CE14DemiplaneMapNode(Vector2.Zero, null, null)
         {
             Start = true,
         };
@@ -82,7 +82,7 @@ public sealed partial class CP14DemiplaneSystem
         var firstNodePosition = _random.Pick(directions);
         var location = SelectLocation(0);
         var modifiers = SelectModifiers(0, location, GetLimits(0));
-        var firstNode = new CP14DemiplaneMapNode(firstNodePosition, location, modifiers)
+        var firstNode = new CE14DemiplaneMapNode(firstNodePosition, location, modifiers)
         {
             Opened = true
         };
@@ -117,7 +117,7 @@ public sealed partial class CP14DemiplaneSystem
             var lvl = randomNode.Value.Level + 1;
             location = SelectLocation(lvl);
             modifiers = SelectModifiers(lvl, location, GetLimits(lvl));
-            var newNode = new CP14DemiplaneMapNode(newPosition, location, modifiers)
+            var newNode = new CE14DemiplaneMapNode(newPosition, location, modifiers)
             {
                 Level = lvl,
             };
@@ -138,9 +138,9 @@ public sealed partial class CP14DemiplaneSystem
         }
     }
 
-    private Dictionary<ProtoId<CP14ProceduralModifierCategoryPrototype>, float> GetLimits(int level)
+    private Dictionary<ProtoId<CE14ProceduralModifierCategoryPrototype>, float> GetLimits(int level)
     {
-        return new Dictionary<ProtoId<CP14ProceduralModifierCategoryPrototype>, float>
+        return new Dictionary<ProtoId<CE14ProceduralModifierCategoryPrototype>, float>
         {
             { "Danger", Math.Max(level * 0.2f, 0.5f) },
             { "GhostRoleDanger", 1f },
@@ -152,7 +152,7 @@ public sealed partial class CP14DemiplaneSystem
         };
     }
 
-    private Vector2i? GetRandomNeighbourNotGeneratedMap(Entity<CP14StationDemiplaneMapComponent> ent, Vector2i origin)
+    private Vector2i? GetRandomNeighbourNotGeneratedMap(Entity<CE14StationDemiplaneMapComponent> ent, Vector2i origin)
     {
         if (!ent.Comp.Nodes.ContainsKey(origin))
             return null;

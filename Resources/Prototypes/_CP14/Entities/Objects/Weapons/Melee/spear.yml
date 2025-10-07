@@ -1,13 +1,13 @@
 - type: entity
   abstract: true
-  id: CP14BaseWeaponSpear
+  id: CE14BaseWeaponSpear
   parent:
   - BaseItem
-  - CP14BaseWeaponChemical
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
-  - CP14BaseWeaponSharp
-  - CP14BaseWeaponThrowable
+  - CE14BaseWeaponChemical
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
+  - CE14BaseWeaponSharp
+  - CE14BaseWeaponThrowable
   components:
   - type: Item
     size: Ginormous
@@ -28,8 +28,8 @@
     damage:
       types:
         Piercing: 8
-    animation: CP14WeaponArcThrust
-    wideAnimation: CP14WeaponArcThrust
+    animation: CE14WeaponArcThrust
+    wideAnimation: CE14WeaponArcThrust
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
     cPAnimationLength: 0.3
@@ -38,7 +38,7 @@
     damage:
       types:
         Piercing: 5
-  - type: CP14BonusDistanceMeleeDamage
+  - type: CE14BonusDistanceMeleeDamage
     minDistance: 2.25
     bonusDamage:
       types:
@@ -52,15 +52,15 @@
     unequipDelay: 1
 
 - type: entity
-  parent: CP14BaseWeaponSpear
-  id: CP14WeaponSpearIron
+  parent: CE14BaseWeaponSpear
+  id: CE14WeaponSpearIron
   name: iron spear
   description: A reliable spear that is standard in the Zellasian Empire. It strikes far, but slowly.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Spear/iron.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Spear/iron.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 20
-      CP14Iron: 10
+      CE14WoodenPlanks: 20
+      CE14Iron: 10

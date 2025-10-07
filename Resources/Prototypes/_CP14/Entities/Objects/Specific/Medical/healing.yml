@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14HerbalBandage
+  id: CE14HerbalBandage
   parent: BaseItem
   name: herbal bandage
   description: A bandage net woven from grass, not the most reliable or useful thing, but better than nothing.
@@ -9,18 +9,18 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Medical/medical.rsi
+    sprite: _CE14/Objects/Specific/Medical/medical.rsi
     state: herbbandage_3
     layers:
       - state: herbbandage_3
         map: ["base"]
   - type: Appearance
   - type: Construction
-    graph: CP14HerbBandage
-    node: cp14herbbandage
+    graph: CE14HerbBandage
+    node: CE14herbbandage
   - type: Healing
     damageContainers:
-      - CP14Biological
+      - CE14Biological
     damage:
       types:
         Slash: -2
@@ -32,7 +32,7 @@
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Stack
-    stackType: CP14HerbalBandage
+    stackType: CE14HerbalBandage
     count: 5
     baseLayer: base
     layerStates:
@@ -41,8 +41,8 @@
     - herbbandage_3
 
 - type: entity
-  id: CP14HerbalBandage1
-  parent: CP14HerbalBandage
+  id: CE14HerbalBandage1
+  parent: CE14HerbalBandage
   suffix: 1
   components:
   - type: Sprite
@@ -51,7 +51,7 @@
     count: 1
 
 - type: entity
-  id: CP14Gauze
+  id: CE14Gauze
   parent: BaseItem
   name: gauze
   description: Dense cloth gauze, to prevent valuable blood from leaking out of the body.
@@ -61,18 +61,18 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Medical/medical.rsi
+    sprite: _CE14/Objects/Specific/Medical/medical.rsi
     state: bandage_3
     layers:
       - state: bandage_3
         map: ["base"]
   - type: Appearance
   - type: Construction
-    graph: CP14Gauze
-    node: cp14gauze
+    graph: CE14Gauze
+    node: CE14gauze
   - type: Healing
     damageContainers:
-      - CP14Biological
+      - CE14Biological
     damage:
       types:
         Slash: -6
@@ -84,7 +84,7 @@
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Stack
-    stackType: CP14Gauze
+    stackType: CE14Gauze
     count: 5
     baseLayer: base
     layerStates:
@@ -93,8 +93,8 @@
     - bandage_3
 
 - type: entity
-  id: CP14Gauze1
-  parent: CP14Gauze
+  id: CE14Gauze1
+  parent: CE14Gauze
   suffix: 1
   components:
   - type: Sprite

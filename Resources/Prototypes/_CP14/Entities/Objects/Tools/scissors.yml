@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14Scissors
+  id: CE14Scissors
   name: scissors
   description: A tool for shredding wool, hair, clothing, and, if not handled carefully, even fingers.
   categories: [ ForkFiltered ]
@@ -8,7 +8,7 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Tools/scissors.rsi
+    sprite: _CE14/Objects/Tools/scissors.rsi
     state: icon
   - type: MagicMirror
   - type: ActivatableUI
@@ -29,7 +29,7 @@
       path: "/Audio/Weapons/bladeslice.ogg"
   - type: Tag
     tags:
-    - CP14Scissors
+    - CE14Scissors
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10
+      CE14Iron: 10

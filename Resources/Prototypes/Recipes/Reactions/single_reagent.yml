@@ -4,7 +4,7 @@
   id: ProteinCooking
   impact: Low
   minTemp: 347
-  sound: null #CP14
+  sound: null #CE14
   reactants:
     UncookedAnimalProteins:
       amount: 0.5

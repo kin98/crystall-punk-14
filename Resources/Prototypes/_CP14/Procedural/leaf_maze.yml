@@ -1,10 +1,10 @@
 - type: biomeTemplate
-  id: CP14LeafMaze
+  id: CE14LeafMaze
   layers:
     - !type:BiomeMetaLayer
-      template: CP14Grassland
+      template: CE14Grassland
     - !type:BiomeTileLayer
-      tile: CP14FloorDirt
+      tile: CE14FloorDirt
       threshold: 0.2
       noise:
         seed: 14
@@ -19,12 +19,12 @@
         fractalType: FBm
         frequency: 1.5
       allowedTiles:
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       entities:
-        - CP14FloraTreeGreen
-        - CP14FloraTreeGreenLarge
+        - CE14FloraTreeGreen
+        - CE14FloraTreeGreenLarge
     - !type:BiomeEntityLayer # Walls
       threshold: -0.6
       invert: true
@@ -36,11 +36,11 @@
         frequency: 0.15
         gain: 0.5
       allowedTiles:
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       entities:
-        - CP14WallLeaf
+        - CE14WallLeaf
     - !type:BiomeEntityLayer # Walls
       threshold: -0.6
       invert: true
@@ -52,9 +52,9 @@
         frequency: 0.15
         gain: 0.5
       allowedTiles:
-        - CP14FloorDirt
+        - CE14FloorDirt
       entities:
-        - CP14WallDirt
+        - CE14WallDirt
     - !type:BiomeEntityLayer # Tall grass!
       threshold: -0.3
       noise:
@@ -68,15 +68,15 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
       allowedTiles:
-        - CP14FloorGrassTall
+        - CE14FloorGrassTall
       entities:
-        - CP14RandomBushOffsetSpawner
+        - CE14RandomBushOffsetSpawner
     - !type:BiomeEntityLayer #Water!
       allowedTiles:
-        - CP14FloorDirt
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorDirt
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       threshold: 0.6
       noise:
         seed: 14
@@ -84,13 +84,13 @@
         fractalType: FBm
         frequency: 0.03
       entities:
-        - CP14FloorWaterReeds
+        - CE14FloorWaterReeds
     - !type:BiomeEntityLayer #Water!
       allowedTiles:
-        - CP14FloorDirt
-        - CP14FloorGrass
-        - CP14FloorGrassLight
-        - CP14FloorGrassTall
+        - CE14FloorDirt
+        - CE14FloorGrass
+        - CE14FloorGrassLight
+        - CE14FloorGrassTall
       threshold: 0.7
       noise:
         seed: 14
@@ -98,5 +98,5 @@
         fractalType: FBm
         frequency: 0.03
       entities:
-        - CP14FloorWaterLilies
+        - CE14FloorWaterLilies
 

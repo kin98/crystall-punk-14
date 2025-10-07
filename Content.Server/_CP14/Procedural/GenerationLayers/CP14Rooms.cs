@@ -12,7 +12,7 @@ public sealed partial class DungeonJob
     /// <see cref="OreDunGen"/>
     /// </summary>
     private async Task PostGen(
-        CP14RoomsDunGen gen,
+        CE14RoomsDunGen gen,
         List<Dungeon> dungeons,
         HashSet<Vector2i> reservedTiles,
         Random random)

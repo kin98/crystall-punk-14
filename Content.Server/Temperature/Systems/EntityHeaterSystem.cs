@@ -1,4 +1,4 @@
-using Content.Server._CP14.Temperature;
+using Content.Server._CE14.Temperature;
 using Content.Server.Atmos.Components;
 using Content.Server.Power.Components;
 using Content.Shared.Placeable;

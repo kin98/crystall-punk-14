@@ -1,11 +1,11 @@
 - type: biomeTemplate
-  id: CP14CavesEmpty
+  id: CE14CavesEmpty
   layers:
     - !type:BiomeTileLayer
       threshold: -1.0
-      tile: CP14FloorBase
+      tile: CE14FloorBase
     - !type:BiomeTileLayer
-      tile: CP14FloorCobblestone
+      tile: CE14FloorCobblestone
       threshold: 0.3
       noise:
         seed: 14
@@ -13,7 +13,7 @@
         fractalType: FBm
         frequency: 0.2
     - !type:BiomeTileLayer
-      tile: CP14FloorDirt
+      tile: CE14FloorDirt
       threshold: 0.3
       noise:
         seed: 18
@@ -23,10 +23,10 @@
 
 
 - type: biomeTemplate
-  id: CP14CavesFloor
+  id: CE14CavesFloor
   layers:
     - !type:BiomeMetaLayer
-      template: CP14CavesEmpty
+      template: CE14CavesEmpty
     #Entity
     - !type:BiomeEntityLayer
       threshold: 0.4
@@ -36,17 +36,17 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorBase
-        - CP14FloorDirt
-        - CP14FloorCobblestone
+        - CE14FloorBase
+        - CE14FloorDirt
+        - CE14FloorCobblestone
       entities:
-        - CP14RockSmall
+        - CE14RockSmall
 
 - type: biomeTemplate
-  id: CP14CavesGeneric
+  id: CE14CavesGeneric
   layers:
     - !type:BiomeMetaLayer
-      template: CP14CavesFloor
+      template: CE14CavesFloor
     #Walls
     - !type:BiomeEntityLayer
       threshold: -0.75
@@ -59,10 +59,10 @@
         frequency: 0.05
         gain: 0.5
       allowedTiles:
-        - CP14FloorBase
-        - CP14FloorCobblestone
+        - CE14FloorBase
+        - CE14FloorCobblestone
       entities:
-        - CP14WallStone
+        - CE14WallStone
     - !type:BiomeEntityLayer
       threshold: -0.79
       invert: true
@@ -74,9 +74,9 @@
         frequency: 0.05
         gain: 0.5
       allowedTiles:
-        - CP14FloorDirt
+        - CE14FloorDirt
       entities:
-        - CP14WallDirt
+        - CE14WallDirt
     #Rivers
     - !type:BiomeEntityLayer
       threshold: 0.60
@@ -88,17 +88,17 @@
         fractalType: Ridged
         octaves: 1
       allowedTiles:
-        - CP14FloorBase
-        - CP14FloorDirt
-        - CP14FloorCobblestone
+        - CE14FloorBase
+        - CE14FloorDirt
+        - CE14FloorCobblestone
       entities:
-        - CP14FloorWater
+        - CE14FloorWater
 
 - type: biomeTemplate
-  id: CP14CavesComossResources
+  id: CE14CavesComossResources
   layers:
     - !type:BiomeMetaLayer
-      template: CP14CavesFloor
+      template: CE14CavesFloor
     - !type:BiomeEntityLayer # lumishrooms
       threshold: 0.8
       noise:
@@ -112,10 +112,10 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
       allowedTiles:
-        - CP14FloorBase
-        - CP14FloorCobblestone
+        - CE14FloorBase
+        - CE14FloorCobblestone
       entities:
-        - CP14GatherableLumiMushroom
+        - CE14GatherableLumiMushroom
     #Walls
     - !type:BiomeEntityLayer
       threshold: -0.75
@@ -128,11 +128,11 @@
         frequency: 0.05
         gain: 0.5
       allowedTiles:
-        - CP14FloorBase
-        - CP14FloorDirt
-        - CP14FloorCobblestone
+        - CE14FloorBase
+        - CE14FloorDirt
+        - CE14FloorCobblestone
       entities:
-        - CP14WallStone
+        - CE14WallStone
     #Copper
     - !type:BiomeEntityLayer
       threshold: 0.75
@@ -142,9 +142,9 @@
         fractalType: FBm
         frequency: 1.75
       allowedTiles:
-        - CP14FloorBase
-        - CP14FloorDirt
-        - CP14FloorCobblestone
+        - CE14FloorBase
+        - CE14FloorDirt
+        - CE14FloorCobblestone
       entities:
-        - CP14WallStoneCopperOre
+        - CE14WallStoneCopperOre
 

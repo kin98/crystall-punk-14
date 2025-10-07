@@ -1,9 +1,9 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Sponsor;
+namespace Content.Shared._CE14.Sponsor;
 
 [Prototype("sponsorRole")]
-public sealed partial class CP14SponsorRolePrototype : IPrototype
+public sealed partial class CE14SponsorRolePrototype : IPrototype
 {
     [IdDataField] public string ID { get; } = string.Empty;
 
@@ -24,7 +24,7 @@ public sealed partial class CP14SponsorRolePrototype : IPrototype
 }
 
 [Prototype("sponsorFeature")]
-public sealed partial class CP14SponsorFeaturePrototype : IPrototype
+public sealed partial class CE14SponsorFeaturePrototype : IPrototype
 {
     [IdDataField] public string ID { get; } = string.Empty;
 

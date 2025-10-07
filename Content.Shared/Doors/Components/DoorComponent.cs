@@ -256,7 +256,7 @@ public sealed partial class DoorComponent : Component
     #endregion
 
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public bool CanPry = false; //CP14 pry disabling
+    public bool CanPry = false; //CE14 pry disabling
 
     [DataField]
     public ProtoId<ToolQualityPrototype> PryingQuality = "Prying";

@@ -2,77 +2,77 @@
 # Splitting: Applying magical dispel to split precursor into essences.
 
 - type: reaction
-  id: CP14BloodFlowerSplitting
+  id: CE14BloodFlowerSplitting
   requiredMixerCategories:
-  - CP14MagicSplitting
+  - CE14MagicSplitting
   reactants:
-    CP14BloodFlowerSap:
+    CE14BloodFlowerSap:
       amount: 1
   products:
-    CP14EssenceLife: 0.5
-    CP14EssenceWater: 0.5
+    CE14EssenceLife: 0.5
+    CE14EssenceWater: 0.5
 
 - type: reaction
-  id: CP14BloodFlowerBloodSplitting
+  id: CE14BloodFlowerBloodSplitting
   requiredMixerCategories:
-  - CP14MagicSplitting
+  - CE14MagicSplitting
   reactants:
-    CP14BloodFlowerSap:
+    CE14BloodFlowerSap:
       amount: 1
-    CP14BloodTiefling:
+    CE14BloodTiefling:
       amount: 1
   products:
-    CP14EssenceFire: 1
-    CP14EssenceLife: 1
+    CE14EssenceFire: 1
+    CE14EssenceLife: 1
 
 - type: reaction
-  id: CP14BloodFlowerTieflingSplitting
+  id: CE14BloodFlowerTieflingSplitting
   requiredMixerCategories:
-  - CP14MagicSplitting
+  - CE14MagicSplitting
   reactants:
-    CP14BloodFlowerSap:
+    CE14BloodFlowerSap:
       amount: 1
-    CP14Blood:
+    CE14Blood:
       amount: 1
   products:
-    CP14EssenceLife: 2
+    CE14EssenceLife: 2
 
 - type: reaction
-  id: CP14BloodFlowerElfSplitting
+  id: CE14BloodFlowerElfSplitting
   requiredMixerCategories:
-  - CP14MagicSplitting
+  - CE14MagicSplitting
   reactants:
-    CP14BloodFlowerSap:
+    CE14BloodFlowerSap:
       amount: 1
-    CP14BloodElf:
+    CE14BloodElf:
       amount: 1
   products:
-    CP14EssenceOrder: 1
-    CP14EssenceLife: 1
+    CE14EssenceOrder: 1
+    CE14EssenceLife: 1
 
 - type: reaction
-  id: CP14BloodFlowerGoblinSplitting
+  id: CE14BloodFlowerGoblinSplitting
   requiredMixerCategories:
-  - CP14MagicSplitting
+  - CE14MagicSplitting
   reactants:
-    CP14BloodFlowerSap:
+    CE14BloodFlowerSap:
       amount: 1
-    CP14BloodGoblin:
+    CE14BloodGoblin:
       amount: 1
   products:
-    CP14EssenceChaos: 1
-    CP14EssenceLife: 1
+    CE14EssenceChaos: 1
+    CE14EssenceLife: 1
 
 #- type: reaction
-#  id: CP14BloodFlowerVampireSplitting
+#  id: CE14BloodFlowerVampireSplitting
 #  requiredMixerCategories:
-#  - CP14MagicSplitting
+#  - CE14MagicSplitting
 #  reactants:
-#    CP14BloodFlowerSap:
+#    CE14BloodFlowerSap:
 #      amount: 1
-#    CP14BloodVampire:
+#    CE14BloodVampire:
 #      amount: 1
 #  products:
-#    CP14EssenceChaos: 1 #TODO: need some advanced essences first
-#    CP14EssenceLife: 1
+#    CE14EssenceChaos: 1 #TODO: need some advanced essences first
+#    CE14EssenceLife: 1
 

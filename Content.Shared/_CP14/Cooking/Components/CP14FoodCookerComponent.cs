@@ -3,22 +3,22 @@
  * https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT
  */
 
-using Content.Shared._CP14.Cooking.Prototypes;
+using Content.Shared._CE14.Cooking.Prototypes;
 using Content.Shared.DoAfter;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CP14.Cooking.Components;
+namespace Content.Shared._CE14.Cooking.Components;
 
 /// <summary>
 /// Prepares food from ingredients and places it in the FoodHolderComponent
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(fieldDeltas: true), Access(typeof(CP14SharedCookingSystem))]
-public sealed partial class CP14FoodCookerComponent : Component
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(fieldDeltas: true), Access(typeof(CE14SharedCookingSystem))]
+public sealed partial class CE14FoodCookerComponent : Component
 {
     [DataField(required: true)]
-    public ProtoId<CP14FoodTypePrototype> FoodType;
+    public ProtoId<CE14FoodTypePrototype> FoodType;
 
     [DataField]
     public string ContainerId;
@@ -47,7 +47,7 @@ public sealed partial class CP14FoodCookerComponent : Component
     public TimeSpan HeatingFrequencyRequired = TimeSpan.FromSeconds(2f);
 
     [DataField]
-    public EntProtoId? BurntAdditionalSpawn = "CP14Fire";
+    public EntProtoId? BurntAdditionalSpawn = "CE14Fire";
 
     [DataField]
     public float BurntAdditionalSpawnProb = 0.2f;
@@ -58,9 +58,9 @@ public sealed partial class CP14FoodCookerComponent : Component
 
 [Serializable]
 [DataDefinition]
-public sealed partial class CP14FoodData
+public sealed partial class CE14FoodData
 {
-    public CP14FoodData(CP14FoodData data)
+    public CE14FoodData(CE14FoodData data)
     {
         CurrentRecipe = data.CurrentRecipe;
         Name = data.Name;
@@ -73,7 +73,7 @@ public sealed partial class CP14FoodData
     }
 
     [DataField]
-    public ProtoId<CP14CookingRecipePrototype>? CurrentRecipe;
+    public ProtoId<CE14CookingRecipePrototype>? CurrentRecipe;
 
     [DataField]
     public LocId? Name;
@@ -98,7 +98,7 @@ public sealed partial class CP14FoodData
 }
 
 [Serializable, NetSerializable]
-public enum CP14CookingVisuals : byte
+public enum CE14CookingVisuals : byte
 {
     Cooking,
     Burning,

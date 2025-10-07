@@ -3,9 +3,9 @@ using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Workbench.Requirements;
+namespace Content.Shared._CE14.Workbench.Requirements;
 
-public sealed partial class SolutionResource : CP14WorkbenchCraftRequirement
+public sealed partial class SolutionResource : CE14WorkbenchCraftRequirement
 {
     [DataField(required: true)]
     public ProtoId<ReagentPrototype> Reagent = default!;
@@ -20,7 +20,7 @@ public sealed partial class SolutionResource : CP14WorkbenchCraftRequirement
     public FixedPoint2 Amount = 1f;
 
     [DataField]
-    public EntProtoId DummyEntityIcon = "CP14LiquidDropDummy";
+    public EntProtoId DummyEntityIcon = "CE14LiquidDropDummy";
 
     public override bool CheckRequirement(IEntityManager entManager,
         IPrototypeManager protoManager,
@@ -93,7 +93,7 @@ public sealed partial class SolutionResource : CP14WorkbenchCraftRequirement
         if (!protoManager.TryIndex(Reagent, out var indexedReagent))
             return string.Empty;
 
-        return Loc.GetString("cp14-workbench-reagent-req",
+        return Loc.GetString("CE14-workbench-reagent-req",
             ("reagent", indexedReagent.LocalizedName),
             ("count", Amount),
             ("purity", Purity * 100));

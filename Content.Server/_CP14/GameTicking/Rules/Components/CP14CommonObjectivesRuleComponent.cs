@@ -3,13 +3,13 @@ using Content.Shared.Random;
 using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.GameTicking.Rules.Components;
+namespace Content.Server._CE14.GameTicking.Rules.Components;
 
 /// <summary>
 /// A rule that assigns common goals to different roles. Common objectives are generated once at the beginning of a round and are shared between players.
 /// </summary>
-[RegisterComponent, Access(typeof(CP14CommonObjectivesRule))]
-public sealed partial class CP14CommonObjectivesRuleComponent : Component
+[RegisterComponent, Access(typeof(CE14CommonObjectivesRule))]
+public sealed partial class CE14CommonObjectivesRuleComponent : Component
 {
     [DataField]
     public Dictionary<ProtoId<JobPrototype>, List<ProtoId<WeightedRandomPrototype>>> JobObjectives = new();

@@ -4,9 +4,9 @@ using Content.Shared.Nutrition.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CP14.WeatherEffect.Effects;
+namespace Content.Shared._CE14.WeatherEffect.Effects;
 
-public sealed partial class RefillSolutions : CP14WeatherEffect
+public sealed partial class RefillSolutions : CE14WeatherEffect
 {
     [DataField(required: true)]
     public Dictionary<ProtoId<ReagentPrototype>, float> Reagents = new();
@@ -16,7 +16,7 @@ public sealed partial class RefillSolutions : CP14WeatherEffect
         if (!random.Prob(Prob))
             return;
 
-        if (!entManager.TryGetComponent<CP14WeatherRefillableComponent>(target, out var refillable))
+        if (!entManager.TryGetComponent<CE14WeatherRefillableComponent>(target, out var refillable))
             return;
 
         if (entManager.TryGetComponent<OpenableComponent>(target, out var openable) && !openable.Opened)

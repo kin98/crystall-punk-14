@@ -1,21 +1,21 @@
-using Content.Shared._CP14.MagicEnergy.Components;
+using Content.Shared._CE14.MagicEnergy.Components;
 using Content.Shared.Construction;
 using Content.Shared.Examine;
 using JetBrains.Annotations;
 using Robust.Shared.Utility;
 
-namespace Content.Server._CP14.Construction.Condition;
+namespace Content.Server._CE14.Construction.Condition;
 
 /// <summary>
 ///     Makes the condition fail if any entities on a tile have (or not) a component.
 /// </summary>
 [UsedImplicitly]
 [DataDefinition]
-public sealed partial class CP14ManaFilled : IGraphCondition
+public sealed partial class CE14ManaFilled : IGraphCondition
 {
     public bool Condition(EntityUid uid, IEntityManager entityManager)
     {
-        if (!entityManager.TryGetComponent(uid, out CP14MagicEnergyContainerComponent? container))
+        if (!entityManager.TryGetComponent(uid, out CE14MagicEnergyContainerComponent? container))
             return true;
 
         return container.Energy >= container.MaxEnergy;
@@ -26,7 +26,7 @@ public sealed partial class CP14ManaFilled : IGraphCondition
         if (Condition(args.Examined, IoCManager.Resolve<IEntityManager>()))
             return false;
 
-        args.PushMarkup(Loc.GetString("cp14-construction-condition-mana-filled"));
+        args.PushMarkup(Loc.GetString("CE14-construction-condition-mana-filled"));
         return true;
     }
 
@@ -34,8 +34,8 @@ public sealed partial class CP14ManaFilled : IGraphCondition
     {
         yield return new ConstructionGuideEntry()
         {
-            Localization = "cp14-construction-condition-mana-filled",
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CP14/Actions/Spells/meta.rsi"), "mana"),
+            Localization = "CE14-construction-condition-mana-filled",
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CE14/Actions/Spells/meta.rsi"), "mana"),
         };
     }
 }

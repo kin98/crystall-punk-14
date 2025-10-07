@@ -1,24 +1,24 @@
 - type: constructionGraph
-  id: CP14TableWooden
+  id: CE14TableWooden
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14TableWoodenFrame
+        - to: CE14TableWoodenFrame
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 1
               doAfter: 1
-        - to: CP14TableWoodenBirchFrame
+        - to: CE14TableWoodenBirchFrame
           steps:
-          - material: CP14BirchWoodenPlanks
+          - material: CE14BirchWoodenPlanks
             amount: 1
             doAfter: 1
 
-    - node: CP14TableWoodenFrame
-      entity: CP14TableWoodenFrame
+    - node: CE14TableWoodenFrame
+      entity: CE14TableWoodenFrame
       edges:
         - to: start
           steps:
@@ -26,16 +26,16 @@
               doAfter: 1
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 1
-        - to: CP14TableWooden
+        - to: CE14TableWooden
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 1
               doAfter: 1
 
-    - node: CP14TableWoodenBirchFrame
-      entity: CP14TableWoodenBirchFrame
+    - node: CE14TableWoodenBirchFrame
+      entity: CE14TableWoodenBirchFrame
       edges:
       - to: start
         steps:
@@ -43,90 +43,90 @@
           doAfter: 1
         completed:
         - !type:SpawnPrototype
-          prototype: CP14BirchWoodenPlanks1
+          prototype: CE14BirchWoodenPlanks1
           amount: 1
-      - to: CP14TableWoodenBirch
+      - to: CE14TableWoodenBirch
         steps:
-        - material: CP14BirchWoodenPlanks
+        - material: CE14BirchWoodenPlanks
           amount: 1
           doAfter: 1
 
-    - node: CP14TableWooden
-      entity: CP14TableWooden
+    - node: CE14TableWooden
+      entity: CE14TableWooden
       edges:
-        - to: CP14TableWoodenFrame
+        - to: CE14TableWoodenFrame
           steps:
             - tool: Prying
               doAfter: 1
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 1
-        - to: CP14TableWoodenCounter
+        - to: CE14TableWoodenCounter
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 1
               doAfter: 1
 
-    - node: CP14TableWoodenBirch
-      entity: CP14TableWoodenBirch
+    - node: CE14TableWoodenBirch
+      entity: CE14TableWoodenBirch
       edges:
-      - to: CP14TableWoodenBirchFrame
+      - to: CE14TableWoodenBirchFrame
         steps:
         - tool: Prying
           doAfter: 1
         completed:
         - !type:SpawnPrototype
-          prototype: CP14BirchWoodenPlanks1
+          prototype: CE14BirchWoodenPlanks1
           amount: 1
-      - to: CP14TableWoodenBirchCounter
+      - to: CE14TableWoodenBirchCounter
         steps:
-        - material: CP14BirchWoodenPlanks
+        - material: CE14BirchWoodenPlanks
           amount: 1
           doAfter: 1
 
-    - node: CP14TableWoodenCounter
-      entity: CP14TableWoodenCounter
+    - node: CE14TableWoodenCounter
+      entity: CE14TableWoodenCounter
       edges:
-        - to: CP14TableWooden
+        - to: CE14TableWooden
           steps:
             - tool: Prying
               doAfter: 1
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 1
 
-    - node: CP14TableWoodenBirchCounter
-      entity: CP14TableWoodenBirchCounter
+    - node: CE14TableWoodenBirchCounter
+      entity: CE14TableWoodenBirchCounter
       edges:
-      - to: CP14TableWoodenBirch
+      - to: CE14TableWoodenBirch
         steps:
         - tool: Prying
           doAfter: 1
         completed:
         - !type:SpawnPrototype
-          prototype: CP14BirchWoodenPlanks1
+          prototype: CE14BirchWoodenPlanks1
           amount: 1
 
 
 
 
 - type: constructionGraph
-  id: CP14TableWoodenRound
+  id: CE14TableWoodenRound
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14TableWoodenRound
+        - to: CE14TableWoodenRound
           steps:
-          - material: CP14WoodenPlanks
+          - material: CE14WoodenPlanks
             amount: 3
             doAfter: 2
-    - node: CP14TableWoodenRound
-      entity: CP14TableWoodenRound
+    - node: CE14TableWoodenRound
+      entity: CE14TableWoodenRound
       edges:
       - to: start
         steps:
@@ -134,24 +134,24 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 3
 
 - type: constructionGraph
-  id: CP14TableWoodenBirchRound
+  id: CE14TableWoodenBirchRound
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14TableWoodenBirchRound
+        - to: CE14TableWoodenBirchRound
           steps:
-          - material: CP14BirchWoodenPlanks
+          - material: CE14BirchWoodenPlanks
             amount: 3
             doAfter: 2
-    - node: CP14TableWoodenBirchRound
-      entity: CP14TableWoodenBirchRound
+    - node: CE14TableWoodenBirchRound
+      entity: CE14TableWoodenBirchRound
       edges:
       - to: start
         steps:
@@ -159,24 +159,24 @@
           doAfter: 3
         completed:
         - !type:SpawnPrototype
-          prototype: CP14BirchWoodenPlanks1
+          prototype: CE14BirchWoodenPlanks1
           amount: 3
 
 - type: constructionGraph
-  id: CP14Workbench
+  id: CE14Workbench
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14Workbench
+        - to: CE14Workbench
           steps:
             - stackGroup: WoodenPlanks
               amount: 3
               doAfter: 2
-    - node: CP14Workbench
-      entity: CP14Workbench
+    - node: CE14Workbench
+      entity: CE14Workbench
       edges:
       - to: start
         steps:
@@ -184,24 +184,24 @@
           doAfter: 5
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 3
 
 - type: constructionGraph
-  id: CP14WorkbenchCooking
+  id: CE14WorkbenchCooking
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14WorkbenchCooking
+        - to: CE14WorkbenchCooking
           steps:
             - stackGroup: WoodenPlanks
               amount: 3
               doAfter: 2
-    - node: CP14WorkbenchCooking
-      entity: CP14WorkbenchCooking
+    - node: CE14WorkbenchCooking
+      entity: CE14WorkbenchCooking
       edges:
       - to: start
         steps:
@@ -209,24 +209,24 @@
           doAfter: 5
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 3
 
 - type: constructionGraph
-  id: CP14WorkbenchSewing
+  id: CE14WorkbenchSewing
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14WorkbenchSewing
+        - to: CE14WorkbenchSewing
           steps:
             - stackGroup: WoodenPlanks
               amount: 3
               doAfter: 2
-    - node: CP14WorkbenchSewing
-      entity: CP14WorkbenchSewing
+    - node: CE14WorkbenchSewing
+      entity: CE14WorkbenchSewing
       edges:
       - to: start
         steps:
@@ -234,24 +234,24 @@
           doAfter: 5
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 3
 
 - type: constructionGraph
-  id: CP14WorkbenchLeather
+  id: CE14WorkbenchLeather
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14WorkbenchLeather
+        - to: CE14WorkbenchLeather
           steps:
             - stackGroup: WoodenPlanks
               amount: 3
               doAfter: 2
-    - node: CP14WorkbenchLeather
-      entity: CP14WorkbenchLeather
+    - node: CE14WorkbenchLeather
+      entity: CE14WorkbenchLeather
       edges:
       - to: start
         steps:
@@ -259,5 +259,5 @@
           doAfter: 5
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 3

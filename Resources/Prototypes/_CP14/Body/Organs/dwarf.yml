@@ -1,23 +1,23 @@
 - type: entity
-  id: CP14OrganDwarfHeart
+  id: CE14OrganDwarfHeart
   parent: OrganHumanHeart
   name: dwarf heart
   categories: [ ForkFiltered ]
   components:
   - type: Metabolizer
-    metabolizerTypes: [CP14Dwarf]
+    metabolizerTypes: [CE14Dwarf]
 
 - type: entity
-  id: CP14DwarfOrganDwarfLiver
+  id: CE14DwarfOrganDwarfLiver
   parent: OrganHumanLiver
   name: dwarf liver
   categories: [ ForkFiltered ]
   components:
   - type: Metabolizer
-    metabolizerTypes: [CP14Dwarf]
+    metabolizerTypes: [CE14Dwarf]
 
 - type: entity
-  id: CP14DwarfOrganDwarfStomach
+  id: CE14DwarfOrganDwarfStomach
   parent: OrganHumanStomach
   name: dwarf stomach
   categories: [ ForkFiltered ]
@@ -37,4 +37,4 @@
   - type: Stomach
   - type: Metabolizer
     maxReagents: 5
-    metabolizerTypes: [CP14Dwarf]
+    metabolizerTypes: [CE14Dwarf]

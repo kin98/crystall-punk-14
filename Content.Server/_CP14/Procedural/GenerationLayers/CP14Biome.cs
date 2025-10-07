@@ -15,7 +15,7 @@ public sealed partial class DungeonJob
     /// <summary>
     /// <see cref="BiomeDunGen"/>
     /// </summary>
-    private async Task PostGen(CP14BiomeDunGen dunGen,
+    private async Task PostGen(CE14BiomeDunGen dunGen,
         List<Dungeon> dungeons,
         HashSet<Vector2i> reservedTiles,
         Random random)

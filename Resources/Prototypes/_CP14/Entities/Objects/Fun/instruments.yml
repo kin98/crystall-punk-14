@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseHandheldInstrument
-  id: CP14FluteInstrument
+  id: CE14FluteInstrument
   name: flute
   description: A compact musical wind instrument, popular in villages as well as with large musical troupes.
   categories: [ ForkFiltered ]
@@ -8,21 +8,21 @@
   - type: Instrument
     program: 75
   - type: Sprite
-    sprite: _CP14/Objects/Fun/Instruments/flute.rsi
+    sprite: _CE14/Objects/Fun/Instruments/flute.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: _CP14/Objects/Fun/Instruments/flute.rsi
+    sprite: _CE14/Objects/Fun/Instruments/flute.rsi
   - type: Tag
     tags:
     - WoodwindInstrument
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 10
+      CE14WoodenPlanks: 10
 
 - type: entity
   parent: BaseHandheldInstrument
-  id: CP14LyraInstrument
+  id: CE14LyraInstrument
   name: lyra
   description: A common stringed instrument throughout Sylate, popular with various bards and musical troupes.
   categories: [ ForkFiltered ]
@@ -30,15 +30,15 @@
   - type: Instrument
     program: 46
   - type: Sprite
-    sprite: _CP14/Objects/Fun/Instruments/lira.rsi
+    sprite: _CE14/Objects/Fun/Instruments/lira.rsi
     state: icon
   - type: Item
     size: Normal
-    sprite: _CP14/Objects/Fun/Instruments/lira.rsi
+    sprite: _CE14/Objects/Fun/Instruments/lira.rsi
   - type: Clothing
     equipDelay: 0.25
     unequipDelay: 0.25
-    sprite: _CP14/Objects/Fun/Instruments/lira.rsi
+    sprite: _CE14/Objects/Fun/Instruments/lira.rsi
     quickEquip: false
     breakOnMove: false
     slots:
@@ -48,12 +48,12 @@
     - StringInstrument
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 30
-      CP14Cloth: 10
+      CE14WoodenPlanks: 30
+      CE14Cloth: 10
 
 - type: entity
   parent: BaseHandheldInstrument
-  id: CP14LuteInstrument
+  id: CE14LuteInstrument
   name: lute
   description: A legend among bards.
   categories: [ ForkFiltered ]
@@ -61,15 +61,15 @@
   - type: Instrument
     program: 24
   - type: Sprite
-    sprite: _CP14/Objects/Fun/Instruments/lute.rsi
+    sprite: _CE14/Objects/Fun/Instruments/lute.rsi
     state: icon
   - type: Item
     size: Normal
-    sprite: _CP14/Objects/Fun/Instruments/lute.rsi
+    sprite: _CE14/Objects/Fun/Instruments/lute.rsi
   - type: Clothing
     equipDelay: 0.25
     unequipDelay: 0.25
-    sprite: _CP14/Objects/Fun/Instruments/lute.rsi
+    sprite: _CE14/Objects/Fun/Instruments/lute.rsi
     quickEquip: false
     breakOnMove: false
     slots:
@@ -86,8 +86,8 @@
     - StringInstrument
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 40
-      CP14Cloth: 5
+      CE14WoodenPlanks: 40
+      CE14Cloth: 5
 
 - type: entity
   parent: BaseHandheldInstrument
@@ -99,15 +99,15 @@
   - type: Instrument
     program: 27
   - type: Sprite
-    sprite: _CP14/Objects/Fun/Instruments/skeleton_guitar.rsi
+    sprite: _CE14/Objects/Fun/Instruments/skeleton_guitar.rsi
     state: icon
   - type: Item
     size: Normal
-    sprite: _CP14/Objects/Fun/Instruments/skeleton_guitar.rsi
+    sprite: _CE14/Objects/Fun/Instruments/skeleton_guitar.rsi
   - type: Clothing
     equipDelay: 0.25
     unequipDelay: 0.25
-    sprite: _CP14/Objects/Fun/Instruments/skeleton_guitar.rsi
+    sprite: _CE14/Objects/Fun/Instruments/skeleton_guitar.rsi
     quickEquip: false
     breakOnMove: false
     slots:

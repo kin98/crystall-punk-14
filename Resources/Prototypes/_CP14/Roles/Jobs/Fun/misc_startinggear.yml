@@ -1,8 +1,8 @@
 - type: startingGear
-  id: CP14DeathMatchGear
+  id: CE14DeathMatchGear
   equipment:
-    cloak: CP14ClothingCloakFurcapeBlue
-    shirt: CP14ClothingShirtCottonBlack
-    pants: CP14ClothingPantsLoincloth
-    shoes: CP14ClothingShoesSandals
+    cloak: CE14ClothingCloakFurcapeBlue
+    shirt: CE14ClothingShirtCottonBlack
+    pants: CE14ClothingPantsLoincloth
+    shoes: CE14ClothingShoesSandals
 

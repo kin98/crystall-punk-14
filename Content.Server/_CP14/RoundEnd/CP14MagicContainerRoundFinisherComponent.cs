@@ -1,9 +1,9 @@
-namespace Content.Server._CP14.RoundEnd;
+namespace Content.Server._CE14.RoundEnd;
 
 /// <summary>
 ///
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14MagicContainerRoundFinisherComponent : Component
+public sealed partial class CE14MagicContainerRoundFinisherComponent : Component
 {
 }

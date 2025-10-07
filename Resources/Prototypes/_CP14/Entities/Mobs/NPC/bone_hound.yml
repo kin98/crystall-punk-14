@@ -1,18 +1,18 @@
 - type: entity
-  id: CP14MobMonsterBoneHound
-  parent: CP14SimpleMobBase
+  id: CE14MobMonsterBoneHound
+  parent: CE14SimpleMobBase
   name: bone hound
   description: The skeleton of a hound, animated by dark magic, even more bloodthirsty and dangerous than when alive.
   categories: [ ForkFiltered ]
   components:
   - type: GhostTakeoverAvailable
   - type: GhostRole
-    name: cp14-ghost-role-information-name-bone-hound
+    name: CE14-ghost-role-information-name-bone-hound
     allowMovement: true
-    description: cp14-ghost-role-information-description-bone-hound
-    rules: cp14-ghost-role-information-rules-demiplane
+    description: CE14-ghost-role-information-description-bone-hound
+    rules: CE14-ghost-role-information-rules-demiplane
     mindRoles:
-    - CP14MindRoleDemiplaneAntag
+    - CE14MindRoleDemiplaneAntag
     raffle:
       settings: default
   - type: HTN
@@ -27,7 +27,7 @@
         10
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
   - type: NPCImprintingOnSpawnBehaviour
     whitelist:
       components:
@@ -35,7 +35,7 @@
   - type: Sprite
     drawdepth: Mobs
     layers:
-    - sprite: _CP14/Mobs/Monster/bone_hound.rsi
+    - sprite: _CE14/Mobs/Monster/bone_hound.rsi
       state: live
   - type: Fixtures
     fixtures:
@@ -49,7 +49,7 @@
         layer:
         - MobLayer
   - type: Appearance
-  - type: CP14NightVision
+  - type: CE14NightVision
   - type: SlowOnDamage
     speedModifierThresholds:
       40: 0.8
@@ -65,10 +65,10 @@
     baseWalkSpeed: 5
     baseSprintSpeed: 5
   - type: Damageable
-    damageContainer: CP14BiologicalAnaerobic
-    damageModifierSet: CP14Skeleton
+    damageContainer: CE14BiologicalAnaerobic
+    damageModifierSet: CE14Skeleton
   - type: Bloodstream
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
     bloodMaxVolume: 0
   - type: Grammar
     attributes:
@@ -76,7 +76,7 @@
   - type: Tag
     tags:
       - FootstepSound
-      - CP14Mosquito
+      - CE14Mosquito
   - type: Destructible
     thresholds:
     - trigger:
@@ -85,11 +85,11 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BoneRemainsBoneHound:
+          CE14BoneRemainsBoneHound:
             min: 1
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
         sound:
-          collection: CP14BoneCrack
+          collection: CE14BoneCrack

@@ -8,7 +8,7 @@ namespace Content.Shared.Audio;
 /// Attaches a rules prototype to sound files to play ambience.
 /// </summary>
 [Prototype("ambientLoop")]
-public sealed partial class CP14AmbientLoopPrototype : IPrototype
+public sealed partial class CE14AmbientLoopPrototype : IPrototype
 {
     [IdDataField] public string ID { get; } = string.Empty;
 

@@ -1,6 +1,6 @@
 - type: entity
   parent: CrateGeneric
-  id: CP14CrateDirtPitGrave
+  id: CE14CrateDirtPitGrave
   categories: [ ForkFiltered ]
   name: dirt pit
   description: "There's something buried here... or someone..."
@@ -8,7 +8,7 @@
   - type: Sprite
     noRot: false
     snapCardinals: true
-    sprite: _CP14/Structures/Storage/dirt_pit.rsi
+    sprite: _CE14/Structures/Storage/dirt_pit.rsi
     layers:
     - state: base
     - state: closed
@@ -21,12 +21,12 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          collection: CP14Digging
+          collection: CE14Digging
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14DirtBlock1:
+          CE14DirtBlock1:
             min: 2
             max: 3
   - type: Fixtures
@@ -47,56 +47,56 @@
     airtight: true
     isCollidableWhenOpen: false
     closeSound:
-      collection: CP14Digging
+      collection: CE14Digging
     openSound:
-      collection: CP14Digging
+      collection: CE14Digging
   - type: Construction
-    graph: CP14CrateDirtPitGrave
-    node: CP14CrateDirtPitGrave
+    graph: CE14CrateDirtPitGrave
+    node: CE14CrateDirtPitGrave
 
 - type: entity
-  parent: CP14CrateDirtPitGrave
-  id: CP14CrateDirtPitGraveFilled
+  parent: CE14CrateDirtPitGrave
+  id: CE14CrateDirtPitGraveFilled
   suffix: Random filled
   components:
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
-        tableId: CP14TombstoneTable
+        tableId: CE14TombstoneTable
         rolls: !type:ConstantNumberSelector
           value: 4
 
 - type: entityTable
-  id: CP14TombstoneTable
+  id: CE14TombstoneTable
   table: !type:GroupSelector
     children:
     - !type:GroupSelector # Body parts
       children:
-      - id: CP14TorsoZombie
-      - id: CP14LeftArmZombie
-      - id: CP14LeftFootZombie
-      - id: CP14LeftHandZombie
-      - id: CP14LeftLegZombie
-      - id: CP14RightArmZombie
-      - id: CP14RightFootZombie
-      - id: CP14RightHandZombie
-      - id: CP14RightLegZombie
-      - id: CP14HeadZombie
+      - id: CE14TorsoZombie
+      - id: CE14LeftArmZombie
+      - id: CE14LeftFootZombie
+      - id: CE14LeftHandZombie
+      - id: CE14LeftLegZombie
+      - id: CE14RightArmZombie
+      - id: CE14RightFootZombie
+      - id: CE14RightHandZombie
+      - id: CE14RightLegZombie
+      - id: CE14HeadZombie
         weight: 2
-      - id: CP14TorsoSkeleton
-      - id: CP14LeftArmSkeleton
-      - id: CP14LeftFootSkeleton
-      - id: CP14LeftHandSkeleton
-      - id: CP14LeftLegSkeleton
-      - id: CP14RightArmSkeleton
-      - id: CP14RightFootSkeleton
-      - id: CP14RightHandSkeleton
-      - id: CP14RightLegSkeleton
-      - id: CP14HeadSkeleton
+      - id: CE14TorsoSkeleton
+      - id: CE14LeftArmSkeleton
+      - id: CE14LeftFootSkeleton
+      - id: CE14LeftHandSkeleton
+      - id: CE14LeftLegSkeleton
+      - id: CE14RightArmSkeleton
+      - id: CE14RightFootSkeleton
+      - id: CE14RightHandSkeleton
+      - id: CE14RightLegSkeleton
+      - id: CE14HeadSkeleton
         weight: 2
     - !type:GroupSelector # Rarities
       weight: 0.2
       children:
       - !type:NestedSelector
-        tableId: CP14StationCrateLoot
+        tableId: CE14StationCrateLoot
 

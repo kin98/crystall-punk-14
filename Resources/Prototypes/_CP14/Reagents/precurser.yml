@@ -3,13 +3,13 @@
 # Flower based
 
 - type: reagent
-  id: CP14BloodFlowerSap
-  group: CP14Precurser
-  name: cp14-reagent-name-bloodflowersap
-  desc: cp14-reagent-desc-bloodflowersap
-  flavor: CP14Metallic
+  id: CE14BloodFlowerSap
+  group: CE14Precurser
+  name: CE14-reagent-name-bloodflowersap
+  desc: CE14-reagent-desc-bloodflowersap
+  flavor: CE14Metallic
   color: "#5c1f0a"
-  physicalDesc: cp14-reagent-physical-desc-ferrous
+  physicalDesc: CE14-reagent-physical-desc-ferrous
   footstepSound:
     collection: FootstepBlood
     params:
@@ -17,20 +17,20 @@
   pricePerUnit: 0.40
 
 - type: reagent
-  id: CP14YellowDayflinPulp
-  group: CP14Precurser
-  name: cp14-reagent-name-yellow-dayflin-pulp
-  desc: cp14-reagent-desc-yellow-dayflin-pulp
-  flavor: CP14Sweetly
+  id: CE14YellowDayflinPulp
+  group: CE14Precurser
+  name: CE14-reagent-name-yellow-dayflin-pulp
+  desc: CE14-reagent-desc-yellow-dayflin-pulp
+  flavor: CE14Sweetly
   color: "#ffe269"
-  physicalDesc: cp14-reagent-physical-desc-pureed
+  physicalDesc: CE14-reagent-physical-desc-pureed
   pricePerUnit: 0.35
 
 - type: reagent
-  id: CP14AirLily
-  group: CP14Precurser
-  name: cp14-reagent-name-air-lily-juice
-  desc: cp14-reagent-desc-air-lily-juice
+  id: CE14AirLily
+  group: CE14Precurser
+  name: CE14-reagent-name-air-lily-juice
+  desc: CE14-reagent-desc-air-lily-juice
   flavor: fizzy
   color: "#92cae0"
   physicalDesc: reagent-physical-desc-milky
@@ -48,13 +48,13 @@
   pricePerUnit: 0.62
 
 - type: reagent
-  id: CP14WildSageSap
-  group: CP14Precurser
-  name: cp14-reagent-name-wild-sage-sap
-  desc: cp14-reagent-desc-wild-sage-sap
-  flavor: CP14Sweetly
+  id: CE14WildSageSap
+  group: CE14Precurser
+  name: CE14-reagent-name-wild-sage-sap
+  desc: CE14-reagent-desc-wild-sage-sap
+  flavor: CE14Sweetly
   color: "#b06bc7"
-  physicalDesc: cp14-reagent-physical-desc-cloudy
+  physicalDesc: CE14-reagent-physical-desc-cloudy
   metabolisms:
     Medicine:
       effects:
@@ -73,13 +73,13 @@
 # Fungus based
 
 - type: reagent
-  id: CP14AgaricMushroom
-  group: CP14Precurser
-  name: cp14-reagent-name-agaric-shroom
-  desc: cp14-reagent-desc-agaric-shroom
-  flavor: CP14Bitterly
+  id: CE14AgaricMushroom
+  group: CE14Precurser
+  name: CE14-reagent-name-agaric-shroom
+  desc: CE14-reagent-desc-agaric-shroom
+  flavor: CE14Bitterly
   color: "#89a195"
-  physicalDesc: cp14-reagent-physical-desc-colorless
+  physicalDesc: CE14-reagent-physical-desc-colorless
   metabolisms:
     Poison:
       effects:
@@ -100,13 +100,13 @@
   pricePerUnit: 0.46
 
 - type: reagent
-  id: CP14LumiMushroom
-  group: CP14Precurser
-  name: cp14-reagent-name-lumi-shroom
-  desc: cp14-reagent-desc-lumi-shroom
-  flavor: CP14Vomit
+  id: CE14LumiMushroom
+  group: CE14Precurser
+  name: CE14-reagent-name-lumi-shroom
+  desc: CE14-reagent-desc-lumi-shroom
+  flavor: CE14Vomit
   color: "#36c98f"
-  physicalDesc: cp14-reagent-physical-desc-colorless
+  physicalDesc: CE14-reagent-physical-desc-colorless
   metabolisms:
     Poison:
       effects:
@@ -127,32 +127,32 @@
   pricePerUnit: 0.94
 
 - type: reagent
-  id: CP14BlueAmanita
-  group: CP14Precurser
-  name: cp14-reagent-name-blue-amanita
-  desc: cp14-reagent-desc-blue-amanita
-  flavor: CP14Magic
+  id: CE14BlueAmanita
+  group: CE14Precurser
+  name: CE14-reagent-name-blue-amanita
+  desc: CE14-reagent-desc-blue-amanita
+  flavor: CE14Magic
   color: "#6bb4bf"
-  physicalDesc: cp14-reagent-physical-desc-iridescent
+  physicalDesc: CE14-reagent-physical-desc-iridescent
   metabolisms:
     Medicine:
       effects:
-      - !type:CP14ManaChange
+      - !type:CE14ManaChange
         manaDelta: 0.5
       - !type:HealthChange
         damage:
           types:
-            CP14ManaDepletion: -0.5
+            CE14ManaDepletion: -0.5
   pricePerUnit: 0.86
 
 - type: reagent
-  id: CP14SilverNeedle
-  group: CP14Precurser
-  name: cp14-reagent-name-silver-needle
-  desc: cp14-reagent-desc-silver-needle
+  id: CE14SilverNeedle
+  group: CE14Precurser
+  name: CE14-reagent-name-silver-needle
+  desc: CE14-reagent-desc-silver-needle
   flavor: bitter
   color: "#c2834c"
-  physicalDesc: cp14-reagent-physical-desc-iridescent
+  physicalDesc: CE14-reagent-physical-desc-iridescent
   metabolisms:
     Medicine:
       effects:
@@ -165,13 +165,13 @@
 # Slime based
 
 - type: reagent
-  id: CP14ChromiumSlime
-  group: CP14Precurser
-  name: cp14-reagent-name-chromium-slime
-  desc: cp14-reagent-desc-chromium-slime
-  flavor: CP14Vomit
+  id: CE14ChromiumSlime
+  group: CE14Precurser
+  name: CE14-reagent-name-chromium-slime
+  desc: CE14-reagent-desc-chromium-slime
+  flavor: CE14Vomit
   color: "#3b4872"
-  physicalDesc: cp14-reagent-physical-desc-colorless
+  physicalDesc: CE14-reagent-physical-desc-colorless
   slipData:
     requiredSlipSpeed: 3.5
   metabolisms:
@@ -185,21 +185,21 @@
 # Inorganic
 
 - type: reagent
-  id: CP14GroundQuartz
-  group: CP14Precurser
-  name: cp14-reagent-name-grounded-quartz
-  desc: cp14-reagent-desc-grounded-quartz
-  flavor: CP14Quartz
+  id: CE14GroundQuartz
+  group: CE14Precurser
+  name: CE14-reagent-name-grounded-quartz
+  desc: CE14-reagent-desc-grounded-quartz
+  flavor: CE14Quartz
   color: "#9aa6ad"
-  physicalDesc: cp14-reagent-physical-desc-colorless
+  physicalDesc: CE14-reagent-physical-desc-colorless
   pricePerUnit: 0.15
 
 - type: reagent
-  id: CP14WhistlerPoison
-  group: CP14Precurser
-  name: cp14-reagent-name-whistler-poison
-  desc: cp14-reagent-desc-whistler-poison
-  flavor: CP14VerySweet
+  id: CE14WhistlerPoison
+  group: CE14Precurser
+  name: CE14-reagent-name-whistler-poison
+  desc: CE14-reagent-desc-whistler-poison
+  flavor: CE14VerySweet
   color: "#6bb4bf"
   physicalDesc: reagent-physical-desc-powdery
   metabolisms:
@@ -212,7 +212,7 @@
       - !type:GenericStatusEffect
         conditions:
         - !type:ReagentThreshold
-          reagent: CP14WhistlerPoison
+          reagent: CE14WhistlerPoison
           min: 8
         key: ForcedSleep
         component: ForcedSleeping

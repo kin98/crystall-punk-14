@@ -1,6 +1,6 @@
 - type: entity
   name: astral haze
-  id: CP14AstralHaze
+  id: CE14AstralHaze
   categories: [ ForkFiltered ]
   parent:
   - BaseKudzu
@@ -25,7 +25,7 @@
       offset: 0.2
       chance: 0.45
       prototypes:
-      - CP14AstralCorrosion
+      - CE14AstralCorrosion
     - type: Tag
       tags:
         - HideContextMenu

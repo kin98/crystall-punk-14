@@ -1,7 +1,7 @@
-namespace Content.Shared._CP14.Actions.Components;
+namespace Content.Shared._CE14.Actions.Components;
 
 [RegisterComponent]
-public sealed partial class CP14ActionEmotingComponent : Component
+public sealed partial class CE14ActionEmotingComponent : Component
 {
     [DataField]
     public string StartEmote = string.Empty; //Not LocId!

@@ -7,9 +7,9 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Cooking.Requirements;
+namespace Content.Shared._CE14.Cooking.Requirements;
 
-public sealed partial class TagBlocked : CP14CookingCraftRequirement
+public sealed partial class TagBlocked : CE14CookingCraftRequirement
 {
     [DataField(required: true)]
     public HashSet<ProtoId<TagPrototype>> Tags = default!;

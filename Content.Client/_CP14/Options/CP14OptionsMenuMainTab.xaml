@@ -1,10 +1,10 @@
-<options:CP14OptionsMenuMainTab
+<options:CE14OptionsMenuMainTab
     xmlns="https://spacestation14.io"
     xmlns:ui="clr-namespace:Content.Client.Options.UI"
-    xmlns:options="clr-namespace:Content.Client._CP14.Options">
+    xmlns:options="clr-namespace:Content.Client._CE14.Options">
 
     <!--
-    Place for all custom settings of CP14
+    Place for all custom settings of CE14
     -->
     <BoxContainer Orientation="Vertical">
 
@@ -13,15 +13,15 @@
             <BoxContainer Orientation="Vertical" Margin="8 8 8 8" VerticalExpand="True">
 
                 <!-- Graphics group -->
-                <Label Text="{Loc 'cp14-ui-options-main-graphics-label'}"
+                <Label Text="{Loc 'CE14-ui-options-main-graphics-label'}"
                        StyleClasses="LabelKeyText"/>
 
                 <CheckBox Name="WaveShaderEnabled"
-                    Text="{Loc 'cp14-ui-options-main-graphics-wave-shader'}"/>
+                    Text="{Loc 'CE14-ui-options-main-graphics-wave-shader'}"/>
                     <!-- TODO: Wave shader tooltip -->
                 <CheckBox Name="PostProcessCheckBox"
-                    Text="{Loc 'cp14-ui-options-postprocess'}"
-                    ToolTip="{Loc 'cp14-ui-options-postprocess-tooltip'}"/>
+                    Text="{Loc 'CE14-ui-options-postprocess'}"
+                    ToolTip="{Loc 'CE14-ui-options-postprocess-tooltip'}"/>
 
             </BoxContainer>
         </ScrollContainer>
@@ -33,4 +33,4 @@
         <ui:OptionsTabControlRow Name="Control" />
 
     </BoxContainer>
-</options:CP14OptionsMenuMainTab>
+</options:CE14OptionsMenuMainTab>

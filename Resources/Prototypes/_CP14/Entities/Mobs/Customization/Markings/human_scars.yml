@@ -1,135 +1,135 @@
 - type: marking
-  id: CP14HumanScarCheekLeft
+  id: CE14HumanScarCheekLeft
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_cheek_left
 
 - type: marking
-  id: CP14HumanScarCheekRight
+  id: CE14HumanScarCheekRight
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_cheek_right
 
 - type: marking
-  id: CP14HumanScarChestLeft
+  id: CE14HumanScarChestLeft
   bodyPart: Chest
   markingCategory: Chest
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_chest_left
 
 - type: marking
-  id: CP14HumanScarChestRight
+  id: CE14HumanScarChestRight
   bodyPart: Chest
   markingCategory: Chest
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_chest_right
 
 - type: marking
-  id: CP14HumanScarCutLeft
+  id: CE14HumanScarCutLeft
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_cut_left
 
 - type: marking
-  id: CP14HumanScarCutRight
+  id: CE14HumanScarCutRight
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_cut_right
 
 - type: marking
-  id: CP14HumanScarEyeLeft
+  id: CE14HumanScarEyeLeft
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_eye_left
 
 - type: marking
-  id: CP14HumanScarEyeRight
+  id: CE14HumanScarEyeRight
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_eye_right
 
 - type: marking
-  id: CP14HumanScarEyebrowLeft
+  id: CE14HumanScarEyebrowLeft
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_eyebrow_left
 
 - type: marking
-  id: CP14HumanScarEyebrowRight
+  id: CE14HumanScarEyebrowRight
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_eyebrow_right
 
 - type: marking
-  id: CP14HumanScarHalfFaceLeft
+  id: CE14HumanScarHalfFaceLeft
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_half_face_left
 
 - type: marking
-  id: CP14HumanScarHalfFaceRight
+  id: CE14HumanScarHalfFaceRight
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_half_face_right
 
 - type: marking
-  id: CP14HumanScarNearRibLeft
+  id: CE14HumanScarNearRibLeft
   bodyPart: Chest
   markingCategory: Chest
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_near_rib_left
 
 - type: marking
-  id: CP14HumanScarNearRibRight
+  id: CE14HumanScarNearRibRight
   bodyPart: Chest
   markingCategory: Chest
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_near_rib_right
 
 - type: marking
-  id: CP14HumanScarNose
+  id: CE14HumanScarNose
   bodyPart: Head
   markingCategory: Head
   followSkinColor: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/human_scars.rsi
+    - sprite: _CE14/Mobs/Customization/human_scars.rsi
       state: scar_nose
 

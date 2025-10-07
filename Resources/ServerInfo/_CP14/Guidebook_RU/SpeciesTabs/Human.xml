@@ -2,7 +2,7 @@
 # Люди
 
 <Box>
-<GuideEntityEmbed Entity="CP14MobHuman" Caption="Человек"/>
+<GuideEntityEmbed Entity="CE14MobHuman" Caption="Человек"/>
 </Box>
 
 Люди - Одна из самых молодых рас в культурном аспекте. Люди выделяются своей обыкновенностью при этом являясь одной из доминирующей рас в численности. 

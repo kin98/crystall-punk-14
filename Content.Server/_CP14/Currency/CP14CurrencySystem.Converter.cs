@@ -1,4 +1,4 @@
-using Content.Shared._CP14.Currency;
+using Content.Shared._CE14.Currency;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Stacks;
@@ -9,19 +9,19 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Server._CP14.Currency;
+namespace Content.Server._CE14.Currency;
 
-public sealed partial class CP14CurrencySystem
+public sealed partial class CE14CurrencySystem
 {
     [Dependency] private readonly TagSystem _tag = default!;
     private void InitializeConverter()
     {
-        SubscribeLocalEvent<CP14CurrencyConverterComponent, GetVerbsEvent<Verb>>(OnGetVerb);
-        SubscribeLocalEvent<CP14CurrencyConverterComponent, ExaminedEvent>(OnConverterExamine);
-        SubscribeLocalEvent<CP14CurrencyConverterComponent, InteractUsingEvent>(OnInteractUsing);
+        SubscribeLocalEvent<CE14CurrencyConverterComponent, GetVerbsEvent<Verb>>(OnGetVerb);
+        SubscribeLocalEvent<CE14CurrencyConverterComponent, ExaminedEvent>(OnConverterExamine);
+        SubscribeLocalEvent<CE14CurrencyConverterComponent, InteractUsingEvent>(OnInteractUsing);
     }
 
-    private void OnGetVerb(Entity<CP14CurrencyConverterComponent> ent, ref GetVerbsEvent<Verb> args)
+    private void OnGetVerb(Entity<CE14CurrencyConverterComponent> ent, ref GetVerbsEvent<Verb> args)
     {
         if (!args.CanAccess || !args.CanInteract)
             return;
@@ -30,9 +30,9 @@ public sealed partial class CP14CurrencySystem
         var coord = transform.Coordinates.Offset(transform.LocalRotation.RotateVec(ent.Comp.SpawnOffset));
         Verb copperVerb = new()
         {
-            Text = Loc.GetString("cp14-currency-converter-get-cp"),
-            Icon = new SpriteSpecifier.Rsi(new ("/Textures/_CP14/Objects/Economy/cp_coin.rsi"), "coin10"),
-            Category = VerbCategory.CP14CurrencyConvert,
+            Text = Loc.GetString("CE14-currency-converter-get-cp"),
+            Icon = new SpriteSpecifier.Rsi(new ("/Textures/_CE14/Objects/Economy/cp_coin.rsi"), "coin10"),
+            Category = VerbCategory.CE14CurrencyConvert,
             Priority = 1,
             CloseMenu = false,
             Act = () =>
@@ -50,9 +50,9 @@ public sealed partial class CP14CurrencySystem
         args.Verbs.Add(copperVerb);
         Verb silverVerb = new()
         {
-            Text = Loc.GetString("cp14-currency-converter-get-sp"),
-            Icon = new SpriteSpecifier.Rsi(new ("/Textures/_CP14/Objects/Economy/sp_coin.rsi"), "coin10"),
-            Category = VerbCategory.CP14CurrencyConvert,
+            Text = Loc.GetString("CE14-currency-converter-get-sp"),
+            Icon = new SpriteSpecifier.Rsi(new ("/Textures/_CE14/Objects/Economy/sp_coin.rsi"), "coin10"),
+            Category = VerbCategory.CE14CurrencyConvert,
             Priority = 2,
             CloseMenu = false,
             Act = () =>
@@ -69,9 +69,9 @@ public sealed partial class CP14CurrencySystem
         args.Verbs.Add(silverVerb);
         Verb goldVerb = new()
         {
-            Text = Loc.GetString("cp14-currency-converter-get-gp"),
-            Icon = new SpriteSpecifier.Rsi(new ("/Textures/_CP14/Objects/Economy/gp_coin.rsi"), "coin10"),
-            Category = VerbCategory.CP14CurrencyConvert,
+            Text = Loc.GetString("CE14-currency-converter-get-gp"),
+            Icon = new SpriteSpecifier.Rsi(new ("/Textures/_CE14/Objects/Economy/gp_coin.rsi"), "coin10"),
+            Category = VerbCategory.CE14CurrencyConvert,
             Priority = 3,
             CloseMenu = false,
             Act = () =>
@@ -88,9 +88,9 @@ public sealed partial class CP14CurrencySystem
         args.Verbs.Add(goldVerb);
         Verb platinumVerb = new()
         {
-            Text = Loc.GetString("cp14-currency-converter-get-pp"),
-            Icon = new SpriteSpecifier.Rsi(new ("/Textures/_CP14/Objects/Economy/pp_coin.rsi"), "coin10"),
-            Category = VerbCategory.CP14CurrencyConvert,
+            Text = Loc.GetString("CE14-currency-converter-get-pp"),
+            Icon = new SpriteSpecifier.Rsi(new ("/Textures/_CE14/Objects/Economy/pp_coin.rsi"), "coin10"),
+            Category = VerbCategory.CE14CurrencyConvert,
             Priority = 4,
             CloseMenu = false,
             Act = () =>
@@ -108,14 +108,14 @@ public sealed partial class CP14CurrencySystem
     }
 
 
-    private void OnConverterExamine(Entity<CP14CurrencyConverterComponent> ent, ref ExaminedEvent args)
+    private void OnConverterExamine(Entity<CE14CurrencyConverterComponent> ent, ref ExaminedEvent args)
     {
         var push =
-            $"{Loc.GetString("cp14-currency-converter-examine-title")} {GetCurrencyPrettyString(ent.Comp.Balance)}";
+            $"{Loc.GetString("CE14-currency-converter-examine-title")} {GetCurrencyPrettyString(ent.Comp.Balance)}";
         args.PushMarkup(push);
     }
 
-    private void OnInteractUsing(Entity<CP14CurrencyConverterComponent> ent, ref InteractUsingEvent args)
+    private void OnInteractUsing(Entity<CE14CurrencyConverterComponent> ent, ref InteractUsingEvent args)
     {
         if (!_tag.HasTag(args.Used, ent.Comp.CoinTag))
             return;
@@ -127,7 +127,7 @@ public sealed partial class CP14CurrencySystem
         ent.Comp.Balance += (int)delta;
         QueueDel(args.Used);
 
-        _popup.PopupEntity(Loc.GetString("cp14-currency-converter-insert", ("cash", delta)), ent, args.User);
+        _popup.PopupEntity(Loc.GetString("CE14-currency-converter-insert", ("cash", delta)), ent, args.User);
         _audio.PlayPvs(ent.Comp.InsertSound, ent, AudioParams.Default.WithMaxDistance(3));
     }
 

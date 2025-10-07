@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseStructure
-  id: CP14FloorWaterOptimized
+  id: CE14FloorWaterOptimized
   name: water
   suffix: Optimized, Empty
   description: A trough of plain water. Clean enough for consumption
@@ -13,16 +13,16 @@
   - type: PlacementReplacement
     key: floorTile
   - type: Sprite
-    sprite: _CP14/Tiles/Water/water.rsi
+    sprite: _CE14/Tiles/Water/water.rsi
     drawdepth: BelowFloor
     color: "#ffffffee"
   - type: IconSmooth
-    key: CP14Water
+    key: CE14Water
     additionalKeys:
-    - CP14wall
+    - CE14wall
     base: water
   - type: Icon
-    sprite: _CP14/Tiles/Water/water.rsi
+    sprite: _CE14/Tiles/Water/water.rsi
     state: full
   - type: FloorOccluder
   - type: Transform
@@ -61,7 +61,7 @@
   - type: Tag
     tags:
       - HideContextMenu
-      - CP14AmbientWater
+      - CE14AmbientWater
   - type: StepTrigger
     requiredTriggeredSpeed: 0
     intersectRatio: 0.1
@@ -73,8 +73,8 @@
     - !type:ExtinguishReaction
 
 - type: entity
-  parent: CP14FloorWaterOptimized
-  id: CP14FloorWaterOptimizedDeep
+  parent: CE14FloorWaterOptimized
+  id: CE14FloorWaterOptimizedDeep
   name: deep water
   suffix: Deep, Air damage
   components:
@@ -89,8 +89,8 @@
         Asphyxiation: 2.5
 
 - type: entity
-  parent: CP14FloorWaterOptimized
-  id: CP14FloorWater
+  parent: CE14FloorWaterOptimized
+  id: CE14FloorWater
   suffix: Normal
   components:
   - type: DrawableSolution
@@ -108,42 +108,42 @@
     solution: pool
   - type: RandomSpawner
     prototypes:
-    - CP14GatherableChromiumSlime
+    - CE14GatherableChromiumSlime
     chance: 0.01
     deleteSpawnerAfterSpawn: false
 
 - type: entity
-  parent: CP14FloorWater
-  id: CP14FloorWaterLilies
+  parent: CE14FloorWater
+  id: CE14FloorWaterLilies
   suffix: Water lily spawner
   components:
   - type: RandomSpawner
     prototypes:
-    - CP14WaterLilies
+    - CE14WaterLilies
     chance: 1
     offset: 0.2
     deleteSpawnerAfterSpawn: false
 
 - type: entity
-  parent: CP14FloorWater
-  id: CP14FloorWaterReeds
+  parent: CE14FloorWater
+  id: CE14FloorWaterReeds
   suffix: Reeds spawner
   components:
   - type: RandomSpawner
     prototypes:
-    - CP14WaterReeds
+    - CE14WaterReeds
     chance: 1
     offset: 0.2
     deleteSpawnerAfterSpawn: false
 
 - type: entity
-  parent: CP14FloorWater
-  id: CP14FloorWaterAirLily
+  parent: CE14FloorWater
+  id: CE14FloorWaterAirLily
   suffix: Air lily spawner
   components:
   - type: RandomSpawner
     prototypes:
-    - CP14GatherableWaterAirLily
+    - CE14GatherableWaterAirLily
     chance: 1
     offset: 0.2
     deleteSpawnerAfterSpawn: false

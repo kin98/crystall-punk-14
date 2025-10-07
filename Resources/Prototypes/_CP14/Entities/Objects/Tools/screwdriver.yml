@@ -2,10 +2,10 @@
   categories: [ ForkFiltered ]
   name: screwdriver
   parent: BaseItem
-  id: CP14Screwdriver
+  id: CE14Screwdriver
   description: Industrial grade torque in a small screwdriving package.
   components:
-  - type: CP14LockEditer
+  - type: CE14LockEditer
   - type: UseDelay
     delay: 1.0
   - type: EmitSoundOnLand
@@ -15,10 +15,10 @@
     tags:
     - Screwdriver
   - type: Sprite
-    sprite: _CP14/Objects/Tools/screwdriver.rsi
+    sprite: _CE14/Objects/Tools/screwdriver.rsi
     state: screwdriver
   - type: Item
-    sprite: _CP14/Objects/Tools/screwdriver.rsi
+    sprite: _CE14/Objects/Tools/screwdriver.rsi
     storedRotation: -90
   - type: MeleeWeapon
     wideAnimationRotation: -90
@@ -35,5 +35,5 @@
       collection: Screwdriver
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 2
-      CP14WoodenPlanks: 20
+      CE14Iron: 2
+      CE14WoodenPlanks: 20

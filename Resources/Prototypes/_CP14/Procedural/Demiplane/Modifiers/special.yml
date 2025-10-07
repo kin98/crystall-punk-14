@@ -1,50 +1,50 @@
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: DemiplaneDecor
   generationProb: 0
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14AstralCorrosion
+    - !type:CE14OreDunGen
+      entity: CE14AstralCorrosion
       count: 15
       minGroupSize: 3
       maxGroupSize: 10
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       entityMask:
-      - CP14WallStone
-      - CP14WallDirt
-      - CP14WallSnow
-      entity: CP14WallDimensit
+      - CE14WallStone
+      - CE14WallDirt
+      - CE14WallSnow
+      entity: CE14WallDimensit
       count: 5
       minGroupSize: 3
       maxGroupSize: 5
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: RaidSpawners
   generationProb: 0
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14VentCritterMarker
+    - !type:CE14OreDunGen
+      entity: CE14VentCritterMarker
       tileMask:
-      - CP14FloorSand
-      - CP14FloorBase
-      - CP14FloorSnow
+      - CE14FloorSand
+      - CE14FloorBase
+      - CE14FloorSnow
       count: 8
       minGroupSize: 3
       maxGroupSize: 3
 
-- type: cp14LocationModifier
-  id: CP14DemiplanEnterRoom
+- type: CE14LocationModifier
+  id: CE14DemiplanEnterRoom
   generationProb: 0
   layers:
-    - !type:CP14RoomsDunGen
+    - !type:CE14RoomsDunGen
       count: 2
       tags:
-      - CP14DemiplanEnterRoom
+      - CE14DemiplanEnterRoom
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: DemiplaneArcSingle
   generationProb: 0
   layers:
-    - !type:CP14RoomsDunGen
+    - !type:CE14RoomsDunGen
       count: 1
       tags:
-      - CP14DemiplanArcRoom
+      - CE14DemiplanArcRoom

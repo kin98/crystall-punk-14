@@ -1,14 +1,14 @@
 - type: entity
-  id: CP14WallmountLampEmpty
+  id: CE14WallmountLampEmpty
   name: crystal wall lamp
   suffix: Empty
   parent:
-  - CP14BaseWallmount
-  - CP14BaseCrystalSlot
+  - CE14BaseWallmount
+  - CE14BaseCrystalSlot
   description: A simple wallmount magical device that converts crystal energy into bright light.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Wallmount/wallmount_lamp.rsi
+    sprite: _CE14/Structures/Wallmount/wallmount_lamp.rsi
     layers:
       - state: base
       - state: crystal
@@ -27,17 +27,17 @@
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.CP14MagicSlotVisuals.Inserted:
+      enum.CE14MagicSlotVisuals.Inserted:
         crystal:
           True: { visible: true }
           False: { visible: false }
-      enum.CP14MagicSlotVisuals.Powered:
+      enum.CE14MagicSlotVisuals.Powered:
         light:
           True: { visible: true }
           False: { visible: false }
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Metallic
+    damageModifierSet: CE14Metallic
   - type: Destructible
     thresholds:
       - trigger:
@@ -51,24 +51,24 @@
               collection: MetalBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14ScrapCopper:
+              CE14ScrapCopper:
                 min: 1
                 max: 3
-  - type: CP14MagicLantern
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicLantern
+  - type: CE14MagicEnergyDraw
     energy: -0.1
     delay: 12
   - type: Construction
-    graph: CP14WallmountLampEmpty
-    node: CP14WallmountLampEmpty
+    graph: CE14WallmountLampEmpty
+    node: CE14WallmountLampEmpty
 
 - type: entity
-  id: CP14WallmountLamp
+  id: CE14WallmountLamp
   suffix: Small crystal
-  parent: CP14WallmountLampEmpty
+  parent: CE14WallmountLampEmpty
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Wallmount/wallmount_lamp.rsi
+    sprite: _CE14/Structures/Wallmount/wallmount_lamp.rsi
     layers:
       - state: base
       - state: crystal
@@ -84,18 +84,18 @@
   - type: ItemSlots
     slots:
       crystal_slot:
-        startingItem: CP14EnergyCrystalMedium
+        startingItem: CE14EnergyCrystalMedium
         insertSound:
-          path: /Audio/_CP14/Items/crystal_insert.ogg
+          path: /Audio/_CE14/Items/crystal_insert.ogg
           params:
             variation: 0.05
         ejectSound:
-          path: /Audio/_CP14/Items/crystal_eject.ogg
+          path: /Audio/_CE14/Items/crystal_eject.ogg
           params:
             variation: 0.05
         ejectOnInteract: false
-        name: cp14-magic-energy-crystal-slot-name
+        name: CE14-magic-energy-crystal-slot-name
         whitelist:
           components:
-          - CP14MagicEnergyCrystal
+          - CE14MagicEnergyCrystal
 

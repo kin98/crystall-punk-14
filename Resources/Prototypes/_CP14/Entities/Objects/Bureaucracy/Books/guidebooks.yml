@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14GuidebookImperialLaws
-  parent: CP14GuidebookBase
+  id: CE14GuidebookImperialLaws
+  parent: CE14GuidebookBase
   name: imperial laws
   description: A book about Imperial Laws.
   components:
@@ -16,12 +16,12 @@
     - state: bookmark_short
   - type: GuideHelp
     guides:
-    - CP14_RU_Imperial_Laws
-    - CP14_EN_Imperial_Laws
+    - CE14_RU_Imperial_Laws
+    - CE14_EN_Imperial_Laws
 
 - type: entity
-  id: CP14GuidebookAlchemy
-  parent: CP14GuidebookBase
+  id: CE14GuidebookAlchemy
+  parent: CE14GuidebookBase
   name: achimist's handbook
   description: The mysteries of liquids and magic are hidden in this book.
   components:
@@ -37,12 +37,12 @@
     - state: bookmark_short
   - type: GuideHelp
     guides:
-    - CP14_RU_Alchemy
-    - CP14_EN_Alchemy
+    - CE14_RU_Alchemy
+    - CE14_EN_Alchemy
 
 - type: entity
-  id: CP14GuidebookCooking
-  parent: CP14GuidebookBase
+  id: CE14GuidebookCooking
+  parent: CE14GuidebookBase
   name: cookbook
   description: A book about cooking, created by unknown Silva innkeeper.
   components:
@@ -61,5 +61,5 @@
       map: [ "overlay" ]
   - type: GuideHelp
     guides:
-    - CP14_EN_Cooking
-    - CP14_RU_Cooking
+    - CE14_EN_Cooking
+    - CE14_RU_Cooking

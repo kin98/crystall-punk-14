@@ -1,15 +1,15 @@
 - type: entity
-  id: CP14ActionSpellManaConsume
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellManaConsume
+  parent: CE14ActionSpellBase
   name: Mana consume
   description: You absorb a small amount of mana from the target.
   components:
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneManaConsume
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneManaConsume
   - type: Action
     useDelay: 5
     icon:
-      sprite: _CP14/Actions/Spells/meta.rsi
+      sprite: _CE14/Actions/Spells/meta.rsi
       state: mana_consume
   - type: DoAfterArgs
     repeat: true
@@ -20,38 +20,38 @@
   - type: EntityTargetAction
     whitelist:
       components:
-      - CP14MagicEnergyContainer
-    event: !type:CP14EntityTargetModularEffectEvent
+      - CE14MagicEnergyContainer
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectManaConsume
+        - CE14ImpactEffectManaConsume
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectManaConsume
-      - !type:CP14SpellConsumeManaEffect
+        - CE14ImpactEffectManaConsume
+      - !type:CE14SpellConsumeManaEffect
         mana: 10
 
 - type: entity
-  id: CP14ActionSpellManaConsumeElf
-  parent: CP14ActionSpellManaConsume
+  id: CE14ActionSpellManaConsumeElf
+  parent: CE14ActionSpellManaConsume
   name: Carefull mana consume
   description: You absorb mana at a tremendous rate without dealing damage to the mana holder.
   components:
   - type: EntityTargetAction
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectManaConsume
-      - !type:CP14SpellConsumeManaEffect
+        - CE14ImpactEffectManaConsume
+      - !type:CE14SpellConsumeManaEffect
         safe: true
         mana: 20
 
 - type: entity
-  id: CP14RuneManaConsume
-  parent: CP14BaseMagicRune
+  id: CE14RuneManaConsume
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -67,8 +67,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectManaConsume
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectManaConsume
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:

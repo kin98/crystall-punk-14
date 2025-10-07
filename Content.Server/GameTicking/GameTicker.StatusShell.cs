@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Text.Json.Nodes;
-using Content.Server._CP14.JoinQueue;
+using Content.Server._CE14.JoinQueue;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Robust.Server.ServerStatus;
@@ -34,7 +34,7 @@ namespace Content.Server.GameTicking
         ///     For getting actual players count
         /// </summary>
         [Dependency] private readonly JoinQueueManager _joinQueue = default!;
-        //CP14 - JoinQueue
+        //CE14 - JoinQueue
         private void InitializeStatusShell()
         {
             IoCManager.Resolve<IStatusHost>().OnStatusRequest += GetStatusResponse;
@@ -50,7 +50,7 @@ namespace Content.Server.GameTicking
                 jObject["name"] = _baseServer.ServerName;
                 jObject["map"] = _gameMapManager.GetSelectedMap()?.MapName;
                 jObject["round_id"] = _gameTicker.RoundId;
-                jObject["players"] = _joinQueue.ActualPlayersCount; //CP14 - JoinQueue
+                jObject["players"] = _joinQueue.ActualPlayersCount; //CE14 - JoinQueue
                 jObject["soft_max_players"] = _cfg.GetCVar(CCVars.SoftMaxPlayers);
                 jObject["panic_bunker"] = _cfg.GetCVar(CCVars.PanicBunkerEnabled);
                 jObject["run_level"] = (int) _runLevel;

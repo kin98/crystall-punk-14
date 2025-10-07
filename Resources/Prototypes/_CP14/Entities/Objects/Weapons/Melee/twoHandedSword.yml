@@ -1,12 +1,12 @@
 - type: entity
   abstract: true
-  id: CP14BaseWeaponTwoHandedSword
+  id: CE14BaseWeaponTwoHandedSword
   parent:
   - BaseItem
-  - CP14BaseWeaponChemical
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
-  - CP14BaseWeaponSharp
+  - CE14BaseWeaponChemical
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
+  - CE14BaseWeaponSharp
   components:
   - type: Item
     size: Ginormous
@@ -18,8 +18,8 @@
     damage:
       types:
         Slash: 7
-    animation: CP14WeaponArcThrust
-    wideAnimation: CP14WeaponArcSlash
+    animation: CE14WeaponArcThrust
+    wideAnimation: CE14WeaponArcSlash
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
     cPAnimationLength: 0.5
@@ -28,7 +28,7 @@
     damage:
       types:
         Slash: 13
-  - type: CP14ComboBonusMeleeDamage
+  - type: CE14ComboBonusMeleeDamage
     bonusDamage:
       types:
         Piercing: 10
@@ -41,15 +41,15 @@
     unequipDelay: 1
 
 - type: entity
-  parent: CP14BaseWeaponTwoHandedSword
-  id: CP14WeaponTwoHandedSwordIron
+  parent: CE14BaseWeaponTwoHandedSword
+  id: CE14WeaponTwoHandedSwordIron
   name: iron two-handed sword
   description: A large and heavy two-handed sword. Heavy means reliable.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/TwoHandedSword/iron.rsi
+    sprite: _CE14/Objects/Weapons/Melee/TwoHandedSword/iron.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 10
-      CP14Iron: 30
+      CE14WoodenPlanks: 10
+      CE14Iron: 30

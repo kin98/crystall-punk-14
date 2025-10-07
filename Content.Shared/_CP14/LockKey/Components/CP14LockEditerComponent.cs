@@ -1,12 +1,12 @@
 using Robust.Shared.Audio;
 
-namespace Content.Shared._CP14.LockKey.Components;
+namespace Content.Shared._CE14.LockKey.Components;
 
 /// <summary>
 /// Allows, when interacting with keys, to mill different teeth, changing the shape of the key
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14LockEditerComponent : Component
+public sealed partial class CE14LockEditerComponent : Component
 {
     /// <summary>
     /// sound when used
@@ -20,7 +20,7 @@ public sealed partial class CP14LockEditerComponent : Component
 }
 
 //Ed: maybe this component should be removed, and logic be attached to "Screwing" tool?
-//CP14KeyFileComponent too, but with different tool prototype
+//CE14KeyFileComponent too, but with different tool prototype
 
 //    ／l、         meow
 //  （ﾟ､ ｡ ７

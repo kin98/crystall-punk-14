@@ -3,11 +3,11 @@
   parent:
   - BaseMob
   - MobCombat
-  - CP14MobDamageable
-  - CP14MobMagical
-  - CP14MobTemperature
+  - CE14MobDamageable
+  - CE14MobMagical
+  - CE14MobTemperature
   - MobPolymorphable
-  id: CP14BaseMobSpecies
+  id: CE14BaseMobSpecies
   categories: [ ForkFiltered ]
   abstract: true
   components:
@@ -22,7 +22,7 @@
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - shader: StencilClear
-      sprite: _CP14/Mobs/Species/Human/parts.rsi
+      sprite: _CE14/Mobs/Species/Human/parts.rsi
       state: l_leg
     - shader: StencilMask
       map: [ "enum.HumanoidVisualLayers.StencilMask" ]
@@ -51,7 +51,7 @@
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
     - map: [ "vampire_fangs" ]
-      sprite: _CP14/Mobs/Species/Vampire/fangs.rsi
+      sprite: _CE14/Mobs/Species/Vampire/fangs.rsi
       state: human
       visible: false
     - map: [ "mask" ]
@@ -90,7 +90,7 @@
     defaultRotation: 90
     horizontalRotation: 90
   - type: HumanoidAppearance
-    species: CP14Human
+    species: CE14Human
   - type: SlowOnDamage
     speedModifierThresholds:
       60: 0.7
@@ -149,7 +149,7 @@
     - Drowsiness
     - Adrenaline
   - type: Body
-    prototype: CP14Human
+    prototype: CE14Human
     requiredLegs: 2
   - type: Crawler
   - type: Identity
@@ -187,7 +187,7 @@
     messagePerceivedByOthers: hugging-success-generic-others
   - type: NpcFactionMember
     factions:
-    - CP14Adventurers
+    - CE14Adventurers
   - type: Stripping
   - type: Strippable
   - type: UserInterface
@@ -196,8 +196,8 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
-      enum.CP14RememberNameUiKey.Key:
-        type: CP14IdentityRecognitionBoundUserInterface
+      enum.CE14RememberNameUiKey.Key:
+        type: CE14IdentityRecognitionBoundUserInterface
   - type: Puller
   - type: Speech
     speechSounds: Alto
@@ -216,15 +216,15 @@
   - type: Tag
     tags:
     - FootstepSound
-  - type: CP14IgnitionModifier
+  - type: CE14IgnitionModifier
     ignitionTimeModifier: 2.5
   - type: MovementAlwaysTouching
   - type: MovementSpeedModifier
     weightlessAcceleration: 0.8 # Slow swimming
     weightlessFriction: 2
     weightlessModifier: 0.6
-  - type: CP14TradingReputation
-  - type: CP14SkillStorage
+  - type: CE14TradingReputation
+  - type: CE14SkillStorage
     skillPoints:
       Memory:
         max: 5
@@ -237,17 +237,17 @@
     - Electromancy
     - Athletic
     - Craftsmanship
-  - type: CP14VampireEssenceHolder
-  - type: CP14UnknownIdentity
+  - type: CE14VampireEssenceHolder
+  - type: CE14UnknownIdentity
 
 - type: entity
   parent:
   - MobBloodstream
   - MobRespirator
   - MobFlammable
-  - CP14MobStarving
-  - CP14BaseMobSpecies
-  id: CP14BaseMobSpeciesOrganic
+  - CE14MobStarving
+  - CE14BaseMobSpecies
+  id: CE14BaseMobSpeciesOrganic
   save: false
   abstract: true
   components:
@@ -258,7 +258,7 @@
     damageCap: 80
     damage:
       types:
-        CP14ManaDepletion: -0.05
+        CE14ManaDepletion: -0.05
       groups:
         Brute: -0.07
         Burn: -0.05
@@ -286,25 +286,25 @@
     - Adrenaline
   - type: Blindable
   - type: Bloodstream
-    bloodReagent: CP14Blood
+    bloodReagent: CE14Blood
   # Other
   - type: FireVisuals
-    sprite: _CP14/Mobs/Effects/onfire.rsi
+    sprite: _CE14/Mobs/Effects/onfire.rsi
     normalState: Small_burning
     alternateState: Humanoid_burning
 
 - type: entity
   save: false
-  id: CP14BaseSpeciesDummy
+  id: CE14BaseSpeciesDummy
   abstract: true
   components:
   - type: Hands
   - type: Inventory
-    templateId: CP14Human
+    templateId: CE14Human
   - type: InventorySlots
   - type: ContainerContainer
   - type: Icon
-    sprite: _CP14/Mobs/Species/Human/parts.rsi
+    sprite: _CE14/Mobs/Species/Human/parts.rsi
     state: full
   - type: Sprite
     layers:
@@ -317,7 +317,7 @@
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - shader: StencilClear
-      sprite: _CP14/Mobs/Species/Human/parts.rsi
+      sprite: _CE14/Mobs/Species/Human/parts.rsi
       state: l_leg
     - shader: StencilMask
       map: [ "enum.HumanoidVisualLayers.StencilMask" ]
@@ -356,9 +356,9 @@
       visible: false
   - type: Appearance
   - type: HumanoidAppearance
-    species: CP14Human
+    species: CE14Human
   - type: Body
-    prototype: CP14Human
+    prototype: CE14Human
     requiredLegs: 2
   - type: UserInterface
     interfaces:

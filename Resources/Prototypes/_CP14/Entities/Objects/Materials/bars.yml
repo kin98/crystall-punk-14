@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14CopperBar1
+  id: CE14CopperBar1
   parent: BaseItem
   name: copper bar
   suffix: 1
@@ -9,13 +9,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/copper_bar.rsi
+    sprite: _CE14/Objects/Materials/copper_bar.rsi
     layers:
       - state: bar
         map: ["base"]
   - type: Appearance
   - type: Stack
-    stackType: CP14CopperBar
+    stackType: CE14CopperBar
     count: 1
     baseLayer: base
     layerStates:
@@ -25,26 +25,26 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 10
+      CE14Copper: 10
 
 - type: entity
-  id: CP14CopperBar5
-  parent: CP14CopperBar1
+  id: CE14CopperBar5
+  parent: CE14CopperBar1
   suffix: 5
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  id: CP14CopperBar10
-  parent: CP14CopperBar1
+  id: CE14CopperBar10
+  parent: CE14CopperBar1
   suffix: 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14IronBar1
+  id: CE14IronBar1
   parent: BaseItem
   name: iron bar
   suffix: 1
@@ -54,13 +54,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/iron_bar.rsi
+    sprite: _CE14/Objects/Materials/iron_bar.rsi
     layers:
       - state: bar
         map: ["base"]
   - type: Appearance
   - type: Stack
-    stackType: CP14IronBar
+    stackType: CE14IronBar
     count: 1
     baseLayer: base
     layerStates:
@@ -70,26 +70,26 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10
+      CE14Iron: 10
 
 - type: entity
-  id: CP14IronBar5
-  parent: CP14IronBar1
+  id: CE14IronBar5
+  parent: CE14IronBar1
   suffix: 5
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  id: CP14IronBar10
-  parent: CP14IronBar1
+  id: CE14IronBar10
+  parent: CE14IronBar1
   suffix: 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14BrassBar1
+  id: CE14BrassBar1
   parent: BaseItem
   name: brass bar
   suffix: 1
@@ -99,13 +99,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/brass_bar.rsi
+    sprite: _CE14/Objects/Materials/brass_bar.rsi
     layers:
       - state: bar
         map: ["base"]
   - type: Appearance
   - type: Stack
-    stackType: CP14BrassBar
+    stackType: CE14BrassBar
     count: 1
     baseLayer: base
     layerStates:
@@ -115,19 +115,19 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Brass: 10
+      CE14Brass: 10
 
 - type: entity
-  id: CP14BrassBar5
-  parent: CP14BrassBar1
+  id: CE14BrassBar5
+  parent: CE14BrassBar1
   suffix: 5
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  id: CP14BrassBar10
-  parent: CP14BrassBar1
+  id: CE14BrassBar10
+  parent: CE14BrassBar1
   suffix: 10
   components:
   - type: Stack
@@ -135,7 +135,7 @@
 
 
 - type: entity
-  id: CP14GoldBar1
+  id: CE14GoldBar1
   parent: BaseItem
   name: gold bar
   description: A warm to the touch, soft piece of refined gold.
@@ -144,13 +144,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/gold_bar.rsi
+    sprite: _CE14/Objects/Materials/gold_bar.rsi
     layers:
       - state: bar
         map: ["base"]
   - type: Appearance
   - type: Stack
-    stackType: CP14GoldBar
+    stackType: CE14GoldBar
     count: 1
     baseLayer: base
     layerStates:
@@ -160,11 +160,11 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Gold: 10
+      CE14Gold: 10
 
 - type: entity
-  id: CP14GoldBar5
-  parent: CP14GoldBar1
+  id: CE14GoldBar5
+  parent: CE14GoldBar1
   categories: [ DoNotMap ]
   suffix: 5
   components:
@@ -172,8 +172,8 @@
     count: 5
 
 - type: entity
-  id: CP14GoldBar10
-  parent: CP14GoldBar1
+  id: CE14GoldBar10
+  parent: CE14GoldBar1
   categories: [ DoNotMap ]
   suffix: 10
   components:
@@ -181,7 +181,7 @@
     count: 10
 
 - type: entity
-  id: CP14MithrilBar1
+  id: CE14MithrilBar1
   parent: BaseItem
   name: mithril bar
   description: A warm to the touch, soft piece of refined mithril.
@@ -190,13 +190,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/mithril_bar.rsi
+    sprite: _CE14/Objects/Materials/mithril_bar.rsi
     layers:
       - state: bar
         map: ["base"]
   - type: Appearance
   - type: Stack
-    stackType: CP14MithrilBar
+    stackType: CE14MithrilBar
     count: 1
     baseLayer: base
     layerStates:
@@ -206,11 +206,11 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Mithril: 10
+      CE14Mithril: 10
 
 - type: entity
-  id: CP14MithrilBar5
-  parent: CP14MithrilBar1
+  id: CE14MithrilBar5
+  parent: CE14MithrilBar1
   categories: [ DoNotMap ]
   suffix: 5
   components:
@@ -218,8 +218,8 @@
     count: 5
 
 - type: entity
-  id: CP14MithrilBar10
-  parent: CP14MithrilBar1
+  id: CE14MithrilBar10
+  parent: CE14MithrilBar1
   categories: [ DoNotMap ]
   suffix: 10
   components:

@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14WoodLog
+  id: CE14WoodLog
   parent: BaseItem
   name: wooden log
   description: A piece of unprocessed wood. Good material for building, or starting a fire.
@@ -10,7 +10,7 @@
     shape:
     - 0,0,1,2 # 2x3
   - type: Sprite
-    sprite: _CP14/Objects/Materials/wood.rsi
+    sprite: _CE14/Objects/Materials/wood.rsi
     layers:
       - state: log
         map: ["random"]
@@ -22,19 +22,19 @@
           log_3: ""
   - type: Tag
     tags:
-    - CP14FireplaceFuel
+    - CE14FireplaceFuel
     - Wooden
   - type: Flammable
     fireSpread: false
     canResistFire: false
     alwaysCombustible: true
     canExtinguish: true
-    cP14FireplaceFuel: 10
+    CE14FireplaceFuel: 10
     damage:
       types:
         Heat: 1
   - type: Log
-    spawnedPrototype: CP14WoodenPlanks1
+    spawnedPrototype: CE14WoodenPlanks1
     spawnCount: 3
   - type: Appearance
   - type: Damageable
@@ -53,10 +53,10 @@
         acts: [ "Destruction" ]
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 30
+      CE14WoodenPlanks: 30
 
 - type: entity
-  id: CP14WoodenPlanks1
+  id: CE14WoodenPlanks1
   parent: BaseItem
   name: wooden planks
   description: Treated and ready-to-use wood.
@@ -66,26 +66,26 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/wood.rsi
+    sprite: _CE14/Objects/Materials/wood.rsi
     layers:
       - state: planks
         map: ["base"]
   - type: Tag
     tags:
-    - CP14FireplaceFuel
+    - CE14FireplaceFuel
     - Wooden
   - type: Flammable
     fireSpread: false
     canResistFire: false
     alwaysCombustible: true
     canExtinguish: true
-    cP14FireplaceFuel: 8
+    CE14FireplaceFuel: 8
     damage:
       types:
         Heat: 1
   - type: Appearance
   - type: Stack
-    stackType: CP14WoodenPlanks
+    stackType: CE14WoodenPlanks
     count: 1
     baseLayer: base
     layerStates:
@@ -95,7 +95,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 10
+      CE14WoodenPlanks: 10
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Wood
@@ -112,16 +112,16 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14WoodenPlanks10
-  parent: CP14WoodenPlanks1
+  id: CE14WoodenPlanks10
+  parent: CE14WoodenPlanks1
   suffix: 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14WoodenPlanks20
-  parent: CP14WoodenPlanks1
+  id: CE14WoodenPlanks20
+  parent: CE14WoodenPlanks1
   suffix: 20
   components:
   - type: Stack
@@ -130,12 +130,12 @@
 # Lucen
 
 - type: entity
-  id: CP14LucensWoodLog
-  parent: CP14WoodLog
+  id: CE14LucensWoodLog
+  parent: CE14WoodLog
   name: lucens log
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/wood_lucens.rsi
+    sprite: _CE14/Objects/Materials/wood_lucens.rsi
     layers:
       - state: log
         map: ["random"]
@@ -146,25 +146,25 @@
           log_2: ""
           log_3: ""
   - type: Log
-    spawnedPrototype: CP14LucensWoodenPlanks1
+    spawnedPrototype: CE14LucensWoodenPlanks1
     spawnCount: 3
   - type: PhysicalComposition
     materialComposition:
-      CP14LucensWoodenPlanks: 30
+      CE14LucensWoodenPlanks: 30
 
 - type: entity
-  id: CP14LucensWoodenPlanks1
-  parent: CP14WoodenPlanks1
+  id: CE14LucensWoodenPlanks1
+  parent: CE14WoodenPlanks1
   name: lucens planks
   suffix: 1
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/wood_lucens.rsi
+    sprite: _CE14/Objects/Materials/wood_lucens.rsi
     layers:
       - state: planks
         map: ["base"]
   - type: Stack
-    stackType: CP14LucensWoodenPlanks
+    stackType: CE14LucensWoodenPlanks
     count: 1
     baseLayer: base
     layerStates:
@@ -173,19 +173,19 @@
     - planks_3
   - type: PhysicalComposition
     materialComposition:
-      CP14LucensWoodenPlanks: 10
+      CE14LucensWoodenPlanks: 10
 
 - type: entity
-  id: CP14LucensWoodenPlanks10
-  parent: CP14LucensWoodenPlanks1
+  id: CE14LucensWoodenPlanks10
+  parent: CE14LucensWoodenPlanks1
   suffix: 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14LucensWoodenPlanks20
-  parent: CP14LucensWoodenPlanks1
+  id: CE14LucensWoodenPlanks20
+  parent: CE14LucensWoodenPlanks1
   suffix: 20
   components:
   - type: Stack
@@ -194,12 +194,12 @@
 #Birch
 
 - type: entity
-  id: CP14BirchWoodLog
-  parent: CP14WoodLog
+  id: CE14BirchWoodLog
+  parent: CE14WoodLog
   name: birch log
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/wood_birch.rsi
+    sprite: _CE14/Objects/Materials/wood_birch.rsi
     layers:
       - state: log
         map: ["random"]
@@ -210,22 +210,22 @@
           log_2: ""
           log_3: ""
   - type: Log
-    spawnedPrototype: CP14BirchWoodenPlanks1
+    spawnedPrototype: CE14BirchWoodenPlanks1
     spawnCount: 3
 
 - type: entity
-  id: CP14BirchWoodenPlanks1
-  parent: CP14WoodenPlanks1
+  id: CE14BirchWoodenPlanks1
+  parent: CE14WoodenPlanks1
   name: birch planks
   suffix: 1
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/wood_birch.rsi
+    sprite: _CE14/Objects/Materials/wood_birch.rsi
     layers:
       - state: planks
         map: ["base"]
   - type: Stack
-    stackType: CP14BirchWoodenPlanks
+    stackType: CE14BirchWoodenPlanks
     count: 1
     baseLayer: base
     layerStates:
@@ -234,16 +234,16 @@
     - planks_3
 
 - type: entity
-  id: CP14BirchWoodenPlanks10
-  parent: CP14BirchWoodenPlanks1
+  id: CE14BirchWoodenPlanks10
+  parent: CE14BirchWoodenPlanks1
   suffix: 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14BirchWoodenPlanks20
-  parent: CP14BirchWoodenPlanks1
+  id: CE14BirchWoodenPlanks20
+  parent: CE14BirchWoodenPlanks1
   suffix: 20
   components:
   - type: Stack
@@ -252,12 +252,12 @@
 #Spruce
 
 - type: entity
-  id: CP14SpruceWoodLog
-  parent: CP14WoodLog
+  id: CE14SpruceWoodLog
+  parent: CE14WoodLog
   name: spruce log
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/wood_spruce.rsi
+    sprite: _CE14/Objects/Materials/wood_spruce.rsi
     layers:
       - state: log
         map: ["random"]
@@ -268,22 +268,22 @@
           log_2: ""
           log_3: ""
   - type: Log
-    spawnedPrototype: CP14SpruceWoodenPlanks1
+    spawnedPrototype: CE14SpruceWoodenPlanks1
     spawnCount: 3
 
 - type: entity
-  id: CP14SpruceWoodenPlanks1
-  parent: CP14WoodenPlanks1
+  id: CE14SpruceWoodenPlanks1
+  parent: CE14WoodenPlanks1
   name: spruce planks
   suffix: 1
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Materials/wood_spruce.rsi
+    sprite: _CE14/Objects/Materials/wood_spruce.rsi
     layers:
       - state: planks
         map: ["base"]
   - type: Stack
-    stackType: CP14SpruceWoodenPlanks
+    stackType: CE14SpruceWoodenPlanks
     count: 1
     baseLayer: base
     layerStates:
@@ -292,16 +292,16 @@
     - planks_3
 
 - type: entity
-  id: CP14SpruceWoodenPlanks10
-  parent: CP14SpruceWoodenPlanks1
+  id: CE14SpruceWoodenPlanks10
+  parent: CE14SpruceWoodenPlanks1
   suffix: 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14SpruceWoodenPlanks20
-  parent: CP14SpruceWoodenPlanks1
+  id: CE14SpruceWoodenPlanks20
+  parent: CE14SpruceWoodenPlanks1
   suffix: 20
   components:
   - type: Stack

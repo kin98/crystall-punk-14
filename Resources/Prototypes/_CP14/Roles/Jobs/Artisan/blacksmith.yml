@@ -1,22 +1,22 @@
 - type: job
-  id: CP14Blacksmith
-  name: cp14-job-name-blacksmith
-  description: cp14-job-desc-blacksmith
-  playTimeTracker: CP14JobBlacksmith
-  startingGear: CP14BlacksmithGear
-  icon: "CP14JobIconBlacksmith"
-  supervisors: cp14-job-supervisors-command
+  id: CE14Blacksmith
+  name: CE14-job-name-blacksmith
+  description: CE14-job-desc-blacksmith
+  playTimeTracker: CE14JobBlacksmith
+  startingGear: CE14BlacksmithGear
+  icon: "CE14JobIconBlacksmith"
+  supervisors: CE14-job-supervisors-command
   setPreference: false
   canBeAntag: false
   special:
-    - !type:CP14AddTradingReputationSpecial
+    - !type:CE14AddTradingReputationSpecial
       factions:
       - DwarfMining
       - Thaumaturgy
       - HomeDecor
       - Butchers # For leather
       - Tailors
-    - !type:CP14LearnSkillsSpecial
+    - !type:CE14LearnSkillsSpecial
       skills:
       #- CopperMelting
       #- IronMelting
@@ -26,15 +26,15 @@
       - TraderWit # Craftsmen have always taken this perk. The main purpose of craftsmen is trade.
   requirements:
     - !type:DepartmentTimeRequirement
-      department: CP14Artisan
+      department: CE14Artisan
       time: 3600 # 1 hours
 
 - type: startingGear
-  id: CP14BlacksmithGear
+  id: CE14BlacksmithGear
   storage:
     back:
-    - CP14EnergyCrystalMedium
-    - CP14EnergyCrystalMedium
+    - CE14EnergyCrystalMedium
+    - CE14EnergyCrystalMedium
   equipment:
-    belt: CP14WalletFilledTest
-    keys: CP14KeyRingBlacksmith
+    belt: CE14WalletFilledTest
+    keys: CE14KeyRingBlacksmith

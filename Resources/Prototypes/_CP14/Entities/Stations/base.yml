@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseExpedition
+  id: CE14BaseExpedition
   categories: [ HideSpawnMenu ]
   parent:
   - BaseStation
@@ -7,38 +7,38 @@
   - BaseStationJobsSpawning
   - BaseStationAlertLevels
   - BaseStationRecords # Required for lobby manifest + cryo leave
-  - CP14BaseStationCommonObjectives
-  - CP14BaseStationEconomy
-  - CP14BaseStationDemiplanes
-  #- CP14BaseStationGods
+  - CE14BaseStationCommonObjectives
+  - CE14BaseStationEconomy
+  - CE14BaseStationDemiplanes
+  #- CE14BaseStationGods
 
 - type: entity
-  id: CP14BaseStationCommonObjectives
+  id: CE14BaseStationCommonObjectives
   abstract: true
   components:
-    - type: CP14StationCommonObjectives
+    - type: CE14StationCommonObjectives
 
 - type: entity
-  id: CP14BaseStationEconomy
+  id: CE14BaseStationEconomy
   abstract: true
   components:
-    - type: CP14StationEconomy
+    - type: CE14StationEconomy
 
 - type: entity
-  id: CP14BaseStationDemiplanes
+  id: CE14BaseStationDemiplanes
   abstract: true
   components:
-    - type: CP14StationDemiplaneMap
+    - type: CE14StationDemiplaneMap
 
 #- type: entity
-#  id: CP14BaseStationGods
+#  id: CE14BaseStationGods
 #  abstract: true
 #  components:
-#    - type: CP14StationRandomJobs
+#    - type: CE14StationRandomJobs
 #      entries:
 #      - jobs:
-#        - CP14GodMerkas
-#        - CP14GodLumera
+#        - CE14GodMerkas
+#        - CE14GodLumera
 #        count:
 #          min: 2
 #          max: 2

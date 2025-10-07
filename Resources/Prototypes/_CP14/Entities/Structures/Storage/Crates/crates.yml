@@ -1,5 +1,5 @@
 ﻿- type: entity
-  id: CP14BaseCrate
+  id: CE14BaseCrate
   abstract: true
   parent: BaseStructureDynamic
   categories: [ ForkFiltered ]
@@ -46,9 +46,9 @@
         - MachineLayer
 
 - type: entity
-  id: CP14BaseSmallCrate
+  id: CE14BaseSmallCrate
   abstract: true
-  parent: CP14BaseCrate
+  parent: CE14BaseCrate
   components:
   - type: Fixtures
     fixtures:
@@ -67,18 +67,18 @@
     maxItemSize: Normal
 
 - type: entity
-  id: CP14LargeWoodenCrate
+  id: CE14LargeWoodenCrate
   name: large wooden crate
   description: Solid wooden crate.
   parent:
-  - CP14BaseCrate
-  - CP14BaseFlammable
+  - CE14BaseCrate
+  - CE14BaseFlammable
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Crates/large_wooden_crate.rsi
+    sprite: _CE14/Structures/Storage/Crates/large_wooden_crate.rsi
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -90,28 +90,28 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14LargeWoodenCrate
-    node: CP14LargeWoodenCrate
+    graph: CE14LargeWoodenCrate
+    node: CE14LargeWoodenCrate
 
 - type: entity
-  id: CP14SmallWoodenCrate
+  id: CE14SmallWoodenCrate
   name: small wooden crate
   description: Solid wooden crate.
   parent:
-  - CP14BaseSmallCrate
-  - CP14BaseFlammable
+  - CE14BaseSmallCrate
+  - CE14BaseFlammable
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Crates/small_wooden_crate.rsi
+    sprite: _CE14/Structures/Storage/Crates/small_wooden_crate.rsi
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -123,11 +123,11 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14SmallWoodenCrate
-    node: CP14SmallWoodenCrate
+    graph: CE14SmallWoodenCrate
+    node: CE14SmallWoodenCrate

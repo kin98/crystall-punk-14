@@ -1,14 +1,14 @@
-using Content.Shared._CP14.MagicEnergy;
-using Content.Shared._CP14.MagicEnergy.Components;
+using Content.Shared._CE14.MagicEnergy;
+using Content.Shared._CE14.MagicEnergy.Components;
 using Content.Shared.Cargo;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.MagicEnergy;
+namespace Content.Server._CE14.MagicEnergy;
 
-public sealed partial class CP14MagicEnergySystem : CP14SharedMagicEnergySystem
+public sealed partial class CE14MagicEnergySystem : CE14SharedMagicEnergySystem
 {
     [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly CP14MagicEnergyCrystalSlotSystem _magicSlot = default!;
+    [Dependency] private readonly CE14MagicEnergyCrystalSlotSystem _magicSlot = default!;
 
     public override void Initialize()
     {
@@ -17,7 +17,7 @@ public sealed partial class CP14MagicEnergySystem : CP14SharedMagicEnergySystem
         InitializeDraw();
         InitializePortRelay();
 
-        SubscribeLocalEvent<CP14MagicEnergyContainerComponent, PriceCalculationEvent>(OnMagicEnergyPriceCalculation);
+        SubscribeLocalEvent<CE14MagicEnergyContainerComponent, PriceCalculationEvent>(OnMagicEnergyPriceCalculation);
     }
 
     public override void Update(float frameTime)
@@ -28,7 +28,7 @@ public sealed partial class CP14MagicEnergySystem : CP14SharedMagicEnergySystem
         UpdatePortRelay(frameTime);
     }
 
-    private void OnMagicEnergyPriceCalculation(Entity<CP14MagicEnergyContainerComponent> ent, ref PriceCalculationEvent args)
+    private void OnMagicEnergyPriceCalculation(Entity<CE14MagicEnergyContainerComponent> ent, ref PriceCalculationEvent args)
     {
         args.Price += (double)(ent.Comp.Energy * 0.1f);
     }

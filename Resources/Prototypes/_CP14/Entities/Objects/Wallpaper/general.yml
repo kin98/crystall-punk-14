@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseWallpaper
+  id: CE14BaseWallpaper
   abstract: true
   parent: BaseItem
   description: Thin paper wallpaper. You can glue them on the walls from different sides, or peel them off with any sharp object.
@@ -8,111 +8,111 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
   - type: Stack
     count: 30
 
 - type: entity
-  id: CP14WallpaperBlack
-  parent: CP14BaseWallpaper
+  id: CE14WallpaperBlack
+  parent: CE14BaseWallpaper
   name: wallpaper "inkwell black"
   components:
   - type: Sprite
     state: black
-  - type: CP14Wallpaper
-    rsiPath: _CP14/Structures/Wallpaper/wallpaper_black.rsi
+  - type: CE14Wallpaper
+    rsiPath: _CE14/Structures/Wallpaper/wallpaper_black.rsi
   - type: Stack
-    stackType: CP14WallpaperBlack
+    stackType: CE14WallpaperBlack
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 5
+      CE14Cloth: 5
 
 - type: entity
-  id: CP14WallpaperGreen
-  parent: CP14BaseWallpaper
+  id: CE14WallpaperGreen
+  parent: CE14BaseWallpaper
   name: wallpaper "green orthogonality"
   components:
   - type: Sprite
     state: green
-  - type: CP14Wallpaper
-    rsiPath: _CP14/Structures/Wallpaper/wallpaper_green.rsi
+  - type: CE14Wallpaper
+    rsiPath: _CE14/Structures/Wallpaper/wallpaper_green.rsi
   - type: Stack
-    stackType: CP14WallpaperGreen
+    stackType: CE14WallpaperGreen
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 5
+      CE14Cloth: 5
 
 - type: entity
-  id: CP14WallpaperPurple
-  parent: CP14BaseWallpaper
+  id: CE14WallpaperPurple
+  parent: CE14BaseWallpaper
   name: wallpaper "purple glory"
   components:
   - type: Sprite
     state: purple
-  - type: CP14Wallpaper
-    rsiPath: _CP14/Structures/Wallpaper/wallpaper_purple.rsi
+  - type: CE14Wallpaper
+    rsiPath: _CE14/Structures/Wallpaper/wallpaper_purple.rsi
   - type: Stack
-    stackType: CP14WallpaperPurple
+    stackType: CE14WallpaperPurple
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 5
+      CE14Cloth: 5
 
 - type: entity
-  id: CP14WallpaperRed
-  parent: CP14BaseWallpaper
+  id: CE14WallpaperRed
+  parent: CE14BaseWallpaper
   name: wallpaper "burgundy"
   components:
   - type: Sprite
     state: red
-  - type: CP14Wallpaper
-    rsiPath: _CP14/Structures/Wallpaper/wallpaper_red.rsi
+  - type: CE14Wallpaper
+    rsiPath: _CE14/Structures/Wallpaper/wallpaper_red.rsi
   - type: Stack
-    stackType: CP14WallpaperRed
+    stackType: CE14WallpaperRed
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 5
+      CE14Cloth: 5
 
 - type: entity
-  id: CP14WallpaperWhite
-  parent: CP14BaseWallpaper
+  id: CE14WallpaperWhite
+  parent: CE14BaseWallpaper
   name: wallpaper "flowers on white"
   components:
   - type: Sprite
     state: white
-  - type: CP14Wallpaper
-    rsiPath: _CP14/Structures/Wallpaper/wallpaper_white.rsi
+  - type: CE14Wallpaper
+    rsiPath: _CE14/Structures/Wallpaper/wallpaper_white.rsi
   - type: Stack
-    stackType: CP14WallpaperWhite
+    stackType: CE14WallpaperWhite
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 5
+      CE14Cloth: 5
 
 - type: entity
-  id: CP14WallpaperWhite2
-  parent: CP14BaseWallpaper
+  id: CE14WallpaperWhite2
+  parent: CE14BaseWallpaper
   name: wallpaper "pure white"
   components:
   - type: Sprite
     state: white2
-  - type: CP14Wallpaper
-    rsiPath: _CP14/Structures/Wallpaper/wallpaper_white2.rsi
+  - type: CE14Wallpaper
+    rsiPath: _CE14/Structures/Wallpaper/wallpaper_white2.rsi
   - type: Stack
-    stackType: CP14WallpaperWhite2
+    stackType: CE14WallpaperWhite2
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 5
+      CE14Cloth: 5
 
 - type: entity
-  id: CP14WallpaperYellow
-  parent: CP14BaseWallpaper
+  id: CE14WallpaperYellow
+  parent: CE14BaseWallpaper
   name: wallpaper "solar rhythm"
   components:
   - type: Sprite
     state: yellow
-  - type: CP14Wallpaper
-    rsiPath: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+  - type: CE14Wallpaper
+    rsiPath: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
   - type: Stack
-    stackType: CP14WallpaperYellow
+    stackType: CE14WallpaperYellow
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 5
+      CE14Cloth: 5

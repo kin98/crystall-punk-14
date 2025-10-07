@@ -3,17 +3,17 @@ using Content.Shared.Destructible.Thresholds;
 using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.RandomJobs;
+namespace Content.Server._CE14.RandomJobs;
 
-[RegisterComponent, Access(typeof(CP14StationRandomJobsSystem))]
-public sealed partial class CP14StationRandomJobsComponent : Component
+[RegisterComponent, Access(typeof(CE14StationRandomJobsSystem))]
+public sealed partial class CE14StationRandomJobsComponent : Component
 {
     [DataField]
-    public List<CP14RandomJobEntry> Entries = new();
+    public List<CE14RandomJobEntry> Entries = new();
 }
 
 [Serializable, DataDefinition]
-public sealed partial class CP14RandomJobEntry
+public sealed partial class CE14RandomJobEntry
 {
     [DataField(required: true)]
     public List<ProtoId<JobPrototype>> Jobs = new();

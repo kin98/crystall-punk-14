@@ -1,9 +1,9 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CP14.WeatherEffect.Effects;
+namespace Content.Shared._CE14.WeatherEffect.Effects;
 
-public sealed partial class SpawnEntityOnTop : CP14WeatherEffect
+public sealed partial class SpawnEntityOnTop : CE14WeatherEffect
 {
     [DataField(required: true)]
     public EntProtoId Entity;

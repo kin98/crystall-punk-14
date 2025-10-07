@@ -1,23 +1,23 @@
 - type: entity
-  id: CP14ActionSpellVampireHypnosys
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellVampireHypnosys
+  parent: CE14ActionSpellBase
   name: Hypnosys
   description: You focus on the target, mesmerizing and lulling it to sleep.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.4
-  - type: CP14MagicEffectVampire
-  - type: CP14ActionManaCost
+  - type: CE14MagicEffectVampire
+  - type: CE14ActionManaCost
     manaCost: 5
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneVampireHypnosis
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneVampireHypnosis
   - type: DoAfterArgs
     delay: 3
     breakOnMove: true
   - type: Action
     useDelay: 120
     icon:
-      sprite: _CP14/Actions/Spells/vampire.rsi
+      sprite: _CE14/Actions/Spells/vampire.rsi
       state: blood_moon
   - type: TargetAction
     range: 3
@@ -26,22 +26,22 @@
     whitelist:
       components:
       - MobState
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectVampireHypnosis
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectVampireHypnosis
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:ModifyStatusEffect
-          effectProto: CP14StatusEffectVampireForceSleep
+          effectProto: CE14StatusEffectVampireForceSleep
           type: Add
           time: 4
           refresh: true
 
 - type: entity
-  id: CP14RuneVampireHypnosis
-  parent: CP14BaseMagicRune
+  id: CE14RuneVampireHypnosis
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   components:
   - type: PointLight
@@ -53,8 +53,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectVampireHypnosis
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectVampireHypnosis
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:

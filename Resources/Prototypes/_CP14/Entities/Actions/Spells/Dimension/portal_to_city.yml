@@ -1,16 +1,16 @@
 - type: entity
-  id: CP14ActionSpellPortalToCity
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellPortalToCity
+  parent: CE14ActionSpellBase
   name: Portal to city
   description: You open a portal leading to a city that will last for one minute.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.5
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 30
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14ImpactEffectShadowStep
-  - type: CP14ActionFreeHandsRequired
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14ImpactEffectShadowStep
+  - type: CE14ActionFreeHandsRequired
   - type: DoAfterArgs
     breakOnHandChange: false
     breakOnMove: true
@@ -18,24 +18,24 @@
   - type: Action
     useDelay: 30
     icon:
-      sprite: _CP14/Actions/Spells/dimension.rsi
+      sprite: _CE14/Actions/Spells/dimension.rsi
       state: demi_arrow
   - type: TargetAction
     range: 3
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectShadowStep
+        - CE14ImpactEffectShadowStep
       effects:
-      - !type:CP14SpellTeleportToCity
+      - !type:CE14SpellTeleportToCity
 
 - type: entity
-  parent: CP14BaseSpellScrollDimension
-  id: CP14BaseSpellScrollPortalToCity
+  parent: CE14BaseSpellScrollDimension
+  id: CE14BaseSpellScrollPortalToCity
   name: city portal spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellPortalToCity
+    - CE14ActionSpellPortalToCity

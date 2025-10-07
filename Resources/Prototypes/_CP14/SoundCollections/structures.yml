@@ -1,5 +1,5 @@
 - type: soundCollection
-  id: CP14Doorknob
+  id: CE14Doorknob
   files:
-  - /Audio/_CP14/Structures/doorknob_1.ogg
-  - /Audio/_CP14/Structures/doorknob_2.ogg
+  - /Audio/_CE14/Structures/doorknob_1.ogg
+  - /Audio/_CE14/Structures/doorknob_2.ogg

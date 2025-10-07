@@ -7,15 +7,15 @@ using System.Linq;
 using System.Numerics;
 using Content.Server.Nutrition.Components;
 using Content.Server.Temperature.Systems;
-using Content.Shared._CP14.Cooking;
-using Content.Shared._CP14.Cooking.Components;
-using Content.Shared._CP14.Temperature;
+using Content.Shared._CE14.Cooking;
+using Content.Shared._CE14.Cooking.Components;
+using Content.Shared._CE14.Temperature;
 using Content.Shared.Chemistry.EntitySystems;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.Cooking;
+namespace Content.Server._CE14.Cooking;
 
-public sealed class CP14CookingSystem : CP14SharedCookingSystem
+public sealed class CE14CookingSystem : CE14SharedCookingSystem
 {
     [Dependency] private readonly TemperatureSystem _temperature = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -24,10 +24,10 @@ public sealed class CP14CookingSystem : CP14SharedCookingSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14FoodHolderComponent, SolutionContainerChangedEvent>(OnHolderChanged);
+        SubscribeLocalEvent<CE14FoodHolderComponent, SolutionContainerChangedEvent>(OnHolderChanged);
     }
 
-    protected override bool TryTransferFood(Entity<CP14FoodHolderComponent> target, Entity<CP14FoodHolderComponent> source)
+    protected override bool TryTransferFood(Entity<CE14FoodHolderComponent> target, Entity<CE14FoodHolderComponent> source)
     {
         if (base.TryTransferFood(target, source))
         {
@@ -43,7 +43,7 @@ public sealed class CP14CookingSystem : CP14SharedCookingSystem
         return true;
     }
 
-    private void OnHolderChanged(Entity<CP14FoodHolderComponent> ent, ref SolutionContainerChangedEvent args)
+    private void OnHolderChanged(Entity<CE14FoodHolderComponent> ent, ref SolutionContainerChangedEvent args)
     {
         if (args.Solution.Volume != 0)
             return;
@@ -52,7 +52,7 @@ public sealed class CP14CookingSystem : CP14SharedCookingSystem
         Dirty(ent);
     }
 
-    protected override void OnCookBurned(Entity<CP14FoodCookerComponent> ent, ref CP14BurningDoAfter args)
+    protected override void OnCookBurned(Entity<CE14FoodCookerComponent> ent, ref CE14BurningDoAfter args)
     {
         if (args.Cancelled || args.Handled)
             return;
@@ -63,7 +63,7 @@ public sealed class CP14CookingSystem : CP14SharedCookingSystem
             Spawn(ent.Comp.BurntAdditionalSpawn, Transform(ent).Coordinates);
     }
 
-    protected override void UpdateFoodDataVisuals(Entity<CP14FoodHolderComponent> ent, CP14FoodData data, bool rename = true)
+    protected override void UpdateFoodDataVisuals(Entity<CE14FoodHolderComponent> ent, CE14FoodData data, bool rename = true)
     {
         base.UpdateFoodDataVisuals(ent, data, rename);
 
@@ -77,7 +77,7 @@ public sealed class CP14CookingSystem : CP14SharedCookingSystem
         sliceable.TotalCount = ent.Comp.FoodData.SliceCount;
     }
 
-    protected override void OnCookFinished(Entity<CP14FoodCookerComponent> ent, ref CP14CookingDoAfter args)
+    protected override void OnCookFinished(Entity<CE14FoodCookerComponent> ent, ref CE14CookingDoAfter args)
     {
         if (args.Cancelled || args.Handled)
             return;
@@ -88,7 +88,7 @@ public sealed class CP14CookingSystem : CP14SharedCookingSystem
         base.OnCookFinished(ent, ref args);
     }
 
-    private void TryTransformAll(Entity<CP14FoodCookerComponent> ent)
+    private void TryTransformAll(Entity<CE14FoodCookerComponent> ent)
     {
         if (!_container.TryGetContainer(ent, ent.Comp.ContainerId, out var container))
             return;
@@ -97,7 +97,7 @@ public sealed class CP14CookingSystem : CP14SharedCookingSystem
 
         foreach (var contained in containedEntities)
         {
-            if (!TryComp<CP14TemperatureTransformationComponent>(contained, out var transformable))
+            if (!TryComp<CE14TemperatureTransformationComponent>(contained, out var transformable))
                 continue;
 
             if (!transformable.AutoTransformOnCooked)

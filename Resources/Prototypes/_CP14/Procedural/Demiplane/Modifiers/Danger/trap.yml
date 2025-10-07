@@ -1,4 +1,4 @@
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: IceTrapInvisible
   levels:
     min: 3
@@ -6,15 +6,15 @@
   categories:
     Danger: 0.1
   blacklistTags:
-  - CP14DemiplaneHot
+  - CE14DemiplaneHot
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14SpawnMagicIceTrapInvisible
+    - !type:CE14OreDunGen
+      entity: CE14SpawnMagicIceTrapInvisible
       count: 5
       minGroupSize: 1
       maxGroupSize: 1
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: IceTrapPermanent
   levels:
     min: 3
@@ -22,15 +22,15 @@
   categories:
     Danger: 0.1
   blacklistTags:
-  - CP14DemiplaneHot
+  - CE14DemiplaneHot
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14SpawnMagicIceTrapPermanent
+    - !type:CE14OreDunGen
+      entity: CE14SpawnMagicIceTrapPermanent
       count: 10
       minGroupSize: 1
       maxGroupSize: 1
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: FireTrapPermanent
   levels:
     min: 5
@@ -38,15 +38,15 @@
   categories:
     Danger: 0.15
   blacklistTags:
-  - CP14DemiplaneCold
+  - CE14DemiplaneCold
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14SpawnMagicFireTrapPermanent
+    - !type:CE14OreDunGen
+      entity: CE14SpawnMagicFireTrapPermanent
       count: 6
       minGroupSize: 1
       maxGroupSize: 1
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: ElectricTrapInvisible
   levels:
     min: 2
@@ -54,13 +54,13 @@
   categories:
     Danger: 0.1
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14SpawnMagicElectricTrapInvisible
+    - !type:CE14OreDunGen
+      entity: CE14SpawnMagicElectricTrapInvisible
       count: 5
       minGroupSize: 1
       maxGroupSize: 1
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: ElectricTrapPermanent
   levels:
     min: 2
@@ -68,8 +68,8 @@
   categories:
     Danger: 0.1
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14SpawnMagicElectricTrapPermanent
+    - !type:CE14OreDunGen
+      entity: CE14SpawnMagicElectricTrapPermanent
       count: 10
       minGroupSize: 1
       maxGroupSize: 1

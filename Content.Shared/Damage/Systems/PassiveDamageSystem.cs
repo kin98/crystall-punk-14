@@ -11,13 +11,13 @@ public sealed class PassiveDamageSystem : EntitySystem
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
-    private EntityQuery<MobStateComponent> _mobStateQuery; //CP14
+    private EntityQuery<MobStateComponent> _mobStateQuery; //CE14
 
     public override void Initialize()
     {
         base.Initialize();
 
-        _mobStateQuery = GetEntityQuery<MobStateComponent>(); //CP14
+        _mobStateQuery = GetEntityQuery<MobStateComponent>(); //CE14
 
         SubscribeLocalEvent<PassiveDamageComponent, MapInitEvent>(OnPendingMapInit);
     }
@@ -47,7 +47,7 @@ public sealed class PassiveDamageSystem : EntitySystem
             // Set the next time they can take damage
             comp.NextDamage = curTime + TimeSpan.FromSeconds(1f);
 
-            //CP14 logic replacement
+            //CE14 logic replacement
             //
             //// Damage them
             //foreach (var allowedState in comp.AllowedStates)
@@ -67,7 +67,7 @@ public sealed class PassiveDamageSystem : EntitySystem
             {
                 _damageable.TryChangeDamage(uid, comp.Damage, true, false, damage);
             }
-            //CP14 logic replacement end
+            //CE14 logic replacement end
         }
     }
 }

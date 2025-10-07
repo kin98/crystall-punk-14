@@ -2,34 +2,34 @@
 # Cloak
 
 - type: loadoutGroup
-  id: CP14InvestigatorCloak
-  name: cp14-loadout-investigator-cloak
+  id: CE14InvestigatorCloak
+  name: CE14-loadout-investigator-cloak
   loadouts:
-  - CP14ClothingCloakGuardInvestigator
+  - CE14ClothingCloakGuardInvestigator
 
 - type: loadout
-  id: CP14ClothingCloakGuardInvestigator
+  id: CE14ClothingCloakGuardInvestigator
   equipment:
-    cloak: CP14ClothingCloakGuardInvestigator
+    cloak: CE14ClothingCloakGuardInvestigator
 
 
 # Head
 
 - type: loadoutGroup
-  id: CP14InvestigatorHead
-  name: cp14-loadout-investigator-head
+  id: CE14InvestigatorHead
+  name: CE14-loadout-investigator-head
   minLimit: 1
   loadouts:
-  - CP14ClothingHeadGuardInvestigatorHelmet
-  - CP14ClothingHeadGuardFedora
-  - CP14ClothingHeadGuardTriangular
+  - CE14ClothingHeadGuardInvestigatorHelmet
+  - CE14ClothingHeadGuardFedora
+  - CE14ClothingHeadGuardTriangular
 
 - type: loadout
-  id: CP14ClothingHeadGuardTriangular
+  id: CE14ClothingHeadGuardTriangular
   equipment:
-    head: CP14ClothingHeadGuardTriangular
+    head: CE14ClothingHeadGuardTriangular
 
 - type: loadout
-  id: CP14ClothingHeadGuardInvestigatorHelmet
+  id: CE14ClothingHeadGuardInvestigatorHelmet
   equipment:
-    head: CP14ClothingHeadGuardInvestigatorHelmet
+    head: CE14ClothingHeadGuardInvestigatorHelmet

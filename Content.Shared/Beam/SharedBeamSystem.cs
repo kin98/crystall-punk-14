@@ -2,7 +2,7 @@
 
 public abstract class SharedBeamSystem : EntitySystem
 {
-    //CP14 Shared ability to create beams.
+    //CE14 Shared ability to create beams.
     public virtual void TryCreateBeam(EntityUid user,
         EntityUid target,
         string bodyPrototype,

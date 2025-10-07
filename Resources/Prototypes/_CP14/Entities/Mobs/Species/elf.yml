@@ -1,190 +1,190 @@
 - type: entity
-  parent: CP14BaseMobSpeciesOrganic
-  id: CP14BaseMobElf
+  parent: CE14BaseMobSpeciesOrganic
+  id: CE14BaseMobElf
   name: Mr. Elf
   abstract: true
   components:
   - type: HumanoidAppearance
-    species: CP14Elf
+    species: CE14Elf
   - type: PassiveDamage
     allowedStates:
     - Alive
     damageCap: 80
     damage:
       types:
-        CP14ManaDepletion: -0.1
+        CE14ManaDepletion: -0.1
       groups:
         Brute: -0.07
         Burn: -0.05
         Toxin: -0.03
   - type: Icon
-    sprite: _CP14/Mobs/Species/Elf/parts.rsi
+    sprite: _CE14/Mobs/Species/Elf/parts.rsi
     state: full
   - type: Body
-    prototype: CP14Elf
+    prototype: CE14Elf
     requiredLegs: 2
   - type: Bloodstream
-    bloodReagent: CP14BloodElf
-  - type: CP14MagicEnergyContainer #Increased mana container
+    bloodReagent: CE14BloodElf
+  - type: CE14MagicEnergyContainer #Increased mana container
     maxEnergy: 200
     energy: 200
-  - type: CP14MagicEnergyDraw #No mana regeneration :3
+  - type: CE14MagicEnergyDraw #No mana regeneration :3
     energy: 0
     delay: 3
-  - type: CP14SkillStorage #Innate metamagic + trance
+  - type: CE14SkillStorage #Innate metamagic + trance
     freeLearnedSkills:
     - MetamagicT1
     - MetamagicT2
-    - CP14ActionSpellManaTrance
-  - type: CP14AuraImprint
+    - CE14ActionSpellManaTrance
+  - type: CE14AuraImprint
     imprintLength: 10 #Long imprint hehe
     imprintColor: "#42aaf5"
   - type: Inventory
-    templateId: CP14Human
+    templateId: CE14Human
     displacements:
       outerClothing:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       cloak:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       gloves:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_pants
       shirt:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Elf/displacement.rsi
+            sprite: _CE14/Mobs/Species/Elf/displacement.rsi
             state: male_shirt
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: female_neck
     femaleDisplacements:
       outerClothing:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       cloak:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       gloves:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_pants
       shirt:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Elf/displacement.rsi
+            sprite: _CE14/Mobs/Species/Elf/displacement.rsi
             state: female_shirt
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: female_neck
 
 - type: entity
-  parent: CP14BaseSpeciesDummy
-  id: CP14MobElfDummy
+  parent: CE14BaseSpeciesDummy
+  id: CE14MobElfDummy
   categories: [ HideSpawnMenu ]
   components:
   - type: HumanoidAppearance
-    species: CP14Elf
+    species: CE14Elf
   - type: Inventory
-    templateId: CP14Human
+    templateId: CE14Human
     displacements:
       outerClothing:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       cloak:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       gloves:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_pants
       shirt:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Elf/displacement.rsi
+            sprite: _CE14/Mobs/Species/Elf/displacement.rsi
             state: male_shirt
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: female_neck
     femaleDisplacements:
       outerClothing:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       cloak:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       gloves:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_pants
       shirt:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Elf/displacement.rsi
+            sprite: _CE14/Mobs/Species/Elf/displacement.rsi
             state: female_shirt
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: female_neck
 

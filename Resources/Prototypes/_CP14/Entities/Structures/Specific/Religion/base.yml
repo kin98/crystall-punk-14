@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseAltar
+  id: CE14BaseAltar
   parent: BaseStructure
   abstract: true
   name: altar
@@ -20,7 +20,7 @@
         - MachineMask
         layer:
         - MachineLayer
-  - type: CP14ReligionAltar
+  - type: CE14ReligionAltar
   - type: ActiveListener
     range: 1
   - type: InteractionOutline
@@ -29,15 +29,15 @@
     damageModifierSet: Rock
   - type: GuideHelp
     guides:
-    - CP14_RU_Patrons
-    - CP14_EN_Patrons
+    - CE14_RU_Patrons
+    - CE14_EN_Patrons
 
 - type: entity
-  parent: CP14BaseAltar
-  id: CP14BaseAltarPrimordial
+  parent: CE14BaseAltar
+  id: CE14BaseAltarPrimordial
   abstract: true
   components:
-  - type: CP14ReligionAltar
+  - type: CE14ReligionAltar
     canBeConverted: false
   - type: SpawnPoint
     spawn_type: Unset

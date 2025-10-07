@@ -1,21 +1,21 @@
 ﻿- type: entity
-  id: CP14TorsoSkeleton
-  parent: CP14TorsoHuman
+  id: CE14TorsoSkeleton
+  parent: CE14TorsoHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     state: torso
 
 - type: entity
-  id: CP14HeadSkeleton
-  parent: CP14HeadHuman
+  id: CE14HeadSkeleton
+  parent: CE14HeadHuman
   categories: [ ForkFiltered ]
   name: skull
   description: Alas poor Yorick...
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
     noRot: true
     state: head
   - type: Gibbable
@@ -51,79 +51,79 @@
         acts: ["Destruction"]
 
 - type: entity
-  id: CP14LeftArmSkeleton
-  parent: CP14LeftArmHuman
+  id: CE14LeftArmSkeleton
+  parent: CE14LeftArmHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
 
 - type: entity
-  id: CP14RightArmSkeleton
-  parent: CP14RightArmHuman
+  id: CE14RightArmSkeleton
+  parent: CE14RightArmHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
 
 - type: entity
-  id: CP14LeftHandSkeleton
-  parent: CP14LeftHandHuman
+  id: CE14LeftHandSkeleton
+  parent: CE14LeftHandHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
 
 - type: entity
-  id: CP14RightHandSkeleton
-  parent: CP14RightHandHuman
+  id: CE14RightHandSkeleton
+  parent: CE14RightHandHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
 
 - type: entity
-  id: CP14LeftLegSkeleton
-  parent: CP14LeftLegHuman
+  id: CE14LeftLegSkeleton
+  parent: CE14LeftLegHuman
   categories: [ ForkFiltered ]
   components:
     - type: Sprite
-      sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+      sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
       state: "l_leg"
     - type: Icon
-      sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+      sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
       state: "l_leg"
     - type: BodyPart
       partType: Leg
       symmetry: Left
 
 - type: entity
-  id: CP14RightLegSkeleton
-  parent: CP14RightLegHuman
+  id: CE14RightLegSkeleton
+  parent: CE14RightLegHuman
   categories: [ ForkFiltered ]
   components:
     - type: Sprite
-      sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+      sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
       state: "r_leg"
     - type: Icon
-      sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+      sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
       state: "r_leg"
     - type: BodyPart
       partType: Leg
       symmetry: Right
 
 - type: entity
-  id: CP14LeftFootSkeleton
-  parent: CP14LeftFootHuman
+  id: CE14LeftFootSkeleton
+  parent: CE14LeftFootHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
 
 - type: entity
-  id: CP14RightFootSkeleton
-  parent: CP14RightFootHuman
+  id: CE14RightFootSkeleton
+  parent: CE14RightFootHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+    sprite: _CE14/Mobs/Species/Skeleton/parts.rsi

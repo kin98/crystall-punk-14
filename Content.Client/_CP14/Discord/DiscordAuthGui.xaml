@@ -7,9 +7,9 @@
         <PanelContainer StyleClasses="AngleRect" />
         <BoxContainer Orientation="Vertical">
             <BoxContainer Orientation="Horizontal">
-                <Label Margin="8 0 0 0" Text="{Loc 'cp14-discord-auth-title'}"
+                <Label Margin="8 0 0 0" Text="{Loc 'CE14-discord-auth-title'}"
                        StyleClasses="LabelHeading" VAlign="Center" />
-                <Button Name="QuitButton" Text="{Loc 'cp14-discord-auth-quit-btn'}"
+                <Button Name="QuitButton" Text="{Loc 'CE14-discord-auth-quit-btn'}"
                         HorizontalAlignment="Right" HorizontalExpand="True" />
             </BoxContainer>
             <controls:HighDivider />
@@ -21,8 +21,8 @@
                 <LineEdit Editable="False" Name="DLinkEdit" HorizontalExpand="True" />
             </BoxContainer>
             <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
-                <Button Name="AuthorizeButton" Text="{Loc 'cp14-discord-auth-text'}" HorizontalExpand="True" StyleClasses="OpenRight" />
-                <Button Name="DiscordButton" Text="{Loc 'cp14-discord-auth-browser-btn'}" HorizontalExpand="True" StyleClasses="OpenRight" />
+                <Button Name="AuthorizeButton" Text="{Loc 'CE14-discord-auth-text'}" HorizontalExpand="True" StyleClasses="OpenRight" />
+                <Button Name="DiscordButton" Text="{Loc 'CE14-discord-auth-browser-btn'}" HorizontalExpand="True" StyleClasses="OpenRight" />
             </BoxContainer>
         </BoxContainer>
     </Control>

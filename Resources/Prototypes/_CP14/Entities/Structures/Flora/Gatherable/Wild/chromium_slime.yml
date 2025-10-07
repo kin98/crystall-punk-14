@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14GatherableChromiumSlime
-  parent: CP14GatherableBase
+  id: CE14GatherableChromiumSlime
+  parent: CE14GatherableBase
   name: chromium slime
   description: This rare thick substance can be found in a stream of water as if it has a mind of its own. When trying to change the slime itself - the slime changes the reagent it interacts with.
   suffix: Gatherable
   components:
   - type: Sprite
     drawdepth: FloorTiles
-    sprite: _CP14/Structures/Flora/Wild/chromium_slime.rsi
+    sprite: _CE14/Structures/Flora/Wild/chromium_slime.rsi
     layers:
       - state: world1
         map: ["random"]
@@ -17,12 +17,12 @@
         world1: ""
         world2: ""
         world3: ""
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     gatherSound:
       collection: FootstepSlime
     deleteAfterHarvest: true
     loot:
       All: !type:GroupSelector
         children:
-        - id: CP14ChromiumSlime
+        - id: CE14ChromiumSlime
 

@@ -1,41 +1,41 @@
 - type: entity
-  id: CP14ActionSpellFireTrap
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellFireTrap
+  parent: CE14ActionSpellBase
   name: Fire trap
   description: Creates a fire trap at the selected location. Don't forget to recharge it with mana.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.9
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 40
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Signum ignis..."
     endSpeech: "hunc locum custodi"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneFireTrap
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneFireTrap
   - type: Action
     useDelay: 4
     icon:
-      sprite: _CP14/Actions/Spells/fire.rsi
+      sprite: _CE14/Actions/Spells/fire.rsi
       state: fire_trap
   - type: TargetAction
     range: 3
   - type: DoAfterArgs
     delay: 2
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectFireTrap
+        - CE14ImpactEffectFireTrap
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14SpawnMagicFireTrap
+        - CE14SpawnMagicFireTrap
 
 - type: entity
-  id: CP14RuneFireTrap
-  parent: CP14BaseMagicTrap
+  id: CE14RuneFireTrap
+  parent: CE14BaseMagicTrap
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -51,8 +51,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectFireTrap
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectFireTrap
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -63,8 +63,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14SpawnMagicFireTrap
-  parent: CP14BaseMagicTrap
+  id: CE14SpawnMagicFireTrap
+  parent: CE14BaseMagicTrap
   name: fire trap
   description: A rune of fire drawn on the ground using magic — it's best not to step on it.
   categories: [ ForkFiltered ]
@@ -88,15 +88,15 @@
           - MobMask
         layer:
           - SlipLayer
-  - type: CP14MagicEnergyExaminable
-  - type: CP14MagicEnergyContainer
+  - type: CE14MagicEnergyExaminable
+  - type: CE14MagicEnergyContainer
     maxEnergy: 42
     energy: 42
     unsafeSupport: true
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: -0.5
     delay: 5
-  - type: CP14MagicUnsafeDamage
+  - type: CE14MagicUnsafeDamage
   - type: Destructible
     thresholds:
       - trigger:
@@ -121,30 +121,30 @@
   - type: DeleteOnTrigger
 
 - type: entity
-  parent: CP14BaseSpellScrollFire
-  id: CP14SpellScrollFireTrap
+  parent: CE14BaseSpellScrollFire
+  id: CE14SpellScrollFireTrap
   name: fire trap spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellFireTrap
+    - CE14ActionSpellFireTrap
 
 - type: entity
-  parent: CP14SpawnMagicFireTrap
-  id: CP14SpawnMagicFireTrapInvisible
+  parent: CE14SpawnMagicFireTrap
+  id: CE14SpawnMagicFireTrapInvisible
   suffix: Invisible. Permanent. Admin
   components:
   - type: Visibility
     layer: 16
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 0
     delay: 0
 
 - type: entity
-  parent: CP14SpawnMagicFireTrap
-  id: CP14SpawnMagicFireTrapPermanent
+  parent: CE14SpawnMagicFireTrap
+  id: CE14SpawnMagicFireTrapPermanent
   suffix: Permanent
   components:
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 0
     delay: 0

@@ -222,20 +222,20 @@ namespace Content.Server.Ghost
 
             // Entity can't see ghosts anymore.
             _eye.RefreshVisibilityMask(uid);
-            //_actions.RemoveAction(uid, component.BooActionEntity);  //Dont need in CP14
+            //_actions.RemoveAction(uid, component.BooActionEntity);  //Dont need in CE14
         }
 
         private void OnMapInit(EntityUid uid, GhostComponent component, MapInitEvent args)
         {
-            //_actions.AddAction(uid, ref component.BooActionEntity, component.BooAction); //Dont need in CP14
-            //_actions.AddAction(uid, ref component.ToggleGhostHearingActionEntity, component.ToggleGhostHearingAction); //Dont need in CP14
+            //_actions.AddAction(uid, ref component.BooActionEntity, component.BooAction); //Dont need in CE14
+            //_actions.AddAction(uid, ref component.ToggleGhostHearingActionEntity, component.ToggleGhostHearingAction); //Dont need in CE14
             _actions.AddAction(uid, ref component.ToggleLightingActionEntity, component.ToggleLightingAction);
             _actions.AddAction(uid, ref component.ToggleFoVActionEntity, component.ToggleFoVAction);
             _actions.AddAction(uid, ref component.ToggleGhostsActionEntity, component.ToggleGhostsAction);
-            //CP14
-            _actions.AddAction(uid, ref component.CP14ToggleRoofActionEntity, component.CP14ToggleRoofAction);
-            _actions.AddAction(uid, ref component.CP14RespawnActionEntity, component.CP14RespawnAction);
-            //CP14 end
+            //CE14
+            _actions.AddAction(uid, ref component.CE14ToggleRoofActionEntity, component.CE14ToggleRoofAction);
+            _actions.AddAction(uid, ref component.CE14RespawnActionEntity, component.CE14RespawnAction);
+            //CE14 end
         }
 
         private void OnGhostExamine(EntityUid uid, GhostComponent component, ExaminedEvent args)

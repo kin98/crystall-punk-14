@@ -1,5 +1,5 @@
 - type: inventoryTemplate
-  id: CP14Carcat #Copy of CP14Human, but without shoes
+  id: CE14Carcat #Copy of CE14Human, but without shoes
   slots:
     # Left hotbar
     # 0, y

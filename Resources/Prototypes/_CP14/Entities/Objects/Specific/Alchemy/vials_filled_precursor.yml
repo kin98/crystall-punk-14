@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14VialBloodFlowerSap
-  parent: CP14VialSmall
+  id: CE14VialBloodFlowerSap
+  parent: CE14VialSmall
   name: vial of blood rose sap
   description: A medium vial containing concentrated blood rose sap.
   components:
@@ -8,12 +8,12 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14BloodFlowerSap
+        - ReagentId: CE14BloodFlowerSap
           Quantity: 10
 
 - type: entity
-  id: CP14VialWildSageSap
-  parent: CP14VialSmall
+  id: CE14VialWildSageSap
+  parent: CE14VialSmall
   name: vial of wild sage sap
   description: A medium vial containing concentrated wild sage sap.
   components:
@@ -21,12 +21,12 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14WildSageSap
+        - ReagentId: CE14WildSageSap
           Quantity: 10
 
 - type: entity
-  id: CP14VialYellowDayflinPulp
-  parent: CP14VialSmall
+  id: CE14VialYellowDayflinPulp
+  parent: CE14VialSmall
   name: vial of dayflin pulp
   description: A medium vial containing concentrated yellow dayflin pulp.
   components:
@@ -34,12 +34,12 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14YellowDayflinPulp
+        - ReagentId: CE14YellowDayflinPulp
           Quantity: 10
 
 - type: entity
-  id: CP14VialBlueAmanita
-  parent: CP14VialSmall
+  id: CE14VialBlueAmanita
+  parent: CE14VialSmall
   name: vial of blue amanita extract
   description: A medium vial containing concentrated blue amanita extract.
   components:
@@ -47,12 +47,12 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14BlueAmanita
+        - ReagentId: CE14BlueAmanita
           Quantity: 10
 
 - type: entity
-  id: CP14VialLumiMushroom
-  parent: CP14VialSmall
+  id: CE14VialLumiMushroom
+  parent: CE14VialSmall
   name: vial of lumishroom extract
   description: A medium vial containing concentrated lumishroom extract.
   components:
@@ -60,12 +60,12 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14LumiMushroom
+        - ReagentId: CE14LumiMushroom
           Quantity: 10
 
 - type: entity
-  id: CP14VialSilverNeedle
-  parent: CP14VialSmall
+  id: CE14VialSilverNeedle
+  parent: CE14VialSmall
   name: vial of silver needle extract
   description: A medium vial containing concentrated silver needle extract.
   components:
@@ -73,12 +73,12 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SilverNeedle
+        - ReagentId: CE14SilverNeedle
           Quantity: 10
 
 - type: entity
-  id: CP14VialChromiumSlime
-  parent: CP14VialSmall
+  id: CE14VialChromiumSlime
+  parent: CE14VialSmall
   name: vial of chromium slime
   description: A medium vial containing concentrated chromium slime.
   components:
@@ -86,12 +86,12 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14ChromiumSlime
+        - ReagentId: CE14ChromiumSlime
           Quantity: 10
 
 - type: entity
-  id: CP14VialAgaricMushroom
-  parent: CP14VialSmall
+  id: CE14VialAgaricMushroom
+  parent: CE14VialSmall
   name: vial of fly agaric extract
   description: A medium vial containing concentrated fly agaric extract.
   components:
@@ -99,12 +99,12 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14AgaricMushroom
+        - ReagentId: CE14AgaricMushroom
           Quantity: 10
 
 - type: entity
-  id: CP14VialAirLily
-  parent: CP14VialSmall
+  id: CE14VialAirLily
+  parent: CE14VialSmall
   name: vial of air lily extract
   description: A medium vial containing concentrated air lily extract.
   components:
@@ -112,5 +112,5 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14AirLily
+        - ReagentId: CE14AirLily
           Quantity: 10

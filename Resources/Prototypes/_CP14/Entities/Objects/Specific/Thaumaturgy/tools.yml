@@ -1,47 +1,47 @@
 - type: entity
-  id: CP14RitualChalk
+  id: CE14RitualChalk
   parent: BaseItem
   name: ritual chalk
   description: Quartz chalk, handy for drawing temporary ritual circles.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Thaumaturgy/ritual_chalk.rsi
+    sprite: _CE14/Objects/Specific/Thaumaturgy/ritual_chalk.rsi
     state: icon
   - type: Item
-    sprite: _CP14/Objects/Specific/Thaumaturgy/ritual_chalk.rsi
+    sprite: _CE14/Objects/Specific/Thaumaturgy/ritual_chalk.rsi
 
 - type: entity
-  id: CP14ManaOperationGlove
+  id: CE14ManaOperationGlove
   parent:
   - BaseItem
-  - CP14BaseWeaponLight
-  - CP14BaseWeaponShort
+  - CE14BaseWeaponLight
+  - CE14BaseWeaponShort
   name: mana glove
   description: "An unsophisticated but aesthetically pleasing blend of technology and magic crystals that allows you to operate with raw mana: siphoning it from some objects and pumping it into others."
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Thaumaturgy/powerline_gauntlet.rsi
+    sprite: _CE14/Objects/Specific/Thaumaturgy/powerline_gauntlet.rsi
     state: icon
   - type: Item
     size: Normal
     shape:
     - 0,0,0,1
     storedRotation: -45
-    sprite: _CP14/Objects/Specific/Thaumaturgy/powerline_gauntlet.rsi
-  - type: CP14MagicEnergyContainer
-    magicAlert: CP14MagicEnergy
+    sprite: _CE14/Objects/Specific/Thaumaturgy/powerline_gauntlet.rsi
+  - type: CE14MagicEnergyContainer
+    magicAlert: CE14MagicEnergy
     maxEnergy: 50
     energy: 0
     unsafeSupport: false
-  - type: CP14MagicEnergyExaminable
-  - type: CP14SpellStorageAccessHolding
-  - type: CP14SpellStorage
+  - type: CE14MagicEnergyExaminable
+  - type: CE14SpellStorageAccessHolding
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellManaGift
-    - CP14ActionSpellManaConsume
-    - CP14ActionSpellMagicSplittingSmall
+    - CE14ActionSpellManaGift
+    - CE14ActionSpellManaConsume
+    - CE14ActionSpellMagicSplittingSmall
   - type: ThrowingAngle #Fun
     angle: 225
   - type: MeleeWeapon
@@ -49,7 +49,7 @@
     attackRate: 1.2
     range: 1.2
     wideAnimationRotation: 225
-    wideAnimation: CP14WeaponArcThrust
+    wideAnimation: CE14WeaponArcThrust
     damage:
       types:
         Blunt: 5

@@ -4,17 +4,17 @@ using JetBrains.Annotations;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 
-namespace Content.Shared._CP14.Roof;
+namespace Content.Shared._CE14.Roof;
 
 [UsedImplicitly]
 [DataDefinition]
-public sealed partial class CP14NoRoofInTile : IConstructionCondition
+public sealed partial class CE14NoRoofInTile : IConstructionCondition
 {
     public ConstructionGuideEntry GenerateGuideEntry()
     {
         return new ConstructionGuideEntry
         {
-            Localization = "cp14-construction-step-condition-no-roof-in-tile",
+            Localization = "CE14-construction-step-condition-no-roof-in-tile",
         };
     }
 
@@ -36,7 +36,7 @@ public sealed partial class CP14NoRoofInTile : IConstructionCondition
 
         foreach (var entt in anchored)
         {
-            if (entityManager.HasComponent<CP14RoofComponent>(entt))
+            if (entityManager.HasComponent<CE14RoofComponent>(entt))
             {
                 return false;
             }

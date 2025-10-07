@@ -4,10 +4,10 @@ using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Trading.Prototypes;
+namespace Content.Shared._CE14.Trading.Prototypes;
 
-[Prototype("cp14TradingPosition")]
-public sealed partial class CP14TradingPositionPrototype : IPrototype
+[Prototype("CE14TradingPosition")]
+public sealed partial class CE14TradingPositionPrototype : IPrototype
 {
     [IdDataField] public string ID { get; private set; } = default!;
 
@@ -30,7 +30,7 @@ public sealed partial class CP14TradingPositionPrototype : IPrototype
     public SpriteSpecifier Icon = default!;
 
     [DataField(required: true)]
-    public ProtoId<CP14TradingFactionPrototype> Faction;
+    public ProtoId<CE14TradingFactionPrototype> Faction;
 
     [DataField]
     public FixedPoint2 ReputationLevel = 0f;
@@ -39,7 +39,7 @@ public sealed partial class CP14TradingPositionPrototype : IPrototype
     public float UiPosition = default!;
 
     [DataField(required: true)]
-    public CP14StoreBuyService? Service = null;
+    public CE14StoreBuyService? Service = null;
 
     [DataField]
     public int PriceMarkup = 1;
@@ -53,7 +53,7 @@ public sealed partial class CP14TradingPositionPrototype : IPrototype
 
 [ImplicitDataDefinitionForInheritors]
 [MeansImplicitUse]
-public abstract partial class CP14StoreBuyService
+public abstract partial class CE14StoreBuyService
 {
     public abstract void Buy(EntityManager entManager, IPrototypeManager prototype,  EntityUid platform);
 

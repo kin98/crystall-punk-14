@@ -94,7 +94,7 @@ public abstract class SharedArmorSystem : EntitySystem
         return msg;
     }
 
-    //CP14 public armor edit API
+    //CE14 public armor edit API
     public void EditArmorCoefficients(EntityUid uid, DamageModifierSet modifiers, ArmorComponent? armor = null)
     {
         if (!Resolve(uid, ref armor))
@@ -118,5 +118,5 @@ public abstract class SharedArmorSystem : EntitySystem
             armor.Modifiers.FlatReduction[armorType] += reduction;
         }
     }
-    //CP14 public armor edit API end
+    //CE14 public armor edit API end
 }

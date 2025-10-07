@@ -1,10 +1,10 @@
 - type: entity
-  id: CP14BaseWeaponShield
+  id: CE14BaseWeaponShield
   abstract: true
   parent:
   - BaseItem
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
   name: shield
   description: A wooden shield capable of withstanding multiple blows.
   components:
@@ -42,8 +42,8 @@
     angle: 60
     attackRate: 1
     wideAnimationRotation: 0
-    animation: CP14WeaponArcThrust
-    wideAnimation: CP14WeaponArcThrust
+    animation: CE14WeaponArcThrust
+    wideAnimation: CE14WeaponArcThrust
     damage:
       types:
         Blunt: 3
@@ -72,20 +72,20 @@
               collection: MetalBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14WoodenPlanks1:
+              CE14WoodenPlanks1:
                 min: 1
                 max: 2
 
 - type: entity
-  parent: CP14BaseWeaponShield
-  id: CP14WeaponShieldWooden
+  parent: CE14BaseWeaponShield
+  id: CE14WeaponShieldWooden
   name: wooden shield
   description: A wooden shield capable of withstanding multiple blows.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Shield/shield.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Shield/shield.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 30
-      CP14Iron: 20
+      CE14WoodenPlanks: 30
+      CE14Iron: 20

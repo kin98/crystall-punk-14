@@ -1,38 +1,38 @@
 - type: gameMap
   id: Comoss
   mapName: "Comoss island"
-  mapPath: /Maps/_CP14/comoss.yml
+  mapPath: /Maps/_CE14/comoss.yml
   maxRandomOffset: 0
   randomRotation: false
   minPlayers: 0
   stations:
     Comoss:
-      stationProto: CP14BaseExpedition
+      stationProto: CE14BaseExpedition
       components:
         - type: StationNameSetup
           mapNameTemplate: "Comoss island"
         - type: StationJobs
           availableJobs:
             #Mercenary
-            CP14Guildmaster: [1, 1]
-            CP14GuildWorker: [3, 3]
-            CP14Adventurer: [ -1, -1 ]
+            CE14Guildmaster: [1, 1]
+            CE14GuildWorker: [3, 3]
+            CE14Adventurer: [ -1, -1 ]
             #Artisans
-            CP14Apprentice: [ 5, 5 ]
-            CP14Alchemist: [ 2, 2 ]
-            #CP14Blacksmith: [ 2, 2 ]
-            CP14Innkeeper: [ 3, 4 ]
-            CP14Merchant: [2, 2]
+            CE14Apprentice: [ 5, 5 ]
+            CE14Alchemist: [ 2, 2 ]
+            #CE14Blacksmith: [ 2, 2 ]
+            CE14Innkeeper: [ 3, 4 ]
+            CE14Merchant: [2, 2]
             #Guard
-            CP14Guard: [4, 4]
-            CP14Investigator: [2, 2]
-            CP14GuardCommander: [1, 1]
-        - type: CP14StationZLevels
+            CE14Guard: [4, 4]
+            CE14Investigator: [2, 2]
+            CE14GuardCommander: [1, 1]
+        - type: CE14StationZLevels
           defaultMapLevel: 0
           levels:
             -1:
-              path: /Maps/_CP14/comoss_d.yml
-        - type: CP14StationKeyDistribution
+              path: /Maps/_CE14/comoss_d.yml
+        - type: CE14StationKeyDistribution
           keys:
           - Alchemy1
           - Alchemy2
@@ -50,7 +50,7 @@
           - PersonalHouse8
           - PersonalHouse9
           - PersonalHouse10
-        - type: CP14StationProceduralLocation
+        - type: CE14StationProceduralLocation
           location: ComossIsland
           modifiers:
           - DemiplaneArcSingle
@@ -61,7 +61,7 @@
           - CopperOre
           - CopperOre
           - CoalOre
-          - CP14CrystalQuartzOrder
+          - CE14CrystalQuartzOrder
           - Quartz
           - FlyAgaric
           - WildSage

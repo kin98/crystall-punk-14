@@ -1,1 +1,1 @@
-cp14-successful-parry = Парировал!
+CE14-successful-parry = Парировал!

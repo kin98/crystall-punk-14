@@ -1,10 +1,10 @@
 # Bun bottom
 
 - type: foodSequenceElement
-  id: CP14BunTopSandwich
+  id: CE14BunTopSandwich
   final: true
   sprites:
-  - sprite: _CP14/Objects/Consumable/Food/dough.rsi
+  - sprite: _CE14/Objects/Consumable/Food/dough.rsi
     state: bun_cooked_slice_top
   tags:
   - Bun
@@ -12,31 +12,31 @@
 # Meat
 
 - type: foodSequenceElement
-  id: CP14CutletSandwich
+  id: CE14CutletSandwich
   sprites:
-  - sprite: _CP14/Objects/Consumable/Food/meat.rsi
+  - sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: cutlet
   tags:
   - Cutlet
-  - CP14Meat
+  - CE14Meat
 
 - type: foodSequenceElement
-  id: CP14CutletCookedSandwich
+  id: CE14CutletCookedSandwich
   sprites:
-  - sprite: _CP14/Objects/Consumable/Food/meat.rsi
+  - sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: cutlet_cooked
   tags:
   - Cooked
   - Cutlet
-  - CP14Meat
+  - CE14Meat
 
 # Cheese
 
 - type: foodSequenceElement
-  id: CP14CheeseSandwich
+  id: CE14CheeseSandwich
   name: food-sequence-content-cheese
   sprites:
-  - sprite: _CP14/Objects/Consumable/Food/cheese.rsi
+  - sprite: _CE14/Objects/Consumable/Food/cheese.rsi
     state: cheese_slice
   tags:
   - Cheese
@@ -44,10 +44,10 @@
 # Cabbage
 
 - type: foodSequenceElement
-  id: CP14CabbageSandwich
+  id: CE14CabbageSandwich
   name: food-sequence-content-cabbage
   sprites:
-  - sprite: _CP14/Objects/Flora/Farm/cabbage.rsi
+  - sprite: _CE14/Objects/Flora/Farm/cabbage.rsi
     state: slice1
   tags:
   - Vegetable
@@ -55,10 +55,10 @@
 # Pumpkin
 
 - type: foodSequenceElement
-  id: CP14PumpkinSandwich
-  name: cp14-food-sequence-content-pumpkin
+  id: CE14PumpkinSandwich
+  name: CE14-food-sequence-content-pumpkin
   sprites:
-  - sprite: _CP14/Objects/Flora/Farm/pumpkin.rsi
+  - sprite: _CE14/Objects/Flora/Farm/pumpkin.rsi
     state: slice1
   tags:
   - Vegetable
@@ -66,10 +66,10 @@
 # Cucumber
 
 - type: foodSequenceElement
-  id: CP14CucumberSandwich
-  name: cp14-food-sequence-content-cucumber
+  id: CE14CucumberSandwich
+  name: CE14-food-sequence-content-cucumber
   sprites:
-  - sprite: _CP14/Objects/Flora/Farm/cucumber.rsi
+  - sprite: _CE14/Objects/Flora/Farm/cucumber.rsi
     state: slice1
   tags:
   - Vegetable
@@ -77,10 +77,10 @@
 # Tomatoes
 
 - type: foodSequenceElement
-  id: CP14TomatoesSandwich
+  id: CE14TomatoesSandwich
   name: food-sequence-content-tomato
   sprites:
-  - sprite: _CP14/Objects/Flora/Farm/tomatoes.rsi
+  - sprite: _CE14/Objects/Flora/Farm/tomatoes.rsi
     state: slice1
   tags:
   - Fruit
@@ -89,10 +89,10 @@
 # Apple
 
 - type: foodSequenceElement
-  id: CP14AppleSandwich
+  id: CE14AppleSandwich
   name: food-sequence-content-apple
   sprites:
-  - sprite: _CP14/Objects/Flora/Farm/apple.rsi
+  - sprite: _CE14/Objects/Flora/Farm/apple.rsi
     state: slice1
   tags:
   - Fruit
@@ -100,10 +100,10 @@
 # Pepper
 
 - type: foodSequenceElement
-  id: CP14PepperSandwich
-  name: cp14-food-sequence-content-pepper
+  id: CE14PepperSandwich
+  name: CE14-food-sequence-content-pepper
   sprites:
-  - sprite: _CP14/Objects/Flora/Farm/pepper.rsi
+  - sprite: _CE14/Objects/Flora/Farm/pepper.rsi
     state: slice1
   tags:
   - Vegetable
@@ -111,10 +111,10 @@
 # Onion
 
 - type: foodSequenceElement
-  id: CP14OnionSandwich
+  id: CE14OnionSandwich
   name: food-sequence-content-onion
   sprites:
-  - sprite: _CP14/Objects/Flora/Farm/onion.rsi
+  - sprite: _CE14/Objects/Flora/Farm/onion.rsi
     state: slice1
   tags:
   - Vegetable

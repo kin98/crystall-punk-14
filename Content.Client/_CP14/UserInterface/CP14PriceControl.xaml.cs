@@ -5,24 +5,24 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Client._CP14.UserInterface;
+namespace Content.Client._CE14.UserInterface;
 
 [GenerateTypedNameReferences]
-public sealed partial class CP14PriceControl : Control
+public sealed partial class CE14PriceControl : Control
 {
     [Dependency] private readonly IEntityManager _entity = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
 
     private readonly SpriteSystem _sprite;
 
-    public CP14PriceControl(int price)
+    public CE14PriceControl(int price)
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
         _sprite = _entity.System<SpriteSystem>();
 
-        var rsiPath = new ResPath("_CP14/Interface/Misc/coins.rsi");
+        var rsiPath = new ResPath("_CE14/Interface/Misc/coins.rsi");
 
         var total = price;
 

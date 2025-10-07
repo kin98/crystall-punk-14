@@ -1,41 +1,41 @@
-- type: CP14Recipe
-  id: CP14FoodMeatLamb
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14FoodMeatLamb
+  tag: CE14RecipeCooking
   craftTime: 2
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodMeatLambSlice
+    protoId: CE14FoodMeatLambSlice
     count: 2
   - !type:ProtoIdResource
-    protoId: CP14FoodEgg
-  result: CP14FoodMeatLambCutlet
+    protoId: CE14FoodEgg
+  result: CE14FoodMeatLambCutlet
 
-- type: CP14Recipe
-  id: CP14FoodDoughLarge
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14FoodDoughLarge
+  tag: CE14RecipeCooking
   craftTime: 2
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodDoughMedium
+    protoId: CE14FoodDoughMedium
     count: 4
-  result: CP14FoodDoughLarge
+  result: CE14FoodDoughLarge
 
-- type: CP14Recipe
-  id: CP14FoodDoughMedium
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14FoodDoughMedium
+  tag: CE14RecipeCooking
   craftTime: 1
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14Wheat
+    protoId: CE14Wheat
     count: 1
-  result: CP14FoodDoughMedium
+  result: CE14FoodDoughMedium
 
-- type: CP14Recipe
-  id: CP14FoodDoughMediumFlat
-  tag: CP14RecipeCooking
+- type: CE14Recipe
+  id: CE14FoodDoughMediumFlat
+  tag: CE14RecipeCooking
   craftTime: 2
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodDoughMedium
+    protoId: CE14FoodDoughMedium
     count: 1
-  result: CP14FoodDoughMediumFlat
+  result: CE14FoodDoughMediumFlat

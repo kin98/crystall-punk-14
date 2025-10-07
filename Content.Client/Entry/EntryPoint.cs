@@ -1,6 +1,6 @@
-using Content.Client._CP14.Discord;
-using Content.Client._CP14.JoinQueue;
-using Content.Client._CP14.Input;
+using Content.Client._CE14.Discord;
+using Content.Client._CE14.JoinQueue;
+using Content.Client._CE14.Input;
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
@@ -27,7 +27,7 @@ using Content.Client.Stylesheets;
 using Content.Client.UserInterface;
 using Content.Client.Viewport;
 using Content.Client.Voting;
-using Content.Shared._CP14.Sponsor;
+using Content.Shared._CE14.Sponsor;
 using Content.Shared.Ame.Components;
 using Content.Shared.CCVar;
 using Content.Shared.Gravity;
@@ -49,11 +49,11 @@ namespace Content.Client.Entry
 {
     public sealed class EntryPoint : GameClient
     {
-        //CP14
+        //CE14
         [Dependency] private readonly DiscordAuthManager _discordAuth = default!;
         [Dependency] private readonly JoinQueueManager _joinQueueManager = default!;
-        [Dependency] private readonly ICP14SponsorManager _sponsorManager = default!;
-        //CP14 end
+        [Dependency] private readonly ICE14SponsorManager _sponsorManager = default!;
+        //CE14 end
         [Dependency] private readonly IBaseClient _baseClient = default!;
         [Dependency] private readonly IGameController _gameController = default!;
         [Dependency] private readonly IStateManager _stateManager = default!;
@@ -176,13 +176,13 @@ namespace Content.Client.Entry
 
             _parallaxManager.LoadDefaultParallax();
 
-            //CP14
-            CP14ContentContexts.SetupContexts(_inputManager.Contexts);
-            _overlayManager.AddOverlay(new CP14BasePostProcessOverlay());
+            //CE14
+            CE14ContentContexts.SetupContexts(_inputManager.Contexts);
+            _overlayManager.AddOverlay(new CE14BasePostProcessOverlay());
             _discordAuth.Initialize();
             _joinQueueManager.Initialize();
             _sponsorManager.Initialize();
-            //CP14 end
+            //CE14 end
             _overlayManager.AddOverlay(new SingularityOverlay());
             _overlayManager.AddOverlay(new RadiationPulseOverlay());
             _chatManager.Initialize();

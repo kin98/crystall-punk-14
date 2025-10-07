@@ -1,6 +1,6 @@
-using Content.Server._CP14.Objectives.Components;
+using Content.Server._CE14.Objectives.Components;
 using Content.Server.Station.Components;
-using Content.Shared._CP14.Vampire.Components;
+using Content.Shared._CE14.Vampire.Components;
 using Content.Shared.Mind;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
@@ -10,9 +10,9 @@ using Content.Shared.Objectives.Systems;
 using Content.Shared.Roles.Jobs;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.Objectives.Systems;
+namespace Content.Server._CE14.Objectives.Systems;
 
-public sealed class CP14VampireObjectiveConditionsSystem : EntitySystem
+public sealed class CE14VampireObjectiveConditionsSystem : EntitySystem
 {
     [Dependency] private readonly MetaDataSystem _meta = default!;
     [Dependency] private readonly SharedObjectivesSystem _objectives = default!;
@@ -28,17 +28,17 @@ public sealed class CP14VampireObjectiveConditionsSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14VampireBloodPurityConditionComponent, ObjectiveAfterAssignEvent>(OnBloodPurityAfterAssign);
-        SubscribeLocalEvent<CP14VampireBloodPurityConditionComponent, ObjectiveGetProgressEvent>(OnBloodPurityGetProgress);
+        SubscribeLocalEvent<CE14VampireBloodPurityConditionComponent, ObjectiveAfterAssignEvent>(OnBloodPurityAfterAssign);
+        SubscribeLocalEvent<CE14VampireBloodPurityConditionComponent, ObjectiveGetProgressEvent>(OnBloodPurityGetProgress);
 
-        SubscribeLocalEvent<CP14VampireDefenceVillageConditionComponent, ObjectiveAfterAssignEvent>(OnDefenceAfterAssign);
-        SubscribeLocalEvent<CP14VampireDefenceVillageConditionComponent, ObjectiveGetProgressEvent>(OnDefenceGetProgress);
+        SubscribeLocalEvent<CE14VampireDefenceVillageConditionComponent, ObjectiveAfterAssignEvent>(OnDefenceAfterAssign);
+        SubscribeLocalEvent<CE14VampireDefenceVillageConditionComponent, ObjectiveGetProgressEvent>(OnDefenceGetProgress);
     }
 
-    private void OnDefenceAfterAssign(Entity<CP14VampireDefenceVillageConditionComponent> ent, ref ObjectiveAfterAssignEvent args)
+    private void OnDefenceAfterAssign(Entity<CE14VampireDefenceVillageConditionComponent> ent, ref ObjectiveAfterAssignEvent args)
     {
-        _meta.SetEntityName(ent, Loc.GetString("cp14-objective-vampire-defence-settlement-title"));
-        _meta.SetEntityDescription(ent, Loc.GetString("cp14-objective-vampire-defence-settlement-desc", ("count", RequiredAlivePercentage * 100)));
+        _meta.SetEntityName(ent, Loc.GetString("CE14-objective-vampire-defence-settlement-title"));
+        _meta.SetEntityDescription(ent, Loc.GetString("CE14-objective-vampire-defence-settlement-desc", ("count", RequiredAlivePercentage * 100)));
         _objectives.SetIcon(ent, ent.Comp.Icon);
     }
 
@@ -73,26 +73,26 @@ public sealed class CP14VampireObjectiveConditionsSystem : EntitySystem
         return totalPlayers > 0 ? (alivePlayers / totalPlayers) : 0f;
     }
 
-    private void OnDefenceGetProgress(Entity<CP14VampireDefenceVillageConditionComponent> ent, ref ObjectiveGetProgressEvent args)
+    private void OnDefenceGetProgress(Entity<CE14VampireDefenceVillageConditionComponent> ent, ref ObjectiveGetProgressEvent args)
     {
         args.Progress = CalculateAlivePlayersPercentage() > RequiredAlivePercentage ? 1 : 0;
     }
 
-    private void OnBloodPurityAfterAssign(Entity<CP14VampireBloodPurityConditionComponent> ent, ref ObjectiveAfterAssignEvent args)
+    private void OnBloodPurityAfterAssign(Entity<CE14VampireBloodPurityConditionComponent> ent, ref ObjectiveAfterAssignEvent args)
     {
-         if (!TryComp<CP14VampireComponent>(args.Mind?.OwnedEntity, out var vampireComp))
+         if (!TryComp<CE14VampireComponent>(args.Mind?.OwnedEntity, out var vampireComp))
              return;
 
          ent.Comp.Faction = vampireComp.Faction;
 
-         _meta.SetEntityName(ent, Loc.GetString("cp14-objective-vampire-pure-blood-title"));
-         _meta.SetEntityDescription(ent, Loc.GetString("cp14-objective-vampire-pure-blood-desc"));
+         _meta.SetEntityName(ent, Loc.GetString("CE14-objective-vampire-pure-blood-title"));
+         _meta.SetEntityDescription(ent, Loc.GetString("CE14-objective-vampire-pure-blood-desc"));
          _objectives.SetIcon(ent, ent.Comp.Icon);
     }
 
-    private void OnBloodPurityGetProgress(Entity<CP14VampireBloodPurityConditionComponent> ent, ref ObjectiveGetProgressEvent args)
+    private void OnBloodPurityGetProgress(Entity<CE14VampireBloodPurityConditionComponent> ent, ref ObjectiveGetProgressEvent args)
     {
-        var query = EntityQueryEnumerator<CP14VampireClanHeartComponent>();
+        var query = EntityQueryEnumerator<CE14VampireClanHeartComponent>();
 
         var ourHeartReady = false;
         var othersHeartsExist = false;

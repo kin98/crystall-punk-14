@@ -1,9 +1,9 @@
 using Robust.Client.GameObjects;
 using Robust.Shared.Map.Components;
 
-namespace Content.Client._CP14.GodRays;
+namespace Content.Client._CE14.GodRays;
 
-public sealed partial class CP14GodRaysSystem : EntitySystem
+public sealed partial class CE14GodRaysSystem : EntitySystem
 {
     [Dependency] private readonly SpriteSystem _sprite = default!;
     [Dependency] private readonly PointLightSystem _pointLight = default!;
@@ -21,7 +21,7 @@ public sealed partial class CP14GodRaysSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var spriteSync = EntityQueryEnumerator<CP14SyncColorWithMapLightComponent>();
+        var spriteSync = EntityQueryEnumerator<CE14SyncColorWithMapLightComponent>();
         while (spriteSync.MoveNext(out var uid, out _))
         {
             if (!_mapLightQuery.TryComp(Transform(uid).MapUid, out var map))

@@ -4,20 +4,20 @@
   parent:
   - BaseMob
   - MobCombat
-  - CP14MobDamageable
-  - CP14MobStarving
+  - CE14MobDamageable
+  - CE14MobStarving
   - MobBloodstream
   - MobFlammable
-  - CP14MobTemperature
+  - CE14MobTemperature
   - MobPolymorphable
   - MobRespirator
-  id: CP14SimpleMobBase
+  id: CE14SimpleMobBase
   suffix: AI
   abstract: true
   components:
   - type: NpcFactionMember
     factions:
-    - CP14Neutrals
+    - CE14Neutrals
   - type: MeleeWeapon
     angle: 0
     animation: WeaponArcBite

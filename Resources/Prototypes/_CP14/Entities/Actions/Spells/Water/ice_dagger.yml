@@ -1,42 +1,42 @@
 - type: entity
-  id: CP14ActionSpellIceDagger
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellIceDagger
+  parent: CE14ActionSpellBase
   name: Ice dagger
   description: You form an icy sharp dagger that will do for temporary use.
   components:
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 25
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Un pittore sulla..."
     endSpeech: "soglia della mano"
-  - type: CP14ActionFreeHandsRequired
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneWaterCreation
+  - type: CE14ActionFreeHandsRequired
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneWaterCreation
   - type: DoAfterArgs
     delay: 0.5
   - type: Action
     useDelay: 5
     icon:
-      sprite: _CP14/Actions/Spells/water.rsi
+      sprite: _CE14/Actions/Spells/water.rsi
       state: ice_dagger
   - type: InstantAction
-    event: !type:CP14InstantModularEffectEvent
+    event: !type:CE14InstantModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectWaterCreation
-      - !type:CP14SpellSpawnInHandEntity
+        - CE14ImpactEffectWaterCreation
+      - !type:CE14SpellSpawnInHandEntity
         spawns:
-        - CP14WeaponDaggerIce
+        - CE14WeaponDaggerIce
 
 - type: entity
   name: ice dagger
-  parent: CP14BaseWeaponDagger
-  id: CP14WeaponDaggerIce
+  parent: CE14BaseWeaponDagger
+  id: CE14WeaponDaggerIce
   description: A sharp ice dagger, not very durable but can temporarily replace real weapons.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Dagger/ice.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Dagger/ice.rsi
     state: icon
   - type: MeleeWeapon
     damage:
@@ -65,11 +65,11 @@
     lifetime: 60
 
 - type: entity
-  parent: CP14BaseSpellScrollWater
-  id: CP14SpellScrollIceDagger
+  parent: CE14BaseSpellScrollWater
+  id: CE14SpellScrollIceDagger
   name: ice dagger spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellIceDagger
+    - CE14ActionSpellIceDagger
 

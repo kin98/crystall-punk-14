@@ -1,23 +1,23 @@
 - type: constructionGraph
-  id: CP14Seat
+  id: CE14Seat
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14ChairWooden
+        - to: CE14ChairWooden
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 2
               doAfter: 2
-        - to: CP14ChairWoodenBirch
+        - to: CE14ChairWoodenBirch
           steps:
-          - material: CP14BirchWoodenPlanks
+          - material: CE14BirchWoodenPlanks
             amount: 2
             doAfter: 2
-    - node: CP14ChairWooden
-      entity: CP14ChairWooden
+    - node: CE14ChairWooden
+      entity: CE14ChairWooden
       edges:
       - to: start
         steps:
@@ -25,10 +25,10 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 2
-    - node: CP14ChairWoodenBirch
-      entity: CP14ChairWoodenBirch
+    - node: CE14ChairWoodenBirch
+      entity: CE14ChairWoodenBirch
       edges:
       - to: start
         steps:
@@ -36,29 +36,29 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14BirchWoodenPlanks1
+          prototype: CE14BirchWoodenPlanks1
           amount: 2
 
 - type: constructionGraph
-  id: CP14BenchWood
+  id: CE14BenchWood
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14BenchWood
+        - to: CE14BenchWood
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 3
               doAfter: 2
-        - to: CP14BenchWoodBirch
+        - to: CE14BenchWoodBirch
           steps:
-          - material: CP14BirchWoodenPlanks
+          - material: CE14BirchWoodenPlanks
             amount: 3
             doAfter: 2
-    - node: CP14BenchWood
-      entity: CP14BenchWood
+    - node: CE14BenchWood
+      entity: CE14BenchWood
       edges:
       - to: start
         steps:
@@ -66,10 +66,10 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 3
-    - node: CP14BenchWoodBirch
-      entity: CP14BenchWoodBirch
+    - node: CE14BenchWoodBirch
+      entity: CE14BenchWoodBirch
       edges:
       - to: start
         steps:
@@ -77,29 +77,29 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14BirchWoodenPlanks1
+          prototype: CE14BirchWoodenPlanks1
           amount: 3
 
 - type: constructionGraph
-  id: CP14Stool
+  id: CE14Stool
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14StoolWooden
+        - to: CE14StoolWooden
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 2
               doAfter: 1
-        - to: CP14StoolBirch
+        - to: CE14StoolBirch
           steps:
-          - material: CP14BirchWoodenPlanks
+          - material: CE14BirchWoodenPlanks
             amount: 2
             doAfter: 1
-    - node: CP14StoolWooden
-      entity: CP14StoolWooden
+    - node: CE14StoolWooden
+      entity: CE14StoolWooden
       edges:
       - to: start
         steps:
@@ -107,10 +107,10 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 2
-    - node: CP14StoolBirch
-      entity: CP14StoolBirch
+    - node: CE14StoolBirch
+      entity: CE14StoolBirch
       edges:
       - to: start
         steps:
@@ -118,5 +118,5 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14BirchWoodenPlanks1
+          prototype: CE14BirchWoodenPlanks1
           amount: 2

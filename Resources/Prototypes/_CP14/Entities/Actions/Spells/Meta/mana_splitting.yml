@@ -1,49 +1,49 @@
 - type: entity
-  id: CP14ActionSpellMagicSplitting
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellMagicSplitting
+  parent: CE14ActionSpellBase
   name: Magic splitting
   description: You destroy the very essence of magic, interrupting spell casts, destroying mana and more.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.7
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 10
   - type: DoAfterArgs
     delay: 1
     repeat: true
     breakOnMove: true
     breakOnDamage: true
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneMagicSplitting
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneMagicSplitting
   - type: Action
     useDelay: 15
     icon:
-      sprite: _CP14/Actions/Spells/meta.rsi
+      sprite: _CE14/Actions/Spells/meta.rsi
       state: counter_spell
   - type: TargetAction
     range: 5
   - type: EntityTargetAction
     whitelist:
       components:
-      - CP14MagicEnergyContainer
+      - CE14MagicEnergyContainer
       - ExaminableSolution
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellMixSolution
+      - !type:CE14SpellMixSolution
         reactionTypes:
-        - CP14MagicSplitting
-      - !type:CP14SpellSpawnEntityOnTarget
+        - CE14MagicSplitting
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectMagicSplitting
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectMagicSplitting
+      - !type:CE14SpellApplyEntityEffect
         effects:
-        - !type:CP14ManaChange
+        - !type:CE14ManaChange
           manaDelta: -5
           safe: false
 
 - type: entity
-  id: CP14RuneMagicSplitting
-  parent: CP14BaseMagicRune
+  id: CE14RuneMagicSplitting
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -56,8 +56,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectMagicSplitting
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectMagicSplitting
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:

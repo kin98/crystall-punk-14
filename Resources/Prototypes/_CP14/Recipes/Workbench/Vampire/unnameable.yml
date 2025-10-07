@@ -1,30 +1,30 @@
-- type: CP14Recipe
-  id: CP14ClothingMaskVampireVoiceUnnameable
-  tag: CP14RecipeVampire
+- type: CE14Recipe
+  id: CE14ClothingMaskVampireVoiceUnnameable
+  tag: CE14RecipeVampire
   category: Clothing
   craftTime: 1
   requiredSkills:
   - VampireTransmutateUnnameable
   requirements:
   - !type:StackResource
-    stack: CP14ThinLeather
+    stack: CE14ThinLeather
     count: 2
-  result: CP14ClothingMaskVampireVoiceUnnameable
+  result: CE14ClothingMaskVampireVoiceUnnameable
   resultCount: 1
 
-- type: CP14Recipe
-  id: CP14ClothingCloakVampireUnnameable
-  tag: CP14RecipeVampire
+- type: CE14Recipe
+  id: CE14ClothingCloakVampireUnnameable
+  tag: CE14RecipeVampire
   category: Clothing
   craftTime: 1
   requiredSkills:
   - VampireTransmutateUnnameable
   requirements:
   - !type:StackResource
-    stack: CP14Cloth
+    stack: CE14Cloth
     count: 4
   - !type:StackResource
-    stack: CP14BloodEssence
+    stack: CE14BloodEssence
     count: 1
-  result: CP14ClothingCloakVampireUnnameable
+  result: CE14ClothingCloakVampireUnnameable
   resultCount: 1

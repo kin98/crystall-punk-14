@@ -1,7 +1,7 @@
 ﻿# Base
 - type: entity
   parent: FoodInjectableBase
-  id: CP14FoodMeatBase
+  id: CE14FoodMeatBase
   abstract: true
   categories: [ ForkFiltered ]
   components:
@@ -28,11 +28,11 @@
     area: 0.02 # arbitrary number that sounds right for a slab of meat
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 - type: entity
-  id: CP14FoodMeatSliceBase
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatSliceBase
+  parent: CE14FoodMeatBase
   abstract: true
   categories: [ ForkFiltered ]
   components:
@@ -52,21 +52,21 @@
     area: 0.006 # 1\3 of meat value
   - type: Tag
     tags:
-    - CP14MeatSlice
+    - CE14MeatSlice
 
 # Lamb Meat
 - type: entity
-  id: CP14FoodMeatLamb
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatLamb
+  parent: CE14FoodMeatBase
   name: raw lamb
   description: Succulent lamb steak
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: sheepmeat
   - type: SliceableFood
     count: 4
-    slice: CP14FoodMeatLambSlice
+    slice: CE14FoodMeatLambSlice
   - type: SolutionContainerManager
     solutions:
       food:
@@ -82,24 +82,24 @@
     size: Small
     shape:
     - 0,0,1,0
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatLambCooked
+      transformTo: CE14FoodMeatLambCooked
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 - type: entity
-  id: CP14FoodMeatLambCooked
-  parent: CP14FoodMeatLamb
+  id: CE14FoodMeatLambCooked
+  parent: CE14FoodMeatLamb
   name: cooked lamb steak
   components:
   - type: Sprite
     state: sheepmeat_cooked
   - type: SliceableFood
     count: 4
-    slice: CP14FoodMeatLambCookedSlice
+    slice: CE14FoodMeatLambCookedSlice
   - type: SolutionContainerManager
     solutions:
       food:
@@ -111,25 +111,25 @@
           Quantity: 6
         - ReagentId: Fat
           Quantity: 8
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 - type: entity
-  id: CP14FoodMeatLambSlice
-  parent: CP14FoodMeatSliceBase
+  id: CE14FoodMeatLambSlice
+  parent: CE14FoodMeatSliceBase
   name: meat pieces
   description: Succulent lamb steak
   components:
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     layers:
       - state: sheepmeat_slice
         map: [ "random" ]
@@ -150,18 +150,18 @@
           Quantity: 1.5
         - ReagentId: Fat
           Quantity: 2
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatLambCookedSlice
+      transformTo: CE14FoodMeatLambCookedSlice
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatSlice
+    - CE14Meat
+    - CE14MeatSlice
 
 - type: entity
-  id: CP14FoodMeatLambCookedSlice
-  parent: CP14FoodMeatLambSlice
+  id: CE14FoodMeatLambCookedSlice
+  parent: CE14FoodMeatLambSlice
   name: cooked meat pieces
   components:
   - type: Sprite
@@ -185,24 +185,24 @@
           Quantity: 1.5
         - ReagentId: Fat
           Quantity: 2
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatSlice
+    - CE14Meat
+    - CE14MeatSlice
 
 - type: entity
-  id: CP14FoodMeatLambCutlet
-  parent: CP14FoodMeatSliceBase
+  id: CE14FoodMeatLambCutlet
+  parent: CE14FoodMeatSliceBase
   name: lamb cutlet
   description: The result of mixing sliced lamb and egg - a raw round cutlet.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: cutlet
   - type: SolutionContainerManager
     solutions:
@@ -221,19 +221,19 @@
           Quantity: 6
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14CutletSandwich
-  - type: CP14TemperatureTransformation
+      CE14Sandwich: CE14CutletSandwich
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatLambCutletCooked
+      transformTo: CE14FoodMeatLambCutletCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatCutlet
+    - CE14Meat
+    - CE14MeatCutlet
 
 - type: entity
-  id: CP14FoodMeatLambCutletCooked
-  parent: CP14FoodMeatLambCutlet
+  id: CE14FoodMeatLambCutletCooked
+  parent: CE14FoodMeatLambCutlet
   name: cooked lamb cutlet
   description: Yammi!
   components:
@@ -254,26 +254,26 @@
           Quantity: 6
   - type: FoodSequenceElement
     entries:
-      CP14Sandwich: CP14CutletCookedSandwich
-  - type: CP14TemperatureTransformation
+      CE14Sandwich: CE14CutletCookedSandwich
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatCutlet
+    - CE14Meat
+    - CE14MeatCutlet
 
 # Frog Leg
 - type: entity
-  id: CP14FoodMeatFrogLeg
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatFrogLeg
+  parent: CE14FoodMeatBase
   name: frog leg
   description: They say they eat it somewhere.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: frog_leg
   - type: Item
     size: Tiny
@@ -286,23 +286,23 @@
           Quantity: 1.75
         - ReagentId: UncookedAnimalProteins
           Quantity: 1
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatFrogLegCooked
+      transformTo: CE14FoodMeatFrogLegCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatLeg
+    - CE14Meat
+    - CE14MeatLeg
 
 - type: entity
-  id: CP14FoodMeatFrogLegCooked
-  parent: CP14FoodMeatFrogLeg
+  id: CE14FoodMeatFrogLegCooked
+  parent: CE14FoodMeatFrogLeg
   name: cooked frog leg
   description: It even seems edible.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: frog_leg_cooked
   - type: SolutionContainerManager
     solutions:
@@ -313,25 +313,25 @@
           Quantity: 3
         - ReagentId: Protein
           Quantity: 1
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatLeg
+    - CE14Meat
+    - CE14MeatLeg
 
 # Human Meat
 - type: entity
-  id: CP14FoodMeatHuman
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatHuman
+  parent: CE14FoodMeatBase
   name: raw human meat
   description: This meat has a suspicious look to it.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     layers:
       - state: human_meat1
         map: [ "random" ]
@@ -353,17 +353,17 @@
       - random:
           human_meat1: ""
           human_meat2: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatHumanCooked
+      transformTo: CE14FoodMeatHumanCooked
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 - type: entity
-  id: CP14FoodMeatHumanCooked
-  parent: CP14FoodMeatHuman
+  id: CE14FoodMeatHumanCooked
+  parent: CE14FoodMeatHuman
   name: cooked human meat
   components:
   - type: Sprite
@@ -386,24 +386,24 @@
       - random:
           human_meat1_cooked: ""
           human_meat2_cooked: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 # Dino Meat
 - type: entity
-  id: CP14FoodMeatDino
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatDino
+  parent: CE14FoodMeatBase
   name: raw dino meat
   description: Now who's going to eat who?
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: dino_meat1
   - type: Item
     size: Small
@@ -418,17 +418,17 @@
           Quantity: 6
         - ReagentId: Fat
           Quantity: 2
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatDinoCooked
+      transformTo: CE14FoodMeatDinoCooked
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 - type: entity
-  id: CP14FoodMeatDinoCooked
-  parent: CP14FoodMeatDino
+  id: CE14FoodMeatDinoCooked
+  parent: CE14FoodMeatDino
   name: cooked dino meat
   components:
   - type: Sprite
@@ -444,23 +444,23 @@
           Quantity: 6
         - ReagentId: Fat
           Quantity: 2
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 - type: entity
-  id: CP14FoodMeatHydra
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatHydra
+  parent: CE14FoodMeatBase
   name: raw hydra meat
   description: Not as much meat as I would have liked.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: dino_meat2
   - type: Item
     size: Tiny
@@ -473,17 +473,17 @@
           Quantity: 2.15
         - ReagentId: UncookedAnimalProteins
           Quantity: 3
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatHydraCooked
+      transformTo: CE14FoodMeatHydraCooked
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 - type: entity
-  id: CP14FoodMeatHydraCooked
-  parent: CP14FoodMeatHydra
+  id: CE14FoodMeatHydraCooked
+  parent: CE14FoodMeatHydra
   name: cooked hydra meat
   components:
   - type: Sprite
@@ -497,24 +497,24 @@
           Quantity: 5.5
         - ReagentId: Protein
           Quantity: 3
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 # Rabbit Meat
 - type: entity
-  id: CP14FoodMeatRabbit
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatRabbit
+  parent: CE14FoodMeatBase
   name: raw rabbit meat
   description: The meat seems tough and the odour is unpleasant.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     layers:
       - state: rabbit_meat1
         map: [ "random" ]
@@ -536,17 +536,17 @@
       - random:
           rabbit_meat1: ""
           rabbit_meat2: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatRabbitCooked
+      transformTo: CE14FoodMeatRabbitCooked
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 - type: entity
-  id: CP14FoodMeatRabbitCooked
-  parent: CP14FoodMeatRabbit
+  id: CE14FoodMeatRabbitCooked
+  parent: CE14FoodMeatRabbit
   name: cooked rabbit meat
   description: The frying went to good use, now the meat seems juicy and tender.
   components:
@@ -570,24 +570,24 @@
       - random:
           rabbit_meat1_cooked: ""
           rabbit_meat2_cooked: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
+    - CE14Meat
 
 # Pig and Boar Meat
 - type: entity
-  id: CP14FoodMeatPig
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatPig
+  parent: CE14FoodMeatBase
   name: raw pig meat
   description: I've eaten pork, I eat pork, and it looks like I'll be eating pork forever and ever.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     layers:
       - state: pig_meat1
         map: [ "random" ]
@@ -595,7 +595,7 @@
     size: Small
   - type: SliceableFood
     count: 4
-    slice: CP14FoodMeatPigSlice
+    slice: CE14FoodMeatPigSlice
   - type: SolutionContainerManager
     solutions:
       food:
@@ -612,18 +612,18 @@
       - random:
           pig_meat1: ""
           pig_meat4: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatPigCooked
+      transformTo: CE14FoodMeatPigCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatPig
+    - CE14Meat
+    - CE14MeatPig
 
 - type: entity
-  id: CP14FoodMeatPigCooked
-  parent: CP14FoodMeatPig
+  id: CE14FoodMeatPigCooked
+  parent: CE14FoodMeatPig
   name: cooked pig meat
   components:
   - type: Sprite
@@ -632,7 +632,7 @@
         map: [ "random" ]
   - type: SliceableFood
     count: 4
-    slice: CP14FoodMeatPigCookedSlice
+    slice: CE14FoodMeatPigCookedSlice
   - type: SolutionContainerManager
     solutions:
       food:
@@ -649,24 +649,24 @@
       - random:
           pig_meat1_cooked: ""
           pig_meat4_cooked: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatPig
+    - CE14Meat
+    - CE14MeatPig
 
 - type: entity
-  id: CP14FoodMeatPigLeg
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatPigLeg
+  parent: CE14FoodMeatBase
   name: raw pig leg meat
   description: A decent ham, albeit with a large preponderance of bone.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: pig_meat5
   - type: Item
     size: Small
@@ -681,19 +681,19 @@
           Quantity: 10
         - ReagentId: Fat
           Quantity: 10
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatPigLegCooked
+      transformTo: CE14FoodMeatPigLegCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatLeg
-    - CP14MeatPig
+    - CE14Meat
+    - CE14MeatLeg
+    - CE14MeatPig
 
 - type: entity
-  id: CP14FoodMeatPigLegCooked
-  parent: CP14FoodMeatPigLeg
+  id: CE14FoodMeatPigLegCooked
+  parent: CE14FoodMeatPigLeg
   name: cooked pig leg meat # Jamon? - Хамон?
   components:
   - type: Sprite
@@ -709,25 +709,25 @@
           Quantity: 10
         - ReagentId: Fat
           Quantity: 10
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatLeg
-    - CP14MeatPig
+    - CE14Meat
+    - CE14MeatLeg
+    - CE14MeatPig
 
 - type: entity
-  id: CP14FoodMeatBoar
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatBoar
+  parent: CE14FoodMeatBase
   name: raw boar meat
   description: It's like pig meat, except more odorous.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     layers:
       - state: pig_meat2
         map: [ "random" ]
@@ -735,7 +735,7 @@
     size: Small
   - type: SliceableFood
     count: 4
-    slice: CP14FoodMeatPigSlice
+    slice: CE14FoodMeatPigSlice
   - type: SolutionContainerManager
     solutions:
       food:
@@ -752,18 +752,18 @@
       - random:
           pig_meat2: ""
           pig_meat3: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatBoarCooked
+      transformTo: CE14FoodMeatBoarCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatPig
+    - CE14Meat
+    - CE14MeatPig
 
 - type: entity
-  id: CP14FoodMeatBoarCooked
-  parent: CP14FoodMeatBoar
+  id: CE14FoodMeatBoarCooked
+  parent: CE14FoodMeatBoar
   name: cooked boar meat
   description: After a good frying, it's almost indistinguishable from pork meat.
   components:
@@ -773,7 +773,7 @@
         map: [ "random" ]
   - type: SliceableFood
     count: 4
-    slice: CP14FoodMeatPigCookedSlice
+    slice: CE14FoodMeatPigCookedSlice
   - type: SolutionContainerManager
     solutions:
       food:
@@ -790,26 +790,26 @@
       - random:
           pig_meat2_cooked: ""
           pig_meat3_cooked: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatPig
+    - CE14Meat
+    - CE14MeatPig
 
 - type: entity
-  id: CP14FoodMeatPigSlice
-  parent: CP14FoodMeatSliceBase
+  id: CE14FoodMeatPigSlice
+  parent: CE14FoodMeatSliceBase
   name: meat pieces
   description: Pork meat ball with veins of lard.
   components:
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     layers:
       - state: pig_meat6
   - type: SolutionContainerManager
@@ -823,19 +823,19 @@
           Quantity: 2
         - ReagentId: Fat
           Quantity: 3
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatPigCookedSlice
+      transformTo: CE14FoodMeatPigCookedSlice
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatSlice
-    - CP14MeatPig
+    - CE14Meat
+    - CE14MeatSlice
+    - CE14MeatPig
 
 - type: entity
-  id: CP14FoodMeatPigCookedSlice
-  parent: CP14FoodMeatPigSlice
+  id: CE14FoodMeatPigCookedSlice
+  parent: CE14FoodMeatPigSlice
   name: cooked meat pieces
   components:
   - type: Sprite
@@ -852,26 +852,26 @@
           Quantity: 2
         - ReagentId: Fat
           Quantity: 3
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatSlice
-    - CP14MeatPig
+    - CE14Meat
+    - CE14MeatSlice
+    - CE14MeatPig
 
 # Monster Meat
 - type: entity
-  id: CP14FoodMeatMonster
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatMonster
+  parent: CE14FoodMeatBase
   name: raw monster meat
   description: The colour is quite suspicious, not everyone would dare to try it out, perhaps give it to a goblin?
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     layers:
       - state: mole_meat1
         map: [ "random" ]
@@ -879,13 +879,13 @@
     size: Small
   - type: SliceableFood
     count: 4
-    slice: CP14FoodMeatMonsterSlice
+    slice: CE14FoodMeatMonsterSlice
   - type: SolutionContainerManager
     solutions:
       food:
         maxVol: 26
         reagents:
-        - ReagentId: CP14Taikamyrky
+        - ReagentId: CE14Taikamyrky
           Quantity: 2
         - ReagentId: Nutriment
           Quantity: 6
@@ -900,18 +900,18 @@
           mole_meat2: ""
           mole_meat3: ""
           mole_meat4: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatMonsterCooked
+      transformTo: CE14FoodMeatMonsterCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatMonsterCooked
-  parent: CP14FoodMeatMonster
+  id: CE14FoodMeatMonsterCooked
+  parent: CE14FoodMeatMonster
   name: cooked monster meat
   components:
   - type: Sprite
@@ -921,7 +921,7 @@
         color: "#c98367"
   - type: SliceableFood
     count: 4
-    slice: CP14FoodMeatMonsterCookedSlice
+    slice: CE14FoodMeatMonsterCookedSlice
   - type: SolutionContainerManager
     solutions:
       food:
@@ -936,28 +936,28 @@
   - type: RandomSprite
     available:
       - random:
-          mole_meat1: CP14cookedMeat
-          mole_meat2: CP14cookedMeat
-          mole_meat3: CP14cookedMeat
-          mole_meat4: CP14cookedMeat
-  - type: CP14TemperatureTransformation
+          mole_meat1: CE14cookedMeat
+          mole_meat2: CE14cookedMeat
+          mole_meat3: CE14cookedMeat
+          mole_meat4: CE14cookedMeat
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatMonsterLeg
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatMonsterLeg
+  parent: CE14FoodMeatBase
   name: raw monster leg meat
   description: The suspicious colour of the meat makes you question its edibility, but if you're really hungry...
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: mole_meat5
   - type: Item
     size: Small
@@ -966,7 +966,7 @@
       food:
         maxVol: 30
         reagents:
-        - ReagentId: CP14Taikamyrky
+        - ReagentId: CE14Taikamyrky
           Quantity: 2
         - ReagentId: Nutriment
           Quantity: 6
@@ -974,19 +974,19 @@
           Quantity: 10
         - ReagentId: Fat
           Quantity: 10
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatMonsterLegCooked
+      transformTo: CE14FoodMeatMonsterLegCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatLeg
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatLeg
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatMonsterLegCooked
-  parent: CP14FoodMeatMonsterLeg
+  id: CE14FoodMeatMonsterLegCooked
+  parent: CE14FoodMeatMonsterLeg
   name: cooked monster leg meat # Jamon? - Хамон?
   components:
   - type: Sprite
@@ -1003,27 +1003,27 @@
           Quantity: 10
         - ReagentId: Fat
           Quantity: 10
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatLeg
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatLeg
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatMonsterSlice
-  parent: CP14FoodMeatSliceBase
+  id: CE14FoodMeatMonsterSlice
+  parent: CE14FoodMeatSliceBase
   name: monster meat piece
   description: Monster meat balls with their trademark suspicious colour.
   components:
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     layers:
       - state: mole_meat6
   - type: SolutionContainerManager
@@ -1031,7 +1031,7 @@
       food:
         maxVol: 8
         reagents:
-        - ReagentId: CP14Taikamyrky
+        - ReagentId: CE14Taikamyrky
           Quantity: 0.5
         - ReagentId: Nutriment
           Quantity: 1.5
@@ -1039,19 +1039,19 @@
           Quantity: 2
         - ReagentId: Fat
           Quantity: 2
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatMonsterCookedSlice
+      transformTo: CE14FoodMeatMonsterCookedSlice
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatSlice
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatSlice
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatMonsterCookedSlice
-  parent: CP14FoodMeatMonsterSlice
+  id: CE14FoodMeatMonsterCookedSlice
+  parent: CE14FoodMeatMonsterSlice
   name: cooked monster meat pieces
   components:
   - type: Sprite
@@ -1069,21 +1069,21 @@
           Quantity: 2
         - ReagentId: Fat
           Quantity: 2
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatSlice
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatSlice
+    - CE14MeatMonster
 
 # Flem meat
 - type: entity
-  id: CP14FoodMeatFlemHead
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatFlemHead
+  parent: CE14FoodMeatBase
   name: raw flem head
   description: Honestly looks quite tasty.
   components:
@@ -1091,7 +1091,7 @@
     flavors:
       - fishy
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: flem_head
   - type: Item
     size: Normal
@@ -1108,18 +1108,18 @@
           Quantity: 12
         - ReagentId: Fat
           Quantity: 2
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatFlemHeadCooked
+      transformTo: CE14FoodMeatFlemHeadCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatFlemHeadCooked
-  parent: CP14FoodMeatFlemHead
+  id: CE14FoodMeatFlemHeadCooked
+  parent: CE14FoodMeatFlemHead
   name: cooked flem head
   components:
   - type: Sprite
@@ -1135,19 +1135,19 @@
           Quantity: 12
         - ReagentId: Fat
           Quantity: 5
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatFlemTorso
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatFlemTorso
+  parent: CE14FoodMeatBase
   name: raw flem torso
   description: Seems to be hollow.
   components:
@@ -1155,11 +1155,11 @@
     flavors:
       - fishy
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: flem_torso
   - type: SliceableFood
     count: 3
-    slice: CP14FoodMeatFlemTorsoCut
+    slice: CE14FoodMeatFlemTorsoCut
   - type: Item
     size: Normal
     shape:
@@ -1175,25 +1175,25 @@
           Quantity: 24
         - ReagentId: Fat
           Quantity: 1
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatFlemTorsoCooked
+      transformTo: CE14FoodMeatFlemTorsoCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatFlemTorsoCooked
-  parent: CP14FoodMeatFlemTorso
+  id: CE14FoodMeatFlemTorsoCooked
+  parent: CE14FoodMeatFlemTorso
   name: cooked flem torso
   components:
   - type: Sprite
     state: flem_torso_cooked
   - type: SliceableFood
     count: 3
-    slice: CP14FoodMeatFlemTorsoCookedCut
+    slice: CE14FoodMeatFlemTorsoCookedCut
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1205,19 +1205,19 @@
           Quantity: 15
         - ReagentId: Fat
           Quantity: 2
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatFlemTorsoCut
-  parent: CP14FoodMeatSliceBase
+  id: CE14FoodMeatFlemTorsoCut
+  parent: CE14FoodMeatSliceBase
   name: raw flem ring
   description: Onions not included.
   components:
@@ -1227,7 +1227,7 @@
   - type: Item
     size: Small
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     layers:
       - state: flem_torso_cut
   - type: SolutionContainerManager
@@ -1241,19 +1241,19 @@
           Quantity: 5
         - ReagentId: Fat
           Quantity: 0.5
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatFlemTorsoCookedCut
+      transformTo: CE14FoodMeatFlemTorsoCookedCut
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatSlice
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatSlice
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatFlemTorsoCookedCut
-  parent: CP14FoodMeatFlemTorsoCut
+  id: CE14FoodMeatFlemTorsoCookedCut
+  parent: CE14FoodMeatFlemTorsoCut
   name: fishy rings
   components:
   - type: Sprite
@@ -1270,20 +1270,20 @@
           Quantity: 5
         - ReagentId: Fat
           Quantity: 0.5
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatSlice
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatSlice
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatFlemLeg
-  parent: CP14FoodMeatBase
+  id: CE14FoodMeatFlemLeg
+  parent: CE14FoodMeatBase
   name: raw flem leg
   description: Probally not the best part to eat. but you never know until you try.
   components:
@@ -1291,7 +1291,7 @@
     flavors:
       - fishy
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/meat.rsi
+    sprite: _CE14/Objects/Consumable/Food/meat.rsi
     state: flem_leg
   - type: Item
     size: Tiny
@@ -1308,19 +1308,19 @@
           Quantity: 5
         - ReagentId: Fat
           Quantity: 0.1
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodMeatFlemLegCooked
+      transformTo: CE14FoodMeatFlemLegCooked
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatLeg
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatLeg
+    - CE14MeatMonster
 
 - type: entity
-  id: CP14FoodMeatFlemLegCooked
-  parent: CP14FoodMeatFlemLeg
+  id: CE14FoodMeatFlemLegCooked
+  parent: CE14FoodMeatFlemLeg
   name: fish sticks
   description: Like fries. But fish!
   components:
@@ -1337,13 +1337,13 @@
           Quantity: 5
         - ReagentId: Fat
           Quantity: 0.1
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     autoTransformOnCooked: false
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14Ash1
+      transformTo: CE14Ash1
   - type: Tag
     tags:
-    - CP14Meat
-    - CP14MeatLeg
-    - CP14MeatMonster
+    - CE14Meat
+    - CE14MeatLeg
+    - CE14MeatMonster

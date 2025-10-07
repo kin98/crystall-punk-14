@@ -1,9 +1,9 @@
 - type: construction
   crystallPunkAllowed: true
-  id: CP14ChairWooden
-  graph: CP14Seat
+  id: CE14ChairWooden
+  graph: CE14Seat
   startNode: start
-  targetNode: CP14ChairWooden
+  targetNode: CE14ChairWooden
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -13,10 +13,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14ChairWoodenBirch
-  graph: CP14Seat
+  id: CE14ChairWoodenBirch
+  graph: CE14Seat
   startNode: start
-  targetNode: CP14ChairWoodenBirch
+  targetNode: CE14ChairWoodenBirch
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -26,10 +26,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14StoolWooden
-  graph: CP14Stool
+  id: CE14StoolWooden
+  graph: CE14Stool
   startNode: start
-  targetNode: CP14StoolWooden
+  targetNode: CE14StoolWooden
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -39,10 +39,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14StoolBirch
-  graph: CP14Stool
+  id: CE14StoolBirch
+  graph: CE14Stool
   startNode: start
-  targetNode: CP14StoolBirch
+  targetNode: CE14StoolBirch
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -52,10 +52,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14TableWooden
-  graph: CP14TableWooden
+  id: CE14TableWooden
+  graph: CE14TableWooden
   startNode: start
-  targetNode: CP14TableWooden
+  targetNode: CE14TableWooden
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -65,10 +65,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14TableWoodenBirch
-  graph: CP14TableWooden
+  id: CE14TableWoodenBirch
+  graph: CE14TableWooden
   startNode: start
-  targetNode: CP14TableWoodenBirch
+  targetNode: CE14TableWoodenBirch
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -78,10 +78,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14TableWoodenRound
-  graph: CP14TableWoodenRound
+  id: CE14TableWoodenRound
+  graph: CE14TableWoodenRound
   startNode: start
-  targetNode: CP14TableWoodenRound
+  targetNode: CE14TableWoodenRound
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -91,10 +91,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14TableWoodenBirchRound
-  graph: CP14TableWoodenBirchRound
+  id: CE14TableWoodenBirchRound
+  graph: CE14TableWoodenBirchRound
   startNode: start
-  targetNode: CP14TableWoodenBirchRound
+  targetNode: CE14TableWoodenBirchRound
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -104,10 +104,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14TableWoodenCounter
-  graph: CP14TableWooden
+  id: CE14TableWoodenCounter
+  graph: CE14TableWooden
   startNode: start
-  targetNode: CP14TableWoodenCounter
+  targetNode: CE14TableWoodenCounter
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -117,10 +117,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14TableWoodenBirchCounter
-  graph: CP14TableWooden
+  id: CE14TableWoodenBirchCounter
+  graph: CE14TableWooden
   startNode: start
-  targetNode: CP14TableWoodenBirchCounter
+  targetNode: CE14TableWoodenBirchCounter
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -130,10 +130,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14OrderBoard
-  graph: CP14OrderBoard
+  id: CE14OrderBoard
+  graph: CE14OrderBoard
   startNode: start
-  targetNode: CP14OrderBoard
+  targetNode: CE14OrderBoard
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -144,10 +144,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14Mannequin
-  graph: CP14Mannequin
+  id: CE14Mannequin
+  graph: CE14Mannequin
   startNode: start
-  targetNode: CP14mannequin
+  targetNode: CE14mannequin
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -158,10 +158,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14TargetStake
-  graph: CP14TargetStake
+  id: CE14TargetStake
+  graph: CE14TargetStake
   startNode: start
-  targetNode: CP14targetStake
+  targetNode: CE14targetStake
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -171,10 +171,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14Target
-  graph: CP14TargetStake
+  id: CE14Target
+  graph: CE14TargetStake
   startNode: start
-  targetNode: CP14target
+  targetNode: CE14target
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -184,10 +184,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14TargetEffigy
-  graph: CP14TargetEffigy
+  id: CE14TargetEffigy
+  graph: CE14TargetEffigy
   startNode: start
-  targetNode: CP14targetEffigy
+  targetNode: CE14targetEffigy
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -198,10 +198,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WoodenBed
-  graph: CP14WoodenBed
+  id: CE14WoodenBed
+  graph: CE14WoodenBed
   startNode: start
-  targetNode: CP14WoodenBed
+  targetNode: CE14WoodenBed
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -212,10 +212,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14BirchWoodenBed
-  graph: CP14WoodenBed
+  id: CE14BirchWoodenBed
+  graph: CE14WoodenBed
   startNode: start
-  targetNode: CP14BirchWoodenBed
+  targetNode: CE14BirchWoodenBed
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -226,10 +226,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14BenchWood
-  graph: CP14BenchWood
+  id: CE14BenchWood
+  graph: CE14BenchWood
   startNode: start
-  targetNode: CP14BenchWood
+  targetNode: CE14BenchWood
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -240,10 +240,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14BenchWoodBirch
-  graph: CP14BenchWood
+  id: CE14BenchWoodBirch
+  graph: CE14BenchWood
   startNode: start
-  targetNode: CP14BenchWoodBirch
+  targetNode: CE14BenchWoodBirch
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -254,10 +254,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WoodenCloset
-  graph: CP14WoodenCloset
+  id: CE14WoodenCloset
+  graph: CE14WoodenCloset
   startNode: start
-  targetNode: CP14WoodenCloset
+  targetNode: CE14WoodenCloset
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -267,10 +267,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WoodenCabinet
-  graph: CP14WoodenCabinet
+  id: CE14WoodenCabinet
+  graph: CE14WoodenCabinet
   startNode: start
-  targetNode: CP14WoodenCabinet
+  targetNode: CE14WoodenCabinet
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -280,10 +280,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14IronCabinet
-  graph: CP14IronCabinet
+  id: CE14IronCabinet
+  graph: CE14IronCabinet
   startNode: start
-  targetNode: CP14IronCabinet
+  targetNode: CE14IronCabinet
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -293,10 +293,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14Furnace
-  graph: CP14Furnace
+  id: CE14Furnace
+  graph: CE14Furnace
   startNode: start
-  targetNode: CP14Furnace
+  targetNode: CE14Furnace
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter

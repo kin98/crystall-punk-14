@@ -1,9 +1,9 @@
 - type: construction
   crystallPunkAllowed: true
-  id: CP14CrateDirtPitGrave
-  graph: CP14CrateDirtPitGrave
+  id: CE14CrateDirtPitGrave
+  graph: CE14CrateDirtPitGrave
   startNode: start
-  targetNode: CP14CrateDirtPitGrave
+  targetNode: CE14CrateDirtPitGrave
   category: construction-category-storage
   objectType: Structure
   placementMode: SnapgridCenter
@@ -12,14 +12,14 @@
     - !type:TileNotBlocked
     - !type:TileType
       targets:
-        - CP14FloorDirt
+        - CE14FloorDirt
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WoodenChest
-  graph: CP14WoodenChest
+  id: CE14WoodenChest
+  graph: CE14WoodenChest
   startNode: start
-  targetNode: CP14WoodenChest
+  targetNode: CE14WoodenChest
   category: construction-category-storage
   objectType: Structure
   placementMode: SnapgridCenter
@@ -29,10 +29,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14GoldChest
-  graph: CP14GoldChest
+  id: CE14GoldChest
+  graph: CE14GoldChest
   startNode: start
-  targetNode: CP14GoldChest
+  targetNode: CE14GoldChest
   category: construction-category-storage
   objectType: Structure
   placementMode: SnapgridCenter
@@ -42,10 +42,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14SmallWoodenCrate
-  graph: CP14SmallWoodenCrate
+  id: CE14SmallWoodenCrate
+  graph: CE14SmallWoodenCrate
   startNode: start
-  targetNode: CP14SmallWoodenCrate
+  targetNode: CE14SmallWoodenCrate
   category: construction-category-storage
   objectType: Structure
   placementMode: SnapgridCenter
@@ -55,10 +55,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14LargeWoodenCrate
-  graph: CP14LargeWoodenCrate
+  id: CE14LargeWoodenCrate
+  graph: CE14LargeWoodenCrate
   startNode: start
-  targetNode: CP14LargeWoodenCrate
+  targetNode: CE14LargeWoodenCrate
   category: construction-category-storage
   objectType: Structure
   placementMode: SnapgridCenter
@@ -68,10 +68,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14CrateCoffin
-  graph: CP14CrateCoffin
+  id: CE14CrateCoffin
+  graph: CE14CrateCoffin
   startNode: start
-  targetNode: CP14CrateCoffin
+  targetNode: CE14CrateCoffin
   category: construction-category-storage
   objectType: Structure
   placementMode: SnapgridCenter
@@ -81,10 +81,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14BaseBarrel
-  graph: CP14BaseBarrel
+  id: CE14BaseBarrel
+  graph: CE14BaseBarrel
   startNode: start
-  targetNode: CP14BaseBarrel
+  targetNode: CE14BaseBarrel
   category: construction-category-storage
   objectType: Structure
   placementMode: PlaceFree
@@ -94,10 +94,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14CraneBarrel
-  graph: CP14CraneBarrel
+  id: CE14CraneBarrel
+  graph: CE14CraneBarrel
   startNode: start
-  targetNode: CP14CraneBarrel
+  targetNode: CE14CraneBarrel
   category: construction-category-storage
   objectType: Structure
   placementMode: SnapgridCenter
@@ -108,10 +108,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14CraneBarrelSmall
-  graph: CP14CraneBarrelSmall
+  id: CE14CraneBarrelSmall
+  graph: CE14CraneBarrelSmall
   startNode: start
-  targetNode: CP14CraneBarrelSmall
+  targetNode: CE14CraneBarrelSmall
   category: construction-category-storage
   objectType: Structure
   placementMode: SnapgridCenter

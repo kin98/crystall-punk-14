@@ -5,9 +5,9 @@ using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.RandomJobs;
+namespace Content.Server._CE14.RandomJobs;
 
-public sealed partial class CP14StationRandomJobsSystem : EntitySystem
+public sealed partial class CE14StationRandomJobsSystem : EntitySystem
 {
     [Dependency] private readonly StationJobsSystem _jobs = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -22,7 +22,7 @@ public sealed partial class CP14StationRandomJobsSystem : EntitySystem
 
     private void OnInit(StationInitializedEvent args)
     {
-        if (!TryComp<CP14StationRandomJobsComponent>(args.Station, out var randomJobs))
+        if (!TryComp<CE14StationRandomJobsComponent>(args.Station, out var randomJobs))
             return;
 
         foreach (var entry in randomJobs.Entries)

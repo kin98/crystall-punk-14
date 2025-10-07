@@ -1,34 +1,34 @@
-#- type: cp14Skill
-#  id: CP14ActionSpellShadowGrab
+#- type: CE14Skill
+#  id: CE14ActionSpellShadowGrab
 #  skillUiPosition: 0, 0
 #  tree: Dimension
 #  icon:
-#    sprite: _CP14/Actions/Spells/dimension.rsi
+#    sprite: _CE14/Actions/Spells/dimension.rsi
 #    state: shadow_grab
 #  effects:
 #- !type:AddAction
-#    action: CP14ActionSpellShadowGrab
+#    action: CE14ActionSpellShadowGrab
 #
-#- type: cp14Skill
-#  id: CP14ActionSpellShadowSwap
+#- type: CE14Skill
+#  id: CE14ActionSpellShadowSwap
 #  skillUiPosition: 0, 2
 #  tree: Dimension
 #  icon:
-#    sprite: _CP14/Actions/Spells/dimension.rsi
+#    sprite: _CE14/Actions/Spells/dimension.rsi
 #    state: shadow_swap
 #  effects:
 #- !type:AddAction
-#    action: CP14ActionSpellShadowSwap
+#    action: CE14ActionSpellShadowSwap
 #
-#- type: cp14Skill
-#  id: CP14ActionSpellShadowStep
+#- type: CE14Skill
+#  id: CE14ActionSpellShadowStep
 #  skillUiPosition: 0, 4
 #  learnCost: 2
 #  tree: Dimension
 #  icon:
-#    sprite: _CP14/Actions/Spells/dimension.rsi
+#    sprite: _CE14/Actions/Spells/dimension.rsi
 #    state: shadow_step
 #  effects:
 #- !type:AddAction
-#    action: CP14ActionSpellShadowStep
+#    action: CE14ActionSpellShadowStep
 

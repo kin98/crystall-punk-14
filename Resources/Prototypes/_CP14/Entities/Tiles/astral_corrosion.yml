@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14AstralCorrosion
+  id: CE14AstralCorrosion
   name: astral corrosion
   description: Glowing cracks in reality. It's probably fine.
   categories: [ ForkFiltered ]

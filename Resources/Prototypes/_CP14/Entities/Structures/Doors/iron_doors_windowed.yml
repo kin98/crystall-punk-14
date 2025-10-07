@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14IronDoorWindowed
+  id: CE14IronDoorWindowed
   parent:
-  - CP14BaseDoor
+  - CE14BaseDoor
   name: iron windowed door
   description: a solid iron door with a small window. You can look through it, of course, but it's hard to put your hand through.
   suffix: Opened
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Doors/iron_windowed_door.rsi
+    sprite: _CE14/Structures/Doors/iron_windowed_door.rsi
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
@@ -21,7 +21,7 @@
       path: /Audio/Effects/door_close.ogg
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14MetallicStructural
+    damageModifierSet: CE14MetallicStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -31,19 +31,19 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:ChangeConstructionNodeBehavior
-        node: CP14IronDoorFrame
+        node: CE14IronDoorFrame
   - type: Construction
-    graph: CP14IronDoor
-    node: CP14IronDoor
+    graph: CE14IronDoor
+    node: CE14IronDoor
 
 - type: entity
-  id: CP14IronDoorWindowedMirrored
-  parent: CP14IronDoorWindowed
+  id: CE14IronDoorWindowedMirrored
+  parent: CE14IronDoorWindowed
   suffix: Opened, Mirrored
   components:
   - type: Door
     openSpriteState: open_mirrored
     closedSpriteState: closed_mirrored
   - type: Construction
-    graph: CP14IronDoor
-    node: CP14IronDoorMirrored
+    graph: CE14IronDoor
+    node: CE14IronDoorMirrored

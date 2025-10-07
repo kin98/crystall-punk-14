@@ -1,12 +1,12 @@
 - type: entity
   abstract: true
-  id: CP14BaseWeaponWarAxe
+  id: CE14BaseWeaponWarAxe
   parent:
   - BaseItem
-  - CP14BaseWeaponChemical
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
-  - CP14BaseWeaponSharp
+  - CE14BaseWeaponChemical
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
+  - CE14BaseWeaponSharp
   components:
   - type: Item
     size: Ginormous
@@ -18,8 +18,8 @@
     damage:
       types:
         Slash: 10
-    animation: CP14WeaponArcThrust
-    wideAnimation: CP14WeaponArcSlash
+    animation: CE14WeaponArcThrust
+    wideAnimation: CE14WeaponArcSlash
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
     cPAnimationLength: 0.5
@@ -28,7 +28,7 @@
     damage:
       types:
         Slash: 15
-  - type: CP14MeleeWeaponStaminaCost
+  - type: CE14MeleeWeaponStaminaCost
     stamina: 10
   - type: Wieldable
   - type: Clothing
@@ -39,15 +39,15 @@
     unequipDelay: 1
 
 - type: entity
-  parent: CP14BaseWeaponWarAxe
-  id: CP14WeaponWarAxeIron
+  parent: CE14BaseWeaponWarAxe
+  id: CE14WeaponWarAxeIron
   name: iron war axe
   description: A heavy war axe made of iron, designed for powerful strikes in battle.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/WarAxe/iron.rsi
+    sprite: _CE14/Objects/Weapons/Melee/WarAxe/iron.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 20
-      CP14Iron: 20
+      CE14WoodenPlanks: 20
+      CE14Iron: 20

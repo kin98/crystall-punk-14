@@ -1,5 +1,5 @@
 using System.Text;
-using Content.Shared._CP14.Skill.Components;
+using Content.Shared._CE14.Skill.Components;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
 using Content.Shared.Hands.EntitySystems;
@@ -9,9 +9,9 @@ using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Network;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CP14.Skill;
+namespace Content.Shared._CE14.Skill;
 
-public abstract partial class CP14SharedSkillSystem
+public abstract partial class CE14SharedSkillSystem
 {
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -20,14 +20,14 @@ public abstract partial class CP14SharedSkillSystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     private void InitializeChecks()
     {
-        SubscribeLocalEvent<CP14MeleeWeaponSkillRequiredComponent, MeleeHitEvent>(OnMeleeAttack);
-        SubscribeLocalEvent<CP14MeleeWeaponSkillRequiredComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<CE14MeleeWeaponSkillRequiredComponent, MeleeHitEvent>(OnMeleeAttack);
+        SubscribeLocalEvent<CE14MeleeWeaponSkillRequiredComponent, ExaminedEvent>(OnExamined);
     }
 
-    private void OnExamined(Entity<CP14MeleeWeaponSkillRequiredComponent> ent, ref ExaminedEvent args)
+    private void OnExamined(Entity<CE14MeleeWeaponSkillRequiredComponent> ent, ref ExaminedEvent args)
     {
         var sb = new StringBuilder();
-        sb.Append(Loc.GetString("cp14-skill-issue-title") + "\n");
+        sb.Append(Loc.GetString("CE14-skill-issue-title") + "\n");
 
         foreach (var skill in ent.Comp.Skills)
         {
@@ -43,7 +43,7 @@ public abstract partial class CP14SharedSkillSystem
         args.PushMarkup(sb.ToString());
     }
 
-    private void OnMeleeAttack(Entity<CP14MeleeWeaponSkillRequiredComponent> ent, ref MeleeHitEvent args)
+    private void OnMeleeAttack(Entity<CE14MeleeWeaponSkillRequiredComponent> ent, ref MeleeHitEvent args)
     {
         if (!_skillStorageQuery.TryComp(args.User, out var skillStorage))
             return;
@@ -69,6 +69,6 @@ public abstract partial class CP14SharedSkillSystem
         _hands.TryDrop(args.User, ent);
         _throwing.TryThrow(ent,  _random.NextAngle().ToWorldVec() * 2, 2f, args.User);
         _damageable.TryChangeDamage(args.User, args.BaseDamage);
-        _popup.PopupEntity(Loc.GetString("cp14-skill-issue"), args.User, args.User, PopupType.Medium);
+        _popup.PopupEntity(Loc.GetString("CE14-skill-issue"), args.User, args.User, PopupType.Medium);
     }
 }

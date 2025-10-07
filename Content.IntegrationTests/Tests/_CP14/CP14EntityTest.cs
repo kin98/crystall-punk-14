@@ -1,15 +1,15 @@
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 
-namespace Content.IntegrationTests.Tests._CP14;
+namespace Content.IntegrationTests.Tests._CE14;
 
 #nullable enable
 
 [TestFixture]
-public sealed class CP14EntityTest
+public sealed class CE14EntityTest
 {
     [Test]
-    public async Task CheckAllCP14EntityHasForkFilteredCategory()
+    public async Task CheckAllCE14EntityHasForkFilteredCategory()
     {
         await using var pair = await PoolManager.GetServerClient();
         var server = pair.Server;
@@ -26,13 +26,13 @@ public sealed class CP14EntityTest
 
                 foreach (var proto in protoManager.EnumeratePrototypes<EntityPrototype>())
                 {
-                    if (!proto.ID.StartsWith("CP14"))
+                    if (!proto.ID.StartsWith("CE14"))
                         continue;
 
                     if (proto.Abstract || proto.HideSpawnMenu)
                         continue;
 
-                    Assert.That(proto.Categories.Contains(indexedFilter), $"CP14 fork proto: {proto} does not marked abstract, or have a HideSpawnMenu or ForkFiltered category");
+                    Assert.That(proto.Categories.Contains(indexedFilter), $"CE14 fork proto: {proto} does not marked abstract, or have a HideSpawnMenu or ForkFiltered category");
                 }
             });
         });

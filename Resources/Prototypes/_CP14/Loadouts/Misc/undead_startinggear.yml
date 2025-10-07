@@ -1,32 +1,32 @@
 - type: startingGear
-  id: CP14MobUndeadEasy1
+  id: CE14MobUndeadEasy1
   equipment:
-    shirt: CP14ClothingShirtCottonBlack
-    pants: CP14ClothingPantsTrouserDarkBlue
-    belt: CP14WalletFilledLootT1
+    shirt: CE14ClothingShirtCottonBlack
+    pants: CE14ClothingPantsTrouserDarkBlue
+    belt: CE14WalletFilledLootT1
 
 - type: startingGear
-  id: CP14MobUndeadEasy2
+  id: CE14MobUndeadEasy2
   equipment:
-    head: CP14ClothingHeadMetalHeadband
-    pants: CP14ClothingPantsLoincloth
+    head: CE14ClothingHeadMetalHeadband
+    pants: CE14ClothingPantsLoincloth
 
 - type: startingGear
-  id: CP14MobUndeadEasy3
+  id: CE14MobUndeadEasy3
   equipment:
-    pants: CP14ClothingPantsTrouserDarkBlue
-    shoes: CP14ClothingShoesSandals
-    mask: CP14ClothingMaskSinner
+    pants: CE14ClothingPantsTrouserDarkBlue
+    shoes: CE14ClothingShoesSandals
+    mask: CE14ClothingMaskSinner
 
 - type: startingGear
-  id: CP14MobUndeadEasy4
+  id: CE14MobUndeadEasy4
   equipment:
-    cloak: CP14ClothingCloakRitualAttireLeather
-    pants: CP14ClothingPantsGreen
+    cloak: CE14ClothingCloakRitualAttireLeather
+    pants: CE14ClothingPantsGreen
 
 - type: startingGear
-  id: CP14MobUndeadEasy5
+  id: CE14MobUndeadEasy5
   equipment:
-    pants: CP14ClothingPantsBrown
-    outerClothing: CP14ClothingOuterClothingBrownVest1
-    belt: CP14WalletFilledLootT1
+    pants: CE14ClothingPantsBrown
+    outerClothing: CE14ClothingOuterClothingBrownVest1
+    belt: CE14WalletFilledLootT1

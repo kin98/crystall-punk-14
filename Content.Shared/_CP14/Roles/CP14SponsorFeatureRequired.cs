@@ -1,5 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Shared._CP14.Sponsor;
+using Content.Shared._CE14.Sponsor;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using JetBrains.Annotations;
@@ -8,17 +8,17 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Roles;
+namespace Content.Shared._CE14.Roles;
 
 /// <summary>
 /// Requires a character to have, or not have, certain traits
 /// </summary>
 [UsedImplicitly]
 [Serializable, NetSerializable]
-public sealed partial class CP14SponsorFeatureRequired : JobRequirement
+public sealed partial class CE14SponsorFeatureRequired : JobRequirement
 {
     [DataField(required: true)]
-    public ProtoId<CP14SponsorFeaturePrototype> Feature = string.Empty;
+    public ProtoId<CE14SponsorFeaturePrototype> Feature = string.Empty;
 
     public override bool Check(NetUserId? userId,
         IEntityManager entManager,
@@ -32,7 +32,7 @@ public sealed partial class CP14SponsorFeatureRequired : JobRequirement
         if (userId is null)
             return false;
 
-        var sponsorship = IoCManager.Resolve<ICP14SponsorManager>();
+        var sponsorship = IoCManager.Resolve<ICE14SponsorManager>();
 
         var haveFeature = sponsorship.UserHasFeature(userId.Value, Feature);
 
@@ -47,17 +47,17 @@ public sealed partial class CP14SponsorFeatureRequired : JobRequirement
 
         if (indexedRole == null)
             return false;
-        reason = FormattedMessage.FromMarkupPermissive(Loc.GetString("cp14-role-req-sponsor-feature-req", ("role", indexedRole.Name)));
+        reason = FormattedMessage.FromMarkupPermissive(Loc.GetString("CE14-role-req-sponsor-feature-req", ("role", indexedRole.Name)));
 
         return false;
     }
 
-    public ProtoId<CP14SponsorRolePrototype>? GetLowestPriorityRole(float priority, IPrototypeManager protoMan)
+    public ProtoId<CE14SponsorRolePrototype>? GetLowestPriorityRole(float priority, IPrototypeManager protoMan)
     {
-        ProtoId<CP14SponsorRolePrototype>? lowestRole = null;
+        ProtoId<CE14SponsorRolePrototype>? lowestRole = null;
         float lowestPriority = float.MaxValue;
 
-        foreach (var role in protoMan.EnumeratePrototypes<CP14SponsorRolePrototype>())
+        foreach (var role in protoMan.EnumeratePrototypes<CE14SponsorRolePrototype>())
         {
             if (!role.Examinable)
                 continue;

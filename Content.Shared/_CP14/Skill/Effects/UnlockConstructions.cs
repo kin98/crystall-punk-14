@@ -1,16 +1,16 @@
 using System.Text;
-using Content.Shared._CP14.Skill.Prototypes;
-using Content.Shared._CP14.Skill.Restrictions;
+using Content.Shared._CE14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Restrictions;
 using Content.Shared.Construction;
 using Content.Shared.Construction.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill.Effects;
+namespace Content.Shared._CE14.Skill.Effects;
 
 /// <summary>
 /// This effect only exists for parsing the description.
 /// </summary>
-public sealed partial class UnlockConstructions : CP14SkillEffect
+public sealed partial class UnlockConstructions : CE14SkillEffect
 {
     public override void AddSkill(IEntityManager entManager, EntityUid target)
     {
@@ -27,17 +27,17 @@ public sealed partial class UnlockConstructions : CP14SkillEffect
         return null;
     }
 
-    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CP14SkillPrototype> skill)
+    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CE14SkillPrototype> skill)
     {
         var allRecipes = protoManager.EnumeratePrototypes<ConstructionPrototype>();
 
         var sb = new StringBuilder();
-        sb.Append(Loc.GetString("cp14-skill-desc-unlock-constructions") + "\n");
+        sb.Append(Loc.GetString("CE14-skill-desc-unlock-constructions") + "\n");
 
         var affectedRecipes = new List<ConstructionPrototype>();
         foreach (var recipe in allRecipes)
         {
-            foreach (var req in recipe.CP14Restrictions)
+            foreach (var req in recipe.CE14Restrictions)
             {
                 if (req is NeedPrerequisite prerequisite)
                 {

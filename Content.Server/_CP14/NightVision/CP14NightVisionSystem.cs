@@ -1,7 +1,7 @@
-using Content.Shared._CP14.NightVision;
+using Content.Shared._CE14.NightVision;
 
-namespace Content.Server._CP14.NightVision;
+namespace Content.Server._CE14.NightVision;
 
-public sealed class CP14NightVisionSystem : CP14SharedNightVisionSystem
+public sealed class CE14NightVisionSystem : CE14SharedNightVisionSystem
 {
 }

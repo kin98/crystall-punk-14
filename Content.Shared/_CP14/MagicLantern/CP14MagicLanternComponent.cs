@@ -1,10 +1,10 @@
-namespace Content.Shared._CP14.MagicLantern;
+namespace Content.Shared._CE14.MagicLantern;
 
 /// <summary>
 /// Controls the object's glow based on magical energy
 /// </summary>
-[RegisterComponent, Access(typeof(CP14MagicLanternSystem))]
-public sealed partial class CP14MagicLanternComponent : Component
+[RegisterComponent, Access(typeof(CE14MagicLanternSystem))]
+public sealed partial class CE14MagicLanternComponent : Component
 {
 
 }

@@ -1,12 +1,12 @@
 - type: entity
   abstract: true
-  id: CP14BaseWeaponSword
+  id: CE14BaseWeaponSword
   parent:
   - BaseItem
-  - CP14BaseWeaponChemical
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
-  - CP14BaseWeaponSharp
+  - CE14BaseWeaponChemical
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
+  - CE14BaseWeaponSharp
   components:
   - type: Item
     size: Ginormous
@@ -18,13 +18,13 @@
     damage:
       types:
         Slash: 7.5
-    animation: CP14WeaponArcThrust
-    wideAnimation: CP14WeaponArcSlash
+    animation: CE14WeaponArcThrust
+    wideAnimation: CE14WeaponArcSlash
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
     cPAnimationLength: 0.25
     cPAnimationOffset: 1
-  - type: CP14ComboBonusMeleeDamage
+  - type: CE14ComboBonusMeleeDamage
     bonusDamage:
       types:
         Piercing: 5
@@ -36,15 +36,15 @@
     unequipDelay: 1
 
 - type: entity
-  parent: CP14BaseWeaponSword
-  id: CP14WeaponSwordIron
+  parent: CE14BaseWeaponSword
+  id: CE14WeaponSwordIron
   name: iron sword
   description: A finely crafted sword favored by imperial officers. Its blade gleams with authority and tradition.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Sword/iron.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Sword/iron.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 10
-      CP14Iron: 20
+      CE14WoodenPlanks: 10
+      CE14Iron: 20

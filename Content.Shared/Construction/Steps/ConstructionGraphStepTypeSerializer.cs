@@ -1,4 +1,4 @@
-﻿using Content.Shared._CP14.Workbench.Prototypes;
+﻿using Content.Shared._CE14.Workbench.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Serialization.Markdown.Mapping;
@@ -47,12 +47,12 @@ namespace Content.Shared.Construction.Steps
                 return typeof(PartAssemblyConstructionGraphStep);
             }
 
-            //CP14 stack group support
+            //CE14 stack group support
             if (node.Has("stackGroup"))
             {
-                return typeof(CP14StackGroupConstructionGraphStep);
+                return typeof(CE14StackGroupConstructionGraphStep);
             }
-            //CP14 stack group support end
+            //CE14 stack group support end
 
             return null;
         }

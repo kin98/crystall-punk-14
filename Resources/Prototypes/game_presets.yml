@@ -114,7 +114,7 @@
   - BasicRoundstartVariation
 
 - type: gamePreset
-  id: NOCP14Secret #Disabled
+  id: NOCE14Secret #Disabled
   alias:
     - secret
     - sekrit

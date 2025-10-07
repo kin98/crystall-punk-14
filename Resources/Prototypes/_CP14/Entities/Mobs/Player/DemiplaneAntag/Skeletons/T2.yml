@@ -1,24 +1,24 @@
 - type: entity
-  id: CP14MobUndeadSkeletonDemiplaneT2
-  parent: CP14MobUndeadSkeletonDemiplaneT1 
+  id: CE14MobUndeadSkeletonDemiplaneT2
+  parent: CE14MobUndeadSkeletonDemiplaneT1 
   name: skeleton
   abstract: true
   components:
-  - type: CP14NightVision
+  - type: CE14NightVision
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
 
 - type: entity
-  id: CP14MobUndeadSkeletonHalberdT2
-  parent: CP14MobUndeadSkeletonDemiplaneT2
+  id: CE14MobUndeadSkeletonHalberdT2
+  parent: CE14MobUndeadSkeletonDemiplaneT2
   categories: [ ForkFiltered ]
   suffix: Halebard T2
   components:
   - type: Loadout
     prototypes:
-    - CP14MobSkeletonHalberdT2
-  - type: CP14SkillStorage
+    - CE14MobSkeletonHalberdT2
+  - type: CE14SkillStorage
     skillPoints:
       Memory:
         max: 0 
@@ -26,41 +26,41 @@
     #- SwordMastery
     - AthleticT1
     - AthleticT2
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     grantAccessToSelf: true
     spells:
-    - CP14ActionSpellKick
+    - CE14ActionSpellKick
 
 - type: entity
-  id: CP14MobUndeadSkeletonSwordT2
-  parent: CP14MobUndeadSkeletonDemiplaneT2
+  id: CE14MobUndeadSkeletonSwordT2
+  parent: CE14MobUndeadSkeletonDemiplaneT2
   categories: [ ForkFiltered ]
   suffix: Sword T2
   components:
   - type: Loadout
     prototypes:
-    - CP14MobSkeletonSwordT2
-  - type: CP14SkillStorage
+    - CE14MobSkeletonSwordT2
+  - type: CE14SkillStorage
     skillPoints:
       Memory:
         max: 0 
     #freeLearnedSkills:
     #- SwordMastery
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     grantAccessToSelf: true
     spells:
-    - CP14ActionSpellKick
+    - CE14ActionSpellKick
 
 - type: entity
-  id: CP14MobUndeadSkeletonDodgerT2
-  parent: CP14MobUndeadSkeletonDemiplaneT2
+  id: CE14MobUndeadSkeletonDodgerT2
+  parent: CE14MobUndeadSkeletonDemiplaneT2
   categories: [ ForkFiltered ]
   suffix: Dodger T2
   components:
   - type: Loadout
     prototypes:
-    - CP14MobSkeletonDodgerT2
-  - type: CP14SkillStorage
+    - CE14MobSkeletonDodgerT2
+  - type: CE14SkillStorage
     skillPoints:
       Memory:
         max: 0
@@ -69,48 +69,48 @@
     - AthleticT1
     - AthleticT2
     - AthleticT3
-    - CP14ActionSpellKick
-    - CP14ActionSpellSprint
-    - CP14ActionSpellDash
+    - CE14ActionSpellKick
+    - CE14ActionSpellSprint
+    - CE14ActionSpellDash
 
 - type: entity
-  id: CP14MobUndeadSkeletonArcherT2
-  parent: CP14MobUndeadSkeletonDemiplaneT2
+  id: CE14MobUndeadSkeletonArcherT2
+  parent: CE14MobUndeadSkeletonDemiplaneT2
   categories: [ ForkFiltered ]
   suffix: Archer T2
   components:
   - type: Loadout
     prototypes:
-    - CP14MobSkeletonArcherT2
-  - type: CP14SpellStorage
+    - CE14MobSkeletonArcherT2
+  - type: CE14SpellStorage
     grantAccessToSelf: true
     spells:
-    - CP14ActionSpellShadowStep
-    - CP14ActionSpellSprint
-  - type: CP14SkillStorage
+    - CE14ActionSpellShadowStep
+    - CE14ActionSpellSprint
+  - type: CE14SkillStorage
     skillPoints:
       Memory:
         max: 1
     freeLearnedSkills:
     - HydrosophistryT1
     learnedSkills:
-    - CP14ActionSpellIceArrow
+    - CE14ActionSpellIceArrow
 
 - type: entity
-  id: CP14MobUndeadSkeletonWizardT2
-  parent: CP14MobUndeadSkeletonDemiplaneT2
+  id: CE14MobUndeadSkeletonWizardT2
+  parent: CE14MobUndeadSkeletonDemiplaneT2
   categories: [ ForkFiltered ]
   suffix: Wizard T2
   components:
   - type: Loadout
     prototypes:
-    - CP14MobSkeletonWizardT2
-  - type: CP14MagicEnergyContainer
-    magicAlert: CP14MagicEnergy
+    - CE14MobSkeletonWizardT2
+  - type: CE14MagicEnergyContainer
+    magicAlert: CE14MagicEnergy
     maxEnergy: 200
     energy: 200
     unsafeSupport: true
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 1
     delay: 5
   - type: PassiveDamage
@@ -118,8 +118,8 @@
     - Alive
     damage:
       types:
-        CP14ManaDepletion: -0.1
-  - type: CP14SkillStorage
+        CE14ManaDepletion: -0.1
+  - type: CE14SkillStorage
     skillPoints:
       Memory:
         max: 4
@@ -130,35 +130,35 @@
     - MetamagicT1
     - MetamagicT2
     - PyrokineticT1
-    - CP14ActionSpellManaConsume
-    - CP14ActionSpellManaGift
-    - CP14ActionSpellManaConsumeElf
-    - CP14ActionSpellManaGiftElf
-    - CP14ActionSpellMagicSplitting
-  - type: CP14SpellStorage
+    - CE14ActionSpellManaConsume
+    - CE14ActionSpellManaGift
+    - CE14ActionSpellManaConsumeElf
+    - CE14ActionSpellManaGiftElf
+    - CE14ActionSpellMagicSplitting
+  - type: CE14SpellStorage
     grantAccessToSelf: true
     spells:
-    - CP14ActionSpellCallBoneHound
+    - CE14ActionSpellCallBoneHound
 
 - type: entity
-  id: CP14MobUndeadSkeletonBardT2
-  parent: CP14MobUndeadSkeletonDemiplaneT2
+  id: CE14MobUndeadSkeletonBardT2
+  parent: CE14MobUndeadSkeletonDemiplaneT2
   categories: [ ForkFiltered ]
   suffix: Bard T2
   components:
   - type: Loadout
     prototypes:
-    - CP14MobSkeletonBardT2
-  - type: CP14SpellStorage
+    - CE14MobSkeletonBardT2
+  - type: CE14SpellStorage
     grantAccessToSelf: true
     spells:
-    - CP14ActionSpellMagicBallade
-    - CP14ActionSpellSpeedBallade
-    - CP14ActionSpellPeaceBallade
-    - CP14ActionSpellHellBallade
+    - CE14ActionSpellMagicBallade
+    - CE14ActionSpellSpeedBallade
+    - CE14ActionSpellPeaceBallade
+    - CE14ActionSpellHellBallade
 
 - type: entity
-  id: CP14SpawnPointGhostDemiplaneSkeletonT2
+  id: CE14SpawnPointGhostDemiplaneSkeletonT2
   name: ghost role spawn point
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton random T2
@@ -171,24 +171,24 @@
       - !type:GroupSelector
         weight: 40
         children:
-        - id: CP14SpawnPointGhostDemiplaneSkeletonWizardT2
-#        - id: CP14SpawnPointGhostDemiplaneSkeletonBardT2
+        - id: CE14SpawnPointGhostDemiplaneSkeletonWizardT2
+#        - id: CE14SpawnPointGhostDemiplaneSkeletonBardT2
       - !type:GroupSelector
         weight: 60
         children:
-        - id: CP14SpawnPointGhostDemiplaneSkeletonSwordT2
-        - id: CP14SpawnPointGhostDemiplaneSkeletonDodgerT2
-        - id: CP14SpawnPointGhostDemiplaneSkeletonArcherT2
-        - id: CP14SpawnPointGhostDemiplaneSkeletonHalberdT2
+        - id: CE14SpawnPointGhostDemiplaneSkeletonSwordT2
+        - id: CE14SpawnPointGhostDemiplaneSkeletonDodgerT2
+        - id: CE14SpawnPointGhostDemiplaneSkeletonArcherT2
+        - id: CE14SpawnPointGhostDemiplaneSkeletonHalberdT2
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
       - state: green
-      - sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+      - sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
         state: full
 
 - type: entity
-  id: CP14SpawnPointGhostDemiplaneSkeletonHalberdT2
+  id: CE14SpawnPointGhostDemiplaneSkeletonHalberdT2
   name: ghost role spawn point
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton Halebard T2
@@ -196,84 +196,84 @@
   parent: MarkerBase
   components:
   - type: GhostRole
-    name: cp14-ghost-role-information-name-skeleton
+    name: CE14-ghost-role-information-name-skeleton
     allowMovement: true
-    description: cp14-ghost-role-information-description-skeleton
-    rules: cp14-ghost-role-information-rules-demiplane
+    description: CE14-ghost-role-information-description-skeleton
+    rules: CE14-ghost-role-information-rules-demiplane
     mindRoles:
-    - CP14MindRoleDemiplaneAntag
+    - CE14MindRoleDemiplaneAntag
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: CP14MobUndeadSkeletonHalberdT2
+    prototype: CE14MobUndeadSkeletonHalberdT2
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
       - state: green
-      - sprite: _CP14/Mobs/Species/Skeleton/parts.rsi
+      - sprite: _CE14/Mobs/Species/Skeleton/parts.rsi
         state: full
 
 - type: entity
-  id: CP14SpawnPointGhostDemiplaneSkeletonSwordT2
+  id: CE14SpawnPointGhostDemiplaneSkeletonSwordT2
   name: ghost role spawn point
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton Sword T2
   categories: [ ForkFiltered ]
-  parent: CP14SpawnPointGhostDemiplaneSkeletonHalberdT2
+  parent: CE14SpawnPointGhostDemiplaneSkeletonHalberdT2
   components:
   - type: GhostRoleMobSpawner
-    prototype: CP14MobUndeadSkeletonSwordT2
+    prototype: CE14MobUndeadSkeletonSwordT2
   - type: GhostRole
-    name: cp14-ghost-role-information-name-skeleton
+    name: CE14-ghost-role-information-name-skeleton
 
 - type: entity
-  id: CP14SpawnPointGhostDemiplaneSkeletonDodgerT2
+  id: CE14SpawnPointGhostDemiplaneSkeletonDodgerT2
   name: ghost role spawn point
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton Dodger T2
   categories: [ ForkFiltered ]
-  parent: CP14SpawnPointGhostDemiplaneSkeletonHalberdT2
+  parent: CE14SpawnPointGhostDemiplaneSkeletonHalberdT2
   components:
   - type: GhostRoleMobSpawner
-    prototype: CP14MobUndeadSkeletonDodgerT2
+    prototype: CE14MobUndeadSkeletonDodgerT2
   - type: GhostRole
-    name: cp14-ghost-role-information-name-skeleton
+    name: CE14-ghost-role-information-name-skeleton
 
 - type: entity
-  id: CP14SpawnPointGhostDemiplaneSkeletonArcherT2
+  id: CE14SpawnPointGhostDemiplaneSkeletonArcherT2
   name: ghost role spawn point
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton Archer T2
   categories: [ ForkFiltered ]
-  parent: CP14SpawnPointGhostDemiplaneSkeletonHalberdT2
+  parent: CE14SpawnPointGhostDemiplaneSkeletonHalberdT2
   components:
   - type: GhostRoleMobSpawner
-    prototype: CP14MobUndeadSkeletonArcherT2
+    prototype: CE14MobUndeadSkeletonArcherT2
   - type: GhostRole
-    name: cp14-ghost-role-information-name-skeleton
+    name: CE14-ghost-role-information-name-skeleton
 
 - type: entity
-  id: CP14SpawnPointGhostDemiplaneSkeletonWizardT2
+  id: CE14SpawnPointGhostDemiplaneSkeletonWizardT2
   name: ghost role spawn point
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton Wizard T2
   categories: [ ForkFiltered ]
-  parent: CP14SpawnPointGhostDemiplaneSkeletonHalberdT2
+  parent: CE14SpawnPointGhostDemiplaneSkeletonHalberdT2
   components:
   - type: GhostRoleMobSpawner
-    prototype: CP14MobUndeadSkeletonWizardT2
+    prototype: CE14MobUndeadSkeletonWizardT2
   - type: GhostRole
-    name: cp14-ghost-role-information-name-skeleton
+    name: CE14-ghost-role-information-name-skeleton
 
 - type: entity
-  id: CP14SpawnPointGhostDemiplaneSkeletonBardT2
+  id: CE14SpawnPointGhostDemiplaneSkeletonBardT2
   name: ghost role spawn point
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton Bard T2
   categories: [ ForkFiltered ]
-  parent: CP14SpawnPointGhostDemiplaneSkeletonHalberdT2
+  parent: CE14SpawnPointGhostDemiplaneSkeletonHalberdT2
   components:
   - type: GhostRoleMobSpawner
-    prototype: CP14MobUndeadSkeletonBardT2
+    prototype: CE14MobUndeadSkeletonBardT2
   - type: GhostRole
-    name: cp14-ghost-role-information-name-skeleton
+    name: CE14-ghost-role-information-name-skeleton

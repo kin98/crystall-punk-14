@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14ShipExplosion
+  id: CE14ShipExplosion
   parent: AdminInstantEffectBase
   categories: [ ForkFiltered ]
   suffix: Fire Explosion
@@ -12,7 +12,7 @@
   - type: ExplodeOnTrigger
 
 - type: entity
-  id: CP14ShipExplosionBig
+  id: CE14ShipExplosionBig
   parent: AdminInstantEffectBase
   categories: [ ForkFiltered ]
   suffix: Big Fire Explosion

@@ -1,16 +1,16 @@
 - type: constructionGraph
-  id: CP14Torch
+  id: CE14Torch
   start: start
   graph:
   - node: start
     edges:
-    - to: cp14torch
+    - to: CE14torch
       steps:
-      - material: CP14WoodenPlanks
+      - material: CE14WoodenPlanks
         amount: 1
-      - material: CP14Cloth
+      - material: CE14Cloth
         amount: 1
         doAfter: 4
 
-  - node: cp14torch
-    entity: CP14Torch
+  - node: CE14torch
+    entity: CE14Torch

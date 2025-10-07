@@ -1,21 +1,21 @@
 - type: entity
-  id: CP14ActionSpellSphereOfLight
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellSphereOfLight
+  parent: CE14ActionSpellBase
   name: Sphere of Light
   description: Materialization of a bright and safe light source.
   components:
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 10
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Appare in manu tua..."
     endSpeech: "sphaera lucis"
-  - type: CP14ActionFreeHandsRequired
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneSphereOfLight
+  - type: CE14ActionFreeHandsRequired
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneSphereOfLight
   - type: Action
     useDelay: 30
     icon:
-      sprite: _CP14/Actions/Spells/light.rsi
+      sprite: _CE14/Actions/Spells/light.rsi
       state: sphere_of_light
   - type: DoAfterArgs
     delay: 0.5
@@ -27,18 +27,18 @@
       - MobState
       - Item
       - Anchorable
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectSphereOfLight
-      - !type:CP14SpellApplyStatusEffect
-        statusEffect: CP14StatusEffectGlowing
+        - CE14ImpactEffectSphereOfLight
+      - !type:CE14SpellApplyStatusEffect
+        statusEffect: CE14StatusEffectGlowing
         duration: 120
 
 - type: entity
-  id: CP14RuneSphereOfLight
-  parent: CP14BaseMagicRune
+  id: CE14RuneSphereOfLight
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -51,8 +51,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectSphereOfLight
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectSphereOfLight
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -63,10 +63,10 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14BaseSpellScrollLight
-  id: CP14SpellScrollSphereOfLight
+  parent: CE14BaseSpellScrollLight
+  id: CE14SpellScrollSphereOfLight
   name: sphere of light spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellSphereOfLight
+    - CE14ActionSpellSphereOfLight

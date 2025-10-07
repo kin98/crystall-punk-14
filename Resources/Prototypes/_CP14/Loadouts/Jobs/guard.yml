@@ -2,100 +2,100 @@
 # Cloak
 
 - type: loadoutGroup
-  id: CP14GuardCloak
-  name: cp14-loadout-guard-cloak
+  id: CE14GuardCloak
+  name: CE14-loadout-guard-cloak
   minLimit: 0
   loadouts:
-  - CP14ClothingCloakGuardBlue
-  - CP14ClothingCloakGuardSyurko
+  - CE14ClothingCloakGuardBlue
+  - CE14ClothingCloakGuardSyurko
 
 - type: loadout
-  id: CP14ClothingCloakGuardBlue
+  id: CE14ClothingCloakGuardBlue
   equipment:
-    cloak: CP14ClothingCloakGuardBlue
+    cloak: CE14ClothingCloakGuardBlue
 
 - type: loadout
-  id: CP14ClothingCloakGuardSyurko
+  id: CE14ClothingCloakGuardSyurko
   equipment:
-    cloak: CP14ClothingCloakGuardSyurko
+    cloak: CE14ClothingCloakGuardSyurko
 
 # Head
 
 - type: loadoutGroup
-  id: CP14GuardHead
-  name: cp14-loadout-guard-head
+  id: CE14GuardHead
+  name: CE14-loadout-guard-head
   minLimit: 1
   loadouts:
-  - CP14ClothingHeadGuardHelmet
-  - CP14ClothingHeadGuardCorinthianHelmet
-  - CP14ClothingHeadGuardCap
-  - CP14ClothingHeadGuardFedora
+  - CE14ClothingHeadGuardHelmet
+  - CE14ClothingHeadGuardCorinthianHelmet
+  - CE14ClothingHeadGuardCap
+  - CE14ClothingHeadGuardFedora
 
 - type: loadout
-  id: CP14ClothingHeadGuardHelmet
+  id: CE14ClothingHeadGuardHelmet
   equipment:
-    head: CP14ClothingHeadGuardHelmet
+    head: CE14ClothingHeadGuardHelmet
 
 - type: loadout
-  id: CP14ClothingHeadGuardCorinthianHelmet
+  id: CE14ClothingHeadGuardCorinthianHelmet
   equipment:
-    head: CP14ClothingHeadGuardCorinthianHelmet
+    head: CE14ClothingHeadGuardCorinthianHelmet
 
 - type: loadout
-  id: CP14ClothingHeadGuardCap
+  id: CE14ClothingHeadGuardCap
   equipment:
-    head: CP14ClothingHeadGuardCap
+    head: CE14ClothingHeadGuardCap
 
 - type: loadout
-  id: CP14ClothingHeadGuardFedora
+  id: CE14ClothingHeadGuardFedora
   equipment:
-    head: CP14ClothingHeadGuardFedora
+    head: CE14ClothingHeadGuardFedora
 
 # Pants
 
 - type: loadoutGroup
-  id: CP14GuardPants
-  name: cp14-loadout-guard-pants
+  id: CE14GuardPants
+  name: CE14-loadout-guard-pants
   loadouts:
-  - CP14ClothingPantsGuardsChainmailSkirt
+  - CE14ClothingPantsGuardsChainmailSkirt
 
 - type: loadout
-  id: CP14ClothingPantsGuardsChainmailSkirt
+  id: CE14ClothingPantsGuardsChainmailSkirt
   equipment:
-    pants: CP14ClothingPantsGuardsChainmailSkirt
+    pants: CE14ClothingPantsGuardsChainmailSkirt
 
 # Shirt
 
 - type: loadoutGroup
-  id: CP14GuardShirt
-  name: cp14-loadout-guard-shirt
+  id: CE14GuardShirt
+  name: CE14-loadout-guard-shirt
   loadouts:
-  - CP14ClothingShirtGuardsChainmailShirtB
+  - CE14ClothingShirtGuardsChainmailShirtB
 
 - type: loadout
-  id: CP14ClothingShirtGuardsChainmailShirtB
+  id: CE14ClothingShirtGuardsChainmailShirtB
   equipment:
-    shirt: CP14ClothingShirtGuardsChainmailShirtB
+    shirt: CE14ClothingShirtGuardsChainmailShirtB
 
 # Weapon
 
 - type: loadoutGroup
-  id: CP14GuardEquip
-  name: cp14-loadout-guard-equip
+  id: CE14GuardEquip
+  name: CE14-loadout-guard-equip
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - CP14BowCombat
-  - CP14WeaponDaggerIron
-  - CP14WeaponSwordIron
-  - CP14WeaponSkimitarIron
-  - CP14WeaponSpearIron
-  - CP14WeaponWarHammerIron
-  - CP14WeaponTwoHandedSwordIron
-  - CP14WeaponWarAxeIron
-  - CP14MagicGuardElectroStaff
+  - CE14BowCombat
+  - CE14WeaponDaggerIron
+  - CE14WeaponSwordIron
+  - CE14WeaponSkimitarIron
+  - CE14WeaponSpearIron
+  - CE14WeaponWarHammerIron
+  - CE14WeaponTwoHandedSwordIron
+  - CE14WeaponWarAxeIron
+  - CE14MagicGuardElectroStaff
 
 - type: loadout
-  id: CP14MagicGuardElectroStaff
+  id: CE14MagicGuardElectroStaff
   equipment:
-    belt2: CP14MagicGuardElectroStaff
+    belt2: CE14MagicGuardElectroStaff

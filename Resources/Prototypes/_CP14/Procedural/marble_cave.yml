@@ -1,9 +1,9 @@
 - type: biomeTemplate
-  id: CP14MarbleCaves
+  id: CE14MarbleCaves
   layers:
     - !type:BiomeTileLayer
       threshold: -1.0
-      tile: CP14FloorMarbleCave
+      tile: CE14FloorMarbleCave
     #Rocks
     - !type:BiomeEntityLayer
       threshold: 0.4
@@ -13,9 +13,9 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorMarbleCave
+        - CE14FloorMarbleCave
       entities:
-        - CP14RockSmall
+        - CE14RockSmall
     # Lakes
     - !type:BiomeEntityLayer
       threshold: -0.45
@@ -28,9 +28,9 @@
         frequency: 0.1
         gain: 0.5
       allowedTiles:
-        - CP14FloorMarbleCave
+        - CE14FloorMarbleCave
       entities:
-        - CP14FloorLava
+        - CE14FloorLava
     - !type:BiomeEntityLayer
       threshold: -0.45
       invert: true
@@ -42,7 +42,7 @@
         frequency: 0.1
         gain: 0.5
       allowedTiles:
-        - CP14FloorMarbleCave
+        - CE14FloorMarbleCave
       entities:
-        - CP14WallMarbleStone
+        - CE14WallMarbleStone
 

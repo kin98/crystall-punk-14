@@ -1,10 +1,10 @@
 - type: entity
   abstract: true
-  id: CP14BaseWeaponTowerShield
+  id: CE14BaseWeaponTowerShield
   parent:
   - BaseItem
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
   name: tower wooden shield
   description: A wooden shield capable of withstanding multiple blows.
   components:
@@ -39,8 +39,8 @@
     angle: 60
     attackRate: 0.5
     wideAnimationRotation: 0
-    animation: CP14WeaponArcThrust
-    wideAnimation: CP14WeaponArcThrust
+    animation: CE14WeaponArcThrust
+    wideAnimation: CE14WeaponArcThrust
     damage:
       types:
         Blunt: 3
@@ -49,7 +49,7 @@
       collection: MetalThud
     cPAnimationLength: 0.6
     cPAnimationOffset: 0.5
-  - type: CP14LightMeleeKnockdown
+  - type: CE14LightMeleeKnockdown
   - type: Damageable
     damageContainer: Shield
   - type: Destructible
@@ -71,7 +71,7 @@
               collection: MetalBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14WoodenPlanks1:
+              CE14WoodenPlanks1:
                 min: 2
                 max: 4
   - type: ClothingSpeedModifier
@@ -80,15 +80,15 @@
   - type: HeldSpeedModifier
 
 - type: entity
-  parent: CP14BaseWeaponTowerShield
-  id: CP14WeaponTowerShieldWooden
+  parent: CE14BaseWeaponTowerShield
+  id: CE14WeaponTowerShieldWooden
   name: wooden tower shield
   description: A wooden shield capable of withstanding multiple blows.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/TowerShield/wooden.rsi
+    sprite: _CE14/Objects/Weapons/Melee/TowerShield/wooden.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 50
-      CP14Iron: 40
+      CE14WoodenPlanks: 50
+      CE14Iron: 40

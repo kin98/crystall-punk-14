@@ -1,34 +1,34 @@
 - type: entity
-  id: CP14ActionAirSaturation
-  parent: CP14ActionSpellBase
+  id: CE14ActionAirSaturation
+  parent: CE14ActionSpellBase
   name: Air saturation
   description: You surround the target with fresh air, healing suffocation. This can sustain the dying.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.4
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 5
   - type: DoAfterArgs
     repeat: true
     delay: 2
     breakOnDamage: true
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneAirSaturation
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneAirSaturation
   - type: Action
     useDelay: 2
     icon:
-      sprite: _CP14/Actions/Spells/healing.rsi
+      sprite: _CE14/Actions/Spells/healing.rsi
       state: air_saturation
   - type: TargetAction
     range: 2
     interactOnMiss: false
   - type: EntityTargetAction
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectAirSaturation
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectAirSaturation
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:HealthChange
           damage:
@@ -39,8 +39,8 @@
 # Effects
 
 - type: entity
-  id: CP14ImpactEffectAirSaturation
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectAirSaturation
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -51,8 +51,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14RuneAirSaturation
-  parent: CP14BaseMagicRune
+  id: CE14RuneAirSaturation
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:

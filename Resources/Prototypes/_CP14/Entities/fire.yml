@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14Fire
+  id: CE14Fire
   name: fire
   description: it's fire!
   categories: [ ForkFiltered ]
@@ -10,12 +10,12 @@
   - type: Sprite
     drawdepth: Effects
     snapCardinals: true
-    sprite: _CP14/Effects/fire.rsi
+    sprite: _CE14/Effects/fire.rsi
     layers:
       - state: full
         shader: unshaded
   - type: FireVisuals
-    sprite: _CP14/Effects/fire.rsi
+    sprite: _CE14/Effects/fire.rsi
     normalState: full
     alternateState: full2
     fireStackAlternateState: 5
@@ -77,21 +77,21 @@
       types:
         Heat: 0
   - type: Damageable
-  - type: CP14Fireplace
+  - type: CE14Fireplace
     fuel: 15
-  - type: CP14AutoIgnite
-  - type: CP14ActiveFireSpreading
+  - type: CE14AutoIgnite
+  - type: CE14ActiveFireSpreading
   - type: TimedDespawn
     lifetime: 120
-  - type: CP14FireSpread
-  - type: CP14DespawnOnExtinguish
+  - type: CE14FireSpread
+  - type: CE14DespawnOnExtinguish
 
 - type: entity
-  id: CP14BaseFlammable
+  id: CE14BaseFlammable
   abstract: true
   categories: [ ForkFiltered ]
   components:
-  - type: CP14FlammableAmbientSound
+  - type: CE14FlammableAmbientSound
   - type: AmbientSound
     enabled: false
     volume: -5
@@ -114,22 +114,22 @@
       types:
         Heat: 0.25
   - type: FireVisuals
-    sprite: _CP14/Effects/fire.rsi
+    sprite: _CE14/Effects/fire.rsi
     normalState: small
 
 - type: entity
-  id: CP14BaseFlammableSpreading
-  parent: CP14BaseFlammable
+  id: CE14BaseFlammableSpreading
+  parent: CE14BaseFlammable
   abstract: true
   components:
-  - type: CP14FireSpread
+  - type: CE14FireSpread
 
 - type: entity
-  id: CP14BaseFlammableSpreadingStrong
-  parent: CP14BaseFlammableSpreading
+  id: CE14BaseFlammableSpreadingStrong
+  parent: CE14BaseFlammableSpreading
   abstract: true
   components:
-  - type: CP14FireSpread
+  - type: CE14FireSpread
     spreadCooldownMin: 1
     spreadCooldownMax: 3
   - type: Flammable

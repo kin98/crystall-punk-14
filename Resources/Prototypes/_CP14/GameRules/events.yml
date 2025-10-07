@@ -1,6 +1,6 @@
 - type: entity
-  parent: CP14BaseGameRule
-  id: CP14BaseStationEventShortDelay
+  parent: CE14BaseGameRule
+  id: CE14BaseStationEventShortDelay
   abstract: true
   components:
   - type: GameRule
@@ -9,8 +9,8 @@
       max:  20
 
 - type: entity
-  parent: CP14BaseGameRule
-  id: CP14BaseStationEventLongDelay
+  parent: CE14BaseGameRule
+  id: CE14BaseStationEventLongDelay
   abstract: true
   components:
   - type: GameRule
@@ -19,23 +19,23 @@
       max:  60
 
 - type: entityTable
-  id: CP14BasicCalmEventsTable
+  id: CE14BasicCalmEventsTable
   table: !type:AllSelector
     children:
-    - id: CP14Storm
+    - id: CE14Storm
 
 - type: entity
-  parent: CP14BaseStationEventLongDelay
-  id: CP14Storm
+  parent: CE14BaseStationEventLongDelay
+  id: CE14Storm
   components:
   - type: StationEvent
-    startAnnouncement: cp14-event-announcement-storm
+    startAnnouncement: CE14-event-announcement-storm
     startAudio:
-      collection: CP14LightningFar
+      collection: CE14LightningFar
     earliestStart: 45
     minimumPlayers: 10
     duration: 180
     maxDuration: 600
-  - type: CP14WeatherRule
-    weather: CP14Storm
+  - type: CE14WeatherRule
+    weather: CE14Storm
 

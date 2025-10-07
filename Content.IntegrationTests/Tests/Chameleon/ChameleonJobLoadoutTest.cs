@@ -12,7 +12,7 @@ namespace Content.IntegrationTests.Tests.Chameleon;
 /// Ensures all <see cref="IsProbablyRoundStartJob">"round start jobs"</see> have an associated chameleon loadout.
 /// </summary>
 public sealed class ChameleonJobLoadoutTest : InteractionTest
-{/* //CP14 we dont wanna chameleons, disabled test
+{/* //CE14 we dont wanna chameleons, disabled test
     private static readonly List<ProtoId<JobPrototype>> JobBlacklist =
     [
 
@@ -64,5 +64,5 @@ public sealed class ChameleonJobLoadoutTest : InteractionTest
     {
         return job.StartingGear != null && ProtoMan.HasIndex<RoleLoadoutPrototype>(LoadoutSystem.GetJobPrototype(job.ID));
     }
-*/ //CP14 disabled test
+*/ //CE14 disabled test
 }

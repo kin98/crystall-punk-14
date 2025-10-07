@@ -1,7 +1,7 @@
 - type: entity
   parent: BaseItem
   abstract: true
-  id: CP14CandleBase
+  id: CE14CandleBase
   categories: [ ForkFiltered ]
   components:
   - type: Tag
@@ -19,8 +19,8 @@
         variation: 0.05
         volume: 10
   - type: UseDelay
-  - type: CP14DelayedIgnitionSource
-  - type: CP14IgnitionModifier
+  - type: CE14DelayedIgnitionSource
+  - type: CE14IgnitionModifier
     ignitionTimeModifier: 0.5
     hideCaution: true
   - type: Flammable
@@ -37,15 +37,15 @@
     price: 3
 
 - type: entity
-  id: CP14Candle
-  parent: CP14CandleBase
+  id: CE14Candle
+  parent: CE14CandleBase
   name: candle
   description: A thin wick threaded through fat.
   components:
   - type: Sprite
     noRot: true
     drawdepth: Mobs
-    sprite: _CP14/Objects/Misc/candles.rsi
+    sprite: _CE14/Objects/Misc/candles.rsi
     layers:
       - state: small1
         map: ["random"]
@@ -58,7 +58,7 @@
   - type: Item
     size: Small
   - type: FireVisuals
-    sprite: _CP14/Objects/Misc/candles.rsi
+    sprite: _CE14/Objects/Misc/candles.rsi
     normalState: small_fire
   #- type: ToggleableLightVisuals #TODO inhands
   #  spriteLayer: null
@@ -83,18 +83,18 @@
     firestacksOnIgnite: 2
 
 - type: entity
-  parent: CP14Candle
-  id: CP14CandleIgnited
+  parent: CE14Candle
+  id: CE14CandleIgnited
   suffix: Ignited
   components:
-  - type: CP14AutoIgnite
+  - type: CE14AutoIgnite
     startStack: 2
 
 #Candelabra
 
 - type: entity
-  id: CP14Candelabra
-  parent: CP14CandleBase
+  id: CE14Candelabra
+  parent: CE14CandleBase
   name: candelabra
   description: Several candles, beautifully placed on a metal support.
   categories: [ ForkFiltered ]
@@ -103,16 +103,16 @@
     noRot: true
     offset: 0,0.2
     drawdepth: Mobs
-    sprite: _CP14/Objects/Misc/candelabra.rsi
+    sprite: _CE14/Objects/Misc/candelabra.rsi
     layers:
       - state: triple
   - type: Item
     size: Normal
   - type: FireVisuals
-    sprite: _CP14/Objects/Misc/candelabra.rsi
+    sprite: _CE14/Objects/Misc/candelabra.rsi
     normalState: triple_fire
   - type: Damageable
-    damageModifierSet: CP14Metallic
+    damageModifierSet: CE14Metallic
   #- type: ToggleableLightVisuals #TODO inhands
   #  spriteLayer: null
   #  inhandVisuals:
@@ -132,26 +132,26 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14ScrapIron:
+          CE14ScrapIron:
             min: 1
             max: 1
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10 # 1 iron bar
+      CE14Iron: 10 # 1 iron bar
   - type: Flammable
     firestacksOnIgnite: 4
 
 - type: entity
-  parent: CP14Candelabra
-  id: CP14CandelabraIgnited
+  parent: CE14Candelabra
+  id: CE14CandelabraIgnited
   suffix: Ignited
   components:
-  - type: CP14AutoIgnite
+  - type: CE14AutoIgnite
     startStack: 4
 
 - type: entity
-  parent: CP14CandelabraIgnited
-  id: CP14CandelabraBloodIgnited
+  parent: CE14CandelabraIgnited
+  id: CE14CandelabraBloodIgnited
   suffix: Vampire, DO NOT MAP
   categories: [ ForkFiltered, DoNotMap ]
   name: candelabra of crimson candles
@@ -164,8 +164,8 @@
     normalState: blood_fire
 
 - type: entity
-  parent: CP14CandleIgnited
-  id: CP14CandleBloodIgnited
+  parent: CE14CandleIgnited
+  id: CE14CandleBloodIgnited
   suffix: Vampire, DO NOT MAP
   categories: [ ForkFiltered, DoNotMap ]
   name: crimson candle

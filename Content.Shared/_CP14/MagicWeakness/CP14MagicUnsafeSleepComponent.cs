@@ -1,14 +1,14 @@
 using Content.Shared.FixedPoint;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CP14.MagicWeakness;
+namespace Content.Shared._CE14.MagicWeakness;
 
 /// <summary>
 /// imposes debuffs on excessive use of magic
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-[Access(typeof(CP14SharedMagicWeaknessSystem))]
-public sealed partial class CP14MagicUnsafeSleepComponent : Component
+[Access(typeof(CE14SharedMagicWeaknessSystem))]
+public sealed partial class CE14MagicUnsafeSleepComponent : Component
 {
     [DataField]
     public float SleepPerEnergy = 0.5f;

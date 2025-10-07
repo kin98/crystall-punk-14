@@ -1,7 +1,7 @@
-namespace Content.Server._CP14.GameTicking.Rules.Components;
+namespace Content.Server._CE14.GameTicking.Rules.Components;
 
 /// <summary>
-/// Stores data for <see cref="CP14VampireRuleSystem"/>.
+/// Stores data for <see cref="CE14VampireRuleSystem"/>.
 /// </summary>
-[RegisterComponent, Access(typeof(CP14VampireRuleSystem))]
-public sealed partial class CP14VampireRuleComponent : Component;
+[RegisterComponent, Access(typeof(CE14VampireRuleSystem))]
+public sealed partial class CE14VampireRuleComponent : Component;

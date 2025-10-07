@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Text;
-using Content.Shared._CP14.AuraDNA;
-using Content.Shared._CP14.MagicVision.Components;
+using Content.Shared._CE14.AuraDNA;
+using Content.Shared._CE14.MagicVision.Components;
 using Content.Shared.Actions;
 using Content.Shared.Examine;
 using Content.Shared.StatusEffectNew;
@@ -11,25 +11,25 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.MagicVision;
+namespace Content.Shared._CE14.MagicVision;
 
-public abstract class CP14SharedMagicVisionSystem : EntitySystem
+public abstract class CE14SharedMagicVisionSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly MetaDataSystem _meta = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
 
-    public readonly EntProtoId MagicTraceProto = "CP14MagicVisionMarker";
+    public readonly EntProtoId MagicTraceProto = "CE14MagicVisionMarker";
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14MagicVisionMarkerComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<CE14MagicVisionMarkerComponent, ExaminedEvent>(OnExamined);
     }
 
-    protected virtual void OnExamined(Entity<CP14MagicVisionMarkerComponent> ent, ref ExaminedEvent args)
+    protected virtual void OnExamined(Entity<CE14MagicVisionMarkerComponent> ent, ref ExaminedEvent args)
     {
         var sb = new StringBuilder();
 
@@ -37,7 +37,7 @@ public abstract class CP14SharedMagicVisionSystem : EntitySystem
         var timeRemaining = ent.Comp.EndTime - _timing.CurTime;
         var totalDuration = ent.Comp.EndTime - ent.Comp.SpawnTime;
 
-        sb.Append($"{Loc.GetString("cp14-magic-vision-timed-past")} {timePassed.Minutes}:{timePassed.Seconds:D2}\n");
+        sb.Append($"{Loc.GetString("CE14-magic-vision-timed-past")} {timePassed.Minutes}:{timePassed.Seconds:D2}\n");
 
         if (string.IsNullOrEmpty(ent.Comp.AuraImprint))
         {
@@ -52,7 +52,7 @@ public abstract class CP14SharedMagicVisionSystem : EntitySystem
         var endTag = imprint.LastIndexOf('[');
         if (startTag <= 0 || endTag <= startTag)
         {
-            sb.Append($"{Loc.GetString("cp14-magic-vision-aura")} {imprint}");
+            sb.Append($"{Loc.GetString("CE14-magic-vision-aura")} {imprint}");
             args.AddMarkup(sb.ToString());
             return;
         }
@@ -95,17 +95,17 @@ public abstract class CP14SharedMagicVisionSystem : EntitySystem
         }
 
         var obscuredImprint = imprint.Substring(0, startTag) + obscuredContent + imprint.Substring(endTag);
-        sb.Append($"{Loc.GetString("cp14-magic-vision-aura")} {obscuredImprint}");
+        sb.Append($"{Loc.GetString("CE14-magic-vision-aura")} {obscuredImprint}");
 
         args.AddMarkup(sb.ToString());
     }
 
-    public string? GetAuraImprint(Entity<CP14AuraImprintComponent?> ent)
+    public string? GetAuraImprint(Entity<CE14AuraImprintComponent?> ent)
     {
         if (!Resolve(ent, ref ent.Comp))
             return null;
 
-        if (_statusEffects.TryEffectsWithComp<CP14HideMagicAuraStatusEffectComponent>(ent, out var hideComps))
+        if (_statusEffects.TryEffectsWithComp<CE14HideMagicAuraStatusEffectComponent>(ent, out var hideComps))
         {
             return hideComps.First().Comp1.Imprint;
         }
@@ -133,7 +133,7 @@ public abstract class CP14SharedMagicVisionSystem : EntitySystem
             return;
 
         var ent = SpawnAtPosition(MagicTraceProto, position);
-        var markerComp = EnsureComp<CP14MagicVisionMarkerComponent>(ent);
+        var markerComp = EnsureComp<CE14MagicVisionMarkerComponent>(ent);
 
         markerComp.SpawnTime = _timing.CurTime;
         markerComp.EndTime = _timing.CurTime + duration;
@@ -149,6 +149,6 @@ public abstract class CP14SharedMagicVisionSystem : EntitySystem
     }
 }
 
-public sealed partial class CP14MagicVisionToggleActionEvent : InstantActionEvent
+public sealed partial class CE14MagicVisionToggleActionEvent : InstantActionEvent
 {
 }

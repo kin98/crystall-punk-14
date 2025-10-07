@@ -1,40 +1,40 @@
 - type: entity
-  id: CP14ActionSpellBeerCreation
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellBeerCreation
+  parent: CE14ActionSpellBase
   name: Beer creation
   description: A secret spell that materializes beer from pure mana.
   components:
   - type: Sprite
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: beer_creation
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 20
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "beer..."
     endSpeech: "Arriva la birra"
-  - type: CP14ActionFreeHandsRequired
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneBeerCreation
+  - type: CE14ActionFreeHandsRequired
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneBeerCreation
   - type: Action
     useDelay: 10
     icon:
-      sprite: _CP14/Actions/Spells/water.rsi
+      sprite: _CE14/Actions/Spells/water.rsi
       state: beer_creation
   - type: DoAfterArgs
     delay: 1
   - type: InstantAction
-    event: !type:CP14InstantModularEffectEvent
+    event: !type:CE14InstantModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectBeerCreation
-      - !type:CP14SpellSpawnInHandEntity
+        - CE14ImpactEffectBeerCreation
+      - !type:CE14SpellSpawnInHandEntity
         spawns:
-        - CP14LiquidDropBeer
+        - CE14LiquidDropBeer
 
 - type: entity
-  id: CP14RuneBeerCreation
-  parent: CP14BaseMagicRune
+  id: CE14RuneBeerCreation
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -50,8 +50,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14LiquidDropBeer
-  parent: CP14LiquidDropWater
+  id: CE14LiquidDropBeer
+  parent: CE14LiquidDropWater
   categories: [ ForkFiltered ]
   suffix: Beer
   components:
@@ -60,12 +60,12 @@
       drop:
         maxVol: 10
         reagents:
-        - ReagentId: CP14MagicBeer
+        - ReagentId: CE14MagicBeer
           Quantity: 10
 
 - type: entity
-  id: CP14ImpactEffectBeerCreation
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectBeerCreation
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -79,10 +79,10 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14BaseSpellScrollWater
-  id: CP14SpellScrollBeerCreation
+  parent: CE14BaseSpellScrollWater
+  id: CE14SpellScrollBeerCreation
   name: beer creation spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellBeerCreation
+    - CE14ActionSpellBeerCreation

@@ -1,4 +1,4 @@
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: RoyalPumpkin
   levels:
     min: 0
@@ -8,20 +8,20 @@
   categories:
     Fun: 1
   requiredTags:
-  - CP14DemiplaneHerbals
-  - CP14DemiplaneOpenSky
+  - CE14DemiplaneHerbals
+  - CE14DemiplaneOpenSky
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       tileMask:
-      - CP14FloorGrass
-      - CP14FloorGrassLight
-      - CP14FloorGrassTall
-      entity: CP14RoyalPumpkin
+      - CE14FloorGrass
+      - CE14FloorGrassLight
+      - CE14FloorGrassTall
+      entity: CE14RoyalPumpkin
       count: 10
       minGroupSize: 1
       maxGroupSize: 1
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: LucenTree
   levels:
     min: 0
@@ -31,20 +31,20 @@
   categories:
     Fun: 1
   requiredTags:
-  - CP14DemiplaneHerbals
-  - CP14DemiplaneOpenSky
+  - CE14DemiplaneHerbals
+  - CE14DemiplaneOpenSky
   layers:
-    - !type:CP14OreDunGen
+    - !type:CE14OreDunGen
       tileMask:
-      - CP14FloorGrass
-      - CP14FloorGrassLight
-      - CP14FloorGrassTall
-      entity: CP14BaseLucensTreeLarge
+      - CE14FloorGrass
+      - CE14FloorGrassLight
+      - CE14FloorGrassTall
+      entity: CE14BaseLucensTreeLarge
       count: 5
       minGroupSize: 1
       maxGroupSize: 1
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: StatueStoneHead
   levels:
     min: 0
@@ -54,15 +54,15 @@
   categories:
     Fun: 1
   requiredTags:
-  - CP14DemiplaneOpenSky
+  - CE14DemiplaneOpenSky
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14StatueStoneHeadHigh
+    - !type:CE14OreDunGen
+      entity: CE14StatueStoneHeadHigh
       count: 1
       minGroupSize: 1
       maxGroupSize: 1
-    - !type:CP14OreDunGen
-      entity: CP14StatueStoneHeadLow
+    - !type:CE14OreDunGen
+      entity: CE14StatueStoneHeadLow
       count: 1
       minGroupSize: 1
       maxGroupSize: 1

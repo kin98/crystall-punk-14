@@ -1,25 +1,25 @@
 - type: htnCompound
-  id: CP14JustAttackingHostileCompound
+  id: CE14JustAttackingHostileCompound
   branches:
     - tasks:
         - !type:HTNCompoundTask
-          task: CP14MeleeClingCombatCompound
+          task: CE14MeleeClingCombatCompound
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
 
 - type: htnCompound
-  id: CP14MeleeClingCombatCompound
+  id: CE14MeleeClingCombatCompound
   branches:
     - tasks:
         - !type:HTNPrimitiveTask
           operator: !type:UtilityOperator
             proto: NearbyMeleeTargets
         - !type:HTNCompoundTask
-          task: CP14BeforeMeleeAttackTargetCompound
+          task: CE14BeforeMeleeAttackTargetCompound
 
 - type: htnCompound
-  id: CP14BeforeMeleeAttackTargetCompound
+  id: CE14BeforeMeleeAttackTargetCompound
   branches:
     - preconditions:
         - !type:PulledPrecondition
@@ -31,10 +31,10 @@
 
     - tasks:
         - !type:HTNCompoundTask
-          task: CP14MeleeAttackNotRetreatingTargetCompound
+          task: CE14MeleeAttackNotRetreatingTargetCompound
 
 - type: htnCompound
-  id: CP14MeleeAttackNotRetreatingTargetCompound
+  id: CE14MeleeAttackNotRetreatingTargetCompound
   branches:
     - preconditions:
       - !type:KeyExistsPrecondition

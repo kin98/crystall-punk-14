@@ -1,19 +1,19 @@
 using Content.Client.IconSmoothing;
-using Content.Shared._CP14.Wallpaper;
+using Content.Shared._CE14.Wallpaper;
 using Content.Shared.IconSmoothing;
 using Robust.Client.GameObjects;
 
-namespace Content.Client._CP14.Wallpaper;
+namespace Content.Client._CE14.Wallpaper;
 
-public sealed class CP14ClientWallpaperSystem : CP14SharedWallpaperSystem
+public sealed class CE14ClientWallpaperSystem : CE14SharedWallpaperSystem
 {
     public override void Initialize()
     {
-        SubscribeLocalEvent<CP14WallpaperHolderComponent, AfterAutoHandleStateEvent>(OnHandleState, after: new[] { typeof(IconSmoothSystem), typeof(SharedRandomIconSmoothSystem), typeof(ClientRandomIconSmoothSystem) });
-        SubscribeLocalEvent<CP14WallpaperHolderComponent, ComponentStartup>(OnStartup, after: new[] { typeof(IconSmoothSystem), typeof(SharedRandomIconSmoothSystem), typeof(ClientRandomIconSmoothSystem) });
+        SubscribeLocalEvent<CE14WallpaperHolderComponent, AfterAutoHandleStateEvent>(OnHandleState, after: new[] { typeof(IconSmoothSystem), typeof(SharedRandomIconSmoothSystem), typeof(ClientRandomIconSmoothSystem) });
+        SubscribeLocalEvent<CE14WallpaperHolderComponent, ComponentStartup>(OnStartup, after: new[] { typeof(IconSmoothSystem), typeof(SharedRandomIconSmoothSystem), typeof(ClientRandomIconSmoothSystem) });
     }
 
-    private void OnStartup(Entity<CP14WallpaperHolderComponent> holder, ref ComponentStartup args)
+    private void OnStartup(Entity<CE14WallpaperHolderComponent> holder, ref ComponentStartup args)
     {
         if (!TryComp<SpriteComponent>(holder, out var sprite))
             return;
@@ -21,7 +21,7 @@ public sealed class CP14ClientWallpaperSystem : CP14SharedWallpaperSystem
         UpdateVisuals(holder, sprite);
     }
 
-    private void OnHandleState(Entity<CP14WallpaperHolderComponent> holder, ref AfterAutoHandleStateEvent args)
+    private void OnHandleState(Entity<CE14WallpaperHolderComponent> holder, ref AfterAutoHandleStateEvent args)
     {
         if (!TryComp<SpriteComponent>(holder, out var sprite))
             return;
@@ -29,7 +29,7 @@ public sealed class CP14ClientWallpaperSystem : CP14SharedWallpaperSystem
         UpdateVisuals(holder, sprite);
     }
 
-    private static void UpdateVisuals(Entity<CP14WallpaperHolderComponent> holder, SpriteComponent sprite)
+    private static void UpdateVisuals(Entity<CE14WallpaperHolderComponent> holder, SpriteComponent sprite)
     {
         //Remove old layers
         foreach (var key in holder.Comp.RevealedLayers)

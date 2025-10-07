@@ -14,17 +14,17 @@ orphans: []
 nullspace: []
 tilemap:
   0: Space
-  9: CP14FloorFoundation
-  13: CP14FloorGrass
-  14: CP14FloorGrassLight
-  15: CP14FloorGrassTall
-  10: CP14FloorOakWoodPlanksBig
-  12: CP14FloorOakWoodPlanksBroken
-  11: CP14FloorOakWoodPlanksCruciform
-  17: CP14FloorStonebricks
-  16: CP14FloorStonebricksSmallCarved1
-  19: CP14FloorStonebricksSmallCarved2
-  18: CP14FloorStonebricksSquareCarved
+  9: CE14FloorFoundation
+  13: CE14FloorGrass
+  14: CE14FloorGrassLight
+  15: CE14FloorGrassTall
+  10: CE14FloorOakWoodPlanksBig
+  12: CE14FloorOakWoodPlanksBroken
+  11: CE14FloorOakWoodPlanksCruciform
+  17: CE14FloorStonebricks
+  16: CE14FloorStonebricksSmallCarved1
+  19: CE14FloorStonebricksSmallCarved2
+  18: CE14FloorStonebricksSquareCarved
   2: FloorAsteroidSand
   6: FloorAsteroidSandUnvariantized
   5: FloorAsteroidTile
@@ -123,14 +123,14 @@ entities:
     - type: SpreaderGrid
     - type: GridPathfinding
     - type: RadiationGridResistance
-- proto: CP14Bonfire
+- proto: CE14Bonfire
   entities:
   - uid: 136
     components:
     - type: Transform
       pos: 26.5,2.5
       parent: 1
-- proto: CP14IronDoor
+- proto: CE14IronDoor
   entities:
   - uid: 126
     components:
@@ -138,7 +138,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.5,2.5
       parent: 1
-- proto: CP14Lamppost
+- proto: CE14Lamppost
   entities:
   - uid: 7
     components:
@@ -146,7 +146,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 20.5,2.5
       parent: 1
-- proto: CP14RoofStone
+- proto: CE14RoofStone
   entities:
   - uid: 4
     components:
@@ -629,7 +629,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14SpawnerDemiplaneLootT1
+- proto: CE14SpawnerDemiplaneLootT1
   entities:
   - uid: 6
     components:
@@ -691,14 +691,14 @@ entities:
     - type: Transform
       pos: 16.5,3.5
       parent: 1
-- proto: CP14TableWooden
+- proto: CE14TableWooden
   entities:
   - uid: 138
     components:
     - type: Transform
       pos: 26.5,3.5
       parent: 1
-- proto: CP14TableWoodenFrame
+- proto: CE14TableWoodenFrame
   entities:
   - uid: 139
     components:
@@ -710,7 +710,7 @@ entities:
     - type: Transform
       pos: 25.5,1.5
       parent: 1
-- proto: CP14WallmountTorchAlwaysPowered
+- proto: CE14WallmountTorchAlwaysPowered
   entities:
   - uid: 55
     components:
@@ -736,7 +736,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14WallStonebrick
+- proto: CE14WallStonebrick
   entities:
   - uid: 3
     components:
@@ -863,7 +863,7 @@ entities:
     - type: Transform
       pos: 14.5,3.5
       parent: 1
-- proto: CP14WallStonebrickCrushedLow
+- proto: CE14WallStonebrickCrushedLow
   entities:
   - uid: 13
     components:
@@ -960,7 +960,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.5,4.5
       parent: 1
-- proto: CP14WallStonebrickCrushedMedium
+- proto: CE14WallStonebrickCrushedMedium
   entities:
   - uid: 2
     components:
@@ -1031,7 +1031,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 18.5,1.5
       parent: 1
-- proto: CP14WoodenDoor
+- proto: CE14WoodenDoor
   entities:
   - uid: 73
     components:

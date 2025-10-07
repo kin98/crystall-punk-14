@@ -1,4 +1,4 @@
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: Quartz
   levels:
     min: 0
@@ -6,82 +6,82 @@
   categories:
     Reward: 0.15
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14CrystalQuartz
+    - !type:CE14OreDunGen
+      entity: CE14CrystalQuartz
       count: 30
       minGroupSize: 1
       maxGroupSize: 5
 
-- type: cp14LocationModifier
-  id: CP14CrystalQuartzEarth
+- type: CE14LocationModifier
+  id: CE14CrystalQuartzEarth
   levels:
     min: 2
     max: 10
   generationWeight: 0.1
   requiredTags:
-  - CP14DemiplaneUnderground
+  - CE14DemiplaneUnderground
   categories:
     Reward: 0.15
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14CrystalQuartzEarth
+    - !type:CE14OreDunGen
+      entity: CE14CrystalQuartzEarth
       count: 15
       minGroupSize: 1
       maxGroupSize: 2
 
-- type: cp14LocationModifier
-  id: CP14CrystalQuartzFire
+- type: CE14LocationModifier
+  id: CE14CrystalQuartzFire
   levels:
     min: 2
     max: 10
   generationWeight: 0.1
   requiredTags:
-  - CP14DemiplaneHot
+  - CE14DemiplaneHot
   categories:
     Reward: 0.15
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14CrystalQuartzFire
+    - !type:CE14OreDunGen
+      entity: CE14CrystalQuartzFire
       count: 15
       minGroupSize: 1
       maxGroupSize: 2
 
-- type: cp14LocationModifier
-  id: CP14CrystalQuartzWater
+- type: CE14LocationModifier
+  id: CE14CrystalQuartzWater
   levels:
     min: 2
     max: 10
   generationWeight: 0.1
   requiredTags:
-  - CP14DemiplaneWater
+  - CE14DemiplaneWater
   categories:
     Reward: 0.15
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14CrystalQuartzWater
+    - !type:CE14OreDunGen
+      entity: CE14CrystalQuartzWater
       count: 15
       minGroupSize: 1
       maxGroupSize: 2
 
-- type: cp14LocationModifier
-  id: CP14CrystalQuartzAir
+- type: CE14LocationModifier
+  id: CE14CrystalQuartzAir
   levels:
     min: 2
     max: 10
   generationWeight: 0.1
   requiredTags:
-  - CP14DemiplaneOpenSky
+  - CE14DemiplaneOpenSky
   categories:
     Reward: 0.15
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14CrystalQuartzAir
+    - !type:CE14OreDunGen
+      entity: CE14CrystalQuartzAir
       count: 15
       minGroupSize: 1
       maxGroupSize: 2
 
-- type: cp14LocationModifier
-  id: CP14CrystalQuartzOrder
+- type: CE14LocationModifier
+  id: CE14CrystalQuartzOrder
   levels:
     min: 2
     max: 10
@@ -89,14 +89,14 @@
   categories:
     Reward: 0.15
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14CrystalQuartzOrder
+    - !type:CE14OreDunGen
+      entity: CE14CrystalQuartzOrder
       count: 15
       minGroupSize: 1
       maxGroupSize: 2
 
-- type: cp14LocationModifier
-  id: CP14CrystalQuartzChaos
+- type: CE14LocationModifier
+  id: CE14CrystalQuartzChaos
   levels:
     min: 2
     max: 10
@@ -104,8 +104,8 @@
   categories:
     Reward: 0.15
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14CrystalQuartzChaos
+    - !type:CE14OreDunGen
+      entity: CE14CrystalQuartzChaos
       count: 15
       minGroupSize: 1
       maxGroupSize: 2

@@ -27,7 +27,7 @@ lobbyduration = 300
 role_timers = true
 
 [server]
-rules_file = "CP14Rules"
+rules_file = "CE14Rules"
 
 [hub]
 advertise = true
@@ -59,10 +59,10 @@ deadmin_on_join = true
 flavor_text = true
 
 [tips]
-dataset = "CP14Tips"
+dataset = "CE14Tips"
 
 [audio]
-lobby_music_collection = "CP14LobbyMusic"
+lobby_music_collection = "CE14LobbyMusic"
 
 [ooc]
 show_ooc_patron_color = false
@@ -71,7 +71,7 @@ enable_during_round = true
 [movement]
 mob_pushing = true
 
-[cp14]
+[CE14]
 discord_auth_enabled = true
 closet_beta_test = true
 sponsor_enabled = true

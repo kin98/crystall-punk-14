@@ -1,17 +1,17 @@
 - type: entity
-  id: CP14ActionSpellKick
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellKick
+  parent: CE14ActionSpellBase
   name: Kick
   description: You perform an epic leg kick at your chosen object, pushing it away from you.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.4
-  - type: CP14ActionStaminaCost
+  - type: CE14ActionStaminaCost
     stamina: 40
-  - type: CP14ActionEmoting
-    startEmote: cp14-kick-emote-start
-    endEmote: cp14-kick-emote
-  - type: CP14ActionDangerous
+  - type: CE14ActionEmoting
+    startEmote: CE14-kick-emote-start
+    endEmote: CE14-kick-emote
+  - type: CE14ActionDangerous
   - type: DoAfterArgs
     breakOnHandChange: false
     distanceThreshold: 1.5
@@ -20,7 +20,7 @@
     useDelay: 5
     sound: null
     icon:
-      sprite: _CP14/Actions/Spells/physical.rsi
+      sprite: _CE14/Actions/Spells/physical.rsi
       state: kick
   - type: TargetAction
     range: 1
@@ -31,16 +31,16 @@
       - Body
       - Item
       - Anchorable
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellKnockdown
-      - !type:CP14SpellThrowFromUser
+      - !type:CE14SpellKnockdown
+      - !type:CE14SpellThrowFromUser
         distance: 1.5
         throwPower: 5
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14DustEffectKickSound
-      - !type:CP14SpellApplyEntityEffect
+        - CE14DustEffectKickSound
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:HealthChange
           ignoreResistances: false
@@ -49,8 +49,8 @@
               Blunt: 5
 
 - type: entity
-  id: CP14DustEffectKickSound
-  parent: CP14DustEffect
+  id: CE14DustEffectKickSound
+  parent: CE14DustEffect
   categories: [ HideSpawnMenu ]
   save: false
   components:

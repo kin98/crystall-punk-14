@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14GatherableBlueAmanita
-  parent: CP14GatherableBase
+  id: CE14GatherableBlueAmanita
+  parent: CE14GatherableBase
   name: blue Amanita
   description: A sky blue flower known for its medicinal and magical properties.
   suffix: Gatherable
   components:
   - type: Sprite
     drawdepth: FloorTiles
-    sprite: _CP14/Structures/Flora/Wild/blue_amanita.rsi
+    sprite: _CE14/Structures/Flora/Wild/blue_amanita.rsi
     layers:
       - state: world1
         map: ["random"]
@@ -19,10 +19,10 @@
         world3: ""
         world4: ""
         world5: ""
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     deleteAfterHarvest: true
     loot:
       All: !type:GroupSelector
         children:
-        - id: CP14BlueAmanita
+        - id: CE14BlueAmanita
 

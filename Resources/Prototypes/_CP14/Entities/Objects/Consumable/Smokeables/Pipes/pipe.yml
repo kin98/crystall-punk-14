@@ -1,34 +1,34 @@
 - type: entity
-  id: CP14SmokingPipe
+  id: CE14SmokingPipe
   parent: BaseSmokingPipe
   name: pipe
   description: A comfortable and practical smoking pipe, the latest fashion in the Empire.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Smokeables/Pipes/pipe.rsi
+    sprite: _CE14/Objects/Consumable/Smokeables/Pipes/pipe.rsi
     state: unlit-icon
   - type: Clothing
-    sprite: _CP14/Objects/Consumable/Smokeables/Pipes/pipe.rsi
+    sprite: _CE14/Objects/Consumable/Smokeables/Pipes/pipe.rsi
     slots: [ mask ]
     equippedPrefix: unlit
   - type: Item
     size: Tiny
-    sprite: _CP14/Objects/Consumable/Smokeables/Pipes/pipe.rsi
+    sprite: _CE14/Objects/Consumable/Smokeables/Pipes/pipe.rsi
   - type: Appearance
   - type: BurnStateVisuals
     unlitIcon: unlit-icon
-  - type: CP14IgnitionModifier
+  - type: CE14IgnitionModifier
     hideCaution: true
   - type: StaticPrice
     price: 1
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 20 # 2 wooden plank in craft
+      CE14WoodenPlanks: 20 # 2 wooden plank in craft
 
 - type: entity
-  id: CP14SmokingPipeFilledTobacco
-  parent: CP14SmokingPipe
+  id: CE14SmokingPipeFilledTobacco
+  parent: CE14SmokingPipe
   suffix: Tobacco
   categories: [ ForkFiltered ]
   components:
@@ -39,7 +39,7 @@
   - type: SmokingPipe
     bowl_slot:
       name: smoking-pipe-slot-component-slot-name-bowl
-      startingItem: CP14GroundTobacco
+      startingItem: CE14GroundTobacco
       whitelist:
         tags:
           - Smokable
@@ -49,8 +49,8 @@
         path: /Audio/Weapons/Guns/Empty/empty.ogg
 
 - type: entity
-  id: CP14SmokingPipeFilledSage
-  parent: CP14SmokingPipe
+  id: CE14SmokingPipeFilledSage
+  parent: CE14SmokingPipe
   suffix: Sage
   categories: [ ForkFiltered ]
   components:
@@ -61,7 +61,7 @@
   - type: SmokingPipe
     bowl_slot:
       name: smoking-pipe-slot-component-slot-name-bowl
-      startingItem: CP14GroundSage
+      startingItem: CE14GroundSage
       whitelist:
         tags:
           - Smokable

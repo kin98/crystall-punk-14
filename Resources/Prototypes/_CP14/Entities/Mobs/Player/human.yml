@@ -1,4 +1,4 @@
 - type: entity
   save: false
-  parent: CP14BaseMobHuman
-  id: CP14MobHuman
+  parent: CE14BaseMobHuman
+  id: CE14MobHuman

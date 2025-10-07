@@ -1,74 +1,74 @@
 # Raw materials
 
 - type: entity
-  id: CP14VialMediumEarthEssence
-  parent: CP14VialMedium
+  id: CE14VialMediumEarthEssence
+  parent: CE14VialMedium
   suffix: Terra
   components:
   - type: SolutionContainerManager
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14EssenceEarth
+        - ReagentId: CE14EssenceEarth
           Quantity: 50
 
 - type: entity
-  id: CP14VialMediumFireEssence
-  parent: CP14VialMedium
+  id: CE14VialMediumFireEssence
+  parent: CE14VialMedium
   suffix: Ignis
   components:
   - type: SolutionContainerManager
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14EssenceFire
+        - ReagentId: CE14EssenceFire
           Quantity: 50
 
 - type: entity
-  id: CP14VialMediumWaterEssence
-  parent: CP14VialMedium
+  id: CE14VialMediumWaterEssence
+  parent: CE14VialMedium
   suffix: Aqua
   components:
   - type: SolutionContainerManager
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14EssenceWater
+        - ReagentId: CE14EssenceWater
           Quantity: 50
 
 - type: entity
-  id: CP14VialMediumAirEssence
-  parent: CP14VialMedium
+  id: CE14VialMediumAirEssence
+  parent: CE14VialMedium
   suffix: Aer
   components:
   - type: SolutionContainerManager
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14EssenceAir
+        - ReagentId: CE14EssenceAir
           Quantity: 50
 
 - type: entity
-  id: CP14VialMediumOrderEssence
-  parent: CP14VialMedium
+  id: CE14VialMediumOrderEssence
+  parent: CE14VialMedium
   suffix: Ordo
   components:
   - type: SolutionContainerManager
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14EssenceOrder
+        - ReagentId: CE14EssenceOrder
           Quantity: 50
 
 - type: entity
-  id: CP14VialMediumChaosEssence
-  parent: CP14VialMedium
+  id: CE14VialMediumChaosEssence
+  parent: CE14VialMedium
   suffix: Perditio
   components:
   - type: SolutionContainerManager
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14EssenceChaos
+        - ReagentId: CE14EssenceChaos
           Quantity: 50
 

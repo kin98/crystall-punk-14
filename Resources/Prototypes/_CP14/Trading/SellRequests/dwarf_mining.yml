@@ -1,77 +1,77 @@
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: DwarfMiningCopper
   possibleFactions:
   - DwarfMining
   requirements:
   - !type:StackResource
-    stack: CP14CopperBar
+    stack: CE14CopperBar
     count: 10
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: DwarfMiningIron
   possibleFactions:
   - DwarfMining
   requirements:
   - !type:StackResource
-    stack: CP14IronBar
+    stack: CE14IronBar
     count: 10
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: DwarfMiningDirt
   possibleFactions:
   - DwarfMining
   requirements:
   - !type:StackResource
-    stack: CP14Dirt
+    stack: CE14Dirt
     count: 30
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: DwarfMiningStone
   possibleFactions:
   - DwarfMining
   requirements:
   - !type:StackResource
-    stack: CP14Stone
+    stack: CE14Stone
     count: 30
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: DwarfMiningTorch
   possibleFactions:
   - DwarfMining
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14Torch
+    protoId: CE14Torch
     count: 10
 
-- type: cp14TradingRequest
-  id: CP14GlassSheet
+- type: CE14TradingRequest
+  id: CE14GlassSheet
   possibleFactions:
   - DwarfMining
   requirements:
   - !type:StackResource
-    stack: CP14GlassSheet
+    stack: CE14GlassSheet
     count: 20
 
 # 30 minutes
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: DwarfMiningGold
   possibleFactions:
   - DwarfMining
   fromMinutes: 30
   requirements:
   - !type:StackResource
-    stack: CP14GoldBar
+    stack: CE14GoldBar
     count: 10
 
 # 60 minutes
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: DwarfMiningMithril
   possibleFactions:
   - DwarfMining
   fromMinutes: 60
   requirements:
   - !type:StackResource
-    stack: CP14MithrilBar
+    stack: CE14MithrilBar
     count: 10

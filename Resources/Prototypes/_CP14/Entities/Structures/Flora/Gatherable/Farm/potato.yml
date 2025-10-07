@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14PlantPotato
-  parent: CP14GatherablePlantSingleHarvestBase
+  id: CE14PlantPotato
+  parent: CE14GatherablePlantSingleHarvestBase
   name: potato
   description: Some like to associate themselves with potatoes. People like that are not bad people.
   components:
@@ -10,15 +10,15 @@
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
     - state: grow-1
-      sprite: _CP14/Structures/Flora/Farm/potato.rsi
+      sprite: _CE14/Structures/Flora/Farm/potato.rsi
       map: ["enum.PlantVisualLayers.Base"]
-  - type: CP14PlantVisuals
+  - type: CE14PlantVisuals
     growthSteps: 5
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     loot:
       All: !type:AllSelector
         children:
-        - id: CP14FoodPotato
+        - id: CE14FoodPotato
           rolls: !type:RangeNumberSelector
             range: 4, 6
 

@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14BookRandom
-  parent: CP14BookWriteableBase
+  id: CE14BookRandom
+  parent: CE14BookWriteableBase
   suffix: Random visual
   description: Each book is unique! What is hidden in this one?
   components:

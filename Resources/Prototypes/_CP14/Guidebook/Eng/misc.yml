@@ -1,29 +1,29 @@
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Imperial_Laws
+  id: CE14_EN_Imperial_Laws
   name: Imperial laws
-  text: "/ServerInfo/_CP14/Guidebook_EN/ImperialLaws.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/ImperialLaws.xml"
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Locks_and_Keys
+  id: CE14_EN_Locks_and_Keys
   name: Locks and Keys
-  text: "/ServerInfo/_CP14/Guidebook_EN/LocksKeys.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/LocksKeys.xml"
   children:
-  - CP14_EN_Lockpicking
+  - CE14_EN_Lockpicking
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Lockpicking
+  id: CE14_EN_Lockpicking
   name: Lockpicking
-  text: "/ServerInfo/_CP14/Guidebook_EN/Lockpicking.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/Lockpicking.xml"
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Monster_Toxins
+  id: CE14_EN_Monster_Toxins
   name: Monster Toxins
-  text: "/ServerInfo/_CP14/Guidebook_EN/JobsTabs/AdventurersTabs/MonsterToxins.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/JobsTabs/AdventurersTabs/MonsterToxins.xml"
   filterEnabled: True

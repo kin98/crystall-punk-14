@@ -317,10 +317,10 @@ public abstract partial class SharedBuckleSystem
             return false;
         }
 
-        //CP14
+        //CE14
         if (!_interaction.InRangeUnobstructed(buckleUid, strapUid, collisionMask: CollisionGroup.MobMask))
             return false;
-        //CP14 End
+        //CE14 End
 
         var buckleAttempt = new BuckleAttemptEvent((strapUid, strapComp), (buckleUid, buckleComp), user, popup);
         RaiseLocalEvent(buckleUid, ref buckleAttempt);

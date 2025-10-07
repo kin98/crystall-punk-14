@@ -1,15 +1,15 @@
-using Content.Server._CP14.DeviceLinking.Components;
+using Content.Server._CE14.DeviceLinking.Components;
 using Content.Server.DeviceLinking.Systems;
-using Content.Shared._CP14.DeviceLinking;
+using Content.Shared._CE14.DeviceLinking;
 using Content.Shared.Placeable;
 using Content.Shared.Storage.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Physics.Components;
 
-namespace Content.Server._CP14.DeviceLinking;
+namespace Content.Server._CE14.DeviceLinking;
 
-public sealed class CP14PressurePlateSystem : EntitySystem
+public sealed class CE14PressurePlateSystem : EntitySystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -18,28 +18,28 @@ public sealed class CP14PressurePlateSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<CP14PressurePlateComponent, ComponentInit>(OnInit);
-        SubscribeLocalEvent<CP14PressurePlateComponent, ItemPlacedEvent>(OnItemPlaced);
-        SubscribeLocalEvent<CP14PressurePlateComponent, ItemRemovedEvent>(OnItemRemoved);
+        SubscribeLocalEvent<CE14PressurePlateComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<CE14PressurePlateComponent, ItemPlacedEvent>(OnItemPlaced);
+        SubscribeLocalEvent<CE14PressurePlateComponent, ItemRemovedEvent>(OnItemRemoved);
     }
 
-    private void OnInit(Entity<CP14PressurePlateComponent> plate, ref ComponentInit args)
+    private void OnInit(Entity<CE14PressurePlateComponent> plate, ref ComponentInit args)
     {
         _signal.EnsureSourcePorts(plate, plate.Comp.PressedPort, plate.Comp.ReleasedPort);
         _appearance.SetData(plate, PressurePlateVisuals.Pressed, false);
     }
 
-    private void OnItemRemoved(Entity<CP14PressurePlateComponent> plate, ref ItemRemovedEvent args)
+    private void OnItemRemoved(Entity<CE14PressurePlateComponent> plate, ref ItemRemovedEvent args)
     {
         UpdateState(plate);
     }
 
-    private void OnItemPlaced(Entity<CP14PressurePlateComponent> plate, ref ItemPlacedEvent args)
+    private void OnItemPlaced(Entity<CE14PressurePlateComponent> plate, ref ItemPlacedEvent args)
     {
         UpdateState(plate);
     }
 
-    private void UpdateState(Entity<CP14PressurePlateComponent> plate)
+    private void UpdateState(Entity<CE14PressurePlateComponent> plate)
     {
         if (!TryComp<ItemPlacerComponent>(plate, out var itemPlacer))
             return;

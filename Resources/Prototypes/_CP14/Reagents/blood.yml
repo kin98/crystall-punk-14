@@ -1,12 +1,12 @@
 - type: reagent
-  id: CP14Blood
-  group: CP14Precurser
-  name: cp14-reagent-name-blood
-  desc: cp14-reagent-desc-blood
-  flavor: CP14Metallic
+  id: CE14Blood
+  group: CE14Precurser
+  name: CE14-reagent-name-blood
+  desc: CE14-reagent-desc-blood
+  flavor: CE14Metallic
   color: "#800000"
   recognizable: false
-  physicalDesc: cp14-reagent-physical-desc-ferrous
+  physicalDesc: CE14-reagent-physical-desc-ferrous
   footstepSound:
     collection: FootstepBlood
     params:
@@ -17,30 +17,30 @@
       - !type:SatiateHunger
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
       - !type:SatiateThirst
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
     Medicine:
       effects:
       - !type:HealthChange
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
         damage:
           groups:
             Brute: -5
 
 - type: reagent
-  id: CP14BloodAnimal
-  group: CP14Precurser
-  name: cp14-reagent-name-blood-animal
-  desc: cp14-reagent-desc-blood-animal
-  flavor: CP14Metallic
+  id: CE14BloodAnimal
+  group: CE14Precurser
+  name: CE14-reagent-name-blood-animal
+  desc: CE14-reagent-desc-blood-animal
+  flavor: CE14Metallic
   color: "#802020"
   recognizable: false
-  physicalDesc: cp14-reagent-physical-desc-ferrous
+  physicalDesc: CE14-reagent-physical-desc-ferrous
   footstepSound:
     collection: FootstepBlood
     params:
@@ -52,22 +52,22 @@
         factor: 1
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
       - !type:SatiateThirst
         factor: 1
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
 
 - type: reagent
-  id: CP14BloodVampire
-  group: CP14Precurser
-  name: cp14-reagent-name-blood-vampire
-  desc: cp14-reagent-desc-blood-vampire
-  flavor: CP14Metallic
+  id: CE14BloodVampire
+  group: CE14Precurser
+  name: CE14-reagent-name-blood-vampire
+  desc: CE14-reagent-desc-blood-vampire
+  flavor: CE14Metallic
   color: "#800000"
   recognizable: false
-  physicalDesc: cp14-reagent-physical-desc-ferrous
+  physicalDesc: CE14-reagent-physical-desc-ferrous
   footstepSound:
     collection: FootstepBlood
     params:
@@ -75,14 +75,14 @@
   pricePerUnit: 0.45
 
 - type: reagent
-  id: CP14BloodTiefling
-  group: CP14Precurser
-  desc: cp14-reagent-desc-blood-tiefling
-  name: cp14-reagent-name-blood-tiefling
-  flavor: CP14Metallic
+  id: CE14BloodTiefling
+  group: CE14Precurser
+  desc: CE14-reagent-desc-blood-tiefling
+  name: CE14-reagent-name-blood-tiefling
+  flavor: CE14Metallic
   color: "#803300"
   recognizable: false
-  physicalDesc: cp14-reagent-physical-desc-ferrous
+  physicalDesc: CE14-reagent-physical-desc-ferrous
   footstepSound:
     collection: FootstepBlood
     params:
@@ -93,31 +93,31 @@
       - !type:SatiateHunger
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
       - !type:SatiateThirst
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
     Medicine:
       effects:
       - !type:HealthChange
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
         damage:
           groups:
             Burn: -5
   pricePerUnit: 0.15
 
 - type: reagent
-  id: CP14BloodElf
-  group: CP14Precurser
-  desc: cp14-reagent-desc-blood-elf
-  name: cp14-reagent-name-blood-elf
-  flavor: CP14Metallic
+  id: CE14BloodElf
+  group: CE14Precurser
+  desc: CE14-reagent-desc-blood-elf
+  name: CE14-reagent-name-blood-elf
+  flavor: CE14Metallic
   color: "#80003e"
   recognizable: false
-  physicalDesc: cp14-reagent-physical-desc-ferrous
+  physicalDesc: CE14-reagent-physical-desc-ferrous
   footstepSound:
     collection: FootstepBlood
     params:
@@ -128,37 +128,37 @@
       - !type:SatiateHunger
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
       - !type:SatiateThirst
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
     Medicine:
       effects:
-      - !type:CP14ManaChange
+      - !type:CE14ManaChange
         manaDelta: 10
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
         safe: true
       - !type:HealthChange
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
         damage:
           groups:
             Burn: -5
   pricePerUnit: 0.25
 
 - type: reagent
-  id: CP14BloodGoblin
-  group: CP14Precurser
-  desc: cp14-reagent-desc-blood-goblin
-  name: cp14-reagent-name-blood-goblin
-  flavor: CP14Metallic
+  id: CE14BloodGoblin
+  group: CE14Precurser
+  desc: CE14-reagent-desc-blood-goblin
+  name: CE14-reagent-name-blood-goblin
+  flavor: CE14Metallic
   color: "#576e35"
   recognizable: false
-  physicalDesc: cp14-reagent-physical-desc-ferrous
+  physicalDesc: CE14-reagent-physical-desc-ferrous
   footstepSound:
     collection: FootstepBlood
     params:
@@ -169,17 +169,17 @@
       - !type:SatiateHunger
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
       - !type:SatiateThirst
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
     Medicine:
       effects:
       - !type:HealthChange
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
         damage:
           groups:
             Brute: -3
@@ -187,21 +187,21 @@
       - !type:MovespeedModifier
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
         walkSpeedModifier: 1.1
         sprintSpeedModifier: 1.1
         statusLifetime: 1.5
   pricePerUnit: 0.05
 
 - type: reagent
-  id: CP14BloodMonster
-  group: CP14Precurser
-  name: cp14-reagent-name-blood-monster
-  desc: cp14-reagent-desc-blood-monster
-  flavor: CP14Metallic
+  id: CE14BloodMonster
+  group: CE14Precurser
+  name: CE14-reagent-name-blood-monster
+  desc: CE14-reagent-desc-blood-monster
+  flavor: CE14Metallic
   color: "#800058"
   recognizable: false
-  physicalDesc: cp14-reagent-physical-desc-ferrous
+  physicalDesc: CE14-reagent-physical-desc-ferrous
   footstepSound:
     collection: FootstepBlood
     params:
@@ -212,26 +212,26 @@
       - !type:SatiateHunger
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
       - !type:SatiateThirst
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
     Medicine:
       effects:
       - !type:HealthChange
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
         damage:
           types:
-            CP14ManaDepletion: -5
+            CE14ManaDepletion: -5
     Poison:
       effects:
-      - !type:CP14ManaChange
+      - !type:CE14ManaChange
         manaDelta: 1
       - !type:HealthChange
         damage:
           types:
-            CP14ManaDepletion: 1
+            CE14ManaDepletion: 1
   pricePerUnit: 0.30

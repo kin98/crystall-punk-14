@@ -1,11 +1,11 @@
 using JetBrains.Annotations;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CP14.WeatherEffect.Effects;
+namespace Content.Shared._CE14.WeatherEffect.Effects;
 
 [ImplicitDataDefinitionForInheritors]
 [MeansImplicitUse]
-public abstract partial class CP14WeatherEffect
+public abstract partial class CE14WeatherEffect
 {
     [DataField]
     public float Prob = 0.05f;
@@ -14,10 +14,10 @@ public abstract partial class CP14WeatherEffect
 }
 
 [DataDefinition]
-public sealed partial class CP14WeatherEffectConfig
+public sealed partial class CE14WeatherEffectConfig
 {
     [DataField]
-    public List<CP14WeatherEffect> Effects = new();
+    public List<CE14WeatherEffect> Effects = new();
 
     [DataField]
     public int? MaxEntities = null;

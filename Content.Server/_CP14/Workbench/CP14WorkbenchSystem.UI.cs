@@ -3,17 +3,17 @@
  * https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT
  */
 
-using Content.Shared._CP14.Skill;
-using Content.Shared._CP14.Workbench;
+using Content.Shared._CE14.Skill;
+using Content.Shared._CE14.Workbench;
 using Content.Shared.Placeable;
 
-namespace Content.Server._CP14.Workbench;
+namespace Content.Server._CE14.Workbench;
 
-public sealed partial class CP14WorkbenchSystem
+public sealed partial class CE14WorkbenchSystem
 {
-    [Dependency] private readonly CP14SharedSkillSystem _skill = default!;
+    [Dependency] private readonly CE14SharedSkillSystem _skill = default!;
 
-    private void OnCraft(Entity<CP14WorkbenchComponent> entity, ref CP14WorkbenchUiCraftMessage args)
+    private void OnCraft(Entity<CE14WorkbenchComponent> entity, ref CE14WorkbenchUiCraftMessage args)
     {
         if (!entity.Comp.Recipes.Contains(args.Recipe))
             return;
@@ -24,14 +24,14 @@ public sealed partial class CP14WorkbenchSystem
         StartCraft(entity, args.Actor, prototype);
     }
 
-    private void UpdateUIRecipes(Entity<CP14WorkbenchComponent> entity)
+    private void UpdateUIRecipes(Entity<CE14WorkbenchComponent> entity)
     {
-        var getResource = new CP14WorkbenchGetResourcesEvent();
+        var getResource = new CE14WorkbenchGetResourcesEvent();
         RaiseLocalEvent(entity, getResource);
 
         var resources = getResource.Resources;
 
-        var recipes = new List<CP14WorkbenchUiRecipesEntry>();
+        var recipes = new List<CE14WorkbenchUiRecipesEntry>();
         foreach (var recipeId in entity.Comp.Recipes)
         {
             if (!_proto.TryIndex(recipeId, out var indexedRecipe))
@@ -48,11 +48,11 @@ public sealed partial class CP14WorkbenchSystem
                 }
             }
 
-            var entry = new CP14WorkbenchUiRecipesEntry(recipeId, canCraft);
+            var entry = new CE14WorkbenchUiRecipesEntry(recipeId, canCraft);
 
             recipes.Add(entry);
         }
 
-        _userInterface.SetUiState(entity.Owner, CP14WorkbenchUiKey.Key, new CP14WorkbenchUiRecipesState(recipes));
+        _userInterface.SetUiState(entity.Owner, CE14WorkbenchUiKey.Key, new CE14WorkbenchUiRecipesState(recipes));
     }
 }

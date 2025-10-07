@@ -1,28 +1,28 @@
 - type: entity
   parent:
   - BaseItem
-  - CP14BaseCrystalSlot
-  id: CP14CrystalLamp
+  - CE14BaseCrystalSlot
+  id: CE14CrystalLamp
   abstract: true
   name: crystal lamp
   description: A device that converts energy from crystals into a source of directional light.  Convenient for traveling
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Tools/crystal_lamp.rsi
+    sprite: _CE14/Objects/Tools/crystal_lamp.rsi
     noRot: false
   - type: Clothing
     equipDelay: 0.25
     unequipDelay: 0.25
-    sprite: _CP14/Objects/Tools/crystal_lamp.rsi
+    sprite: _CE14/Objects/Tools/crystal_lamp.rsi
     quickEquip: false
     breakOnMove: false
     slots:
     - belt
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Metallic
-  - type: CP14MeleeSelfDamage
+    damageModifierSet: CE14Metallic
+  - type: CE14MeleeSelfDamage
     damageToSelf:
       types:
         Structural: 10 #little jank, but Metallic is resistant to Blunt. Breaks in 3 strikes, or 2 fireballs.
@@ -39,16 +39,16 @@
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14ScrapCopper:
+          CE14ScrapCopper:
             min: 1
             max: 2
-          CP14ScrapIron:
+          CE14ScrapIron:
             min: 0
             max: 1
   - type: MeleeWeapon
     attackRate: 0.6
     wideAnimationRotation: 10
-    wideAnimation: CP14WeaponArcSlash
+    wideAnimation: CE14WeaponArcSlash
     damage:
       types:
         Blunt: 8
@@ -62,54 +62,54 @@
     size: Normal
     shape:
     - 0, 0, 1, 1
-    sprite: _CP14/Objects/Tools/crystal_lamp.rsi
+    sprite: _CE14/Objects/Tools/crystal_lamp.rsi
   - type: Rotatable
   - type: PointLight
     enabled: false
     color: "#FFFFFF"
-    mask: /Textures/_CP14/Effects/LightMasks/crystal_cone.png
+    mask: /Textures/_CE14/Effects/LightMasks/crystal_cone.png
     autoRot: true
     energy: 3
     radius: 6
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.CP14MagicSlotVisuals.Inserted:
+      enum.CE14MagicSlotVisuals.Inserted:
         crystal:
           True: { visible: true }
           False: { visible: false }
-      enum.CP14MagicSlotVisuals.Powered:
+      enum.CE14MagicSlotVisuals.Powered:
         light:
           True: { visible: true }
           False: { visible: false }
-  - type: CP14MagicLantern
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicLantern
+  - type: CE14MagicEnergyDraw
     energy: -0.1
     delay: 3
   - type: ItemSlots
     slots:
       crystal_slot:
         insertSound:
-          path: /Audio/_CP14/Items/crystal_insert.ogg
+          path: /Audio/_CE14/Items/crystal_insert.ogg
           params:
             variation: 0.05
         ejectSound:
-          path: /Audio/_CP14/Items/crystal_eject.ogg
+          path: /Audio/_CE14/Items/crystal_eject.ogg
           params:
             variation: 0.05
         ejectOnInteract: false
-        name: cp14-magic-energy-crystal-slot-name
+        name: CE14-magic-energy-crystal-slot-name
         whitelist:
           components:
-          - CP14MagicEnergyCrystal
+          - CE14MagicEnergyCrystal
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 20 # 2 copper bar
-      CP14Iron: 10 # 1 iron bar
+      CE14Copper: 20 # 2 copper bar
+      CE14Iron: 10 # 1 iron bar
 
 - type: entity
-  parent: CP14CrystalLamp
-  id: CP14CrystalLampBlueEmpty
+  parent: CE14CrystalLamp
+  id: CE14CrystalLampBlueEmpty
   name: blue crystal lamp
   suffix: Blue, Empty
   components:
@@ -129,8 +129,8 @@
     color: "#47F8FF"
 
 - type: entity
-  parent: CP14CrystalLamp
-  id: CP14CrystalLampOrangeEmpty
+  parent: CE14CrystalLamp
+  id: CE14CrystalLampOrangeEmpty
   name: orange crystal lamp
   suffix: Orange, Empty
   components:

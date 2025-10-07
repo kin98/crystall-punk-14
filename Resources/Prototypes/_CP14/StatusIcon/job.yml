@@ -1,94 +1,94 @@
 - type: jobIcon
-  id: CP14JobIcon
+  id: CE14JobIcon
   abstract: true
   priority: 1
   locationPreference: Right
   isShaded: true
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconAdventurer
+  parent: CE14JobIcon
+  id: CE14JobIconAdventurer
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: Adventurer
-  jobName: cp14-job-name-adventurer
+  jobName: CE14-job-name-adventurer
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconAlchemist
+  parent: CE14JobIcon
+  id: CE14JobIconAlchemist
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: Alchemist
-  jobName: cp14-job-name-alchemist
+  jobName: CE14-job-name-alchemist
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconApprentice
+  parent: CE14JobIcon
+  id: CE14JobIconApprentice
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: Apprentice
-  jobName: cp14-job-name-apprentice
+  jobName: CE14-job-name-apprentice
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconInnkeeper
+  parent: CE14JobIcon
+  id: CE14JobIconInnkeeper
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: Innkeeper
-  jobName: cp14-job-name-innkeeper
+  jobName: CE14-job-name-innkeeper
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconGuardCommander
+  parent: CE14JobIcon
+  id: CE14JobIconGuardCommander
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: GuardCommander
-  jobName: cp14-job-name-guard-commander
+  jobName: CE14-job-name-guard-commander
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconGuard
+  parent: CE14JobIcon
+  id: CE14JobIconGuard
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: Guard
-  jobName: cp14-job-name-guard
+  jobName: CE14-job-name-guard
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconInvestigator
+  parent: CE14JobIcon
+  id: CE14JobIconInvestigator
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: Investigator
-  jobName: cp14-job-name-investigator
+  jobName: CE14-job-name-investigator
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconMerchant
+  parent: CE14JobIcon
+  id: CE14JobIconMerchant
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: Merchant
-  jobName: cp14-job-name-merchant
+  jobName: CE14-job-name-merchant
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconBlacksmith
+  parent: CE14JobIcon
+  id: CE14JobIconBlacksmith
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: Blacksmith
-  jobName: cp14-job-name-blacksmith
+  jobName: CE14-job-name-blacksmith
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconGuildmaster
+  parent: CE14JobIcon
+  id: CE14JobIconGuildmaster
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: Guildmaster
-  jobName: cp14-job-name-guildmaster
+  jobName: CE14-job-name-guildmaster
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconGuildWorker
+  parent: CE14JobIcon
+  id: CE14JobIconGuildWorker
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_icons.rsi
     state: GuildWorker
-  jobName: cp14-job-name-guildworker
+  jobName: CE14-job-name-guildworker

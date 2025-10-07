@@ -1,27 +1,27 @@
 using System.Text;
-using Content.Shared._CP14.Skill.Components;
+using Content.Shared._CE14.Skill.Components;
 using Content.Shared.Examine;
 using Content.Shared.Inventory;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Skill;
+namespace Content.Shared._CE14.Skill;
 
-public abstract partial class CP14SharedSkillSystem
+public abstract partial class CE14SharedSkillSystem
 {
     [Dependency] private readonly ExamineSystemShared _examine = default!;
 
     private void InitializeScanning()
     {
-        SubscribeLocalEvent<CP14SkillScannerComponent, CP14SkillScanEvent>(OnSkillScan);
-        SubscribeLocalEvent<CP14SkillScannerComponent, InventoryRelayedEvent<CP14SkillScanEvent>>((e, c, ev) => OnSkillScan(e, c, ev.Args));
+        SubscribeLocalEvent<CE14SkillScannerComponent, CE14SkillScanEvent>(OnSkillScan);
+        SubscribeLocalEvent<CE14SkillScannerComponent, InventoryRelayedEvent<CE14SkillScanEvent>>((e, c, ev) => OnSkillScan(e, c, ev.Args));
 
-        SubscribeLocalEvent<CP14SkillStorageComponent, GetVerbsEvent<ExamineVerb>>(OnExamined);
+        SubscribeLocalEvent<CE14SkillStorageComponent, GetVerbsEvent<ExamineVerb>>(OnExamined);
     }
 
-    private void OnExamined(Entity<CP14SkillStorageComponent> ent, ref GetVerbsEvent<ExamineVerb> args)
+    private void OnExamined(Entity<CE14SkillStorageComponent> ent, ref GetVerbsEvent<ExamineVerb> args)
     {
-        var scanEvent = new CP14SkillScanEvent();
+        var scanEvent = new CE14SkillScanEvent();
         RaiseLocalEvent(args.User, scanEvent);
 
         if (!scanEvent.CanScan)
@@ -33,17 +33,17 @@ public abstract partial class CP14SharedSkillSystem
             args,
             ent.Comp,
             markup,
-            Loc.GetString("cp14-skill-info-title"),
+            Loc.GetString("CE14-skill-info-title"),
             "/Textures/Interface/students-cap.svg.192dpi.png");
     }
 
-    private FormattedMessage GetSkillExamine(Entity<CP14SkillStorageComponent> ent)
+    private FormattedMessage GetSkillExamine(Entity<CE14SkillStorageComponent> ent)
     {
         var msg = new FormattedMessage();
 
         var sb = new StringBuilder();
 
-        sb.Append(Loc.GetString("cp14-skill-examine-title") + "\n");
+        sb.Append(Loc.GetString("CE14-skill-examine-title") + "\n");
 
         foreach (var skill in ent.Comp.LearnedSkills)
         {
@@ -57,18 +57,18 @@ public abstract partial class CP14SharedSkillSystem
             sb.Append($"• [color={indexedTree.Color.ToHex()}]{skillName}[/color]\n");
         }
 
-        //sb.Append($"\n{Loc.GetString("cp14-skill-menu-level")} {ent.Comp.SkillsSumExperience}/{ent.Comp.ExperienceMaxCap}\n");
+        //sb.Append($"\n{Loc.GetString("CE14-skill-menu-level")} {ent.Comp.SkillsSumExperience}/{ent.Comp.ExperienceMaxCap}\n");
         msg.AddMarkupOrThrow(sb.ToString());
         return msg;
     }
 
-    private void OnSkillScan(EntityUid uid, CP14SkillScannerComponent component, CP14SkillScanEvent args)
+    private void OnSkillScan(EntityUid uid, CE14SkillScannerComponent component, CE14SkillScanEvent args)
     {
         args.CanScan = true;
     }
 }
 
-public sealed class CP14SkillScanEvent : EntityEventArgs, IInventoryRelayEvent
+public sealed class CE14SkillScanEvent : EntityEventArgs, IInventoryRelayEvent
 {
     public bool CanScan;
     public SlotFlags TargetSlots { get; } = SlotFlags.EYES;

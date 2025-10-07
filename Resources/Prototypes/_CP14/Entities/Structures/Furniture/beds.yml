@@ -1,9 +1,9 @@
 - type: entity
   name: wooden bed
-  id: CP14WoodenBed
+  id: CE14WoodenBed
   parent:
   - BaseStructure
-  - CP14BaseFlammableSpreading
+  - CE14BaseFlammableSpreading
   description: Wooden bed. Better than nothing.
   categories: [ ForkFiltered ]
   components:
@@ -24,7 +24,7 @@
         mask:
         - TableMask
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/wooden_bed.rsi
+    sprite: _CE14/Structures/Furniture/wooden_bed.rsi
     state: icon
     noRot: true
   - type: Strap
@@ -34,7 +34,7 @@
     placeCentered: true
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -48,7 +48,7 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
   - type: Transform
@@ -57,15 +57,15 @@
   - type: Anchorable
   - type: Pullable
   - type: Construction
-    graph: CP14WoodenBed
-    node: CP14WoodenBed
+    graph: CE14WoodenBed
+    node: CE14WoodenBed
 
 - type: entity
-  id: CP14BirchWoodenBed
-  parent: CP14WoodenBed
+  id: CE14BirchWoodenBed
+  parent: CE14WoodenBed
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/birch_bed.rsi
+    sprite: _CE14/Structures/Furniture/birch_bed.rsi
     state: icon
     noRot: true
   - type: Destructible
@@ -81,9 +81,9 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodenPlanks1:
+          CE14BirchWoodenPlanks1:
             min: 1
             max: 2
   - type: Construction
-    graph: CP14WoodenBed
-    node: CP14BirchWoodenBed
+    graph: CE14WoodenBed
+    node: CE14BirchWoodenBed

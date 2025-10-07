@@ -1,12 +1,12 @@
 - type: entity
   abstract: true
-  id: CP14BaseWeaponPickaxe
+  id: CE14BaseWeaponPickaxe
   parent:
   - BaseItem
-  - CP14BaseWeaponChemical
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
-  - CP14BaseWeaponSharp
+  - CE14BaseWeaponChemical
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
+  - CE14BaseWeaponSharp
   components:
   - type: Item
     size: Ginormous
@@ -19,8 +19,8 @@
       types:
         Piercing: 3
         Structural: 4
-    animation: CP14WeaponArcSlash
-    wideAnimation: CP14WeaponArcSlash
+    animation: CE14WeaponArcSlash
+    wideAnimation: CE14WeaponArcSlash
     soundHit:
       collection: MetalThud
     cPAnimationLength: 0.5
@@ -49,15 +49,15 @@
       path: /Audio/Items/crowbar_drop.ogg
 
 - type: entity
-  parent: CP14BaseWeaponPickaxe
-  id: CP14WeaponPickaxeIron
+  parent: CE14BaseWeaponPickaxe
+  id: CE14WeaponPickaxeIron
   name: iron pickaxe
   description: A sturdy iron pickaxe, perfect for mining and not for combat.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Pickaxe/iron.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Pickaxe/iron.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 20
-      CP14Iron: 20
+      CE14WoodenPlanks: 20
+      CE14Iron: 20

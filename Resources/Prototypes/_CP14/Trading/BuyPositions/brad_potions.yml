@@ -1,272 +1,272 @@
 
 # Rep 0
 
-- type: cp14TradingPosition
-  id: CP14VialSmallHealingBrute
+- type: CE14TradingPosition
+  id: CE14VialSmallHealingBrute
   faction: BradPotions
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSmallHealingBrute
+  service: !type:CE14BuyItemsService
+    product: CE14VialSmallHealingBrute
 
-- type: cp14TradingPosition
-  id: CP14VialSmallHealingMana
+- type: CE14TradingPosition
+  id: CE14VialSmallHealingMana
   faction: BradPotions
   reputationLevel: 0
   uiPosition: 1
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSmallHealingMana
+  service: !type:CE14BuyItemsService
+    product: CE14VialSmallHealingMana
 
 
-- type: cp14TradingPosition
-  id: CP14VialTiny
+- type: CE14TradingPosition
+  id: CE14VialTiny
   faction: BradPotions
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_tiny.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_tiny.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialTiny
+  service: !type:CE14BuyItemsService
+    product: CE14VialTiny
 
-- type: cp14TradingPosition
-  id: CP14VialTinyReinforced
+- type: CE14TradingPosition
+  id: CE14VialTinyReinforced
   priceMarkup: 1
   faction: BradPotions
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_tiny.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_tiny.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialTinyReinforced
+  service: !type:CE14BuyItemsService
+    product: CE14VialTinyReinforced
 
 
-- type: cp14TradingPosition
-  id: CP14Pestle
+- type: CE14TradingPosition
+  id: CE14Pestle
   priceMarkup: 2
   faction: BradPotions
   uiPosition: 6
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/mortar_pestle.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/mortar_pestle.rsi
     state: pestle
-  service: !type:CP14BuyItemsService
-    product: CP14Pestle
+  service: !type:CE14BuyItemsService
+    product: CE14Pestle
 
-- type: cp14TradingPosition
-  id: CP14Mortar
+- type: CE14TradingPosition
+  id: CE14Mortar
   priceMarkup: 2
   faction: BradPotions
   uiPosition: 7
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/mortar_pestle.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/mortar_pestle.rsi
     state: mortar_base
-  service: !type:CP14BuyItemsService
-    product: CP14Mortar
+  service: !type:CE14BuyItemsService
+    product: CE14Mortar
 
 # Rep 1
 
-- type: cp14TradingPosition
-  id: CP14VialSmallHealingBlood
+- type: CE14TradingPosition
+  id: CE14VialSmallHealingBlood
   faction: BradPotions
   reputationLevel: 1
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSmallHealingBlood
+  service: !type:CE14BuyItemsService
+    product: CE14VialSmallHealingBlood
 
-- type: cp14TradingPosition
-  id: CP14VialSmallHealingManaDepletion
+- type: CE14TradingPosition
+  id: CE14VialSmallHealingManaDepletion
   faction: BradPotions
   reputationLevel: 1
   uiPosition: 1
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSmallHealingManaDepletion
+  service: !type:CE14BuyItemsService
+    product: CE14VialSmallHealingManaDepletion
 
-- type: cp14TradingPosition
-  id: CP14VialSmall
+- type: CE14TradingPosition
+  id: CE14VialSmall
   reputationLevel: 1
   priceMarkup: 1
   faction: BradPotions
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSmall
+  service: !type:CE14BuyItemsService
+    product: CE14VialSmall
 
-- type: cp14TradingPosition
-  id: CP14VialSmallReinforced
+- type: CE14TradingPosition
+  id: CE14VialSmallReinforced
   reputationLevel: 1
   priceMarkup: 2
   faction: BradPotions
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSmallReinforced
+  service: !type:CE14BuyItemsService
+    product: CE14VialSmallReinforced
 
-- type: cp14TradingPosition
-  id: CP14Dropper
+- type: CE14TradingPosition
+  id: CE14Dropper
   priceMarkup: 1
   reputationLevel: 1
   faction: BradPotions
   uiPosition: 6
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/dropper.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/dropper.rsi
     state: dropper
-  service: !type:CP14BuyItemsService
-    product: CP14Dropper
+  service: !type:CE14BuyItemsService
+    product: CE14Dropper
 
-- type: cp14TradingPosition
-  id: CP14Syringe
+- type: CE14TradingPosition
+  id: CE14Syringe
   priceMarkup: 2
   reputationLevel: 1
   faction: BradPotions
   uiPosition: 7
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/syringe.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/syringe.rsi
     state: base
-  service: !type:CP14BuyItemsService
-    product: CP14Syringe
+  service: !type:CE14BuyItemsService
+    product: CE14Syringe
 
-- type: cp14TradingPosition
-  id: CP14ClothingEyesAlchemyGlasses
+- type: CE14TradingPosition
+  id: CE14ClothingEyesAlchemyGlasses
   faction: BradPotions
   reputationLevel: 1
   uiPosition: 9
   icon:
-    sprite: _CP14/Clothing/Eyes/alchemy_glasses.rsi
+    sprite: _CE14/Clothing/Eyes/alchemy_glasses.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14ClothingEyesAlchemyGlasses
+  service: !type:CE14BuyItemsService
+    product: CE14ClothingEyesAlchemyGlasses
 
-- type: cp14TradingPosition
-  id: CP14ClothingEyesAlchemyMonocle
+- type: CE14TradingPosition
+  id: CE14ClothingEyesAlchemyMonocle
   faction: BradPotions
   reputationLevel: 1
   uiPosition: 10
   icon:
-    sprite: _CP14/Clothing/Eyes/alchemy_monocle.rsi
+    sprite: _CE14/Clothing/Eyes/alchemy_monocle.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14ClothingEyesAlchemyMonocle
+  service: !type:CE14BuyItemsService
+    product: CE14ClothingEyesAlchemyMonocle
 
 # Rep 2
 
-- type: cp14TradingPosition
-  id: CP14VialSmallHealingPoison
+- type: CE14TradingPosition
+  id: CE14VialSmallHealingPoison
   faction: BradPotions
   reputationLevel: 2
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSmallHealingPoison
+  service: !type:CE14BuyItemsService
+    product: CE14VialSmallHealingPoison
 
 
 
-- type: cp14TradingPosition
-  id: CP14VialMedium
+- type: CE14TradingPosition
+  id: CE14VialMedium
   reputationLevel: 2
   priceMarkup: 2
   faction: BradPotions
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_medium.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_medium.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialMedium
+  service: !type:CE14BuyItemsService
+    product: CE14VialMedium
 
-- type: cp14TradingPosition
-  id: CP14VialMediumReinforced
+- type: CE14TradingPosition
+  id: CE14VialMediumReinforced
   reputationLevel: 2
   priceMarkup: 3
   faction: BradPotions
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_medium.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_medium.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialMediumReinforced
+  service: !type:CE14BuyItemsService
+    product: CE14VialMediumReinforced
 
-- type: cp14TradingPosition
-  id: CP14Cauldron
+- type: CE14TradingPosition
+  id: CE14Cauldron
   priceMarkup: 5
   faction: BradPotions
   reputationLevel: 2
   uiPosition: 6
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/cauldron.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/cauldron.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14Cauldron
+  service: !type:CE14BuyItemsService
+    product: CE14Cauldron
 
-- type: cp14TradingPosition
-  id: CP14BaseAlchemyBomb
+- type: CE14TradingPosition
+  id: CE14BaseAlchemyBomb
   faction: BradPotions
   reputationLevel: 2
   uiPosition: 7
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14BaseAlchemyBomb
+  service: !type:CE14BuyItemsService
+    product: CE14BaseAlchemyBomb
 
 # Rep 3
 
-- type: cp14TradingPosition
-  id: CP14VialSmallSpeedUp
+- type: CE14TradingPosition
+  id: CE14VialSmallSpeedUp
   faction: BradPotions
   reputationLevel: 3
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSmallSpeedUp
+  service: !type:CE14BuyItemsService
+    product: CE14VialSmallSpeedUp
 
-- type: cp14TradingPosition
-  id: CP14VialSmallRainbow
+- type: CE14TradingPosition
+  id: CE14VialSmallRainbow
   faction: BradPotions
   reputationLevel: 3
   uiPosition: 1
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_small.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_small.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSmallRainbow
+  service: !type:CE14BuyItemsService
+    product: CE14VialSmallRainbow
 
-- type: cp14TradingPosition
-  id: CP14VialSkull
+- type: CE14TradingPosition
+  id: CE14VialSkull
   reputationLevel: 3
   priceMarkup: 2
   faction: BradPotions
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_skull.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_skull.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSkull
+  service: !type:CE14BuyItemsService
+    product: CE14VialSkull
 
-- type: cp14TradingPosition
-  id: CP14VialSkullReinforced
+- type: CE14TradingPosition
+  id: CE14VialSkullReinforced
   reputationLevel: 3
   priceMarkup: 3
   faction: BradPotions
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/vial_skull.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/vial_skull.rsi
     state: vial
-  service: !type:CP14BuyItemsService
-    product: CP14VialSkullReinforced
+  service: !type:CE14BuyItemsService
+    product: CE14VialSkullReinforced

@@ -1,15 +1,15 @@
 using System.Text;
-using Content.Shared._CP14.Farming;
-using Content.Shared._CP14.Farming.Components;
+using Content.Shared._CE14.Farming;
+using Content.Shared._CE14.Farming.Components;
 using Content.Shared.EntityEffects;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Chemistry.ReagentEffect;
+namespace Content.Shared._CE14.Chemistry.ReagentEffect;
 
 [UsedImplicitly]
 [DataDefinition]
-public sealed partial class CP14PlantResourceModify : EntityEffect
+public sealed partial class CE14PlantResourceModify : EntityEffect
 {
     [DataField]
     public float Energy = 0f;
@@ -21,9 +21,9 @@ public sealed partial class CP14PlantResourceModify : EntityEffect
     {
         var sb = new StringBuilder();
         if (Energy != 0)
-            sb.Append(Loc.GetString(Energy > 0 ? "cp14-reagent-effect-guidebook-plant-add-energy" : "cp14-reagent-effect-guidebook-plant-remove-energy", ("amount", Energy), ("chance", Probability)));
+            sb.Append(Loc.GetString(Energy > 0 ? "CE14-reagent-effect-guidebook-plant-add-energy" : "CE14-reagent-effect-guidebook-plant-remove-energy", ("amount", Energy), ("chance", Probability)));
         if (Resourse != 0)
-            sb.Append(Loc.GetString(Resourse > 0 ? "cp14-reagent-effect-guidebook-plant-add-resource" : "cp14-reagent-effect-guidebook-plant-remove-resource", ("amount", Resourse), ("chance", Probability)));
+            sb.Append(Loc.GetString(Resourse > 0 ? "CE14-reagent-effect-guidebook-plant-add-resource" : "CE14-reagent-effect-guidebook-plant-remove-resource", ("amount", Resourse), ("chance", Probability)));
 
         return sb.ToString();
     }
@@ -37,10 +37,10 @@ public sealed partial class CP14PlantResourceModify : EntityEffect
             scale = reagentArgs.Quantity.Float() * reagentArgs.Scale.Float();
         }
 
-        if (!args.EntityManager.TryGetComponent<CP14PlantComponent>(args.TargetEntity, out var plantComp))
+        if (!args.EntityManager.TryGetComponent<CE14PlantComponent>(args.TargetEntity, out var plantComp))
             return;
 
-        var plantSystem = args.EntityManager.System<CP14SharedFarmingSystem>();
+        var plantSystem = args.EntityManager.System<CE14SharedFarmingSystem>();
 
         plantSystem.AffectEnergy((args.TargetEntity, plantComp), Energy * scale);
         plantSystem.AffectResource((args.TargetEntity, plantComp), Resourse * scale);

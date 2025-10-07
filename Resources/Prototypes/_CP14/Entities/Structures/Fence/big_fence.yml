@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseStructure
-  id: CP14BaseFenceBig
+  id: CE14BaseFenceBig
   abstract: true
   categories: [ ForkFiltered ]
   name: big fence
@@ -40,22 +40,22 @@
         - HighImpassable
         - InteractImpassable
   - type: IconSmooth
-    key: CP14fencebig
+    key: CE14fencebig
     base: fence
     additionalKeys:
-    - CP14wall
+    - CE14wall
 
 - type: entity
   parent:
-  - CP14BaseFenceBig
-  - CP14BaseFlammableSpreading
-  id: CP14FenceBigWooden
+  - CE14BaseFenceBig
+  - CE14BaseFlammableSpreading
+  id: CE14FenceBigWooden
   suffix: Wooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Fence/wooden_big.rsi
+    sprite: _CE14/Structures/Fence/wooden_big.rsi
   - type: Icon
-    sprite: _CP14/Structures/Fence/wooden_big.rsi
+    sprite: _CE14/Structures/Fence/wooden_big.rsi
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Wood
@@ -70,37 +70,37 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 2
             max: 4
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14FenceBigWooden
-    node: CP14FenceBigWooden
+    graph: CE14FenceBigWooden
+    node: CE14FenceBigWooden
 
 - type: entity
-  parent: CP14FenceBigWooden
-  id: CP14FenceBigWoodenBirch
+  parent: CE14FenceBigWooden
+  id: CE14FenceBigWoodenBirch
   suffix: Wooden Birch
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Fence/wooden_birch_big.rsi
+    sprite: _CE14/Structures/Fence/wooden_birch_big.rsi
   - type: Icon
-    sprite: _CP14/Structures/Fence/wooden_birch_big.rsi
+    sprite: _CE14/Structures/Fence/wooden_birch_big.rsi
   - type: Construction
-    graph: CP14FenceBigWoodenBirch
-    node: CP14FenceBigWoodenBirch
+    graph: CE14FenceBigWoodenBirch
+    node: CE14FenceBigWoodenBirch
 
 - type: entity
-  parent: CP14BaseFenceBig
-  id: CP14FenceBigIron
+  parent: CE14BaseFenceBig
+  id: CE14FenceBigIron
   suffix: Iron
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Fence/iron_big.rsi
+    sprite: _CE14/Structures/Fence/iron_big.rsi
   - type: Icon
-    sprite: _CP14/Structures/Fence/iron_big.rsi
+    sprite: _CE14/Structures/Fence/iron_big.rsi
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic
@@ -115,7 +115,7 @@
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14ScrapIron:
+          CE14ScrapIron:
             min: 1
             max: 2
       - !type:DoActsBehavior

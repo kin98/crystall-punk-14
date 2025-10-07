@@ -1,10 +1,10 @@
 - type: entity
-  id: CP14MeleeCritEffect
+  id: CE14MeleeCritEffect
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
-    sprite: _CP14/Effects/sparks.rsi
+    sprite: _CE14/Effects/sparks.rsi
     drawdepth: Effects
     noRot: true
     layers:
@@ -22,12 +22,12 @@
       - HideContextMenu
 
 - type: entity
-  id: CP14DirtEffect
+  id: CE14DirtEffect
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
-    sprite: _CP14/Effects/material_splash.rsi
+    sprite: _CE14/Effects/material_splash.rsi
     drawdepth: Effects
     noRot: true
     layers:
@@ -46,11 +46,11 @@
   - type: AnimationPlayer
   - type: EmitSoundOnSpawn
     sound:
-      collection: CP14Digging
+      collection: CE14Digging
 
 - type: entity
-  id: CP14SnowEffect
-  parent: CP14DirtEffect
+  id: CE14SnowEffect
+  parent: CE14DirtEffect
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -65,7 +65,7 @@
           snow2: ""
 
 - type: entity
-  id: CP14DustEffect
+  id: CE14DustEffect
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -73,7 +73,7 @@
     lifetime: 0.4
   - type: Sprite
     drawdepth: Items
-    sprite: _CP14/Effects/dust.rsi
+    sprite: _CE14/Effects/dust.rsi
     state: dust
   - type: Tag
     tags:
@@ -81,12 +81,12 @@
   - type: AnimationPlayer
 
 - type: entity
-  id: CP14MagicBeam1
+  id: CE14MagicBeam1
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
-    sprite: /Textures/_CP14/Effects/Beams/magic.rsi
+    sprite: /Textures/_CE14/Effects/Beams/magic.rsi
     drawdepth: Effects
     layers:
     - state: magic1
@@ -101,7 +101,7 @@
       - HideContextMenu
 
 - type: entity
-  id: CP14ElectrifiedEffect
+  id: CE14ElectrifiedEffect
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -120,13 +120,13 @@
       - HideContextMenu
 
 - type: entity
-  id: CP14BloodMoonCurseEffect
+  id: CE14BloodMoonCurseEffect
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     noRot: true
     color: "#FFFFFF33"
-    sprite: /Textures/_CP14/Effects/Magic/blood_moon_curse.rsi
+    sprite: /Textures/_CE14/Effects/Magic/blood_moon_curse.rsi
     drawdepth: Effects
     layers:
     - state: icon
@@ -137,10 +137,10 @@
       - HideContextMenu
 
 - type: entity
-  id: CP14LiquidDropDummy
+  id: CE14LiquidDropDummy
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Misc/liquid_drop.rsi
+    sprite: _CE14/Objects/Misc/liquid_drop.rsi
     layers:
       - state: liq-1

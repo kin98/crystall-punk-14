@@ -1,4 +1,4 @@
-using Content.Server._CP14.PVS;
+using Content.Server._CE14.PVS;
 using Robust.Shared.Prototypes;
 
 namespace MyNamespace;
@@ -6,8 +6,8 @@ namespace MyNamespace;
 /// <summary>
 /// A spawner that clearly controls how many entities it can spawn.
 /// </summary>
-[RegisterComponent, Access(typeof(CP14ConstrainSpawnerSystem))]
-public sealed partial class CP14ConstrainedSpawnerOnTriggerComponent : Component
+[RegisterComponent, Access(typeof(CE14ConstrainSpawnerSystem))]
+public sealed partial class CE14ConstrainedSpawnerOnTriggerComponent : Component
 {
     [DataField]
     public List<EntProtoId> Prototypes { get; set; } = new();

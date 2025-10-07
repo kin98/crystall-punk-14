@@ -1,45 +1,45 @@
 - type: constructionGraph
-  id: CP14WallWooden
+  id: CE14WallWooden
   start: start
   graph:
     - node: start
       edges:
-        - to: CP14WallFrameWooden
+        - to: CE14WallFrameWooden
           completed:
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 2
               doAfter: 2
 
-    - node: CP14WallFrameWooden
-      entity: CP14WallFrameWooden
+    - node: CE14WallFrameWooden
+      entity: CE14WallFrameWooden
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 2
             - !type:DeleteEntity {}
           steps:
             - tool: Prying
               doAfter: 2
-        - to: CP14WallWooden
+        - to: CE14WallWooden
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 2
               doAfter: 2
 
-    - node: CP14WallWooden
-      entity: CP14WallWooden
+    - node: CE14WallWooden
+      entity: CE14WallWooden
       edges:
-        - to: CP14WallFrameWooden
+        - to: CE14WallFrameWooden
           steps:
-            - tool: CP14Hammering
+            - tool: CE14Hammering
               doAfter: 4
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 2
 

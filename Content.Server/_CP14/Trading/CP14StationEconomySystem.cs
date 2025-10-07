@@ -2,17 +2,17 @@ using System.Linq;
 using Content.Server.Cargo.Systems;
 using Content.Server.GameTicking;
 using Content.Server.Station.Events;
-using Content.Shared._CP14.Trading.BuyServices;
-using Content.Shared._CP14.Trading.Components;
-using Content.Shared._CP14.Trading.Prototypes;
-using Content.Shared._CP14.Trading.Systems;
+using Content.Shared._CE14.Trading.BuyServices;
+using Content.Shared._CE14.Trading.Components;
+using Content.Shared._CE14.Trading.Prototypes;
+using Content.Shared._CE14.Trading.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.Trading;
+namespace Content.Server._CE14.Trading;
 
-public sealed partial class CP14StationEconomySystem : CP14SharedStationEconomySystem
+public sealed partial class CE14StationEconomySystem : CE14SharedStationEconomySystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly PricingSystem _price = default!;
@@ -24,16 +24,16 @@ public sealed partial class CP14StationEconomySystem : CP14SharedStationEconomyS
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14StationEconomyComponent, StationPostInitEvent>(OnStationPostInit);
+        SubscribeLocalEvent<CE14StationEconomyComponent, StationPostInitEvent>(OnStationPostInit);
         SubscribeLocalEvent<PrototypesReloadedEventArgs>(OnPrototypesReloaded);
     }
 
     private void OnPrototypesReloaded(PrototypesReloadedEventArgs ev)
     {
-        if (!ev.WasModified<CP14TradingPositionPrototype>() && !ev.WasModified<CP14TradingRequestPrototype>())
+        if (!ev.WasModified<CE14TradingPositionPrototype>() && !ev.WasModified<CE14TradingRequestPrototype>())
             return;
 
-        var query = EntityQueryEnumerator<CP14StationEconomyComponent>();
+        var query = EntityQueryEnumerator<CE14StationEconomyComponent>();
         while (query.MoveNext(out var uid, out var economyComponent))
         {
             UpdatePricing((uid, economyComponent));
@@ -41,22 +41,22 @@ public sealed partial class CP14StationEconomySystem : CP14SharedStationEconomyS
         }
     }
 
-    private void OnStationPostInit(Entity<CP14StationEconomyComponent> ent, ref StationPostInitEvent args)
+    private void OnStationPostInit(Entity<CE14StationEconomyComponent> ent, ref StationPostInitEvent args)
     {
         UpdatePricing(ent);
         UpdateRequestPricing(ent);
         GenerateStartingRequests(ent);
     }
 
-    private void UpdatePricing(Entity<CP14StationEconomyComponent> ent)
+    private void UpdatePricing(Entity<CE14StationEconomyComponent> ent)
     {
         ent.Comp.Pricing.Clear();
-        foreach (var trade in _proto.EnumeratePrototypes<CP14TradingPositionPrototype>())
+        foreach (var trade in _proto.EnumeratePrototypes<CE14TradingPositionPrototype>())
         {
             double price = 0;
             switch (trade.Service)
             {
-                case CP14BuyItemsService buyItems:
+                case CE14BuyItemsService buyItems:
                     var tempEnt = Spawn(buyItems.Product); //we need to correctly rate items through price event to rate melee weapon damage, amount of magic energy, and so on.
                     price += _price.GetPrice(tempEnt) * buyItems.Count;
                     QueueDel(tempEnt);
@@ -73,11 +73,11 @@ public sealed partial class CP14StationEconomySystem : CP14SharedStationEconomyS
         Dirty(ent);
     }
 
-    private void UpdateRequestPricing(Entity<CP14StationEconomyComponent> ent)
+    private void UpdateRequestPricing(Entity<CE14StationEconomyComponent> ent)
     {
         ent.Comp.RequestPricing.Clear();
 
-        foreach (var trade in _proto.EnumeratePrototypes<CP14TradingRequestPrototype>())
+        foreach (var trade in _proto.EnumeratePrototypes<CE14TradingRequestPrototype>())
         {
             double price = 0;
             foreach (var req in trade.Requirements)
@@ -92,10 +92,10 @@ public sealed partial class CP14StationEconomySystem : CP14SharedStationEconomyS
         Dirty(ent);
     }
 
-    public bool TryRerollRequest(ProtoId<CP14TradingFactionPrototype> faction,
-        ProtoId<CP14TradingRequestPrototype> request)
+    public bool TryRerollRequest(ProtoId<CE14TradingFactionPrototype> faction,
+        ProtoId<CE14TradingRequestPrototype> request)
     {
-        var query = EntityQueryEnumerator<CP14StationEconomyComponent>();
+        var query = EntityQueryEnumerator<CE14StationEconomyComponent>();
 
         while (query.MoveNext(out var uid, out var economy))
         {
@@ -115,14 +115,14 @@ public sealed partial class CP14StationEconomySystem : CP14SharedStationEconomyS
         return false;
     }
 
-    private void GenerateStartingRequests(Entity<CP14StationEconomyComponent> ent)
+    private void GenerateStartingRequests(Entity<CE14StationEconomyComponent> ent)
     {
         ent.Comp.ActiveRequests.Clear();
 
-        var allFactions = _proto.EnumeratePrototypes<CP14TradingFactionPrototype>();
+        var allFactions = _proto.EnumeratePrototypes<CE14TradingFactionPrototype>();
         foreach (var faction in allFactions)
         {
-            var requests = new HashSet<ProtoId<CP14TradingRequestPrototype>>();
+            var requests = new HashSet<ProtoId<CE14TradingRequestPrototype>>();
             for (int i = 0; i < ent.Comp.MaxRequestCount; i++)
             {
                 var nextRequest = GetNextRequest(faction.ID, requests);
@@ -136,11 +136,11 @@ public sealed partial class CP14StationEconomySystem : CP14SharedStationEconomyS
         }
     }
 
-    private CP14TradingRequestPrototype? GetNextRequest(ProtoId<CP14TradingFactionPrototype> faction, HashSet<ProtoId<CP14TradingRequestPrototype>> existing)
+    private CE14TradingRequestPrototype? GetNextRequest(ProtoId<CE14TradingFactionPrototype> faction, HashSet<ProtoId<CE14TradingRequestPrototype>> existing)
     {
-        Dictionary<CP14TradingRequestPrototype, float> suitableRequestsWeights = new();
+        Dictionary<CE14TradingRequestPrototype, float> suitableRequestsWeights = new();
 
-        var allRequests = _proto.EnumeratePrototypes<CP14TradingRequestPrototype>();
+        var allRequests = _proto.EnumeratePrototypes<CE14TradingRequestPrototype>();
         foreach (var request in allRequests)
         {
             var passed = true;
@@ -169,7 +169,7 @@ public sealed partial class CP14StationEconomySystem : CP14SharedStationEconomyS
     /// <summary>
     /// Optimization moment: avoid re-indexing for weight selection
     /// </summary>
-    private static CP14TradingRequestPrototype? RequestPick(Dictionary<CP14TradingRequestPrototype, float> weights, IRobustRandom random)
+    private static CE14TradingRequestPrototype? RequestPick(Dictionary<CE14TradingRequestPrototype, float> weights, IRobustRandom random)
     {
         if (weights.Count == 0)
             return null; // No suitable requests
@@ -191,6 +191,6 @@ public sealed partial class CP14StationEconomySystem : CP14SharedStationEconomyS
         }
 
         // Shouldn't happen
-        throw new InvalidOperationException($"Invalid weighted pick in CP14StationEconomySystem!");
+        throw new InvalidOperationException($"Invalid weighted pick in CE14StationEconomySystem!");
     }
 }

@@ -1,13 +1,13 @@
-using Content.Shared._CP14.ModularCraft.Components;
+using Content.Shared._CE14.ModularCraft.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Labels.EntitySystems;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CP14.ModularCraft;
+namespace Content.Shared._CE14.ModularCraft;
 
-public abstract class CP14SharedModularCraftSystem : EntitySystem
+public abstract class CE14SharedModularCraftSystem : EntitySystem
 {
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly LabelSystem _label = default!;
@@ -17,12 +17,12 @@ public abstract class CP14SharedModularCraftSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14ModularCraftStartPointComponent, AfterInteractEvent>(OnAfterInteractStart);
-        SubscribeLocalEvent<CP14ModularCraftPartComponent, AfterInteractEvent>(OnAfterInteractPart);
-        SubscribeLocalEvent<CP14LabeledRenamingComponent, CP14LabeledEvent>(OnLabelRenaming);
+        SubscribeLocalEvent<CE14ModularCraftStartPointComponent, AfterInteractEvent>(OnAfterInteractStart);
+        SubscribeLocalEvent<CE14ModularCraftPartComponent, AfterInteractEvent>(OnAfterInteractPart);
+        SubscribeLocalEvent<CE14LabeledRenamingComponent, CE14LabeledEvent>(OnLabelRenaming);
     }
 
-    private void OnLabelRenaming(Entity<CP14LabeledRenamingComponent> ent, ref CP14LabeledEvent args)
+    private void OnLabelRenaming(Entity<CE14LabeledRenamingComponent> ent, ref CE14LabeledEvent args)
     {
         if (args.Text is null)
             return;
@@ -30,12 +30,12 @@ public abstract class CP14SharedModularCraftSystem : EntitySystem
         _label.Label(ent, null);
     }
 
-    private void OnAfterInteractStart(Entity<CP14ModularCraftStartPointComponent> start, ref AfterInteractEvent args)
+    private void OnAfterInteractStart(Entity<CE14ModularCraftStartPointComponent> start, ref AfterInteractEvent args)
     {
         if (args.Handled || args.Target is null)
             return;
 
-        if (!TryComp<CP14ModularCraftPartComponent>(args.Target, out var part))
+        if (!TryComp<CE14ModularCraftPartComponent>(args.Target, out var part))
             return;
 
         var xform = Transform(args.Target.Value);
@@ -45,7 +45,7 @@ public abstract class CP14SharedModularCraftSystem : EntitySystem
         _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager,
             args.User,
             part.DoAfter,
-            new CP14ModularCraftAddPartDoAfter(),
+            new CE14ModularCraftAddPartDoAfter(),
             args.Target,
             args.Target,
             start)
@@ -58,12 +58,12 @@ public abstract class CP14SharedModularCraftSystem : EntitySystem
         args.Handled = true;
     }
 
-    private void OnAfterInteractPart(Entity<CP14ModularCraftPartComponent> part, ref AfterInteractEvent args)
+    private void OnAfterInteractPart(Entity<CE14ModularCraftPartComponent> part, ref AfterInteractEvent args)
     {
         if (args.Handled || args.Target is null)
             return;
 
-        if (!HasComp<CP14ModularCraftStartPointComponent>(args.Target))
+        if (!HasComp<CE14ModularCraftStartPointComponent>(args.Target))
             return;
 
         var xform = Transform(args.Target.Value);
@@ -73,7 +73,7 @@ public abstract class CP14SharedModularCraftSystem : EntitySystem
         _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager,
             args.User,
             part.Comp.DoAfter,
-            new CP14ModularCraftAddPartDoAfter(),
+            new CE14ModularCraftAddPartDoAfter(),
             args.Target,
             args.Target,
             part)
@@ -88,6 +88,6 @@ public abstract class CP14SharedModularCraftSystem : EntitySystem
 }
 
 [Serializable, NetSerializable]
-public sealed partial class CP14ModularCraftAddPartDoAfter : SimpleDoAfterEvent
+public sealed partial class CE14ModularCraftAddPartDoAfter : SimpleDoAfterEvent
 {
 }

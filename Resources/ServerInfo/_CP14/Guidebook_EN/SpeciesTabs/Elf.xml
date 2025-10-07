@@ -2,7 +2,7 @@
 # Elves
 
 <Box>
-<GuideEntityEmbed Entity="CP14MobElf" Caption="Elf"/>
+<GuideEntityEmbed Entity="CE14MobElf" Caption="Elf"/>
 </Box>
 
 Elves are a race very similar to humans, but have no common ancestors. They can be found in any corner of Sileitha, but most often living near forests or reserves.
@@ -14,7 +14,7 @@ The magic reserves of Elves are [color=#1e90ff]2.5x larger than that of Humans.[
 The only way for Elves to regenerate magic is via their racial ability: Mana Trance.
 
 <Box>
-<GuideEntityEmbed Entity="CP14ActionSpellManaTrance" Caption="Mana Trance"/>
+<GuideEntityEmbed Entity="CE14ActionSpellManaTrance" Caption="Mana Trance"/>
 </Box>
 
 Also, elves initially have basic and advanced metamagic.

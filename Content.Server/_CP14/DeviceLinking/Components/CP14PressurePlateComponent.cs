@@ -2,13 +2,13 @@ using Content.Shared.DeviceLinking;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.DeviceLinking.Components;
+namespace Content.Server._CE14.DeviceLinking.Components;
 
 /// <summary>
 /// This component allows the facility to register the weight of objects above it and provide signals to devices
 /// </summary>
-[RegisterComponent, Access(typeof(CP14PressurePlateSystem))]
-public sealed partial class CP14PressurePlateComponent : Component
+[RegisterComponent, Access(typeof(CE14PressurePlateSystem))]
+public sealed partial class CE14PressurePlateComponent : Component
 {
     [DataField]
     public bool IsPressed;
@@ -23,13 +23,13 @@ public sealed partial class CP14PressurePlateComponent : Component
     public float CurrentWeight;
 
     [DataField]
-    public ProtoId<SourcePortPrototype> PressedPort = "CP14Pressed";
+    public ProtoId<SourcePortPrototype> PressedPort = "CE14Pressed";
 
     [DataField]
     public ProtoId<SourcePortPrototype> StatusPort = "Status";
 
     [DataField]
-    public ProtoId<SourcePortPrototype> ReleasedPort = "CP14Released";
+    public ProtoId<SourcePortPrototype> ReleasedPort = "CE14Released";
 
     [DataField]
     public SoundSpecifier PressedSound = new SoundPathSpecifier("/Audio/Machines/button.ogg");

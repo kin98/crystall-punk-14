@@ -1,5 +1,5 @@
 using Content.Server.Temperature.Systems;
-using Content.Shared._CP14.Temperature;
+using Content.Shared._CE14.Temperature;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
@@ -8,9 +8,9 @@ using Content.Shared.Placeable;
 using Content.Shared.Temperature;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.Temperature;
+namespace Content.Server._CE14.Temperature;
 
-public sealed partial class CP14TemperatureSystem : EntitySystem
+public sealed partial class CE14TemperatureSystem : EntitySystem
 {
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -23,10 +23,10 @@ public sealed partial class CP14TemperatureSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14TemperatureTransformationComponent, OnTemperatureChangeEvent>(OnTemperatureChanged);
+        SubscribeLocalEvent<CE14TemperatureTransformationComponent, OnTemperatureChangeEvent>(OnTemperatureChanged);
     }
 
-    private void OnTemperatureChanged(Entity<CP14TemperatureTransformationComponent> start,
+    private void OnTemperatureChanged(Entity<CE14TemperatureTransformationComponent> start,
         ref OnTemperatureChangeEvent args)
     {
         var xform = Transform(start);
@@ -60,14 +60,14 @@ public sealed partial class CP14TemperatureSystem : EntitySystem
         NormalizeSolutionTemperature();
     }
 
-    private float GetTargetTemperature(FlammableComponent flammable, CP14FlammableSolutionHeaterComponent heater)
+    private float GetTargetTemperature(FlammableComponent flammable, CE14FlammableSolutionHeaterComponent heater)
     {
         return flammable.FireStacks * heater.DegreesPerStack;
     }
 
     private void NormalizeSolutionTemperature()
     {
-        var query = EntityQueryEnumerator<CP14SolutionTemperatureComponent, SolutionContainerManagerComponent>();
+        var query = EntityQueryEnumerator<CE14SolutionTemperatureComponent, SolutionContainerManagerComponent>();
         while (query.MoveNext(out var uid, out var temp, out var container))
         {
             foreach (var (_, soln) in _solutionContainer.EnumerateSolutions((uid, container)))
@@ -85,7 +85,7 @@ public sealed partial class CP14TemperatureSystem : EntitySystem
     private void FlammableEntityHeating()
     {
         var flammableQuery =
-            EntityQueryEnumerator<CP14FlammableEntityHeaterComponent, ItemPlacerComponent, FlammableComponent>();
+            EntityQueryEnumerator<CE14FlammableEntityHeaterComponent, ItemPlacerComponent, FlammableComponent>();
         while (flammableQuery.MoveNext(out _, out var heater, out var itemPlacer, out var flammable))
         {
             if (!flammable.OnFire)
@@ -102,7 +102,7 @@ public sealed partial class CP14TemperatureSystem : EntitySystem
     private void FlammableSolutionHeating()
     {
         var query =
-            EntityQueryEnumerator<CP14FlammableSolutionHeaterComponent, ItemPlacerComponent, FlammableComponent>();
+            EntityQueryEnumerator<CE14FlammableSolutionHeaterComponent, ItemPlacerComponent, FlammableComponent>();
         while (query.MoveNext(out _, out var heater, out var itemPlacer, out var flammable))
         {
             if (!flammable.OnFire)

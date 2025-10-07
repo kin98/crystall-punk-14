@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14PlantTomatoes
-  parent: CP14GatherablePlantMultiHarvestBase
+  id: CE14PlantTomatoes
+  parent: CE14GatherablePlantMultiHarvestBase
   name: tomatoes
   description: On the one hand, it's a delicious fruit. But why eat it when it's much more fun to use tomatoes as a throwing projectile?
   components:
@@ -10,16 +10,16 @@
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
     - state: grow-1
-      sprite: _CP14/Structures/Flora/Farm/tomatoes.rsi
+      sprite: _CE14/Structures/Flora/Farm/tomatoes.rsi
       map: ["enum.PlantVisualLayers.Base"]
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     loot:
       All: !type:AllSelector
         children:
-        - id: CP14FoodTomatoes
+        - id: CE14FoodTomatoes
           rolls: !type:RangeNumberSelector
             range: 4, 6
-        - id: CP14SeedTomato
+        - id: CE14SeedTomato
           rolls: !type:RangeNumberSelector
             range: 0, 2
 

@@ -15,7 +15,7 @@ namespace Content.IntegrationTests.Tests.GameRules;
 // Lets not let that happen again.
 [TestFixture]
 public sealed class AntagPreferenceTest
-{/* CP14 disabled
+{/* CE14 disabled
     [Test]
     public async Task TestLobbyPlayersValid()
     {

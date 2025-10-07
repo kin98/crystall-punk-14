@@ -1,21 +1,21 @@
 - type: Tag
-  id: CP14RecipeSewing
+  id: CE14RecipeSewing
 
 - type: Tag
-  id: CP14RecipeCooking
+  id: CE14RecipeCooking
 
 - type: Tag
-  id: CP14RecipeWorkbench
+  id: CE14RecipeWorkbench
 
 - type: Tag
-  id: CP14RecipeAnvil
+  id: CE14RecipeAnvil
 
 - type: Tag
-  id: CP14RecipeMeltingFurnace
+  id: CE14RecipeMeltingFurnace
 
 - type: Tag
-  id: CP14RecipeLeatherWorking
+  id: CE14RecipeLeatherWorking
 
 - type: Tag
-  id: CP14RecipeVampire
+  id: CE14RecipeVampire
   

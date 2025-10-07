@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14LaddersDownBase
+  id: CE14LaddersDownBase
   name: stairway down
   abstract: true
   categories: [ ForkFiltered, HideSpawnMenu ]
@@ -9,7 +9,7 @@
   components:
   - type: Sprite
     drawdepth: FloorTiles
-    sprite: /Textures/_CP14/Structures/Dungeon/ladders.rsi
+    sprite: /Textures/_CE14/Structures/Dungeon/ladders.rsi
   - type: Transform
     anchored: True
   - type: InteractionOutline
@@ -30,19 +30,19 @@
   - type: Portal
     canTeleportToOtherMaps: true
     randomTeleport: false
-    arrivalSound: /Audio/_CP14/Effects/wood_up_stairs.ogg
-    departureSound: /Audio/_CP14/Effects/wood_down_stairs.ogg
+    arrivalSound: /Audio/_CE14/Effects/wood_up_stairs.ogg
+    departureSound: /Audio/_CE14/Effects/wood_down_stairs.ogg
 
 - type: entity
-  parent: CP14LaddersDownBase
-  id: CP14LaddersUpBase
+  parent: CE14LaddersDownBase
+  id: CE14LaddersUpBase
   abstract: true
   categories: [ ForkFiltered, HideSpawnMenu ]
   name: stairway up
   description: A way out of the dark underworld into the overworld.
   components:
   - type: Sprite
-    sprite: /Textures/_CP14/Structures/Dungeon/ladders_up.rsi
+    sprite: /Textures/_CE14/Structures/Dungeon/ladders_up.rsi
     drawdepth: Mobs
   - type: Fixtures
     fixtures:
@@ -61,21 +61,21 @@
     energy: 1
     netsync: false
   - type: Portal
-    arrivalSound: /Audio/_CP14/Effects/wood_down_stairs.ogg
-    departureSound: /Audio/_CP14/Effects/wood_up_stairs.ogg
+    arrivalSound: /Audio/_CE14/Effects/wood_down_stairs.ogg
+    departureSound: /Audio/_CE14/Effects/wood_up_stairs.ogg
 
 # Basic stone
 - type: entity
-  parent: CP14LaddersDownBase
-  id: CP14LaddersDownStone
+  parent: CE14LaddersDownBase
+  id: CE14LaddersDownStone
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: stone
 
 - type: entity
-  parent: CP14LaddersUpBase
-  id: CP14LaddersUpStone
+  parent: CE14LaddersUpBase
+  id: CE14LaddersUpStone
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -83,36 +83,36 @@
 
 
 - type: entity
-  parent: CP14LaddersDownStone
-  id: CP14LaddersDownStoneAutoLink
+  parent: CE14LaddersDownStone
+  id: CE14LaddersDownStoneAutoLink
   suffix: Stone
   components:
-  - type: CP14ZLevelAutoPortal
+  - type: CE14ZLevelAutoPortal
     zLevelOffset: -1 # Go into deep
-    otherSideProto: CP14LaddersUpStone
+    otherSideProto: CE14LaddersUpStone
 
 - type: entity
-  parent: CP14LaddersUpStone
-  id: CP14LaddersUpStoneAutoLink
+  parent: CE14LaddersUpStone
+  id: CE14LaddersUpStoneAutoLink
   suffix: Stone
   components:
-  - type: CP14ZLevelAutoPortal
+  - type: CE14ZLevelAutoPortal
     zLevelOffset: 1 # Go onto surface
-    otherSideProto: CP14LaddersDownStone
+    otherSideProto: CE14LaddersDownStone
 
 
 # Wood
 - type: entity
-  parent: CP14LaddersDownBase
-  id: CP14LaddersDownWood
+  parent: CE14LaddersDownBase
+  id: CE14LaddersDownWood
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: wood
 
 - type: entity
-  parent: CP14LaddersUpBase
-  id: CP14LaddersUpWood
+  parent: CE14LaddersUpBase
+  id: CE14LaddersUpWood
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -120,36 +120,36 @@
 
 
 - type: entity
-  parent: CP14LaddersDownWood
-  id: CP14LaddersDownWoodAutoLink
+  parent: CE14LaddersDownWood
+  id: CE14LaddersDownWoodAutoLink
   suffix: Wood
   components:
-  - type: CP14ZLevelAutoPortal
+  - type: CE14ZLevelAutoPortal
     zLevelOffset: -1 # Go into deep
-    otherSideProto: CP14LaddersUpWood
+    otherSideProto: CE14LaddersUpWood
 
 - type: entity
-  parent: CP14LaddersUpWood
-  id: CP14LaddersUpWoodAutoLink
+  parent: CE14LaddersUpWood
+  id: CE14LaddersUpWoodAutoLink
   suffix: Wood
   components:
-  - type: CP14ZLevelAutoPortal
+  - type: CE14ZLevelAutoPortal
     zLevelOffset: 1 # Go onto surface
-    otherSideProto: CP14LaddersDownWood
+    otherSideProto: CE14LaddersDownWood
 
 
 # Marble
 - type: entity
-  parent: CP14LaddersDownBase
-  id: CP14LaddersDownMarble
+  parent: CE14LaddersDownBase
+  id: CE14LaddersDownMarble
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: marble
 
 - type: entity
-  parent: CP14LaddersUpBase
-  id: CP14LaddersUpMarble
+  parent: CE14LaddersUpBase
+  id: CE14LaddersUpMarble
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -157,19 +157,19 @@
 
 
 - type: entity
-  parent: CP14LaddersDownMarble
-  id: CP14LaddersDownMarbleAutoLink
+  parent: CE14LaddersDownMarble
+  id: CE14LaddersDownMarbleAutoLink
   suffix: Marble
   components:
-  - type: CP14ZLevelAutoPortal
+  - type: CE14ZLevelAutoPortal
     zLevelOffset: -1 # Go into deep
-    otherSideProto: CP14LaddersUpMarble
+    otherSideProto: CE14LaddersUpMarble
 
 - type: entity
-  parent: CP14LaddersUpMarble
-  id: CP14LaddersUpMarbleAutoLink
+  parent: CE14LaddersUpMarble
+  id: CE14LaddersUpMarbleAutoLink
   suffix: Marble
   components:
-  - type: CP14ZLevelAutoPortal
+  - type: CE14ZLevelAutoPortal
     zLevelOffset: 1 # Go onto surface
-    otherSideProto: CP14LaddersDownMarble
+    otherSideProto: CE14LaddersDownMarble

@@ -1,23 +1,23 @@
 - type: guideEntry
   crystallPunkAllowed: true
   locFilter: "en-US"
-  id: CP14_EN
+  id: CE14_EN
   name: Welcome to CrystallEdge
-  text: "/ServerInfo/_CP14/Guidebook_EN/Welcome.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/Welcome.xml"
   children:
-  - CP14_EN_Species
-  - CP14_EN_Jobs
-  - CP14_EN_Imperial_Laws
-  - CP14_EN_Mechanics
+  - CE14_EN_Species
+  - CE14_EN_Jobs
+  - CE14_EN_Imperial_Laws
+  - CE14_EN_Mechanics
 
 - type: guideEntry
   crystallPunkAllowed: true
   locFilter: "ru-RU"
-  id: CP14_RU
+  id: CE14_RU
   name: Добро пожаловать в CrystallEdge
-  text: "/ServerInfo/_CP14/Guidebook_RU/Welcome.xml"
+  text: "/ServerInfo/_CE14/Guidebook_RU/Welcome.xml"
   children:
-  - CP14_RU_Species
-  - CP14_RU_Jobs
-  - CP14_RU_Imperial_Laws
-  - CP14_RU_Mechanics
+  - CE14_RU_Species
+  - CE14_RU_Jobs
+  - CE14_RU_Imperial_Laws
+  - CE14_RU_Mechanics

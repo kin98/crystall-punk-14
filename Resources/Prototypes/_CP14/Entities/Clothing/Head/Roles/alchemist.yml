@@ -1,22 +1,22 @@
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadAlchemistBandana
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadAlchemistBandana
   name: alchemist's bandana
   description: Hides your hair from chemical fumes
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/Alchemist/bandana.rsi
+    sprite: _CE14/Clothing/Head/Roles/Alchemist/bandana.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/Alchemist/bandana.rsi
+    sprite: _CE14/Clothing/Head/Roles/Alchemist/bandana.rsi
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadAlchemistBeret
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadAlchemistBeret
   name: alchemist's beret
   description: You seem very smart.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/Alchemist/beret.rsi
+    sprite: _CE14/Clothing/Head/Roles/Alchemist/beret.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/Alchemist/beret.rsi
+    sprite: _CE14/Clothing/Head/Roles/Alchemist/beret.rsi
 

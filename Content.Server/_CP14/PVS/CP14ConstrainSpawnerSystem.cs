@@ -8,9 +8,9 @@ using Content.Shared.Trigger;
 using MyNamespace;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.PVS;
+namespace Content.Server._CE14.PVS;
 
-public sealed class CP14ConstrainSpawnerSystem : EntitySystem
+public sealed class CE14ConstrainSpawnerSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly GameTicker _ticker = default!;
@@ -19,10 +19,10 @@ public sealed class CP14ConstrainSpawnerSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14ConstrainedSpawnerOnTriggerComponent, TriggerEvent>(OnSpawnTrigger);
+        SubscribeLocalEvent<CE14ConstrainedSpawnerOnTriggerComponent, TriggerEvent>(OnSpawnTrigger);
     }
 
-    private void OnSpawnTrigger(Entity<CP14ConstrainedSpawnerOnTriggerComponent> spawner, ref TriggerEvent args)
+    private void OnSpawnTrigger(Entity<CE14ConstrainedSpawnerOnTriggerComponent> spawner, ref TriggerEvent args)
     {
         if (HasComp<GhostComponent>(args.User))//TODO replace with Whitelist system?
             return;
@@ -36,7 +36,7 @@ public sealed class CP14ConstrainSpawnerSystem : EntitySystem
         TrySpawn(spawner);
     }
 
-    private void UpdateSpawned(Entity<CP14ConstrainedSpawnerOnTriggerComponent> spawner)
+    private void UpdateSpawned(Entity<CE14ConstrainedSpawnerOnTriggerComponent> spawner)
     {
         foreach (var spawned in spawner.Comp.Spawned)
         {
@@ -45,19 +45,19 @@ public sealed class CP14ConstrainSpawnerSystem : EntitySystem
         }
     }
 
-    private bool CanSpawn(Entity<CP14ConstrainedSpawnerOnTriggerComponent> spawner)
+    private bool CanSpawn(Entity<CE14ConstrainedSpawnerOnTriggerComponent> spawner)
     {
         UpdateSpawned(spawner);
         return spawner.Comp.Spawned.Count < spawner.Comp.MaxCount;
     }
 
-    private void TrySpawn(Entity<CP14ConstrainedSpawnerOnTriggerComponent> spawner)
+    private void TrySpawn(Entity<CE14ConstrainedSpawnerOnTriggerComponent> spawner)
     {
         if (CanSpawn(spawner))
             Spawn(spawner);
     }
 
-    private void Spawn(Entity<CP14ConstrainedSpawnerOnTriggerComponent> spawner)
+    private void Spawn(Entity<CE14ConstrainedSpawnerOnTriggerComponent> spawner)
     {
         if (!_random.Prob(spawner.Comp.Chance))
             return;

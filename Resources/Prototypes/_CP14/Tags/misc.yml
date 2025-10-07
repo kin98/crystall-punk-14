@@ -1,107 +1,107 @@
 - type: Tag
-  id: CP14Key
+  id: CE14Key
 
 - type: Tag
-  id: CP14Coin
+  id: CE14Coin
 
 - type: Tag
-  id: CP14CrossbowBolt
+  id: CE14CrossbowBolt
 
 - type: Tag
-  id: CP14CartridgeBulletRifle
+  id: CE14CartridgeBulletRifle
 
 - type: Tag
-  id: CP14FireplaceFuel
+  id: CE14FireplaceFuel
 
 - type: Tag
-  id: CP14HerbalGathering
+  id: CE14HerbalGathering
 
 - type: Tag
-  id: CP14FitInMortar
+  id: CE14FitInMortar
 
 - type: Tag
-  id: CP14Pestle
+  id: CE14Pestle
 
 - type: Tag
-  id: CP14Bottles
+  id: CE14Bottles
 
 - type: Tag
-  id: CP14AmbientWater
+  id: CE14AmbientWater
 
 - type: Tag
-  id: CP14AmbientForest
+  id: CE14AmbientForest
 
 - type: Tag
-  id: CP14AmbientLurker
+  id: CE14AmbientLurker
 
 - type: Tag
-  id: CP14InkwellFittable
+  id: CE14InkwellFittable
 
 - type: Tag
-  id: CP14Rabbit
+  id: CE14Rabbit
 
 - type: Tag
-  id: CP14Rat
+  id: CE14Rat
 
 - type: Tag
-  id: CP14RatWearable
+  id: CE14RatWearable
 
 - type: Tag
-  id: CP14Pig
+  id: CE14Pig
 
 - type: Tag
-  id: CP14Boar
+  id: CE14Boar
 
 - type: Tag
-  id: CP14Mosquito
+  id: CE14Mosquito
 
 - type: Tag
-  id: CP14Torch
+  id: CE14Torch
 
 - type: Tag
-  id: CP14SpellScroll
+  id: CE14SpellScroll
 
 - type: Tag
-  id: CP14Arrow
+  id: CE14Arrow
 
 - type: Tag
-  id: CP14FarmFood
+  id: CE14FarmFood
 
 - type: Tag
-  id: CP14FarmSeed
+  id: CE14FarmSeed
 
 - type: Tag
-  id: CP14AlchemicalHerbals
+  id: CE14AlchemicalHerbals
 
 - type: Tag
-  id: CP14Lighter
+  id: CE14Lighter
 
 - type: Tag
-  id: CP14Scissors
+  id: CE14Scissors
 
 - type: Tag
-  id: CP14SharpeningStone
+  id: CE14SharpeningStone
 
 - type: Tag
-  id: CP14Vial
+  id: CE14Vial
 
 - type: Tag
-  id: CP14BloodFlower
+  id: CE14BloodFlower
 
 - type: Tag
-  id: CP14Dayflin
+  id: CE14Dayflin
 
 - type: Tag
-  id: CP14Sheep
+  id: CE14Sheep
 
 - type: Tag
-  id: CP14Lockpick
+  id: CE14Lockpick
 
 - type: Tag
-  id: CP14RaidLeader
+  id: CE14RaidLeader
 
 - type: Tag
-  id: CP14EnergyCrystal
+  id: CE14EnergyCrystal
 
 - type: Tag
-  id: CP14BigCrossbowBolt
+  id: CE14BigCrossbowBolt

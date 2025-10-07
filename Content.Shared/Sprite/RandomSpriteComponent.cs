@@ -26,8 +26,8 @@ public sealed partial class RandomSpriteComponent : Component
     public Dictionary<string, (string State, Color? Color)> Selected = new();
 
     /// <summary>
-    /// CP14 Base Random Sprite color
+    /// CE14 Base Random Sprite color
     /// </summary>
     [DataField]
-    public Color CP14InheritBaseColor = Color.White;
+    public Color CE14InheritBaseColor = Color.White;
 }

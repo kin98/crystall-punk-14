@@ -1,12 +1,12 @@
 - type: entity
   parent: Dart
-  id: CP14SpikeWhistle
+  id: CE14SpikeWhistle
   name: spike
   description: Organically spiked with an unknown liquid inside.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Ranged/Projectiles/spike.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/Projectiles/spike.rsi
     layers:
     - state: spike
       shader: unshaded
@@ -23,7 +23,7 @@
       melee:
         maxVol: 4
         reagents:
-        - ReagentId: CP14WhistlerPoison
+        - ReagentId: CE14WhistlerPoison
           Quantity: 4
   - type: SolutionInjectOnEmbed
     transferAmount: 4
@@ -55,13 +55,13 @@
 
 - type: entity
   parent: BaseBullet
-  id: CP14SpikeCackle
+  id: CE14SpikeCackle
   name: Cackle spike
   description: Organically spiked with a destructive liquid inside.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Ranged/Projectiles/spike_cackle.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/Projectiles/spike_cackle.rsi
     layers:
     - state: spike
   - type: EmbeddableProjectile
@@ -77,7 +77,7 @@
       melee:
         maxVol: 1
         reagents:
-        - ReagentId: CP14MonsterToxinBleed
+        - ReagentId: CE14MonsterToxinBleed
           Quantity: 1
   - type: SolutionInjectOnEmbed
     transferAmount: 1
@@ -108,11 +108,11 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14SpikeCackleSpread
+  id: CE14SpikeCackleSpread
   categories: [ HideSpawnMenu ]
-  parent: CP14SpikeCackle
+  parent: CE14SpikeCackle
   components:
   - type: ProjectileSpread
-    proto: CP14SpikeCackle
+    proto: CE14SpikeCackle
     count: 5
     spread: 45

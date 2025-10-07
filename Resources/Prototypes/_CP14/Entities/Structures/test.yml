@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14DPSMeter
+  id: CE14DPSMeter
   parent: BaseStructureDynamic
   categories: [ ForkFiltered, DoNotMap ]
   name: DPS Meter
@@ -23,18 +23,18 @@
   - type: InteractionOutline
   - type: Physics
   - type: Damageable
-  - type: CP14DPSMeter
+  - type: CE14DPSMeter
 
 - type: entity
   parent: BaseStructure
-  id: CP14RoundLeaver
+  id: CE14RoundLeaver
   name: distance fog
   description: You have reached the edge of the game map. There's nothing further. You can use this fog to get out of the game.
   categories: [ ForkFiltered ]
   components:
   - type: PlacementReplacement
     key: roundLeaver
-  - type: CP14RoundLeave
+  - type: CE14RoundLeave
   - type: SyncSprite
   - type: Sprite
     snapCardinals: true
@@ -57,8 +57,8 @@
         hard: false
 
 - type: entity
-  parent: CP14RoundLeaver
-  id: CP14RoundLeaverDarkFog
+  parent: CE14RoundLeaver
+  id: CE14RoundLeaverDarkFog
   components:
     - type: Occluder
     - type: Sprite

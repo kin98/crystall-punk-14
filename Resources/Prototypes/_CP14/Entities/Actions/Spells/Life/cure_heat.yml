@@ -1,23 +1,23 @@
 - type: entity
-  id: CP14ActionSpellCureBurn
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellCureBurn
+  parent: CE14ActionSpellBase
   name: Cure burn
   description: You heal skin damage caused by excessive cooling or heating.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.5
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 10
-  - type: CP14ActionTargetMobStatusRequired
-  - type: CP14ActionSpeaking
+  - type: CE14ActionTargetMobStatusRequired
+  - type: CE14ActionSpeaking
     startSpeech: "Pellis dolorem..."
     endSpeech: "non novit"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneCureBurn
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneCureBurn
   - type: Action
     useDelay: 5
     icon:
-      sprite: _CP14/Actions/Spells/healing.rsi
+      sprite: _CE14/Actions/Spells/healing.rsi
       state: cure_burn
   - type: DoAfterArgs
     delay: 1.5
@@ -29,16 +29,16 @@
     whitelist:
       components:
       - MobState
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectCureBurn
+        - CE14ImpactEffectCureBurn
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectCureBurn
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectCureBurn
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:HealthChange
           damage:
@@ -49,8 +49,8 @@
         - !type:Jitter
 
 - type: entity
-  id: CP14RuneCureBurn
-  parent: CP14BaseMagicRune
+  id: CE14RuneCureBurn
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -66,8 +66,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectCureBurn
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectCureBurn
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -78,10 +78,10 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14BaseSpellScrollHealing
-  id: CP14SpellScrollCureBurn
+  parent: CE14BaseSpellScrollHealing
+  id: CE14SpellScrollCureBurn
   name: cure burn spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellCureBurn
+    - CE14ActionSpellCureBurn

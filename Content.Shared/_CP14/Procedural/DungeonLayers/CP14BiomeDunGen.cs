@@ -6,7 +6,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared.Procedural.DungeonLayers;
 
 [Virtual]
-public partial class CP14BiomeDunGen : IDunGenLayer
+public partial class CE14BiomeDunGen : IDunGenLayer
 {
     [DataField(required: true)]
     public ProtoId<BiomeTemplatePrototype> BiomeTemplate;

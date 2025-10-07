@@ -6,9 +6,9 @@ using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.Temperature;
+namespace Content.Shared._CE14.Temperature;
 
-public abstract partial class CP14SharedFireSpreadSystem : EntitySystem
+public abstract partial class CE14SharedFireSpreadSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
@@ -18,34 +18,34 @@ public abstract partial class CP14SharedFireSpreadSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14FireSpreadComponent, OnFireChangedEvent>(OnFireChangedSpread);
-        SubscribeLocalEvent<CP14DespawnOnExtinguishComponent, OnFireChangedEvent>(OnFireChangedDespawn);
-        SubscribeLocalEvent<CP14DelayedIgnitionSourceComponent, OnFireChangedEvent>(OnIgnitionSourceFireChanged);
-        SubscribeLocalEvent<CP14DelayedIgnitionSourceComponent, AfterInteractEvent>(OnDelayedIgniteAttempt);
+        SubscribeLocalEvent<CE14FireSpreadComponent, OnFireChangedEvent>(OnFireChangedSpread);
+        SubscribeLocalEvent<CE14DespawnOnExtinguishComponent, OnFireChangedEvent>(OnFireChangedDespawn);
+        SubscribeLocalEvent<CE14DelayedIgnitionSourceComponent, OnFireChangedEvent>(OnIgnitionSourceFireChanged);
+        SubscribeLocalEvent<CE14DelayedIgnitionSourceComponent, AfterInteractEvent>(OnDelayedIgniteAttempt);
     }
 
-    private void OnFireChangedDespawn(Entity<CP14DespawnOnExtinguishComponent> ent, ref OnFireChangedEvent args)
+    private void OnFireChangedDespawn(Entity<CE14DespawnOnExtinguishComponent> ent, ref OnFireChangedEvent args)
     {
         if (!args.OnFire)
             QueueDel(ent);
     }
 
-    private void OnFireChangedSpread(Entity<CP14FireSpreadComponent> ent, ref OnFireChangedEvent args)
+    private void OnFireChangedSpread(Entity<CE14FireSpreadComponent> ent, ref OnFireChangedEvent args)
     {
         if (args.OnFire)
         {
-            EnsureComp<CP14ActiveFireSpreadingComponent>(ent);
+            EnsureComp<CE14ActiveFireSpreadingComponent>(ent);
         }
         else
         {
-            if (HasComp<CP14ActiveFireSpreadingComponent>(ent))
-                RemCompDeferred<CP14ActiveFireSpreadingComponent>(ent);
+            if (HasComp<CE14ActiveFireSpreadingComponent>(ent))
+                RemCompDeferred<CE14ActiveFireSpreadingComponent>(ent);
         }
 
         ent.Comp.NextSpreadTime = _gameTiming.CurTime + TimeSpan.FromSeconds(ent.Comp.SpreadCooldownMax);
     }
 
-    private void OnDelayedIgniteAttempt(Entity<CP14DelayedIgnitionSourceComponent> ent, ref AfterInteractEvent args)
+    private void OnDelayedIgniteAttempt(Entity<CE14DelayedIgnitionSourceComponent> ent, ref AfterInteractEvent args)
     {
         if (!args.CanReach || args.Handled || args.Target == null)
             return;
@@ -56,7 +56,7 @@ public abstract partial class CP14SharedFireSpreadSystem : EntitySystem
         var time = ent.Comp.Delay;
         var caution = true;
 
-        if (TryComp<CP14IgnitionModifierComponent>(args.Target, out var modifier))
+        if (TryComp<CE14IgnitionModifierComponent>(args.Target, out var modifier))
         {
             time *= modifier.IgnitionTimeModifier;
             caution = !modifier.HideCaution;
@@ -65,7 +65,7 @@ public abstract partial class CP14SharedFireSpreadSystem : EntitySystem
         _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager,
             args.User,
             time,
-            new CP14IgnitionDoAfter(),
+            new CE14IgnitionDoAfter(),
             args.Target,
             args.Target,
             ent)
@@ -78,9 +78,9 @@ public abstract partial class CP14SharedFireSpreadSystem : EntitySystem
             CancelDuplicate = true
         });
 
-        var selfMessage = Loc.GetString("cp14-attempt-ignite-caution-self",
+        var selfMessage = Loc.GetString("CE14-attempt-ignite-caution-self",
             ("target", MetaData(args.Target.Value).EntityName));
-        var otherMessage = Loc.GetString("cp14-attempt-ignite-caution",
+        var otherMessage = Loc.GetString("CE14-attempt-ignite-caution",
             ("name", Identity.Entity(args.User, EntityManager)),
             ("target", Identity.Entity(args.Target.Value, EntityManager)));
         _popup.PopupPredicted(selfMessage,
@@ -90,7 +90,7 @@ public abstract partial class CP14SharedFireSpreadSystem : EntitySystem
             caution ? PopupType.MediumCaution : PopupType.Small);
     }
 
-    private void OnIgnitionSourceFireChanged(Entity<CP14DelayedIgnitionSourceComponent> ent, ref OnFireChangedEvent args)
+    private void OnIgnitionSourceFireChanged(Entity<CE14DelayedIgnitionSourceComponent> ent, ref OnFireChangedEvent args)
     {
         ent.Comp.Enabled = args.OnFire;
         Dirty(ent);
@@ -107,6 +107,6 @@ public readonly record struct OnFireChangedEvent(bool OnFire)
 }
 
 [Serializable, NetSerializable]
-public sealed partial class CP14IgnitionDoAfter : SimpleDoAfterEvent
+public sealed partial class CE14IgnitionDoAfter : SimpleDoAfterEvent
 {
 }

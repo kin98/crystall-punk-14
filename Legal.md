@@ -15,7 +15,7 @@ Non-legalese summary of the terms of this agreement (This is not a replacement f
 - The CLA may be amended with 30 days of notice by email. *If you do not agree to the new CLA your contributions will be kept under the old version.*
 
 # Licensing/Attribution:
-- Unless specified otherwise, all Source Code, inside any **\_CP14 or CP14 folders**, fall under the terms specified in LICENSE_CE.TXT *with Exhibit B enforced* and the [CrystallEdge CLA](https://github.com/crystallpunk-14/crystall-punk-14/blob/master/CLA.md). All assets/content in those folders fall under CC-BY-SA 4.0.
+- Unless specified otherwise, all Source Code, inside any **\_CE14 or CE14 folders**, fall under the terms specified in LICENSE_CE.TXT *with Exhibit B enforced* and the [CrystallEdge CLA](https://github.com/crystallpunk-14/crystall-punk-14/blob/master/CLA.md). All assets/content in those folders fall under CC-BY-SA 4.0.
 - Any content from SpaceWizards/SpaceStation14 without specified licensing of any code is licensed under MIT (LICENSE.TXT). Any Space Wizards content licensed under CC-BY-SA to Space Wizards Federation & Contributors.
 - __**You may not use CrystallEdge code/content (All right reserved). This is to make sure that CrystallEdge code is available to be improved by the community.**__
 - **We are in the process of removing/replacing content that is currently not under an approved license.**

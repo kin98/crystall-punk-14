@@ -1,11 +1,11 @@
 # 4 Priority - Special
 
 - type: ambientMusic
-  id: CP14Magic
+  id: CE14Magic
   sound:
     params:
       volume: -12
-    collection: CP14AmbienceMagic
+    collection: CE14AmbienceMagic
   rules: AlwaysTrue
   #priority: 4
 
@@ -13,26 +13,26 @@
 
 # 2 Priority - General areas
 - type: ambientMusic
-  id: CP14NightForest
+  id: CE14NightForest
   sound:
     params:
       volume: -6
-    collection: CP14NightForest
+    collection: CE14NightForest
   rules: GrassNight
   priority: 2
 
 ## Fallback if nothing else found
 - type: ambientMusic
-  id: CP14Cave
+  id: CE14Cave
   sound:
     params:
       volume: -12
-    collection: CP14AmbienceCave
+    collection: CE14AmbienceCave
   rules: AlwaysTrue
 
 # Sound collections
 - type: soundCollection
-  id: CP14AmbienceCave
+  id: CE14AmbienceCave
   files:
     - /Audio/Ambience/ambilava1.ogg
     - /Audio/Ambience/ambilava2.ogg
@@ -40,34 +40,34 @@
     - /Audio/Ambience/ambiruin.ogg
     - /Audio/Ambience/ambiruin4.ogg
     - /Audio/Ambience/maintambience.ogg
-    - /Audio/_CP14/Ambience/ambicave1.ogg
-    - /Audio/_CP14/Ambience/ambicreepy1.ogg
-    - /Audio/_CP14/Ambience/ambicreepy2.ogg
-    - /Audio/_CP14/Ambience/ambicreepy3.ogg
+    - /Audio/_CE14/Ambience/ambicave1.ogg
+    - /Audio/_CE14/Ambience/ambicreepy1.ogg
+    - /Audio/_CE14/Ambience/ambicreepy2.ogg
+    - /Audio/_CE14/Ambience/ambicreepy3.ogg
 
 - type: soundCollection
-  id: CP14AmbienceMagic
+  id: CE14AmbienceMagic
   files:
-    - /Audio/_CP14/Ambience/ambimagic1.ogg
-    - /Audio/_CP14/Ambience/ambimagic2.ogg
-    - /Audio/_CP14/Ambience/ambimagic3.ogg
-    - /Audio/_CP14/Ambience/ambimagic4.ogg
-    - /Audio/_CP14/Ambience/ambimagic5.ogg
-    - /Audio/_CP14/Ambience/ambimagic6.ogg
-    - /Audio/_CP14/Ambience/ambiAlchemy.ogg
+    - /Audio/_CE14/Ambience/ambimagic1.ogg
+    - /Audio/_CE14/Ambience/ambimagic2.ogg
+    - /Audio/_CE14/Ambience/ambimagic3.ogg
+    - /Audio/_CE14/Ambience/ambimagic4.ogg
+    - /Audio/_CE14/Ambience/ambimagic5.ogg
+    - /Audio/_CE14/Ambience/ambimagic6.ogg
+    - /Audio/_CE14/Ambience/ambiAlchemy.ogg
 
 - type: soundCollection
-  id: CP14NightForest
+  id: CE14NightForest
   files:
-    - /Audio/_CP14/Animals/owl1.ogg
-    - /Audio/_CP14/Animals/owl2.ogg
-    - /Audio/_CP14/Animals/owl3.ogg
-    - /Audio/_CP14/Animals/owl4.ogg
-    - /Audio/_CP14/Animals/owl5.ogg
-    - /Audio/_CP14/Animals/owl6.ogg
-    - /Audio/_CP14/Animals/owl7.ogg
-    - /Audio/_CP14/Animals/owl8.ogg
-    - /Audio/_CP14/Animals/owl9.ogg
+    - /Audio/_CE14/Animals/owl1.ogg
+    - /Audio/_CE14/Animals/owl2.ogg
+    - /Audio/_CE14/Animals/owl3.ogg
+    - /Audio/_CE14/Animals/owl4.ogg
+    - /Audio/_CE14/Animals/owl5.ogg
+    - /Audio/_CE14/Animals/owl6.ogg
+    - /Audio/_CE14/Animals/owl7.ogg
+    - /Audio/_CE14/Animals/owl8.ogg
+    - /Audio/_CE14/Animals/owl9.ogg
 
 # Rules
 - type: rules
@@ -82,7 +82,7 @@
       count: 1
       whitelist:
         components:
-          - CP14MagicRitualPhase
-          - CP14MagicRitual
-          - CP14DemiplanPassway
+          - CE14MagicRitualPhase
+          - CE14MagicRitual
+          - CE14DemiplanPassway
       range: 6

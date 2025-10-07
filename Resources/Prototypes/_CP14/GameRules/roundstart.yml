@@ -1,36 +1,36 @@
 - type: entity
-  id: CP14BaseGameRule
+  id: CE14BaseGameRule
   parent: BaseGameRule
   abstract: true
   components:
   - type: GameRule
-    cP14Allowed: true
+    CE14Allowed: true
 
 - type: entity
-  id: CP14RoundObjectivesRule
-  parent: CP14BaseGameRule
+  id: CE14RoundObjectivesRule
+  parent: CE14BaseGameRule
   components:
-  - type: CP14PersonalObjectivesRule
+  - type: CE14PersonalObjectivesRule
     roleObjectives:
-      CP14Adventurer:
-      - CP14PersonalCurrencyCollectObjectiveGroup
-      CP14Alchemist:
-      - CP14PersonalCurrencyCollectObjectiveGroup
-      CP14Apprentice:
-      - CP14PersonalCurrencyCollectObjectiveGroup
-      CP14Blacksmith:
-      - CP14PersonalCurrencyCollectObjectiveGroup
-      CP14Innkeeper:
-      - CP14PersonalCurrencyCollectObjectiveGroup
+      CE14Adventurer:
+      - CE14PersonalCurrencyCollectObjectiveGroup
+      CE14Alchemist:
+      - CE14PersonalCurrencyCollectObjectiveGroup
+      CE14Apprentice:
+      - CE14PersonalCurrencyCollectObjectiveGroup
+      CE14Blacksmith:
+      - CE14PersonalCurrencyCollectObjectiveGroup
+      CE14Innkeeper:
+      - CE14PersonalCurrencyCollectObjectiveGroup
 
 # crashing
 
 #- type: entity
-#  id: CP14CrashToWindlandsRule
-#  parent: CP14BaseGameRule
+#  id: CE14CrashToWindlandsRule
+#  parent: CE14BaseGameRule
 #  components:
-#  - type: CP14CrashingShipRule
-#  - type: CP14ExpeditionToWindlandsRule
+#  - type: CE14CrashingShipRule
+#  - type: CE14ExpeditionToWindlandsRule
 #    modifiers:
 #    - WeatherInfinityStorm
 #    - MapLightCycleDefault
@@ -40,17 +40,17 @@
 # event schedulers
 
 - type: entity
-  id: CP14BasicStationEventScheduler
-  parent: CP14BaseGameRule
+  id: CE14BasicStationEventScheduler
+  parent: CE14BaseGameRule
   components:
   - type: BasicStationEventScheduler
     scheduledGameRules: !type:NestedSelector
-      tableId: CP14BasicGameRulesTable
+      tableId: CE14BasicGameRulesTable
 
 - type: entityTable
-  id: CP14BasicGameRulesTable
+  id: CE14BasicGameRulesTable
   table: !type:AllSelector
     children:
       - !type:NestedSelector
-        tableId: CP14BasicCalmEventsTable
+        tableId: CE14BasicCalmEventsTable
 

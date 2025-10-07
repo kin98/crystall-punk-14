@@ -1,9 +1,9 @@
 using Content.Shared.Damage;
 
-namespace Content.Shared._CP14.MeleeWeapon.Components;
+namespace Content.Shared._CE14.MeleeWeapon.Components;
 
 [RegisterComponent]
-public sealed partial class CP14MeleeSelfDamageComponent : Component
+public sealed partial class CE14MeleeSelfDamageComponent : Component
 {
     [DataField]
     public DamageSpecifier DamageToSelf = new()

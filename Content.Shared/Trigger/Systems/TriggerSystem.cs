@@ -47,7 +47,7 @@ public sealed partial class TriggerSystem : EntitySystem
     {
         base.Initialize();
 
-        InitializeDamageReceived(); //CP14
+        InitializeDamageReceived(); //CE14
         InitializeCollide();
         InitializeCondition();
         InitializeInteraction();

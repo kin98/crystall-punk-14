@@ -1,19 +1,19 @@
 - type: entity
-  id: CP14MobDino
-  parent: CP14SimpleMobBase
+  id: CE14MobDino
+  parent: CE14SimpleMobBase
   name: dino
   abstract: true
   components:
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
   - type: Sprite
     drawdepth: Mobs
   - type: ReplacementAccent
     accent: xeno
   - type: Damageable
-    damageContainer: CP14Biological
-    damageModifierSet: CP14Dinosaur
+    damageContainer: CE14Biological
+    damageModifierSet: CE14Dinosaur
   - type: Appearance
   - type: Body
     prototype: Animal
@@ -30,14 +30,14 @@
       Dead:
         Base: dead
   - type: Bloodstream
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: Tag
     tags:
       - FootstepSound
 
 - type: entity
-  id: CP14MobDinoYumkaraptor
-  parent: CP14MobDino
+  id: CE14MobDinoYumkaraptor
+  parent: CE14MobDino
   name: yumkaraptor
   description: A large scaly lizard, an obvious predator that liked to snack on meat.
   categories: [ ForkFiltered ]
@@ -57,7 +57,7 @@
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Animals/dino.rsi
+      sprite: _CE14/Mobs/Animals/dino.rsi
       state: live
   - type: Fixtures
     fixtures:
@@ -92,16 +92,16 @@
   - type: Climbing
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatDino
+    - id: CE14FoodMeatDino
       amount: 4
-    - id: CP14RuggedLeather1
+    - id: CE14RuggedLeather1
       amount: 1
       maxAmount: 2
       prob: 0.2
-    - id: CP14Leather1
+    - id: CE14Leather1
       amount: 2
       maxAmount: 4
-    - id: CP14Bone1
+    - id: CE14Bone1
       amount: 2
       maxAmount: 3
   - type: Bloodstream
@@ -110,7 +110,7 @@
     minInterval: 20
     maxInterval: 40
     sound:
-      collection: CP14Dinosaurs
+      collection: CE14Dinosaurs
       params:
         volume: -8
         variation: 0.125
@@ -118,8 +118,8 @@
   - type: FloorOcclusion
 
 - type: entity
-  id: CP14MobDinoSmallHydra
-  parent: CP14MobDino
+  id: CE14MobDinoSmallHydra
+  parent: CE14MobDino
   name: small hydra
   description: The small two-headed lizard, despite its size, can be quite dangerous.
   categories: [ ForkFiltered ]
@@ -137,7 +137,7 @@
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Animals/hydra.rsi
+      sprite: _CE14/Mobs/Animals/hydra.rsi
       state: live
   - type: Fixtures
     fixtures:
@@ -172,12 +172,12 @@
     acceleration: 16.0
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatHydra
+    - id: CE14FoodMeatHydra
       amount: 2
-    - id: CP14Leather1
+    - id: CE14Leather1
       amount: 1
       prob: 0.5
-    - id: CP14ScrapLeather
+    - id: CE14ScrapLeather
       amount: 1
       maxAmount: 3
       prob: 0.75

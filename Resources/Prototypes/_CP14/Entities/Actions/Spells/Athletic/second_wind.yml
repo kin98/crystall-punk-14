@@ -1,7 +1,7 @@
 - type: entity
-  id: CP14ActionSpellSecondWind
+  id: CE14ActionSpellSecondWind
   parent: 
-  - CP14ActionSpellBase
+  - CE14ActionSpellBase
   - BaseMentalAction
   name: Second wind
   description: Through pain and blood, you find a second wind, instantly restoring your stamina.
@@ -10,22 +10,22 @@
     useDelay: 10
     sound: null
     icon:
-      sprite: _CP14/Actions/Spells/physical.rsi
+      sprite: _CE14/Actions/Spells/physical.rsi
       state: second_wind
   - type: InstantAction
-    event: !type:CP14InstantModularEffectEvent
+    event: !type:CE14InstantModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectSecondWind
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectSecondWind
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:Jitter
         - !type:MovespeedModifier
           walkSpeedModifier: 1.15
           sprintSpeedModifier: 1.15
           statusLifetime: 2
-        - !type:CP14StaminaChange
+        - !type:CE14StaminaChange
           staminaDelta: 100
         - !type:HealthChange
           damage:
@@ -37,8 +37,8 @@
           type: Remove
 
 - type: entity
-  id: CP14ImpactEffectSecondWind
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectSecondWind
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -49,7 +49,7 @@
       shader: unshaded
   - type: EmitSoundOnSpawn
     sound: !type:SoundPathSpecifier
-      path: /Audio/_CP14/Effects/heartbeat.ogg
+      path: /Audio/_CE14/Effects/heartbeat.ogg
   - type: PointLight
     color: "#b30713"
     radius: 2.0

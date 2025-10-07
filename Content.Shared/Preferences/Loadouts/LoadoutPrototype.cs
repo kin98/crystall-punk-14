@@ -1,4 +1,4 @@
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Prototypes;
 using Content.Shared.FixedPoint;
 using Content.Shared.Preferences.Loadouts.Effects;
 using Content.Shared.Roles;
@@ -53,8 +53,8 @@ public sealed partial class LoadoutPrototype : IPrototype, IEquipmentLoadout
     public Dictionary<string, List<EntProtoId>> Storage { get; set; } = new();
 
     /// <summary>
-    /// CP14 - it is possible to give free skills to players
+    /// CE14 - it is possible to give free skills to players
     /// </summary>
     [DataField]
-    public HashSet<ProtoId<CP14SkillPrototype>> Skills = new();
+    public HashSet<ProtoId<CE14SkillPrototype>> Skills = new();
 }

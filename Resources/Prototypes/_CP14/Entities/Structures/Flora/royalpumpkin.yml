@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14RoyalPumpkin
-  parent: CP14BaseFlammableSpreading
+  id: CE14RoyalPumpkin
+  parent: CE14BaseFlammableSpreading
   name: royal pumpkin
   description: It's a huge pumpkin, it feels like you could even make a carriage out of it.
   categories: [ ForkFiltered ]
@@ -8,7 +8,7 @@
   - type: Clickable
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Flora/royal_pumpkin.rsi
+    sprite: _CE14/Structures/Flora/royal_pumpkin.rsi
     drawdepth: Mobs
     state: royal_pumpkin
   - type: FlavorProfile
@@ -69,6 +69,6 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14FoodPumpkinSlice:
+          CE14FoodPumpkinSlice:
             min: 20
             max: 25

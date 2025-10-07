@@ -1,15 +1,15 @@
 - type: htnCompound
-  id: CP14MonsterCompound
+  id: CE14MonsterCompound
   branches:
     - tasks:
         - !type:HTNCompoundTask
-          task: CP14MonsterMeleeCombatPrecondition
+          task: CE14MonsterMeleeCombatPrecondition
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
 
 - type: htnCompound
-  id: CP14MonsterMeleeCombatPrecondition
+  id: CE14MonsterMeleeCombatPrecondition
   branches:
     - preconditions:
         - !type:BuckledPrecondition
@@ -39,10 +39,10 @@
           operator: !type:UtilityOperator
             proto: NearbyMeleeTargets
         - !type:HTNCompoundTask
-          task: CP14MonsterAttackTargetCompound
+          task: CE14MonsterAttackTargetCompound
 
 - type: htnCompound
-  id: CP14MonsterAttackTargetCompound
+  id: CE14MonsterAttackTargetCompound
   branches:
     - preconditions:
         - !type:KeyExistsPrecondition

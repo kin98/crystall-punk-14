@@ -1,40 +1,40 @@
 - type: entity
-  id: CP14ActionSpellFlashLight
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellFlashLight
+  parent: CE14ActionSpellBase
   name: Flash Light
   description: Creates a flash of bright, blinding light.
   components:
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 10
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Lux clara..."
     endSpeech: "excaecant inimicos meos"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneFlashLight
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneFlashLight
   - type: DoAfterArgs
     delay: 0.5
     breakOnDamage: true
   - type: Action
     useDelay: 6
     icon:
-      sprite: _CP14/Actions/Spells/light.rsi
+      sprite: _CE14/Actions/Spells/light.rsi
       state: flash_light
   - type: TargetAction
     range: 10
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectFlashLight
+        - CE14ImpactEffectFlashLight
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14SpawnEffectFlashLight
+        - CE14SpawnEffectFlashLight
 
 - type: entity
-  id: CP14RuneFlashLight
-  parent: CP14BaseMagicRune
+  id: CE14RuneFlashLight
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -47,8 +47,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectFlashLight
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectFlashLight
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -59,7 +59,7 @@
       shader: unshaded
 
 - type: entity
-  id: CP14SpawnEffectFlashLight
+  id: CE14SpawnEffectFlashLight
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -74,10 +74,10 @@
     range: 4
     duration: 4
   - type: SpawnOnTrigger
-    proto: CP14SpellFlashEffect
+    proto: CE14SpellFlashEffect
 
 - type: entity
-  id: CP14SpellFlashEffect
+  id: CE14SpellFlashEffect
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -92,11 +92,11 @@
       lifetime: 0.5
 
 - type: entity
-  parent: CP14BaseSpellScrollLight
-  id: CP14SpellScrollFlashLight
+  parent: CE14BaseSpellScrollLight
+  id: CE14SpellScrollFlashLight
   name: flash light spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellFlashLight
+    - CE14ActionSpellFlashLight
 

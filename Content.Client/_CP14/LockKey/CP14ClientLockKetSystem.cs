@@ -1,29 +1,29 @@
 using System.Text;
 using Content.Client.Items;
 using Content.Client.Stylesheets;
-using Content.Shared._CP14.LockKey.Components;
+using Content.Shared._CE14.LockKey.Components;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Timing;
 
-namespace Content.Client._CP14.LockKey;
+namespace Content.Client._CE14.LockKey;
 
-public sealed class CP14ClientLockKeySystem : EntitySystem
+public sealed class CE14ClientLockKeySystem : EntitySystem
 {
     public override void Initialize()
     {
         base.Initialize();
 
-        Subs.ItemStatus<CP14KeyComponent>(ent => new CP14KeyStatusControl(ent));
+        Subs.ItemStatus<CE14KeyComponent>(ent => new CE14KeyStatusControl(ent));
     }
 }
 
 
-public sealed class CP14KeyStatusControl : Control
+public sealed class CE14KeyStatusControl : Control
 {
-    private readonly Entity<CP14KeyComponent> _parent;
+    private readonly Entity<CE14KeyComponent> _parent;
     private readonly RichTextLabel _label;
-    public CP14KeyStatusControl(Entity<CP14KeyComponent> parent)
+    public CE14KeyStatusControl(Entity<CE14KeyComponent> parent)
     {
         _parent = parent;
 

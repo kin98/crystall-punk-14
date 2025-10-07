@@ -1,42 +1,42 @@
 - type: entity
-  id: CP14ActionSpellFireball
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellFireball
+  parent: CE14ActionSpellBase
   name: Fireball
   description: An effective method of destruction - an explosive fireball
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.3
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 20
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Quaeso, quemdam inter vos quaero... "
     endSpeech: "A pila!"
-  - type: CP14ActionFreeHandsRequired
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneFireball
-  - type: CP14ActionDangerous
+  - type: CE14ActionFreeHandsRequired
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneFireball
+  - type: CE14ActionDangerous
   - type: DoAfterArgs
     delay: 2.5
   - type: Action
     useDelay: 25
     icon:
-      sprite: _CP14/Actions/Spells/fire.rsi
+      sprite: _CE14/Actions/Spells/fire.rsi
       state: fireball
   - type: TargetAction
     checkCanAccess: false
     range: 60
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnUser
+      - !type:CE14SpellSpawnEntityOnUser
         spawns:
-        - CP14ImpactEffectFireball
-      - !type:CP14SpellProjectile
-        prototype: CP14Fireball
+        - CE14ImpactEffectFireball
+      - !type:CE14SpellProjectile
+        prototype: CE14Fireball
 
 - type: entity
-  id: CP14RuneFireball
-  parent: CP14BaseMagicRune
+  id: CE14RuneFireball
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -52,8 +52,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectFireball
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectFireball
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -64,7 +64,7 @@
       shader: unshaded
 
 - type: entity
-  id: CP14Fireball
+  id: CE14Fireball
   parent: BulletRocket
   name: fireball
   categories: [ HideSpawnMenu ]
@@ -95,11 +95,11 @@
     canCreateVacuum: false
 
 - type: entity
-  parent: CP14BaseSpellScrollFire
-  id: CP14SpellScrollFireball
+  parent: CE14BaseSpellScrollFire
+  id: CE14SpellScrollFireball
   name: fireball spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellFireball
+    - CE14ActionSpellFireball
 

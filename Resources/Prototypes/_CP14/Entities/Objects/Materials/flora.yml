@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14FloraMaterial1
+  id: CE14FloraMaterial1
   parent: BaseItem
   name: flora material
   description: An organic material used for medicinal or construction purposes.
@@ -10,7 +10,7 @@
   - type: Item
     size: Normal
   - type: Stack
-    stackType: CP14FloraMaterial
+    stackType: CE14FloraMaterial
     count: 1
     baseLayer: base
     layerStates:
@@ -18,25 +18,25 @@
     - grass_material2
     - grass_material3
   - type: Sprite
-    sprite: _CP14/Objects/Materials/flora.rsi
+    sprite: _CE14/Objects/Materials/flora.rsi
     layers:
       - state: grass_material1
         map: ["base"]
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14FloraMaterial: 10
+      CE14FloraMaterial: 10
 
 - type: entity
-  id: CP14FloraMaterial10
-  parent: CP14FloraMaterial1
+  id: CE14FloraMaterial10
+  parent: CE14FloraMaterial1
   suffix: 10
   components:
     - type: Stack
       count: 10
 
 - type: entity
-  id: CP14CompostMaterial1
+  id: CE14CompostMaterial1
   parent: BaseItem
   name: compost
   description: It was once a beautiful and vibrant plant, or food. Now it's a stinking pile of decaying organic matter.
@@ -47,7 +47,7 @@
   - type: Item
     size: Normal
   - type: Stack
-    stackType: CP14Compost
+    stackType: CE14Compost
     count: 1
     baseLayer: base
     layerStates:
@@ -55,15 +55,15 @@
     - compost2
     - compost3
   - type: Sprite
-    sprite: _CP14/Objects/Materials/compost.rsi
+    sprite: _CE14/Objects/Materials/compost.rsi
     layers:
       - state: compost1
         map: ["base"]
   - type: Material
 
 - type: entity
-  id: CP14CompostMaterial10
-  parent: CP14CompostMaterial1
+  id: CE14CompostMaterial10
+  parent: CE14CompostMaterial1
   suffix: 10
   components:
     - type: Stack

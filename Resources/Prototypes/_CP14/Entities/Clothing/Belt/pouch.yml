@@ -1,12 +1,12 @@
 ﻿- type: entity
   parent: ClothingBeltStorageBase
-  id: CP14ClothingBeltPouchPotions
+  id: CE14ClothingBeltPouchPotions
   name: potions pouch
   description: A pouch for storing and storing potions, they definitely won't break here.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Belt/potions_pouch.rsi
+    sprite: _CE14/Clothing/Belt/potions_pouch.rsi
     layers:
     - state: icon
     - map: [ "enum.StorageContainerVisualLayers.Fill" ]
@@ -24,7 +24,7 @@
     maxItemSize: Small
     whitelist:
       tags:
-      - CP14Vial
+      - CE14Vial
   - type: ExplosionResistance
     damageCoefficient: 0.8
   - type: Appearance
@@ -33,6 +33,6 @@
     fillBaseName: fill-
   - type: PhysicalComposition
     materialComposition:
-      CP14Leather: 10 # 10u CP14Leather
-      CP14Cloth: 20 # 20u CP14String (4x5u)
+      CE14Leather: 10 # 10u CE14Leather
+      CE14Cloth: 20 # 20u CE14String (4x5u)
   # Cost: (10×1.2) + (20×0.3) = 12 + 6 = 18 copper coins

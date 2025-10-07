@@ -1,4 +1,4 @@
 - type: entity
   save: false
-  parent: CP14BaseMobCarcat
-  id: CP14MobCarcat
+  parent: CE14BaseMobCarcat
+  id: CE14MobCarcat

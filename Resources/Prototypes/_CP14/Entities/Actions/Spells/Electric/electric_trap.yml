@@ -1,41 +1,41 @@
 - type: entity
-  id: CP14ActionSpellElectricTrap
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellElectricTrap
+  parent: CE14ActionSpellBase
   name: Electric trap
   description: Creates a electric trap at the selected location. Don't forget to recharge it with mana.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.9
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 40
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Signum electricum..."
     endSpeech: "hunc locum custodi"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneElectricTrap
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneElectricTrap
   - type: Action
     useDelay: 4
     icon:
-      sprite: _CP14/Actions/Spells/electromancy.rsi
+      sprite: _CE14/Actions/Spells/electromancy.rsi
       state: electric_trap
   - type: TargetAction
     range: 3
   - type: DoAfterArgs
     delay: 2
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectElectricTrap
+        - CE14ImpactEffectElectricTrap
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14SpawnMagicElectricTrap
+        - CE14SpawnMagicElectricTrap
 
 - type: entity
-  id: CP14RuneElectricTrap
-  parent: CP14BaseMagicTrap
+  id: CE14RuneElectricTrap
+  parent: CE14BaseMagicTrap
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -51,8 +51,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectElectricTrap
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectElectricTrap
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -63,8 +63,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14SpawnMagicElectricTrap
-  parent: CP14BaseMagicTrap
+  id: CE14SpawnMagicElectricTrap
+  parent: CE14BaseMagicTrap
   name: electric trap
   description: A rune of electric drawn on the ground using magic — it's best not to step on it.
   categories: [ ForkFiltered ]
@@ -88,15 +88,15 @@
           - MobMask
         layer:
           - SlipLayer
-  - type: CP14MagicEnergyExaminable
-  - type: CP14MagicEnergyContainer
+  - type: CE14MagicEnergyExaminable
+  - type: CE14MagicEnergyContainer
     maxEnergy: 42
     energy: 42
     unsafeSupport: true
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: -0.5
     delay: 5
-  - type: CP14MagicUnsafeDamage
+  - type: CE14MagicUnsafeDamage
   - type: Destructible
     thresholds:
       - trigger:
@@ -108,17 +108,17 @@
   - type: TriggerOnCollide
     fixtureID: trap
   - type: SpawnOnTrigger
-    proto: CP14ActionSpellElectricTrapEffect
+    proto: CE14ActionSpellElectricTrapEffect
   - type: DeleteOnTrigger
 
 - type: entity
-  id: CP14ActionSpellElectricTrapEffect
+  id: CE14ActionSpellElectricTrapEffect
   name: electric star
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
-    sprite: _CP14/Effects/Magic/cast_impact.rsi
+    sprite: _CE14/Effects/Magic/cast_impact.rsi
     drawdepth: Mobs
     noRot: true
     layers:
@@ -130,10 +130,10 @@
   - type: Tag
     tags:
       - HideContextMenu
-  - type: CP14AreaEntityEffect
+  - type: CE14AreaEntityEffect
     range: 2
     effects:
-    - !type:CP14SpellApplyEntityEffect
+    - !type:CE14SpellApplyEntityEffect
       effects:
       - !type:HealthChange
         ignoreResistances: false
@@ -145,7 +145,7 @@
         sprintSpeedModifier: 1.3
         statusLifetime: 4
       - !type:Jitter
-      - !type:CP14StaminaChange
+      - !type:CE14StaminaChange
         staminaDelta: -100
   - type: EmitSoundOnTrigger
     sound:
@@ -156,30 +156,30 @@
   - type: TriggerOnSpawn
 
 - type: entity
-  parent: CP14BaseSpellScrollElectric
-  id: CP14SpellScrollElectricTrap
+  parent: CE14BaseSpellScrollElectric
+  id: CE14SpellScrollElectricTrap
   name: electric trap spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellElectricTrap
+    - CE14ActionSpellElectricTrap
 
 - type: entity
-  parent: CP14SpawnMagicElectricTrap
-  id: CP14SpawnMagicElectricTrapInvisible
+  parent: CE14SpawnMagicElectricTrap
+  id: CE14SpawnMagicElectricTrapInvisible
   suffix: Invisible. Permanent
   components:
   - type: Visibility
     layer: 16
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 0
     delay: 0
 
 - type: entity
-  parent: CP14SpawnMagicElectricTrap
-  id: CP14SpawnMagicElectricTrapPermanent
+  parent: CE14SpawnMagicElectricTrap
+  id: CE14SpawnMagicElectricTrapPermanent
   suffix: Permanent
   components:
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 0
     delay: 0

@@ -1,10 +1,10 @@
-namespace Content.Shared._CP14.Actions.Components;
+namespace Content.Shared._CE14.Actions.Components;
 
 /// <summary>
 /// Slows the caster while using action
 /// </summary>
-[RegisterComponent, Access(typeof(CP14SharedActionSystem))]
-public sealed partial class CP14ActionDoAfterSlowdownComponent : Component
+[RegisterComponent, Access(typeof(CE14SharedActionSystem))]
+public sealed partial class CE14ActionDoAfterSlowdownComponent : Component
 {
     [DataField]
     public float SpeedMultiplier = 1f;

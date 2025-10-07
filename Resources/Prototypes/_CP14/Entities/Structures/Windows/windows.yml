@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14WindowBase
+  id: CE14WindowBase
   abstract: true
   parent: Window
   categories: [ ForkFiltered ]
@@ -9,7 +9,7 @@
   - type: Icon
     state: full
   - type: IconSmooth
-    key: CP14window
+    key: CE14window
     base: window
   - type: PlacementReplacement
     key: walls
@@ -39,7 +39,7 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14BaseWindowFrame
+  id: CE14BaseWindowFrame
   categories: [ ForkFiltered ]
   parent: BaseStructure
   abstract: true
@@ -54,7 +54,7 @@
   - type: Icon
     state: full
   - type: IconSmooth
-    key: CP14window
+    key: CE14window
     base: window
   - type: PlacementReplacement
     key: walls
@@ -72,8 +72,8 @@
   - type: Climbable
 
 - type: entity
-  id: CP14BaseWindowFrameBroken
-  parent: CP14BaseWindowFrame
+  id: CE14BaseWindowFrameBroken
+  parent: CE14BaseWindowFrame
   abstract: true
   description: Broken window. You can get in, but the sharp splinters will tear your skin.
   components:

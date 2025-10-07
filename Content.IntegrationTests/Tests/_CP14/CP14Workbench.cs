@@ -1,14 +1,14 @@
 using Content.Server.Cargo.Systems;
-using Content.Shared._CP14.Workbench.Prototypes;
+using Content.Shared._CE14.Workbench.Prototypes;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 
-namespace Content.IntegrationTests.Tests._CP14;
+namespace Content.IntegrationTests.Tests._CE14;
 
 #nullable enable
 
 [TestFixture]
-public sealed class CP14Workbench
+public sealed class CE14Workbench
 {
     /// <summary>
     /// Check that the price of all resources to craft the item on the workbench is lower than the price of the result.
@@ -28,7 +28,7 @@ public sealed class CP14Workbench
         {
             Assert.Multiple(() =>
             {
-                foreach (var recipe in protoMan.EnumeratePrototypes<CP14WorkbenchRecipePrototype>())
+                foreach (var recipe in protoMan.EnumeratePrototypes<CE14WorkbenchRecipePrototype>())
                 {
                     double resourcePrice = 0;
                     foreach (var req in recipe.Requirements)

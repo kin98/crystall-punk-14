@@ -1,6 +1,6 @@
 ﻿- type: entity
   parent: BaseItem
-  id: CP14DrinkBaseMug
+  id: CE14DrinkBaseMug
   abstract: true
   categories: [ ForkFiltered ]
   components:
@@ -21,7 +21,7 @@
     solutions:
       mug:
         maxVol: 10
-  - type: CP14SolutionTemperature
+  - type: CE14SolutionTemperature
   - type: MixableSolution
     solution: mug
   - type: FitsInDispenser
@@ -59,14 +59,14 @@
     fillBaseName: icon-
 
 - type: entity
-  parent: CP14DrinkBaseMug
-  id: CP14MetalBeerMug
+  parent: CE14DrinkBaseMug
+  id: CE14MetalBeerMug
   name: metal mug
   categories: [ ForkFiltered ]
   description: The most common metal mug.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Drinks/beer_mug_4.rsi
+    sprite: _CE14/Objects/Consumable/Drinks/beer_mug_4.rsi
   - type: DamageOnLand
     damage:
       types:
@@ -77,34 +77,34 @@
         Blunt: 2
 
 - type: entity
-  parent: CP14DrinkBaseMug
-  id: CP14WoodenBeerMug
+  parent: CE14DrinkBaseMug
+  id: CE14WoodenBeerMug
   name: wooden mug
   categories: [ ForkFiltered ]
   description: Wooden mug for beer.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Drinks/beer_mug_1.rsi
+    sprite: _CE14/Objects/Consumable/Drinks/beer_mug_1.rsi
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 20
+      CE14WoodenPlanks: 20
 
 - type: entity
-  parent: CP14DrinkBaseMug
-  id: CP14SteelBeerMug
+  parent: CE14DrinkBaseMug
+  id: CE14SteelBeerMug
   name: beer mug
   categories: [ ForkFiltered ]
   description: Wooden mug with iron inclusions.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Drinks/beer_mug_2.rsi
+    sprite: _CE14/Objects/Consumable/Drinks/beer_mug_2.rsi
 
 - type: entity
-  parent: CP14DrinkBaseMug
-  id: CP14SteelWoodBeerMug
+  parent: CE14DrinkBaseMug
+  id: CE14SteelWoodBeerMug
   name: beer mug
   categories: [ ForkFiltered ]
   description: Wooden mug with iron inclusions.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Drinks/beer_mug_3.rsi
+    sprite: _CE14/Objects/Consumable/Drinks/beer_mug_3.rsi

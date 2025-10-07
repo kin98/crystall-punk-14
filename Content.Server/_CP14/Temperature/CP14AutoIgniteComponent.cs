@@ -1,7 +1,7 @@
-namespace Content.Server._CP14.Temperature;
+namespace Content.Server._CE14.Temperature;
 
-[RegisterComponent, AutoGenerateComponentPause, Access(typeof(CP14FireSpreadSystem))]
-public sealed partial class CP14AutoIgniteComponent : Component
+[RegisterComponent, AutoGenerateComponentPause, Access(typeof(CE14FireSpreadSystem))]
+public sealed partial class CE14AutoIgniteComponent : Component
 {
     [DataField]
     public float StartStack = 1f;

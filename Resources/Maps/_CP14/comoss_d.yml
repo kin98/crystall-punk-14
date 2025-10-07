@@ -14,27 +14,27 @@ orphans: []
 nullspace: []
 tilemap:
   0: Space
-  9: CP14FloorBase
-  12: CP14FloorBirchWoodPlanksCruciform
-  8: CP14FloorDirt
-  27: CP14FloorFoundation
-  28: CP14FloorGrass
-  29: CP14FloorGrassLight
-  10: CP14FloorGrassTall
-  14: CP14FloorIce
-  13: CP14FloorLucensWoodPlanks
-  32: CP14FloorOakWoodPlanks
-  2: CP14FloorOakWoodPlanksBig
-  4: CP14FloorOakWoodPlanksBroken
-  1: CP14FloorOakWoodPlanksCruciform
-  3: CP14FloorOakWoodPlanksStairways
-  11: CP14FloorRedWoodPlanksCruciform
-  49: CP14FloorStonebricks
-  50: CP14FloorStonebricksSmallCarved1
-  51: CP14FloorStonebricksSmallCarved2
-  7: CP14FloorStonebricksSquareCarved
-  6: CP14FloorWoodPlanksBurned
-  5: CP14FloorWoodPlanksStairwaysBurned
+  9: CE14FloorBase
+  12: CE14FloorBirchWoodPlanksCruciform
+  8: CE14FloorDirt
+  27: CE14FloorFoundation
+  28: CE14FloorGrass
+  29: CE14FloorGrassLight
+  10: CE14FloorGrassTall
+  14: CE14FloorIce
+  13: CE14FloorLucensWoodPlanks
+  32: CE14FloorOakWoodPlanks
+  2: CE14FloorOakWoodPlanksBig
+  4: CE14FloorOakWoodPlanksBroken
+  1: CE14FloorOakWoodPlanksCruciform
+  3: CE14FloorOakWoodPlanksStairways
+  11: CE14FloorRedWoodPlanksCruciform
+  49: CE14FloorStonebricks
+  50: CE14FloorStonebricksSmallCarved1
+  51: CE14FloorStonebricksSmallCarved2
+  7: CE14FloorStonebricksSquareCarved
+  6: CE14FloorWoodPlanksBurned
+  5: CE14FloorWoodPlanksStairwaysBurned
   53: FloorIce
 entities:
 - proto: ""
@@ -66,11 +66,11 @@ entities:
         - 0
         - 0
         - 0
-    - type: CP14WeatherController
+    - type: CE14WeatherController
       entries:
       - weight: 2
         visuals: null
-      - visuals: CP14Mist
+      - visuals: CE14Mist
     - type: MapGrid
       chunks:
         0,0:
@@ -570,7 +570,7 @@ entities:
       entities: {}
       decals: {}
       modifiedTiles: {}
-      template: CP14CavesIndestructibleFill
+      template: CE14CavesIndestructibleFill
       layers: []
     - type: DecalGrid
       chunkCollection:
@@ -578,7 +578,7 @@ entities:
         nodes:
         - node:
             color: '#FFFFFFFF'
-            id: CP14BrickTileStoneLineE
+            id: CE14BrickTileStoneLineE
           decals:
             5: 72,32
             6: 72,31
@@ -587,21 +587,21 @@ entities:
             12: 84,36
         - node:
             color: '#FFFFFFFF'
-            id: CP14BrickTileStoneLineN
+            id: CE14BrickTileStoneLineN
           decals:
             2: 75,41
             13: 82,31
             14: 76,31
         - node:
             color: '#FFFFFFFF'
-            id: CP14BrickTileStoneLineS
+            id: CE14BrickTileStoneLineS
           decals:
             1: 83,39
             15: 76,31
             16: 82,31
         - node:
             color: '#FFFFFFFF'
-            id: CP14BrickTileStoneLineW
+            id: CE14BrickTileStoneLineW
           decals:
             3: 72,32
             4: 72,31
@@ -611,32 +611,32 @@ entities:
         - node:
             angle: -0.7853981633974483 rad
             color: '#8B7569FF'
-            id: CP14FootprintsBoots
+            id: CE14FootprintsBoots
           decals:
             19: 82.663635,36.008286
         - node:
             color: '#8B7569FF'
-            id: CP14FootprintsBoots
+            id: CE14FootprintsBoots
           decals:
             17: 83,38
             18: 83,37
     - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: CP14AlchemySolutionCleaner
+- proto: CE14AlchemySolutionCleaner
   entities:
   - uid: 5
     components:
     - type: Transform
       pos: -52.5,-75.5
       parent: 1
-- proto: CP14BarrelBlood
+- proto: CE14BarrelBlood
   entities:
   - uid: 6
     components:
     - type: Transform
       pos: 69.3144,30.346382
       parent: 1
-- proto: CP14BarrelGroundQuartz
+- proto: CE14BarrelGroundQuartz
   entities:
   - uid: 7
     components:
@@ -653,7 +653,7 @@ entities:
     - type: Transform
       pos: 24.508654,17.638443
       parent: 1
-- proto: CP14BarrelWater
+- proto: CE14BarrelWater
   entities:
   - uid: 10
     components:
@@ -725,7 +725,7 @@ entities:
     - type: Transform
       pos: 16.619337,-21.391006
       parent: 1
-- proto: CP14BaseAlchemyBomb
+- proto: CE14BaseAlchemyBomb
   entities:
   - uid: 19642
     components:
@@ -737,7 +737,7 @@ entities:
     - type: Transform
       pos: 20.228853,-15.184242
       parent: 1
-- proto: CP14BaseBarrel
+- proto: CE14BaseBarrel
   entities:
   - uid: 23
     components:
@@ -749,14 +749,14 @@ entities:
     - type: Transform
       pos: 49.269325,-15.964533
       parent: 1
-- proto: CP14BaseVat
+- proto: CE14BaseVat
   entities:
   - uid: 27
     components:
     - type: Transform
       pos: -50.53752,-78.45454
       parent: 1
-- proto: CP14BiomeSpawnerCave
+- proto: CE14BiomeSpawnerCave
   entities:
   - uid: 28
     components:
@@ -95128,7 +95128,7 @@ entities:
     - type: Transform
       pos: 20.5,61.5
       parent: 1
-- proto: CP14BiomeSpawnerCaveEmpty
+- proto: CE14BiomeSpawnerCaveEmpty
   entities:
   - uid: 713
     components:
@@ -97304,7 +97304,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,-0.5
       parent: 1
-- proto: CP14BiomeSpawnerFrozenCave
+- proto: CE14BiomeSpawnerFrozenCave
   entities:
   - uid: 19282
     components:
@@ -99208,7 +99208,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 47.5,-49.5
       parent: 1
-- proto: CP14Bonfire
+- proto: CE14Bonfire
   entities:
   - uid: 19599
     components:
@@ -99218,7 +99218,7 @@ entities:
     - type: ItemPlacer
       placedEntities:
       - 27
-- proto: CP14BowCombat
+- proto: CE14BowCombat
   entities:
   - uid: 23386
     components:
@@ -99255,7 +99255,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: CP14Bucket
+- proto: CE14Bucket
   entities:
   - uid: 19600
     components:
@@ -99267,7 +99267,7 @@ entities:
     - type: Transform
       pos: 6.823913,15.273402
       parent: 1
-- proto: CP14Cauldron
+- proto: CE14Cauldron
   entities:
   - uid: 19612
     components:
@@ -99288,7 +99288,7 @@ entities:
       parent: 1
     - type: CollisionWake
       enabled: False
-- proto: CP14ChairWooden
+- proto: CE14ChairWooden
   entities:
   - uid: 19615
     components:
@@ -99423,7 +99423,7 @@ entities:
     - type: Transform
       pos: 52.171097,-17.711754
       parent: 1
-- proto: CP14Chasm
+- proto: CE14Chasm
   entities:
   - uid: 19658
     components:
@@ -99740,7 +99740,7 @@ entities:
     - type: Transform
       pos: -36.5,26.5
       parent: 1
-- proto: CP14Cloth1
+- proto: CE14Cloth1
   entities:
   - uid: 19721
     components:
@@ -99757,7 +99757,7 @@ entities:
     - type: Transform
       pos: -6.616871,-35.262444
       parent: 1
-- proto: CP14ClothingBeltQuiverArrows
+- proto: CE14ClothingBeltQuiverArrows
   entities:
   - uid: 23381
     components:
@@ -99787,7 +99787,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: CP14ClothingCloakAlchemist
+- proto: CE14ClothingCloakAlchemist
   entities:
   - uid: 19725
     components:
@@ -99795,7 +99795,7 @@ entities:
       parent: 19724
     - type: Physics
       canCollide: False
-- proto: CP14ClothingCloakGuardBlue
+- proto: CE14ClothingCloakGuardBlue
   entities:
   - uid: 19728
     components:
@@ -99815,7 +99815,7 @@ entities:
       parent: 19731
     - type: Physics
       canCollide: False
-- proto: CP14ClothingEyesAlchemyGlasses
+- proto: CE14ClothingEyesAlchemyGlasses
   entities:
   - uid: 19733
     components:
@@ -99824,7 +99824,7 @@ entities:
       parent: 1
     - type: CollisionWake
       enabled: False
-- proto: CP14ClothingEyesMonocle
+- proto: CE14ClothingEyesMonocle
   entities:
   - uid: 19735
     components:
@@ -99832,14 +99832,14 @@ entities:
       parent: 19734
     - type: Physics
       canCollide: False
-- proto: CP14ClothingGlovesGirdles
+- proto: CE14ClothingGlovesGirdles
   entities:
   - uid: 19737
     components:
     - type: Transform
       pos: 79.499016,28.757843
       parent: 1
-- proto: CP14ClothingHeadAlchemistBeret
+- proto: CE14ClothingHeadAlchemistBeret
   entities:
   - uid: 19726
     components:
@@ -99847,7 +99847,7 @@ entities:
       parent: 19724
     - type: Physics
       canCollide: False
-- proto: CP14ClothingHeadBeretMercenary
+- proto: CE14ClothingHeadBeretMercenary
   entities:
   - uid: 19739
     components:
@@ -99855,7 +99855,7 @@ entities:
       parent: 19738
     - type: Physics
       canCollide: False
-- proto: CP14ClothingHeadBowler
+- proto: CE14ClothingHeadBowler
   entities:
   - uid: 19744
     components:
@@ -99863,7 +99863,7 @@ entities:
       parent: 19743
     - type: Physics
       canCollide: False
-- proto: CP14ClothingHeadBowlerGolden
+- proto: CE14ClothingHeadBowlerGolden
   entities:
   - uid: 19736
     components:
@@ -99871,14 +99871,14 @@ entities:
       parent: 19734
     - type: Physics
       canCollide: False
-- proto: CP14ClothingHeadMetalHeadband
+- proto: CE14ClothingHeadMetalHeadband
   entities:
   - uid: 19748
     components:
     - type: Transform
       pos: 79.01985,28.737011
       parent: 1
-- proto: CP14ClothingHeadTriangularHat
+- proto: CE14ClothingHeadTriangularHat
   entities:
   - uid: 19750
     components:
@@ -99886,7 +99886,7 @@ entities:
       parent: 19749
     - type: Physics
       canCollide: False
-- proto: CP14ClothingPantsMercenaryTrousers
+- proto: CE14ClothingPantsMercenaryTrousers
   entities:
   - uid: 19740
     components:
@@ -99894,7 +99894,7 @@ entities:
       parent: 19738
     - type: Physics
       canCollide: False
-- proto: CP14ClothingPantsTrouserDarkBlue
+- proto: CE14ClothingPantsTrouserDarkBlue
   entities:
   - uid: 19751
     components:
@@ -99902,7 +99902,7 @@ entities:
       parent: 19749
     - type: Physics
       canCollide: False
-- proto: CP14ClothingPantsTrouserWhite
+- proto: CE14ClothingPantsTrouserWhite
   entities:
   - uid: 19745
     components:
@@ -99910,7 +99910,7 @@ entities:
       parent: 19743
     - type: Physics
       canCollide: False
-- proto: CP14ClothingShirtCottonBlue
+- proto: CE14ClothingShirtCottonBlue
   entities:
   - uid: 19752
     components:
@@ -99918,7 +99918,7 @@ entities:
       parent: 19749
     - type: Physics
       canCollide: False
-- proto: CP14ClothingShirtCottonYellow
+- proto: CE14ClothingShirtCottonYellow
   entities:
   - uid: 19746
     components:
@@ -99926,7 +99926,7 @@ entities:
       parent: 19743
     - type: Physics
       canCollide: False
-- proto: CP14ClothingShirtMercenary
+- proto: CE14ClothingShirtMercenary
   entities:
   - uid: 19741
     components:
@@ -99934,7 +99934,7 @@ entities:
       parent: 19738
     - type: Physics
       canCollide: False
-- proto: CP14ClothingShoesAristocraticBlack
+- proto: CE14ClothingShoesAristocraticBlack
   entities:
   - uid: 19742
     components:
@@ -99948,7 +99948,7 @@ entities:
       parent: 19749
     - type: Physics
       canCollide: False
-- proto: CP14ClothingShoesBlack
+- proto: CE14ClothingShoesBlack
   entities:
   - uid: 19747
     components:
@@ -99956,7 +99956,7 @@ entities:
       parent: 19743
     - type: Physics
       canCollide: False
-- proto: CP14CopperCoin1
+- proto: CE14CopperCoin1
   entities:
   - uid: 19655
     components:
@@ -100056,7 +100056,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: CP14CraneBarrel
+- proto: CE14CraneBarrel
   entities:
   - uid: 19759
     components:
@@ -100124,7 +100124,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -20.5,-9.5
       parent: 1
-- proto: CP14CraneBarrelDwarfBeer
+- proto: CE14CraneBarrelDwarfBeer
   entities:
   - uid: 19766
     components:
@@ -100132,7 +100132,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -20.5,-12.5
       parent: 1
-- proto: CP14CraneBarrelSmallBeerGerbil
+- proto: CE14CraneBarrelSmallBeerGerbil
   entities:
   - uid: 19773
     components:
@@ -100140,7 +100140,7 @@ entities:
       noRot: True
       pos: -18.5,-7.5
       parent: 1
-- proto: CP14CraneBarrelWineLeeks
+- proto: CE14CraneBarrelWineLeeks
   entities:
   - uid: 19767
     components:
@@ -100148,7 +100148,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -20.5,-11.5
       parent: 1
-- proto: CP14CrystalLampBlueEmpty
+- proto: CE14CrystalLampBlueEmpty
   entities:
   - uid: 19781
     components:
@@ -100167,7 +100167,7 @@ entities:
     - type: Transform
       pos: 21.818947,-17.362608
       parent: 1
-- proto: CP14CrystalLampOrangeEmpty
+- proto: CE14CrystalLampOrangeEmpty
   entities:
   - uid: 19782
     components:
@@ -100176,7 +100176,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: CP14CrystalQuartz
+- proto: CE14CrystalQuartz
   entities:
   - uid: 19774
     components:
@@ -100238,7 +100238,7 @@ entities:
     - type: Transform
       pos: -53.922863,-33.303955
       parent: 1
-- proto: CP14CrystalQuartzEarth
+- proto: CE14CrystalQuartzEarth
   entities:
   - uid: 19638
     components:
@@ -100255,7 +100255,7 @@ entities:
     - type: Transform
       pos: 32.100975,-30.039742
       parent: 1
-- proto: CP14CrystalQuartzWater
+- proto: CE14CrystalQuartzWater
   entities:
   - uid: 19640
     components:
@@ -100272,7 +100272,7 @@ entities:
     - type: Transform
       pos: 31.696047,-33.356834
       parent: 1
-- proto: CP14CurtainsBlue
+- proto: CE14CurtainsBlue
   entities:
   - uid: 19789
     components:
@@ -100292,7 +100292,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -49.5,-75.5
       parent: 1
-- proto: CP14CurtainsBlueOpened
+- proto: CE14CurtainsBlueOpened
   entities:
   - uid: 23185
     components:
@@ -100306,7 +100306,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 13.5,-16.5
       parent: 1
-- proto: CP14DirtBlock1
+- proto: CE14DirtBlock1
   entities:
   - uid: 19793
     components:
@@ -100326,7 +100326,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -70.899994,32.127666
       parent: 1
-- proto: CP14EnergyCrystalMedium
+- proto: CE14EnergyCrystalMedium
   entities:
   - uid: 19799
     components:
@@ -100348,7 +100348,7 @@ entities:
     - type: Transform
       pos: 22.156387,-17.205187
       parent: 1
-- proto: CP14EnergyCrystalMediumEmpty
+- proto: CE14EnergyCrystalMediumEmpty
   entities:
   - uid: 19797
     components:
@@ -100399,14 +100399,14 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: CP14EssenceCollector
+- proto: CE14EssenceCollector
   entities:
   - uid: 19807
     components:
     - type: Transform
       pos: -56.5,-81.5
       parent: 1
-- proto: CP14FenceBigIron
+- proto: CE14FenceBigIron
   entities:
   - uid: 19810
     components:
@@ -100438,7 +100438,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -49.5,-71.5
       parent: 1
-- proto: CP14FenceWooden
+- proto: CE14FenceWooden
   entities:
   - uid: 19827
     components:
@@ -100480,7 +100480,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -9.5,-18.5
       parent: 1
-- proto: CP14FloorWater
+- proto: CE14FloorWater
   entities:
   - uid: 19835
     components:
@@ -104137,7 +104137,7 @@ entities:
     - type: Transform
       pos: -60.5,-4.5
       parent: 1
-- proto: CP14FoodCheesePart
+- proto: CE14FoodCheesePart
   entities:
   - uid: 20566
     components:
@@ -104149,7 +104149,7 @@ entities:
     - type: Transform
       pos: 6.507922,16.894894
       parent: 1
-- proto: CP14FoodMeatLamb
+- proto: CE14FoodMeatLamb
   entities:
   - uid: 20568
     components:
@@ -104158,7 +104158,7 @@ entities:
       parent: 1
     - type: CollisionWake
       enabled: False
-- proto: CP14FoodMeatLambSlice
+- proto: CE14FoodMeatLambSlice
   entities:
   - uid: 20569
     components:
@@ -104183,7 +104183,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 33.633198,-14.089374
       parent: 1
-- proto: CP14FoodPotato
+- proto: CE14FoodPotato
   entities:
   - uid: 20573
     components:
@@ -104192,7 +104192,7 @@ entities:
       parent: 1
     - type: CollisionWake
       enabled: False
-- proto: CP14FoodPumpkin
+- proto: CE14FoodPumpkin
   entities:
   - uid: 20574
     components:
@@ -104239,7 +104239,7 @@ entities:
     - type: Transform
       pos: -104.93689,21.815865
       parent: 1
-- proto: CP14FoodTomatoes
+- proto: CE14FoodTomatoes
   entities:
   - uid: 20583
     components:
@@ -104248,7 +104248,7 @@ entities:
       parent: 1
     - type: CollisionWake
       enabled: False
-- proto: CP14Furnace
+- proto: CE14Furnace
   entities:
   - uid: 2
     components:
@@ -104278,7 +104278,7 @@ entities:
     - type: ItemPlacer
       placedEntities:
       - 19613
-- proto: CP14GatherableBloodFlower
+- proto: CE14GatherableBloodFlower
   entities:
   - uid: 20597
     components:
@@ -104290,7 +104290,7 @@ entities:
     - type: Transform
       pos: -13.5,-67.5
       parent: 1
-- proto: CP14GatherableBlueAmanita
+- proto: CE14GatherableBlueAmanita
   entities:
   - uid: 20599
     components:
@@ -104302,7 +104302,7 @@ entities:
     - type: Transform
       pos: -13.5,-68.5
       parent: 1
-- proto: CP14GatherableFlyAgaric
+- proto: CE14GatherableFlyAgaric
   entities:
   - uid: 20601
     components:
@@ -104316,7 +104316,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 46.5,-14.5
       parent: 1
-- proto: CP14GatherableLumiMushroom
+- proto: CE14GatherableLumiMushroom
   entities:
   - uid: 20603
     components:
@@ -104353,7 +104353,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 47.5,-16.5
       parent: 1
-- proto: CP14GatherableWaterAirLily
+- proto: CE14GatherableWaterAirLily
   entities:
   - uid: 20609
     components:
@@ -104367,7 +104367,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -2.5,-19.5
       parent: 1
-- proto: CP14GuidebookImperialLaws
+- proto: CE14GuidebookImperialLaws
   entities:
   - uid: 19647
     components:
@@ -104385,14 +104385,14 @@ entities:
     - type: Transform
       pos: 19.637709,-17.34634
       parent: 1
-- proto: CP14HeadSkeleton
+- proto: CE14HeadSkeleton
   entities:
   - uid: 20611
     components:
     - type: Transform
       pos: 36.87656,39.29631
       parent: 1
-- proto: CP14Inkwell
+- proto: CE14Inkwell
   entities:
   - uid: 20612
     components:
@@ -104409,7 +104409,7 @@ entities:
     - type: Transform
       pos: 51.690823,-18.241964
       parent: 1
-- proto: CP14IronDoor
+- proto: CE14IronDoor
   entities:
   - uid: 20615
     components:
@@ -104417,14 +104417,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 31.5,55.5
       parent: 1
-- proto: CP14IronDoorBlacksmith2
+- proto: CE14IronDoorBlacksmith2
   entities:
   - uid: 20616
     components:
     - type: Transform
       pos: 76.5,31.5
       parent: 1
-- proto: CP14IronDoorGuardBarracks
+- proto: CE14IronDoorGuardBarracks
   entities:
   - uid: 20617
     components:
@@ -104507,7 +104507,7 @@ entities:
     - type: Transform
       pos: 15.5,-17.5
       parent: 1
-- proto: CP14IronDoorGuardCommandantRoom
+- proto: CE14IronDoorGuardCommandantRoom
   entities:
   - uid: 23072
     components:
@@ -104520,7 +104520,7 @@ entities:
     - type: Transform
       pos: 20.5,-18.5
       parent: 1
-- proto: CP14IronDoorWindowed
+- proto: CE14IronDoorWindowed
   entities:
   - uid: 20630
     components:
@@ -104540,7 +104540,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 41.5,-17.5
       parent: 1
-- proto: CP14IronDoorWindowedMirrored
+- proto: CE14IronDoorWindowedMirrored
   entities:
   - uid: 20634
     components:
@@ -104548,7 +104548,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 50.5,-14.5
       parent: 1
-- proto: CP14LargeWoodenCrate
+- proto: CE14LargeWoodenCrate
   entities:
   - uid: 20637
     components:
@@ -104578,7 +104578,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -5.5,-35.5
       parent: 1
-- proto: CP14LargeWoodenCrateFilled
+- proto: CE14LargeWoodenCrateFilled
   entities:
   - uid: 20642
     components:
@@ -104606,35 +104606,35 @@ entities:
     - type: Transform
       pos: 15.5,-23.5
       parent: 1
-- proto: CP14LeftArmSkeleton
+- proto: CE14LeftArmSkeleton
   entities:
   - uid: 20646
     components:
     - type: Transform
       pos: 36.997368,39.19564
       parent: 1
-- proto: CP14LeftFootSkeleton
+- proto: CE14LeftFootSkeleton
   entities:
   - uid: 20647
     components:
     - type: Transform
       pos: 36.896694,39.135235
       parent: 1
-- proto: CP14LeftHandSkeleton
+- proto: CE14LeftHandSkeleton
   entities:
   - uid: 20648
     components:
     - type: Transform
       pos: 36.3128,39.215775
       parent: 1
-- proto: CP14ManaOperationGlove
+- proto: CE14ManaOperationGlove
   entities:
   - uid: 20649
     components:
     - type: Transform
       pos: 88.69247,38.74116
       parent: 1
-- proto: CP14Mannequin
+- proto: CE14Mannequin
   entities:
   - uid: 19724
     components:
@@ -104962,7 +104962,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 15.5,-21.5
       parent: 1
-- proto: CP14MetalBeerMug
+- proto: CE14MetalBeerMug
   entities:
   - uid: 20650
     components:
@@ -104974,7 +104974,7 @@ entities:
     - type: Transform
       pos: -17.32417,-7.327979
       parent: 1
-- proto: CP14MobGroupSpawnerIceSpectres
+- proto: CE14MobGroupSpawnerIceSpectres
   entities:
   - uid: 20652
     components:
@@ -104983,7 +104983,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14Mop
+- proto: CE14Mop
   entities:
   - uid: 25
     components:
@@ -105000,14 +105000,14 @@ entities:
     - type: Transform
       pos: 16.259401,-22.684109
       parent: 1
-- proto: CP14Mortar
+- proto: CE14Mortar
   entities:
   - uid: 20664
     components:
     - type: Transform
       pos: 70.90815,33.558662
       parent: 1
-- proto: CP14OreCopper1
+- proto: CE14OreCopper1
   entities:
   - uid: 20668
     components:
@@ -105037,7 +105037,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: CP14OreIron1
+- proto: CE14OreIron1
   entities:
   - uid: 20672
     components:
@@ -105106,7 +105106,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -71.78356,28.329292
       parent: 1
-- proto: CP14Paper
+- proto: CE14Paper
   entities:
   - uid: 20682
     components:
@@ -105162,21 +105162,21 @@ entities:
       rot: 3.141592653589793 rad
       pos: 52.16829,-18.22657
       parent: 1
-- proto: CP14PaperFolderBlue
+- proto: CE14PaperFolderBlue
   entities:
   - uid: 20691
     components:
     - type: Transform
       pos: 72.233284,40.61485
       parent: 1
-- proto: CP14Passport
+- proto: CE14Passport
   entities:
   - uid: 20692
     components:
     - type: Transform
       pos: 32.850803,-9.185882
       parent: 1
-- proto: CP14PenFeather
+- proto: CE14PenFeather
   entities:
   - uid: 20693
     components:
@@ -105206,7 +105206,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 52.699387,-18.267242
       parent: 1
-- proto: CP14Pestle
+- proto: CE14Pestle
   entities:
   - uid: 20698
     components:
@@ -105214,7 +105214,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 70.97065,33.871162
       parent: 1
-- proto: CP14PlantPumpkin
+- proto: CE14PlantPumpkin
   entities:
   - uid: 20699
     components:
@@ -105236,7 +105236,7 @@ entities:
     - type: Transform
       pos: -107.5,24.5
       parent: 1
-- proto: CP14PlateWooden
+- proto: CE14PlateWooden
   entities:
   - uid: 20703
     components:
@@ -105258,7 +105258,7 @@ entities:
     - type: Transform
       pos: 78.40385,35.47383
       parent: 1
-- proto: CP14PortalFrameCrystal
+- proto: CE14PortalFrameCrystal
   entities:
   - uid: 20707
     components:
@@ -105270,7 +105270,7 @@ entities:
     - type: Transform
       pos: 49.5,-13.5
       parent: 1
-- proto: CP14RandomSpawnerGatherAgaricShroom
+- proto: CE14RandomSpawnerGatherAgaricShroom
   entities:
   - uid: 20709
     components:
@@ -105287,14 +105287,14 @@ entities:
     - type: Transform
       pos: 46.5,-15.5
       parent: 1
-- proto: CP14RightArmSkeleton
+- proto: CE14RightArmSkeleton
   entities:
   - uid: 20712
     components:
     - type: Transform
       pos: 36.9571,38.752686
       parent: 1
-- proto: CP14RockBig
+- proto: CE14RockBig
   entities:
   - uid: 20713
     components:
@@ -105306,7 +105306,7 @@ entities:
     - type: Transform
       pos: 33.5,-57.5
       parent: 1
-- proto: CP14RockSmall
+- proto: CE14RockSmall
   entities:
   - uid: 20715
     components:
@@ -105324,7 +105324,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 17.5,50.5
       parent: 1
-- proto: CP14RoofStone
+- proto: CE14RoofStone
   entities:
   - uid: 12
     components:
@@ -111913,7 +111913,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14RoofWooden
+- proto: CE14RoofWooden
   entities:
   - uid: 21431
     components:
@@ -115390,7 +115390,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14Rope
+- proto: CE14Rope
   entities:
   - uid: 20655
     components:
@@ -115433,14 +115433,14 @@ entities:
     - type: Transform
       pos: 18.534584,-17.332207
       parent: 1
-- proto: CP14RoyalPumpkin
+- proto: CE14RoyalPumpkin
   entities:
   - uid: 21929
     components:
     - type: Transform
       pos: -106.045135,22.865108
       parent: 1
-- proto: CP14SalaryPlatform
+- proto: CE14SalaryPlatform
   entities:
   - uid: 19653
     components:
@@ -115448,7 +115448,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 21.5,-19.5
       parent: 1
-- proto: CP14Scissors
+- proto: CE14Scissors
   entities:
   - uid: 21932
     components:
@@ -115457,7 +115457,7 @@ entities:
       parent: 1
     - type: CollisionWake
       enabled: False
-- proto: CP14SmallWoodenCrate
+- proto: CE14SmallWoodenCrate
   entities:
   - uid: 21934
     components:
@@ -115476,7 +115476,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 27.5,-11.5
       parent: 1
-- proto: CP14SmallWoodenCrateFilled
+- proto: CE14SmallWoodenCrateFilled
   entities:
   - uid: 19650
     components:
@@ -115535,7 +115535,7 @@ entities:
     - type: Transform
       pos: 15.5,-22.5
       parent: 1
-- proto: CP14SpawnerDemiplaneLootT1
+- proto: CE14SpawnerDemiplaneLootT1
   entities:
   - uid: 21945
     components:
@@ -115588,7 +115588,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 110.5,65.5
       parent: 1
-- proto: CP14SpawnEssenceNodeRandom
+- proto: CE14SpawnEssenceNodeRandom
   entities:
   - uid: 21955
     components:
@@ -115600,7 +115600,7 @@ entities:
     - type: Transform
       pos: -57.5,-80.5
       parent: 1
-- proto: CP14SpawnMobDinoSmallHydra
+- proto: CE14SpawnMobDinoSmallHydra
   entities:
   - uid: 21957
     components:
@@ -115631,7 +115631,7 @@ entities:
     - type: Transform
       pos: -13.5,-70.5
       parent: 1
-- proto: CP14SpawnMobDinoYumkaraptor
+- proto: CE14SpawnMobDinoYumkaraptor
   entities:
   - uid: 21962
     components:
@@ -115651,7 +115651,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -28.5,-47.5
       parent: 1
-- proto: CP14SpawnMobMonsterMole
+- proto: CE14SpawnMobMonsterMole
   entities:
   - uid: 21965
     components:
@@ -115695,14 +115695,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 12.5,52.5
       parent: 1
-- proto: CP14SpawnMobMonsterMosquito
+- proto: CE14SpawnMobMonsterMosquito
   entities:
   - uid: 21973
     components:
     - type: Transform
       pos: -74.5,-18.5
       parent: 1
-- proto: CP14SpawnMobUndeadZombieRandom
+- proto: CE14SpawnMobUndeadZombieRandom
   entities:
   - uid: 21974
     components:
@@ -115879,7 +115879,7 @@ entities:
     - type: Transform
       pos: 56.5,55.5
       parent: 1
-- proto: CP14SpawnPointGuard
+- proto: CE14SpawnPointGuard
   entities:
   - uid: 23345
     components:
@@ -115896,42 +115896,42 @@ entities:
     - type: Transform
       pos: 15.5,-15.5
       parent: 1
-- proto: CP14SpawnPointGuardCommander
+- proto: CE14SpawnPointGuardCommander
   entities:
   - uid: 23370
     components:
     - type: Transform
       pos: 11.5,-21.5
       parent: 1
-- proto: CP14SpellScrollFreeze
+- proto: CE14SpellScrollFreeze
   entities:
   - uid: 22013
     components:
     - type: Transform
       pos: 71.7646,40.500393
       parent: 1
-- proto: CP14SpellScrollIceShards
+- proto: CE14SpellScrollIceShards
   entities:
   - uid: 22014
     components:
     - type: Transform
       pos: 35.97446,55.636757
       parent: 1
-- proto: CP14SpellScrollShadowStep
+- proto: CE14SpellScrollShadowStep
   entities:
   - uid: 22019
     components:
     - type: Transform
       pos: 71.37398,40.562893
       parent: 1
-- proto: CP14SteelBeerMug
+- proto: CE14SteelBeerMug
   entities:
   - uid: 22021
     components:
     - type: Transform
       pos: 78.20072,34.833206
       parent: 1
-- proto: CP14SteelWoodBeerMug
+- proto: CE14SteelWoodBeerMug
   entities:
   - uid: 22022
     components:
@@ -115944,7 +115944,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 35.441082,55.68511
       parent: 1
-- proto: CP14StoneBlock1
+- proto: CE14StoneBlock1
   entities:
   - uid: 22024
     components:
@@ -115970,7 +115970,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -74.85637,30.708202
       parent: 1
-- proto: CP14String
+- proto: CE14String
   entities:
   - uid: 22028
     components:
@@ -115987,7 +115987,7 @@ entities:
       parent: 1
     - type: CollisionWake
       enabled: False
-- proto: CP14TableWooden
+- proto: CE14TableWooden
   entities:
   - uid: 22030
     components:
@@ -116263,7 +116263,7 @@ entities:
     - type: Transform
       pos: 22.5,-17.5
       parent: 1
-- proto: CP14TableWoodenCounter
+- proto: CE14TableWoodenCounter
   entities:
   - uid: 22076
     components:
@@ -116275,7 +116275,7 @@ entities:
     - type: Transform
       pos: -52.5,-71.5
       parent: 1
-- proto: CP14TableWoodenFrame
+- proto: CE14TableWoodenFrame
   entities:
   - uid: 22078
     components:
@@ -116288,35 +116288,35 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 36.5,55.5
       parent: 1
-- proto: CP14TableWoodenRound
+- proto: CE14TableWoodenRound
   entities:
   - uid: 22080
     components:
     - type: Transform
       pos: -9.5,-0.5
       parent: 1
-- proto: CP14TorsoSkeleton
+- proto: CE14TorsoSkeleton
   entities:
   - uid: 22081
     components:
     - type: Transform
       pos: 36.87656,39.215775
       parent: 1
-- proto: CP14TradingPlatform
+- proto: CE14TradingPlatform
   entities:
   - uid: 3175
     components:
     - type: Transform
       pos: 52.5,-12.5
       parent: 1
-- proto: CP14VialMedium
+- proto: CE14VialMedium
   entities:
   - uid: 19646
     components:
     - type: Transform
       pos: 20.755821,-15.27911
       parent: 1
-- proto: CP14VialSmall
+- proto: CE14VialSmall
   entities:
   - uid: 22084
     components:
@@ -116358,7 +116358,7 @@ entities:
     - type: Transform
       pos: -48.59029,-73.29798
       parent: 1
-- proto: CP14VialTiny
+- proto: CE14VialTiny
   entities:
   - uid: 22092
     components:
@@ -116375,7 +116375,7 @@ entities:
     - type: Transform
       pos: -48.199665,-73.07923
       parent: 1
-- proto: CP14WallDirt
+- proto: CE14WallDirt
   entities:
   - uid: 22169
     components:
@@ -116422,7 +116422,7 @@ entities:
     - type: Transform
       pos: -71.5,33.5
       parent: 1
-- proto: CP14WallFrameStonebrick
+- proto: CE14WallFrameStonebrick
   entities:
   - uid: 22951
     components:
@@ -116445,7 +116445,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 31.5,54.5
       parent: 1
-- proto: CP14WallFrameWooden
+- proto: CE14WallFrameWooden
   entities:
   - uid: 20584
     components:
@@ -116512,7 +116512,7 @@ entities:
     - type: Transform
       pos: 25.5,57.5
       parent: 1
-- proto: CP14WallMarbleBrick
+- proto: CE14WallMarbleBrick
   entities:
   - uid: 22095
     components:
@@ -116884,7 +116884,7 @@ entities:
     - type: Transform
       pos: -44.5,-76.5
       parent: 1
-- proto: CP14WallmountFlagGuardCommander
+- proto: CE14WallmountFlagGuardCommander
   entities:
   - uid: 23073
     components:
@@ -116893,7 +116893,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14WallmountGarlandPurple
+- proto: CE14WallmountGarlandPurple
   entities:
   - uid: 22203
     components:
@@ -116909,7 +116909,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14WallmountLamp
+- proto: CE14WallmountLamp
   entities:
   - uid: 22208
     components:
@@ -117001,7 +117001,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14WallmountLampEmpty
+- proto: CE14WallmountLampEmpty
   entities:
   - uid: 22220
     components:
@@ -117129,7 +117129,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14WallmountPaintingCandle
+- proto: CE14WallmountPaintingCandle
   entities:
   - uid: 22238
     components:
@@ -117139,7 +117139,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14WallmountPaintingSaint
+- proto: CE14WallmountPaintingSaint
   entities:
   - uid: 22239
     components:
@@ -117148,7 +117148,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14WallmountPaintingSkull
+- proto: CE14WallmountPaintingSkull
   entities:
   - uid: 22240
     components:
@@ -117157,7 +117157,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14WallmountTorchAlwaysPowered
+- proto: CE14WallmountTorchAlwaysPowered
   entities:
   - uid: 22011
     components:
@@ -117289,7 +117289,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CP14WallStone
+- proto: CE14WallStone
   entities:
   - uid: 513
     components:
@@ -119201,7 +119201,7 @@ entities:
     - type: Transform
       pos: -1.5,-12.5
       parent: 1
-- proto: CP14WallStonebrick
+- proto: CE14WallStonebrick
   entities:
   - uid: 876
     components:
@@ -121223,7 +121223,7 @@ entities:
     - type: Transform
       pos: 17.5,-17.5
       parent: 1
-- proto: CP14WallStoneCopperOre
+- proto: CE14WallStoneCopperOre
   entities:
   - uid: 22956
     components:
@@ -121455,7 +121455,7 @@ entities:
     - type: Transform
       pos: -25.5,4.5
       parent: 1
-- proto: CP14WallStoneIronOre
+- proto: CE14WallStoneIronOre
   entities:
   - uid: 22963
     components:
@@ -121652,7 +121652,7 @@ entities:
     - type: Transform
       pos: -74.5,-72.5
       parent: 1
-- proto: CP14WallWooden
+- proto: CE14WallWooden
   entities:
   - uid: 23063
     components:
@@ -122319,9 +122319,9 @@ entities:
     - type: Transform
       pos: -8.5,-39.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: top
   - uid: 23226
     components:
@@ -122333,9 +122333,9 @@ entities:
     - type: Transform
       pos: -9.5,-38.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: left
   - uid: 23228
     components:
@@ -122347,27 +122347,27 @@ entities:
     - type: Transform
       pos: -7.5,-34.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: bottom
   - uid: 23230
     components:
     - type: Transform
       pos: -5.5,-34.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: bottom
   - uid: 23231
     components:
     - type: Transform
       pos: -9.5,-37.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: left
   - uid: 23232
     components:
@@ -122379,9 +122379,9 @@ entities:
     - type: Transform
       pos: -9.5,-35.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: left
   - uid: 23234
     components:
@@ -122423,9 +122423,9 @@ entities:
     - type: Transform
       pos: -9.5,-36.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: left
   - uid: 23242
     components:
@@ -122482,36 +122482,36 @@ entities:
     - type: Transform
       pos: -5.5,-39.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: top
   - uid: 23253
     components:
     - type: Transform
       pos: -6.5,-39.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: top
   - uid: 23254
     components:
     - type: Transform
       pos: -7.5,-39.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: top
   - uid: 23255
     components:
     - type: Transform
       pos: -6.5,-34.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: bottom
   - uid: 23256
     components:
@@ -122523,9 +122523,9 @@ entities:
     - type: Transform
       pos: -4.5,-37.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: right
   - uid: 23258
     components:
@@ -122537,36 +122537,36 @@ entities:
     - type: Transform
       pos: -8.5,-34.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: bottom
   - uid: 23260
     components:
     - type: Transform
       pos: -4.5,-36.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: right
   - uid: 23261
     components:
     - type: Transform
       pos: -4.5,-35.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: right
   - uid: 23262
     components:
     - type: Transform
       pos: -4.5,-38.5
       parent: 1
-    - type: CP14WallpaperHolder
+    - type: CE14WallpaperHolder
       layers:
-      - sprite: _CP14/Structures/Wallpaper/wallpaper_yellow.rsi
+      - sprite: _CE14/Structures/Wallpaper/wallpaper_yellow.rsi
         state: right
   - uid: 23263
     components:
@@ -122698,7 +122698,7 @@ entities:
     - type: Transform
       pos: 23.5,14.5
       parent: 1
-- proto: CP14WaterLilies
+- proto: CE14WaterLilies
   entities:
   - uid: 23289
     components:
@@ -122724,7 +122724,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -2.5207806,-20.041311
       parent: 1
-- proto: CP14WaterReeds
+- proto: CE14WaterReeds
   entities:
   - uid: 23293
     components:
@@ -122768,7 +122768,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.3843646,-18.70323
       parent: 1
-- proto: CP14WeaponDaggerIron
+- proto: CE14WeaponDaggerIron
   entities:
   - uid: 20657
     components:
@@ -122789,7 +122789,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -9.204089,-0.0896281
       parent: 1
-- proto: CP14WeaponPickaxeIron
+- proto: CE14WeaponPickaxeIron
   entities:
   - uid: 20660
     components:
@@ -122808,7 +122808,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -70.56778,28.4129
       parent: 1
-- proto: CP14WeaponShieldWooden
+- proto: CE14WeaponShieldWooden
   entities:
   - uid: 23375
     components:
@@ -122850,7 +122850,7 @@ entities:
     - type: Transform
       pos: 22.628853,-17.18603
       parent: 1
-- proto: CP14WeaponShovelIron
+- proto: CE14WeaponShovelIron
   entities:
   - uid: 20663
     components:
@@ -122858,7 +122858,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -71.14161,31.674646
       parent: 1
-- proto: CP14WindowStoneBrick
+- proto: CE14WindowStoneBrick
   entities:
   - uid: 23411
     components:
@@ -122870,7 +122870,7 @@ entities:
     - type: Transform
       pos: 13.5,-17.5
       parent: 1
-- proto: CP14WindowWooden
+- proto: CE14WindowWooden
   entities:
   - uid: 23300
     components:
@@ -122887,7 +122887,7 @@ entities:
     - type: Transform
       pos: -49.5,-76.5
       parent: 1
-- proto: CP14WoodenBed
+- proto: CE14WoodenBed
   entities:
   - uid: 23128
     components:
@@ -122984,7 +122984,7 @@ entities:
     - type: Transform
       pos: 15.5,-15.5
       parent: 1
-- proto: CP14WoodenBeerMug
+- proto: CE14WoodenBeerMug
   entities:
   - uid: 23320
     components:
@@ -123001,7 +123001,7 @@ entities:
     - type: Transform
       pos: 78.76322,35.551956
       parent: 1
-- proto: CP14WoodenCabinet
+- proto: CE14WoodenCabinet
   entities:
   - uid: 19727
     components:
@@ -123104,7 +123104,7 @@ entities:
     - type: Transform
       pos: 81.5,30.5
       parent: 1
-- proto: CP14WoodenCabinetBlacksmith
+- proto: CE14WoodenCabinetBlacksmith
   entities:
   - uid: 23331
     components:
@@ -123123,7 +123123,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 21.5,-0.5
       parent: 1
-- proto: CP14WoodenCabinetGuard
+- proto: CE14WoodenCabinetGuard
   entities:
   - uid: 23339
     components:
@@ -123140,7 +123140,7 @@ entities:
     - type: Transform
       pos: 16.5,-15.5
       parent: 1
-- proto: CP14WoodenCabinetGuardCommander
+- proto: CE14WoodenCabinetGuardCommander
   entities:
   - uid: 23130
     components:
@@ -123148,14 +123148,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.5,-23.5
       parent: 1
-- proto: CP14WoodenCabinetMerchant
+- proto: CE14WoodenCabinetMerchant
   entities:
   - uid: 23335
     components:
     - type: Transform
       pos: -8.5,-35.5
       parent: 1
-- proto: CP14WoodenChest
+- proto: CE14WoodenChest
   entities:
   - uid: 19654
     components:
@@ -123357,7 +123357,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: CP14WoodenCloset
+- proto: CE14WoodenCloset
   entities:
   - uid: 23347
     components:
@@ -123381,21 +123381,21 @@ entities:
     - type: Transform
       pos: 74.5,40.5
       parent: 1
-- proto: CP14WoodenClosetAlchemyFilled
+- proto: CE14WoodenClosetAlchemyFilled
   entities:
   - uid: 23351
     components:
     - type: Transform
       pos: -52.5,-73.5
       parent: 1
-- proto: CP14WoodenClosetBlacksmithFilled
+- proto: CE14WoodenClosetBlacksmithFilled
   entities:
   - uid: 23352
     components:
     - type: Transform
       pos: 21.5,1.5
       parent: 1
-- proto: CP14WoodenDoor
+- proto: CE14WoodenDoor
   entities:
   - uid: 23354
     components:
@@ -123403,7 +123403,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 28.5,-12.5
       parent: 1
-- proto: CP14WoodenDoorAlchemy1
+- proto: CE14WoodenDoorAlchemy1
   entities:
   - uid: 23355
     components:
@@ -123411,7 +123411,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 72.5,31.5
       parent: 1
-- proto: CP14WoodenDoorAlchemy3
+- proto: CE14WoodenDoorAlchemy3
   entities:
   - uid: 23356
     components:
@@ -123431,7 +123431,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -51.5,-72.5
       parent: 1
-- proto: CP14WoodenDoorAlchemyMirrored1
+- proto: CE14WoodenDoorAlchemyMirrored1
   entities:
   - uid: 23359
     components:
@@ -123439,7 +123439,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 72.5,32.5
       parent: 1
-- proto: CP14WoodenDoorFrame
+- proto: CE14WoodenDoorFrame
   entities:
   - uid: 23360
     components:
@@ -123447,7 +123447,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 15.5,52.5
       parent: 1
-- proto: CP14WoodLog
+- proto: CE14WoodLog
   entities:
   - uid: 23361
     components:
@@ -123471,7 +123471,7 @@ entities:
     - type: Transform
       pos: 69.43164,33.476402
       parent: 1
-- proto: CP14Workbench
+- proto: CE14Workbench
   entities:
   - uid: 23365
     components:
@@ -123479,7 +123479,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 79.5,30.5
       parent: 1
-- proto: CP14WorkbenchCooking
+- proto: CE14WorkbenchCooking
   entities:
   - uid: 23366
     components:
@@ -123493,14 +123493,14 @@ entities:
       - 20583
       - 20657
       - 23362
-- proto: CP14WorkbenchFurnace
+- proto: CE14WorkbenchFurnace
   entities:
   - uid: 23367
     components:
     - type: Transform
       pos: 78.5,30.5
       parent: 1
-- proto: CP14WorkbenchSewing
+- proto: CE14WorkbenchSewing
   entities:
   - uid: 23368
     components:

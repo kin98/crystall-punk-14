@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14BookGuildMoral
-  parent: CP14BookWriteableBase
+  id: CE14BookGuildMoral
+  parent: CE14BookWriteableBase
   name: The guild moral of the adventurer
   description: A book with written down unofficial rules among adventurers.
   components:
@@ -18,11 +18,11 @@
     - state: bookmark_short
       map: [ "overlay" ]
   - type: Paper
-    content: cp14-book-text-guild-moral
+    content: CE14-book-text-guild-moral
 
 - type: entity
-  id: CP14BookTieflingGambit
-  parent: CP14BookWriteableBase
+  id: CE14BookTieflingGambit
+  parent: CE14BookWriteableBase
   name: "Tiefling's Gambit"
   description: Rules for gambling with dice, created by Callista Zyanur.
   components:
@@ -40,11 +40,11 @@
     - state: bookmark_short
       map: [ "overlay" ]
   - type: Paper
-    content: cp14-book-text-tiefling-gambit
+    content: CE14-book-text-tiefling-gambit
 
 - type: entity
-  id: CP14BookPantheonGodsSileita
-  parent: CP14BookWriteableBase
+  id: CE14BookPantheonGodsSileita
+  parent: CE14BookWriteableBase
   name: Pantheon of Gods of Sileita
   description: Description of the gods of our world, Sileita, may they bless our existence forever and ever.
   components:
@@ -62,11 +62,11 @@
     - state: bookmark_short
       map: [ "overlay" ]
   - type: Paper
-    content: cp14-book-text-pantheon-gods-sileita
+    content: CE14-book-text-pantheon-gods-sileita
 
 - type: entity
-  id: CP14BookPantheonGodsSileitaImitators
-  parent: CP14BookWriteableBase
+  id: CE14BookPantheonGodsSileitaImitators
+  parent: CE14BookWriteableBase
   name: Pantheon of Gods of Sileita - Imitators of the Gods
   description: An addition to the main part of the book, which they did not wish to include in the general edition.
   components:
@@ -85,4 +85,4 @@
     - state: bookmark_short
       map: [ "overlay" ]
   - type: Paper
-    content: cp14-book-text-pantheon-gods-sileita-imitators
+    content: CE14-book-text-pantheon-gods-sileita-imitators

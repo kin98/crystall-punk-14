@@ -1,6 +1,6 @@
 - type: entity
   parent: FoodInjectableBase
-  id: CP14FoodPiePieceBase
+  id: CE14FoodPiePieceBase
   abstract: true
   categories: [ ForkFiltered ]
   components:
@@ -8,7 +8,7 @@
     size: Tiny
   - type: Temperature
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/Pies/pieces.rsi
+    sprite: _CE14/Objects/Consumable/Food/Pies/pieces.rsi
   - type: SolutionContainerManager
     solutions:
       food:
@@ -20,8 +20,8 @@
           Quantity: 2
 
 - type: entity
-  id: CP14FoodPiePieceTrash
-  parent: CP14FoodPiePieceBase
+  id: CE14FoodPiePieceTrash
+  parent: CE14FoodPiePieceBase
   name: a piece of disgusting pie
   description: On the outside, it looked appealing and delicious, but on the inside, it was simply awful.
   components:
@@ -31,8 +31,8 @@
     - state: trash
 
 - type: entity
-  id: CP14FoodPiePieceMeat
-  parent: CP14FoodPiePieceBase
+  id: CE14FoodPiePieceMeat
+  parent: CE14FoodPiePieceBase
   name: a piece of meat pie
   description: Pie with juicy meat.
   components:
@@ -42,8 +42,8 @@
     - state: meat
 
 - type: entity
-  id: CP14FoodPiePiecePumpkin
-  parent: CP14FoodPiePieceBase
+  id: CE14FoodPiePiecePumpkin
+  parent: CE14FoodPiePieceBase
   name: a piece of pumpkin pie
   description: Pumpkin pie. Sweet and delicate.
   components:
@@ -53,8 +53,8 @@
     - state: pumpkin
 
 - type: entity
-  id: CP14FoodPiePieceVeg
-  parent: CP14FoodPiePieceBase
+  id: CE14FoodPiePieceVeg
+  parent: CE14FoodPiePieceBase
   name: a piece of vegetable pie
   description: Vegetables and herbs inside
   components:

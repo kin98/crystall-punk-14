@@ -1,11 +1,11 @@
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadGildmaster
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadGildmaster
   name: guildmaster hat
   description: A sign of unlimited experience and honor.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/Guildmaster/guildmaster_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/Guildmaster/guildmaster_hat.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/Guildmaster/guildmaster_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/Guildmaster/guildmaster_hat.rsi
 

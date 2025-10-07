@@ -5,7 +5,7 @@
   id: DummyMix
   verbText: mixing-verb-default-mix
   icon:
-    sprite: _CP14/Structures/Specific/Alchemy/alchemy_vat.rsi
+    sprite: _CE14/Structures/Specific/Alchemy/alchemy_vat.rsi
     state: full
 
 - type: mixingCategory
@@ -19,14 +19,14 @@
   id: DummyJuice
   verbText: mixing-verb-default-juice
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/mortar_pestle.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/mortar_pestle.rsi
     state: full
 
 - type: mixingCategory
   id: DummyCondense
   verbText: mixing-verb-default-condense
   icon:
-    sprite: _CP14/Objects/Specific/Alchemy/mortar_pestle.rsi
+    sprite: _CE14/Objects/Specific/Alchemy/mortar_pestle.rsi
     state: full
 
 # Alternative Mixing Methods

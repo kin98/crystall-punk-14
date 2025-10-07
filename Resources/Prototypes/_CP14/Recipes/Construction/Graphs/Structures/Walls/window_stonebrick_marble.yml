@@ -1,40 +1,40 @@
 - type: constructionGraph
-  id: CP14WindowMarbleBrick
+  id: CE14WindowMarbleBrick
   start: start
   graph:
     - node: start
       edges:
-        - to: CP14WindowFrameMarbleBrick
+        - to: CE14WindowFrameMarbleBrick
           completed:
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: CP14MarbleStone
+            - material: CE14MarbleStone
               amount: 2
               doAfter: 2
 
-    - node: CP14WindowFrameMarbleBrick
-      entity: CP14WindowFrameMarbleBrick
+    - node: CE14WindowFrameMarbleBrick
+      entity: CE14WindowFrameMarbleBrick
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14MarbleBlock1
+              prototype: CE14MarbleBlock1
               amount: 2
             - !type:DeleteEntity {}
           steps:
             - tool: Prying
               doAfter: 2
-        - to: CP14WindowMarbleBrick
+        - to: CE14WindowMarbleBrick
           steps:
-            - material: CP14GlassSheet
+            - material: CE14GlassSheet
               amount: 2
               doAfter: 2
 
-    - node: CP14WindowMarbleBrick
-      entity: CP14WindowMarbleBrick
+    - node: CE14WindowMarbleBrick
+      entity: CE14WindowMarbleBrick
       edges:
-        - to: CP14WindowFrameMarbleBrick
+        - to: CE14WindowFrameMarbleBrick
           steps:
             - tool: Screwing
               doAfter: 1
@@ -42,17 +42,17 @@
               doAfter: 2
           completed:
             - !type:SpawnPrototype
-              prototype: CP14GlassSheet1
+              prototype: CE14GlassSheet1
               amount: 2
 
-    - node: CP14WindowMarbleBrickBroken
-      entity: CP14WindowMarbleBrickBroken
+    - node: CE14WindowMarbleBrickBroken
+      entity: CE14WindowMarbleBrickBroken
       edges:
-        - to: CP14WindowFrameMarbleBrick
+        - to: CE14WindowFrameMarbleBrick
           steps:
             - tool: Anchoring
               doAfter: 2
           completed:
             - !type:SpawnPrototype
-              prototype: CP14GlassShard
+              prototype: CE14GlassShard
               amount: 1

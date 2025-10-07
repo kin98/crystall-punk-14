@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CP14.IdentityRecognition;
+namespace Content.Shared._CE14.IdentityRecognition;
 
 /// <summary>
 /// defines this character's name as unknown.
@@ -8,6 +8,6 @@ namespace Content.Shared._CP14.IdentityRecognition;
 /// and is hidden when IdentityBlocker is enabled.
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-public sealed partial class CP14UnknownIdentityComponent : Component
+public sealed partial class CE14UnknownIdentityComponent : Component
 {
 }

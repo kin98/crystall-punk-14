@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseStructure
-  id: CP14BaseFence
+  id: CE14BaseFence
   abstract: true
   categories: [ ForkFiltered ]
   name: fence
@@ -36,24 +36,24 @@
         - LowImpassable
         - MidImpassable
   - type: IconSmooth
-    key: CP14fence
+    key: CE14fence
     base: fence
     additionalKeys:
-    - CP14wall
+    - CE14wall
   - type: Climbable
     delay: 2.5
 
 - type: entity
   parent:
-  - CP14BaseFence
-  - CP14BaseFlammableSpreading
-  id: CP14FenceWooden
+  - CE14BaseFence
+  - CE14BaseFlammableSpreading
+  id: CE14FenceWooden
   suffix: Wooden
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Fence/wooden.rsi
+    sprite: _CE14/Structures/Fence/wooden.rsi
   - type: Icon
-    sprite: _CP14/Structures/Fence/wooden.rsi
+    sprite: _CE14/Structures/Fence/wooden.rsi
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Wood
@@ -68,25 +68,25 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14FenceWooden
-    node: CP14FenceWooden
+    graph: CE14FenceWooden
+    node: CE14FenceWooden
 
 - type: entity
-  parent: CP14FenceWooden
-  id: CP14FenceWoodenBirch
+  parent: CE14FenceWooden
+  id: CE14FenceWoodenBirch
   suffix: Wooden Birch
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Fence/wooden_birch.rsi
+    sprite: _CE14/Structures/Fence/wooden_birch.rsi
   - type: Icon
-    sprite: _CP14/Structures/Fence/wooden_birch.rsi
+    sprite: _CE14/Structures/Fence/wooden_birch.rsi
   - type: Construction
-    graph: CP14FenceWoodenBirch
-    node: CP14FenceWoodenBirch
+    graph: CE14FenceWoodenBirch
+    node: CE14FenceWoodenBirch
 

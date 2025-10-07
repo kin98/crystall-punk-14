@@ -1,41 +1,41 @@
 - type: entity
-  id: CP14EnergyCrystalBase
+  id: CE14EnergyCrystalBase
   parent: BaseItem
   abstract: true
   description: A crystal shard capable of storing magical energy.
   categories: [ ForkFiltered ]
   components:
-  - type: CP14MagicEnergyCrystal
+  - type: CE14MagicEnergyCrystal
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Thaumaturgy/crystal.rsi
-  - type: CP14MagicEnergyContainer
-  - type: CP14MagicEnergyExaminable
+    sprite: _CE14/Objects/Specific/Thaumaturgy/crystal.rsi
+  - type: CE14MagicEnergyContainer
+  - type: CE14MagicEnergyExaminable
   - type: Tag
     tags:
-    - CP14EnergyCrystal
+    - CE14EnergyCrystal
   - type: StaticPrice
     price: 15
 
 - type: entity
-  id: CP14EnergyCrystalMedium
-  parent: CP14EnergyCrystalBase
+  id: CE14EnergyCrystalMedium
+  parent: CE14EnergyCrystalBase
   name: energyshard
   suffix: Full
   components:
   - type: Sprite
     layers:
       - state: medium
-  - type: CP14MagicEnergyContainer
+  - type: CE14MagicEnergyContainer
     energy: 50
     maxEnergy: 50
 
 - type: entity
-  id: CP14EnergyCrystalMediumEmpty
-  parent: CP14EnergyCrystalMedium
+  id: CE14EnergyCrystalMediumEmpty
+  parent: CE14EnergyCrystalMedium
   suffix: Empty
   components:
-  - type: CP14MagicEnergyContainer
+  - type: CE14MagicEnergyContainer
     energy: 0
 

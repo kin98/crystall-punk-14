@@ -3,13 +3,13 @@ using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.MeleeWeapon.Components;
+namespace Content.Shared._CE14.MeleeWeapon.Components;
 
 /// <summary>
 /// After several wide attacks, a light attack deals additional damage.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class CP14ComboBonusMeleeDamageComponent : Component
+public sealed partial class CE14ComboBonusMeleeDamageComponent : Component
 {
     [DataField]
     public DamageSpecifier BonusDamage = new();
@@ -24,11 +24,11 @@ public sealed partial class CP14ComboBonusMeleeDamageComponent : Component
     public HashSet<EntityUid> HitEntities = new();
 
     [DataField]
-    public SoundSpecifier Sound = new SoundPathSpecifier("/Audio/_CP14/Effects/critical_sword.ogg")
+    public SoundSpecifier Sound = new SoundPathSpecifier("/Audio/_CE14/Effects/critical_sword.ogg")
     {
         Params = AudioParams.Default.WithVariation(0.125f),
     };
 
     [DataField]
-    public EntProtoId VFX = "CP14MeleeCritEffect";
+    public EntProtoId VFX = "CE14MeleeCritEffect";
 }

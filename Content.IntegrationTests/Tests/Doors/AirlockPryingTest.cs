@@ -6,7 +6,7 @@ namespace Content.IntegrationTests.Tests.Doors;
 
 public sealed class AirlockPryingTest : InteractionTest
 {
-    /* CP14 Crowbar door prying disabled
+    /* CE14 Crowbar door prying disabled
     [Test]
     public async Task PoweredClosedAirlock_Pry_DoesNotOpen()
     {

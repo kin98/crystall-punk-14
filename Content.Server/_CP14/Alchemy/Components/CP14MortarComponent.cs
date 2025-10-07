@@ -1,8 +1,8 @@
 
-namespace Content.Server._CP14.Alchemy;
+namespace Content.Server._CE14.Alchemy;
 
-[RegisterComponent, Access(typeof(CP14AlchemyExtractionSystem))]
-public sealed partial class CP14MortarComponent : Component
+[RegisterComponent, Access(typeof(CE14AlchemyExtractionSystem))]
+public sealed partial class CE14MortarComponent : Component
 {
     [DataField(required: true)]
     public string Solution = string.Empty;

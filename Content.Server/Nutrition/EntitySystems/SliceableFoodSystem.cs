@@ -82,9 +82,9 @@ public sealed class SliceableFoodSystem : EntitySystem
         if (!TryComp<UtensilComponent>(usedItem, out var utensil) || (utensil.Types & UtensilType.Knife) == 0)
             return false;
 
-        //CP14 transfer flavors
+        //CE14 transfer flavors
         TryComp<FlavorProfileComponent>(entity, out var flavorProfile);
-        //CP14 end
+        //CE14 end
 
         var sliceVolume = solution.Volume / FixedPoint2.New(entity.Comp2.TotalCount);
         for (int i = 0; i < entity.Comp2.TotalCount; i++)
@@ -94,7 +94,7 @@ public sealed class SliceableFoodSystem : EntitySystem
             var lostSolution =
                 _solutionContainer.SplitSolution(soln.Value, sliceVolume);
 
-            //CP14 - transfer flavors
+            //CE14 - transfer flavors
             if (flavorProfile is not null)
             {
                 var sliceFlavors = EnsureComp<FlavorProfileComponent>(sliceUid);
@@ -103,7 +103,7 @@ public sealed class SliceableFoodSystem : EntitySystem
                     sliceFlavors.Flavors.Add(newFlavor);
                 }
             }
-            //CP14 end
+            //CE14 end
 
             // Fill new slice
             FillSlice(sliceUid, lostSolution);

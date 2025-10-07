@@ -3,49 +3,49 @@
  * https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT
  */
 
-using Content.Shared._CP14.Cooking.Components;
+using Content.Shared._CE14.Cooking.Components;
 using Content.Shared.Interaction;
 using Robust.Shared.Containers;
 
-namespace Content.Shared._CP14.Cooking;
+namespace Content.Shared._CE14.Cooking;
 
-public abstract partial class CP14SharedCookingSystem
+public abstract partial class CE14SharedCookingSystem
 {
     private void InitTransfer()
     {
-        SubscribeLocalEvent<CP14FoodHolderComponent, AfterInteractEvent>(OnAfterInteract);
-        SubscribeLocalEvent<CP14FoodHolderComponent, InteractUsingEvent>(OnInteractUsing);
+        SubscribeLocalEvent<CE14FoodHolderComponent, AfterInteractEvent>(OnAfterInteract);
+        SubscribeLocalEvent<CE14FoodHolderComponent, InteractUsingEvent>(OnInteractUsing);
 
-        SubscribeLocalEvent<CP14FoodCookerComponent, ContainerIsInsertingAttemptEvent>(OnInsertAttempt);
+        SubscribeLocalEvent<CE14FoodCookerComponent, ContainerIsInsertingAttemptEvent>(OnInsertAttempt);
     }
 
-    private void OnInteractUsing(Entity<CP14FoodHolderComponent> target, ref InteractUsingEvent args)
+    private void OnInteractUsing(Entity<CE14FoodHolderComponent> target, ref InteractUsingEvent args)
     {
-        if (!TryComp<CP14FoodHolderComponent>(args.Used, out var used))
+        if (!TryComp<CE14FoodHolderComponent>(args.Used, out var used))
             return;
 
         TryTransferFood(target, (args.Used, used));
     }
 
-    private void OnAfterInteract(Entity<CP14FoodHolderComponent> ent, ref AfterInteractEvent args)
+    private void OnAfterInteract(Entity<CE14FoodHolderComponent> ent, ref AfterInteractEvent args)
     {
-        if (!TryComp<CP14FoodHolderComponent>(args.Target, out var target))
+        if (!TryComp<CE14FoodHolderComponent>(args.Target, out var target))
             return;
 
         TryTransferFood(ent, (args.Target.Value, target));
     }
 
-    private void OnInsertAttempt(Entity<CP14FoodCookerComponent> ent, ref ContainerIsInsertingAttemptEvent args)
+    private void OnInsertAttempt(Entity<CE14FoodCookerComponent> ent, ref ContainerIsInsertingAttemptEvent args)
     {
         if (args.Cancelled)
             return;
 
-        if (!TryComp<CP14FoodHolderComponent>(ent, out var holder))
+        if (!TryComp<CE14FoodHolderComponent>(ent, out var holder))
             return;
 
         if (holder.FoodData is not null)
         {
-            _popup.PopupEntity(Loc.GetString("cp14-cooking-popup-not-empty", ("name", MetaData(ent).EntityName)), ent);
+            _popup.PopupEntity(Loc.GetString("CE14-cooking-popup-not-empty", ("name", MetaData(ent).EntityName)), ent);
             args.Cancel();
         }
     }

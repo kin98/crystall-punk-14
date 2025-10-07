@@ -1,17 +1,17 @@
 - type: entity
-  id: CP14GodRays
+  id: CE14GodRays
   categories: [ ForkFiltered ]
   name: god rays
   components:
   - type: Sprite
-    sprite: _CP14/Effects/god_rays.rsi
+    sprite: _CE14/Effects/god_rays.rsi
     drawdepth: Mobs
     noRot: true
     offset: -0.25, 1.5
     layers:
       - state: ray
         shader: unshaded
-  - type: CP14SyncColorWithMapLight
+  - type: CE14SyncColorWithMapLight
   - type: PointLight
     enabled: true
     energy: 1

@@ -9,9 +9,9 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.Alchemy;
+namespace Content.Server._CE14.Alchemy;
 
-public sealed partial class  CP14AlchemyExtractionSystem : EntitySystem
+public sealed partial class  CE14AlchemyExtractionSystem : EntitySystem
 {
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
@@ -23,12 +23,12 @@ public sealed partial class  CP14AlchemyExtractionSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14MortarComponent, InteractUsingEvent>(OnInteractUsing);
+        SubscribeLocalEvent<CE14MortarComponent, InteractUsingEvent>(OnInteractUsing);
     }
 
-    private void OnInteractUsing(Entity<CP14MortarComponent> mortar, ref InteractUsingEvent args)
+    private void OnInteractUsing(Entity<CE14MortarComponent> mortar, ref InteractUsingEvent args)
     {
-        if (!TryComp<CP14PestleComponent>(args.Used, out var pestle))
+        if (!TryComp<CE14PestleComponent>(args.Used, out var pestle))
             return;
 
         _audio.PlayPvs(pestle.HitSound, mortar);

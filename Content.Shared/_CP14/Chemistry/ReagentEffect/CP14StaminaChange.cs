@@ -5,11 +5,11 @@ using Content.Shared.FixedPoint;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Chemistry.ReagentEffect;
+namespace Content.Shared._CE14.Chemistry.ReagentEffect;
 
 [UsedImplicitly]
 [DataDefinition]
-public sealed partial class CP14StaminaChange : EntityEffect
+public sealed partial class CE14StaminaChange : EntityEffect
 {
     [DataField(required: true)]
     public float StaminaDelta = 1;
@@ -19,7 +19,7 @@ public sealed partial class CP14StaminaChange : EntityEffect
 
     protected override string ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
     {
-        return Loc.GetString(StaminaDelta >= 0 ? "cp14-reagent-effect-guidebook-stamina-add" : "cp14-reagent-effect-guidebook-stamina-remove",
+        return Loc.GetString(StaminaDelta >= 0 ? "CE14-reagent-effect-guidebook-stamina-add" : "CE14-reagent-effect-guidebook-stamina-remove",
             ("chance", Probability),
             ("amount", Math.Abs(StaminaDelta)));
     }

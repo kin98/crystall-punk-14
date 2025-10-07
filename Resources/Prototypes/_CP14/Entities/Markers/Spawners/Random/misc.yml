@@ -1,41 +1,41 @@
 - type: entity
-  id: CP14RandomDirtLootSpawner
+  id: CE14RandomDirtLootSpawner
   name: dirt spawner
-  parent: CP14DirtEffect
+  parent: CE14DirtEffect
   categories: [ ForkFiltered ]
   components:
   - type: RandomSpawner
     prototypes:
-    - CP14DirtBlock1
+    - CE14DirtBlock1
     chance: 1
     deleteSpawnerAfterSpawn: false
 
 - type: entity
-  id: CP14RandomStoneLootSpawner
+  id: CE14RandomStoneLootSpawner
   name: dirt spawner
-  parent: CP14DirtEffect
+  parent: CE14DirtEffect
   categories: [ ForkFiltered ]
   components:
   - type: RandomSpawner
     prototypes:
-    - CP14StoneBlock1
+    - CE14StoneBlock1
     chance: 1
     deleteSpawnerAfterSpawn: false
 
 - type: entity
-  id: CP14RandomSnowLootSpawner
+  id: CE14RandomSnowLootSpawner
   name: snow spawner
-  parent: CP14SnowEffect
+  parent: CE14SnowEffect
   categories: [ ForkFiltered ]
   components:
   - type: RandomSpawner
     prototypes:
-    - CP14Snowball
+    - CE14Snowball
     chance: 1
     deleteSpawnerAfterSpawn: false
   - type: EmitSoundOnSpawn
     sound:
-      path: /Audio/_CP14/Effects/snowball.ogg
+      path: /Audio/_CE14/Effects/snowball.ogg
       params:
         variation: 0.250
         volume: 15

@@ -1,6 +1,6 @@
 using System.Linq;
-using Content.Shared._CP14.Skill.Components;
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Components;
+using Content.Shared._CE14.Skill.Prototypes;
 using Content.Shared.Administration;
 using Content.Shared.Administration.Managers;
 using Content.Shared.FixedPoint;
@@ -8,18 +8,18 @@ using Content.Shared.Verbs;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Skill;
+namespace Content.Shared._CE14.Skill;
 
-public abstract partial class CP14SharedSkillSystem
+public abstract partial class CE14SharedSkillSystem
 {
     [Dependency] private readonly ISharedAdminManager _admin = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
 
-    private IEnumerable<CP14SkillPrototype>? _allSkills;
-    private IEnumerable<CP14SkillTreePrototype>? _allTrees;
+    private IEnumerable<CE14SkillPrototype>? _allSkills;
+    private IEnumerable<CE14SkillTreePrototype>? _allTrees;
     private void InitializeAdmin()
     {
-        SubscribeLocalEvent<CP14SkillStorageComponent, GetVerbsEvent<Verb>>(OnGetAdminVerbs);
+        SubscribeLocalEvent<CE14SkillStorageComponent, GetVerbsEvent<Verb>>(OnGetAdminVerbs);
 
         SubscribeLocalEvent<PrototypesReloadedEventArgs>(OnPrototypeReloaded);
 
@@ -28,7 +28,7 @@ public abstract partial class CP14SharedSkillSystem
 
     private void OnPrototypeReloaded(PrototypesReloadedEventArgs ev)
     {
-        if (!ev.WasModified<CP14SkillPrototype>())
+        if (!ev.WasModified<CE14SkillPrototype>())
             return;
 
         UpdateCachedSkill();
@@ -36,12 +36,12 @@ public abstract partial class CP14SharedSkillSystem
 
     private void UpdateCachedSkill()
     {
-        _allSkills = _proto.EnumeratePrototypes<CP14SkillPrototype>();
-        _allTrees = _proto.EnumeratePrototypes<CP14SkillTreePrototype>();
+        _allSkills = _proto.EnumeratePrototypes<CE14SkillPrototype>();
+        _allTrees = _proto.EnumeratePrototypes<CE14SkillTreePrototype>();
     }
 
 
-    private void OnGetAdminVerbs(Entity<CP14SkillStorageComponent> ent, ref GetVerbsEvent<Verb> args)
+    private void OnGetAdminVerbs(Entity<CE14SkillStorageComponent> ent, ref GetVerbsEvent<Verb> args)
     {
         if (!_admin.HasAdminFlag(args.User, AdminFlags.Admin))
             return;
@@ -57,7 +57,7 @@ public abstract partial class CP14SharedSkillSystem
             Text = "Reset skills",
             Message = "Remove all learned skills",
             Category = VerbCategory.Debug,
-            Icon = new SpriteSpecifier.Rsi(new("/Textures/_CP14/Interface/Misc/reroll.rsi"), "reroll"),
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/_CE14/Interface/Misc/reroll.rsi"), "reroll"),
             Act = () =>
             {
                 TryResetSkills(target);

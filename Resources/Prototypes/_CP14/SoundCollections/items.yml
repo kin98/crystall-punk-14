@@ -1,51 +1,51 @@
 - type: soundCollection
-  id: CP14CrystalDings
+  id: CE14CrystalDings
   files:
-  - /Audio/_CP14/Effects/crystal_ding.ogg
-  - /Audio/_CP14/Effects/crystal_ding2.ogg
+  - /Audio/_CE14/Effects/crystal_ding.ogg
+  - /Audio/_CE14/Effects/crystal_ding2.ogg
 
 - type: soundCollection
-  id: CP14Digging
+  id: CE14Digging
   files:
-  - /Audio/_CP14/Items/shovel_dig1.ogg
-  - /Audio/_CP14/Items/shovel_dig2.ogg
-  - /Audio/_CP14/Items/shovel_dig3.ogg
-  - /Audio/_CP14/Items/shovel_dig4.ogg
-  - /Audio/_CP14/Items/shovel_dig5.ogg
+  - /Audio/_CE14/Items/shovel_dig1.ogg
+  - /Audio/_CE14/Items/shovel_dig2.ogg
+  - /Audio/_CE14/Items/shovel_dig3.ogg
+  - /Audio/_CE14/Items/shovel_dig4.ogg
+  - /Audio/_CE14/Items/shovel_dig5.ogg
 
 - type: soundCollection
-  id: CP14Hammering
+  id: CE14Hammering
   files:
-  - /Audio/_CP14/Items/nailing1.ogg
-  - /Audio/_CP14/Items/nailing2.ogg
-  - /Audio/_CP14/Items/nailing3.ogg
-  - /Audio/_CP14/Items/nailing4.ogg
+  - /Audio/_CE14/Items/nailing1.ogg
+  - /Audio/_CE14/Items/nailing2.ogg
+  - /Audio/_CE14/Items/nailing3.ogg
+  - /Audio/_CE14/Items/nailing4.ogg
 
 - type: soundCollection
-  id: CP14Sawing
+  id: CE14Sawing
   files:
-  - /Audio/_CP14/Items/sawing1.ogg
-  - /Audio/_CP14/Items/sawing2.ogg
-  - /Audio/_CP14/Items/sawing3.ogg
-  - /Audio/_CP14/Items/sawing4.ogg
-  - /Audio/_CP14/Items/sawing5.ogg
+  - /Audio/_CE14/Items/sawing1.ogg
+  - /Audio/_CE14/Items/sawing2.ogg
+  - /Audio/_CE14/Items/sawing3.ogg
+  - /Audio/_CE14/Items/sawing4.ogg
+  - /Audio/_CE14/Items/sawing5.ogg
 
 - type: soundCollection
-  id: CP14Parry
+  id: CE14Parry
   files:
-  - /Audio/_CP14/Effects/parry1.ogg
-  - /Audio/_CP14/Effects/parry2.ogg
+  - /Audio/_CE14/Effects/parry1.ogg
+  - /Audio/_CE14/Effects/parry2.ogg
 
 - type: soundCollection
-  id: CP14Book
+  id: CE14Book
   files:
-  - /Audio/_CP14/Items/book1.ogg
-  - /Audio/_CP14/Items/book2.ogg
+  - /Audio/_CE14/Items/book1.ogg
+  - /Audio/_CE14/Items/book2.ogg
 
 - type: soundCollection
-  id: CP14Coins
+  id: CE14Coins
   files:
-  - /Audio/_CP14/Items/coins1.ogg
-  - /Audio/_CP14/Items/coins2.ogg
-  - /Audio/_CP14/Items/coins3.ogg
+  - /Audio/_CE14/Items/coins1.ogg
+  - /Audio/_CE14/Items/coins2.ogg
+  - /Audio/_CE14/Items/coins3.ogg
 

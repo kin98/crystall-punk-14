@@ -1,40 +1,40 @@
 - type: entity
-  parent: CP14KeyIronBlank
-  id: CP14KeyTavernMerchantShopAbstract
+  parent: CE14KeyIronBlank
+  id: CE14KeyTavernMerchantShopAbstract
   suffix: Abstract Merchant shop
   components:
-  - type: CP14AbstractKey
+  - type: CE14AbstractKey
     group: Merchant
 
 - type: entity
-  parent: CP14KeyCopperBlank
-  id: CP14KeyMerchantShopPublic
+  parent: CE14KeyCopperBlank
+  id: CE14KeyMerchantShopPublic
   suffix: Merchant public shop
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: ShopPublic
 
 - type: entity
-  parent: CP14KeyIronBlank
-  id: CP14KeyMerchantShop1
+  parent: CE14KeyIronBlank
+  id: CE14KeyMerchantShop1
   suffix: Merchant shop 1
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: Shop1
 
 - type: entity
-  parent: CP14KeyIronBlank
-  id: CP14KeyMerchantShop2
+  parent: CE14KeyIronBlank
+  id: CE14KeyMerchantShop2
   suffix: Merchant shop 2
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: Shop2
 
 - type: entity
-  parent: CP14KeyIronBlank
-  id: CP14KeyMerchantShop3
+  parent: CE14KeyIronBlank
+  id: CE14KeyMerchantShop3
   suffix: Merchant shop 3
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: Shop3
 

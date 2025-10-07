@@ -1,13 +1,13 @@
 - type: entity
   name: wallet
   description: A small wallet, handy for storing coins.
-  id: CP14Wallet
+  id: CE14Wallet
   parent: BaseStorageItem
   suffix: Empty
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: /Textures/_CP14/Objects/Economy/wallet.rsi
+    sprite: /Textures/_CE14/Objects/Economy/wallet.rsi
     layers:
     - state: wallet-0
       map: ["enum.StorageFillLayers.Fill"]
@@ -23,7 +23,7 @@
       collection: storageRustle
     whitelist:
       tags:
-        - CP14Coin
+        - CE14Coin
         - Dice
   - type: UseDelay
     delay: 0.3
@@ -33,7 +33,7 @@
     fillBaseName: wallet
   - type: Dumpable
     soundDump:
-      collection: CP14Coins
+      collection: CE14Coins
     multiplier: 0.8
   - type: Clothing
     slots: [belt]
@@ -42,56 +42,56 @@
   - type: Butcherable
     butcheringType: Knife
     spawned:
-    - id: CP14ScrapLeather
+    - id: CE14ScrapLeather
       amount: 1
 
 - type: entity
-  id: CP14WalletFilledTest
-  parent: CP14Wallet
+  id: CE14WalletFilledTest
+  parent: CE14Wallet
   suffix: Filled test
   components:
   - type: StorageFill
     contents:
-    - id: CP14SilverCoin5
-    - id: CP14SilverCoin1
-    - id: CP14SilverCoin1
-    - id: CP14CopperCoin
-    - id: CP14CopperCoin
-    - id: CP14CopperCoin
+    - id: CE14SilverCoin5
+    - id: CE14SilverCoin1
+    - id: CE14SilverCoin1
+    - id: CE14CopperCoin
+    - id: CE14CopperCoin
+    - id: CE14CopperCoin
 
 - type: entity
-  id: CP14WalletFilledMerchant
-  parent: CP14Wallet
+  id: CE14WalletFilledMerchant
+  parent: CE14Wallet
   suffix: Merchant
   components:
   - type: StorageFill
     contents:
-    - id: CP14GoldCoin1
-    - id: CP14SilverCoin5
-    - id: CP14SilverCoin1
-    - id: CP14SilverCoin1
-    - id: CP14CopperCoin
-    - id: CP14CopperCoin
-    - id: CP14CopperCoin
+    - id: CE14GoldCoin1
+    - id: CE14SilverCoin5
+    - id: CE14SilverCoin1
+    - id: CE14SilverCoin1
+    - id: CE14CopperCoin
+    - id: CE14CopperCoin
+    - id: CE14CopperCoin
 
 - type: entity
-  id: CP14WalletFilledLootT1
-  parent: CP14Wallet
+  id: CE14WalletFilledLootT1
+  parent: CE14Wallet
   categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents:
-    - id: CP14GoldCoin1
+    - id: CE14GoldCoin1
       prob: 0.001
       orGroup: ZombieLootT1
-    - id: CP14SilverCoin5
+    - id: CE14SilverCoin5
       prob: 0.1
       orGroup: ZombieLootT1
-    - id: CP14SilverCoin1
+    - id: CE14SilverCoin1
       prob: 0.3
       orGroup: ZombieLootT1
-    - id: CP14CopperCoin5
+    - id: CE14CopperCoin5
       prob: 0.6
       orGroup: ZombieLootT1
-    - id: CP14CopperCoin1
+    - id: CE14CopperCoin1
       orGroup: ZombieLootT1

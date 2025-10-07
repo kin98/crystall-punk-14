@@ -5,17 +5,17 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using Content.Server._CP14.Discord;
-using Content.Shared._CP14.Sponsor;
+using Content.Server._CE14.Discord;
+using Content.Shared._CE14.Sponsor;
 using Content.Shared.CCVar;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.Sponsor;
+namespace Content.Server._CE14.Sponsor;
 
-public sealed class SponsorSystem : ICP14SponsorManager
+public sealed class SponsorSystem : ICE14SponsorManager
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
@@ -30,13 +30,13 @@ public sealed class SponsorSystem : ICP14SponsorManager
 
     private ISawmill _sawmill = null!;
 
-    private Dictionary<NetUserId, CP14SponsorRolePrototype> _cachedSponsors = new();
+    private Dictionary<NetUserId, CE14SponsorRolePrototype> _cachedSponsors = new();
 
     public void Initialize()
     {
         _sawmill = Logger.GetSawmill("sponsors");
 
-        _netManager.RegisterNetMessage<CP14SponsorRoleUpdate>();
+        _netManager.RegisterNetMessage<CE14SponsorRoleUpdate>();
 
         _cfg.OnValueChanged(CCVars.SponsorsEnabled, val => { _enabled = val; }, true);
         _cfg.OnValueChanged(CCVars.SponsorsApiUrl, val => { _apiUrl = val; }, true);
@@ -84,8 +84,8 @@ public sealed class SponsorSystem : ICP14SponsorManager
         if (roles is null)
             return;
 
-        CP14SponsorRolePrototype? targetRole = null;
-        foreach (var role in _proto.EnumeratePrototypes<CP14SponsorRolePrototype>())
+        CE14SponsorRolePrototype? targetRole = null;
+        foreach (var role in _proto.EnumeratePrototypes<CE14SponsorRolePrototype>())
         {
             if (!roles.Contains(role.DiscordRoleId))
                 continue;
@@ -101,7 +101,7 @@ public sealed class SponsorSystem : ICP14SponsorManager
 
         if (_cachedSponsors.TryGetValue(e.UserId, out var cachedRole))
         {
-            e.Channel.SendMessage(new CP14SponsorRoleUpdate
+            e.Channel.SendMessage(new CE14SponsorRoleUpdate
             {
                 Role = cachedRole,
             });
@@ -118,7 +118,7 @@ public sealed class SponsorSystem : ICP14SponsorManager
     }
 
     public bool UserHasFeature(NetUserId userId,
-        ProtoId<CP14SponsorFeaturePrototype> feature,
+        ProtoId<CE14SponsorFeaturePrototype> feature,
         bool ifDisabledSponsorhip = true)
     {
         if (!_enabled)

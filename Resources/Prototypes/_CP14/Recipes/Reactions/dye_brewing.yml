@@ -1,73 +1,73 @@
 
 - type: reaction
-  id: CP14BloodFlowerBrewing
+  id: CE14BloodFlowerBrewing
   impact: Low
   minTemp: 393
   priority: 1
   quantized: true
   conserveEnergy: false
   reactants:
-    CP14BloodFlowerSap:
+    CE14BloodFlowerSap:
       amount: 10
     Water:
       amount: 1
       catalyst: true
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -50
   - !type:CreateEntityReactionEffect
-      entity: CP14DyeRed
+      entity: CE14DyeRed
 
 - type: reaction
-  id: CP14YellowDayflinBrewing
+  id: CE14YellowDayflinBrewing
   impact: Low
   quantized: true
   conserveEnergy: false
   minTemp: 393
   reactants:
-    CP14YellowDayflinPulp:
+    CE14YellowDayflinPulp:
       amount: 10
     Water:
       amount: 1
       catalyst: true
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -50
   - !type:CreateEntityReactionEffect
-      entity: CP14DyeYellow
+      entity: CE14DyeYellow
 
 - type: reaction
-  id: CP14BlueAmanitaColor
+  id: CE14BlueAmanitaColor
   minTemp: 393
   priority: 1
   quantized: true
   conserveEnergy: false
   reactants:
-    CP14BlueAmanita:
+    CE14BlueAmanita:
       amount: 10
     Water:
       amount: 1
       catalyst: true
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -50
   - !type:CreateEntityReactionEffect
-      entity: CP14DyeBlue
+      entity: CE14DyeBlue
 
 - type: reaction
-  id: CP14PurpleSageColor
+  id: CE14PurpleSageColor
   minTemp: 393
   priority: 1
   quantized: true
   conserveEnergy: false
   reactants:
-    CP14WildSageSap:
+    CE14WildSageSap:
       amount: 10
     Water:
       amount: 1
       catalyst: true
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -50
   - !type:CreateEntityReactionEffect
-      entity: CP14DyePurple
+      entity: CE14DyePurple

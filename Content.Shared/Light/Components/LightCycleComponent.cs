@@ -28,13 +28,13 @@ public sealed partial class LightCycleComponent : Component
     /// Should the offset be randomised upon MapInit.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public bool InitialOffset = false; //CP14 false default
+    public bool InitialOffset = false; //CE14 false default
 
     /// <summary>
     /// Trench of the oscillation.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float MinLightLevel = 0.3f; //CP14 increase from 0 to 0.3
+    public float MinLightLevel = 0.3f; //CE14 increase from 0 to 0.3
 
     /// <summary>
     /// Peak of the oscillation

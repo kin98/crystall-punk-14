@@ -1,480 +1,480 @@
 # <---> CrystallEdge migration zone
 
 #2024-10-04
-CP14BloodGrass: CP14BloodFlower
-CP14FlowersRed: CP14BloodFlower
-CP14GatherableBloodgrass: CP14GatherableBloodFlower
-CP14GatherableFlowersRed: CP14GatherableBloodFlower
-CP14VialSmallBloodgrassSap: null
-CP14BarrelBloodGrassSap: CP14BarrelBloodFlowerSap
+CE14BloodGrass: CE14BloodFlower
+CE14FlowersRed: CE14BloodFlower
+CE14GatherableBloodgrass: CE14GatherableBloodFlower
+CE14GatherableFlowersRed: CE14GatherableBloodFlower
+CE14VialSmallBloodgrassSap: null
+CE14BarrelBloodGrassSap: CE14BarrelBloodFlowerSap
 
 #2024-10-11
-CP14WoodenDresser: CP14WoodenCabinet
+CE14WoodenDresser: CE14WoodenCabinet
 
 #2024-10-17
-CP14WallpaperPurple1: CP14WallpaperPurple
-CP14WallpaperPurple30: CP14WallpaperPurple
-CP14WallpaperGreen1: CP14WallpaperGreen
-CP14WallpaperGreen30: CP14WallpaperGreen
+CE14WallpaperPurple1: CE14WallpaperPurple
+CE14WallpaperPurple30: CE14WallpaperPurple
+CE14WallpaperGreen1: CE14WallpaperGreen
+CE14WallpaperGreen30: CE14WallpaperGreen
 
 #2024-10-18
-CP14WoodenCupboard: CP14WoodenCloset
-CP14VialSmallChromiumSlime: null
-CP14VialSmallLumiMushroom: null
+CE14WoodenCupboard: CE14WoodenCloset
+CE14VialSmallChromiumSlime: null
+CE14VialSmallLumiMushroom: null
 
 #2024-10-20
-CP14SpawnPointHouseKeeper: null
-CP14WoodenDoorTavernDorms: null
+CE14SpawnPointHouseKeeper: null
+CE14WoodenDoorTavernDorms: null
 
 #2024-10-24
-CP14SpawnPointQuartermaster: null
+CE14SpawnPointQuartermaster: null
 
 #2024-10-27
-CP14GatherableFlowersYellow: CP14GatherableDayflin
-CP14FlowersYellow: CP14Dayflin
+CE14GatherableFlowersYellow: CE14GatherableDayflin
+CE14FlowersYellow: CE14Dayflin
 
 #2024-11-03
-CP14OldLantern: CP14CrystalLampBlueEmpty
-CP14ClothingRingIceFloor: CP14ManaOperationGlove
+CE14OldLantern: CE14CrystalLampBlueEmpty
+CE14ClothingRingIceFloor: CE14ManaOperationGlove
 
 #2024-11-05
-CP14ClothingRingCureWounds: CP14MagicHealingStaff
-CP14ClothingRingShadowStep: null
+CE14ClothingRingCureWounds: CE14MagicHealingStaff
+CE14ClothingRingShadowStep: null
 
 #2024-11-11
-CP14BlueVial: CP14BlueBottle
-CP14GreenVial: CP14GreenBottle
+CE14BlueVial: CE14BlueBottle
+CE14GreenVial: CE14GreenBottle
 
 #2024-13-11
-CP14IronDoorBankSafe1: null
-CP14IronDoorBankSafe2: null
-CP14IronDoorBankSafe3: null
-CP14IronDoorBankSafe4: null
-CP14IronDoorBankSafe5: null
-CP14IronDoorBankSafe6: null
-CP14KeyBankSafe1: null
-CP14KeyBankSafe2: null
-CP14KeyBankSafe3: null
-CP14KeyBankSafe4: null
-CP14KeyBankSafe5: null
-CP14KeyBankSafe6: null
+CE14IronDoorBankSafe1: null
+CE14IronDoorBankSafe2: null
+CE14IronDoorBankSafe3: null
+CE14IronDoorBankSafe4: null
+CE14IronDoorBankSafe5: null
+CE14IronDoorBankSafe6: null
+CE14KeyBankSafe1: null
+CE14KeyBankSafe2: null
+CE14KeyBankSafe3: null
+CE14KeyBankSafe4: null
+CE14KeyBankSafe5: null
+CE14KeyBankSafe6: null
 
 #2024-19-11
-CP14ClothingRingManaGift: CP14ManaOperationGlove
-CP14ClothingRingIceDagger: CP14ManaOperationGlove
-CP14ClothingRingFlameCreation: CP14Lighter
-CP14ClothingRingShadowGrab: null
-CP14ClothingRingEarthWall: null
-CP14ClothingRingSphereOfLight: null
+CE14ClothingRingManaGift: CE14ManaOperationGlove
+CE14ClothingRingIceDagger: CE14ManaOperationGlove
+CE14ClothingRingFlameCreation: CE14Lighter
+CE14ClothingRingShadowGrab: null
+CE14ClothingRingEarthWall: null
+CE14ClothingRingSphereOfLight: null
 
 #2024-14-11
-CP14ClothingCloakSimpleWhite: null
-CP14ClothingCloakSimpleDarkBlue: null
-CP14ClothingCloakArmoredRed: CP14ClothingCloakGuardCommander
-CP14SpawnPointCaptain: null
+CE14ClothingCloakSimpleWhite: null
+CE14ClothingCloakSimpleDarkBlue: null
+CE14ClothingCloakArmoredRed: CE14ClothingCloakGuardCommander
+CE14SpawnPointCaptain: null
 
 #2024-02-12
-CP14WoodenDoorTavernAlchemy: CP14WoodenDoorAlchemy1
-CP14WoodenDoorTavernAlchemyMirrored: CP14WoodenDoorAlchemyMirrored1
-CP14IronDoorBlacksmith: CP14IronDoorBlacksmith1
-CP14IronDoorMirroredBlacksmith: CP14IronDoorMirroredBlacksmith1
-CP14IronDoorWindowedBlacksmith: CP14IronDoorBlacksmith1
-CP14IronDoorWindowedMirroredBlacksmith: CP14IronDoorMirroredBlacksmith1
-CP14FenceIronGrilleCorner: null
+CE14WoodenDoorTavernAlchemy: CE14WoodenDoorAlchemy1
+CE14WoodenDoorTavernAlchemyMirrored: CE14WoodenDoorAlchemyMirrored1
+CE14IronDoorBlacksmith: CE14IronDoorBlacksmith1
+CE14IronDoorMirroredBlacksmith: CE14IronDoorMirroredBlacksmith1
+CE14IronDoorWindowedBlacksmith: CE14IronDoorBlacksmith1
+CE14IronDoorWindowedMirroredBlacksmith: CE14IronDoorMirroredBlacksmith1
+CE14FenceIronGrilleCorner: null
 
 #2024-04-12
-CP14ClothingShirtGuardsChainmailShirtWB: CP14ClothingShirtGuardsChainmailShirtB
-CP14KeyRingGuardCommandant: CP14KeyRingGuardCommander
+CE14ClothingShirtGuardsChainmailShirtWB: CE14ClothingShirtGuardsChainmailShirtB
+CE14KeyRingGuardCommandant: CE14KeyRingGuardCommander
 
 #2024-12-12
-CP14FloraTree01: CP14FloraTreeGreen
-CP14FloraTree02: CP14FloraTreeGreen
-CP14FloraTree03: CP14FloraTreeGreen
-CP14FloraTree04: CP14FloraTreeGreen
-CP14FloraTree05: CP14FloraTreeGreen
-CP14FloraTree06: CP14FloraTreeGreen
-CP14FloraTreeLarge01: CP14FloraTreeGreenLarge
-CP14FloraTreeLarge02: CP14FloraTreeGreenLarge
-CP14FloraTreeLarge03: CP14FloraTreeGreenLarge
-CP14FloraTreeLarge04: CP14FloraTreeGreenLarge
-CP14FloraTreeLarge05: CP14FloraTreeGreenLarge
-CP14FloraTreeLarge06: CP14FloraTreeGreenLarge
+CE14FloraTree01: CE14FloraTreeGreen
+CE14FloraTree02: CE14FloraTreeGreen
+CE14FloraTree03: CE14FloraTreeGreen
+CE14FloraTree04: CE14FloraTreeGreen
+CE14FloraTree05: CE14FloraTreeGreen
+CE14FloraTree06: CE14FloraTreeGreen
+CE14FloraTreeLarge01: CE14FloraTreeGreenLarge
+CE14FloraTreeLarge02: CE14FloraTreeGreenLarge
+CE14FloraTreeLarge03: CE14FloraTreeGreenLarge
+CE14FloraTreeLarge04: CE14FloraTreeGreenLarge
+CE14FloraTreeLarge05: CE14FloraTreeGreenLarge
+CE14FloraTreeLarge06: CE14FloraTreeGreenLarge
 
-CP14DungeonEntranceAutoLink: CP14LaddersDownStoneAutoLink
-CP14DungeonExitAutoLink: CP14LaddersUpStoneAutoLink
+CE14DungeonEntranceAutoLink: CE14LaddersDownStoneAutoLink
+CE14DungeonExitAutoLink: CE14LaddersUpStoneAutoLink
 
-CP14BaseBroom: null
+CE14BaseBroom: null
 
 #2024-15-12
-CP14DemiplanKey: null
-CP14SpawnerExpeditionLootCommon: CP14SpawnerDemiplaneLootT1
+CE14DemiplanKey: null
+CE14SpawnerExpeditionLootCommon: CE14SpawnerDemiplaneLootT1
 
 #2025-06-01
-CP14AuraNodeBase: null
-CP14AuraScanner: null
+CE14AuraNodeBase: null
+CE14AuraScanner: null
 
 #2025-01-14
-CP14BaseBattleStaff: null
-CP14BaseTwoHandedSword: null
-CP14TwoHandedSwordScythe: null
+CE14BaseBattleStaff: null
+CE14BaseTwoHandedSword: null
+CE14TwoHandedSwordScythe: null
 
 #2025-17-01
-CP14ClothingCloakBrassArmor: null
+CE14ClothingCloakBrassArmor: null
 
 #2025-21-01
-CP14PlateWooden: CP14PlateWooden
-CP14PlateWooden2: CP14PlateWooden
-CP14PlateCeramic: CP14PlateWooden
-CP14PlateIron: CP14PlateIron
+CE14PlateWooden: CE14PlateWooden
+CE14PlateWooden2: CE14PlateWooden
+CE14PlateCeramic: CE14PlateWooden
+CE14PlateIron: CE14PlateIron
 
 #2025-30-01
-CP14OreCopper: CP14OreCopper1
-CP14OreIron: CP14OreIron1
-CP14OreGold: CP14OreGold1
-CP14OreMithril: CP14OreMithril1
+CE14OreCopper: CE14OreCopper1
+CE14OreIron: CE14OreIron1
+CE14OreGold: CE14OreGold1
+CE14OreMithril: CE14OreMithril1
 
 #2025-07-02
-CP14SpawnPointBanker: CP14SpawnPointMerchant
-CP14ClothingOuterClothingBankerWaistCoat: CP14ClothingOuterClothingMerchantWaistCoat
-CP14ClothingOuterClothingBankerWaistCoatOpen: null
-CP14ClothingShirtBanker: CP14ClothingShirtMerchant
-CP14KeyRingBanker: CP14KeyRingMerchant
-CP14WoodenCabinetBanker: CP14WoodenCabinetMerchant
-CP14WoodenClosetBankerFilled: CP14WoodenClosetMerchantFilled
+CE14SpawnPointBanker: CE14SpawnPointMerchant
+CE14ClothingOuterClothingBankerWaistCoat: CE14ClothingOuterClothingMerchantWaistCoat
+CE14ClothingOuterClothingBankerWaistCoatOpen: null
+CE14ClothingShirtBanker: CE14ClothingShirtMerchant
+CE14KeyRingBanker: CE14KeyRingMerchant
+CE14WoodenCabinetBanker: CE14WoodenCabinetMerchant
+CE14WoodenClosetBankerFilled: CE14WoodenClosetMerchantFilled
 
 #2025-02-09
-C14IronCabinet: CP14IronCabinet
-C14IronCabinetCargo: CP14IronCabinet
+C14IronCabinet: CE14IronCabinet
+C14IronCabinetCargo: CE14IronCabinet
 
 #2025-16-02
-CP14Arrow: null
-CP14ClothingBeltQuiverArrow: CP14ClothingBeltQuiverArrows
+CE14Arrow: null
+CE14ClothingBeltQuiverArrow: CE14ClothingBeltQuiverArrows
 
 #2025-17-02
-CP14Crossbolt: CP14CrossboltIron
+CE14Crossbolt: CE14CrossboltIron
 
 #2025-26-02
-CP14BookImperialLawsHandBook: CP14GuidebookImperialLaws
+CE14BookImperialLawsHandBook: CE14GuidebookImperialLaws
 
-CP14AlchemyNormalizer: CP14AlchemySolutionCleaner
-CP14VialSmallBloodFlowerSap: CP14VialSmall
-CP14VialSmallAgaricMushroom: CP14VialSmall
-CP14VialSmallGroundQuartz: CP14VialSmall
-CP14VialSmallWildSage: CP14VialSmall
-CP14VialSmallBlueAmanita: CP14VialSmall
-CP14VialSmallAirLily: CP14VialSmall
-CP14VialSmallDayflin: CP14VialSmall
-CP14VialTinyChromiumSlime: CP14VialSmall
-CP14VialTinyLumiMushroom: CP14VialSmall
-CP14VialSmallHealthPotion: CP14VialSmall
-CP14VialSmallManaPotion: CP14VialSmall
-CP14SpellScrollCounterSpell: CP14ActionSpellMagicSplitting
+CE14AlchemyNormalizer: CE14AlchemySolutionCleaner
+CE14VialSmallBloodFlowerSap: CE14VialSmall
+CE14VialSmallAgaricMushroom: CE14VialSmall
+CE14VialSmallGroundQuartz: CE14VialSmall
+CE14VialSmallWildSage: CE14VialSmall
+CE14VialSmallBlueAmanita: CE14VialSmall
+CE14VialSmallAirLily: CE14VialSmall
+CE14VialSmallDayflin: CE14VialSmall
+CE14VialTinyChromiumSlime: CE14VialSmall
+CE14VialTinyLumiMushroom: CE14VialSmall
+CE14VialSmallHealthPotion: CE14VialSmall
+CE14VialSmallManaPotion: CE14VialSmall
+CE14SpellScrollCounterSpell: CE14ActionSpellMagicSplitting
 
 #2025-04-03
-CP14TravelingStoreshipAnchor: null
-CP14TravelingShop: null
-CP14IronCabinetCargo: CP14IronCabinet
-CP14BrassChestFilledDemiplanes: null
-CP14BrassChestFilledWood: null
+CE14TravelingStoreshipAnchor: null
+CE14TravelingShop: null
+CE14IronCabinetCargo: CE14IronCabinet
+CE14BrassChestFilledDemiplanes: null
+CE14BrassChestFilledWood: null
 
-CP14WoodenDoorTavernAlchemy1: CP14WoodenDoorAlchemy1
-CP14WoodenDoorTavernAlchemyMirrored1: CP14WoodenDoorAlchemyMirrored1
-CP14WoodenDoorTavernAlchemy2: CP14WoodenDoorAlchemy2
-CP14WoodenDoorTavernAlchemyMirrored2: CP14WoodenDoorAlchemyMirrored2
-CP14WoodenDoorTavernAlchemy3: CP14WoodenDoorAlchemy3
-CP14WoodenDoorTavernAlchemyMirrored3: CP14WoodenDoorAlchemyMirrored3
-CP14SafeVault: null
-CP14WoodenClosetCommandantFilled: null
-CP14Safe: null
-CP14ClosetGlassShowcase: null
-CP14SafeVaultFilled25: null
-CP14IronDoorBankStaff: null
-CP14IronDoorMirroredBankStaff: null
-CP14IronDoorMirroredBankVault: null
-CP14IronDoorBankSafe: null
-CP14IronDoorBankCommandantRoom: null
-CP14IronDoorWindowedBankEntrance: null
-CP14IronDoorWindowedMirroredBankEntrance: null
-CP14IronDoorBankVault: null
-CP14BankStorageMarker: null
-CP14SpawnPointCommandant: null
+CE14WoodenDoorTavernAlchemy1: CE14WoodenDoorAlchemy1
+CE14WoodenDoorTavernAlchemyMirrored1: CE14WoodenDoorAlchemyMirrored1
+CE14WoodenDoorTavernAlchemy2: CE14WoodenDoorAlchemy2
+CE14WoodenDoorTavernAlchemyMirrored2: CE14WoodenDoorAlchemyMirrored2
+CE14WoodenDoorTavernAlchemy3: CE14WoodenDoorAlchemy3
+CE14WoodenDoorTavernAlchemyMirrored3: CE14WoodenDoorAlchemyMirrored3
+CE14SafeVault: null
+CE14WoodenClosetCommandantFilled: null
+CE14Safe: null
+CE14ClosetGlassShowcase: null
+CE14SafeVaultFilled25: null
+CE14IronDoorBankStaff: null
+CE14IronDoorMirroredBankStaff: null
+CE14IronDoorMirroredBankVault: null
+CE14IronDoorBankSafe: null
+CE14IronDoorBankCommandantRoom: null
+CE14IronDoorWindowedBankEntrance: null
+CE14IronDoorWindowedMirroredBankEntrance: null
+CE14IronDoorBankVault: null
+CE14BankStorageMarker: null
+CE14SpawnPointCommandant: null
 
 #2025-11-03
-CP14BrassChest: CP14WoodenChest
-CP14BrassChestFilledEnergyCrystals: null
-CP14BrassChestFilledAlchemy: null
-CP14BrassChestFilledCheese: null
-CP14BrassChestFilledSmallHealingBrute: null
-CP14BrassChestFilledSmallHealingPoison: null
-CP14BrassChestFilledSmallHealingAirloss: null
-CP14BrassChestFilledSmallHealingBlood: null
-CP14BrassChestFilledSmallHealingMana: null
-CP14BrassChestFilledSmallSpeedUp: null
-CP14BrassChestFilledSmallRainbow: null
-CP14BrassChestFilledFarmSeeds: null
+CE14BrassChest: CE14WoodenChest
+CE14BrassChestFilledEnergyCrystals: null
+CE14BrassChestFilledAlchemy: null
+CE14BrassChestFilledCheese: null
+CE14BrassChestFilledSmallHealingBrute: null
+CE14BrassChestFilledSmallHealingPoison: null
+CE14BrassChestFilledSmallHealingAirloss: null
+CE14BrassChestFilledSmallHealingBlood: null
+CE14BrassChestFilledSmallHealingMana: null
+CE14BrassChestFilledSmallSpeedUp: null
+CE14BrassChestFilledSmallRainbow: null
+CE14BrassChestFilledFarmSeeds: null
 
-CP14ClothingHeadCaptainCap: null
-CP14ClothingHeadBeretBlack: null
+CE14ClothingHeadCaptainCap: null
+CE14ClothingHeadBeretBlack: null
 
 #2025-02-04
-CP14SeedbedWooden: null
-CP14PlantCabbageDeath: CP14PlantCabbage
-CP14PlantCucumberDeath: CP14PlantCucumber
-CP14PlantOnionDeath: CP14PlantOnion
-CP14PlantPepperDeath: CP14PlantPepper
-CP14PlantPotatoDeath: CP14PlantPotato
-CP14PlantPumpkinDeath: CP14PlantPumpkin
-CP14PlantTomatoesDeath: CP14PlantTomatoes
-CP14PlantWheatDeath: CP14PlantWheat
-CP14PlantOnion: null
+CE14SeedbedWooden: null
+CE14PlantCabbageDeath: CE14PlantCabbage
+CE14PlantCucumberDeath: CE14PlantCucumber
+CE14PlantOnionDeath: CE14PlantOnion
+CE14PlantPepperDeath: CE14PlantPepper
+CE14PlantPotatoDeath: CE14PlantPotato
+CE14PlantPumpkinDeath: CE14PlantPumpkin
+CE14PlantTomatoesDeath: CE14PlantTomatoes
+CE14PlantWheatDeath: CE14PlantWheat
+CE14PlantOnion: null
 
 #2025-14-04
-CP14FenceWoodStraight: CP14FenceBigWooden
-CP14FenceWoodCorner: CP14FenceBigWooden
-CP14FenceWoodGate: CP14FenceGateBigWooden
-CP14FenceWoodSmallStraight: CP14FenceWooden
-CP14FenceWoodSmallCorner: CP14FenceWooden
-CP14FenceWoodSmallGate: CP14FenceGateWooden
-CP14FenceIronGrilleStraight: CP14FenceBigIron
-CP14FenceIronGrilleGate: CP14FenceGateBigIron
-CP14FenceIronGrilleGateGuard: CP14FenceGateBigIronGuardBarracks
-CP14FenceIronGrilleGateGuildmaster: CP14FenceGateBigIron
-CP14FenceIronGrilleGateDemiplaneCrystal: CP14FenceGateBigIron
-CP14FenceIronGrilleWindowStraight: CP14FenceWindowIron
+CE14FenceWoodStraight: CE14FenceBigWooden
+CE14FenceWoodCorner: CE14FenceBigWooden
+CE14FenceWoodGate: CE14FenceGateBigWooden
+CE14FenceWoodSmallStraight: CE14FenceWooden
+CE14FenceWoodSmallCorner: CE14FenceWooden
+CE14FenceWoodSmallGate: CE14FenceGateWooden
+CE14FenceIronGrilleStraight: CE14FenceBigIron
+CE14FenceIronGrilleGate: CE14FenceGateBigIron
+CE14FenceIronGrilleGateGuard: CE14FenceGateBigIronGuardBarracks
+CE14FenceIronGrilleGateGuildmaster: CE14FenceGateBigIron
+CE14FenceIronGrilleGateDemiplaneCrystal: CE14FenceGateBigIron
+CE14FenceIronGrilleWindowStraight: CE14FenceWindowIron
 
 #2025-21-04
-CP14WallBrownbrick: CP14WallMarbleBrick
-CP14FrameWoodenCrushedMedium: CP14WallFrameWooden
-CP14FrameWoodenCrushedLow: CP14WallFrameWooden
-CP14WallStonebrickCrushedMedium: CP14WallFrameStonebrick
-CP14WallStonebrickCrushedLow: CP14WallFrameStonebrick
-CP14WallCyan: CP14WallStonebrick
-CP14FrameWooden: CP14WallFrameWooden
+CE14WallBrownbrick: CE14WallMarbleBrick
+CE14FrameWoodenCrushedMedium: CE14WallFrameWooden
+CE14FrameWoodenCrushedLow: CE14WallFrameWooden
+CE14WallStonebrickCrushedMedium: CE14WallFrameStonebrick
+CE14WallStonebrickCrushedLow: CE14WallFrameStonebrick
+CE14WallCyan: CE14WallStonebrick
+CE14FrameWooden: CE14WallFrameWooden
 
 #2025-26-04
-CP14WallSkulls: CP14WallStonebrickOld
-CP14WoodenChestFrame: null
-CP14Nail1: null
-CP14Nail20: null
-CP14Nail50: null
+CE14WallSkulls: CE14WallStonebrickOld
+CE14WoodenChestFrame: null
+CE14Nail1: null
+CE14Nail20: null
+CE14Nail50: null
 
-CP14WallmountCrystalDiamonds: null
-CP14WallmountCrystalAmethysts: null
-CP14WallmountCrystalSapphires: null
-CP14WallmountCrystalEmeralds: null
-CP14WallmountCrystalTopazes: null
-CP14WallmountCrystalRubies: null
+CE14WallmountCrystalDiamonds: null
+CE14WallmountCrystalAmethysts: null
+CE14WallmountCrystalSapphires: null
+CE14WallmountCrystalEmeralds: null
+CE14WallmountCrystalTopazes: null
+CE14WallmountCrystalRubies: null
 
-CP14CrystalShardBase: CP14CrystalShardQuartz
-CP14CrystalShardChaos: CP14CrystalShardQuartz
-CP14CrystalShardEarth: CP14CrystalShardQuartz
-CP14CrystalShardFire: CP14CrystalShardQuartz
-CP14CrystalShardWater: CP14CrystalShardQuartz
-CP14CrystalShardAir: CP14CrystalShardQuartz
-CP14CrystalShardOrder: CP14CrystalShardQuartz
+CE14CrystalShardBase: CE14CrystalShardQuartz
+CE14CrystalShardChaos: CE14CrystalShardQuartz
+CE14CrystalShardEarth: CE14CrystalShardQuartz
+CE14CrystalShardFire: CE14CrystalShardQuartz
+CE14CrystalShardWater: CE14CrystalShardQuartz
+CE14CrystalShardAir: CE14CrystalShardQuartz
+CE14CrystalShardOrder: CE14CrystalShardQuartz
 
-CP14CrystalEmpty: CP14CrystalQuartz
-CP14CrystalEarth: CP14CrystalQuartz
-CP14CrystalFire: CP14CrystalQuartz
-CP14CrystalWater: CP14CrystalQuartz
-CP14CrystalAir: CP14CrystalQuartz
-CP14CrystalOrder: CP14CrystalQuartz
-CP14CrystalChaos: CP14CrystalQuartz
+CE14CrystalEmpty: CE14CrystalQuartz
+CE14CrystalEarth: CE14CrystalQuartz
+CE14CrystalFire: CE14CrystalQuartz
+CE14CrystalWater: CE14CrystalQuartz
+CE14CrystalAir: CE14CrystalQuartz
+CE14CrystalOrder: CE14CrystalQuartz
+CE14CrystalChaos: CE14CrystalQuartz
 
-CP14EnergyCrystalSmallEmpty: CP14EnergyCrystalMediumEmpty
-CP14EnergyCrystalSmall: CP14EnergyCrystalMedium
+CE14EnergyCrystalSmallEmpty: CE14EnergyCrystalMediumEmpty
+CE14EnergyCrystalSmall: CE14EnergyCrystalMedium
 
 #2025-05-05
-CP14DemiplaneKeyT1: null
-CP14DemiplaneKeyT2: null
+CE14DemiplaneKeyT1: null
+CE14DemiplaneKeyT2: null
 
 #2025-20-05
-CP14KeyGuardEntrance: CP14KeyGuardBarracks
-CP14KeyGuard: CP14KeyGuardBarracks
-CP14KeyGuardWeaponStorage: null
-CP14IronDoorGuard: CP14IronDoorGuardBarracks
-CP14IronDoorGuardWeaponStorage: null
-CP14IronDoorWindowedGuardEntrance: CP14IronDoorGuardBarracks
-CP14IronDoorWindowedMirroredGuardEntrance: CP14IronDoorGuardBarracks
-CP14FenceGateBigIronGuard: CP14FenceGateBigIronGuardBarracks
+CE14KeyGuardEntrance: CE14KeyGuardBarracks
+CE14KeyGuard: CE14KeyGuardBarracks
+CE14KeyGuardWeaponStorage: null
+CE14IronDoorGuard: CE14IronDoorGuardBarracks
+CE14IronDoorGuardWeaponStorage: null
+CE14IronDoorWindowedGuardEntrance: CE14IronDoorGuardBarracks
+CE14IronDoorWindowedMirroredGuardEntrance: CE14IronDoorGuardBarracks
+CE14FenceGateBigIronGuard: CE14FenceGateBigIronGuardBarracks
 
 #2025-25-05
-CP14SpawnUniqueTradepost: null
-CP14TradingBoardBase: null
-CP14TradingPortalSylphoria: null
-CP14TradingPortalHelmirWeapon: null
-CP14TradingPortalBradFamily: null
-CP14TradingPortalSpiceStream: null
-CP14WoodenChestFilledFarmSeeds: CP14SackFarmingSeedFull
-CP14WoodenChestFilledEnergyCrystals: null
-CP14WoodenChestFilledAlchemy: null
-CP14WoodenChestFilledCheese: null
+CE14SpawnUniqueTradepost: null
+CE14TradingBoardBase: null
+CE14TradingPortalSylphoria: null
+CE14TradingPortalHelmirWeapon: null
+CE14TradingPortalBradFamily: null
+CE14TradingPortalSpiceStream: null
+CE14WoodenChestFilledFarmSeeds: CE14SackFarmingSeedFull
+CE14WoodenChestFilledEnergyCrystals: null
+CE14WoodenChestFilledAlchemy: null
+CE14WoodenChestFilledCheese: null
 
 #2025-05-06
-CP14ClothingRingFireball: null
-CP14ClothingRingFlashLight: null
-CP14ClothingRingIceShards: null
+CE14ClothingRingFireball: null
+CE14ClothingRingFlashLight: null
+CE14ClothingRingIceShards: null
 
 # 2025-04-06
-CP14CarpetPink: CP14CarpetPurple
+CE14CarpetPink: CE14CarpetPurple
 
 #2025-15-06
-CP14FoodMeatMole: CP14FoodMeatMonster
-CP14FoodMeatMoleCooked: CP14FoodMeatMonsterCooked
-CP14FoodMeatMoleLeg: CP14FoodMeatMonsterLeg
-CP14FoodMeatMoleLegCooked: CP14FoodMeatMonsterLegCooked
-CP14FoodMeatMoleSlice: CP14FoodMeatMonsterSlice
-CP14FoodMeatMoleCookedSlice: CP14FoodMeatMonsterCookedSlice
+CE14FoodMeatMole: CE14FoodMeatMonster
+CE14FoodMeatMoleCooked: CE14FoodMeatMonsterCooked
+CE14FoodMeatMoleLeg: CE14FoodMeatMonsterLeg
+CE14FoodMeatMoleLegCooked: CE14FoodMeatMonsterLegCooked
+CE14FoodMeatMoleSlice: CE14FoodMeatMonsterSlice
+CE14FoodMeatMoleCookedSlice: CE14FoodMeatMonsterCookedSlice
 
 #2025-16-06
-CP14SpellscrollSignalLightBlue: null
-CP14SpellscrollSignalLightRed: null
-CP14SpellscrollSignalLightYellow: null
+CE14SpellscrollSignalLightBlue: null
+CE14SpellscrollSignalLightRed: null
+CE14SpellscrollSignalLightYellow: null
 
 #2025-28-06
-CP14SpellScrollMagicSplitting: null
-CP14AlchemyFurnaceDebug: CP14FurnaceDebug
-CP14AlchemyFurnace: CP14Furnace
+CE14SpellScrollMagicSplitting: null
+CE14AlchemyFurnaceDebug: CE14FurnaceDebug
+CE14AlchemyFurnace: CE14Furnace
 
 #2025-06-07
-CP14WoodenClosetGuardFilled: null
-CP14WoodenClosetGuardCommanderFilled: null
+CE14WoodenClosetGuardFilled: null
+CE14WoodenClosetGuardCommanderFilled: null
 
 #2025-13-07
-CP14Plate: CP14PlateWooden
-CP14FoodPieApple: null
-CP14FoodPieAppleRaw: null
-CP14FoodPieFish: null
-CP14FoodPieFishRaw: null
-CP14FoodPieMeat: null
-CP14FoodPieMeatRaw: null
+CE14Plate: CE14PlateWooden
+CE14FoodPieApple: null
+CE14FoodPieAppleRaw: null
+CE14FoodPieFish: null
+CE14FoodPieFishRaw: null
+CE14FoodPieMeat: null
+CE14FoodPieMeatRaw: null
 
 # 2025-07-20
-CP14ClothingBackpackLeather: CP14ClothingBackBackpackT1
-CP14ClothingSatchelLeather:  CP14ClothingBackSatchelT1
-CP14ClothingBlueCollarDress:  CP14ClothingShirtBlueCollarDress
-CP14ClothingBlueOpenDress:  CP14ClothingShirtBlueOpenDress
-CP14ClothingRedOpenDress:  CP14ClothingShirtRedOpenDress
-CP14ClothingYellowOpenDress:  CP14ClothingShirtYellowOpenDress
-CP14ClothingCottonRedDress:  CP14ClothingShirtCottonRedDress
-CP14ClothingCottonWhiteDress:  CP14ClothingShirtCottonWhiteDress
-CP14ClothingCottonWhiteCollarDress:  CP14ClothingShirtCottonWhiteCollarDress
-CP14ClothingCottonYellowCollarDress:  CP14ClothingShirtCottonYellowCollarDress
-CP14ClothingYellowWizardDress:  CP14ClothingShirtYellowWizardDress
-CP14ClothinGreenBeltDress:  CP14ClothingShirtGreenBeltDress
-CP14ClothinGreenBeltDress2:  CP14ClothingShirtGreenBeltDress2
-CP14ClothinGreenLightDress:  CP14ClothingShirtGreenLightDress
-CP14ClothingWarriorsGarbDress:  CP14ClothingShirtWarriorsGarbDress
-CP14LongLeatherBoots:  CP14ClothingShoesLongLeatherBoots
+CE14ClothingBackpackLeather: CE14ClothingBackBackpackT1
+CE14ClothingSatchelLeather:  CE14ClothingBackSatchelT1
+CE14ClothingBlueCollarDress:  CE14ClothingShirtBlueCollarDress
+CE14ClothingBlueOpenDress:  CE14ClothingShirtBlueOpenDress
+CE14ClothingRedOpenDress:  CE14ClothingShirtRedOpenDress
+CE14ClothingYellowOpenDress:  CE14ClothingShirtYellowOpenDress
+CE14ClothingCottonRedDress:  CE14ClothingShirtCottonRedDress
+CE14ClothingCottonWhiteDress:  CE14ClothingShirtCottonWhiteDress
+CE14ClothingCottonWhiteCollarDress:  CE14ClothingShirtCottonWhiteCollarDress
+CE14ClothingCottonYellowCollarDress:  CE14ClothingShirtCottonYellowCollarDress
+CE14ClothingYellowWizardDress:  CE14ClothingShirtYellowWizardDress
+CE14ClothinGreenBeltDress:  CE14ClothingShirtGreenBeltDress
+CE14ClothinGreenBeltDress2:  CE14ClothingShirtGreenBeltDress2
+CE14ClothinGreenLightDress:  CE14ClothingShirtGreenLightDress
+CE14ClothingWarriorsGarbDress:  CE14ClothingShirtWarriorsGarbDress
+CE14LongLeatherBoots:  CE14ClothingShoesLongLeatherBoots
 
 #2025-07-27
-CP14ClothingOuterClothingCopperArmor: null
-CP14DemiplanEnterRoomMarker: null
+CE14ClothingOuterClothingCopperArmor: null
+CE14DemiplanEnterRoomMarker: null
 
-CP14CandleRed: CP14Candle
-CP14CandleBlue: CP14Candle
-CP14CandleBlack: CP14Candle
-CP14CandleGreen: CP14Candle
-CP14CandlePurple: CP14Candle
-CP14CandleSmall: CP14Candle
-CP14CandleRedSmall: CP14Candle
-CP14CandleBlueSmall: CP14Candle
-CP14CandleBlackSmall: CP14Candle
-CP14CandleGreenSmall: CP14Candle
-CP14CandlePurpleSmall: CP14Candle
+CE14CandleRed: CE14Candle
+CE14CandleBlue: CE14Candle
+CE14CandleBlack: CE14Candle
+CE14CandleGreen: CE14Candle
+CE14CandlePurple: CE14Candle
+CE14CandleSmall: CE14Candle
+CE14CandleRedSmall: CE14Candle
+CE14CandleBlueSmall: CE14Candle
+CE14CandleBlackSmall: CE14Candle
+CE14CandleGreenSmall: CE14Candle
+CE14CandlePurpleSmall: CE14Candle
 
-CP14CandleInfinite: CP14CandleIgnited
-CP14CandleRedInfinite: CP14CandleIgnited
-CP14CandleBlueInfinite: CP14CandleIgnited
-CP14CandleBlackInfinite: CP14CandleIgnited
-CP14CandleGreenInfinite: CP14CandleIgnited
-CP14CandlePurpleInfinite: CP14CandleIgnited
-CP14CandleRedSmallInfinite: CP14CandleIgnited
-CP14CandleBlueSmallInfinite: CP14CandleIgnited
-CP14CandleBlackSmallInfinite: CP14CandleIgnited
-CP14CandleGreenSmallInfinite: CP14CandleIgnited
-CP14CandlePurpleSmallInfinite: CP14CandleIgnited
+CE14CandleInfinite: CE14CandleIgnited
+CE14CandleRedInfinite: CE14CandleIgnited
+CE14CandleBlueInfinite: CE14CandleIgnited
+CE14CandleBlackInfinite: CE14CandleIgnited
+CE14CandleGreenInfinite: CE14CandleIgnited
+CE14CandlePurpleInfinite: CE14CandleIgnited
+CE14CandleRedSmallInfinite: CE14CandleIgnited
+CE14CandleBlueSmallInfinite: CE14CandleIgnited
+CE14CandleBlackSmallInfinite: CE14CandleIgnited
+CE14CandleGreenSmallInfinite: CE14CandleIgnited
+CE14CandlePurpleSmallInfinite: CE14CandleIgnited
 
 #2025-07-28
-CP14ClothingBackLeatherBackpack: CP14ClothingBackBackpackT1
-CP14ClothingBackLeatherSatchel:  CP14ClothingBackSatchelT1
+CE14ClothingBackLeatherBackpack: CE14ClothingBackBackpackT1
+CE14ClothingBackLeatherSatchel:  CE14ClothingBackSatchelT1
 
 #2025-08-01
-CP14SpellScrollResurrection: null
+CE14SpellScrollResurrection: null
 
 #2025-08-02
-CP14SpellScrollDemiplaneInfiltration: null
-CP14DemiplaneEntryPointMarker: null
-CP14SpellScrollMonolithWarp: null
-CP14GuidebookDemiplanes: null
-CP14DemiplanePassway: null
-CP14DemiplaneCore: null
-CP14SpawnerLocationConnection: null
-CP14LocationPassway: null
+CE14SpellScrollDemiplaneInfiltration: null
+CE14DemiplaneEntryPointMarker: null
+CE14SpellScrollMonolithWarp: null
+CE14GuidebookDemiplanes: null
+CE14DemiplanePassway: null
+CE14DemiplaneCore: null
+CE14SpawnerLocationConnection: null
+CE14LocationPassway: null
 
 #2025-08-27
-CP14ModularBladeBoneSword: CP14CopperCoin1
-CP14ModularBladeCopperSickle: CP14CopperCoin1
-CP14ModularBladeIronAxe: CP14CopperCoin1
-CP14ModularBladeIronMace: CP14CopperCoin1
-CP14ModularBladeIronRapier: CP14CopperCoin1
-CP14ModularBladeIronSickle: CP14CopperCoin1
-CP14ModularBladeIronShovel: CP14CopperCoin1
-CP14ModularBladeIronPickaxe: CP14CopperCoin1
-CP14ModularBladeMithrilDagger: CP14CopperCoin1
-CP14ModularGardeSharpCopper: CP14CopperCoin1
-CP14ModularGardeSharpIron: CP14CopperCoin1
-CP14ModularGardeSharpMithril: CP14CopperCoin1
-CP14ModularGardeSturdyGold: CP14CopperCoin1
-CP14ModularGripCopper: CP14CopperCoin1
-CP14ModularGripIron: CP14CopperCoin1
-CP14ModularGripIronLong: CP14CopperCoin1
-CP14ModularGripIronLongGuard: CP14CopperCoin1
-CP14ModularGripMithril: CP14CopperCoin1
-CP14ModularGripWoodenLong: CP14CopperCoin1
-CP14ModularGuardHalberd: CP14CopperCoin1
-CP14ModularInlayQuartzDarkness: CP14CopperCoin1
-CP14ModularInlayQuartzElectric: CP14CopperCoin1
-CP14ModularInlayQuartzFire: CP14CopperCoin1
-CP14ModularInlayQuartzHealing: CP14CopperCoin1
-CP14ModularInlayQuartzLight: CP14CopperCoin1
-CP14ModularInlayQuartzWater: CP14CopperCoin1
-CP14ModularTipGoldArrow: CP14CopperCoin1
-CP14ModularTipIronArrow: CP14CopperCoin1
-CP14ModularRodLucens: CP14CopperCoin1
-CP14ModularRodWooden: CP14CopperCoin1
+CE14ModularBladeBoneSword: CE14CopperCoin1
+CE14ModularBladeCopperSickle: CE14CopperCoin1
+CE14ModularBladeIronAxe: CE14CopperCoin1
+CE14ModularBladeIronMace: CE14CopperCoin1
+CE14ModularBladeIronRapier: CE14CopperCoin1
+CE14ModularBladeIronSickle: CE14CopperCoin1
+CE14ModularBladeIronShovel: CE14CopperCoin1
+CE14ModularBladeIronPickaxe: CE14CopperCoin1
+CE14ModularBladeMithrilDagger: CE14CopperCoin1
+CE14ModularGardeSharpCopper: CE14CopperCoin1
+CE14ModularGardeSharpIron: CE14CopperCoin1
+CE14ModularGardeSharpMithril: CE14CopperCoin1
+CE14ModularGardeSturdyGold: CE14CopperCoin1
+CE14ModularGripCopper: CE14CopperCoin1
+CE14ModularGripIron: CE14CopperCoin1
+CE14ModularGripIronLong: CE14CopperCoin1
+CE14ModularGripIronLongGuard: CE14CopperCoin1
+CE14ModularGripMithril: CE14CopperCoin1
+CE14ModularGripWoodenLong: CE14CopperCoin1
+CE14ModularGuardHalberd: CE14CopperCoin1
+CE14ModularInlayQuartzDarkness: CE14CopperCoin1
+CE14ModularInlayQuartzElectric: CE14CopperCoin1
+CE14ModularInlayQuartzFire: CE14CopperCoin1
+CE14ModularInlayQuartzHealing: CE14CopperCoin1
+CE14ModularInlayQuartzLight: CE14CopperCoin1
+CE14ModularInlayQuartzWater: CE14CopperCoin1
+CE14ModularTipGoldArrow: CE14CopperCoin1
+CE14ModularTipIronArrow: CE14CopperCoin1
+CE14ModularRodLucens: CE14CopperCoin1
+CE14ModularRodWooden: CE14CopperCoin1
 
-CP14ModularIronAxe: CP14WeaponWarAxeIron
-CP14ModularIronDagger: CP14WeaponDaggerIron
-CP14ModularIronHammer: CP14WeaponHammerIron
-CP14ModularIronKunai: CP14WeaponDaggerHatchet
-CP14ModularIronMace: CP14CopperCoin1
-CP14ModularIronPickaxe: CP14WeaponPickaxeIron
-CP14ModularIronShovel: CP14WeaponShovelIron
-CP14ModularIronSickle: CP14WeaponDaggerSickle
-CP14ModularIronSpear: CP14WeaponSpearIron
-CP14ModularIronSword: CP14WeaponSwordIron
-CP14ModularSkeletonHalberd: CP14WeaponTwoHandedSwordIron
-CP14ModularWoodMop: CP14Mop
-CP14ModularIronHoe: CP14WeaponFork
-CP14ModularIronArrow: CP14Arrow
-CP14ModularCopperArrow: CP14Arrow
-CP14ModularCopperSkimitar: CP14WeaponSkimitarIron
-CP14BaseShield: CP14WeaponShieldWooden
+CE14ModularIronAxe: CE14WeaponWarAxeIron
+CE14ModularIronDagger: CE14WeaponDaggerIron
+CE14ModularIronHammer: CE14WeaponHammerIron
+CE14ModularIronKunai: CE14WeaponDaggerHatchet
+CE14ModularIronMace: CE14CopperCoin1
+CE14ModularIronPickaxe: CE14WeaponPickaxeIron
+CE14ModularIronShovel: CE14WeaponShovelIron
+CE14ModularIronSickle: CE14WeaponDaggerSickle
+CE14ModularIronSpear: CE14WeaponSpearIron
+CE14ModularIronSword: CE14WeaponSwordIron
+CE14ModularSkeletonHalberd: CE14WeaponTwoHandedSwordIron
+CE14ModularWoodMop: CE14Mop
+CE14ModularIronHoe: CE14WeaponFork
+CE14ModularIronArrow: CE14Arrow
+CE14ModularCopperArrow: CE14Arrow
+CE14ModularCopperSkimitar: CE14WeaponSkimitarIron
+CE14BaseShield: CE14WeaponShieldWooden
 
-CP14ClothingBeltQuiverMithrilArrow: CP14ClothingBeltQuiverArrows
-CP14ClothingBeltQuiverCopperArrow: CP14ClothingBeltQuiverArrows
-CP14ClothingBeltQuiverIronArrow: CP14ClothingBeltQuiverArrows
-CP14ArmorIronCuirass: null
+CE14ClothingBeltQuiverMithrilArrow: CE14ClothingBeltQuiverArrows
+CE14ClothingBeltQuiverCopperArrow: CE14ClothingBeltQuiverArrows
+CE14ClothingBeltQuiverIronArrow: CE14ClothingBeltQuiverArrows
+CE14ArmorIronCuirass: null
 
 # 2025-09-07
-CP14WallmountOrdersBorder: null
-CP14FenceGateBigIronDemiplaneCrystal: CP14FenceGateBigIron
-CP14FenceGateBigIronGuildmaster: CP14FenceGateBigIron
+CE14WallmountOrdersBorder: null
+CE14FenceGateBigIronDemiplaneCrystal: CE14FenceGateBigIron
+CE14FenceGateBigIronGuildmaster: CE14FenceGateBigIron
 
-CP14BowlWoodenRandom: CP14BowlWooden
-CP14PlateWoodenRandom: CP14PlateWooden
-CP14PlatePieRandom: CP14PlatePie
+CE14BowlWoodenRandom: CE14BowlWooden
+CE14PlateWoodenRandom: CE14PlateWooden
+CE14PlatePieRandom: CE14PlatePie
 
 # <---> CrystallEdge migration zone end
 

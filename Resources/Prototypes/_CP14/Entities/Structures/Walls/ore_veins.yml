@@ -1,14 +1,14 @@
 
 - type: entity
-  id: CP14WallStoneCopperOre
+  id: CE14WallStoneCopperOre
   suffix: copper ore
-  parent: CP14WallStone
+  parent: CE14WallStone
   description: A solid stone natural wall. You can see the sharp flecks of copper in it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_copper.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_copper.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_copper.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_copper.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -28,22 +28,22 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14OreCopper1:
+          CE14OreCopper1:
             min: 4
             max: 7
       - !type:DoActsBehavior
         acts: ["Destruction"]
 
 - type: entity
-  id: CP14WallStoneIronOre
+  id: CE14WallStoneIronOre
   suffix: iron ore
-  parent: CP14WallStone
+  parent: CE14WallStone
   description: A solid stone natural wall. You can see the sharp flecks of iron in it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_iron.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_iron.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_iron.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_iron.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -63,23 +63,23 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14OreIron1:
+          CE14OreIron1:
             min: 4
             max: 6
       - !type:DoActsBehavior
         acts: ["Destruction"]
 
 - type: entity
-  id: CP14WallStoneGoldOre
+  id: CE14WallStoneGoldOre
   suffix: gold ore
-  parent: CP14WallStone
+  parent: CE14WallStone
   categories: [ DoNotMap ]
   description: A solid stone natural wall. You see the tantalizing particles of gold in it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_gold.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_gold.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_gold.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_gold.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -99,7 +99,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14OreGold1:
+          CE14OreGold1:
             min: 3
             max: 6
       - !type:DoActsBehavior
@@ -110,16 +110,16 @@
     price: 100
 
 - type: entity
-  id: CP14WallStoneMithrilOre
+  id: CE14WallStoneMithrilOre
   suffix: mithril ore
-  parent: CP14WallStone
+  parent: CE14WallStone
   categories: [ DoNotMap ]
   description: A solid stone natural wall. You see the tantalizing particles of mithril in it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_mithril.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_mithril.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_mithril.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_mithril.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -139,7 +139,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14OreMithril1:
+          CE14OreMithril1:
             min: 3
             max: 6
       - !type:DoActsBehavior
@@ -148,15 +148,15 @@
     base: wall
 
 - type: entity
-  id: CP14WallStoneCoalOre
+  id: CE14WallStoneCoalOre
   suffix: coal ore
-  parent: CP14WallStone
+  parent: CE14WallStone
   description: A solid stone natural wall. You see the tantalizing particles of coal in it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_coal.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_coal.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_coal.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_coal.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -176,7 +176,7 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14OreCoal1:
+          CE14OreCoal1:
             min: 3
             max: 5
       - !type:DoActsBehavior

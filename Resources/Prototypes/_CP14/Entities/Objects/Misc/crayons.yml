@@ -1,13 +1,13 @@
 - type: entity
   abstract: true
   parent: BaseItem
-  id: CP14Crayon
+  id: CE14Crayon
   name: crayon
   description: A colourful crayon.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Thaumaturgy/crayon.rsi
+    sprite: _CE14/Objects/Specific/Thaumaturgy/crayon.rsi
     layers:
     - state: handle
     - state: crayon
@@ -26,8 +26,8 @@
     capacity: 15
 
 - type: entity
-  parent: CP14Crayon
-  id: CP14CrayonWhite
+  parent: CE14Crayon
+  id: CE14CrayonWhite
   name: white crayon
   components:
   - type: Sprite
@@ -51,8 +51,8 @@
     price: 4
 
 - type: entity
-  parent: CP14Crayon
-  id: CP14CrayonRainbow
+  parent: CE14Crayon
+  id: CE14CrayonRainbow
   name: magic rainbow crayon
   categories: [ DoNotMap ]
   suffix: Artifact
@@ -88,8 +88,8 @@
     price: 200
 
 - type: entity
-  parent: CP14Crayon
-  id: CP14CrayonBlack
+  parent: CE14Crayon
+  id: CE14CrayonBlack
   name: black crayon
   components:
   - type: Sprite
@@ -111,8 +111,8 @@
     color: black
 
 - type: entity
-  parent: CP14Crayon
-  id: CP14CrayonRed
+  parent: CE14Crayon
+  id: CE14CrayonRed
   name: red crayon
   components:
   - type: Sprite
@@ -136,8 +136,8 @@
     price: 8
 
 - type: entity
-  parent: CP14Crayon
-  id: CP14CrayonYellow
+  parent: CE14Crayon
+  id: CE14CrayonYellow
   name: yellow crayon
   components:
   - type: Sprite
@@ -161,8 +161,8 @@
     price: 7.5
 
 - type: entity
-  parent: CP14Crayon
-  id: CP14CrayonGreen
+  parent: CE14Crayon
+  id: CE14CrayonGreen
   name: green crayon
   components:
   - type: Sprite
@@ -186,8 +186,8 @@
     price: 11
 
 - type: entity
-  parent: CP14Crayon
-  id: CP14CrayonBlue
+  parent: CE14Crayon
+  id: CE14CrayonBlue
   name: blue crayon
   components:
   - type: Sprite
@@ -211,8 +211,8 @@
     price: 12.6
 
 - type: entity
-  parent: CP14Crayon
-  id: CP14CrayonPurple
+  parent: CE14Crayon
+  id: CE14CrayonPurple
   name: purple crayon
   components:
   - type: Sprite

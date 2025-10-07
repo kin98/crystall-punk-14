@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server._CP14.GameTicking.Rules.Components;
+using Content.Server._CE14.GameTicking.Rules.Components;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Shuttles.Events;
 using Content.Server.Station.Components;
@@ -10,9 +10,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.GameTicking.Rules;
+namespace Content.Server._CE14.GameTicking.Rules;
 
-public sealed class CP14CrashingShipRule : GameRuleSystem<CP14CrashingShipRuleComponent>
+public sealed class CE14CrashingShipRule : GameRuleSystem<CE14CrashingShipRuleComponent>
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
@@ -23,9 +23,9 @@ public sealed class CP14CrashingShipRule : GameRuleSystem<CP14CrashingShipRuleCo
     public override void Initialize()
     {
         base.Initialize();
-        _sawmill = _logManager.GetSawmill("cp14_crashing_ship_rule");
+        _sawmill = _logManager.GetSawmill("CE14_crashing_ship_rule");
 
-        SubscribeLocalEvent<CP14CrashingShipComponent, FTLCompletedEvent>(OnFTLCompleted);
+        SubscribeLocalEvent<CE14CrashingShipComponent, FTLCompletedEvent>(OnFTLCompleted);
     }
 
     public override void Update(float frameTime)
@@ -36,7 +36,7 @@ public sealed class CP14CrashingShipRule : GameRuleSystem<CP14CrashingShipRuleCo
     }
 
     protected override void Started(EntityUid uid,
-        CP14CrashingShipRuleComponent component,
+        CE14CrashingShipRuleComponent component,
         GameRuleComponent gameRule,
         GameRuleStartedEvent args)
     {
@@ -56,15 +56,15 @@ public sealed class CP14CrashingShipRule : GameRuleSystem<CP14CrashingShipRuleCo
         component.Ship = largestStationGrid.Value;
     }
 
-    private void OnFTLCompleted(Entity<CP14CrashingShipComponent> ent, ref FTLCompletedEvent args)
+    private void OnFTLCompleted(Entity<CE14CrashingShipComponent> ent, ref FTLCompletedEvent args)
     {
         SpawnRandomExplosion(ent, ent.Comp.FinalExplosionProto, 10);
-        RemCompDeferred<CP14CrashingShipComponent>(ent);
+        RemCompDeferred<CE14CrashingShipComponent>(ent);
     }
 
     private void UpdateExplosions(float frameTime)
     {
-        var ruleQuery = EntityQueryEnumerator<CP14CrashingShipRuleComponent>();
+        var ruleQuery = EntityQueryEnumerator<CE14CrashingShipRuleComponent>();
         while (ruleQuery.MoveNext(out var uid, out var rule))
         {
             if (!rule.PendingExplosions)
@@ -76,11 +76,11 @@ public sealed class CP14CrashingShipRule : GameRuleSystem<CP14CrashingShipRuleCo
             if (rule.Ship is null)
                 continue;
 
-            AddComp<CP14CrashingShipComponent>(rule.Ship.Value);
+            AddComp<CE14CrashingShipComponent>(rule.Ship.Value);
             rule.PendingExplosions = false;
         }
 
-        var query = EntityQueryEnumerator<CP14CrashingShipComponent>();
+        var query = EntityQueryEnumerator<CE14CrashingShipComponent>();
         while (query.MoveNext(out var uid, out var ship))
         {
             if (_timing.CurTime < ship.NextExplosionTime)
@@ -92,7 +92,7 @@ public sealed class CP14CrashingShipRule : GameRuleSystem<CP14CrashingShipRuleCo
     }
 
 
-    private void SpawnRandomExplosion(Entity<CP14CrashingShipComponent> grid, EntProtoId explosionProto, int count)
+    private void SpawnRandomExplosion(Entity<CE14CrashingShipComponent> grid, EntProtoId explosionProto, int count)
     {
         var station = _station.GetOwningStation(grid);
 

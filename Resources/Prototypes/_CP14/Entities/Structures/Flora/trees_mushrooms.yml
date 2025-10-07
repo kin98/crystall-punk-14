@@ -1,11 +1,11 @@
 - type: entity
-  parent: CP14BaseTree
-  id: CP14MushroomTree1
+  parent: CE14BaseTree
+  id: CE14MushroomTree1
   name: giant mushroom
   description: Have you ever heard how infected mushrooms sound?
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Flora/tree_mushroom.rsi
+    sprite: _CE14/Structures/Flora/tree_mushroom.rsi
     offset: 0,0.9
     layers:
     - state: 1_log
@@ -17,8 +17,8 @@
         1_hat: ScurretColors
 
 - type: entity
-  parent: CP14MushroomTree1
-  id: CP14MushroomTree2
+  parent: CE14MushroomTree1
+  id: CE14MushroomTree2
   components:
   - type: Sprite
     layers:
@@ -31,8 +31,8 @@
         2_hat: ScurretColors
 
 - type: entity
-  parent: CP14MushroomTree1
-  id: CP14MushroomTree3
+  parent: CE14MushroomTree1
+  id: CE14MushroomTree3
   components:
   - type: Sprite
     layers:
@@ -45,8 +45,8 @@
         3_hat: ScurretColors
 
 - type: entity
-  parent: CP14MushroomTree1
-  id: CP14MushroomTree4
+  parent: CE14MushroomTree1
+  id: CE14MushroomTree4
   components:
   - type: Sprite
     layers:
@@ -59,8 +59,8 @@
         4_hat: ScurretColors
 
 - type: entity
-  parent: CP14MushroomTree1
-  id: CP14MushroomTree1Glowing
+  parent: CE14MushroomTree1
+  id: CE14MushroomTree1Glowing
   name: giant glowing mushroom
   components:
   - type: Sprite
@@ -79,8 +79,8 @@
     radius: 3.5
 
 - type: entity
-  parent: CP14MushroomTree1Glowing
-  id: CP14MushroomTree2Glowing
+  parent: CE14MushroomTree1Glowing
+  id: CE14MushroomTree2Glowing
   components:
   - type: Sprite
     layers:
@@ -95,8 +95,8 @@
         2_log: ""
 
 - type: entity
-  parent: CP14MushroomTree1Glowing
-  id: CP14MushroomTree3Glowing
+  parent: CE14MushroomTree1Glowing
+  id: CE14MushroomTree3Glowing
   components:
   - type: Sprite
     layers:
@@ -111,8 +111,8 @@
         3_log: ""
 
 - type: entity
-  parent: CP14MushroomTree1Glowing
-  id: CP14MushroomTree4Glowing
+  parent: CE14MushroomTree1Glowing
+  id: CE14MushroomTree4Glowing
   components:
   - type: Sprite
     layers:

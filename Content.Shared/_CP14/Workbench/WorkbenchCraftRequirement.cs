@@ -7,11 +7,11 @@ using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Workbench;
+namespace Content.Shared._CE14.Workbench;
 
 [ImplicitDataDefinitionForInheritors]
 [MeansImplicitUse]
-public abstract partial class CP14WorkbenchCraftRequirement
+public abstract partial class CE14WorkbenchCraftRequirement
 {
     /// <summary>
     /// Here a check is made that the recipe as a whole can be fulfilled at the current moment. Do not add anything that affects gameplay here, and only perform checks here.

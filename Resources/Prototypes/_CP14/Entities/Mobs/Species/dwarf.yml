@@ -1,67 +1,67 @@
 - type: entity
-  parent: CP14BaseMobSpeciesOrganic
-  id: CP14BaseMobDwarf
+  parent: CE14BaseMobSpeciesOrganic
+  id: CE14BaseMobDwarf
   name: Mr. Dwarf
   abstract: true
   components:
   - type: HumanoidAppearance
-    species: CP14Dwarf
+    species: CE14Dwarf
   - type: Icon
-    sprite: _CP14/Mobs/Species/Dwarf/parts.rsi
+    sprite: _CE14/Mobs/Species/Dwarf/parts.rsi
     state: full
-  - type: CP14AuraImprint
+  - type: CE14AuraImprint
     imprintColor: "#91898d"
   - type: Body
-    prototype: CP14Dwarf
+    prototype: CE14Dwarf
     requiredLegs: 2
   - type: Inventory
-    templateId: CP14Human
+    templateId: CE14Human
     displacements:
       shoes:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Dwarf/displacement.rsi
+            sprite: _CE14/Mobs/Species/Dwarf/displacement.rsi
             state: shoes
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Dwarf/displacement.rsi
+            sprite: _CE14/Mobs/Species/Dwarf/displacement.rsi
             state: pants
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: male_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: male_neck
 
 - type: entity
-  parent: CP14BaseSpeciesDummy
-  id: CP14MobDwarfDummy
+  parent: CE14BaseSpeciesDummy
+  id: CE14MobDwarfDummy
   categories: [ HideSpawnMenu ]
   components:
   - type: HumanoidAppearance
-    species: CP14Dwarf
+    species: CE14Dwarf
   - type: Inventory
-    templateId: CP14Human
+    templateId: CE14Human
     displacements:
       shoes:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Dwarf/displacement.rsi
+            sprite: _CE14/Mobs/Species/Dwarf/displacement.rsi
             state: shoes
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Dwarf/displacement.rsi
+            sprite: _CE14/Mobs/Species/Dwarf/displacement.rsi
             state: pants
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: male_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: male_neck
 

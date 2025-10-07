@@ -1,5 +1,5 @@
-using Content.Server._CP14.GameTicking.Rules.Components;
-using Content.Server._CP14.WeatherControl;
+using Content.Server._CE14.GameTicking.Rules.Components;
+using Content.Server._CE14.WeatherControl;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
@@ -11,16 +11,16 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.GameTicking.Rules;
+namespace Content.Server._CE14.GameTicking.Rules;
 
-public sealed class CP14WeatherRule : StationEventSystem<CP14WeatherRuleComponent>
+public sealed class CE14WeatherRule : StationEventSystem<CE14WeatherRuleComponent>
 {
     [Dependency] private readonly WeatherSystem _weather = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
-    protected override void Started(EntityUid uid, CP14WeatherRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
+    protected override void Started(EntityUid uid, CE14WeatherRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
         base.Started(uid, component, gameRule, args);
 
@@ -30,7 +30,7 @@ public sealed class CP14WeatherRule : StationEventSystem<CP14WeatherRuleComponen
             if (!_proto.TryIndex(component.Weather, out var indexedWeather))
                 continue;
 
-            if (TryComp<CP14WeatherControllerComponent>(mapUid, out var controller))
+            if (TryComp<CE14WeatherControllerComponent>(mapUid, out var controller))
             {
                 controller.Enabled = false;
             }
@@ -39,14 +39,14 @@ public sealed class CP14WeatherRule : StationEventSystem<CP14WeatherRuleComponen
         }
     }
 
-    protected override void Ended(EntityUid uid, CP14WeatherRuleComponent component, GameRuleComponent gameRule, GameRuleEndedEvent args)
+    protected override void Ended(EntityUid uid, CE14WeatherRuleComponent component, GameRuleComponent gameRule, GameRuleEndedEvent args)
     {
         base.Ended(uid, component, gameRule, args);
 
         var query = EntityQueryEnumerator<MapComponent, BecomesStationComponent>();
         while (query.MoveNext(out var mapUid, out var map, out var station))
         {
-            if (TryComp<CP14WeatherControllerComponent>(mapUid, out var controller))
+            if (TryComp<CE14WeatherControllerComponent>(mapUid, out var controller))
             {
                 controller.NextWeatherTime = _timing.CurTime;
                 controller.Enabled = true;

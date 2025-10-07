@@ -24,7 +24,7 @@ namespace Content.Shared.Chemistry.Reaction
         /// <summary>
         ///     The maximum number of reactions that may occur when a solution is changed.
         /// </summary>
-        private const int MaxReactionIterations = 50; //20 standard, CP14 increase limit
+        private const int MaxReactionIterations = 50; //20 standard, CE14 increase limit
 
         [Dependency] private readonly INetManager _netMan = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -205,7 +205,7 @@ namespace Content.Shared.Chemistry.Reaction
 
         private void OnReaction(Entity<SolutionComponent> soln, ReactionPrototype reaction, ReagentPrototype? reagent, FixedPoint2 unitReactions)
         {
-            var args = new EntityEffectReagentArgs(soln, EntityManager, null, soln.Comp.Solution, unitReactions, reagent, null, 1f, soln); //CP14 soln add
+            var args = new EntityEffectReagentArgs(soln, EntityManager, null, soln.Comp.Solution, unitReactions, reagent, null, 1f, soln); //CE14 soln add
 
             var posFound = _transformSystem.TryGetMapOrGridCoordinates(soln, out var gridPos);
 

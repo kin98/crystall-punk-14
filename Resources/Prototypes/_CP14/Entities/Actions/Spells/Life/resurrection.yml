@@ -1,24 +1,24 @@
 - type: entity
-  id: CP14ActionSpellResurrection
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellResurrection
+  parent: CE14ActionSpellBase
   name: Resurrection
   description: You're trying to put the soul back into the body.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.2
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 100
-  - type: CP14ActionTargetMobStatusRequired
+  - type: CE14ActionTargetMobStatusRequired
     allowedStates:
     - Dead
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Redi animam meam..."
     endSpeech: "Eu rezei por ti"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneResurrection
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneResurrection
   - type: Action
     icon:
-      sprite: _CP14/Actions/Spells/healing.rsi
+      sprite: _CE14/Actions/Spells/healing.rsi
       state: resurrection
   - type: TargetAction
     range: 7
@@ -31,17 +31,17 @@
     whitelist:
       components:
       - MobState
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectResurrection
+        - CE14ImpactEffectResurrection
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectResurrection
-      - !type:CP14SpellResurrectionEffect
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectResurrection
+      - !type:CE14SpellResurrectionEffect
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:ChemVomit
           probability: 0.25
@@ -57,8 +57,8 @@
         - !type:Jitter
 
 - type: entity
-  id: CP14RuneResurrection
-  parent: CP14BaseMagicRune
+  id: CE14RuneResurrection
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -74,8 +74,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectResurrection
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectResurrection
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -86,13 +86,13 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14BaseSpellScrollHealing
-  id: CP14SpellScrollResurrection
+  parent: CE14BaseSpellScrollHealing
+  id: CE14SpellScrollResurrection
   name: resurrection spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellResurrection
+    - CE14ActionSpellResurrection
   - type: StaticPrice
     price: 17
 

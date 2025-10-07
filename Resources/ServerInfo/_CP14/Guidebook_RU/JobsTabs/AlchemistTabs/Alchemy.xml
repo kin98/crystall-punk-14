@@ -8,23 +8,23 @@
   В мире можно найти большое количество "сырых" веществ. Соки растений, кровь живых существ, или даже раздробленные кристаллы. Грамотный алхимик может преобразовать эти, для большинства людей, бесполезные предметы, в нечто ценное.
 
   <Box>
-    <GuideEntityEmbed Entity="CP14BlueAmanita"/>
-    <GuideEntityEmbed Entity="CP14AgaricMushroom"/>
-    <GuideEntityEmbed Entity="CP14Dayflin"/>
-    <GuideEntityEmbed Entity="CP14ChromiumSlime"/>
+    <GuideEntityEmbed Entity="CE14BlueAmanita"/>
+    <GuideEntityEmbed Entity="CE14AgaricMushroom"/>
+    <GuideEntityEmbed Entity="CE14Dayflin"/>
+    <GuideEntityEmbed Entity="CE14ChromiumSlime"/>
   </Box>
   <Box>
-    <GuideEntityEmbed Entity="CP14WildSage"/>
-    <GuideEntityEmbed Entity="CP14AirLily"/>
-    <GuideEntityEmbed Entity="CP14LumiMushroom"/>
-    <GuideEntityEmbed Entity="CP14BloodFlower"/>
+    <GuideEntityEmbed Entity="CE14WildSage"/>
+    <GuideEntityEmbed Entity="CE14AirLily"/>
+    <GuideEntityEmbed Entity="CE14LumiMushroom"/>
+    <GuideEntityEmbed Entity="CE14BloodFlower"/>
   </Box>
 
   Большая часть таких "сырых" ингредиентов может быть сначала измельчена при помощи пестика и ступки:
 
   <Box>
-    <GuideEntityEmbed Entity="CP14Mortar"/>
-    <GuideEntityEmbed Entity="CP14Pestle"/>
+    <GuideEntityEmbed Entity="CE14Mortar"/>
+    <GuideEntityEmbed Entity="CE14Pestle"/>
   </Box>
 
   Положив сырые вещества внутрь ступки, вам нужно тщательно измельчить их, часто кликая пестиком. Постепенно все предметы исчезнут, и в ступке останется жидкость, которую вы можете перелить куда вам нужно.
@@ -32,7 +32,7 @@
   Чтобы изучить, что за жидкости находятся в емкостях, вы можете использовать специальные алхимические очки, доступные только для роли "Алхимик".
 
   <Box>
-    <GuideEntityEmbed Entity="CP14ClothingEyesAlchemyGlasses"/>
+    <GuideEntityEmbed Entity="CE14ClothingEyesAlchemyGlasses"/>
   </Box>
 
   Также в вашей науке вам могут помочь следующие инструменты:
@@ -42,34 +42,34 @@
   - Большой чан. Огромная емкость, вмещающая 500u, которую можно нагревать на костре. Поможет для производства веществ в промышленных масштабах.
   - Алхимическая печь. Печь, работающая на древесном топливе, позволяющая нагревать ваши растворы.
   - Мана-перчатка. Несложная, но эстетически приятная смесь технологии и магических кристаллов, позволяющая оперировать сырой маной: высасывать ее из одних предметов и вливать в другие. Крайне важной функцией перчатки для алхимика является [color=#5EABEB]Магическое расщепление[/color]. Позволяет расщеплять раствор на его составные части. Для использования выберите в панели действий [color=#5EABEB]Магическое расщепление[/color] и нажмите на емкость с раствором.
-  <GuideEntityEmbed Entity="CP14ActionSpellMagicSplitting"/>
+  <GuideEntityEmbed Entity="CE14ActionSpellMagicSplitting"/>
   - Очиститель растворов. Технологичное устройство, убирающее из раствора реагент, которого в нем меньше всего. Требуется энергокристалл для работы.
   - Алхимическая бомба. Сосуд, который вмещает 10u. Будучи наполненным любым реагентом и брошенным на землю, создаст алхимическое облако, которое будет применять на всех существ все реагенты зелья.
   - Тауматургические очки. Очки, позволяющие сканировать предметы и видеть эссенции в них.
   - Сборщик эссенций. Запитанный от энергетического кристалла, он начнет всасывать всю парящую в воздухе эссенцию и преобразовывать ее в полезную жидкость.
 
   <Box>
-    <GuideEntityEmbed Entity="CP14Dropper"/>
-    <GuideEntityEmbed Entity="CP14VialTiny"/>
-    <GuideEntityEmbed Entity="CP14VialSmall"/>
-    <GuideEntityEmbed Entity="CP14VialMedium"/>
+    <GuideEntityEmbed Entity="CE14Dropper"/>
+    <GuideEntityEmbed Entity="CE14VialTiny"/>
+    <GuideEntityEmbed Entity="CE14VialSmall"/>
+    <GuideEntityEmbed Entity="CE14VialMedium"/>
   </Box>
 
   <Box>
-    <GuideEntityEmbed Entity="CP14Cauldron"/>
-    <GuideEntityEmbed Entity="CP14BaseVat"/>
-    <GuideEntityEmbed Entity="CP14Furnace"/>
+    <GuideEntityEmbed Entity="CE14Cauldron"/>
+    <GuideEntityEmbed Entity="CE14BaseVat"/>
+    <GuideEntityEmbed Entity="CE14Furnace"/>
   </Box>
 
   <Box>
-    <GuideEntityEmbed Entity="CP14ManaOperationGlove"/>
-    <GuideEntityEmbed Entity="CP14AlchemySolutionCleaner"/>
-    <GuideEntityEmbed Entity="CP14BaseAlchemyBomb"/>
+    <GuideEntityEmbed Entity="CE14ManaOperationGlove"/>
+    <GuideEntityEmbed Entity="CE14AlchemySolutionCleaner"/>
+    <GuideEntityEmbed Entity="CE14BaseAlchemyBomb"/>
   </Box>
 
   <Box>
-    <GuideEntityEmbed Entity="CP14ClothingEyesThaumaturgyGlasses"/>
-    <GuideEntityEmbed Entity="CP14EssenceCollector"/>
+    <GuideEntityEmbed Entity="CE14ClothingEyesThaumaturgyGlasses"/>
+    <GuideEntityEmbed Entity="CE14EssenceCollector"/>
   </Box>
 
   ## Красители
@@ -81,9 +81,9 @@
   - Синий краситель - 10u [color=#6bb4bf]Лазурная Аманита[/color] и 1u воды (катализатор).
 
   <Box>
-    <GuideEntityEmbed Entity="CP14DyeRed"/>
-    <GuideEntityEmbed Entity="CP14DyeYellow"/>
-    <GuideEntityEmbed Entity="CP14DyeBlue"/>
+    <GuideEntityEmbed Entity="CE14DyeRed"/>
+    <GuideEntityEmbed Entity="CE14DyeYellow"/>
+    <GuideEntityEmbed Entity="CE14DyeBlue"/>
   </Box>
 
   ## Советы
@@ -92,6 +92,6 @@
   - Просите Авантюристов о помощи. Они могут принести вам ингредиенты с демипланов или купить зелья у вас.
   - Не все примеси бесполезны. Некоторые из них могут быть использованы для создания/очистки зелий или помочь вам сэкономить деньги на реагентах, даже в малых количествах зелья могут быть очень сильными.
   - Заклинание Заморозка позволяет затушить печь, чтобы не тратить лишнее топливо.
-  <GuideEntityEmbed Entity="CP14ActionSpellFreeze"/>
+  <GuideEntityEmbed Entity="CE14ActionSpellFreeze"/>
   - Хромиевая слизь может выручить вас в трудную минуту. При нагреве её и пустого раствора, инвертирует эффекты реагентов. Это может позволить вам сделать из 200 ядовитого раствора 200 ядовыводящего раствора!
 </Document>

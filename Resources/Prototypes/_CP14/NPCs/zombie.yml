@@ -1,9 +1,9 @@
 - type: htnCompound
-  id: CP14ZombieCompound
+  id: CE14ZombieCompound
   branches:
     - tasks:
         - !type:HTNCompoundTask
-          task: CP14MeleeWeaponlessCombatCompound
+          task: CE14MeleeWeaponlessCombatCompound
     - tasks:
         - !type:HTNCompoundTask
           task: FollowCompound

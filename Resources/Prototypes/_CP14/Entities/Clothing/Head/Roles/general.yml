@@ -1,142 +1,142 @@
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadBeretMercenary
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadBeretMercenary
   name: mercenary beret
   description: A large red wool hat decorated with a feather.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/beret_mercenary.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/beret_mercenary.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/beret_mercenary.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/beret_mercenary.rsi
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
   - type: StaticPrice
     price: 12.6
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadMetalHeadband
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadMetalHeadband
   name: metall headband
   description: The odds of it protecting you from a head shot are slim to none.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/metalheadband.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/metalheadband.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/metalheadband.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/metalheadband.rsi
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadTriangularHat
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadTriangularHat
   name: triangular hat
   description: a big, pointy hat for those who like to look smart.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/triangularhat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/triangularhat.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/triangularhat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/triangularhat.rsi
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadTriangularHatGolden
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadTriangularHatGolden
   name: golden triangular hat
   description: a big, pointy hat for those who like to look smart. Decorated with a gold hoop.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/triangularhat_golden.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/triangularhat_golden.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/triangularhat_golden.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/triangularhat_golden.rsi
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadChristmasHat
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadChristmasHat
   name: christmas hat
   description: A festive red hat, nobody remembers why it is customary to wear it.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/christmas_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/christmas_hat.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/christmas_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/christmas_hat.rsi
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadHuntersHat
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadHuntersHat
   name: hunter's hat
   description: A headdress revered by hunters on undead.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/hunter_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/hunter_hat.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/hunter_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/hunter_hat.rsi
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 15
+      CE14Cloth: 15
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadGreenHuntersHat
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadGreenHuntersHat
   name: green hunter's hat
   description: A headdress revered by hunters on undead.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/green_hunter_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/green_hunter_hat.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/green_hunter_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/green_hunter_hat.rsi
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadRedHuntersHat
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadRedHuntersHat
   name: red hunter's hat
   description: A headdress revered by hunters on undead.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/red_hunter_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/red_hunter_hat.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/red_hunter_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/red_hunter_hat.rsi
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadJestersCap
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadJestersCap
   name: jester's cap
   description: You are the fun. You are noise. You are the jester.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/jesters_cap.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/jesters_cap.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/jesters_cap.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/jesters_cap.rsi
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadJagermeisterHat
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadJagermeisterHat
   name: jagermeister's hat
   description: The mark of a professional in his field.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/jagermeister_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/jagermeister_hat.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/jagermeister_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/jagermeister_hat.rsi
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadStrawHat
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadStrawHat
   name: straw hat
   description: Easy to make, not too bad to lose.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/straw_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/straw_hat.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/straw_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/straw_hat.rsi
   #- type: Construction
-  #  graph: CP14StrawHat
-  #  node: cp14headstrawhat
+  #  graph: CE14StrawHat
+  #  node: CE14headstrawhat
 
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadKasaHat
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadKasaHat
   name: farmer's hat
   description: Welcome to the rice fields, adventurer!
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/Roles/General/kasa_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/kasa_hat.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/Roles/General/kasa_hat.rsi
+    sprite: _CE14/Clothing/Head/Roles/General/kasa_hat.rsi

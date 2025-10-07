@@ -4,13 +4,13 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Farming.Components;
+namespace Content.Shared._CE14.Farming.Components;
 
 /// <summary>
 /// Means that the plant can be harvested.
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14PlantGatherableComponent : Component
+public sealed partial class CE14PlantGatherableComponent : Component
 {
     /// <summary>
     ///     Whitelist for specifying the kind of tools can be used on a resource
@@ -65,5 +65,5 @@ public sealed partial class CP14PlantGatherableComponent : Component
     /// Sound to play when gathering
     /// </summary>
     [DataField]
-    public SoundSpecifier GatherSound = new SoundCollectionSpecifier("CP14GrassGathering");
+    public SoundSpecifier GatherSound = new SoundCollectionSpecifier("CE14GrassGathering");
 }

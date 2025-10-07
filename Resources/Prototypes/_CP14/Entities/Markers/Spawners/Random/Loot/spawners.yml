@@ -1,22 +1,22 @@
 - type: entityTable
-  id: CP14TableBureaucracy
+  id: CE14TableBureaucracy
   table: !type:GroupSelector
     children:
     # Common
     - !type:GroupSelector
       weight: 75
       children:
-      - id: CP14Paper
+      - id: CE14Paper
     # Rare
     - !type:GroupSelector
       weight: 20
       children:
-      - id: CP14PaperFolderBlue
-      - id: CP14PaperFolderRed
-      - id: CP14PenFeather
+      - id: CE14PaperFolderBlue
+      - id: CE14PaperFolderRed
+      - id: CE14PenFeather
     # Very rare
     - !type:GroupSelector
       weight: 5
       children:
-      - id: CP14Inkwell
+      - id: CE14Inkwell
 

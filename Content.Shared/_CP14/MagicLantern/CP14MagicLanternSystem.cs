@@ -1,8 +1,8 @@
-using Content.Shared._CP14.MagicEnergy.Components;
+using Content.Shared._CE14.MagicEnergy.Components;
 
-namespace Content.Shared._CP14.MagicLantern;
+namespace Content.Shared._CE14.MagicLantern;
 
-public partial class CP14MagicLanternSystem : EntitySystem
+public partial class CE14MagicLanternSystem : EntitySystem
 {
 
     [Dependency] private readonly SharedPointLightSystem _pointLight = default!;
@@ -11,10 +11,10 @@ public partial class CP14MagicLanternSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14MagicLanternComponent, CP14SlotCrystalPowerChangedEvent>(OnSlotPowerChanged);
+        SubscribeLocalEvent<CE14MagicLanternComponent, CE14SlotCrystalPowerChangedEvent>(OnSlotPowerChanged);
     }
 
-    private void OnSlotPowerChanged(Entity<CP14MagicLanternComponent> ent, ref CP14SlotCrystalPowerChangedEvent args)
+    private void OnSlotPowerChanged(Entity<CE14MagicLanternComponent> ent, ref CE14SlotCrystalPowerChangedEvent args)
     {
         SharedPointLightComponent? pointLight = null;
         if (_pointLight.ResolveLight(ent, ref pointLight))

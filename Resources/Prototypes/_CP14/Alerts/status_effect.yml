@@ -1,31 +1,31 @@
 - type: alert
-  id: CP14MagicArmor
+  id: CE14MagicArmor
   icons:
-  - sprite: _CP14/Actions/Spells/meta.rsi
+  - sprite: _CE14/Actions/Spells/meta.rsi
     state: magic_armor
 
 - type: alert
-  id: CP14Glowing
+  id: CE14Glowing
   icons:
-  - sprite: _CP14/Actions/Spells/light.rsi
+  - sprite: _CE14/Actions/Spells/light.rsi
     state: sphere_of_light
 
 - type: alert
-  id: CP14VampireSleeping
+  id: CE14VampireSleeping
   icons:
-  - sprite: _CP14/Actions/Spells/vampire.rsi
+  - sprite: _CE14/Actions/Spells/vampire.rsi
     state: blood_moon
 
 - type: alert
-  id: CP14ConfusedAura
-  name: cp14-alerts-confused-aura-name
-  description: cp14-alerts-confused-aura-desc
+  id: CE14ConfusedAura
+  name: CE14-alerts-confused-aura-name
+  description: CE14-alerts-confused-aura-desc
   icons:
-  - sprite: _CP14/Actions/Spells/meta.rsi
+  - sprite: _CE14/Actions/Spells/meta.rsi
     state: magic_vision_shuffled
 
 - type: alert
-  id: CP14Vuln
+  id: CE14Vuln
   icons:
-  - sprite: _CP14/Actions/Spells/misc.rsi
+  - sprite: _CE14/Actions/Spells/misc.rsi
     state: vulnerability

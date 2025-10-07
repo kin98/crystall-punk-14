@@ -1,8 +1,8 @@
-using Content.Shared._CP14.JoinQueue;
+using Content.Shared._CE14.JoinQueue;
 using Robust.Client.State;
 using Robust.Shared.Network;
 
-namespace Content.Client._CP14.JoinQueue;
+namespace Content.Client._CE14.JoinQueue;
 
 public sealed class JoinQueueManager
 {

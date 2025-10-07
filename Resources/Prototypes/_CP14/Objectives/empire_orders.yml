@@ -1,9 +1,9 @@
 - type: entity
   abstract: true
   parent: BaseObjective
-  id: CP14BaseTownObjective
+  id: CE14BaseTownObjective
   components:
   - type: Objective
-    issuer: cp14-objective-issuer-town
+    issuer: CE14-objective-issuer-town
     difficulty: 1
 

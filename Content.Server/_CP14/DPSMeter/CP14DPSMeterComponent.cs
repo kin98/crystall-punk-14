@@ -1,9 +1,9 @@
 using Content.Shared.Damage;
 
-namespace Content.Server._CP14.DPSMeter;
+namespace Content.Server._CE14.DPSMeter;
 
 [RegisterComponent]
-public sealed partial class CP14DPSMeterComponent : Component
+public sealed partial class CE14DPSMeterComponent : Component
 {
     [DataField]
     public DamageSpecifier TotalDamage = new DamageSpecifier();

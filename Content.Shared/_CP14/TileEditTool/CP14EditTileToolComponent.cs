@@ -5,10 +5,10 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CP14.TileEditTool;
+namespace Content.Shared._CE14.TileEditTool;
 
-[RegisterComponent, Access(typeof(CP14EditTileToolSystem))]
-public sealed partial class CP14EditTileToolComponent : Component
+[RegisterComponent, Access(typeof(CE14EditTileToolSystem))]
+public sealed partial class CE14EditTileToolComponent : Component
 {
     [DataField]
     public TimeSpan Delay = TimeSpan.FromSeconds(1f);
@@ -21,12 +21,12 @@ public sealed partial class CP14EditTileToolComponent : Component
 }
 
 [Serializable, NetSerializable]
-public sealed partial class CP14TileToolReplaceDoAfter : DoAfterEvent
+public sealed partial class CE14TileToolReplaceDoAfter : DoAfterEvent
 {
     [DataField(required:true)]
     public NetCoordinates Coordinates;
 
-    public CP14TileToolReplaceDoAfter(NetCoordinates coordinates)
+    public CE14TileToolReplaceDoAfter(NetCoordinates coordinates)
     {
         Coordinates = coordinates;
     }

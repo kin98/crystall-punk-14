@@ -187,7 +187,7 @@
     key: puddles
     additionalKeys:
     - walls
-    - CP14wall
+    - CE14wall
     base: splat
     mode: CardinalFlags
   - type: SolutionContainerManager
@@ -214,7 +214,7 @@
     solution: puddle
   - type: BadDrink
   - type: IgnoresFingerprints
-  - type: Evaporation #CP14 always evaporation
+  - type: Evaporation #CE14 always evaporation
   - type: Tag
     tags:
     - DNASolutionScannable

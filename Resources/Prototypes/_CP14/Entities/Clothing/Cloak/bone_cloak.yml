@@ -1,22 +1,22 @@
 - type: entity
-  parent: CP14ClothingCloakBase
-  id: CP14ClothingCloakBone
+  parent: CE14ClothingCloakBase
+  id: CE14ClothingCloakBone
   name: bone cloak
   description: A brutal cloak for brutal skeletons.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/bone_cloak.rsi
+    sprite: _CE14/Clothing/Cloak/bone_cloak.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/bone_cloak.rsi
+    sprite: _CE14/Clothing/Cloak/bone_cloak.rsi
 
 - type: entity
-  parent: CP14ClothingCloakBone
-  id: CP14ClothingCloakBoneMage
+  parent: CE14ClothingCloakBone
+  id: CE14ClothingCloakBoneMage
   name: bone armor with cloak
   description: The leader's cloak, for the leader's skeleton!
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/bone_mage_cloak.rsi
+    sprite: _CE14/Clothing/Cloak/bone_mage_cloak.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/bone_mage_cloak.rsi
+    sprite: _CE14/Clothing/Cloak/bone_mage_cloak.rsi
 

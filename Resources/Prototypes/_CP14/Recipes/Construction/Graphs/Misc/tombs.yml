@@ -1,24 +1,24 @@
 - type: constructionGraph
-  id: CP14BaseTombstone
+  id: CE14BaseTombstone
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14BaseTombstone
+        - to: CE14BaseTombstone
           steps:
-            - material: CP14Stone
+            - material: CE14Stone
               amount: 5
               doAfter: 2
-    - node: CP14BaseTombstone
-      entity: CP14BaseTombstone
+    - node: CE14BaseTombstone
+      entity: CE14BaseTombstone
       edges:
       - to: start
         steps:
-        - tool: CP14Hammering
+        - tool: CE14Hammering
           doAfter: 10
         completed:
         - !type:SpawnPrototype
-          prototype: CP14StoneBlock1
+          prototype: CE14StoneBlock1
           amount: 5

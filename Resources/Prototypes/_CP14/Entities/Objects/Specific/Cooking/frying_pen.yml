@@ -1,15 +1,15 @@
 - type: entity
-  id: CP14FryingPan
-  parent: CP14CookerBase
+  id: CE14FryingPan
+  parent: CE14CookerBase
   name: frying pan
   description: "You can always watch three things: how fire burns, how water flows, and how delicious meat is cooked."
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/Meals/frying_pan.rsi
+    sprite: _CE14/Objects/Consumable/Food/Meals/frying_pan.rsi
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
-    - map: ["cp14_foodLayers"]
+    - map: ["CE14_foodLayers"]
     - state: closed
       map: [ base ]
     - state: cooking
@@ -27,24 +27,24 @@
     soundHit:
       path: "/Audio/Weapons/smash.ogg"
   - type: Storage
-    storageOpenSound: /Audio/_CP14/Effects/pan_open.ogg
-    storageCloseSound: /Audio/_CP14/Effects/pan_close.ogg
+    storageOpenSound: /Audio/_CE14/Effects/pan_open.ogg
+    storageCloseSound: /Audio/_CE14/Effects/pan_close.ogg
     storageInsertSound: /Audio/Items/toolbox_insert.ogg
     storageRemoveSound: /Audio/Items/toolbox_insert.ogg
   - type: SolutionContainerManager
     solutions:
       cooker:
         maxVol: 100
-  - type: CP14FoodHolder
+  - type: CE14FoodHolder
     foodType: Meal
     solutionId: cooker
-    displacementRsiPath: _CP14/Objects/Consumable/Food/Meals/displacement_pan.rsi
+    displacementRsiPath: _CE14/Objects/Consumable/Food/Meals/displacement_pan.rsi
     maxDisplacementFillLevels: 2
     canGiveFood: true
   - type: Item
     size: Ginormous
   - type: MultiHandedItem
-  - type: CP14FoodCooker
+  - type: CE14FoodCooker
     foodType: Meal
     solutionId: cooker
   - type: RefillableSolution
@@ -55,8 +55,8 @@
     solution: cooker
   - type: AmbientSound
     sound:
-      path: /Audio/_CP14/Ambience/pan_frying.ogg
+      path: /Audio/_CE14/Ambience/pan_frying.ogg
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 20
-      CP14WoodenPlanks: 10
+      CE14Iron: 20
+      CE14WoodenPlanks: 10

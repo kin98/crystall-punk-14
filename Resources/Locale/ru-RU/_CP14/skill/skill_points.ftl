@@ -1,2 +1,2 @@
-cp14-skill-point-memory = Память
-cp14-skill-point-vampire-blood = Эссенция крови
+CE14-skill-point-memory = Память
+CE14-skill-point-vampire-blood = Эссенция крови

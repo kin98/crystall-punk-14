@@ -1,14 +1,14 @@
 using Content.Client.Administration.Managers;
 using Content.Client.Overlays;
-using Content.Shared._CP14.Vampire.Components;
+using Content.Shared._CE14.Vampire.Components;
 using Content.Shared.Ghost;
 using Content.Shared.StatusIcon.Components;
 using Robust.Client.Player;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._CP14.Vampire;
+namespace Content.Client._CE14.Vampire;
 
-public sealed class CP14ShowVampireIconsSystem : EquipmentHudSystem<CP14ShowVampireFactionComponent>
+public sealed class CE14ShowVampireIconsSystem : EquipmentHudSystem<CE14ShowVampireFactionComponent>
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
@@ -18,10 +18,10 @@ public sealed class CP14ShowVampireIconsSystem : EquipmentHudSystem<CP14ShowVamp
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14VampireComponent, GetStatusIconsEvent>(OnGetStatusIcons);
+        SubscribeLocalEvent<CE14VampireComponent, GetStatusIconsEvent>(OnGetStatusIcons);
     }
 
-    private void OnGetStatusIcons(Entity<CP14VampireComponent> ent, ref GetStatusIconsEvent args)
+    private void OnGetStatusIcons(Entity<CE14VampireComponent> ent, ref GetStatusIconsEvent args)
     {
         if (!_proto.TryIndex(ent.Comp.Faction, out var indexedFaction))
             return;
@@ -36,7 +36,7 @@ public sealed class CP14ShowVampireIconsSystem : EquipmentHudSystem<CP14ShowVamp
             return;
         }
 
-        if (TryComp<CP14ShowVampireFactionComponent>(_player.LocalEntity, out var showIcons) &&
+        if (TryComp<CE14ShowVampireFactionComponent>(_player.LocalEntity, out var showIcons) &&
             showIcons.Faction == indexedFaction)
         {
             args.StatusIcons.Add(indexedIcon);

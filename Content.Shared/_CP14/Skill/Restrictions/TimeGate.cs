@@ -1,4 +1,4 @@
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Prototypes;
 using Content.Shared.CCVar;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
@@ -6,9 +6,9 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.Skill.Restrictions;
+namespace Content.Shared._CE14.Skill.Restrictions;
 
-public sealed partial class TimeGate : CP14SkillRestriction
+public sealed partial class TimeGate : CE14SkillRestriction
 {
     [DataField(required: true)]
     public int Minutes = 1;
@@ -18,7 +18,7 @@ public sealed partial class TimeGate : CP14SkillRestriction
         var timing = IoCManager.Resolve<IGameTiming>();
         var cfg = IoCManager.Resolve<IConfigurationManager>();
 
-        if (cfg.GetCVar(CCVars.CP14SkillTimers) == false)
+        if (cfg.GetCVar(CCVars.CE14SkillTimers) == false)
             return true;
 
         return timing.CurTime >= TimeSpan.FromMinutes(Minutes);
@@ -32,9 +32,9 @@ public sealed partial class TimeGate : CP14SkillRestriction
         var leftoverTime = TimeSpan.FromMinutes(Minutes) - timing.CurTime;
         leftoverTime = leftoverTime < TimeSpan.Zero ? TimeSpan.Zero : leftoverTime;
 
-        if (cfg.GetCVar(CCVars.CP14SkillTimers) == false)
-            return Loc.GetString("cp14-skill-req-timegate-disabled", ("minute", Minutes));
+        if (cfg.GetCVar(CCVars.CE14SkillTimers) == false)
+            return Loc.GetString("CE14-skill-req-timegate-disabled", ("minute", Minutes));
 
-        return Loc.GetString("cp14-skill-req-timegate", ("minute", Minutes), ("left", Math.Ceiling(leftoverTime.TotalMinutes)));
+        return Loc.GetString("CE14-skill-req-timegate", ("minute", Minutes), ("left", Math.Ceiling(leftoverTime.TotalMinutes)));
     }
 }

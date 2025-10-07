@@ -1,14 +1,14 @@
 - type: entity
-  id: CP14BaseTree
+  id: CE14BaseTree
   abstract: true
-  parent: CP14BaseFlammableSpreading
+  parent: CE14BaseFlammableSpreading
   categories: [ ForkFiltered ]
   name: tree
   description: Decades of life and growth, saturating the surrounding nature with fresh air.
   components:
   - type: Transform
     anchored: true
-  - type: CP14WaveShader
+  - type: CE14WaveShader
     speed: 1
     dis: 5
   - type: SpriteFade
@@ -66,14 +66,14 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodLog:
+          CE14WoodLog:
             min: 1
             max: 3
   - type: Material
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14BaseTreeLarge
+  parent: CE14BaseTree
+  id: CE14BaseTreeLarge
   name: large tree
   abstract: true
   components:
@@ -108,13 +108,13 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodLog:
+          CE14WoodLog:
             min: 3
             max: 6
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeGreen
+  parent: CE14BaseTree
+  id: CE14FloraTreeGreen
   components:
   - type: Sprite
     sprite: Objects/Decoration/Flora/flora_trees.rsi
@@ -132,14 +132,14 @@
         tree06: ""
   - type: Tag
     tags:
-    - CP14AmbientForest
+    - CE14AmbientForest
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeSnow
+  parent: CE14BaseTree
+  id: CE14FloraTreeSnow
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Flora/tree_snow.rsi
+    sprite: _CE14/Structures/Flora/tree_snow.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -154,18 +154,18 @@
         tree06: ""
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeRed
+  parent: CE14BaseTree
+  id: CE14FloraTreeRed
   name: motherblood tree
   description: Ask Wanderere to insert lore here
   components:
   - type: Sprite
     offset: 0,1.1
-    sprite: _CP14/Structures/Flora/tree_vampire.rsi
+    sprite: _CE14/Structures/Flora/tree_vampire.rsi
     layers:
     - state: 2
       map: ["random"]
-  - type: CP14WaveShader
+  - type: CE14WaveShader
     speed: 0.5
     dis: 6
   - type: RandomSprite
@@ -179,15 +179,15 @@
         6: ""
   - type: Tag
     tags:
-    - CP14AmbientForest
+    - CE14AmbientForest
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeDead
+  parent: CE14BaseTree
+  id: CE14FloraTreeDead
   components:
   - type: Sprite
     offset: 0,1.1
-    sprite: _CP14/Structures/Flora/tree_died.rsi
+    sprite: _CE14/Structures/Flora/tree_died.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -198,16 +198,16 @@
         tree02: ""
         tree03: ""
         tree04: ""
-  - type: CP14WaveShader
+  - type: CE14WaveShader
     speed: 0.3
     dis: 3
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeDeadSmall
+  parent: CE14BaseTree
+  id: CE14FloraTreeDeadSmall
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Flora/tree_died_small.rsi
+    sprite: _CE14/Structures/Flora/tree_died_small.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -218,13 +218,13 @@
         tree02: ""
         tree03: ""
         tree04: ""
-  - type: CP14WaveShader
+  - type: CE14WaveShader
     speed: 0.3
     dis: 3
 
 - type: entity
-  parent: CP14BaseTreeLarge
-  id: CP14FloraTreeGreenLarge
+  parent: CE14BaseTreeLarge
+  id: CE14FloraTreeGreenLarge
   components:
   - type: Sprite
     sprite: Objects/Decoration/Flora/flora_treeslarge.rsi
@@ -242,11 +242,11 @@
         treelarge06: ""
   - type: Tag
     tags:
-    - CP14AmbientForest
+    - CE14AmbientForest
 
 - type: entity
-  id: CP14BaseLucensTree
-  parent: CP14BaseTree
+  id: CE14BaseLucensTree
+  parent: CE14BaseTree
   name: lucens tree
   components:
   - type: PointLight
@@ -255,7 +255,7 @@
     color: "#87CEEB"
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Flora/lucens.rsi
+    sprite: _CE14/Structures/Flora/lucens.rsi
     drawdepth: Mobs
     offset: 0,0.9
     layers:
@@ -297,18 +297,18 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14LucensWoodLog:
+          CE14LucensWoodLog:
             min: 1
             max: 3
 
 - type: entity
-  parent: CP14BaseLucensTree
-  id: CP14BaseLucensTreeLarge
+  parent: CE14BaseLucensTree
+  id: CE14BaseLucensTreeLarge
   name: large lucens tree
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Flora/lucens.rsi
+    sprite: _CE14/Structures/Flora/lucens.rsi
     drawdepth: Mobs
     offset: 0,0.9
     layers:
@@ -348,18 +348,18 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14LucensWoodLog:
+          CE14LucensWoodLog:
             min: 3
             max: 6
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeBirchSmall
+  parent: CE14BaseTree
+  id: CE14FloraTreeBirchSmall
   suffix: Small
   components:
   - type: Sprite
     offset: 0,1.3
-    sprite: _CP14/Structures/Flora/tree_birch_small.rsi
+    sprite: _CE14/Structures/Flora/tree_birch_small.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -397,18 +397,18 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodLog:
+          CE14BirchWoodLog:
             min: 1
             max: 2
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeBirchMedium
+  parent: CE14BaseTree
+  id: CE14FloraTreeBirchMedium
   suffix: Medium
   components:
   - type: Sprite
     offset: 0,1.8
-    sprite: _CP14/Structures/Flora/tree_birch_medium.rsi
+    sprite: _CE14/Structures/Flora/tree_birch_medium.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -446,18 +446,18 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodLog:
+          CE14BirchWoodLog:
             min: 2
             max: 4
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeBirchLarge
+  parent: CE14BaseTree
+  id: CE14FloraTreeBirchLarge
   suffix: Large
   components:
   - type: Sprite
     offset: 0,2.6
-    sprite: _CP14/Structures/Flora/tree_birch_big.rsi
+    sprite: _CE14/Structures/Flora/tree_birch_big.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -495,7 +495,7 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodLog:
+          CE14BirchWoodLog:
             min: 3
             max: 6
 
@@ -504,13 +504,13 @@
 
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeSpruceSmall
+  parent: CE14BaseTree
+  id: CE14FloraTreeSpruceSmall
   suffix: Small
   components:
   - type: Sprite
     offset: 0,1
-    sprite: _CP14/Structures/Flora/tree_spruce_small.rsi
+    sprite: _CE14/Structures/Flora/tree_spruce_small.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -552,18 +552,18 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SpruceWoodLog:
+          CE14SpruceWoodLog:
             min: 1
             max: 2
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeSpruceMedium
+  parent: CE14BaseTree
+  id: CE14FloraTreeSpruceMedium
   suffix: Medium
   components:
   - type: Sprite
     offset: 0,1.6
-    sprite: _CP14/Structures/Flora/tree_spruce_medium.rsi
+    sprite: _CE14/Structures/Flora/tree_spruce_medium.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -603,18 +603,18 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SpruceWoodLog:
+          CE14SpruceWoodLog:
             min: 2
             max: 4
 
 - type: entity
-  parent: CP14BaseTree
-  id: CP14FloraTreeSpruceLarge
+  parent: CE14BaseTree
+  id: CE14FloraTreeSpruceLarge
   suffix: Large
   components:
   - type: Sprite
     offset: 0,1.9
-    sprite: _CP14/Structures/Flora/tree_spruce_big.rsi
+    sprite: _CE14/Structures/Flora/tree_spruce_big.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -652,6 +652,6 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SpruceWoodLog:
+          CE14SpruceWoodLog:
             min: 3
             max: 6

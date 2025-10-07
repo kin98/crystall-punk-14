@@ -1,6 +1,6 @@
 # TIER 1
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: Lava
   levels:
     min: 3
@@ -9,13 +9,13 @@
   categories:
     Danger: 0.25
   blacklistTags:
-  - CP14DemiplaneCold
-  - CP14DemiplaneHerbals
+  - CE14DemiplaneCold
+  - CE14DemiplaneHerbals
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14FloorLava
+    - !type:CE14OreDunGen
+      entity: CE14FloorLava
       tileMask:
-      - CP14FloorBase
+      - CE14FloorBase
       count: 8
       minGroupSize: 3
       maxGroupSize: 5

@@ -2,13 +2,13 @@ using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Skill.Prototypes;
+namespace Content.Shared._CE14.Skill.Prototypes;
 
 /// <summary>
 /// A group of skills combined into one “branch”
 /// </summary>
-[Prototype("cp14SkillTree")]
-public sealed partial class CP14SkillTreePrototype : IPrototype
+[Prototype("CE14SkillTree")]
+public sealed partial class CE14SkillTreePrototype : IPrototype
 {
     [IdDataField] public string ID { get; } = default!;
 
@@ -16,7 +16,7 @@ public sealed partial class CP14SkillTreePrototype : IPrototype
     public LocId Name;
 
     [DataField(required: true)]
-    public ProtoId<CP14SkillPointPrototype> SkillType;
+    public ProtoId<CE14SkillPointPrototype> SkillType;
 
     [DataField]
     public SpriteSpecifier? FrameIcon;
@@ -43,5 +43,5 @@ public sealed partial class CP14SkillTreePrototype : IPrototype
     public Color Color;
 
     [DataField]
-    public SoundSpecifier LearnSound = new SoundCollectionSpecifier("CP14LearnSkill");
+    public SoundSpecifier LearnSound = new SoundCollectionSpecifier("CE14LearnSkill");
 }

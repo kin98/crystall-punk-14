@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14BaseKey
+  id: CE14BaseKey
   abstract: true
   categories: [ ForkFiltered ]
   name: key
@@ -8,40 +8,40 @@
   components:
   - type: Tag
     tags:
-    - CP14Key
+    - CE14Key
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/keys.rsi
-  - type: CP14Key
+    sprite: _CE14/Objects/keys.rsi
+  - type: CE14Key
   - type: EmitSoundOnLand
     sound:
-      path: /Audio/_CP14/Items/key_drop.ogg
+      path: /Audio/_CE14/Items/key_drop.ogg
       params:
         variation: 0.05
 
 - type: entity
-  parent: CP14BaseKey
-  id: CP14KeyCopperBlank
+  parent: CE14BaseKey
+  id: CE14KeyCopperBlank
   components:
   - type: Sprite
     state: key_copper
-  - type: CP14Key
+  - type: CE14Key
     lockShape:
     - 2
     - 2
     - 2
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 10
+      CE14Copper: 10
 
 - type: entity
-  parent: CP14BaseKey
-  id: CP14KeyIronBlank
+  parent: CE14BaseKey
+  id: CE14KeyIronBlank
   components:
   - type: Sprite
     state: key_iron
-  - type: CP14Key
+  - type: CE14Key
     lockShape:
     - 2
     - 2
@@ -50,15 +50,15 @@
     - 2
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10
+      CE14Iron: 10
 
 - type: entity
-  parent: CP14BaseKey
-  id: CP14KeyGoldBlank
+  parent: CE14BaseKey
+  id: CE14KeyGoldBlank
   components:
   - type: Sprite
     state: key_gold
-  - type: CP14Key
+  - type: CE14Key
     lockShape:
     - 2
     - 2
@@ -68,15 +68,15 @@
     - 2
   - type: PhysicalComposition
     materialComposition:
-      CP14Gold: 10
+      CE14Gold: 10
 
 - type: entity
-  parent: CP14BaseKey
-  id: CP14KeyMithrilBlank
+  parent: CE14BaseKey
+  id: CE14KeyMithrilBlank
   components:
   - type: Sprite
     state: key_mithril
-  - type: CP14Key
+  - type: CE14Key
     lockShape:
     - 2
     - 2
@@ -87,14 +87,14 @@
     - 2
   - type: PhysicalComposition
     materialComposition:
-      CP14Mithril: 10
+      CE14Mithril: 10
 
 - type: entity
-  parent: CP14KeyMithrilBlank
-  id: CP14KeyUniversal
+  parent: CE14KeyMithrilBlank
+  id: CE14KeyUniversal
   name: omni key
   suffix: Universal
   categories: [ ForkFiltered, DoNotMap ]
   components:
-  - type: CP14Key
-  - type: CP14KeyUniversal
+  - type: CE14Key
+  - type: CE14KeyUniversal

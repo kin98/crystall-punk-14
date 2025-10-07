@@ -1,11 +1,11 @@
-using Content.Server._CP14.MagicEnergy;
+using Content.Server._CE14.MagicEnergy;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
 using Content.Server.Speech;
-using Content.Shared._CP14.MagicEnergy.Components;
-using Content.Shared._CP14.Religion.Components;
-using Content.Shared._CP14.Religion.Prototypes;
-using Content.Shared._CP14.Religion.Systems;
+using Content.Shared._CE14.MagicEnergy.Components;
+using Content.Shared._CE14.Religion.Components;
+using Content.Shared._CE14.Religion.Prototypes;
+using Content.Shared._CE14.Religion.Systems;
 using Content.Shared.Chat;
 using Content.Shared.Eye;
 using Content.Shared.FixedPoint;
@@ -17,19 +17,19 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.Religion;
+namespace Content.Server._CE14.Religion;
 
-public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
+public sealed partial class CE14ReligionGodSystem : CE14SharedReligionGodSystem
 {
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly ChatSystem _chatSys = default!;
     [Dependency] private readonly PvsOverrideSystem _pvs = default!;
-    [Dependency] private readonly CP14MagicEnergySystem _magicEnergy = default!;
+    [Dependency] private readonly CE14MagicEnergySystem _magicEnergy = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedEyeSystem _eye = default!;
 
-    private EntityQuery<CP14ReligionEntityComponent> _godQuery;
+    private EntityQuery<CE14ReligionEntityComponent> _godQuery;
 
     /// <summary>
     /// If ReligionObserver receives a radius higher than this value, this entity will automatically be placed in PvsOverride for the god in order to function correctly outside of the player's PVS.
@@ -42,23 +42,23 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
         base.Initialize();
         InitializeUI();
 
-        _godQuery = GetEntityQuery<CP14ReligionEntityComponent>();
+        _godQuery = GetEntityQuery<CE14ReligionEntityComponent>();
 
-        SubscribeLocalEvent<CP14ReligionObserverComponent, ComponentInit>(OnObserverInit);
-        SubscribeLocalEvent<CP14ReligionObserverComponent, AfterAutoHandleStateEvent>(OnObserverHandleState);
+        SubscribeLocalEvent<CE14ReligionObserverComponent, ComponentInit>(OnObserverInit);
+        SubscribeLocalEvent<CE14ReligionObserverComponent, AfterAutoHandleStateEvent>(OnObserverHandleState);
 
-        SubscribeLocalEvent<CP14ReligionEntityComponent, ComponentInit>(OnGodInit);
-        SubscribeLocalEvent<CP14ReligionEntityComponent, ComponentShutdown>(OnGodShutdown);
-        SubscribeLocalEvent<CP14ReligionEntityComponent, PlayerAttachedEvent>(OnPlayerAttached);
-        SubscribeLocalEvent<CP14ReligionEntityComponent, PlayerDetachedEvent>(OnPlayerDetached);
-        SubscribeLocalEvent<CP14ReligionSpeakerComponent, CP14SpokeAttemptEvent>(OnSpokeAttempt);
+        SubscribeLocalEvent<CE14ReligionEntityComponent, ComponentInit>(OnGodInit);
+        SubscribeLocalEvent<CE14ReligionEntityComponent, ComponentShutdown>(OnGodShutdown);
+        SubscribeLocalEvent<CE14ReligionEntityComponent, PlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<CE14ReligionEntityComponent, PlayerDetachedEvent>(OnPlayerDetached);
+        SubscribeLocalEvent<CE14ReligionSpeakerComponent, CE14SpokeAttemptEvent>(OnSpokeAttempt);
         SubscribeLocalEvent<ExpandICChatRecipientsEvent>(OnExpandRecipients);
 
-        SubscribeLocalEvent<CP14ReligionAltarComponent, ListenEvent>(OnListen);
-        SubscribeLocalEvent<CP14ReligionEntityComponent, GetVisMaskEvent>(OnGetVis);
+        SubscribeLocalEvent<CE14ReligionAltarComponent, ListenEvent>(OnListen);
+        SubscribeLocalEvent<CE14ReligionEntityComponent, GetVisMaskEvent>(OnGetVis);
     }
 
-    private void OnGetVis(Entity<CP14ReligionEntityComponent> ent, ref GetVisMaskEvent args)
+    private void OnGetVis(Entity<CE14ReligionEntityComponent> ent, ref GetVisMaskEvent args)
     {
         args.VisibilityMask |= (int)VisibilityFlags.Ghost;
     }
@@ -83,7 +83,7 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<CP14ReligionFollowerComponent, CP14MagicEnergyContainerComponent>();
+        var query = EntityQueryEnumerator<CE14ReligionFollowerComponent, CE14MagicEnergyContainerComponent>();
         while (query.MoveNext(out var uid, out var follower, out var energy))
         {
             if (follower.NextUpdateTime >= _gameTiming.CurTime)
@@ -106,7 +106,7 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
         }
     }
 
-    private void OnSpokeAttempt(Entity<CP14ReligionSpeakerComponent> ent, ref CP14SpokeAttemptEvent args)
+    private void OnSpokeAttempt(Entity<CE14ReligionSpeakerComponent> ent, ref CE14SpokeAttemptEvent args)
     {
         args.Cancel();
 
@@ -135,16 +135,16 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
             });
     }
 
-    private void OnObserverHandleState(Entity<CP14ReligionObserverComponent> ent, ref AfterAutoHandleStateEvent args)
+    private void OnObserverHandleState(Entity<CE14ReligionObserverComponent> ent, ref AfterAutoHandleStateEvent args)
     {
-        var query = EntityQueryEnumerator<CP14ReligionEntityComponent>();
+        var query = EntityQueryEnumerator<CE14ReligionEntityComponent>();
         while (query.MoveNext(out var uid, out var god))
         {
-            UpdatePvsOverrides(new Entity<CP14ReligionEntityComponent>(uid, god));
+            UpdatePvsOverrides(new Entity<CE14ReligionEntityComponent>(uid, god));
         }
     }
 
-    private void OnObserverInit(Entity<CP14ReligionObserverComponent> ent, ref ComponentInit args)
+    private void OnObserverInit(Entity<CE14ReligionObserverComponent> ent, ref ComponentInit args)
     {
         if (ent.Comp.Religion is null)
             return;
@@ -157,42 +157,42 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
         }
     }
 
-    private void OnGodInit(Entity<CP14ReligionEntityComponent> ent, ref ComponentInit args)
+    private void OnGodInit(Entity<CE14ReligionEntityComponent> ent, ref ComponentInit args)
     {
         AddPvsOverrides(ent);
         _eye.RefreshVisibilityMask(ent.Owner);
     }
 
-    private void OnGodShutdown(Entity<CP14ReligionEntityComponent> ent, ref ComponentShutdown args)
+    private void OnGodShutdown(Entity<CE14ReligionEntityComponent> ent, ref ComponentShutdown args)
     {
         RemovePvsOverrides(ent);
         _eye.RefreshVisibilityMask(ent.Owner);
     }
 
-    private void OnPlayerAttached(Entity<CP14ReligionEntityComponent> ent, ref PlayerAttachedEvent args)
+    private void OnPlayerAttached(Entity<CE14ReligionEntityComponent> ent, ref PlayerAttachedEvent args)
     {
         AddPvsOverrides(ent);
     }
 
-    private void OnPlayerDetached(Entity<CP14ReligionEntityComponent> ent, ref PlayerDetachedEvent args)
+    private void OnPlayerDetached(Entity<CE14ReligionEntityComponent> ent, ref PlayerDetachedEvent args)
     {
         RemovePvsOverrides(ent);
     }
 
-    private void OnListen(Entity<CP14ReligionAltarComponent> ent, ref ListenEvent args)
+    private void OnListen(Entity<CE14ReligionAltarComponent> ent, ref ListenEvent args)
     {
         if (ent.Comp.Religion is null)
             return;
 
         var wrappedMessage =
-            Loc.GetString("cp14-altar-wrapped-message",
+            Loc.GetString("CE14-altar-wrapped-message",
                 ("name", MetaData(args.Source).EntityName),
                 ("msg", args.Message));
 
         SendMessageToGods(ent.Comp.Religion.Value, wrappedMessage, args.Source);
     }
 
-    public override void SendMessageToGods(ProtoId<CP14ReligionPrototype> religion, string msg, EntityUid source)
+    public override void SendMessageToGods(ProtoId<CE14ReligionPrototype> religion, string msg, EntityUid source)
     {
         var gods = GetGods(religion);
 
@@ -215,7 +215,7 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
             colorOverride: Color.Aqua);
     }
 
-    public FixedPoint2 GetFollowerPercentage(Entity<CP14ReligionEntityComponent> god)
+    public FixedPoint2 GetFollowerPercentage(Entity<CE14ReligionEntityComponent> god)
     {
         FixedPoint2 total = 0;
         FixedPoint2 followers = 0;
@@ -225,7 +225,7 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
         {
             total += 1;
 
-            if (!TryComp<CP14ReligionFollowerComponent>(human.Comp.CurrentEntity, out var relFollower))
+            if (!TryComp<CE14ReligionFollowerComponent>(human.Comp.CurrentEntity, out var relFollower))
                 continue;
             if (relFollower.Religion != god.Comp.Religion)
                 continue;
@@ -239,7 +239,7 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
         return followers / total;
     }
 
-    private void AddPvsOverrides(Entity<CP14ReligionEntityComponent> ent)
+    private void AddPvsOverrides(Entity<CE14ReligionEntityComponent> ent)
     {
         if (ent.Comp.Religion is null)
             return;
@@ -249,7 +249,7 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
 
         ent.Comp.Session = actor.PlayerSession;
 
-        var query = EntityQueryEnumerator<CP14ReligionObserverComponent>();
+        var query = EntityQueryEnumerator<CE14ReligionObserverComponent>();
         while (query.MoveNext(out var uid, out var observer))
         {
             if (!observer.Active)
@@ -263,7 +263,7 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
         }
     }
 
-    private void RemovePvsOverrides(Entity<CP14ReligionEntityComponent> ent)
+    private void RemovePvsOverrides(Entity<CE14ReligionEntityComponent> ent)
     {
         if (ent.Comp.Religion is null)
             return;
@@ -280,7 +280,7 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
         ent.Comp.PvsOverridedObservers.Clear();
     }
 
-    private void UpdatePvsOverrides(Entity<CP14ReligionEntityComponent> ent)
+    private void UpdatePvsOverrides(Entity<CE14ReligionEntityComponent> ent)
     {
         if (ent.Comp.Session is null)
             return;
@@ -290,7 +290,7 @@ public sealed partial class CP14ReligionGodSystem : CP14SharedReligionGodSystem
     }
 }
 
-public sealed class CP14SpokeAttemptEvent(string message, InGameICChatType type, ICommonSession? player)
+public sealed class CE14SpokeAttemptEvent(string message, InGameICChatType type, ICommonSession? player)
     : CancellableEntityEventArgs
 {
     public string Message = message;

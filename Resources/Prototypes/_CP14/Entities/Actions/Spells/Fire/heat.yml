@@ -1,22 +1,22 @@
 - type: entity
-  id: CP14ActionSpellHeat
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellHeat
+  parent: CE14ActionSpellBase
   name: Heat
   description: You start to heat the target up a lot, burning it from the inside.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.8
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 7
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Vos adepto calidum..."
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneHeat
-  - type: CP14ActionDangerous
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneHeat
+  - type: CE14ActionDangerous
   - type: Action
     useDelay: 4
     icon:
-      sprite: _CP14/Actions/Spells/fire.rsi
+      sprite: _CE14/Actions/Spells/fire.rsi
       state: heat
   - type: DoAfterArgs
     hidden: true
@@ -26,22 +26,22 @@
     range: 8
     interactOnMiss: false
   - type: EntityTargetAction
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectHeat
-      - !type:CP14AdjustAllSolutionThermalEnergy
+        - CE14ImpactEffectHeat
+      - !type:CE14AdjustAllSolutionThermalEnergy
         delta: 2500
-      - !type:CP14SpellApplyEntityEffect
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:AdjustTemperature
           amount: 20000
         - !type:ExtinguishReaction
 
 - type: entity
-  id: CP14ImpactEffectHeat
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectHeat
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -52,8 +52,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14RuneHeat
-  parent: CP14BaseMagicRune
+  id: CE14RuneHeat
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -66,10 +66,10 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14BaseSpellScrollFire
-  id: CP14SpellScrollHeat
+  parent: CE14BaseSpellScrollFire
+  id: CE14SpellScrollHeat
   name: heat spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellHeat
+    - CE14ActionSpellHeat

@@ -18,7 +18,7 @@ public sealed partial class OverallPlaytimeRequirement : JobRequirement
     [DataField(required: true)]
     public TimeSpan Time;
 
-    public override bool Check(NetUserId? userId,  //CP14 Sponsorship Checks
+    public override bool Check(NetUserId? userId,  //CE14 Sponsorship Checks
         IEntityManager entManager,
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,

@@ -1,7 +1,7 @@
 - type: soundCollection
-  id: CP14CarcatLaugh
+  id: CE14CarcatLaugh
   files:
-  - /Audio/_CP14/Voice/Carcat/carcat_laugh.ogg
-  - /Audio/_CP14/Voice/Carcat/carcat_laugh2.ogg
-  - /Audio/_CP14/Voice/Carcat/carcat_laugh3.ogg
+  - /Audio/_CE14/Voice/Carcat/carcat_laugh.ogg
+  - /Audio/_CE14/Voice/Carcat/carcat_laugh2.ogg
+  - /Audio/_CE14/Voice/Carcat/carcat_laugh3.ogg
 

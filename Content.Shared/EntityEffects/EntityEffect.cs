@@ -133,7 +133,7 @@ public record class EntityEffectReagentArgs : EntityEffectBaseArgs
 
     public FixedPoint2 Scale;
 
-    public Entity<SolutionComponent>? SolutionEntity; //CP14
+    public Entity<SolutionComponent>? SolutionEntity; //CE14
 
     public EntityEffectReagentArgs(EntityUid targetEntity, IEntityManager entityManager, EntityUid? organEntity, Solution? source, FixedPoint2 quantity, ReagentPrototype? reagent, ReactionMethod? method, FixedPoint2 scale, Entity<SolutionComponent>? solutionEntity = null) : base(targetEntity, entityManager)
     {
@@ -143,6 +143,6 @@ public record class EntityEffectReagentArgs : EntityEffectBaseArgs
         Reagent = reagent;
         Method = method;
         Scale = scale;
-        SolutionEntity = solutionEntity; //CP14
+        SolutionEntity = solutionEntity; //CE14
     }
 }

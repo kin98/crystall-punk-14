@@ -1,5 +1,5 @@
-using Content.Server._CP14.Alchemy.Components;
-using Content.Server._CP14.MagicEnergy;
+using Content.Server._CE14.Alchemy.Components;
+using Content.Server._CE14.MagicEnergy;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
@@ -7,20 +7,20 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.Alchemy.EntitySystems;
+namespace Content.Server._CE14.Alchemy.EntitySystems;
 
-public sealed partial class CP14SolutionCleanerSystem : EntitySystem
+public sealed partial class CE14SolutionCleanerSystem : EntitySystem
 {
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
-    [Dependency] private readonly CP14MagicEnergyCrystalSlotSystem _magicSlot = default!;
+    [Dependency] private readonly CE14MagicEnergyCrystalSlotSystem _magicSlot = default!;
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<CP14SolutionCleanerComponent, SolutionContainerManagerComponent>();
+        var query = EntityQueryEnumerator<CE14SolutionCleanerComponent, SolutionContainerManagerComponent>();
         while (query.MoveNext(out var uid, out var normalizer, out var containerManager))
         {
             if (_timing.CurTime <= normalizer.NextUpdateTime)

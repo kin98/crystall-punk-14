@@ -1,27 +1,27 @@
 - type: entity
-  id: CP14StatusEffectMagicArmor
+  id: CE14StatusEffectMagicArmor
   parent: MobStatusEffectBase
   components:
   - type: StatusEffect
   - type: StatusEffectAlert
-    alert: CP14MagicArmor
+    alert: CE14MagicArmor
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Effects/Magic/cast_rune.rsi
+    sprite: _CE14/Effects/Magic/cast_rune.rsi
     noRot: true
     layers:
     - state: sphere
       shader: unshaded
       color: "#5096d4"
     - state: circle_increase
-      sprite: _CP14/Effects/Magic/cast_impact.rsi
+      sprite: _CE14/Effects/Magic/cast_impact.rsi
       shader: unshaded
       color: "#74eaf2"
   - type: PointLight
     radius: 2.5
     energy: 0.9
     color: "#5096d4"
-  - type: CP14DamageModifierStatusEffect
+  - type: CE14DamageModifierStatusEffect
     globalDefence: 0.6
     #defence: #TODO When stone armor spell appears, divide responsibilities: magical armor protects against elemental damage, stone armor protects against physical damage.
     #  Cold: 0.5
@@ -29,15 +29,15 @@
     #  Shock: 0.5
 
 - type: entity
-  id: CP14StatusEffectGlowing
+  id: CE14StatusEffectGlowing
   name: glowing
   components:
   - type: StatusEffect
   - type: StatusEffectAlert
-    alert: CP14Glowing
+    alert: CE14Glowing
   - type: Sprite
     drawdepth: Effects
-    sprite: _CP14/Effects/Magic/sphere_of_light.rsi
+    sprite: _CE14/Effects/Magic/sphere_of_light.rsi
     offset: 0, 1
     noRot: true
     layers:
@@ -50,11 +50,11 @@
 
 - type: entity
   parent: MobStatusEffectDebuff
-  id: CP14StatusEffectVampireForceSleep
+  id: CE14StatusEffectVampireForceSleep
   name: forced sleep
   components:
   - type: StatusEffectAlert
-    alert: CP14VampireSleeping
+    alert: CE14VampireSleeping
   - type: ForcedSleepingStatusEffect
   - type: StunnedStatusEffect
   - type: KnockdownStatusEffect
@@ -65,19 +65,19 @@
   components:
   - type: StatusEffect
   - type: StatusEffectAlert
-    alert: CP14ConfusedAura
-  - type: CP14HideMagicAuraStatusEffect
+    alert: CE14ConfusedAura
+  - type: CE14HideMagicAuraStatusEffect
 
 - type: entity
-  id: CP14StatusEffectVuln
+  id: CE14StatusEffectVuln
   name: vulnerability
   components:
   - type: StatusEffect
   - type: StatusEffectAlert
-    alert: CP14Vuln
+    alert: CE14Vuln
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Effects/Magic/cast_impact.rsi
+    sprite: _CE14/Effects/Magic/cast_impact.rsi
     noRot: true
     layers:
     - state: particles_down
@@ -87,5 +87,5 @@
     radius: 2.5
     energy: 0.9
     color: "#a81e33"
-  - type: CP14DamageModifierStatusEffect
+  - type: CE14DamageModifierStatusEffect
     globalDefence: 1.4

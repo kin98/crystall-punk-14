@@ -1,15 +1,15 @@
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Systems;
-using Content.Shared._CP14.Vampire;
-using Content.Shared._CP14.Vampire.Components;
+using Content.Shared._CE14.Vampire;
+using Content.Shared._CE14.Vampire.Components;
 using Content.Shared.Damage;
 using Robust.Shared.Audio;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.Vampire;
+namespace Content.Server._CE14.Vampire;
 
-public sealed partial class CP14VampireSystem
+public sealed partial class CE14VampireSystem
 {
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
@@ -17,12 +17,12 @@ public sealed partial class CP14VampireSystem
 
     private void InitializeAnnounces()
     {
-        SubscribeLocalEvent<CP14VampireClanHeartComponent, MapInitEvent>(OnHeartCreate);
-        SubscribeLocalEvent<CP14VampireClanHeartComponent, DamageChangedEvent>(OnHeartDamaged);
-        SubscribeLocalEvent<CP14VampireClanHeartComponent, ComponentRemove>(OnHeartDestructed);
+        SubscribeLocalEvent<CE14VampireClanHeartComponent, MapInitEvent>(OnHeartCreate);
+        SubscribeLocalEvent<CE14VampireClanHeartComponent, DamageChangedEvent>(OnHeartDamaged);
+        SubscribeLocalEvent<CE14VampireClanHeartComponent, ComponentRemove>(OnHeartDestructed);
     }
 
-    private void OnHeartCreate(Entity<CP14VampireClanHeartComponent> ent, ref MapInitEvent args)
+    private void OnHeartCreate(Entity<CE14VampireClanHeartComponent> ent, ref MapInitEvent args)
     {
         if (ent.Comp.Faction is null)
             return;
@@ -30,11 +30,11 @@ public sealed partial class CP14VampireSystem
         if (!Proto.TryIndex(ent.Comp.Faction, out var indexedFaction))
             return;
 
-        AnnounceToFaction(ent.Comp.Faction.Value, Loc.GetString("cp14-vampire-tree-created", ("name", Loc.GetString(indexedFaction.Name))));
-        AnnounceToOpposingFactions(ent.Comp.Faction.Value, Loc.GetString("cp14-vampire-tree-created", ("name", Loc.GetString(indexedFaction.Name))));
+        AnnounceToFaction(ent.Comp.Faction.Value, Loc.GetString("CE14-vampire-tree-created", ("name", Loc.GetString(indexedFaction.Name))));
+        AnnounceToOpposingFactions(ent.Comp.Faction.Value, Loc.GetString("CE14-vampire-tree-created", ("name", Loc.GetString(indexedFaction.Name))));
     }
 
-    private void OnHeartDamaged(Entity<CP14VampireClanHeartComponent> ent, ref DamageChangedEvent args)
+    private void OnHeartDamaged(Entity<CE14VampireClanHeartComponent> ent, ref DamageChangedEvent args)
     {
         if (ent.Comp.Faction is null)
             return;
@@ -47,10 +47,10 @@ public sealed partial class CP14VampireSystem
 
         ent.Comp.NextAnnounceTime = _timing.CurTime + ent.Comp.MaxAnnounceFreq;
 
-        AnnounceToFaction(ent.Comp.Faction.Value, Loc.GetString("cp14-vampire-tree-damaged"));
+        AnnounceToFaction(ent.Comp.Faction.Value, Loc.GetString("CE14-vampire-tree-damaged"));
     }
 
-    private void OnHeartDestructed(Entity<CP14VampireClanHeartComponent> ent, ref ComponentRemove args)
+    private void OnHeartDestructed(Entity<CE14VampireClanHeartComponent> ent, ref ComponentRemove args)
     {
         if (ent.Comp.Faction is null)
             return;
@@ -58,14 +58,14 @@ public sealed partial class CP14VampireSystem
         if (!Proto.TryIndex(ent.Comp.Faction, out var indexedFaction))
             return;
 
-        AnnounceToFaction(ent.Comp.Faction.Value, Loc.GetString("cp14-vampire-tree-destroyed-self"));
-        AnnounceToOpposingFactions(ent.Comp.Faction.Value, Loc.GetString("cp14-vampire-tree-destroyed", ("name", Loc.GetString(indexedFaction.Name))));
+        AnnounceToFaction(ent.Comp.Faction.Value, Loc.GetString("CE14-vampire-tree-destroyed-self"));
+        AnnounceToOpposingFactions(ent.Comp.Faction.Value, Loc.GetString("CE14-vampire-tree-destroyed", ("name", Loc.GetString(indexedFaction.Name))));
     }
 
-    public void AnnounceToFaction(ProtoId<CP14VampireFactionPrototype> faction, string message)
+    public void AnnounceToFaction(ProtoId<CE14VampireFactionPrototype> faction, string message)
     {
         var filter = Filter.Empty();
-        var query = EntityQueryEnumerator<CP14VampireComponent, ActorComponent>();
+        var query = EntityQueryEnumerator<CE14VampireComponent, ActorComponent>();
 
         while (query.MoveNext(out var uid, out var vampire, out var actor))
         {
@@ -81,10 +81,10 @@ public sealed partial class CP14VampireSystem
         VampireAnnounce(filter, message);
     }
 
-    public void AnnounceToOpposingFactions(ProtoId<CP14VampireFactionPrototype> faction, string message)
+    public void AnnounceToOpposingFactions(ProtoId<CE14VampireFactionPrototype> faction, string message)
     {
         var filter = Filter.Empty();
-        var query = EntityQueryEnumerator<CP14VampireComponent, ActorComponent>();
+        var query = EntityQueryEnumerator<CE14VampireComponent, ActorComponent>();
 
         while (query.MoveNext(out var uid, out var vampire, out var actor))
         {
@@ -107,8 +107,8 @@ public sealed partial class CP14VampireSystem
         _chat.DispatchFilteredAnnouncement(
             players,
             message,
-            sender: Loc.GetString("cp14-vampire-sender"),
-            announcementSound: new SoundPathSpecifier("/Audio/_CP14/Announce/vampire.ogg"),
+            sender: Loc.GetString("CE14-vampire-sender"),
+            announcementSound: new SoundPathSpecifier("/Audio/_CE14/Announce/vampire.ogg"),
             colorOverride: Color.FromHex("#820e22"));
     }
 }

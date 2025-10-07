@@ -1,15 +1,15 @@
 # Admeme spawn only for now
 - type: entity
-  parent: CP14ClothingHeadBase
-  id: CP14ClothingHeadSlimeCrown
+  parent: CE14ClothingHeadBase
+  id: CE14ClothingHeadSlimeCrown
   name: slime crown
   description: Earl of Ooze. Grand Duke of Goo. Lord of the Slimes.
   categories: [ DoNotMap ]
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/slime_crown.rsi
+    sprite: _CE14/Clothing/Head/slime_crown.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/slime_crown.rsi
+    sprite: _CE14/Clothing/Head/slime_crown.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -19,7 +19,7 @@
         Shock: 0.9
         Caustic: 0.9
   - type: FactionClothing
-    faction: CP14Slimes
+    faction: CE14Slimes
   - type: Storage
     grid:
     - 0,0,0,0
@@ -33,26 +33,26 @@
 
 - type: entity
   parent: 
-  - CP14ClothingHeadBase
+  - CE14ClothingHeadBase
   - FoodProduceBase
-  id: CP14ClothingHeadaAgaricHelmet
+  id: CE14ClothingHeadaAgaricHelmet
   name: agaric helmet
   description: The severed head of a myconid in the form of a headdress. Terrify the mushroom people.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Head/amanita_helmet.rsi
+    sprite: _CE14/Clothing/Head/amanita_helmet.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Head/amanita_helmet.rsi
+    sprite: _CE14/Clothing/Head/amanita_helmet.rsi
   - type: BadFood
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: CP14AgaricMushroom
+      - ReagentId: CE14AgaricMushroom
         Quantity: 7
   - type: SolutionContainerManager
     solutions:
       food:
         maxVol: 8
         reagents:
-        - ReagentId: CP14AgaricMushroom
+        - ReagentId: CE14AgaricMushroom
           Quantity: 7

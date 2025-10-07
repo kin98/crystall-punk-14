@@ -1,14 +1,14 @@
 - type: entity
-  id: CP14WallmauntGarlandBase
+  id: CE14WallmauntGarlandBase
   abstract: true
   parent:
-  - CP14BaseWallmount
+  - CE14BaseWallmount
   categories: [ ForkFiltered ]
   name: crystals garland
   description: Carefully crafted sparkling crystals tied on a string. For a festive attitude.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Decoration/garland_wallmount.rsi
+    sprite: _CE14/Structures/Decoration/garland_wallmount.rsi
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Glass
@@ -32,8 +32,8 @@
         collection: GlassSmash
 
 - type: entity
-  parent: CP14WallmauntGarlandBase
-  id: CP14WallmountGarlandRed
+  parent: CE14WallmauntGarlandBase
+  id: CE14WallmountGarlandRed
   suffix: Red
   components:
   - type: Sprite
@@ -46,8 +46,8 @@
     color: "#ff3d0b"
 
 - type: entity
-  parent: CP14WallmauntGarlandBase
-  id: CP14WallmountGarlandYellow
+  parent: CE14WallmauntGarlandBase
+  id: CE14WallmountGarlandYellow
   suffix: Yellow
   components:
   - type: Sprite
@@ -60,8 +60,8 @@
     color: "#ffe269"
 
 - type: entity
-  parent: CP14WallmauntGarlandBase
-  id: CP14WallmountGarlandGreen
+  parent: CE14WallmauntGarlandBase
+  id: CE14WallmountGarlandGreen
   suffix: Green
   components:
   - type: Sprite
@@ -74,8 +74,8 @@
     color: "#30be81"
 
 - type: entity
-  parent: CP14WallmauntGarlandBase
-  id: CP14WallmountGarlandPurple
+  parent: CE14WallmauntGarlandBase
+  id: CE14WallmountGarlandPurple
   suffix: Purple
   components:
   - type: Sprite
@@ -88,8 +88,8 @@
     color: "#a878d1"
 
 - type: entity
-  parent: CP14WallmauntGarlandBase
-  id: CP14WallmountGarlandBlue
+  parent: CE14WallmauntGarlandBase
+  id: CE14WallmountGarlandBlue
   suffix: Blue
   components:
   - type: Sprite

@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14CookerBase
+  id: CE14CookerBase
   parent: BaseStorageItem
   categories: [ ForkFiltered ]
   abstract: true
@@ -13,11 +13,11 @@
         base:
           True: { state: opened }
           False: { state: closed }
-      enum.CP14CookingVisuals.Cooking:
+      enum.CE14CookingVisuals.Cooking:
         cook:
           True: { visible: true }
           False: { visible: false }
-      enum.CP14CookingVisuals.Burning:
+      enum.CE14CookingVisuals.Burning:
         burn:
           True: { visible: true }
           False: { visible: false }
@@ -34,12 +34,12 @@
         - Food
         - Edible
       tags:
-        - CP14FitInFryingPan #Todo delete this tag from game
-    cP14Ignorelist:
+        - CE14FitInFryingPan #Todo delete this tag from game
+    CE14Ignorelist:
       components:
-        - CP14FoodHolder
+        - CE14FoodHolder
         - FoodSequenceStartPoint
-  - type: CP14FoodCooker
+  - type: CE14FoodCooker
     containerId: storagebase
   - type: Temperature
   - type: DoAfter

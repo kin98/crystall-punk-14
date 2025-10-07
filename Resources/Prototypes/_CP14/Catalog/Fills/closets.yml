@@ -1,130 +1,130 @@
 - type: entity
-  parent: CP14WoodenCloset
-  id: CP14WoodenClosetAlchemyFilled
+  parent: CE14WoodenCloset
+  id: CE14WoodenClosetAlchemyFilled
   suffix: Alchemist, Filled
   components:
   - type: StorageFill
     contents:
-      - id: CP14WeaponDaggerSickle
+      - id: CE14WeaponDaggerSickle
         amount: 2
-      - id: CP14HandLabeler
-      - id: CP14Lighter
-      - id: CP14ManaOperationGlove
-      - id: CP14Syringe
+      - id: CE14HandLabeler
+      - id: CE14Lighter
+      - id: CE14ManaOperationGlove
+      - id: CE14Syringe
         amount: 2
-      - id: CP14Cauldron
-      - id: CP14Pestle
+      - id: CE14Cauldron
+      - id: CE14Pestle
         amount: 1
-      - id: CP14Mortar
+      - id: CE14Mortar
         amount: 1
-      - id: CP14Dropper
+      - id: CE14Dropper
         amount: 1
-      - id: CP14VialTiny
+      - id: CE14VialTiny
         amount: 3
-      - id: CP14VialSmall
+      - id: CE14VialSmall
         amount: 3
-      - id: CP14VialSkull
+      - id: CE14VialSkull
         prob: 0.5
-      - id: CP14PaperFolderBlue
-      - id: CP14PenFeather
+      - id: CE14PaperFolderBlue
+      - id: CE14PenFeather
         amount: 1
-      - id: CP14WoodenPlanks20
-      - id: CP14VialMediumEarthEssence
-      - id: CP14VialMediumFireEssence
-      - id: CP14VialMediumWaterEssence
-      - id: CP14VialMediumAirEssence
-      - id: CP14VialMediumOrderEssence
-      - id: CP14VialMediumChaosEssence
+      - id: CE14WoodenPlanks20
+      - id: CE14VialMediumEarthEssence
+      - id: CE14VialMediumFireEssence
+      - id: CE14VialMediumWaterEssence
+      - id: CE14VialMediumAirEssence
+      - id: CE14VialMediumOrderEssence
+      - id: CE14VialMediumChaosEssence
 
 - type: entity
-  parent: CP14WoodenCloset
-  id: CP14WoodenClosetMerchantFilled
+  parent: CE14WoodenCloset
+  id: CE14WoodenClosetMerchantFilled
   suffix: Merchant, Filled
   components:
   - type: StorageFill
     contents:
-      - id: CP14HandLabeler
-      - id: CP14StampDenied
-      - id: CP14StampApproved
-      - id: CP14ManaOperationGlove
-      - id: CP14PaperFolderRed
+      - id: CE14HandLabeler
+      - id: CE14StampDenied
+      - id: CE14StampApproved
+      - id: CE14ManaOperationGlove
+      - id: CE14PaperFolderRed
         amount: 2
-      - id: CP14PaperFolderBlue
+      - id: CE14PaperFolderBlue
         amount: 2
-      - id: CP14PaperFolderRed
+      - id: CE14PaperFolderRed
         prob: 0.5
-      - id: CP14PaperFolderBlue
+      - id: CE14PaperFolderBlue
         prob: 0.5
-      - id: CP14Paper
+      - id: CE14Paper
         amount: 2
-      - id: CP14PenFeather
+      - id: CE14PenFeather
         amount: 2
-      - id: CP14Inkwell
+      - id: CE14Inkwell
         prob: 0.2
-      - id: CP14CopperCoin5
+      - id: CE14CopperCoin5
         prob: 0.2
-      - id: CP14SilverCoin1
+      - id: CE14SilverCoin1
         prob: 0.2
 
 - type: entity
-  parent: CP14WoodenCloset
-  id: CP14WoodenClosetBlacksmithFilled
+  parent: CE14WoodenCloset
+  id: CE14WoodenClosetBlacksmithFilled
   suffix: Blacksmith, Filled
   components:
   - type: StorageFill
     contents:
-      - id: CP14HandLabeler
-      - id: CP14WoodenPlanks20
-      - id: CP14CopperBar10
-      - id: CP14CopperBar10
-      - id: CP14IronBar10
-      - id: CP14PaperFolderRed
-      - id: CP14PenFeather
+      - id: CE14HandLabeler
+      - id: CE14WoodenPlanks20
+      - id: CE14CopperBar10
+      - id: CE14CopperBar10
+      - id: CE14IronBar10
+      - id: CE14PaperFolderRed
+      - id: CE14PenFeather
 
 - type: entity
-  parent: CP14WoodenCloset
-  id: CP14WoodenClosetGuildmasterFilled
+  parent: CE14WoodenCloset
+  id: CE14WoodenClosetGuildmasterFilled
   suffix: Guildmaster, Filled
   components:
   - type: StorageFill
     contents:
-      - id: CP14StampGuildmaster
-      - id: CP14HandLabeler
-      - id: CP14StampDenied
-      - id: CP14StampApproved
-      - id: CP14PaperFolderBlue
-      - id: CP14ClothingHeadGuildBeretRed
-      - id: CP14ClothingHeadGuildBeretYellow
-      - id: CP14ClothingHeadGuildBeretBlue
-      - id: CP14ClothingHeadGuildBeretGreen
-      - id: CP14GuildSignRed
-      - id: CP14GuildSignYellow
-      - id: CP14GuildSignGreen
-      - id: CP14GuildSignBlue
+      - id: CE14StampGuildmaster
+      - id: CE14HandLabeler
+      - id: CE14StampDenied
+      - id: CE14StampApproved
+      - id: CE14PaperFolderBlue
+      - id: CE14ClothingHeadGuildBeretRed
+      - id: CE14ClothingHeadGuildBeretYellow
+      - id: CE14ClothingHeadGuildBeretBlue
+      - id: CE14ClothingHeadGuildBeretGreen
+      - id: CE14GuildSignRed
+      - id: CE14GuildSignYellow
+      - id: CE14GuildSignGreen
+      - id: CE14GuildSignBlue
 
 - type: entity
-  parent: CP14WoodenCloset
-  id: CP14WoodenClosetChefFilled
+  parent: CE14WoodenCloset
+  id: CE14WoodenClosetChefFilled
   suffix: Chef, Filled
   components:
   - type: StorageFill
     contents:
-      - id: CP14WeaponFork
+      - id: CE14WeaponFork
         amount: 2
-      - id: CP14Fork
+      - id: CE14Fork
         amount: 2
-      - id: CP14Spoon
+      - id: CE14Spoon
         amount: 2
-      - id: CP14WeaponDaggerHatchet
+      - id: CE14WeaponDaggerHatchet
         amount: 2
-      - id: CP14FryingPan
-      - id: CP14CookingPot
-      - id: CP14PlateWooden
+      - id: CE14FryingPan
+      - id: CE14CookingPot
+      - id: CE14PlateWooden
         amount: 2
-      - id: CP14BowlWooden
+      - id: CE14BowlWooden
         amount: 2
-      - id: CP14BookTieflingGambit
-      - id: CP14GuidebookCooking
-      - id: CP14SackFarmingSeedFull
-      - id: CP14SackFarmingSeedSnail
+      - id: CE14BookTieflingGambit
+      - id: CE14GuidebookCooking
+      - id: CE14SackFarmingSeedFull
+      - id: CE14SackFarmingSeedSnail
         prob: 0.6

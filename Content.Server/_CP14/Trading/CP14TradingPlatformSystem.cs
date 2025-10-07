@@ -1,9 +1,9 @@
-using Content.Server._CP14.Currency;
+using Content.Server._CE14.Currency;
 using Content.Server.Cargo.Systems;
-using Content.Shared._CP14.Trading;
-using Content.Shared._CP14.Trading.Components;
-using Content.Shared._CP14.Trading.Prototypes;
-using Content.Shared._CP14.Trading.Systems;
+using Content.Shared._CE14.Trading;
+using Content.Shared._CE14.Trading.Components;
+using Content.Shared._CE14.Trading.Prototypes;
+using Content.Shared._CE14.Trading.Systems;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Placeable;
 using Content.Shared.Popups;
@@ -15,15 +15,15 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.Trading;
+namespace Content.Server._CE14.Trading;
 
-public sealed partial class CP14TradingPlatformSystem : CP14SharedTradingPlatformSystem
+public sealed partial class CE14TradingPlatformSystem : CE14SharedTradingPlatformSystem
 {
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly PricingSystem _price = default!;
-    [Dependency] private readonly CP14CurrencySystem _cp14Currency = default!;
-    [Dependency] private readonly CP14StationEconomySystem _economy = default!;
+    [Dependency] private readonly CE14CurrencySystem _CE14Currency = default!;
+    [Dependency] private readonly CE14StationEconomySystem _economy = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
 
@@ -31,17 +31,17 @@ public sealed partial class CP14TradingPlatformSystem : CP14SharedTradingPlatfor
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14TradingPlatformComponent, CP14TradingPositionBuyAttempt>(OnBuyAttempt);
+        SubscribeLocalEvent<CE14TradingPlatformComponent, CE14TradingPositionBuyAttempt>(OnBuyAttempt);
 
-        SubscribeLocalEvent<CP14SellingPlatformComponent, BeforeActivatableUIOpenEvent>(OnBeforeSellingUIOpen);
-        SubscribeLocalEvent<CP14SellingPlatformComponent, ItemPlacedEvent>(OnItemPlaced);
-        SubscribeLocalEvent<CP14SellingPlatformComponent, ItemRemovedEvent>(OnItemRemoved);
+        SubscribeLocalEvent<CE14SellingPlatformComponent, BeforeActivatableUIOpenEvent>(OnBeforeSellingUIOpen);
+        SubscribeLocalEvent<CE14SellingPlatformComponent, ItemPlacedEvent>(OnItemPlaced);
+        SubscribeLocalEvent<CE14SellingPlatformComponent, ItemRemovedEvent>(OnItemRemoved);
 
-        SubscribeLocalEvent<CP14SellingPlatformComponent, CP14TradingSellAttempt>(OnSellAttempt);
-        SubscribeLocalEvent<CP14SellingPlatformComponent, CP14TradingRequestSellAttempt>(OnSellRequestAttempt);
+        SubscribeLocalEvent<CE14SellingPlatformComponent, CE14TradingSellAttempt>(OnSellAttempt);
+        SubscribeLocalEvent<CE14SellingPlatformComponent, CE14TradingRequestSellAttempt>(OnSellRequestAttempt);
     }
 
-    private void OnSellAttempt(Entity<CP14SellingPlatformComponent> ent, ref CP14TradingSellAttempt args)
+    private void OnSellAttempt(Entity<CE14SellingPlatformComponent> ent, ref CE14TradingSellAttempt args)
     {
         if (!TryComp<ItemPlacerComponent>(ent, out var itemPlacer))
             return;
@@ -65,13 +65,13 @@ public sealed partial class CP14TradingPlatformSystem : CP14SharedTradingPlatfor
             return;
 
         _audio.PlayPvs(ent.Comp.SellSound, Transform(ent).Coordinates);
-        _cp14Currency.GenerateMoney(balance * ent.Comp.PlatformMarkupProcent, Transform(ent).Coordinates);
+        _CE14Currency.GenerateMoney(balance * ent.Comp.PlatformMarkupProcent, Transform(ent).Coordinates);
         SpawnAtPosition(ent.Comp.SellVisual, Transform(ent).Coordinates);
 
         UpdateSellingUIState(ent);
     }
 
-    private void OnSellRequestAttempt(Entity<CP14SellingPlatformComponent> ent, ref CP14TradingRequestSellAttempt args)
+    private void OnSellRequestAttempt(Entity<CE14SellingPlatformComponent> ent, ref CE14TradingRequestSellAttempt args)
     {
         if (!TryComp<ItemPlacerComponent>(ent, out var itemPlacer))
             return;
@@ -92,35 +92,35 @@ public sealed partial class CP14TradingPlatformSystem : CP14SharedTradingPlatfor
 
         _audio.PlayPvs(ent.Comp.SellSound, Transform(ent).Coordinates);
         var price = _economy.GetPrice(indexedRequest) * ent.Comp.PlatformMarkupProcent ?? 0;
-        _cp14Currency.GenerateMoney(price, Transform(ent).Coordinates);
+        _CE14Currency.GenerateMoney(price, Transform(ent).Coordinates);
         AddReputation(args.Actor, args.Faction, price * indexedRequest.ReputationCashback);
         SpawnAtPosition(ent.Comp.SellVisual, Transform(ent).Coordinates);
 
         UpdateSellingUIState(ent);
     }
 
-    private void OnItemRemoved(Entity<CP14SellingPlatformComponent> ent, ref ItemRemovedEvent args)
+    private void OnItemRemoved(Entity<CE14SellingPlatformComponent> ent, ref ItemRemovedEvent args)
     {
         UpdateSellingUIState(ent);
     }
 
-    private void OnItemPlaced(Entity<CP14SellingPlatformComponent> ent, ref ItemPlacedEvent args)
+    private void OnItemPlaced(Entity<CE14SellingPlatformComponent> ent, ref ItemPlacedEvent args)
     {
         UpdateSellingUIState(ent);
     }
 
-    private void OnBuyAttempt(Entity<CP14TradingPlatformComponent> ent, ref CP14TradingPositionBuyAttempt args)
+    private void OnBuyAttempt(Entity<CE14TradingPlatformComponent> ent, ref CE14TradingPositionBuyAttempt args)
     {
         TryBuyPosition(args.Actor, ent, args.Position);
         UpdateTradingUIState(ent, args.Actor);
     }
 
-    private void OnBeforeSellingUIOpen(Entity<CP14SellingPlatformComponent> ent, ref BeforeActivatableUIOpenEvent args)
+    private void OnBeforeSellingUIOpen(Entity<CE14SellingPlatformComponent> ent, ref BeforeActivatableUIOpenEvent args)
     {
         UpdateSellingUIState(ent);
     }
 
-    private void UpdateSellingUIState(Entity<CP14SellingPlatformComponent> ent)
+    private void UpdateSellingUIState(Entity<CE14SellingPlatformComponent> ent)
     {
         if (!TryComp<ItemPlacerComponent>(ent, out var itemPlacer))
             return;
@@ -135,12 +135,12 @@ public sealed partial class CP14TradingPlatformSystem : CP14SharedTradingPlatfor
             balance += _price.GetPrice(placed);
         }
 
-        _userInterface.SetUiState(ent.Owner, CP14TradingUiKey.Sell, new CP14SellingPlatformUiState(GetNetEntity(ent), (int)(balance * ent.Comp.PlatformMarkupProcent)));
+        _userInterface.SetUiState(ent.Owner, CE14TradingUiKey.Sell, new CE14SellingPlatformUiState(GetNetEntity(ent), (int)(balance * ent.Comp.PlatformMarkupProcent)));
     }
 
     public bool CanSell(EntityUid uid)
     {
-        if (_tag.HasTag(uid, "CP14Coin")) //Boo hardcoding
+        if (_tag.HasTag(uid, "CE14Coin")) //Boo hardcoding
             return false;
         if (HasComp<MobStateComponent>(uid))
             return false;
@@ -150,13 +150,13 @@ public sealed partial class CP14TradingPlatformSystem : CP14SharedTradingPlatfor
             return false;
 
         var proto = MetaData(uid).EntityPrototype;
-        if (proto != null && !proto.ID.StartsWith("CP14")) //Shitfix, we dont wanna sell anything vanilla (like mob organs)
+        if (proto != null && !proto.ID.StartsWith("CE14")) //Shitfix, we dont wanna sell anything vanilla (like mob organs)
             return false;
 
         return true;
     }
 
-    public bool TryBuyPosition(Entity<CP14TradingReputationComponent?> user, Entity<CP14TradingPlatformComponent> platform, ProtoId<CP14TradingPositionPrototype> position)
+    public bool TryBuyPosition(Entity<CE14TradingReputationComponent?> user, Entity<CE14TradingPlatformComponent> platform, ProtoId<CE14TradingPositionPrototype> position)
     {
         if (Timing.CurTime < platform.Comp.NextBuyTime)
             return false;
@@ -186,7 +186,7 @@ public sealed partial class CP14TradingPlatformSystem : CP14SharedTradingPlatfor
         if (balance < price)
         {
             // Not enough balance to buy the position
-            _popup.PopupEntity(Loc.GetString("cp14-trading-failure-popup-money"), platform);
+            _popup.PopupEntity(Loc.GetString("CE14-trading-failure-popup-money"), platform);
             return false;
         }
 
@@ -210,7 +210,7 @@ public sealed partial class CP14TradingPlatformSystem : CP14SharedTradingPlatfor
         _audio.PlayPvs(platform.Comp.BuySound, Transform(platform).Coordinates);
 
         //return the change
-        _cp14Currency.GenerateMoney(balance, Transform(platform).Coordinates);
+        _CE14Currency.GenerateMoney(balance, Transform(platform).Coordinates);
         SpawnAtPosition(platform.Comp.BuyVisual, Transform(platform).Coordinates);
         return true;
     }

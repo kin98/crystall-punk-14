@@ -14,25 +14,25 @@ orphans: []
 nullspace: []
 tilemap:
   0: Space
-  21: CP14FloorBase
-  20: CP14FloorCobblestone
-  25: CP14FloorDirt
-  9: CP14FloorFoundation
-  13: CP14FloorGrass
-  14: CP14FloorGrassLight
-  15: CP14FloorGrassTall
-  26: CP14FloorMycelium
-  27: CP14FloorMyceliumLight
-  10: CP14FloorOakWoodPlanksBig
-  12: CP14FloorOakWoodPlanksBroken
-  11: CP14FloorOakWoodPlanksCruciform
-  22: CP14FloorSnow
-  23: CP14FloorSnowDeep
-  24: CP14FloorSnowDeepDeep
-  17: CP14FloorStonebricks
-  16: CP14FloorStonebricksSmallCarved1
-  19: CP14FloorStonebricksSmallCarved2
-  18: CP14FloorStonebricksSquareCarved
+  21: CE14FloorBase
+  20: CE14FloorCobblestone
+  25: CE14FloorDirt
+  9: CE14FloorFoundation
+  13: CE14FloorGrass
+  14: CE14FloorGrassLight
+  15: CE14FloorGrassTall
+  26: CE14FloorMycelium
+  27: CE14FloorMyceliumLight
+  10: CE14FloorOakWoodPlanksBig
+  12: CE14FloorOakWoodPlanksBroken
+  11: CE14FloorOakWoodPlanksCruciform
+  22: CE14FloorSnow
+  23: CE14FloorSnowDeep
+  24: CE14FloorSnowDeepDeep
+  17: CE14FloorStonebricks
+  16: CE14FloorStonebricksSmallCarved1
+  19: CE14FloorStonebricksSmallCarved2
+  18: CE14FloorStonebricksSquareCarved
   2: FloorAsteroidSand
   6: FloorAsteroidSandUnvariantized
   5: FloorAsteroidTile
@@ -131,7 +131,7 @@ entities:
     - type: SpreaderGrid
     - type: GridPathfinding
     - type: RadiationGridResistance
-- proto: CP14DemiplaneEnterPointMarker
+- proto: CE14DemiplaneEnterPointMarker
   entities:
   - uid: 2
     components:
@@ -158,7 +158,7 @@ entities:
     - type: Transform
       pos: 27.5,3.5
       parent: 1
-- proto: CP14WallDimensit
+- proto: CE14WallDimensit
   entities:
   - uid: 4
     components:
@@ -375,7 +375,7 @@ entities:
     - type: Transform
       pos: 1.5,2.5
       parent: 1
-- proto: CP14WallFrameStonebrick
+- proto: CE14WallFrameStonebrick
   entities:
   - uid: 15
     components:
@@ -442,7 +442,7 @@ entities:
     - type: Transform
       pos: 9.5,4.5
       parent: 1
-- proto: CP14WallStonebrickOld
+- proto: CE14WallStonebrickOld
   entities:
   - uid: 3
     components:

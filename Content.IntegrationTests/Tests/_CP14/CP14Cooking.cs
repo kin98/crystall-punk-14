@@ -5,21 +5,21 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Content.Shared._CP14.Cooking;
-using Content.Shared._CP14.Cooking.Prototypes;
-using Content.Shared._CP14.Cooking.Requirements;
+using Content.Shared._CE14.Cooking;
+using Content.Shared._CE14.Cooking.Prototypes;
+using Content.Shared._CE14.Cooking.Requirements;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Tag;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.IntegrationTests.Tests._CP14;
+namespace Content.IntegrationTests.Tests._CE14;
 
 #nullable enable
 
 [TestFixture]
-public sealed class CP14Cooking
+public sealed class CE14Cooking
 {
     [Test]
     public async Task TestAllCookingRecipeIsCookable()
@@ -30,13 +30,13 @@ public sealed class CP14Cooking
         var entManager = server.ResolveDependency<IEntityManager>();
         var protoMan = server.ResolveDependency<IPrototypeManager>();
 
-        var cookSys = entManager.System<CP14SharedCookingSystem>();
+        var cookSys = entManager.System<CE14SharedCookingSystem>();
 
         await server.WaitAssertion(() =>
         {
             Assert.Multiple(() =>
             {
-                foreach (var recipe in protoMan.EnumeratePrototypes<CP14CookingRecipePrototype>())
+                foreach (var recipe in protoMan.EnumeratePrototypes<CE14CookingRecipePrototype>())
                 {
                     var solution = new Solution();
                     var allTags = new List<ProtoId<TagPrototype>>();

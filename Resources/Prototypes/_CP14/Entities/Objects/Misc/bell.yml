@@ -1,12 +1,12 @@
 - type: entity
   parent: BaseItem
-  id: CP14Bell
+  id: CE14Bell
   name: bell
   description: A regular bell with a handle to attract attention.
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Misc/bell.rsi
+    sprite: _CE14/Objects/Misc/bell.rsi
     state: icon
   - type: Tag
     tags:
@@ -16,26 +16,26 @@
   - type: InteractionPopup
     successChance: 1
     interactSuccessSound:
-      path: /Audio/_CP14/Effects/bell.ogg
+      path: /Audio/_CE14/Effects/bell.ogg
       params:
         variation: 0.03
         volume: 3
     onActivate: true
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_CP14/Effects/bell.ogg
+      path: /Audio/_CE14/Effects/bell.ogg
       params:
           variation: 0.03
           volume: 3
   - type: EmitSoundOnTrigger
     sound:
-      path: /Audio/_CP14/Effects/bell.ogg
+      path: /Audio/_CE14/Effects/bell.ogg
       params:
           variation: 0.03
           volume: 3
   - type: EmitSoundOnLand
     sound:
-      path: /Audio/_CP14/Effects/bell_short.ogg
+      path: /Audio/_CE14/Effects/bell_short.ogg
       params:
           variation: 0.03
           volume: 3
@@ -44,7 +44,7 @@
   - type: MeleeWeapon
     wideAnimationRotation: 180
     soundHit:
-      path: /Audio/_CP14/Effects/bell_short.ogg
+      path: /Audio/_CE14/Effects/bell_short.ogg
       params:
           variation: 0.03
           volume: 3

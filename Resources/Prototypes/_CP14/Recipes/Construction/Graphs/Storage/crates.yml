@@ -1,19 +1,19 @@
 - type: constructionGraph
-  id: CP14SmallWoodenCrate
+  id: CE14SmallWoodenCrate
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14SmallWoodenCrate
+        - to: CE14SmallWoodenCrate
           completed:
             - !type:SnapToGrid
           steps:
             - stackGroup: WoodenPlanks
               amount: 1
-    - node: CP14SmallWoodenCrate
-      entity: CP14SmallWoodenCrate
+    - node: CE14SmallWoodenCrate
+      entity: CE14SmallWoodenCrate
       edges:
         - to: start
           steps:
@@ -21,25 +21,25 @@
               doAfter: 2
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 1
 
 - type: constructionGraph
-  id: CP14LargeWoodenCrate
+  id: CE14LargeWoodenCrate
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14LargeWoodenCrate
+        - to: CE14LargeWoodenCrate
           completed:
             - !type:SnapToGrid
           steps:
             - stackGroup: WoodenPlanks
               amount: 2
-    - node: CP14LargeWoodenCrate
-      entity: CP14LargeWoodenCrate
+    - node: CE14LargeWoodenCrate
+      entity: CE14LargeWoodenCrate
       edges:
         - to: start
           steps:
@@ -47,5 +47,5 @@
               doAfter: 2
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 2

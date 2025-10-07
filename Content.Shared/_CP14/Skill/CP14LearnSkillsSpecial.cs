@@ -1,18 +1,18 @@
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Prototypes;
 using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill;
+namespace Content.Shared._CE14.Skill;
 
-public sealed partial class CP14LearnSkillsSpecial : JobSpecial
+public sealed partial class CE14LearnSkillsSpecial : JobSpecial
 {
     [DataField]
-    public HashSet<ProtoId<CP14SkillPrototype>> Skills { get; private set; } = new();
+    public HashSet<ProtoId<CE14SkillPrototype>> Skills { get; private set; } = new();
 
     public override void AfterEquip(EntityUid mob)
     {
         var entMan = IoCManager.Resolve<IEntityManager>();
-        var skillSys = entMan.System<CP14SharedSkillSystem>();
+        var skillSys = entMan.System<CE14SharedSkillSystem>();
 
         foreach (var skill in Skills)
         {

@@ -1,11 +1,11 @@
 - type: entity
   save: false
-  id: CP14MobDamageable
+  id: CE14MobDamageable
   categories: [ ForkFiltered ]
   abstract: true
   components:
   - type: Damageable
-    damageContainer: CP14Biological
+    damageContainer: CE14Biological
   - type: Destructible
     thresholds:
     - trigger:
@@ -22,7 +22,7 @@
       - !type:SpawnEntitiesBehavior
         spawnInContainer: true
         spawn:
-          CP14Ash1:
+          CE14Ash1:
             min: 2
             max: 3
       - !type:BurnBodyBehavior { }
@@ -52,7 +52,7 @@
     - Shock
     - Cold
     - Caustic
-    - CP14ManaDepletion
+    - CE14ManaDepletion
   - type: DamageOnHighSpeedImpact
     damage:
       types:
@@ -63,7 +63,7 @@
 
 # Used for mobs that need food & water for life
 - type: entity
-  id: CP14MobStarving
+  id: CE14MobStarving
   abstract: true
   categories: [ ForkFiltered ]
   components:
@@ -75,24 +75,24 @@
   - type: Thirst
 
 - type: entity
-  id: CP14MobMagical
+  id: CE14MobMagical
   abstract: true
   categories: [ ForkFiltered ]
   components:
-  - type: CP14MagicEnergyContainer
-    magicAlert: CP14MagicEnergy
+  - type: CE14MagicEnergyContainer
+    magicAlert: CE14MagicEnergy
     maxEnergy: 100
     energy: 100
     unsafeSupport: true
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 1
     delay: 3 # 5m to full restore
-  - type: CP14MagicUnsafeDamage
-  - type: CP14MagicUnsafeSleep
-  - type: CP14AuraImprint
+  - type: CE14MagicUnsafeDamage
+  - type: CE14MagicUnsafeSleep
+  - type: CE14AuraImprint
 
 - type: entity
-  id: CP14MobTemperature
+  id: CE14MobTemperature
   abstract: true
   categories: [ ForkFiltered ]
   components:

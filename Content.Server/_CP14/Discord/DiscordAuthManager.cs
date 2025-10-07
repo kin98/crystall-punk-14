@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Database;
-using Content.Shared._CP14.Discord;
+using Content.Shared._CE14.Discord;
 using Content.Shared.CCVar;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
@@ -15,7 +15,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 
-namespace Content.Server._CP14.Discord;
+namespace Content.Server._CE14.Discord;
 
 public sealed class DiscordAuthManager
 {
@@ -116,7 +116,7 @@ public sealed class DiscordAuthManager
         var guildsVerified = await CheckGuilds(userId, cancel);
 
         if (!verified)
-            return new AuthData { Verified = false, ErrorMessage = Loc.GetString("cp14-discord-info")};
+            return new AuthData { Verified = false, ErrorMessage = Loc.GetString("CE14-discord-info")};
 
         return guildsVerified;
     }

@@ -2,7 +2,7 @@
 # Эльфы
 
 <Box>
-<GuideEntityEmbed Entity="CP14MobElf" Caption="Эльф"/>
+<GuideEntityEmbed Entity="CE14MobElf" Caption="Эльф"/>
 </Box>
 
 Эльфы - раса очень сильно похожая на людей однако не имеющая общих предков. Можно встретить в любом уголке Силейты но чаще всего проживают у лесов или заповедников.
@@ -14,7 +14,7 @@
 Единственный способ для эльфов регенерировать магию — это использовать их расовую способность: Мана-транс.
 
 <Box>
-<GuideEntityEmbed Entity="CP14ActionSpellManaTrance" Caption="Mana Trance"/>
+<GuideEntityEmbed Entity="CE14ActionSpellManaTrance" Caption="Mana Trance"/>
 </Box>
 
 Так же, эльфы имеют базовую и продвинутую метамагию с начала раунда.

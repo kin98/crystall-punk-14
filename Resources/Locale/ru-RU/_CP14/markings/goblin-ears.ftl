@@ -1,3 +1,3 @@
-marking-CP14GoblinEars = Большой ух
-marking-CP14GoblinEars2 = Вислоухий
-marking-CP14GoblinEars3 = Округления
+marking-CE14GoblinEars = Большой ух
+marking-CE14GoblinEars2 = Вислоухий
+marking-CE14GoblinEars3 = Округления

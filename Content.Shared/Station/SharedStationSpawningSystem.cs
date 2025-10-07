@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Shared._CP14.Skill;
+using Content.Shared._CE14.Skill;
 using Content.Shared.Actions;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
@@ -25,8 +25,8 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly SharedStorageSystem _storage = default!;
     [Dependency] private readonly SharedTransformSystem _xformSystem = default!;
-    [Dependency] private readonly SharedActionsSystem _action = default!; //CP14
-    [Dependency] private readonly CP14SharedSkillSystem _skill = default!; //CP14
+    [Dependency] private readonly SharedActionsSystem _action = default!; //CE14
+    [Dependency] private readonly CE14SharedSkillSystem _skill = default!; //CE14
 
     private EntityQuery<HandsComponent> _handsQuery;
     private EntityQuery<InventoryComponent> _inventoryQuery;
@@ -92,10 +92,10 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     {
         EquipStartingGear(entity, loadout.StartingGear, raiseEvent);
         EquipStartingGear(entity, (IEquipmentLoadout) loadout, raiseEvent);
-        CP14EquipStartingActions(entity, loadout); //CP14
+        CE14EquipStartingActions(entity, loadout); //CE14
     }
 
-    private void CP14EquipStartingActions(EntityUid entity, LoadoutPrototype loadout)
+    private void CE14EquipStartingActions(EntityUid entity, LoadoutPrototype loadout)
     {
         foreach (var skill in loadout.Skills)
         {

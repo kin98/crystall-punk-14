@@ -1,18 +1,18 @@
 - type: entity
-  id: CP14ActionSpellFreeze
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellFreeze
+  parent: CE14ActionSpellBase
   name: Freeze
   description: You begin to severely cool down the target, slowing its movement speed.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.8
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 7
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Vos adepto frigus..."
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RunePlantFreeze
-  - type: CP14ActionDangerous
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RunePlantFreeze
+  - type: CE14ActionDangerous
   - type: DoAfterArgs
     repeat: true
     breakOnDamage: true
@@ -21,20 +21,20 @@
   - type: Action
     useDelay: 15
     icon:
-      sprite: _CP14/Actions/Spells/water.rsi
+      sprite: _CE14/Actions/Spells/water.rsi
       state: freeze
   - type: TargetAction
     range: 5
     interactOnMiss: false
   - type: EntityTargetAction
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectFreeze
-      - !type:CP14AdjustAllSolutionThermalEnergy
+        - CE14ImpactEffectFreeze
+      - !type:CE14AdjustAllSolutionThermalEnergy
         delta: -1200 # One full use cools 100u from ~300k to ~250k
-      - !type:CP14SpellApplyEntityEffect
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:MovespeedModifier
           walkSpeedModifier: 0.5
@@ -45,8 +45,8 @@
         - !type:ExtinguishReaction
 
 - type: entity
-  id: CP14ImpactEffectFreeze
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectFreeze
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -57,8 +57,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14RunePlantFreeze
-  parent: CP14BaseMagicRune
+  id: CE14RunePlantFreeze
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -71,10 +71,10 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14BaseSpellScrollWater
-  id: CP14SpellScrollFreeze
+  parent: CE14BaseSpellScrollWater
+  id: CE14SpellScrollFreeze
   name: freeze spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellFreeze
+    - CE14ActionSpellFreeze

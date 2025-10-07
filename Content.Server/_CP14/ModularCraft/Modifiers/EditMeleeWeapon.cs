@@ -1,12 +1,12 @@
-using Content.Shared._CP14.ModularCraft;
-using Content.Shared._CP14.ModularCraft.Components;
+using Content.Shared._CE14.ModularCraft;
+using Content.Shared._CE14.ModularCraft.Components;
 using Content.Shared.Damage;
 using Content.Shared.Weapons.Melee;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.ModularCraft.Modifiers;
+namespace Content.Server._CE14.ModularCraft.Modifiers;
 
-public sealed partial class EditMeleeWeapon : CP14ModularCraftModifier
+public sealed partial class EditMeleeWeapon : CE14ModularCraftModifier
 {
     [DataField]
     public EntProtoId? NewAnimation;
@@ -32,7 +32,7 @@ public sealed partial class EditMeleeWeapon : CP14ModularCraftModifier
     [DataField]
     public bool? ResetOnHandSelected;
 
-    public override void Effect(EntityManager entManager, Entity<CP14ModularCraftStartPointComponent> start, Entity<CP14ModularCraftPartComponent>? part)
+    public override void Effect(EntityManager entManager, Entity<CE14ModularCraftStartPointComponent> start, Entity<CE14ModularCraftPartComponent>? part)
     {
         if (!entManager.TryGetComponent<MeleeWeaponComponent>(start, out var melee))
             return;

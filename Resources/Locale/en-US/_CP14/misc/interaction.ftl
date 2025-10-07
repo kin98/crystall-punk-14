@@ -1,3 +1,3 @@
-popup-cp14crystal-ding = *ding*
+popup-CE14crystal-ding = *ding*
 
-cp14-insufficient-space = Insufficient space!
+CE14-insufficient-space = Insufficient space!

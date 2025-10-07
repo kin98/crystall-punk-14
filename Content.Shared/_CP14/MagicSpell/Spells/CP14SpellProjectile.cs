@@ -5,9 +5,9 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellProjectile : CP14SpellEffect
+public sealed partial class CE14SpellProjectile : CE14SpellEffect
 {
     [DataField(required: true)]
     public EntProtoId Prototype;
@@ -24,7 +24,7 @@ public sealed partial class CP14SpellProjectile : CP14SpellEffect
     [DataField]
     public bool SaveVelocity = false;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         EntityCoordinates? targetPoint = null;
 

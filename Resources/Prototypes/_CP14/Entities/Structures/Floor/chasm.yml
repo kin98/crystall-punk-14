@@ -1,5 +1,5 @@
 ﻿- type: entity
-  id: CP14Chasm
+  id: CE14Chasm
   categories: [ ForkFiltered ]
   name: chasm
   description: You can't even see the bottom.
@@ -12,14 +12,14 @@
     key: floorTile
   - type: Sprite
     drawdepth: BelowFloor
-    sprite: _CP14/Tiles/chasm.rsi
+    sprite: _CE14/Tiles/chasm.rsi
   - type: Icon
-    sprite: _CP14/Tiles/chasm.rsi
+    sprite: _CE14/Tiles/chasm.rsi
     state: full
   - type: IconSmooth
     key: chasm
     additionalKeys:
-    - CP14wall
+    - CE14wall
     base: chasm_
   - type: Transform
     anchored: true

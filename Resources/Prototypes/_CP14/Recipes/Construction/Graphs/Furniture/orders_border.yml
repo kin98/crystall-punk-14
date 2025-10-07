@@ -1,19 +1,19 @@
 - type: constructionGraph
-  id: CP14OrderBoard
+  id: CE14OrderBoard
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14OrderBoard
+        - to: CE14OrderBoard
           steps:
             - stackGroup: WoodenPlanks
               amount: 3
               doAfter: 3
 
-    - node: CP14OrderBoard
-      entity: CP14OrderBoard
+    - node: CE14OrderBoard
+      entity: CE14OrderBoard
       edges:
       - to: start
         steps:
@@ -21,5 +21,5 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 3

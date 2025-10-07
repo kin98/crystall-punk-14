@@ -1,24 +1,24 @@
 - type: entity
-  id: CP14MobLurker
-  parent: CP14SimpleMobBase
+  id: CE14MobLurker
+  parent: CE14SimpleMobBase
   name: lurker
   description: The spirit of hunger and night. Hunting lonely wanderers lost in the dark forest.
   categories: [ HideSpawnMenu ]
   components:
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Monster/lurker.rsi
+      sprite: _CE14/Mobs/Monster/lurker.rsi
       state: live
   - type: ReplacementAccent
     accent: xeno
   - type: Damageable
-    damageContainer: CP14Biological
-    damageModifierSet: CP14Dinosaur
+    damageContainer: CE14Biological
+    damageModifierSet: CE14Dinosaur
   - type: Appearance
   - type: Body
     prototype: Animal
@@ -29,12 +29,12 @@
     attributes:
       gender: epicene
   - type: Bloodstream
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: Tag
     tags:
       - FootstepSound
       - HideContextMenu
-      - CP14AmbientLurker
+      - CE14AmbientLurker
   - type: DamageStateVisuals
     states:
       Alive:
@@ -84,9 +84,9 @@
   - type: Climbing
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatMonster
+    - id: CE14FoodMeatMonster
       amount: 4
-    - id: CP14ClothingMaskBoneHornedMask
+    - id: CE14ClothingMaskBoneHornedMask
       amount: 1
   - type: FloorOcclusion
   - type: GhostTakeoverAvailable
@@ -94,16 +94,16 @@
     proto: alien
   - type: NoSlip
   - type: Speech
-    speechSounds: CP14Carcat
-  - type: CP14NightVision
+    speechSounds: CE14Carcat
+  - type: CE14NightVision
   - type: FootstepModifier
     footstepSoundCollection: null # Silent footstep
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     grantAccessToSelf: true
     spells:
-    - CP14ActionSpellLurkerFear
-    - CP14ActionSpellLurkerKick
-    - CP14ActionSpellLurkerStep
+    - CE14ActionSpellLurkerFear
+    - CE14ActionSpellLurkerKick
+    - CE14ActionSpellLurkerStep
   - type: Stealth
     enabledOnDeath: false
     maxVisibility: 1.2
@@ -112,24 +112,24 @@
     movementVisibilityRate: 0.55
   - type: ConditionalSpawner
     prototypes:
-    - CP14LurkerRitualSound
+    - CE14LurkerRitualSound
 
 - type: entity
-  id: CP14LurkerRitualSound
+  id: CE14LurkerRitualSound
   name: lurker ritual far sound
   categories: [ ForkFiltered ]
   components:
-  - type: CP14PvsOverride
+  - type: CE14PvsOverride
   - type: TriggerOnSpawn
-  - type: CP14FarSound
+  - type: CE14FarSound
     closeSound:
-      collection: CP14LurkerRitual
+      collection: CE14LurkerRitual
       params:
         variation: 0.2
         maxDistance: 20
         volume: 50
     farSound:
-      collection: CP14LurkerRitual
+      collection: CE14LurkerRitual
       params:
         variation: 0.2
   - type: TimedDespawn
@@ -144,20 +144,20 @@
   parent: MarkerBase
   components:
   - type: GhostRole
-    name: cp14-ghost-role-information-name-lurker
+    name: CE14-ghost-role-information-name-lurker
     allowMovement: true
-    description: cp14-ghost-role-information-description-lurker
-    rules: cp14-ghost-role-information-rules-demiplane
+    description: CE14-ghost-role-information-description-lurker
+    rules: CE14-ghost-role-information-rules-demiplane
     mindRoles:
-    - CP14MindRoleDemiplaneAntag
+    - CE14MindRoleDemiplaneAntag
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: CP14MobLurker
+    prototype: CE14MobLurker
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
       - state: green
-      - sprite: _CP14/Mobs/Monster/lurker.rsi
+      - sprite: _CE14/Mobs/Monster/lurker.rsi
         state: live
 

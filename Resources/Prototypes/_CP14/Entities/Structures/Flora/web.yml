@@ -1,7 +1,7 @@
 - type: entity
-  id: CP14SpiderWeb
+  id: CE14SpiderWeb
   name: spider web
-  parent: CP14BaseFlammableSpreadingStrong
+  parent: CE14BaseFlammableSpreadingStrong
   description: It's stringy and sticky.
   placement:
     mode: SnapgridCenter
@@ -15,15 +15,15 @@
           "/Audio/Weapons/slash.ogg"
   - type: Sprite
     drawdepth: FloorTiles
-    sprite: _CP14/Structures/Dungeon/floor_web.rsi
+    sprite: _CE14/Structures/Dungeon/floor_web.rsi
     color: "#ffffffdd"
   - type: Icon
-    sprite: _CP14/Structures/Dungeon/floor_web.rsi
+    sprite: _CE14/Structures/Dungeon/floor_web.rsi
     state: full
   - type: IconSmooth
     key: web
     additionalKeys:
-    - CP14wall
+    - CE14wall
     base: carpet_
   - type: Clickable
   - type: Transform
@@ -51,7 +51,7 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14Web:
+          CE14Web:
             min: 0
             max: 1
   - type: SpiderWebObject
@@ -63,10 +63,10 @@
         - IgnoreSpiderWeb
 
 - type: entity
-  id: CP14WebCocoon
+  id: CE14WebCocoon
   parent: 
   - BaseStructure
-  - CP14BaseFlammableSpreadingStrong
+  - CE14BaseFlammableSpreadingStrong
   categories: [ ForkFiltered ]
   name: cocoon
   components:
@@ -89,7 +89,7 @@
   - type: Sprite
     drawdepth: Mobs
     snapCardinals: true
-    sprite: _CP14/Structures/Dungeon/web_cocoon.rsi
+    sprite: _CE14/Structures/Dungeon/web_cocoon.rsi
     layers:
       - state: full
         map: ["random"]
@@ -123,41 +123,41 @@
           path: /Audio/Effects/gib1.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14Web:
+          CE14Web:
             min: 4
             max: 5
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SpawnerWebCocoonLoot:
+          CE14SpawnerWebCocoonLoot:
             min: 1
             max: 1
 
 - type: entityTable
-  id: CP14TableWebCocoonLoot
+  id: CE14TableWebCocoonLoot
   table: !type:GroupSelector
     rolls: !type:RangeNumberSelector
       range: 1, 2
     children:
       - !type:NestedSelector
         weight: 75
-        tableId: CP14TableDemiplaneLootT1
+        tableId: CE14TableDemiplaneLootT1
       - !type:GroupSelector
         weight: 25
         children:
-        - id: CP14MobSpiderBlackHunter
+        - id: CE14MobSpiderBlackHunter
 
 - type: entity
   parent: MarkerBase
-  id: CP14SpawnerWebCocoonLoot
+  id: CE14SpawnerWebCocoonLoot
   name: Web Cocoon T1 Loot
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     layers:
     - state: green
-    - sprite: _CP14/Objects/Materials/copper_bar.rsi
+    - sprite: _CE14/Objects/Materials/copper_bar.rsi
       state: bar_3
   - type: EntityTableSpawner
     table: !type:NestedSelector
       prob: 0.7
-      tableId: CP14TableWebCocoonLoot
+      tableId: CE14TableWebCocoonLoot

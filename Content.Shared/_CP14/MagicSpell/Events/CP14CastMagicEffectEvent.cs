@@ -1,20 +1,20 @@
 using Content.Shared.FixedPoint;
 using Content.Shared.Inventory;
 
-namespace Content.Shared._CP14.MagicSpell.Events;
+namespace Content.Shared._CE14.MagicSpell.Events;
 
 /// <summary>
 /// An event that checks all sorts of conditions, and calculates the total cost of casting a spell. Called before the spell is cast.
 /// </summary>
 /// <remarks>TODO: This call is duplicated at the beginning of the cast for checks, and at the end of the cast for mana subtraction.</remarks>
-public sealed class CP14CalculateManacostEvent : EntityEventArgs, IInventoryRelayEvent
+public sealed class CE14CalculateManacostEvent : EntityEventArgs, IInventoryRelayEvent
 {
     public FixedPoint2 Manacost = 0f;
 
     public float Multiplier = 1f;
     public EntityUid? Performer;
 
-    public CP14CalculateManacostEvent(EntityUid? performer, FixedPoint2 initialManacost)
+    public CE14CalculateManacostEvent(EntityUid? performer, FixedPoint2 initialManacost)
     {
         Performer = performer;
         Manacost = initialManacost;
@@ -29,7 +29,7 @@ public sealed class CP14CalculateManacostEvent : EntityEventArgs, IInventoryRela
 }
 
 [ByRefEvent]
-public sealed class CP14SpellFromSpellStorageUsedEvent(
+public sealed class CE14SpellFromSpellStorageUsedEvent(
     EntityUid? performer,
     EntityUid? action,
     FixedPoint2 manacost)

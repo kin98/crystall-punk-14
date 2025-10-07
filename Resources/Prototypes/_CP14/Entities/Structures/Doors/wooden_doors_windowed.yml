@@ -1,14 +1,14 @@
 - type: entity
-  id: CP14WoodenDoorWindowed
+  id: CE14WoodenDoorWindowed
   parent:
-  - CP14BaseDoor
-  - CP14BaseFlammableSpreading
+  - CE14BaseDoor
+  - CE14BaseFlammableSpreading
   name: wooden windowed door
   description: Not the most solid construction, but it's better than nothing.
   suffix: Opened
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Doors/wooden_windowed_door.rsi
+    sprite: _CE14/Structures/Doors/wooden_windowed_door.rsi
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
@@ -22,7 +22,7 @@
       path: /Audio/Effects/door_close.ogg
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -33,23 +33,23 @@
         acts: ["Destruction"]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:ChangeConstructionNodeBehavior
-        node: CP14WoodenDoorFrame
+        node: CE14WoodenDoorFrame
   - type: Construction
-    graph: CP14WoodenDoor
-    node: CP14WoodenDoorWindowed
+    graph: CE14WoodenDoor
+    node: CE14WoodenDoorWindowed
 
 - type: entity
-  id: CP14WoodenDoorWindowedMirrored
-  parent: CP14WoodenDoorWindowed
+  id: CE14WoodenDoorWindowedMirrored
+  parent: CE14WoodenDoorWindowed
   suffix: Opened, Mirrored
   components:
   - type: Door
     openSpriteState: open_mirrored
     closedSpriteState: closed_mirrored
   - type: Construction
-    graph: CP14WoodenDoor
-    node: CP14WoodenDoorWindowedMirrored
+    graph: CE14WoodenDoor
+    node: CE14WoodenDoorWindowedMirrored

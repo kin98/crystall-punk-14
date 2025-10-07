@@ -1,11 +1,11 @@
-using Content.Shared._CP14.IdentityRecognition;
+using Content.Shared._CE14.IdentityRecognition;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 
-namespace Content.Client._CP14.IdentityRecognition;
+namespace Content.Client._CE14.IdentityRecognition;
 
-public sealed partial class CP14ClientIdentityRecognitionSystem : CP14SharedIdentityRecognitionSystem
+public sealed partial class CE14ClientIdentityRecognitionSystem : CE14SharedIdentityRecognitionSystem
 {
     [Dependency] private readonly SharedMindSystem _mind = default!;
 
@@ -13,10 +13,10 @@ public sealed partial class CP14ClientIdentityRecognitionSystem : CP14SharedIden
     {
         base.Initialize();
 
-        SubscribeLocalEvent<MindContainerComponent, CP14ClientTransformNameEvent>(OnTransformSpeakerName);
+        SubscribeLocalEvent<MindContainerComponent, CE14ClientTransformNameEvent>(OnTransformSpeakerName);
     }
 
-    private void OnTransformSpeakerName(Entity<MindContainerComponent> ent, ref CP14ClientTransformNameEvent args)
+    private void OnTransformSpeakerName(Entity<MindContainerComponent> ent, ref CE14ClientTransformNameEvent args)
     {
         if (args.Handled)
             return;
@@ -25,7 +25,7 @@ public sealed partial class CP14ClientIdentityRecognitionSystem : CP14SharedIden
         if (mindEntity is null)
             return;
 
-        TryComp<CP14RememberedNamesComponent>(mindEntity.Value, out var knownNames);
+        TryComp<CE14RememberedNamesComponent>(mindEntity.Value, out var knownNames);
 
         var speaker = GetEntity(args.Speaker);
 
@@ -44,7 +44,7 @@ public sealed partial class CP14ClientIdentityRecognitionSystem : CP14SharedIden
     }
 }
 
-public sealed class CP14ClientTransformNameEvent(NetEntity speaker) : EntityEventArgs
+public sealed class CE14ClientTransformNameEvent(NetEntity speaker) : EntityEventArgs
 {
     public NetEntity Speaker = speaker;
 

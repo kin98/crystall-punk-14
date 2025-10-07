@@ -1,10 +1,10 @@
-namespace Content.Client._CP14.Farming;
+namespace Content.Client._CE14.Farming;
 
 /// <summary>
 /// Controls the visual display of plant growth
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14PlantVisualsComponent : Component
+public sealed partial class CE14PlantVisualsComponent : Component
 {
     [DataField]
     public int GrowthSteps = 3;

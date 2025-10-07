@@ -1,8 +1,8 @@
 using Content.Server.Cargo.Components;
 using Content.Server.Item;
-using Content.Shared._CP14.ModularCraft;
-using Content.Shared._CP14.ModularCraft.Components;
-using Content.Shared._CP14.ModularCraft.Prototypes;
+using Content.Shared._CE14.ModularCraft;
+using Content.Shared._CE14.ModularCraft.Components;
+using Content.Shared._CE14.ModularCraft.Prototypes;
 using Content.Shared.Cargo.Components;
 using Content.Shared.Throwing;
 using Content.Shared.Examine;
@@ -13,9 +13,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
-namespace Content.Server._CP14.ModularCraft;
+namespace Content.Server._CE14.ModularCraft;
 
-public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
+public sealed class CE14ModularCraftSystem : CE14SharedModularCraftSystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
@@ -29,13 +29,13 @@ public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14ModularCraftStartPointComponent, MapInitEvent>(OnStartPointMapInit);
-        SubscribeLocalEvent<CP14ModularCraftStartPointComponent, CP14ModularCraftAddPartDoAfter>(OnAddedToStart);
-        SubscribeLocalEvent<CP14ModularCraftPartComponent, CP14ModularCraftAddPartDoAfter>(OnAddedToPart);
-        SubscribeLocalEvent<CP14ModularCraftStartPointComponent, GetVerbsEvent<ExamineVerb>>(OnVerbExamine);
+        SubscribeLocalEvent<CE14ModularCraftStartPointComponent, MapInitEvent>(OnStartPointMapInit);
+        SubscribeLocalEvent<CE14ModularCraftStartPointComponent, CE14ModularCraftAddPartDoAfter>(OnAddedToStart);
+        SubscribeLocalEvent<CE14ModularCraftPartComponent, CE14ModularCraftAddPartDoAfter>(OnAddedToPart);
+        SubscribeLocalEvent<CE14ModularCraftStartPointComponent, GetVerbsEvent<ExamineVerb>>(OnVerbExamine);
     }
 
-    private void OnVerbExamine(Entity<CP14ModularCraftStartPointComponent> ent, ref GetVerbsEvent<ExamineVerb> args)
+    private void OnVerbExamine(Entity<CE14ModularCraftStartPointComponent> ent, ref GetVerbsEvent<ExamineVerb> args)
     {
         if (!args.CanInteract || !args.CanAccess)
             return;
@@ -45,15 +45,15 @@ public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
             args,
             ent.Comp,
             markup,
-            Loc.GetString("cp14-modular-craft-examine"),
+            Loc.GetString("CE14-modular-craft-examine"),
             "/Textures/Interface/VerbIcons/settings.svg.192dpi.png");
     }
 
-    private FormattedMessage GetExamine(CP14ModularCraftStartPointComponent comp)
+    private FormattedMessage GetExamine(CE14ModularCraftStartPointComponent comp)
     {
         var msg = new FormattedMessage();
 
-        msg.AddMarkupOrThrow(Loc.GetString("cp14-modular-craft-examine-freeslots"));
+        msg.AddMarkupOrThrow(Loc.GetString("CE14-modular-craft-examine-freeslots"));
 
         foreach (var slot in comp.FreeSlots)
         {
@@ -66,12 +66,12 @@ public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
         return msg;
     }
 
-    private void OnAddedToStart(Entity<CP14ModularCraftStartPointComponent> start, ref CP14ModularCraftAddPartDoAfter args)
+    private void OnAddedToStart(Entity<CE14ModularCraftStartPointComponent> start, ref CE14ModularCraftAddPartDoAfter args)
     {
         if (args.Cancelled || args.Handled)
             return;
 
-        if (!TryComp<CP14ModularCraftPartComponent>(args.Used, out var partComp))
+        if (!TryComp<CE14ModularCraftPartComponent>(args.Used, out var partComp))
             return;
 
         if (!TryAddPartToFirstSlot(start, (args.Used.Value, partComp)))
@@ -82,12 +82,12 @@ public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
         args.Handled = true;
     }
 
-    private void OnAddedToPart(Entity<CP14ModularCraftPartComponent> part, ref CP14ModularCraftAddPartDoAfter args)
+    private void OnAddedToPart(Entity<CE14ModularCraftPartComponent> part, ref CE14ModularCraftAddPartDoAfter args)
     {
         if (args.Cancelled || args.Handled)
             return;
 
-        if (!TryComp<CP14ModularCraftStartPointComponent>(args.Used, out var startComp))
+        if (!TryComp<CE14ModularCraftStartPointComponent>(args.Used, out var startComp))
             return;
 
         if (!TryAddPartToFirstSlot((args.Used.Value, startComp), part))
@@ -98,19 +98,19 @@ public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
         args.Handled = true;
     }
 
-    private void OnStartPointMapInit(Entity<CP14ModularCraftStartPointComponent> ent, ref MapInitEvent args)
+    private void OnStartPointMapInit(Entity<CE14ModularCraftStartPointComponent> ent, ref MapInitEvent args)
     {
         foreach (var startSlot in ent.Comp.StartSlots)
         {
             ent.Comp.FreeSlots.Add(startSlot);
         }
 
-        if (TryComp<CP14ModularCraftAutoAssembleComponent>(ent, out var autoAssemble))
+        if (TryComp<CE14ModularCraftAutoAssembleComponent>(ent, out var autoAssemble))
         {
             foreach (var detail in autoAssemble.Details)
             {
                 var detailEnt = Spawn(detail);
-                if (!TryComp<CP14ModularCraftPartComponent>(detailEnt, out var partComp))
+                if (!TryComp<CE14ModularCraftPartComponent>(detailEnt, out var partComp))
                 {
                     QueueDel(detailEnt);
                     continue;
@@ -120,8 +120,8 @@ public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
         }
     }
 
-    private bool TryAddPartToFirstSlot(Entity<CP14ModularCraftStartPointComponent> start,
-        Entity<CP14ModularCraftPartComponent> part)
+    private bool TryAddPartToFirstSlot(Entity<CE14ModularCraftStartPointComponent> start,
+        Entity<CE14ModularCraftPartComponent> part)
     {
         foreach (var partProto in part.Comp.PossibleParts)
         {
@@ -147,10 +147,10 @@ public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
         return false;
     }
 
-    private bool TryAddPartToSlot(Entity<CP14ModularCraftStartPointComponent> start,
-        Entity<CP14ModularCraftPartComponent> part,
-        ProtoId<CP14ModularCraftPartPrototype> partProto,
-        ProtoId<CP14ModularCraftSlotPrototype> slot)
+    private bool TryAddPartToSlot(Entity<CE14ModularCraftStartPointComponent> start,
+        Entity<CE14ModularCraftPartComponent> part,
+        ProtoId<CE14ModularCraftPartPrototype> partProto,
+        ProtoId<CE14ModularCraftSlotPrototype> slot)
     {
         if (!start.Comp.FreeSlots.Contains(slot))
             return false;
@@ -161,10 +161,10 @@ public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
         return true;
     }
 
-    private void AddPartToSlot(Entity<CP14ModularCraftStartPointComponent> start,
-        Entity<CP14ModularCraftPartComponent> part,
-        ProtoId<CP14ModularCraftPartPrototype> partProto,
-        ProtoId<CP14ModularCraftSlotPrototype> slot)
+    private void AddPartToSlot(Entity<CE14ModularCraftStartPointComponent> start,
+        Entity<CE14ModularCraftPartComponent> part,
+        ProtoId<CE14ModularCraftPartPrototype> partProto,
+        ProtoId<CE14ModularCraftSlotPrototype> slot)
     {
         start.Comp.FreeSlots.Remove(slot);
         start.Comp.InstalledParts.Add(partProto);
@@ -214,7 +214,7 @@ public sealed class CP14ModularCraftSystem : CP14SharedModularCraftSystem
 
     public void DisassembleModular(EntityUid target)
     {
-        if (!TryComp<CP14ModularCraftStartPointComponent>(target, out var modular))
+        if (!TryComp<CE14ModularCraftStartPointComponent>(target, out var modular))
             return;
 
         var sourceCoord = _transform.GetMapCoordinates(target);

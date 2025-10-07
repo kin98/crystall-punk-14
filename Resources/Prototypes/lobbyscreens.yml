@@ -1,28 +1,28 @@
 
 - type: lobbyBackground
   id: Beginning
-  background: /Textures/_CP14/LobbyScreens/beginning.webp
+  background: /Textures/_CE14/LobbyScreens/beginning.webp
 
 - type: lobbyBackground
   id: TypicalAlchemistDay
-  background: /Textures/_CP14/LobbyScreens/typicalAlchemistDay.webp
+  background: /Textures/_CE14/LobbyScreens/typicalAlchemistDay.webp
 
 - type: lobbyBackground
   id: Tiefling
-  background: /Textures/_CP14/LobbyScreens/tiefling.webp
+  background: /Textures/_CE14/LobbyScreens/tiefling.webp
 
 - type: lobbyBackground
   id: WeRich
-  background: /Textures/_CP14/LobbyScreens/we_rich.webp
+  background: /Textures/_CE14/LobbyScreens/we_rich.webp
 
 - type: lobbyBackground
   id: GobWay
-  background: /Textures/_CP14/LobbyScreens/gob_way.webp
+  background: /Textures/_CE14/LobbyScreens/gob_way.webp
 
 - type: lobbyBackground
   id: Angel
-  background: /Textures/_CP14/LobbyScreens/angel.webp
+  background: /Textures/_CE14/LobbyScreens/angel.webp
 
 - type: lobbyBackground
   id: Carcatoro
-  background: /Textures/_CP14/LobbyScreens/carcatoro.webp
+  background: /Textures/_CE14/LobbyScreens/carcatoro.webp

@@ -3,7 +3,7 @@ using System.Numerics;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Nutrition.Components;
 using Content.Server.Nutrition.EntitySystems;
-using Content.Shared._CP14.Temperature;
+using Content.Shared._CE14.Temperature;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Maps;
 using Content.Shared.Nutrition.Components;
@@ -15,9 +15,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.Temperature;
+namespace Content.Server._CE14.Temperature;
 
-public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
+public sealed partial class CE14FireSpreadSystem : CE14SharedFireSpreadSystem
 {
     [Dependency] private readonly FlammableSystem _flammable = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
@@ -30,21 +30,21 @@ public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
     [Dependency] private readonly SmokingSystem _smoking = default!;
     [Dependency] private readonly TurfSystem _turf = default!;
 
-    private readonly EntProtoId _fireProto = "CP14Fire";
+    private readonly EntProtoId _fireProto = "CE14Fire";
 
-    private readonly HashSet<Entity<CP14FireSpreadComponent>> _spreadEnts = new();
+    private readonly HashSet<Entity<CE14FireSpreadComponent>> _spreadEnts = new();
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<FlammableComponent, CP14IgnitionDoAfter>(OnFlammableIgnited);
-        SubscribeLocalEvent<SmokableComponent, CP14IgnitionDoAfter>(OnDelayedIgnite);
-        SubscribeLocalEvent<SmokingPipeComponent, CP14IgnitionDoAfter>(OnDelayedPipeIgnite);
-        SubscribeLocalEvent<CP14FlammableBonusDamageComponent, MeleeHitEvent>(OnFlammableMeleeHit);
+        SubscribeLocalEvent<FlammableComponent, CE14IgnitionDoAfter>(OnFlammableIgnited);
+        SubscribeLocalEvent<SmokableComponent, CE14IgnitionDoAfter>(OnDelayedIgnite);
+        SubscribeLocalEvent<SmokingPipeComponent, CE14IgnitionDoAfter>(OnDelayedPipeIgnite);
+        SubscribeLocalEvent<CE14FlammableBonusDamageComponent, MeleeHitEvent>(OnFlammableMeleeHit);
     }
 
-    private void OnFlammableMeleeHit(Entity<CP14FlammableBonusDamageComponent> ent, ref MeleeHitEvent args)
+    private void OnFlammableMeleeHit(Entity<CE14FlammableBonusDamageComponent> ent, ref MeleeHitEvent args)
     {
         if (!TryComp<FlammableComponent>(ent, out var flammable))
             return;
@@ -55,7 +55,7 @@ public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
         args.BonusDamage += ent.Comp.DamagePerStack * flammable.FireStacks;
     }
 
-    private void OnFlammableIgnited(Entity<FlammableComponent> ent, ref CP14IgnitionDoAfter args)
+    private void OnFlammableIgnited(Entity<FlammableComponent> ent, ref CE14IgnitionDoAfter args)
     {
         if (args.Cancelled || args.Handled)
             return;
@@ -66,13 +66,13 @@ public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
     }
 
     //For smokable cigars
-    private void OnDelayedIgnite(Entity<SmokableComponent> ent, ref CP14IgnitionDoAfter args)
+    private void OnDelayedIgnite(Entity<SmokableComponent> ent, ref CE14IgnitionDoAfter args)
     {
         _smoking.SetSmokableState(ent, SmokableState.Lit, ent.Comp);
     }
 
     //For smokable pipes
-    private void OnDelayedPipeIgnite(Entity<SmokingPipeComponent> pipe, ref CP14IgnitionDoAfter args)
+    private void OnDelayedPipeIgnite(Entity<SmokingPipeComponent> pipe, ref CE14IgnitionDoAfter args)
     {
         if (!TryComp<SmokableComponent>(pipe, out var smokable))
             return;
@@ -91,7 +91,7 @@ public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
 
     private void UpdateAutoIgnite()
     {
-        var query = EntityQueryEnumerator<CP14AutoIgniteComponent, FlammableComponent>();
+        var query = EntityQueryEnumerator<CE14AutoIgniteComponent, FlammableComponent>();
         while (query.MoveNext(out var uid, out var autoIgnite, out var flammable))
         {
             if (!autoIgnite.Initialized || !flammable.Initialized)
@@ -106,7 +106,7 @@ public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
             //Поэтому я добавил 1-секундную задержку перед поджиганием.
 
             _flammable.AdjustFireStacks(uid, autoIgnite.StartStack, flammable, true);
-            RemCompDeferred<CP14AutoIgniteComponent>(uid);
+            RemCompDeferred<CE14AutoIgniteComponent>(uid);
         }
     }
 
@@ -114,7 +114,7 @@ public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
     {
         _spreadEnts.Clear();
 
-        var query = EntityQueryEnumerator<CP14ActiveFireSpreadingComponent, CP14FireSpreadComponent, FlammableComponent, TransformComponent>();
+        var query = EntityQueryEnumerator<CE14ActiveFireSpreadingComponent, CE14FireSpreadComponent, FlammableComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out _, out var spread, out var flammable, out var xform))
         {
             if (!flammable.OnFire)
@@ -129,7 +129,7 @@ public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
             var cooldown = _random.NextFloat(spread.SpreadCooldownMin, spread.SpreadCooldownMax);
             spread.NextSpreadTime = _gameTiming.CurTime + TimeSpan.FromSeconds(cooldown);
 
-            _spreadEnts.Add(new Entity<CP14FireSpreadComponent>(uid, spread));
+            _spreadEnts.Add(new Entity<CE14FireSpreadComponent>(uid, spread));
         }
 
         foreach (var uid in _spreadEnts)
@@ -139,7 +139,7 @@ public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
         }
     }
 
-    private void IgniteEntities(Entity<CP14FireSpreadComponent> spread)
+    private void IgniteEntities(Entity<CE14FireSpreadComponent> spread)
     {
         var targets = _lookup.GetEntitiesInRange<FlammableComponent>(_transform.GetMapCoordinates(spread),
             spread.Comp.Radius,
@@ -153,7 +153,7 @@ public sealed partial class CP14FireSpreadSystem : CP14SharedFireSpreadSystem
         }
     }
 
-    private void IgniteTiles(Entity<CP14FireSpreadComponent> spread)
+    private void IgniteTiles(Entity<CE14FireSpreadComponent> spread)
     {
         var xform = Transform(spread);
         // Ignore items inside containers

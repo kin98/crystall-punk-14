@@ -1,20 +1,20 @@
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Prototypes;
 using Content.Shared.FixedPoint;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill.Components;
+namespace Content.Shared._CE14.Skill.Components;
 
 /// <summary>
 /// Allows you to see what skills the creature possesses
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class CP14SkillPointConsumableComponent : Component
+public sealed partial class CE14SkillPointConsumableComponent : Component
 {
     [DataField, AutoNetworkedField]
-    public ProtoId<CP14SkillPointPrototype> PointType = "Memory";
+    public ProtoId<CE14SkillPointPrototype> PointType = "Memory";
 
     /// <summary>
     /// How much skill points this consumable gives when consumed.
@@ -29,7 +29,7 @@ public sealed partial class CP14SkillPointConsumableComponent : Component
     public EntProtoId? ConsumeEffect;
 
     [DataField]
-    public SoundSpecifier ConsumeSound = new SoundPathSpecifier("/Audio/_CP14/Effects/essence_consume.ogg")
+    public SoundSpecifier ConsumeSound = new SoundPathSpecifier("/Audio/_CE14/Effects/essence_consume.ogg")
     {
         Params = AudioParams.Default.WithVolume(-2f).WithVariation(0.2f),
     };

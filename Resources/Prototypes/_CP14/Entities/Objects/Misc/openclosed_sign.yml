@@ -1,15 +1,15 @@
 - type: entity
-  id: CP14OpenSign
+  id: CE14OpenSign
   name: flip sign "Open"
   description: A small double-sided sign that can be turned over
   parent: 
   - BaseItem
-  - CP14BaseFlammable
+  - CE14BaseFlammable
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Objects/Misc/openclosed_sign.rsi
+    sprite: _CE14/Objects/Misc/openclosed_sign.rsi
     layers:
       - state: table_sign
       - state: en_open_sign
@@ -17,10 +17,10 @@
   - type: Item
     size: Small
   - type: Flippable
-    mirrorEntity: CP14ClosedSign
+    mirrorEntity: CE14ClosedSign
   - type: Appearance
   - type: InteractionOutline
-  - type: CP14LocalizationVisuals
+  - type: CE14LocalizationVisuals
     mapStates:
       signState:
         ru-RU: ru_open_sign
@@ -42,7 +42,7 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14Ash1:
+          CE14Ash1:
             min: 1
             max: 2
     - trigger:
@@ -56,31 +56,31 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 1
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 20
+      CE14WoodenPlanks: 20
 
 - type: entity
-  id: CP14ClosedSign
+  id: CE14ClosedSign
   name: flip sign "Closed"
   description: A small double-sided sign that can be turned over
   parent: 
-  - CP14OpenSign
+  - CE14OpenSign
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Objects/Misc/openclosed_sign.rsi
+    sprite: _CE14/Objects/Misc/openclosed_sign.rsi
     layers:
       - state: table_sign
       - state: en_close_sign
         map: [signState]
   - type: Flippable
-    mirrorEntity: CP14OpenSign
-  - type: CP14LocalizationVisuals
+    mirrorEntity: CE14OpenSign
+  - type: CE14LocalizationVisuals
     mapStates:
       signState:
         ru-RU: ru_close_sign

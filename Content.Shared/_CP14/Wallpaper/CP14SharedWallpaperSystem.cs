@@ -4,9 +4,9 @@ using Content.Shared.Stacks;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Wallpaper;
+namespace Content.Shared._CE14.Wallpaper;
 
-public partial class CP14SharedWallpaperSystem : EntitySystem
+public partial class CE14SharedWallpaperSystem : EntitySystem
 {
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
@@ -16,12 +16,12 @@ public partial class CP14SharedWallpaperSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14WallpaperHolderComponent, InteractUsingEvent>(OnInteractUsing);
-        SubscribeLocalEvent<CP14WallpaperHolderComponent, CP14WallpaperAddLayerDoAfterEvent>(OnAddDoAfter);
-        SubscribeLocalEvent<CP14WallpaperHolderComponent, CP14WallpaperRemoveLayersDoAfterEvent>(OnRemoveDoAfter);
+        SubscribeLocalEvent<CE14WallpaperHolderComponent, InteractUsingEvent>(OnInteractUsing);
+        SubscribeLocalEvent<CE14WallpaperHolderComponent, CE14WallpaperAddLayerDoAfterEvent>(OnAddDoAfter);
+        SubscribeLocalEvent<CE14WallpaperHolderComponent, CE14WallpaperRemoveLayersDoAfterEvent>(OnRemoveDoAfter);
     }
 
-    private void OnRemoveDoAfter(Entity<CP14WallpaperHolderComponent> holder, ref CP14WallpaperRemoveLayersDoAfterEvent args)
+    private void OnRemoveDoAfter(Entity<CE14WallpaperHolderComponent> holder, ref CE14WallpaperRemoveLayersDoAfterEvent args)
     {
         if (args.Cancelled || args.Handled || args.Args.Target == null)
             return;
@@ -30,12 +30,12 @@ public partial class CP14SharedWallpaperSystem : EntitySystem
         Dirty(holder);
     }
 
-    private void OnAddDoAfter(Entity<CP14WallpaperHolderComponent> holder, ref CP14WallpaperAddLayerDoAfterEvent args)
+    private void OnAddDoAfter(Entity<CE14WallpaperHolderComponent> holder, ref CE14WallpaperAddLayerDoAfterEvent args)
     {
         if (args.Cancelled || args.Handled || args.Args.Target == null)
             return;
 
-        if (!TryComp<CP14WallpaperComponent>(args.Used, out var wallpaper))
+        if (!TryComp<CE14WallpaperComponent>(args.Used, out var wallpaper))
             return;
 
         var pos1 = _transform.GetWorldPosition(args.User);
@@ -81,11 +81,11 @@ public partial class CP14SharedWallpaperSystem : EntitySystem
         }
     }
 
-    private void OnInteractUsing(Entity<CP14WallpaperHolderComponent> holder, ref InteractUsingEvent args)
+    private void OnInteractUsing(Entity<CE14WallpaperHolderComponent> holder, ref InteractUsingEvent args)
     {
-        if (TryComp<CP14WallpaperComponent>(args.Used, out var wallpaper))
+        if (TryComp<CE14WallpaperComponent>(args.Used, out var wallpaper))
         {
-            var doAfterArgs = new DoAfterArgs(EntityManager, args.User, wallpaper.Delay, new CP14WallpaperAddLayerDoAfterEvent(), holder, holder, args.Used)
+            var doAfterArgs = new DoAfterArgs(EntityManager, args.User, wallpaper.Delay, new CE14WallpaperAddLayerDoAfterEvent(), holder, holder, args.Used)
             {
                 BreakOnDamage = true,
                 BreakOnMove = true,
@@ -97,12 +97,12 @@ public partial class CP14SharedWallpaperSystem : EntitySystem
             return;
         }
 
-        if (TryComp<CP14WallpaperRemoverComponent>(args.Used, out var remover))
+        if (TryComp<CE14WallpaperRemoverComponent>(args.Used, out var remover))
         {
             if (holder.Comp.Layers.Count == 0)
                 return;
 
-            var doAfterArgs = new DoAfterArgs(EntityManager, args.User, remover.Delay, new CP14WallpaperRemoveLayersDoAfterEvent(), holder, holder, args.Used)
+            var doAfterArgs = new DoAfterArgs(EntityManager, args.User, remover.Delay, new CE14WallpaperRemoveLayersDoAfterEvent(), holder, holder, args.Used)
             {
                 BreakOnDamage = true,
                 BreakOnMove = true,
@@ -117,11 +117,11 @@ public partial class CP14SharedWallpaperSystem : EntitySystem
 }
 
 [Serializable, NetSerializable]
-public sealed partial class CP14WallpaperAddLayerDoAfterEvent : SimpleDoAfterEvent
+public sealed partial class CE14WallpaperAddLayerDoAfterEvent : SimpleDoAfterEvent
 {
 }
 
 [Serializable, NetSerializable]
-public sealed partial class CP14WallpaperRemoveLayersDoAfterEvent : SimpleDoAfterEvent
+public sealed partial class CE14WallpaperRemoveLayersDoAfterEvent : SimpleDoAfterEvent
 {
 }

@@ -90,7 +90,7 @@ namespace Content.Shared.Maps
         [DataField("heatCapacity")] public float HeatCapacity = Atmospherics.MinimumHeatCapacity;
 
         [DataField("itemDrop", customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
-        public string? ItemDropPrototypeName { get; private set; } = null; //CP14 default null
+        public string? ItemDropPrototypeName { get; private set; } = null; //CE14 default null
 
         // TODO rename data-field in yaml
         /// <summary>
@@ -128,13 +128,13 @@ namespace Content.Shared.Maps
         }
 
         /// <summary>
-        /// CP14 - Tile filtering
+        /// CE14 - Tile filtering
         /// </summary>
         [DataField]
         public bool EditorHidden { get; private set; } = true;
 
         /// <summary>
-        /// CP14 - If not empty, the tile can burn from fires, and will turn into the specified tile after burning.
+        /// CE14 - If not empty, the tile can burn from fires, and will turn into the specified tile after burning.
         /// </summary>
         [DataField]
         public ProtoId<ContentTileDefinition>? BurnedTile { get; private set; } = null;

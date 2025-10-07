@@ -1,21 +1,21 @@
-- type: cp14LocationModifierCategory
+- type: CE14LocationModifierCategory
   id: Danger
 
-- type: cp14LocationModifierCategory
+- type: CE14LocationModifierCategory
   id: GhostRoleDanger
 
-- type: cp14LocationModifierCategory
+- type: CE14LocationModifierCategory
   id: Reward
 
-- type: cp14LocationModifierCategory
+- type: CE14LocationModifierCategory
   id: Ore
 
-- type: cp14LocationModifierCategory
+- type: CE14LocationModifierCategory
   id: Fun
 
-- type: cp14LocationModifierCategory
+- type: CE14LocationModifierCategory
   id: Weather
 
-- type: cp14LocationModifierCategory
+- type: CE14LocationModifierCategory
   id: MapLight
 

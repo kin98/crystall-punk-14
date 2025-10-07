@@ -1,14 +1,14 @@
-﻿using Content.Shared._CP14.MeleeWeapon.EntitySystems;
+﻿using Content.Shared._CE14.MeleeWeapon.EntitySystems;
 using Content.Shared.Damage;
 using Robust.Shared.Audio;
 
-namespace Content.Shared._CP14.MeleeWeapon.Components;
+namespace Content.Shared._CE14.MeleeWeapon.Components;
 
 /// <summary>
 /// component allows you to sharpen objects by restoring their damage.
 /// </summary>
-[RegisterComponent, Access(typeof(CP14SharpeningSystem))]
-public sealed partial class CP14SharpeningStoneComponent : Component
+[RegisterComponent, Access(typeof(CE14SharpeningSystem))]
+public sealed partial class CE14SharpeningStoneComponent : Component
 {
     /// <summary>
     /// the amount of acuity recoverable per use
@@ -21,7 +21,7 @@ public sealed partial class CP14SharpeningStoneComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier SharpeningSound =
-        new SoundPathSpecifier("/Audio/_CP14/Items/sharpening_stone.ogg")
+        new SoundPathSpecifier("/Audio/_CE14/Items/sharpening_stone.ogg")
     {
         Params = AudioParams.Default.WithVariation(0.02f),
     };

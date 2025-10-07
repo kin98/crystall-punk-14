@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: Clothing
-  id: CP14ClothingMaskBase
+  id: CE14ClothingMaskBase
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
@@ -14,106 +14,106 @@
     slots: [mask]
 
 - type: entity
-  parent: CP14ClothingMaskBase
-  id: CP14ClothingMaskSinner
+  parent: CE14ClothingMaskBase
+  id: CE14ClothingMaskSinner
   name: sinner's mask
   description: A mask intented to be worn by not the brightest individuals. Executioners put them on themselves and the victim before execution.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Masks/sinner.rsi
+    sprite: _CE14/Clothing/Masks/sinner.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Masks/sinner.rsi
+    sprite: _CE14/Clothing/Masks/sinner.rsi
   - type: IdentityBlocker
   - type: IngestionBlocker
 
 - type: entity
-  parent: CP14ClothingMaskBase
-  id: CP14ClothingMaskSteelMask
+  parent: CE14ClothingMaskBase
+  id: CE14ClothingMaskSteelMask
   name: steel mask
   description: A steel mask that protects the face from the external effects of iron.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Masks/steel_mask.rsi
+    sprite: _CE14/Clothing/Masks/steel_mask.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Masks/steel_mask.rsi
+    sprite: _CE14/Clothing/Masks/steel_mask.rsi
   - type: IdentityBlocker
   - type: IngestionBlocker
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 20
+      CE14Iron: 20
 
 - type: entity
-  parent: CP14ClothingMaskBase
-  id: CP14ClothingMaskNeckerchief
+  parent: CE14ClothingMaskBase
+  id: CE14ClothingMaskNeckerchief
   name: neckerchief
   description: It hides your face to the best of its ability.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Masks/neckerchief.rsi
+    sprite: _CE14/Clothing/Masks/neckerchief.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Masks/neckerchief.rsi
+    sprite: _CE14/Clothing/Masks/neckerchief.rsi
   - type: IdentityBlocker
   - type: IngestionBlocker
 
 - type: entity
-  parent: CP14ClothingMaskBase
-  id: CP14ClothingMaskRedNeckerchief
+  parent: CE14ClothingMaskBase
+  id: CE14ClothingMaskRedNeckerchief
   name: red neckerchief
   description: It hides your face to the best of its ability.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Masks/red_neckerchief.rsi
+    sprite: _CE14/Clothing/Masks/red_neckerchief.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Masks/red_neckerchief.rsi
+    sprite: _CE14/Clothing/Masks/red_neckerchief.rsi
   - type: IdentityBlocker
   - type: IngestionBlocker
 
 - type: entity
-  parent: CP14ClothingMaskBase
-  id: CP14ClothingMaskGreenNeckerchief
+  parent: CE14ClothingMaskBase
+  id: CE14ClothingMaskGreenNeckerchief
   name: green neckerchief
   description: It hides your face to the best of its ability.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Masks/green_neckerchief.rsi
+    sprite: _CE14/Clothing/Masks/green_neckerchief.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Masks/green_neckerchief.rsi
+    sprite: _CE14/Clothing/Masks/green_neckerchief.rsi
   - type: IdentityBlocker
   - type: IngestionBlocker
 
 - type: entity
-  parent: CP14ClothingMaskBase
-  id: CP14ClothingMaskBoneMask
+  parent: CE14ClothingMaskBase
+  id: CE14ClothingMaskBoneMask
   name: bone mask
   description: An enchanted mask formerly belonging to a magical creature.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Masks/bone_mask.rsi
+    sprite: _CE14/Clothing/Masks/bone_mask.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Masks/bone_mask.rsi
+    sprite: _CE14/Clothing/Masks/bone_mask.rsi
   - type: IdentityBlocker
   - type: AddAccentClothing
     accent: ReplacementAccent
-    replacement: cp14skeleton
+    replacement: CE14skeleton
 
 - type: entity
-  parent: CP14ClothingMaskBase
-  id: CP14ClothingMaskBoneHornedMask
+  parent: CE14ClothingMaskBase
+  id: CE14ClothingMaskBoneHornedMask
   name: horned bone mask
   description: A bone mask of some kind of animal.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Masks/horned_bone_mask.rsi
+    sprite: _CE14/Clothing/Masks/horned_bone_mask.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Masks/horned_bone_mask.rsi
+    sprite: _CE14/Clothing/Masks/horned_bone_mask.rsi
   - type: IdentityBlocker
   - type: AddAccentClothing
     accent: ReplacementAccent
-    replacement: cp14skeleton
+    replacement: CE14skeleton
 
 - type: entity
-  parent: CP14ClothingMaskBoneMask
-  id: CP14ClothingMaskBoneMaskMind
+  parent: CE14ClothingMaskBoneMask
+  id: CE14ClothingMaskBoneMaskMind
   categories: [ HideSpawnMenu ]
   components:
   - type: BlockMovement
@@ -136,19 +136,19 @@
   - type: Butcherable
     butcheringType: Knife
     spawned:
-    - id: CP14ClothingMaskBoneMask
+    - id: CE14ClothingMaskBoneMask
       amount: 1
 
 - type: entity
-  parent: CP14ClothingMaskBase
-  id: CP14ClothingMaskMime
+  parent: CE14ClothingMaskBase
+  id: CE14ClothingMaskMime
   name: mask of silence
   description: ...
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Masks/mime_mask.rsi
+    sprite: _CE14/Clothing/Masks/mime_mask.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Masks/mime_mask.rsi
+    sprite: _CE14/Clothing/Masks/mime_mask.rsi
   - type: IdentityBlocker
   - type: IngestionBlocker
 

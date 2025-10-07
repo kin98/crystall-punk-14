@@ -1,4 +1,4 @@
-- type: CP14PlantMetabolizer
+- type: CE14PlantMetabolizer
   id: Base
   metabolization:
     Water:

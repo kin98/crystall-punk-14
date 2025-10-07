@@ -1,10 +1,10 @@
 - type: entity
   abstract: true
-  id: CP14BaseMop
+  id: CE14BaseMop
   parent:
   - BaseItem
-  - CP14BaseWeaponDestructible
-  - CP14BaseWeaponSelfDamage
+  - CE14BaseWeaponDestructible
+  - CE14BaseWeaponSelfDamage
   components:
   - type: Item
     size: Ginormous
@@ -17,8 +17,8 @@
     damage:
       types:
         Blunt: 2
-    animation: CP14WeaponArcThrust
-    wideAnimation: CP14WeaponArcThrust
+    animation: CE14WeaponArcThrust
+    wideAnimation: CE14WeaponArcThrust
     soundHit:
       collection: MetalThud
     cPAnimationLength: 0.5
@@ -43,11 +43,11 @@
         maxVol: 50
 
 - type: entity
-  parent: CP14BaseMop
-  id: CP14Mop
+  parent: CE14BaseMop
+  id: CE14Mop
   name: mop
   description: A simple mop for cleaning up spills and messes.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Melee/Mop/mop.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Mop/mop.rsi
     state: icon

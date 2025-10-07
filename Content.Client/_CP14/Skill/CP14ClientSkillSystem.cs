@@ -1,14 +1,14 @@
-using Content.Shared._CP14.Skill;
-using Content.Shared._CP14.Skill.Components;
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill;
+using Content.Shared._CE14.Skill.Components;
+using Content.Shared._CE14.Skill.Prototypes;
 using Robust.Client.Player;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._CP14.Skill;
+namespace Content.Client._CE14.Skill;
 
-public sealed partial class CP14ClientSkillSystem : CP14SharedSkillSystem
+public sealed partial class CE14ClientSkillSystem : CE14SharedSkillSystem
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -20,10 +20,10 @@ public sealed partial class CP14ClientSkillSystem : CP14SharedSkillSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14SkillStorageComponent, AfterAutoHandleStateEvent>(OnAfterAutoHandleState);
+        SubscribeLocalEvent<CE14SkillStorageComponent, AfterAutoHandleStateEvent>(OnAfterAutoHandleState);
     }
 
-    private void OnAfterAutoHandleState(Entity<CP14SkillStorageComponent> ent, ref AfterAutoHandleStateEvent args)
+    private void OnAfterAutoHandleState(Entity<CE14SkillStorageComponent> ent, ref AfterAutoHandleStateEvent args)
     {
         if (ent != _playerManager.LocalEntity)
             return;
@@ -35,18 +35,18 @@ public sealed partial class CP14ClientSkillSystem : CP14SharedSkillSystem
     {
         var localPlayer = _playerManager.LocalEntity;
 
-        if (!HasComp<CP14SkillStorageComponent>(localPlayer))
+        if (!HasComp<CE14SkillStorageComponent>(localPlayer))
             return;
 
         OnSkillUpdate?.Invoke(localPlayer.Value);
     }
 
-    public void RequestLearnSkill(EntityUid? target, CP14SkillPrototype? skill)
+    public void RequestLearnSkill(EntityUid? target, CE14SkillPrototype? skill)
     {
         if (skill == null || target == null)
             return;
 
-        var netEv = new CP14TryLearnSkillMessage(GetNetEntity(target.Value), skill.ID);
+        var netEv = new CE14TryLearnSkillMessage(GetNetEntity(target.Value), skill.ID);
         RaiseNetworkEvent(netEv);
 
         if (_proto.TryIndex(skill.Tree, out var indexedTree))

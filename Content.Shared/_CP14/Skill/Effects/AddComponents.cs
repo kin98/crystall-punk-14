@@ -1,10 +1,10 @@
 
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill.Effects;
+namespace Content.Shared._CE14.Skill.Effects;
 
-public sealed partial class AddComponents : CP14SkillEffect
+public sealed partial class AddComponents : CE14SkillEffect
 {
     [DataField(required: true)]
     public ComponentRegistry Components = new();
@@ -24,7 +24,7 @@ public sealed partial class AddComponents : CP14SkillEffect
         return null;
     }
 
-    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CP14SkillPrototype> skill)
+    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CE14SkillPrototype> skill)
     {
         return null;
     }

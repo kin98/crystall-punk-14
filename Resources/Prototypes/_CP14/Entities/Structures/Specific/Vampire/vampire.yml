@@ -1,27 +1,27 @@
 - type: entity
-  parent: CP14BaseWorkbench
-  id: CP14WorkbenchVampire
+  parent: CE14BaseWorkbench
+  id: CE14WorkbenchVampire
   categories: [ ForkFiltered ]
   name: vampire power point
   description: A table imbued with vampire magic, allowing you to create items of dark arts.
   components:
   - type: Sprite
     snapCardinals: true
-    sprite: _CP14/Structures/Specific/Vampire/workbench.rsi
+    sprite: _CE14/Structures/Specific/Vampire/workbench.rsi
     layers:
     - state: base
     - state: fx
       shader: unshaded
   - type: Icon
-    sprite: _CP14/Structures/Specific/Vampire/workbench.rsi
+    sprite: _CE14/Structures/Specific/Vampire/workbench.rsi
     state: base
-  - type: CP14Workbench
+  - type: CE14Workbench
     craftSound:
-      path: /Audio/_CP14/Effects/vampire_craft.ogg
+      path: /Audio/_CE14/Effects/vampire_craft.ogg
       params:
         variation: 0.125
     recipeTags:
-    - CP14RecipeVampire
+    - CE14RecipeVampire
   - type: LightBehaviour
     behaviours:
       - !type:PulseBehaviour
@@ -38,12 +38,12 @@
     energy: 1
     radius: 3
   - type: Construction
-    graph: CP14WorkbenchVampire
-    node: CP14WorkbenchVampire
+    graph: CE14WorkbenchVampire
+    node: CE14WorkbenchVampire
 
 - type: entity
   parent: BaseStructure
-  id: CP14VampireClanHeartBase
+  id: CE14VampireClanHeartBase
   abstract: true
   categories: [ ForkFiltered ]
   name: vampire clan heart
@@ -62,9 +62,9 @@
   - type: Sprite
     drawdepth: Mobs
     snapCardinals: true
-    sprite: _CP14/Structures/Specific/Vampire/heart.rsi
+    sprite: _CE14/Structures/Specific/Vampire/heart.rsi
   - type: Icon
-    sprite: _CP14/Structures/Specific/Vampire/heart.rsi
+    sprite: _CE14/Structures/Specific/Vampire/heart.rsi
     state: base
   - type: LightBehaviour
     behaviours:
@@ -81,7 +81,7 @@
     color: "#d60032"
     energy: 1
     radius: 3
-  - type: CP14VampireClanHeart
+  - type: CE14VampireClanHeart
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -92,11 +92,11 @@
           3: {state: orb3}
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Metallic
+    damageModifierSet: CE14Metallic
 
 - type: entity
-  parent: CP14VampireClanHeartBase
-  id: CP14VampireClanHeartUnnameable
+  parent: CE14VampireClanHeartBase
+  id: CE14VampireClanHeartUnnameable
   suffix: Unnameable
   name: heart of unnameable clan
   components:
@@ -106,15 +106,15 @@
     - state: unnameable
       shader: unshaded
     - state: orb1
-      sprite: _CP14/Structures/Specific/Vampire/heart_orb.rsi
+      sprite: _CE14/Structures/Specific/Vampire/heart_orb.rsi
       shader: unshaded
       offset: 0, 0.5
       map: [ "level" ]
-  - type: CP14VampireClanHeart
+  - type: CE14VampireClanHeart
     faction: Unnameable
   - type: Construction
-    graph: CP14VampireClanHeartUnnameable
-    node: CP14VampireClanHeartUnnameable
+    graph: CE14VampireClanHeartUnnameable
+    node: CE14VampireClanHeartUnnameable
   - type: Destructible
     thresholds:
     - trigger:
@@ -124,18 +124,18 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-      - !type:CP14VampireAltarExplodeBehavior
+      - !type:CE14VampireAltarExplodeBehavior
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SkyLightningRed:
+          CE14SkyLightningRed:
             min: 1
             max: 1
       - !type:ChangeConstructionNodeBehavior
-        node: CP14VampireClanHeartUnnameableFrame
+        node: CE14VampireClanHeartUnnameableFrame
 
 - type: entity
-  parent: CP14VampireClanHeartBase
-  id: CP14VampireClanHeartDevourers
+  parent: CE14VampireClanHeartBase
+  id: CE14VampireClanHeartDevourers
   suffix: Devourers
   name: heart of devourers clan
   components:
@@ -145,15 +145,15 @@
     - state: devourers
       shader: unshaded
     - state: orb1
-      sprite: _CP14/Structures/Specific/Vampire/heart_orb.rsi
+      sprite: _CE14/Structures/Specific/Vampire/heart_orb.rsi
       shader: unshaded
       offset: 0, 0.5
       map: [ "level" ]
-  - type: CP14VampireClanHeart
+  - type: CE14VampireClanHeart
     faction: Devourers
   - type: Construction
-    graph: CP14VampireClanHeartDevourers
-    node: CP14VampireClanHeartDevourers
+    graph: CE14VampireClanHeartDevourers
+    node: CE14VampireClanHeartDevourers
   - type: Destructible
     thresholds:
     - trigger:
@@ -163,18 +163,18 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-      - !type:CP14VampireAltarExplodeBehavior
+      - !type:CE14VampireAltarExplodeBehavior
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SkyLightningRed:
+          CE14SkyLightningRed:
             min: 1
             max: 1
       - !type:ChangeConstructionNodeBehavior
-        node: CP14VampireClanHeartDevourersFrame
+        node: CE14VampireClanHeartDevourersFrame
 
 - type: entity
-  parent: CP14VampireClanHeartBase
-  id: CP14VampireClanHeartNightChildren
+  parent: CE14VampireClanHeartBase
+  id: CE14VampireClanHeartNightChildren
   suffix: Night childrens
   name: heart of night childrens clan
   components:
@@ -184,15 +184,15 @@
     - state: childrens
       shader: unshaded
     - state: orb1
-      sprite: _CP14/Structures/Specific/Vampire/heart_orb.rsi
+      sprite: _CE14/Structures/Specific/Vampire/heart_orb.rsi
       shader: unshaded
       offset: 0, 0.5
       map: [ "level" ]
-  - type: CP14VampireClanHeart
+  - type: CE14VampireClanHeart
     faction: NightChildrens
   - type: Construction
-    graph: CP14VampireClanHeartNightChildren
-    node: CP14VampireClanHeartNightChildren
+    graph: CE14VampireClanHeartNightChildren
+    node: CE14VampireClanHeartNightChildren
   - type: Destructible
     thresholds:
     - trigger:
@@ -202,33 +202,33 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-      - !type:CP14VampireAltarExplodeBehavior
+      - !type:CE14VampireAltarExplodeBehavior
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SkyLightningRed:
+          CE14SkyLightningRed:
             min: 1
             max: 1
       - !type:ChangeConstructionNodeBehavior
-        node: CP14VampireClanHeartNightChildrenFrame
+        node: CE14VampireClanHeartNightChildrenFrame
 
 - type: entity
   parent: BaseStructure
-  id: CP14VampireClanHeartFrameUnnameable
+  id: CE14VampireClanHeartFrameUnnameable
   categories: [ ForkFiltered, HideSpawnMenu ]
   name: clan heart frame
   description: A majestic artifact of vampire culture. Unfinished.
   components:
   - type: Sprite
     snapCardinals: true
-    sprite: _CP14/Structures/Specific/Vampire/heart.rsi
+    sprite: _CE14/Structures/Specific/Vampire/heart.rsi
     layers:
     - state: frame
   - type: Construction
-    graph: CP14VampireClanHeartUnnameable
-    node: CP14VampireClanHeartUnnameableFrame
+    graph: CE14VampireClanHeartUnnameable
+    node: CE14VampireClanHeartUnnameableFrame
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Metallic
+    damageModifierSet: CE14Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -237,7 +237,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14StoneBlock1:
+          CE14StoneBlock1:
             min: 1
             max: 5
       - !type:PlaySoundBehavior
@@ -247,49 +247,49 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  parent: CP14VampireClanHeartFrameUnnameable
-  id: CP14VampireClanHeartFrameDevourers
+  parent: CE14VampireClanHeartFrameUnnameable
+  id: CE14VampireClanHeartFrameDevourers
   categories: [ ForkFiltered, HideSpawnMenu ]
   components:
   - type: Construction
-    graph: CP14VampireClanHeartDevourers
-    node: CP14VampireClanHeartDevourersFrame
+    graph: CE14VampireClanHeartDevourers
+    node: CE14VampireClanHeartDevourersFrame
   
 - type: entity
-  parent: CP14VampireClanHeartFrameUnnameable
-  id: CP14VampireClanHeartFrameNightChildrens
+  parent: CE14VampireClanHeartFrameUnnameable
+  id: CE14VampireClanHeartFrameNightChildrens
   categories: [ ForkFiltered, HideSpawnMenu ]
   components:
   - type: Construction
-    graph: CP14VampireClanHeartNightChildren
-    node: CP14VampireClanHeartNightChildrenFrame
+    graph: CE14VampireClanHeartNightChildren
+    node: CE14VampireClanHeartNightChildrenFrame
 
 - type: entity
-  id: CP14VampireStoneAltar
+  id: CE14VampireStoneAltar
   parent: Bed
   categories: [ ForkFiltered ]
   name: bloody altar
   description: A gruesome stone altar splattered with blood. Doubles the amount of blood essence extracted from vampire victims.
   components:
-  - type: CP14VampireAltar
+  - type: CE14VampireAltar
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite
-    sprite: _CP14/Structures/Specific/Vampire/altar.rsi
+    sprite: _CE14/Structures/Specific/Vampire/altar.rsi
     layers:
     - state: base
     - state: fx
       shader: unshaded
     noRot: true
   - type: Icon
-    sprite: _CP14/Structures/Specific/Vampire/altar.rsi
+    sprite: _CE14/Structures/Specific/Vampire/altar.rsi
     state: base
   - type: Construction
-    graph: CP14VampireStoneAltar
-    node: CP14VampireStoneAltar
+    graph: CE14VampireStoneAltar
+    node: CE14VampireStoneAltar
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Rock
+    damageModifierSet: CE14Rock
   - type: Destructible
     thresholds:
     - trigger:
@@ -298,12 +298,12 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14StoneBlock1:
+          CE14StoneBlock1:
             min: 2
             max: 4
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BloodEssence:
+          CE14BloodEssence:
             min: 1
             max: 1
       - !type:PlaySoundBehavior

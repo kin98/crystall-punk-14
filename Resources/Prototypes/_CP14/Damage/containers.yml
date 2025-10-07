@@ -1,23 +1,23 @@
 - type: damageContainer
-  id: CP14Biological
+  id: CE14Biological
   supportedGroups:
     - Brute
     - Burn
     - Toxin
     - Genetic
     - Airloss
-    - CP14Magic
+    - CE14Magic
 
 - type: damageContainer
-  id: CP14BiologicalAnaerobic
+  id: CE14BiologicalAnaerobic
   supportedGroups:
   - Brute
   - Burn
   - Toxin
   - Genetic
-  - CP14Magic
+  - CE14Magic
 
 - type: damageContainer
-  id: CP14Spectral
+  id: CE14Spectral
   supportedGroups:
-  - CP14Magic
+  - CE14Magic

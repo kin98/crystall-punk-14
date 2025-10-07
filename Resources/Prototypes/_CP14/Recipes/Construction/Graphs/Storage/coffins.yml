@@ -1,23 +1,23 @@
 - type: constructionGraph
-  id: CP14CrateCoffin
+  id: CE14CrateCoffin
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14CrateCoffin
+        - to: CE14CrateCoffin
           completed:
             - !type:SnapToGrid
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 3
               doAfter: 2
-            - material: CP14Cloth
+            - material: CE14Cloth
               amount: 2
               doAfter: 2
-    - node: CP14CrateCoffin
-      entity: CP14CrateCoffin
+    - node: CE14CrateCoffin
+      entity: CE14CrateCoffin
       edges:
         - to: start
           steps:
@@ -25,8 +25,8 @@
               doAfter: 2
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 3
             - !type:SpawnPrototype
-              prototype: CP14Cloth1
+              prototype: CE14Cloth1
               amount: 2

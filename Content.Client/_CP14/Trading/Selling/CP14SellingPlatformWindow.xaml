@@ -1,7 +1,7 @@
 <DefaultWindow xmlns="https://spacestation14.io"
                xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                Name="Window"
-               Title="{Loc 'cp14-trading-ui-title'}"
+               Title="{Loc 'CE14-trading-ui-title'}"
                MinSize="400 300"
                SetSize="800 600">
 
@@ -13,7 +13,7 @@
                     <BoxContainer SetWidth="100" Name="SellPriceHolder" VerticalAlignment="Center" HorizontalExpand="True" HorizontalAlignment="Center" />
                     <SpriteView Name="SpriteView" Scale="4 4" Access="Public"/>
                     <Button Name="SellButton" StyleClasses="OpenBoth" Access="Public" MaxWidth="100" SetHeight="30">
-                        <Label Text="{Loc cp14-trading-ui-button-sell}" Margin="-5 0 0 0" HorizontalAlignment="Center"/>
+                        <Label Text="{Loc CE14-trading-ui-button-sell}" Margin="-5 0 0 0" HorizontalAlignment="Center"/>
                     </Button>
                 </BoxContainer>
                 <!-- Tree Tabs -->

@@ -1,13 +1,13 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.LockKey.Components;
+namespace Content.Shared._CE14.LockKey.Components;
 
 /// <summary>
 ///
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14StationKeyDistributionComponent : Component
+public sealed partial class CE14StationKeyDistributionComponent : Component
 {
     [DataField]
-    public List<ProtoId<CP14LockTypePrototype>> Keys = new();
+    public List<ProtoId<CE14LockTypePrototype>> Keys = new();
 }

@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseSeed
+  id: CE14BaseSeed
   parent: BaseItem
   abstract: true
   categories: [ ForkFiltered ]
@@ -7,128 +7,128 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Specific/Farming/seeds.rsi
-  - type: CP14Seed
+    sprite: _CE14/Objects/Specific/Farming/seeds.rsi
+  - type: CE14Seed
   - type: Tag
     tags:
-    - CP14FarmSeed
+    - CE14FarmSeed
 
 - type: entity
-  id: CP14SeedWheat
+  id: CE14SeedWheat
   name: wheat seeds
   description: Small wheat seeds. What will you do with them? Grind them into flour, or plant them again?
-  parent: CP14BaseSeed
+  parent: CE14BaseSeed
   components:
   - type: Sprite
     layers:
     - state: bag
     - state: wheat
-  - type: CP14Seed
-    plantProto: CP14PlantWheat
+  - type: CE14Seed
+    plantProto: CE14PlantWheat
   - type: StaticPrice
     price: 0.4
 
 - type: entity
-  id: CP14SeedPumpkin
+  id: CE14SeedPumpkin
   name: pumpkin seeds
   description: Pumpkin seeds. Some pumpkin seems to have been gutted and butchered.
-  parent: CP14BaseSeed
+  parent: CE14BaseSeed
   components:
   - type: Sprite
     layers:
     - state: bag
     - state: pumpkin
-  - type: CP14Seed
-    plantProto: CP14PlantPumpkin
+  - type: CE14Seed
+    plantProto: CE14PlantPumpkin
   - type: StaticPrice
     price: 1
 
 - type: entity
-  id: CP14SeedCabbage
+  id: CE14SeedCabbage
   name: cabbage seeds
   description: Oh, no, my cabbage!
-  parent: CP14BaseSeed
+  parent: CE14BaseSeed
   components:
   - type: Sprite
     layers:
     - state: bag
     - state: cabbage
-  - type: CP14Seed
-    plantProto: CP14PlantCabbage
+  - type: CE14Seed
+    plantProto: CE14PlantCabbage
   - type: StaticPrice
     price: 0.6
 
 - type: entity
-  id: CP14SeedCucumber
+  id: CE14SeedCucumber
   name: cucumber seeds
   description: Are cucumber seeds. You know what to do with them.
-  parent: CP14BaseSeed
+  parent: CE14BaseSeed
   components:
   - type: Sprite
     layers:
     - state: bag
     - state: cucumber
-  - type: CP14Seed
-    plantProto: CP14PlantCucumber
+  - type: CE14Seed
+    plantProto: CE14PlantCucumber
   - type: StaticPrice
     price: 1
 
 - type: entity
-  id: CP14SeedTomato
+  id: CE14SeedTomato
   name: tomato seeds
   description: It looks like powder! They're so small, these seeds.
-  parent: CP14BaseSeed
+  parent: CE14BaseSeed
   components:
   - type: Sprite
     layers:
     - state: bag
     - state: tomato
-  - type: CP14Seed
-    plantProto: CP14PlantTomatoes
+  - type: CE14Seed
+    plantProto: CE14PlantTomatoes
   - type: StaticPrice
     price: 0.4
 
 - type: entity
-  id: CP14SeedPepper
+  id: CE14SeedPepper
   name: pepper seeds
   description: Pepper seeds, with a peppercorn inside.
-  parent: CP14BaseSeed
+  parent: CE14BaseSeed
   components:
   - type: Sprite
     layers:
     - state: bag
     - state: pepper
-  - type: CP14Seed
-    plantProto: CP14PlantPepper
+  - type: CE14Seed
+    plantProto: CE14PlantPepper
   - type: StaticPrice
     price: 2
 
 - type: entity
-  id: CP14SeedSage
+  id: CE14SeedSage
   name: sage seeds
   description: Sage seeds. It's time to grow some fun herbs!
-  parent: CP14BaseSeed
+  parent: CE14BaseSeed
   components:
   - type: Sprite
     layers:
     - state: bag
     - state: sage
-  - type: CP14Seed
-    plantProto: CP14PlantSage
+  - type: CE14Seed
+    plantProto: CE14PlantSage
   - type: StaticPrice
     price: 5
 
 - type: entity
-  id: CP14SeedCotton
+  id: CE14SeedCotton
   name: cotton seeds
   description: Cotton seeds. It's time to grow some pants!
-  parent: CP14BaseSeed
+  parent: CE14BaseSeed
   components:
   - type: Sprite
     layers:
     - state: bag
     - state: cotton
-  - type: CP14Seed
-    plantProto: CP14PlantCotton
+  - type: CE14Seed
+    plantProto: CE14PlantCotton
   - type: StaticPrice
     price: 1

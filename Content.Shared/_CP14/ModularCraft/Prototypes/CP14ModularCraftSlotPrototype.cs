@@ -1,10 +1,10 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.ModularCraft.Prototypes;
+namespace Content.Shared._CE14.ModularCraft.Prototypes;
 
 [Prototype("modularSlot")]
-public sealed partial class CP14ModularCraftSlotPrototype : IPrototype
+public sealed partial class CE14ModularCraftSlotPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;

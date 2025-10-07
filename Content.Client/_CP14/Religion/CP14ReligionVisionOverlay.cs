@@ -1,14 +1,14 @@
 using System.Numerics;
-using Content.Shared._CP14.Religion.Components;
-using Content.Shared._CP14.Religion.Prototypes;
+using Content.Shared._CE14.Religion.Components;
+using Content.Shared._CE14.Religion.Prototypes;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._CP14.Religion;
+namespace Content.Client._CE14.Religion;
 
-public sealed class CP14ReligionVisionOverlay : Overlay
+public sealed class CE14ReligionVisionOverlay : Overlay
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
@@ -25,7 +25,7 @@ public sealed class CP14ReligionVisionOverlay : Overlay
     public override bool RequestScreenTexture => true;
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
 
-    private readonly ProtoId<CP14ReligionPrototype>? _religion;
+    private readonly ProtoId<CE14ReligionPrototype>? _religion;
 
     private readonly ShaderInstance _religionShader;
     private readonly Vector2[] _positions = new Vector2[MaxCount];
@@ -35,15 +35,15 @@ public sealed class CP14ReligionVisionOverlay : Overlay
     private readonly float[] _antiRadii = new float[MaxCount];
     private int _antiCount;
 
-    public CP14ReligionVisionOverlay()
+    public CE14ReligionVisionOverlay()
     {
         IoCManager.InjectDependencies(this);
 
-        _religionShader = _proto.Index<ShaderPrototype>("CP14ReligionVision").InstanceUnique();
+        _religionShader = _proto.Index<ShaderPrototype>("CE14ReligionVision").InstanceUnique();
 
         _transform = _entManager.System<SharedTransformSystem>();
 
-        if (_entManager.TryGetComponent<CP14ReligionEntityComponent>(_player.LocalEntity, out var vision))
+        if (_entManager.TryGetComponent<CE14ReligionEntityComponent>(_player.LocalEntity, out var vision))
             _religion = vision.Religion;
     }
 
@@ -54,7 +54,7 @@ public sealed class CP14ReligionVisionOverlay : Overlay
 
         var clusters = new List<Cluster>();
         var antiClusters = new List<Cluster>();
-        var religionQuery = _entManager.AllEntityQueryEnumerator<CP14ReligionObserverComponent, TransformComponent>();
+        var religionQuery = _entManager.AllEntityQueryEnumerator<CE14ReligionObserverComponent, TransformComponent>();
         while (religionQuery.MoveNext(out var uid, out var observer, out var xform))
         {
             if (_religion is null)
@@ -136,7 +136,7 @@ public sealed class CP14ReligionVisionOverlay : Overlay
         if (ScreenTexture == null || args.Viewport.Eye == null)
             return;
 
-        if (!_entManager.TryGetComponent<CP14ReligionVisionComponent>(_player.LocalEntity, out var visionComponent))
+        if (!_entManager.TryGetComponent<CE14ReligionVisionComponent>(_player.LocalEntity, out var visionComponent))
             return;
 
         _religionShader?.SetParameter("shaderColor", visionComponent.ShaderColor);

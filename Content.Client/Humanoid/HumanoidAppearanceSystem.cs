@@ -114,7 +114,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         //if (sexMorph)
         //    protoId = HumanoidVisualLayersExtension.GetSexMorph(key, component.Sex, protoId);
 
-        //CP14 female bodies support
+        //CE14 female bodies support
         if (sexMorph)
         {
             var tempProto = HumanoidVisualLayersExtension.GetSexMorph(key, component.Sex, protoId);
@@ -123,7 +123,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 protoId = tempProto;
             }
         }
-        //CP14 female bodies support end
+        //CE14 female bodies support end
 
         var proto = _prototypeManager.Index<HumanoidSpeciesSpriteLayer>(protoId);
         component.BaseLayers[key] = proto;

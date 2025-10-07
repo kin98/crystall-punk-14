@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseMaterialDoorNavMap
-  id: CP14BaseDoor
+  id: CE14BaseDoor
   categories: [ ForkFiltered ]
   abstract: true
   components:
@@ -17,12 +17,12 @@
     openDrawDepth: Mobs
   - type: Lock
     locked: false
-  - type: CP14Lock #Empty, for installing new locks
+  - type: CE14Lock #Empty, for installing new locks
   - type: PlacementReplacement
     key: walls
-  - type: CP14DoorInteractionPopup
+  - type: CE14DoorInteractionPopup
     interactSound:
-      collection: CP14Doorknob
+      collection: CE14Doorknob
       params:
         variation: 0.03
         volume: -5

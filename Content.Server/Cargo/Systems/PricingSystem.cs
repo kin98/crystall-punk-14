@@ -17,7 +17,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Linq;
-using Content.Server._CP14.Trading;
+using Content.Server._CE14.Trading;
 using Content.Shared.Cargo.Components;
 using Content.Shared.Research.Prototypes;
 
@@ -263,9 +263,9 @@ public sealed class PricingSystem : EntitySystem
     {
         double price = 0;
 
-        //CP14 We take materials into account when calculating the price in any case.
+        //CE14 We take materials into account when calculating the price in any case.
         var proto = MetaData(uid).EntityPrototype?.ID ?? "";
-        if ((HasComp<MaterialComponent>(uid) || proto.StartsWith("CP14")) &&
+        if ((HasComp<MaterialComponent>(uid) || proto.StartsWith("CE14")) &&
             TryComp<PhysicalCompositionComponent>(uid, out var composition))
         {
             var matPrice = GetMaterialPrice(composition);
@@ -282,8 +282,8 @@ public sealed class PricingSystem : EntitySystem
     {
         double price = 0;
 
-        //CP14 We take materials into account when calculating the price in any case.
-        if ((prototype.Components.ContainsKey(Factory.GetComponentName<MaterialComponent>()) || prototype.ID.StartsWith("CP14")) &&
+        //CE14 We take materials into account when calculating the price in any case.
+        if ((prototype.Components.ContainsKey(Factory.GetComponentName<MaterialComponent>()) || prototype.ID.StartsWith("CE14")) &&
             prototype.Components.TryGetValue(Factory.GetComponentName<PhysicalCompositionComponent>(), out var composition))
         {
             var compositionComp = (PhysicalCompositionComponent) composition.Component;

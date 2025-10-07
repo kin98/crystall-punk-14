@@ -2,9 +2,9 @@ using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._CP14.MagicVision;
+namespace Content.Client._CE14.MagicVision;
 
-public sealed class CP14MagicVisionNoirOverlay : Overlay
+public sealed class CE14MagicVisionNoirOverlay : Overlay
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
@@ -12,10 +12,10 @@ public sealed class CP14MagicVisionNoirOverlay : Overlay
     public override bool RequestScreenTexture => true;
     private readonly ShaderInstance _noirShader;
 
-    public CP14MagicVisionNoirOverlay()
+    public CE14MagicVisionNoirOverlay()
     {
         IoCManager.InjectDependencies(this);
-        _noirShader = _prototypeManager.Index<ShaderPrototype>("CP14BlueNoir").InstanceUnique();
+        _noirShader = _prototypeManager.Index<ShaderPrototype>("CE14BlueNoir").InstanceUnique();
         ZIndex = 9; // draw this over the DamageOverlay, RainbowOverlay etc, but before the black and white shader
     }
 

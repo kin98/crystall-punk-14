@@ -1,1 +1,1 @@
-cp14-guidebook-random-variations-title = Random products
+CE14-guidebook-random-variations-title = Random products

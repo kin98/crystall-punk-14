@@ -1,18 +1,18 @@
 - type: job
-  id: CP14Adventurer
-  name: cp14-job-name-adventurer
-  description: cp14-job-desc-adventurer
-  playTimeTracker: CP14JobAdventurer
-  startingGear: CP14AdventurerGear
-  icon: "CP14JobIconAdventurer"
-  supervisors: cp14-job-supervisors-guildmaster
+  id: CE14Adventurer
+  name: CE14-job-name-adventurer
+  description: CE14-job-desc-adventurer
+  playTimeTracker: CE14JobAdventurer
+  startingGear: CE14AdventurerGear
+  icon: "CE14JobIconAdventurer"
+  supervisors: CE14-job-supervisors-guildmaster
 
 - type: startingGear
-  id: CP14AdventurerGear
+  id: CE14AdventurerGear
   storage:
     back:
-    - CP14EnergyCrystalMedium
-    - CP14EnergyCrystalMedium
+    - CE14EnergyCrystalMedium
+    - CE14EnergyCrystalMedium
   equipment:
-    keys: CP14BaseKeyRing
-    belt: CP14WalletFilledTest
+    keys: CE14BaseKeyRing
+    belt: CE14WalletFilledTest

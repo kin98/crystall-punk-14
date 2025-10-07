@@ -7,17 +7,17 @@
   parent: MarkerBase
   components:
   - type: GhostRole
-    name: cp14-ghost-role-information-name-rat
-    description: cp14-ghost-role-information-description-rat
-    rules: cp14-ghost-role-information-rules-pet
+    name: CE14-ghost-role-information-name-rat
+    description: CE14-ghost-role-information-description-rat
+    rules: CE14-ghost-role-information-rules-pet
     allowMovement: true
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: CP14MobRat
+    prototype: CE14MobRat
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
       - state: green
-      - sprite: _CP14/Mobs/Pets/rat.rsi
+      - sprite: _CE14/Mobs/Pets/rat.rsi
         state: rat

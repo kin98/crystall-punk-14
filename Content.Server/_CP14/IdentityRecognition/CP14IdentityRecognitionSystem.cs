@@ -1,7 +1,7 @@
-using Content.Shared._CP14.IdentityRecognition;
+using Content.Shared._CE14.IdentityRecognition;
 
-namespace Content.Server._CP14.IdentityRecognition;
+namespace Content.Server._CE14.IdentityRecognition;
 
-public sealed class CP14IdentityRecognitionSystem : CP14SharedIdentityRecognitionSystem
+public sealed class CE14IdentityRecognitionSystem : CE14SharedIdentityRecognitionSystem
 {
 }

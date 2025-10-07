@@ -1,13 +1,13 @@
-- type: CP14Recipe
-  id: CP14ClothingShoesLongLeatherBoots
-  tag: CP14RecipeLeatherWorking
+- type: CE14Recipe
+  id: CE14ClothingShoesLongLeatherBoots
+  tag: CE14RecipeLeatherWorking
   category: LeatherWorking
   craftTime: 2
   requirements:
   - !type:StackResource
-    stack: CP14ThinLeather
+    stack: CE14ThinLeather
     count: 1
   - !type:ProtoIdResource
-    protoId: CP14String
+    protoId: CE14String
     count: 2
-  result: CP14ClothingShoesLongLeatherBoots
+  result: CE14ClothingShoesLongLeatherBoots

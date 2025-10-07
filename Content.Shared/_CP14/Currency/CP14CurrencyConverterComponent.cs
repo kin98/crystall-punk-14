@@ -4,14 +4,14 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Currency;
+namespace Content.Shared._CE14.Currency;
 
 /// <summary>
 /// Reflects the market value of an item, to guide players through the economy.
 /// </summary>
 
 [RegisterComponent]
-public sealed partial class CP14CurrencyConverterComponent : Component
+public sealed partial class CE14CurrencyConverterComponent : Component
 {
     [DataField]
     public int Balance;
@@ -23,8 +23,8 @@ public sealed partial class CP14CurrencyConverterComponent : Component
     public Vector2 SpawnOffset = new Vector2(0, -0.4f);
 
     [DataField]
-    public SoundSpecifier InsertSound = new SoundCollectionSpecifier("CP14Coins");
+    public SoundSpecifier InsertSound = new SoundCollectionSpecifier("CE14Coins");
 
     [DataField]
-    public ProtoId<TagPrototype> CoinTag = "CP14Coin";
+    public ProtoId<TagPrototype> CoinTag = "CE14Coin";
 }

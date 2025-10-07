@@ -2,14 +2,14 @@ using System.Numerics;
 using Content.Shared.Humanoid;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CP14.Humanoid;
+namespace Content.Shared._CE14.Humanoid;
 
 /// <summary>
 /// Unary coloration strategy that returns human skin tones, with 0 being lightest and 100 being darkest
 /// </summary>
 [DataDefinition]
 [Serializable, NetSerializable]
-public sealed partial class CP14ElfTonedSkinColoration : ISkinColorationStrategy
+public sealed partial class CE14ElfTonedSkinColoration : ISkinColorationStrategy
 {
     [DataField]
     public Color ValidElfSkinTone = Color.FromHsv(new Vector4(0.07f, 0.05f, 1f, 1f));

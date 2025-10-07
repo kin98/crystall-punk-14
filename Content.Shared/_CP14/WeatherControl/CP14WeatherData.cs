@@ -2,10 +2,10 @@ using Content.Shared.Destructible.Thresholds;
 using Content.Shared.Weather;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.WeatherControl;
+namespace Content.Shared._CE14.WeatherControl;
 
 [DataRecord, Serializable]
-public sealed class CP14WeatherData
+public sealed class CE14WeatherData
 {
     [DataField(required: true)]
     public ProtoId<WeatherPrototype>? Visuals { get; set; } = null;

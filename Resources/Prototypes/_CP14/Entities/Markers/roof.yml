@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14RoofMarker
+  id: CE14RoofMarker
   name: Roof enable Marker
   categories: [ ForkFiltered ]
   parent: MarkerBase
@@ -12,7 +12,7 @@
       shader: unshaded
 
 - type: entity
-  id: CP14NoRoofMarker
+  id: CE14NoRoofMarker
   name: Roof disable Marker
   categories: [ ForkFiltered ]
   parent: MarkerBase
@@ -25,13 +25,13 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14NoRoofMarker
-  id: CP14NoRoofMarkerGodRays
+  parent: CE14NoRoofMarker
+  id: CE14NoRoofMarkerGodRays
   suffix: God Rays (5%)
   components:
   - type: RandomSpawner
     prototypes:
-    - CP14GodRays
+    - CE14GodRays
     chance: 0.05
     deleteSpawnerAfterSpawn: false
     

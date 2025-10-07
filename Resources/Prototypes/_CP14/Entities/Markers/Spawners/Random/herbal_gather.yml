@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14RandomSpawnerGatherAgaricShroom
+  id: CE14RandomSpawnerGatherAgaricShroom
   name: agaric shroom spawner
   parent: MarkerBase
   categories: [ ForkFiltered ]
@@ -7,9 +7,9 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: _CP14/Structures/Flora/Wild/agaric.rsi
+      - sprite: _CE14/Structures/Flora/Wild/agaric.rsi
         state: world1
   - type: RandomSpawner
     prototypes:
-    - CP14GatherableFlyAgaric
+    - CE14GatherableFlyAgaric
     chance: 0.05

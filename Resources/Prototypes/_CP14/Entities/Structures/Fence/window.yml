@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseStructure
-  id: CP14BaseFenceWindow
+  id: CE14BaseFenceWindow
   abstract: true
   categories: [ ForkFiltered ]
   name: fence window
@@ -38,20 +38,20 @@
         - MidImpassable
         - HighImpassable
   - type: IconSmooth
-    key: CP14fencebig
+    key: CE14fencebig
     base: fence
     additionalKeys:
-    - CP14wall
+    - CE14wall
 
 - type: entity
-  parent: CP14BaseFenceWindow
-  id: CP14FenceWindowIron
+  parent: CE14BaseFenceWindow
+  id: CE14FenceWindowIron
   suffix: Iron
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Fence/iron_window.rsi
+    sprite: _CE14/Structures/Fence/iron_window.rsi
   - type: Icon
-    sprite: _CP14/Structures/Fence/iron_window.rsi
+    sprite: _CE14/Structures/Fence/iron_window.rsi
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic
@@ -66,7 +66,7 @@
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14ScrapIron:
+          CE14ScrapIron:
             min: 1
             max: 2
       - !type:DoActsBehavior

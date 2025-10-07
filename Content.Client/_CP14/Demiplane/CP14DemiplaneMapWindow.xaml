@@ -1,11 +1,11 @@
-<demiplane:CP14DemiplaneMapWindow
+<demiplane:CE14DemiplaneMapWindow
     xmlns="https://spacestation14.io"
     xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
     xmlns:parallax="clr-namespace:Content.Client.Parallax"
-    xmlns:nodeTree="clr-namespace:Content.Client._CP14.UserInterface.Systems.NodeTree"
-    xmlns:demiplane="clr-namespace:Content.Client._CP14.Demiplane"
-    Title="{Loc 'cp14-demiplane-map-title'}"
+    xmlns:nodeTree="clr-namespace:Content.Client._CE14.UserInterface.Systems.NodeTree"
+    xmlns:demiplane="clr-namespace:Content.Client._CE14.Demiplane"
+    Title="{Loc 'CE14-demiplane-map-title'}"
     MinSize="1000 650">
 
     <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
@@ -59,7 +59,7 @@
                                           ParallaxPrototype="KettleStation" Access="Public" SpeedX="10" SpeedY="5" />
                 <BoxContainer Margin="10 10 10 10" Orientation="Horizontal" HorizontalExpand="True"
                               VerticalExpand="True">
-                    <nodeTree:CP14NodeTreeGraphControl Name="GraphControl" HorizontalAlignment="Stretch"
+                    <nodeTree:CE14NodeTreeGraphControl Name="GraphControl" HorizontalAlignment="Stretch"
                                                        VerticalAlignment="Stretch" Access="Public" />
                 </BoxContainer>
                 <!-- Admin Description -->
@@ -70,4 +70,4 @@
             </PanelContainer>
         </BoxContainer>
     </BoxContainer>
-</demiplane:CP14DemiplaneMapWindow>
+</demiplane:CE14DemiplaneMapWindow>

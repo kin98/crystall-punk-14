@@ -2,50 +2,50 @@
 # Artisans
 
 - type: playTimeTracker
-  id: CP14JobApprentice
+  id: CE14JobApprentice
 
 - type: playTimeTracker
-  id: CP14JobAlchemist
+  id: CE14JobAlchemist
 
 - type: playTimeTracker
-  id: CP14JobBlacksmith
+  id: CE14JobBlacksmith
 
 - type: playTimeTracker
-  id: CP14JobInnkeeper
+  id: CE14JobInnkeeper
 
 # Mercenary
 
 - type: playTimeTracker
-  id: CP14JobGuildmaster
+  id: CE14JobGuildmaster
 
 - type: playTimeTracker
-  id: CP14JobGuildWorker
+  id: CE14JobGuildWorker
 
 - type: playTimeTracker
-  id: CP14JobAdventurer
+  id: CE14JobAdventurer
 
 # Guard
 
 - type: playTimeTracker
-  id: CP14JobGuardCommander
+  id: CE14JobGuardCommander
 
 - type: playTimeTracker
-  id: CP14JobGuard
+  id: CE14JobGuard
 
 - type: playTimeTracker
-  id: CP14JobInvestigator
+  id: CE14JobInvestigator
 
 # Trade guild
 
 - type: playTimeTracker
-  id: CP14JobCommandant
+  id: CE14JobCommandant
 
 - type: playTimeTracker
-  id: CP14JobMerchant
+  id: CE14JobMerchant
 
 # Gods
 - type: playTimeTracker
-  id: CP14GodMerkas
+  id: CE14GodMerkas
 
 - type: playTimeTracker
-  id: CP14GodLumera
+  id: CE14GodLumera

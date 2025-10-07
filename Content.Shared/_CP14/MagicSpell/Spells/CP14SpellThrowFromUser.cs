@@ -2,9 +2,9 @@ using System.Numerics;
 using Content.Shared.Projectiles;
 using Content.Shared.Throwing;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellThrowFromUser : CP14SpellEffect
+public sealed partial class CE14SpellThrowFromUser : CE14SpellEffect
 {
     [DataField]
     public float ThrowPower = 10f;
@@ -12,7 +12,7 @@ public sealed partial class CP14SpellThrowFromUser : CP14SpellEffect
     [DataField]
     public float Distance = 2.5f;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         if (args.Target is null || args.User is null)
             return;

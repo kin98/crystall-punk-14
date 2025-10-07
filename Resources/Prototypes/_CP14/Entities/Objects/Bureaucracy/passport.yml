@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14Passport
+  id: CE14Passport
   categories: [ ForkFiltered ]
   name: passport
   description: Identification document.
@@ -20,12 +20,12 @@
     tags:
     - Document
   - type: Sprite
-    sprite: _CP14/Objects/Bureaucracy/paper.rsi
+    sprite: _CE14/Objects/Bureaucracy/paper.rsi
     layers:
     - state: passport
   - type: PaperVisuals
     backgroundImagePath: "/Textures/Interface/Paper/paper_background_book.svg.96dpi.png"
-    headerImagePath: "/Textures/_CP14/Interface/Paper/paper_passport.png"
+    headerImagePath: "/Textures/_CE14/Interface/Paper/paper_passport.png"
     headerMargin: 0.0, 0.0, 0.0, 4.0
     backgroundImageTile: false
     backgroundPatchMargin: 23.0, 16.0, 14.0, 15.0

@@ -1,70 +1,70 @@
 - type: entity
-  id: CP14ActionSpellMagicBallade
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellMagicBallade
+  parent: CE14ActionSpellBase
   name: Magic ballade
   description: With your music, you infuse the objects around you with mana
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.8
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 5
     canModifyManacost: false
   - type: DoAfterArgs
     hidden: true
     repeat: true
     delay: 1
-  - type: CP14ActionRequiredMusicTool
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneMagicBallade
+  - type: CE14ActionRequiredMusicTool
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneMagicBallade
   - type: Action
     sound: null
     useDelay: 15
     icon:
-      sprite: _CP14/Actions/Spells/meta.rsi
+      sprite: _CE14/Actions/Spells/meta.rsi
       state: magic_music
   - type: InstantAction
-    event: !type:CP14InstantModularEffectEvent
+    event: !type:CE14InstantModularEffectEvent
       effects:
-      - !type:CP14SpellArea
+      - !type:CE14SpellArea
         range: 5
         maxTargets: 5
         whitelist:
           components:
-          - CP14MagicEnergyContainer
-          - CP14MagicEnergyCrystalSlot
+          - CE14MagicEnergyContainer
+          - CE14MagicEnergyCrystalSlot
         effects:
-        - !type:CP14SpellSpawnEntityOnTarget
+        - !type:CE14SpellSpawnEntityOnTarget
           spawns:
-          - CP14ImpactEffectMagicBallade
-        - !type:CP14SpellApplyEntityEffect
+          - CE14ImpactEffectMagicBallade
+        - !type:CE14SpellApplyEntityEffect
           effects:
-          - !type:CP14ManaChange
+          - !type:CE14ManaChange
             manaDelta: 1.2
             safe: true
 
 - type: entity
-  id: CP14ImpactEffectMagicBallade
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectMagicBallade
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: Sprite
-    sprite: _CP14/Effects/music.rsi
+    sprite: _CE14/Effects/music.rsi
     layers:
     - state: notes_5
       color: "#5096d4"
       shader: unshaded
 
 - type: entity
-  id: CP14RuneMagicBallade
-  parent: CP14BaseMagicRune
+  id: CE14RuneMagicBallade
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
   - type: PointLight
     color: "#5096d4"
   - type: Sprite
-    sprite: _CP14/Effects/music.rsi
+    sprite: _CE14/Effects/music.rsi
     layers:
     - state: notes_3
       color: "#5096d4"

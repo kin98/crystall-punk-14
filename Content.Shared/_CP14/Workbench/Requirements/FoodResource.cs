@@ -4,21 +4,21 @@
  */
 
 using System.Linq;
-using Content.Shared._CP14.Cooking;
-using Content.Shared._CP14.Cooking.Components;
-using Content.Shared._CP14.Cooking.Prototypes;
+using Content.Shared._CE14.Cooking;
+using Content.Shared._CE14.Cooking.Components;
+using Content.Shared._CE14.Cooking.Prototypes;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Nutrition.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Workbench.Requirements;
+namespace Content.Shared._CE14.Workbench.Requirements;
 
-public sealed partial class FoodResource : CP14WorkbenchCraftRequirement
+public sealed partial class FoodResource : CE14WorkbenchCraftRequirement
 {
     [DataField(required: true)]
-    public ProtoId<CP14CookingRecipePrototype> Recipe;
+    public ProtoId<CE14CookingRecipePrototype> Recipe;
 
     [DataField]
     public FixedPoint2 Count = 1;
@@ -30,7 +30,7 @@ public sealed partial class FoodResource : CP14WorkbenchCraftRequirement
         var solutionSys = entManager.System<SharedSolutionContainerSystem>();
         foreach (var ent in placedEntities)
         {
-            if (!entManager.TryGetComponent<CP14FoodHolderComponent>(ent, out var foodHolder))
+            if (!entManager.TryGetComponent<CE14FoodHolderComponent>(ent, out var foodHolder))
                 continue;
 
             if (!entManager.HasComponent<FoodComponent>(ent))
@@ -59,7 +59,7 @@ public sealed partial class FoodResource : CP14WorkbenchCraftRequirement
 
         foreach (var ent in placedEntities)
         {
-            if (!entManager.TryGetComponent<CP14FoodHolderComponent>(ent, out var foodHolder))
+            if (!entManager.TryGetComponent<CE14FoodHolderComponent>(ent, out var foodHolder))
                 continue;
 
             if (!entManager.HasComponent<FoodComponent>(ent))

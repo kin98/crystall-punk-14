@@ -2,9 +2,9 @@
                xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
                xmlns:parallax="clr-namespace:Content.Client.Parallax"
-               xmlns:nodeTree="clr-namespace:Content.Client._CP14.UserInterface.Systems.NodeTree"
+               xmlns:nodeTree="clr-namespace:Content.Client._CE14.UserInterface.Systems.NodeTree"
                Name="Window"
-               Title="{Loc 'cp14-trading-ui-title'}"
+               Title="{Loc 'CE14-trading-ui-title'}"
                MinSize="1200 800"
                SetSize="1200 800">
 
@@ -36,7 +36,7 @@
                                        HorizontalExpand="True" HorizontalAlignment="Center" />
                             </BoxContainer>
                             <BoxContainer Orientation="Horizontal" HorizontalExpand="True" HorizontalAlignment="Center">
-                                <TextureRect VerticalAlignment="Center" Margin="20 0 5 0" HorizontalAlignment="Left" TextureScale="2, 2" TexturePath="/Textures/_CP14/Interface/Misc/star.png"/>
+                                <TextureRect VerticalAlignment="Center" Margin="20 0 5 0" HorizontalAlignment="Left" TextureScale="2, 2" TexturePath="/Textures/_CE14/Interface/Misc/star.png"/>
                                 <RichTextLabel  Name="UnlockCost" Access="Public" Text="0"/>
                             </BoxContainer>
                             <!-- Description -->
@@ -52,8 +52,8 @@
                 <!-- Buttons -->
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                     <BoxContainer Name="BuyBox" Orientation="Horizontal" HorizontalExpand="True" Visible="True">
-                        <Button Name="BuyButton" Text="{Loc 'cp14-trading-ui-button-buy'}"
-                                ToolTip="{Loc 'cp14-trading-ui-button-buy-tooltip'}" StyleClasses="OpenRight"
+                        <Button Name="BuyButton" Text="{Loc 'CE14-trading-ui-button-buy'}"
+                                ToolTip="{Loc 'CE14-trading-ui-button-buy-tooltip'}" StyleClasses="OpenRight"
                                 HorizontalExpand="True" MinHeight="35" Access="Public"/>
                         <BoxContainer Orientation="Horizontal">
                             <BoxContainer SetWidth="100" Name="BuyPriceHolder" VerticalAlignment="Center" HorizontalExpand="True" HorizontalAlignment="Center" />
@@ -76,7 +76,7 @@
                                           ParallaxPrototype="KettleStation" Access="Public" SpeedX="10" SpeedY="5" />
                 <BoxContainer Margin="10 10 10 10" Orientation="Horizontal" HorizontalExpand="True"
                               VerticalExpand="True">
-                    <nodeTree:CP14NodeTreeGraphControl Name="GraphControl" HorizontalAlignment="Stretch"
+                    <nodeTree:CE14NodeTreeGraphControl Name="GraphControl" HorizontalAlignment="Stretch"
                                                        VerticalAlignment="Stretch" Access="Public" />
                 </BoxContainer>
                 <!-- Tree Tabs -->

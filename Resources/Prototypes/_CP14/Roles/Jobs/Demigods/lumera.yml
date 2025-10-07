@@ -1,16 +1,16 @@
 - type: job
-  id: CP14GodLumera
-  name: cp14-job-name-god-lumera
-  description: cp14-job-desc-god-lumera
+  id: CE14GodLumera
+  name: CE14-job-name-god-lumera
+  description: CE14-job-desc-god-lumera
   setPreference: false
-  playTimeTracker: CP14GodLumera
+  playTimeTracker: CE14GodLumera
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 36000 # 10 hrs
   canBeAntag: false
-  icon: CP14JobIconGodLumera
-  jobEntity: CP14MobGodLumera
+  icon: CE14JobIconGodLumera
+  jobEntity: CE14MobGodLumera
   joinNotifyCrew: false
   requireAdminNotify: true
-  jobPreviewEntity: CP14MobGodLumera
+  jobPreviewEntity: CE14MobGodLumera
   applyTraits: false

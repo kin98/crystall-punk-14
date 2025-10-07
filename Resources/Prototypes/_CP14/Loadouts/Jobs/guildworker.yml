@@ -1,36 +1,36 @@
 # Head
 
 - type: loadoutGroup
-  id: CP14GuildWorkerHead
-  name: cp14-loadout-guildworker-head
+  id: CE14GuildWorkerHead
+  name: CE14-loadout-guildworker-head
   loadouts:
-  - CP14ClothingHeadGuildBeret
-  - CP14ClothingHeadGuildBeretRed
-  - CP14ClothingHeadGuildBeretYellow
-  - CP14ClothingHeadGuildBeretBlue
-  - CP14ClothingHeadGuildBeretGreen
+  - CE14ClothingHeadGuildBeret
+  - CE14ClothingHeadGuildBeretRed
+  - CE14ClothingHeadGuildBeretYellow
+  - CE14ClothingHeadGuildBeretBlue
+  - CE14ClothingHeadGuildBeretGreen
 
 - type: loadout
-  id: CP14ClothingHeadGuildBeret
+  id: CE14ClothingHeadGuildBeret
   equipment:
-    head: CP14ClothingHeadGuildBeret
+    head: CE14ClothingHeadGuildBeret
 
 - type: loadout
-  id: CP14ClothingHeadGuildBeretRed
+  id: CE14ClothingHeadGuildBeretRed
   equipment:
-    head: CP14ClothingHeadGuildBeretRed
+    head: CE14ClothingHeadGuildBeretRed
 
 - type: loadout
-  id: CP14ClothingHeadGuildBeretYellow
+  id: CE14ClothingHeadGuildBeretYellow
   equipment:
-    head: CP14ClothingHeadGuildBeretYellow
+    head: CE14ClothingHeadGuildBeretYellow
 
 - type: loadout
-  id: CP14ClothingHeadGuildBeretGreen
+  id: CE14ClothingHeadGuildBeretGreen
   equipment:
-    head: CP14ClothingHeadGuildBeretGreen
+    head: CE14ClothingHeadGuildBeretGreen
 
 - type: loadout
-  id: CP14ClothingHeadGuildBeretBlue
+  id: CE14ClothingHeadGuildBeretBlue
   equipment:
-    head: CP14ClothingHeadGuildBeretBlue
+    head: CE14ClothingHeadGuildBeretBlue

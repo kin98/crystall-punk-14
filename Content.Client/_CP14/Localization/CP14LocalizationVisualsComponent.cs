@@ -1,10 +1,10 @@
-namespace Content.Client._CP14.Localization;
+namespace Content.Client._CE14.Localization;
 
 /// <summary>
 /// Controls the visual of the sprite, depending on the localization. Useful for drawn lettering
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14LocalizationVisualsComponent : Component
+public sealed partial class CE14LocalizationVisualsComponent : Component
 {
     /// <summary>
     /// map(map,(lang, state))
@@ -16,7 +16,7 @@ public sealed partial class CP14LocalizationVisualsComponent : Component
     ///     map: ["map1"]
     ///   - state: stateName0
     ///     map: ["map2"]
-    /// - type: CP14LocalizationVisuals
+    /// - type: CE14LocalizationVisuals
     ///   mapStates:
     ///     map1:
     ///       ru-RU: stateName1

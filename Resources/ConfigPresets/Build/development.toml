@@ -45,10 +45,10 @@ random_species_weights = ""
 ssd_sleep_time = 3600
 
 [server]
-rules_file = "CP14Rules"
+rules_file = "CE14Rules"
 
 [audio]
-lobby_music_collection = "CP14LobbyMusic"
+lobby_music_collection = "CE14LobbyMusic"
 
-[cp14]
+[CE14]
 skill_timers = false

@@ -4,14 +4,14 @@ using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client._CP14.Trading;
+namespace Content.Client._CE14.Trading;
 
 [GenerateTypedNameReferences]
-public sealed partial class CP14TradingFactionButtonControl : Control
+public sealed partial class CE14TradingFactionButtonControl : Control
 {
     public event Action? OnPressed;
 
-    public CP14TradingFactionButtonControl(Color color, string label, FixedPoint2 reputation)
+    public CE14TradingFactionButtonControl(Color color, string label, FixedPoint2 reputation)
     {
         RobustXamlLoader.Load(this);
 

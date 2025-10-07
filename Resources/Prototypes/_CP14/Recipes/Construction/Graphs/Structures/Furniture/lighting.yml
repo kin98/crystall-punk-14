@@ -1,59 +1,59 @@
 - type: constructionGraph
-  id: CP14WallmountTorch
+  id: CE14WallmountTorch
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14WallmountTorch
+        - to: CE14WallmountTorch
           steps:
             - stackGroup: WoodenPlanks
               amount: 1
               doAfter: 1
-            - material: CP14Cloth
+            - material: CE14Cloth
               amount: 1
               doAfter: 1
 
-    - node: CP14WallmountTorch
-      entity: CP14WallmountTorch
+    - node: CE14WallmountTorch
+      entity: CE14WallmountTorch
 
 - type: constructionGraph
-  id: CP14FloorTorch
+  id: CE14FloorTorch
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14FloorTorch
+        - to: CE14FloorTorch
           steps:
             - stackGroup: WoodenPlanks
               amount: 1
               doAfter: 1
-            - material: CP14Cloth
+            - material: CE14Cloth
               amount: 1
               doAfter: 1
 
-    - node: CP14FloorTorch
-      entity: CP14FloorTorch
+    - node: CE14FloorTorch
+      entity: CE14FloorTorch
 
 - type: constructionGraph
-  id: CP14WallmountLampEmpty
+  id: CE14WallmountLampEmpty
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14WallmountLampEmpty
+        - to: CE14WallmountLampEmpty
           steps:
-            - material: CP14CopperBar
+            - material: CE14CopperBar
               amount: 3
               doAfter: 3
 
-    - node: CP14WallmountLampEmpty
-      entity: CP14WallmountLampEmpty
+    - node: CE14WallmountLampEmpty
+      entity: CE14WallmountLampEmpty
       edges:
       - to: start
         steps:
@@ -63,5 +63,5 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14CopperBar1
+          prototype: CE14CopperBar1
           amount: 3

@@ -1,20 +1,20 @@
 - type: entity
-  id: CP14ActionSpellVampirePower
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellVampirePower
+  parent: CE14ActionSpellBase
   name: Demonstration of strength
   description: By channeling the power of your ancient vampire clan, you instantly strike your target, causing them to fly back and lose their balance.
   components:
-  - type: CP14ActionDangerous
-  - type: CP14MagicEffectVampire
-  - type: CP14ActionManaCost
+  - type: CE14ActionDangerous
+  - type: CE14MagicEffectVampire
+  - type: CE14ActionManaCost
     manaCost: 20
   - type: Action
     useDelay: 45
     icon:
-      sprite: _CP14/Actions/Spells/vampire.rsi
+      sprite: _CE14/Actions/Spells/vampire.rsi
       state: power_kick
     sound: !type:SoundPathSpecifier
-      path: /Audio/_CP14/Effects/essence_consume.ogg
+      path: /Audio/_CE14/Effects/essence_consume.ogg
   - type: TargetAction
     range: 1
   - type: EntityTargetAction
@@ -24,18 +24,18 @@
       - Body
       - Item
       - Anchorable
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellApplyEntityEffect
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:Paralyze
           paralyzeTime: 3
-      - !type:CP14SpellThrowFromUser
+      - !type:CE14SpellThrowFromUser
         throwPower: 9
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectVampireKick
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectVampireKick
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:HealthChange
           ignoreResistances: false
@@ -44,8 +44,8 @@
               Blunt: 10
 
 - type: entity
-  id: CP14ImpactEffectVampireKick
-  parent: CP14ImpactEffectBloodStep
+  id: CE14ImpactEffectVampireKick
+  parent: CE14ImpactEffectBloodStep
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -56,7 +56,7 @@
       unshaded: true
   - type: EmitSoundOnSpawn
     sound: !type:SoundPathSpecifier
-      path: /Audio/_CP14/Effects/surprise.ogg
+      path: /Audio/_CE14/Effects/surprise.ogg
   - type: TimedDespawn
     lifetime: 4
   - type: LightFade

@@ -1,17 +1,17 @@
 - type: entity
   name: safe
   parent:
-  - CP14ClosetBase
-  id: CP14Safe
+  - CE14ClosetBase
+  id: CE14Safe
   abstract: true
   description: A giant iron box for storing your most precious possessions. Extremely heavy and extremely strong.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Dressers/vault.rsi
+    sprite: _CE14/Structures/Storage/Dressers/vault.rsi
     state: base
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14MetallicStructural
+    damageModifierSet: CE14MetallicStructural
   - type: Fixtures
     fixtures:
       fix1:
@@ -46,26 +46,26 @@
     locked: true
 
 - type: entity
-  parent: CP14Safe
-  id: CP14SafeMerchant1
+  parent: CE14Safe
+  id: CE14SafeMerchant1
   name: merchant shop 1 safe
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateShape: Shop1
 
 - type: entity
-  parent: CP14Safe
-  id: CP14SafeMerchant2
+  parent: CE14Safe
+  id: CE14SafeMerchant2
   name: merchant shop 2 safe
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateShape: Shop2
 
 - type: entity
-  parent: CP14Safe
-  id: CP14SafeMerchant3
+  parent: CE14Safe
+  id: CE14SafeMerchant3
   name: merchant shop 3 safe
   components:
-  - type: CP14Lock
+  - type: CE14Lock
     autoGenerateShape: Shop3
 

@@ -1,15 +1,15 @@
 - type: htnCompound
-  id: CP14MeleeWeaponlessCombatCompound
+  id: CE14MeleeWeaponlessCombatCompound
   branches:
     - tasks:
         - !type:HTNPrimitiveTask
           operator: !type:UtilityOperator
             proto: NearbyMeleeTargets
         - !type:HTNCompoundTask
-          task: CP14BeforeMeleeAttackTargetWeaponlessCompound
+          task: CE14BeforeMeleeAttackTargetWeaponlessCompound
 
 - type: htnCompound
-  id: CP14BeforeMeleeAttackTargetWeaponlessCompound
+  id: CE14BeforeMeleeAttackTargetWeaponlessCompound
   branches:
     - preconditions:
         - !type:BuckledPrecondition

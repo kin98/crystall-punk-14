@@ -1,63 +1,63 @@
 ﻿- type: entity
-  id: CP14TorsoZombie
-  parent: CP14TorsoHuman
+  id: CE14TorsoZombie
+  parent: CE14TorsoHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+    sprite: _CE14/Mobs/Species/Zombie/parts.rsi
     state: torso
 
 - type: entity
-  id: CP14HeadZombie
-  parent: CP14HeadHuman
+  id: CE14HeadZombie
+  parent: CE14HeadHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+    sprite: _CE14/Mobs/Species/Zombie/parts.rsi
     state: head
 
 - type: entity
-  id: CP14LeftArmZombie
-  parent: CP14LeftArmHuman
+  id: CE14LeftArmZombie
+  parent: CE14LeftArmHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+    sprite: _CE14/Mobs/Species/Zombie/parts.rsi
 
 - type: entity
-  id: CP14RightArmZombie
-  parent: CP14RightArmHuman
+  id: CE14RightArmZombie
+  parent: CE14RightArmHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+    sprite: _CE14/Mobs/Species/Zombie/parts.rsi
 
 - type: entity
-  id: CP14LeftHandZombie
-  parent: CP14LeftHandHuman
+  id: CE14LeftHandZombie
+  parent: CE14LeftHandHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+    sprite: _CE14/Mobs/Species/Zombie/parts.rsi
 
 - type: entity
-  id: CP14RightHandZombie
-  parent: CP14RightHandHuman
+  id: CE14RightHandZombie
+  parent: CE14RightHandHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+    sprite: _CE14/Mobs/Species/Zombie/parts.rsi
 
 - type: entity
-  id: CP14LeftLegZombie
-  parent: CP14LeftLegHuman
+  id: CE14LeftLegZombie
+  parent: CE14LeftLegHuman
   categories: [ ForkFiltered ]
   components:
     - type: Sprite
-      sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+      sprite: _CE14/Mobs/Species/Zombie/parts.rsi
       state: "l_leg"
     - type: Icon
-      sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+      sprite: _CE14/Mobs/Species/Zombie/parts.rsi
       state: "l_leg"
     - type: BodyPart
       partType: Leg
@@ -68,15 +68,15 @@
       acceleration: 10
 
 - type: entity
-  id: CP14RightLegZombie
-  parent: CP14RightLegHuman
+  id: CE14RightLegZombie
+  parent: CE14RightLegHuman
   categories: [ ForkFiltered ]
   components:
     - type: Sprite
-      sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+      sprite: _CE14/Mobs/Species/Zombie/parts.rsi
       state: "r_leg"
     - type: Icon
-      sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+      sprite: _CE14/Mobs/Species/Zombie/parts.rsi
       state: "r_leg"
     - type: BodyPart
       partType: Leg
@@ -87,17 +87,17 @@
       acceleration: 10
 
 - type: entity
-  id: CP14LeftFootZombie
-  parent: CP14LeftFootHuman
+  id: CE14LeftFootZombie
+  parent: CE14LeftFootHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+    sprite: _CE14/Mobs/Species/Zombie/parts.rsi
 
 - type: entity
-  id: CP14RightFootZombie
-  parent: CP14RightFootHuman
+  id: CE14RightFootZombie
+  parent: CE14RightFootHuman
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+    sprite: _CE14/Mobs/Species/Zombie/parts.rsi

@@ -1,68 +1,68 @@
 - type: Tag
-  id: CP14UniqueSpawnDemiplanetLoot
+  id: CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14ClothingShoesArtifactSpeedboots
-  entity: CP14ClothingShoesArtifactSpeedboots
+  id: CE14ClothingShoesArtifactSpeedboots
+  entity: CE14ClothingShoesArtifactSpeedboots
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14ClothingShoesArtifactFlightboots
-  entity: CP14ClothingShoesArtifactFlightboots
+  id: CE14ClothingShoesArtifactFlightboots
+  entity: CE14ClothingShoesArtifactFlightboots
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14MagicFireStaff
-  entity: CP14MagicFireStaff
+  id: CE14MagicFireStaff
+  entity: CE14MagicFireStaff
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14MagicHealingStaff
-  entity: CP14MagicHealingStaff
+  id: CE14MagicHealingStaff
+  entity: CE14MagicHealingStaff
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14MagicShadowStaff
-  entity: CP14MagicShadowStaff
+  id: CE14MagicShadowStaff
+  entity: CE14MagicShadowStaff
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14CrayonRainbow
-  entity: CP14CrayonRainbow
+  id: CE14CrayonRainbow
+  entity: CE14CrayonRainbow
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14ClothingShoesArtifactFrogs
-  entity: CP14ClothingShoesArtifactFrogs
+  id: CE14ClothingShoesArtifactFrogs
+  entity: CE14ClothingShoesArtifactFrogs
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14BowIceArtifact
-  entity: CP14BowIceArtifact
+  id: CE14BowIceArtifact
+  entity: CE14BowIceArtifact
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14LockpickSkeletonArtifact
-  entity: CP14LockpickSkeletonArtifact
+  id: CE14LockpickSkeletonArtifact
+  entity: CE14LockpickSkeletonArtifact
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
 
 - type: uniqueSpawn
-  id: CP14ClothingCloakLurkerCape
-  entity: CP14ClothingCloakLurkerCape
+  id: CE14ClothingCloakLurkerCape
+  entity: CE14ClothingCloakLurkerCape
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot
   
 - type: uniqueSpawn
-  id: CP14SteelGobletBottomless
-  entity: CP14SteelGobletBottomless
+  id: CE14SteelGobletBottomless
+  entity: CE14SteelGobletBottomless
   tags:
-  - CP14UniqueSpawnDemiplanetLoot
+  - CE14UniqueSpawnDemiplanetLoot

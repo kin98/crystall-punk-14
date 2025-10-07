@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseFireplace
+  id: CE14BaseFireplace
   parent: BaseStructure
   categories: [ ForkFiltered ]
   abstract: true
@@ -19,7 +19,7 @@
         - MidImpassable
         - LowImpassable
         hard: false
-  - type: CP14FlammableAmbientSound
+  - type: CE14FlammableAmbientSound
   - type: AmbientSound
     enabled: false
     volume: -5
@@ -42,9 +42,9 @@
         Heat: 0
   - type: ItemPlacer
     maxEntities: 4
-  - type: CP14FlammableEntityHeater
-  - type: CP14FlammableSolutionHeater
-  - type: CP14Fireplace
+  - type: CE14FlammableEntityHeater
+  - type: CE14FlammableSolutionHeater
+  - type: CE14Fireplace
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -53,25 +53,25 @@
     maxItemSize: Normal
     grid:
     - 0,0,2,2
-    cP14Ignorelist:
+    CE14Ignorelist:
       components:
         - IgnitionSource
-        - CP14DelayedIgnitionSource
+        - CE14DelayedIgnitionSource
   - type: UserInterface
     interfaces:
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
-  - type: CP14IgnitionModifier
+  - type: CE14IgnitionModifier
     hideCaution: true
 
 - type: entity
-  id: CP14Furnace
+  id: CE14Furnace
   name: furnace
-  parent: CP14BaseFireplace
+  parent: CE14BaseFireplace
   description: A furnace fueled by wood, coal, or any other burning material. Handy for heating your food or drinks.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/furnace.rsi
+    sprite: _CE14/Structures/Furniture/furnace.rsi
     layers:
       - state: base
       - state: fuel1
@@ -79,7 +79,7 @@
         map: ["fuel"]
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Metallic
+    damageModifierSet: CE14Metallic
   - type: Destructible
     thresholds:
       - trigger:
@@ -93,7 +93,7 @@
               collection: MetalBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14ScrapIron:
+              CE14ScrapIron:
                 min: 1
                 max: 3
   - type: GenericVisualizer
@@ -104,7 +104,7 @@
           Medium: { visible: true, state: fuel1 }
           Full: { visible: true, state: fuel2 }
   - type: FireVisuals
-    sprite: _CP14/Structures/Furniture/furnace.rsi
+    sprite: _CE14/Structures/Furniture/furnace.rsi
     normalState: burning
   - type: Climbable
   - type: Anchorable
@@ -137,17 +137,17 @@
     - 0,0,2,2
     whitelist:
       tags:
-      - CP14FireplaceFuel
+      - CE14FireplaceFuel
   - type: Construction
-    graph: CP14Furnace
-    node: CP14Furnace
+    graph: CE14Furnace
+    node: CE14Furnace
 
 - type: entity
-  parent: CP14Furnace
-  id: CP14FurnaceDebug
+  parent: CE14Furnace
+  id: CE14FurnaceDebug
   suffix: Ignited, Infinity
   categories: [ DoNotMap ]
   components:
-  - type: CP14AutoIgnite
-  - type: CP14Fireplace
+  - type: CE14AutoIgnite
+  - type: CE14Fireplace
     fuelDrainingPerUpdate: 0

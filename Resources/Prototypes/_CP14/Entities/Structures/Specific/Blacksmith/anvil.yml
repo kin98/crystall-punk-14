@@ -1,16 +1,16 @@
 - type: entity
-  id: CP14WorkbenchAnvil
+  id: CE14WorkbenchAnvil
   parent:
-  - CP14BaseWorkbench
+  - CE14BaseWorkbench
   name: anvil
   description: A big piece of metal that allows you to turn square pieces of metal into pieces of metal in other, more useful shapes.
   components:
   - type: Sprite
     snapCardinals: false
-    sprite: _CP14/Structures/Specific/Blacksmith/anvil.rsi
+    sprite: _CE14/Structures/Specific/Blacksmith/anvil.rsi
     state: icon
   - type: Icon
-    sprite: _CP14/Structures/Specific/Blacksmith/anvil.rsi
+    sprite: _CE14/Structures/Specific/Blacksmith/anvil.rsi
     state: icon
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -26,9 +26,9 @@
           collection: MetalBreak
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: CP14Workbench
+  - type: CE14Workbench
     craftSound:
-      collection: CP14Sawing #TODO
+      collection: CE14Sawing #TODO
     recipeTags:
-    - CP14RecipeAnvil
+    - CE14RecipeAnvil
 

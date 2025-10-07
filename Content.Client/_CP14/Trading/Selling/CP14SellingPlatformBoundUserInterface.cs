@@ -1,21 +1,21 @@
-using Content.Shared._CP14.Trading;
-using Content.Shared._CP14.Trading.Systems;
+using Content.Shared._CE14.Trading;
+using Content.Shared._CE14.Trading.Systems;
 using Robust.Client.UserInterface;
 
-namespace Content.Client._CP14.Trading.Selling;
+namespace Content.Client._CE14.Trading.Selling;
 
-public sealed class CP14SellingPlatformBoundUserInterface(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
+public sealed class CE14SellingPlatformBoundUserInterface(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
 {
-    private CP14SellingPlatformWindow? _window;
+    private CE14SellingPlatformWindow? _window;
 
     protected override void Open()
     {
         base.Open();
 
-        _window = this.CreateWindow<CP14SellingPlatformWindow>();
+        _window = this.CreateWindow<CE14SellingPlatformWindow>();
 
-        _window.OnSell += () => SendMessage(new CP14TradingSellAttempt());
-        _window.OnRequestSell += pair => SendMessage(new CP14TradingRequestSellAttempt(pair.Item1, pair.Item2));
+        _window.OnSell += () => SendMessage(new CE14TradingSellAttempt());
+        _window.OnRequestSell += pair => SendMessage(new CE14TradingRequestSellAttempt(pair.Item1, pair.Item2));
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)
@@ -24,7 +24,7 @@ public sealed class CP14SellingPlatformBoundUserInterface(EntityUid owner, Enum 
 
         switch (state)
         {
-            case CP14SellingPlatformUiState storeState:
+            case CE14SellingPlatformUiState storeState:
                 _window?.UpdateState(storeState);
                 break;
         }

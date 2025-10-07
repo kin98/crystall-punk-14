@@ -1,3 +1,3 @@
-marking-CP14GoblinNose = Большие ноздри
-marking-CP14GoblinNose2 = Крючок
-marking-CP14GoblinNose3 = Гордый торчок
+marking-CE14GoblinNose = Большие ноздри
+marking-CE14GoblinNose2 = Крючок
+marking-CE14GoblinNose3 = Гордый торчок

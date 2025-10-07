@@ -2,14 +2,14 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
-using Content.Server._CP14.Sponsor;
+using Content.Server._CE14.Sponsor;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection.IPIntel;
 using Content.Server.Database;
 using Content.Server.GameTicking;
 using Content.Server.Preferences.Managers;
-using Content.Shared._CP14.Sponsor;
+using Content.Shared._CE14.Sponsor;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.Players.PlayTimeTracking;
@@ -44,7 +44,7 @@ namespace Content.Server.Connection
         /// <param name="duration">How long the bypass should last for.</param>
         void AddTemporaryConnectBypass(NetUserId user, TimeSpan duration);
 
-        Task<bool> HavePrivilegedJoin(NetUserId userId); //CP14 Join Queue
+        Task<bool> HavePrivilegedJoin(NetUserId userId); //CE14 Join Queue
 
         void Update();
     }
@@ -67,7 +67,7 @@ namespace Content.Server.Connection
         [Dependency] private readonly IHttpClientHolder _http = default!;
         [Dependency] private readonly IAdminManager _adminManager = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly ICP14SponsorManager _sponsor = default!; //CP14 Priority Join
+        [Dependency] private readonly ICE14SponsorManager _sponsor = default!; //CE14 Priority Join
 
         private GameTicker? _ticker;
 
@@ -378,7 +378,7 @@ namespace Content.Server.Connection
             return assigned;
         }
 
-        //CP14 Join Queue
+        //CE14 Join Queue
         public async Task<bool> HavePrivilegedJoin(NetUserId userId)
         {
             var adminBypass = _cfg.GetCVar(CCVars.AdminBypassMaxPlayers) && await _db.GetAdminDataForAsync(userId) != null;
@@ -388,6 +388,6 @@ namespace Content.Server.Connection
                             status == PlayerGameStatus.JoinedGame;
             return adminBypass || wasInGame || havePriorityJoin;
         }
-        //CP14 Join Queue end
+        //CE14 Join Queue end
     }
 }

@@ -1,135 +1,135 @@
 ﻿- type: decal
-  id: CP14BrickTileGrayScaleStoneBox
+  id: CE14BrickTileGrayScaleStoneBox
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_box
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneCornerNe
+  id: CE14BrickTileGrayScaleStoneCornerNe
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_corner_ne
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneCornerSe
+  id: CE14BrickTileGrayScaleStoneCornerSe
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_corner_se
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneCornerNw
+  id: CE14BrickTileGrayScaleStoneCornerNw
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_corner_nw
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneCornerSw
+  id: CE14BrickTileGrayScaleStoneCornerSw
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_corner_sw
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneInnerNe
+  id: CE14BrickTileGrayScaleStoneInnerNe
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_inner_ne
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneInnerSe
+  id: CE14BrickTileGrayScaleStoneInnerSe
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_inner_se
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneInnerNw
+  id: CE14BrickTileGrayScaleStoneInnerNw
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_inner_nw
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneInnerSw
+  id: CE14BrickTileGrayScaleStoneInnerSw
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_inner_sw
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneEndN
+  id: CE14BrickTileGrayScaleStoneEndN
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_end_n
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneEndE
+  id: CE14BrickTileGrayScaleStoneEndE
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_end_e
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneEndS
+  id: CE14BrickTileGrayScaleStoneEndS
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_end_s
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneEndW
+  id: CE14BrickTileGrayScaleStoneEndW
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_end_w
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneLineN
+  id: CE14BrickTileGrayScaleStoneLineN
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_line_n
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneLineE
+  id: CE14BrickTileGrayScaleStoneLineE
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_line_e
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneLineS
+  id: CE14BrickTileGrayScaleStoneLineS
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_line_s
 
 - type: decal
-  id: CP14BrickTileGrayScaleStoneLineW
+  id: CE14BrickTileGrayScaleStoneLineW
   defaultSnap: true
   showMenu: true
   sprite:
-    sprite: _CP14/Decals/stone_Grayscale.rsi
+    sprite: _CE14/Decals/stone_Grayscale.rsi
     state: stone_line_w

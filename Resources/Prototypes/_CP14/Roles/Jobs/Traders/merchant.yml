@@ -1,18 +1,18 @@
 - type: job
-  id: CP14Merchant
+  id: CE14Merchant
   setPreference: true
-  name: cp14-job-name-merchant
-  description: cp14-job-desc-merchant
-  playTimeTracker: CP14JobMerchant
-  startingGear: CP14MerchantGear
-  icon: "CP14JobIconMerchant"
-  supervisors: cp14-job-supervisors-commandant
+  name: CE14-job-name-merchant
+  description: CE14-job-desc-merchant
+  playTimeTracker: CE14JobMerchant
+  startingGear: CE14MerchantGear
+  icon: "CE14JobIconMerchant"
+  supervisors: CE14-job-supervisors-commandant
   canBeAntag: false
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 3600 # 1 hours
   special:
-    - !type:CP14AddTradingReputationSpecial
+    - !type:CE14AddTradingReputationSpecial
       factions:
       - VictoriaGardens
       - BradPotions
@@ -24,17 +24,17 @@
       - Dairy
       - Tailors
       - HelmirChild
-    - !type:CP14LearnSkillsSpecial
+    - !type:CE14LearnSkillsSpecial
       skills:
       - TraderWit
 
 - type: startingGear
-  id: CP14MerchantGear
+  id: CE14MerchantGear
   storage:
     back:
-    - CP14EnergyCrystalMedium
-    - CP14EnergyCrystalMedium
+    - CE14EnergyCrystalMedium
+    - CE14EnergyCrystalMedium
   equipment:
-    belt: CP14WalletFilledTest
-    keys: CP14KeyRingMerchant
+    belt: CE14WalletFilledTest
+    keys: CE14KeyRingMerchant
 

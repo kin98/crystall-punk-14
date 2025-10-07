@@ -1,11 +1,11 @@
 - type: reagent
-  id: CP14DamageEffectDamageBrute
-  name: cp14-reagent-name-basic-damage-brute
-  desc: cp14-reagent-desc-basic-damage-brute
-  group: CP14DamageEffect
-  flavor: CP14Stinging
+  id: CE14DamageEffectDamageBrute
+  name: CE14-reagent-name-basic-damage-brute
+  desc: CE14-reagent-desc-basic-damage-brute
+  group: CE14DamageEffect
+  flavor: CE14Stinging
   color: "#633223"
-  physicalDesc: cp14-reagent-physical-desc-ferrous
+  physicalDesc: CE14-reagent-physical-desc-ferrous
   worksOnTheDead: true
   metabolisms:
     Poison:
@@ -19,16 +19,16 @@
 
 
 - type: reagent
-  id: CP14DamageEffectDamageHeat
-  name: cp14-reagent-name-basic-damage-heat
-  desc: cp14-reagent-desc-basic-damage-heat
-  group: CP14DamageEffect
-  flavor: CP14Stinging
+  id: CE14DamageEffectDamageHeat
+  name: CE14-reagent-name-basic-damage-heat
+  desc: CE14-reagent-desc-basic-damage-heat
+  group: CE14DamageEffect
+  flavor: CE14Stinging
   color: "#d4772a"
   tileReactions:
   - !type:CreateEntityTileReaction
-    entity: CP14Fire
-  physicalDesc: cp14-reagent-physical-desc-sparkling
+    entity: CE14Fire
+  physicalDesc: CE14-reagent-physical-desc-sparkling
   worksOnTheDead: true
   reactiveEffects:
     Flammable:
@@ -54,13 +54,13 @@
 
 
 - type: reagent
-  id: CP14DamageEffectDamageCold
-  name: cp14-reagent-name-basic-damage-cold
-  desc: cp14-reagent-desc-basic-damage-cold
-  group: CP14DamageEffect
-  flavor: CP14Stinging
+  id: CE14DamageEffectDamageCold
+  name: CE14-reagent-name-basic-damage-cold
+  desc: CE14-reagent-desc-basic-damage-cold
+  group: CE14DamageEffect
+  flavor: CE14Stinging
   color: "#1a95a3"
-  physicalDesc: cp14-reagent-physical-desc-sparkling
+  physicalDesc: CE14-reagent-physical-desc-sparkling
   worksOnTheDead: true
   metabolisms:
     Poison:
@@ -81,13 +81,13 @@
 
 
 - type: reagent
-  id: CP14DamageEffectDamagePoison
-  name: cp14-reagent-name-basic-damage-poison
-  desc: cp14-reagent-desc-basic-damage-poison
-  group: CP14DamageEffect
-  flavor: CP14Bitterly
+  id: CE14DamageEffectDamagePoison
+  name: CE14-reagent-name-basic-damage-poison
+  desc: CE14-reagent-desc-basic-damage-poison
+  group: CE14DamageEffect
+  flavor: CE14Bitterly
   color: "#768551"
-  physicalDesc: cp14-reagent-physical-desc-viscous
+  physicalDesc: CE14-reagent-physical-desc-viscous
   worksOnTheDead: true
   metabolisms:
     Poison:
@@ -101,10 +101,10 @@
 
 
 - type: reagent
-  id: CP14DamageEffectDamageAirloss
-  name: cp14-reagent-name-basic-damage-airloss
-  desc: cp14-reagent-desc-basic-damage-airloss
-  group: CP14DamageEffect
+  id: CE14DamageEffectDamageAirloss
+  name: CE14-reagent-name-basic-damage-airloss
+  desc: CE14-reagent-desc-basic-damage-airloss
+  group: CE14DamageEffect
   flavor: horrible
   color: "#73091e"
   worksOnTheDead: true
@@ -121,13 +121,13 @@
 
 
 - type: reagent
-  id: CP14DamageEffectDamageManaDepletion
-  name: cp14-reagent-name-basic-damage-manadepletion
-  desc: cp14-reagent-desc-basic-damage-manadepletion
-  group: CP14DamageEffect
-  flavor: CP14Bitterly
+  id: CE14DamageEffectDamageManaDepletion
+  name: CE14-reagent-name-basic-damage-manadepletion
+  desc: CE14-reagent-desc-basic-damage-manadepletion
+  group: CE14DamageEffect
+  flavor: CE14Bitterly
   color: "#2f6b62"
-  physicalDesc: cp14-reagent-physical-desc-viscous
+  physicalDesc: CE14-reagent-physical-desc-viscous
   worksOnTheDead: true
   metabolisms:
     Poison:
@@ -136,19 +136,19 @@
       - !type:HealthChange
         damage:
           types:
-            CP14ManaDepletion: 3
+            CE14ManaDepletion: 3
   pricePerUnit: 3.0  # 2×Energia (0.4) + 1×Poison (0.2) + Water (0.1) = 0.7 → x4.28
 
 
 - type: reagent
-  id: CP14DamageEffectBloodAbsorption
-  name: cp14-reagent-name-basic-blood-absorption
-  desc: cp14-reagent-desc-basic-blood-absorption
-  group: CP14DamageEffect
-  flavor: CP14Metallic
+  id: CE14DamageEffectBloodAbsorption
+  name: CE14-reagent-name-basic-blood-absorption
+  desc: CE14-reagent-desc-basic-blood-absorption
+  group: CE14DamageEffect
+  flavor: CE14Metallic
   color: "#2b0e0b"
   worksOnTheDead: true
-  physicalDesc: cp14-reagent-physical-desc-scarlet
+  physicalDesc: CE14-reagent-physical-desc-scarlet
   metabolisms:
     Poison:
       metabolismRate: 0.05

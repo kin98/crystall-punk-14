@@ -2,31 +2,31 @@
 # Splitting: Applying magical dispel to split precursor into essences.
 
 - type: reaction
-  id: CP14AirLilySplitting
+  id: CE14AirLilySplitting
   requiredMixerCategories:
-  - CP14MagicSplitting
+  - CE14MagicSplitting
   reactants:
-    CP14AirLily:
+    CE14AirLily:
       amount: 1
   products:
-    CP14EssenceAir: 0.5
-    CP14EssenceWater: 0.5
+    CE14EssenceAir: 0.5
+    CE14EssenceWater: 0.5
 
 # Admixture: By adding raw precursor to a potion with target solutions, we can reduce the amount of empty solution by modifying the target solutions.
 
 # Emote cough -> Heal airloss
 
 - type: reaction
-  id: CP14AirLilyAdmixture
+  id: CE14AirLilyAdmixture
   minTemp: 500
   reactants:
-    CP14AirLily:
+    CE14AirLily:
       amount: 1
-    CP14SideEffectEmpty:
+    CE14SideEffectEmpty:
       amount: 1
-    CP14SideEffectEmoteCough:
+    CE14SideEffectEmoteCough:
       amount: 1
   products:
-    CP14HealingEffectHealAirloss: 2
-    CP14SideEffectDrunk: 1
+    CE14HealingEffectHealAirloss: 2
+    CE14SideEffectDrunk: 1
 

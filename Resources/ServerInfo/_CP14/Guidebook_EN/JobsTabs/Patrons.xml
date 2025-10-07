@@ -29,7 +29,7 @@ Any intelligent being can become a follower of a god by touching a primordial st
 The “channel” between the follower and the patron can be severed at any time, either by renouncing the patron or by expelling the follower. Once an intelligent being has severed its connection with the patron, it can never return to it in that round.
 
   <Box>
-    <GuideEntityEmbed Entity="CP14AltarPrimordialGodLumera"/>
+    <GuideEntityEmbed Entity="CE14AltarPrimordialGodLumera"/>
   </Box>
 
 </Document>

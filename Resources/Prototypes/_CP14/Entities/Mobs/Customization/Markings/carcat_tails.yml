@@ -1,45 +1,45 @@
 - type: marking
-  id: CP14CarcatTail
+  id: CE14CarcatTail
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [ CP14Carcat ]
+  speciesRestriction: [ CE14Carcat ]
   followSkinColor: true
   forcedColoring: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/carcat_tail.rsi
+    - sprite: _CE14/Mobs/Customization/carcat_tail.rsi
       state: tail
 
 - type: marking
-  id: CP14CarcatTailFluffy
+  id: CE14CarcatTailFluffy
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [ CP14Carcat ]
+  speciesRestriction: [ CE14Carcat ]
   followSkinColor: true
   forcedColoring: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/carcat_tail.rsi
+    - sprite: _CE14/Mobs/Customization/carcat_tail.rsi
       state: tail_fluffy
 
 # Animation
 
 - type: marking
-  id: CP14CarcatTailAnimated
+  id: CE14CarcatTailAnimated
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: []
   followSkinColor: true
   forcedColoring: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/carcat_tail.rsi
+    - sprite: _CE14/Mobs/Customization/carcat_tail.rsi
       state: tail_waggin
 
 - type: marking
-  id: CP14CarcatTailFluffyAnimated
+  id: CE14CarcatTailFluffyAnimated
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: []
   followSkinColor: true
   forcedColoring: true
   sprites:
-    - sprite: _CP14/Mobs/Customization/carcat_tail.rsi
+    - sprite: _CE14/Mobs/Customization/carcat_tail.rsi
       state: tail_fluffy_waggin

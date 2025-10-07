@@ -1,7 +1,7 @@
 using Content.Server.Chat.Systems;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Events;
-using Content.Shared._CP14.Respawn;
+using Content.Shared._CE14.Respawn;
 using Content.Shared.Administration.Managers;
 using Content.Shared.GameTicking;
 using Content.Shared.Ghost;
@@ -11,9 +11,9 @@ using Robust.Shared.Audio;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 
-namespace Content.Server._CP14.Respawn;
+namespace Content.Server._CE14.Respawn;
 
-public sealed partial class CP14RespawnSystem : EntitySystem
+public sealed partial class CE14RespawnSystem : EntitySystem
 {
     [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
@@ -31,8 +31,8 @@ public sealed partial class CP14RespawnSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<GhostComponent, CP14RespawnAction>(OnRespawnAction);
-        SubscribeLocalEvent<CP14PlayerSpawnAttemptEvent>(OnBeforePlayerSpawn);
+        SubscribeLocalEvent<GhostComponent, CE14RespawnAction>(OnRespawnAction);
+        SubscribeLocalEvent<CE14PlayerSpawnAttemptEvent>(OnBeforePlayerSpawn);
         SubscribeLocalEvent<RoundStartingEvent>(OnRoundEnd);
     }
 
@@ -41,7 +41,7 @@ public sealed partial class CP14RespawnSystem : EntitySystem
         _usedCharacters.Clear();
     }
 
-    private void OnBeforePlayerSpawn(CP14PlayerSpawnAttemptEvent ev)
+    private void OnBeforePlayerSpawn(CE14PlayerSpawnAttemptEvent ev)
     {
         if (_admin.IsAdmin(ev.Player, true))
             return;
@@ -57,7 +57,7 @@ public sealed partial class CP14RespawnSystem : EntitySystem
             var filter = Filter.Empty().AddPlayer(ev.Player);
             _chat.DispatchFilteredAnnouncement(
                 filter,
-                Loc.GetString("cp14-respawn-same-char-bloked"),
+                Loc.GetString("CE14-respawn-same-char-bloked"),
                 colorOverride: Color.Red,
                 announcementSound: new SoundPathSpecifier("/Audio/Effects/beep1.ogg"),
                 sender: "Server");
@@ -68,7 +68,7 @@ public sealed partial class CP14RespawnSystem : EntitySystem
         usedCharacters.Add(ev.Profile.Name);
     }
 
-    private void OnRespawnAction(Entity<GhostComponent> ent, ref CP14RespawnAction args)
+    private void OnRespawnAction(Entity<GhostComponent> ent, ref CE14RespawnAction args)
     {
         if (!TryComp<ActorComponent>(ent, out var actor))
             return;
@@ -81,7 +81,7 @@ public sealed partial class CP14RespawnSystem : EntitySystem
 /// Called before a player spawns for a specific character. Can be canceled by prohibiting connection for that character.
 /// </summary>
 [PublicAPI]
-public sealed class CP14PlayerSpawnAttemptEvent(
+public sealed class CE14PlayerSpawnAttemptEvent(
     ICommonSession player,
     HumanoidCharacterProfile profile,
     string? jobId,

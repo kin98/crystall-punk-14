@@ -2,7 +2,7 @@ using Lidgren.Network;
 using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CP14.JoinQueue;
+namespace Content.Shared._CE14.JoinQueue;
 
 /// <summary>
 ///     Sent from server to client with queue state for player

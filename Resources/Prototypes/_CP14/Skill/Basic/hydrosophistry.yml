@@ -1,127 +1,127 @@
 # T1
 
-- type: cp14Skill
+- type: CE14Skill
   id: HydrosophistryT1
   skillUiPosition: 1, 0
   tree: Hydrosophistry
-  name: cp14-skill-water-t1-name
+  name: CE14-skill-water-t1-name
   learnCost: 0.5
   icon:
-    sprite: _CP14/Actions/skill_tree.rsi
+    sprite: _CE14/Actions/skill_tree.rsi
     state: water
 
-- type: cp14Skill
-  id: CP14ActionSpellWaterCreation
+- type: CE14Skill
+  id: CE14ActionSpellWaterCreation
   skillUiPosition: 1, 4
   tree: Hydrosophistry
   icon:
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: water_creation
   effects:
   - !type:AddAction
-    action: CP14ActionSpellWaterCreation
+    action: CE14ActionSpellWaterCreation
   restrictions:
   - !type:NeedPrerequisite
     prerequisite: HydrosophistryT1
 
-- type: cp14Skill
-  id: CP14ActionSpellBeerCreation
+- type: CE14Skill
+  id: CE14ActionSpellBeerCreation
   skillUiPosition: 1, 8
   tree: Hydrosophistry
   learnCost: 0
   icon:
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: beer_creation
   effects:
   - !type:AddAction
-    action: CP14ActionSpellBeerCreation
+    action: CE14ActionSpellBeerCreation
   restrictions:
   - !type:NeedPrerequisite
-    prerequisite: CP14ActionSpellWaterCreation
+    prerequisite: CE14ActionSpellWaterCreation
   - !type:SpeciesWhitelist
-    species: CP14Dwarf
+    species: CE14Dwarf
 
-- type: cp14Skill
-  id: CP14ActionSpellIceDagger
+- type: CE14Skill
+  id: CE14ActionSpellIceDagger
   skillUiPosition: 0, 6
   tree: Hydrosophistry
   icon:
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: ice_dagger
   effects:
   - !type:AddAction
-    action: CP14ActionSpellIceDagger
+    action: CE14ActionSpellIceDagger
   restrictions:
   - !type:NeedPrerequisite
     prerequisite: HydrosophistryT1
 
-- type: cp14Skill
-  id: CP14ActionSpellIceArrow
+- type: CE14Skill
+  id: CE14ActionSpellIceArrow
   skillUiPosition: 2, 6
   tree: Hydrosophistry
   icon:
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: ice_arrow
   effects:
   - !type:AddAction
-    action: CP14ActionSpellIceArrow
+    action: CE14ActionSpellIceArrow
   restrictions:
   - !type:NeedPrerequisite
     prerequisite: HydrosophistryT1
 
 # T2
 
-- type: cp14Skill
+- type: CE14Skill
   id: HydrosophistryT2
   skillUiPosition: 7, 0
   tree: Hydrosophistry
-  name: cp14-skill-water-t2-name
+  name: CE14-skill-water-t2-name
   learnCost: 0.5
   icon:
-    sprite: _CP14/Actions/skill_tree.rsi
+    sprite: _CE14/Actions/skill_tree.rsi
     state: water2
   restrictions:
   - !type:NeedPrerequisite
     prerequisite: HydrosophistryT1
 
-- type: cp14Skill
-  id: CP14ActionSpellFreeze
+- type: CE14Skill
+  id: CE14ActionSpellFreeze
   skillUiPosition: 6, 4
   tree: Hydrosophistry
   icon:
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: freeze
   effects:
   - !type:AddAction
-    action: CP14ActionSpellFreeze
+    action: CE14ActionSpellFreeze
   restrictions:
   - !type:NeedPrerequisite
     prerequisite: HydrosophistryT2
 
-- type: cp14Skill
-  id: CP14ActionSpellIceShards
+- type: CE14Skill
+  id: CE14ActionSpellIceShards
   skillUiPosition: 8, 4
   tree: Hydrosophistry
   icon:
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: ice_shards
   effects:
   - !type:AddAction
-    action: CP14ActionSpellIceShards
+    action: CE14ActionSpellIceShards
   restrictions:
   - !type:NeedPrerequisite
     prerequisite: HydrosophistryT2
 
 # T3
 
-#- type: cp14Skill
+#- type: CE14Skill
 #  id: HydrosophistryT3
 #  skillUiPosition: 13, 0
 #  tree: Hydrosophistry
-#  name: cp14-skill-water-t3-name
+#  name: CE14-skill-water-t3-name
 #  learnCost: 0.5
 #  icon:
-#    sprite: _CP14/Actions/skill_tree.rsi
+#    sprite: _CE14/Actions/skill_tree.rsi
 #    state: water3
 #  restrictions:
 #  - !type:NeedPrerequisite

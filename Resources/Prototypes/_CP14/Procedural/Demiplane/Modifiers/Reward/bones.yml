@@ -1,4 +1,4 @@
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: BoneRemains
   levels:
     min: 0
@@ -7,13 +7,13 @@
   categories:
     Reward: 0.1
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14BaseBoneRemains
+    - !type:CE14OreDunGen
+      entity: CE14BaseBoneRemains
       count: 8
       minGroupSize: 2
       maxGroupSize: 3
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: BoneSpine
   levels:
     min: 4
@@ -22,13 +22,13 @@
   categories:
     Reward: 0.15
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14BoneSpine
+    - !type:CE14OreDunGen
+      entity: CE14BoneSpine
       count: 2
       minGroupSize: 1
       maxGroupSize: 1
 
-- type: cp14LocationModifier
+- type: CE14LocationModifier
   id: BoneDragon
   levels:
     min: 5
@@ -38,10 +38,10 @@
   categories:
     Fun: 1
   requiredTags:
-  - CP14DemiplaneOpenSky
+  - CE14DemiplaneOpenSky
   layers:
-    - !type:CP14OreDunGen
-      entity: CP14BoneDragon
+    - !type:CE14OreDunGen
+      entity: CE14BoneDragon
       count: 1
       minGroupSize: 1
       maxGroupSize: 1

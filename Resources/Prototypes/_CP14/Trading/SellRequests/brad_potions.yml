@@ -1,219 +1,219 @@
-- type: cp14TradingRequest
-  id: CP14HealingEffectHealBrute
+- type: CE14TradingRequest
+  id: CE14HealingEffectHealBrute
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14HealingEffectHealBrute
+    reagent: CE14HealingEffectHealBrute
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14DamageEffectDamageBrute
+- type: CE14TradingRequest
+  id: CE14DamageEffectDamageBrute
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14DamageEffectDamageBrute
+    reagent: CE14DamageEffectDamageBrute
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14HealingEffectHealHeat
+- type: CE14TradingRequest
+  id: CE14HealingEffectHealHeat
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14HealingEffectHealHeat
+    reagent: CE14HealingEffectHealHeat
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14DamageEffectDamageHeat
+- type: CE14TradingRequest
+  id: CE14DamageEffectDamageHeat
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14DamageEffectDamageHeat
+    reagent: CE14DamageEffectDamageHeat
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14HealingEffectHealCold
+- type: CE14TradingRequest
+  id: CE14HealingEffectHealCold
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14HealingEffectHealCold
+    reagent: CE14HealingEffectHealCold
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14DamageEffectDamageCold
+- type: CE14TradingRequest
+  id: CE14DamageEffectDamageCold
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14DamageEffectDamageCold
+    reagent: CE14DamageEffectDamageCold
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14HealingEffectHealPoison
+- type: CE14TradingRequest
+  id: CE14HealingEffectHealPoison
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14HealingEffectHealPoison
+    reagent: CE14HealingEffectHealPoison
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14DamageEffectDamagePoison
+- type: CE14TradingRequest
+  id: CE14DamageEffectDamagePoison
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14DamageEffectDamagePoison
+    reagent: CE14DamageEffectDamagePoison
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14HealingEffectHealAirloss
+- type: CE14TradingRequest
+  id: CE14HealingEffectHealAirloss
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14HealingEffectHealAirloss
+    reagent: CE14HealingEffectHealAirloss
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14DamageEffectDamageAirloss
+- type: CE14TradingRequest
+  id: CE14DamageEffectDamageAirloss
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14DamageEffectDamageAirloss
+    reagent: CE14DamageEffectDamageAirloss
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14HealingEffectHealManaDepletion
+- type: CE14TradingRequest
+  id: CE14HealingEffectHealManaDepletion
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14HealingEffectHealManaDepletion
+    reagent: CE14HealingEffectHealManaDepletion
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14DamageEffectDamageManaDepletion
+- type: CE14TradingRequest
+  id: CE14DamageEffectDamageManaDepletion
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14DamageEffectDamageManaDepletion
+    reagent: CE14DamageEffectDamageManaDepletion
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14HealingEffectBloodRestore
+- type: CE14TradingRequest
+  id: CE14HealingEffectBloodRestore
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14HealingEffectBloodRestore
+    reagent: CE14HealingEffectBloodRestore
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14DamageEffectBloodAbsorption
+- type: CE14TradingRequest
+  id: CE14DamageEffectBloodAbsorption
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14DamageEffectBloodAbsorption
+    reagent: CE14DamageEffectBloodAbsorption
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14PositiveEffectSatiateHunger
+- type: CE14TradingRequest
+  id: CE14PositiveEffectSatiateHunger
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14PositiveEffectSatiateHunger
+    reagent: CE14PositiveEffectSatiateHunger
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14PositiveEffectSatiateThirst
+- type: CE14TradingRequest
+  id: CE14PositiveEffectSatiateThirst
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14PositiveEffectSatiateThirst
+    reagent: CE14PositiveEffectSatiateThirst
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14PositiveEffectHealMana
+- type: CE14TradingRequest
+  id: CE14PositiveEffectHealMana
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14PositiveEffectHealMana
+    reagent: CE14PositiveEffectHealMana
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14NegativeEffectDamageMana
+- type: CE14TradingRequest
+  id: CE14NegativeEffectDamageMana
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14NegativeEffectDamageMana
+    reagent: CE14NegativeEffectDamageMana
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14PositiveEffectHealStam
+- type: CE14TradingRequest
+  id: CE14PositiveEffectHealStam
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14PositiveEffectHealStam
+    reagent: CE14PositiveEffectHealStam
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14NegativeEffectDamageStam
+- type: CE14TradingRequest
+  id: CE14NegativeEffectDamageStam
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14NegativeEffectDamageStam
+    reagent: CE14NegativeEffectDamageStam
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14PositiveEffectSpeedUp
+- type: CE14TradingRequest
+  id: CE14PositiveEffectSpeedUp
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14PositiveEffectSpeedUp
+    reagent: CE14PositiveEffectSpeedUp
     amount: 10
     purity: 0.75
 
-- type: cp14TradingRequest
-  id: CP14NegativeEffectSpeedDown
+- type: CE14TradingRequest
+  id: CE14NegativeEffectSpeedDown
   possibleFactions:
   - BradPotions
   requirements:
   - !type:SolutionResource
-    reagent: CP14NegativeEffectSpeedDown
+    reagent: CE14NegativeEffectSpeedDown
     amount: 10
     purity: 0.75

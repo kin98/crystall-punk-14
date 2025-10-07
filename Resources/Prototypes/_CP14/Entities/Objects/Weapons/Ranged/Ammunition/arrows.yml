@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14ArrowBase
+  id: CE14ArrowBase
   parent: BaseItem
   abstract: true
   categories: [ ForkFiltered ]
@@ -34,7 +34,7 @@
     muzzleFlash: null
   - type: Tag
     tags:
-    - CP14Arrow
+    - CE14Arrow
   - type: Projectile
     deleteOnCollide: false
     onlyCollideWhenShot: true
@@ -62,13 +62,13 @@
     fillBaseName: solution
 
 - type: entity
-  id: CP14Arrow
-  parent: CP14ArrowBase
+  id: CE14Arrow
+  parent: CE14ArrowBase
   name: arrow
   description: A sharp arrow made of wood and metal
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Ranged/Projectiles/arrows.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/Projectiles/arrows.rsi
     layers:
     - state: rod
     - state: solution1
@@ -90,5 +90,5 @@
         acts: ["Destruction"]
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 5
-      CP14Iron: 2
+      CE14WoodenPlanks: 5
+      CE14Iron: 2

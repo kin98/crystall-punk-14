@@ -1,5 +1,5 @@
-namespace Content.Shared._CP14.Demiplane;
+namespace Content.Shared._CE14.Demiplane;
 
-public abstract partial class CP14SharedDemiplaneSystem : EntitySystem
+public abstract partial class CE14SharedDemiplaneSystem : EntitySystem
 {
 }

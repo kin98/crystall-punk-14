@@ -1,2 +1,2 @@
-cp14-potion-label-health = Health potion
-cp14-potion-label-mana = Mana potion
+CE14-potion-label-health = Health potion
+CE14-potion-label-mana = Mana potion

@@ -1,58 +1,58 @@
 - type: alert
-  id: CP14MagicEnergy
+  id: CE14MagicEnergy
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/empty.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/empty.rsi
     state: empty
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana0
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana1
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana2
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana3
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana4
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana5
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana6
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana7
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana8
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi
     state: mana9
-  - sprite: /Textures/_CP14/Interface/Alerts/mana.rsi #TODO: Without this dublication, alerts never be fully null
+  - sprite: /Textures/_CE14/Interface/Alerts/mana.rsi #TODO: Without this dublication, alerts never be fully null
     state: mana9
-  name: cp14-alerts-magic-energy-name
-  description: cp14-alerts-magic-energy-desc
+  name: CE14-alerts-magic-energy-name
+  description: CE14-alerts-magic-energy-desc
   minSeverity: 0
   maxSeverity: 11
 
 - type: alert
-  id: CP14VampireStarving
+  id: CE14VampireStarving
   category: Hunger
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/vampire_hunger.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vampire_hunger.rsi
     state: starving
   name: alerts-starving-name
   description: alerts-starving-desc
 
 - type: alert
-  id: CP14VampirePeckish
+  id: CE14VampirePeckish
   category: Hunger
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/vampire_hunger.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/vampire_hunger.rsi
     state: peckish
   name: alerts-hunger-name
   description: alerts-hunger-desc
 
 - type: alert
-  id: CP14DivineOffer
+  id: CE14DivineOffer
   icons:
-  - sprite: /Textures/_CP14/Interface/Alerts/divine_offer.rsi
+  - sprite: /Textures/_CE14/Interface/Alerts/divine_offer.rsi
     state: offer
-  name: cp14-alert-offer
-  description: cp14-alert-offer-desc
-  clickEvent: !type:CP14BreakDivineOfferEvent
+  name: CE14-alert-offer
+  description: CE14-alert-offer-desc
+  clickEvent: !type:CE14BreakDivineOfferEvent

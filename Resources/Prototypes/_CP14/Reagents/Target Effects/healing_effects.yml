@@ -1,12 +1,12 @@
 # T1 / Simple healing effects
 - type: reagent
-  id: CP14HealingEffectHealBrute
-  name: cp14-reagent-name-basic-heal-brute
-  desc: cp14-reagent-desc-basic-heal-brute
-  group: CP14HealingEffect
-  flavor: CP14Metallic
+  id: CE14HealingEffectHealBrute
+  name: CE14-reagent-name-basic-heal-brute
+  desc: CE14-reagent-desc-basic-heal-brute
+  group: CE14HealingEffect
+  flavor: CE14Metallic
   color: "#e31010"
-  physicalDesc: cp14-reagent-physical-desc-scarlet
+  physicalDesc: CE14-reagent-physical-desc-scarlet
   worksOnTheDead: true
   metabolisms:
     Medicine:
@@ -20,13 +20,13 @@
   pricePerUnit: 3.0  # 2×Life (0.4) + Order (0.25) + Water (0.1) = 1.05 → x3 for balance
 
 - type: reagent
-  id: CP14HealingEffectHealHeat
-  name: cp14-reagent-name-basic-heal-heat
-  desc: cp14-reagent-desc-basic-heal-heat
-  group: CP14HealingEffect
-  flavor: CP14Stinging
+  id: CE14HealingEffectHealHeat
+  name: CE14-reagent-name-basic-heal-heat
+  desc: CE14-reagent-desc-basic-heal-heat
+  group: CE14HealingEffect
+  flavor: CE14Stinging
   color: "#BF361E"
-  physicalDesc: cp14-reagent-physical-desc-sparkling
+  physicalDesc: CE14-reagent-physical-desc-sparkling
   worksOnTheDead: true
   metabolisms:
     Medicine:
@@ -52,13 +52,13 @@
   pricePerUnit: 3.5  # 1×Life (0.2) + 1×Fire (0.25) + 1×Order (0.25) + Water (0.1) = 0.8 → x4.375
 
 - type: reagent
-  id: CP14HealingEffectHealCold
-  name: cp14-reagent-name-basic-heal-cold
-  desc: cp14-reagent-desc-basic-heal-cold
-  group: CP14HealingEffect
-  flavor: CP14Stinging
+  id: CE14HealingEffectHealCold
+  name: CE14-reagent-name-basic-heal-cold
+  desc: CE14-reagent-desc-basic-heal-cold
+  group: CE14HealingEffect
+  flavor: CE14Stinging
   color: "#a3511a"
-  physicalDesc: cp14-reagent-physical-desc-sparkling
+  physicalDesc: CE14-reagent-physical-desc-sparkling
   worksOnTheDead: true
   metabolisms:
     Medicine:
@@ -84,13 +84,13 @@
   pricePerUnit: 4.0  # 1×Life (0.2) + 1×Frost (0.2) + 1×Order (0.25) + Water (0.1) = 0.75 → x5.33
 
 - type: reagent
-  id: CP14HealingEffectHealPoison
-  name: cp14-reagent-name-basic-heal-poison
-  desc: cp14-reagent-desc-basic-heal-poison
-  group: CP14HealingEffect
-  flavor: CP14Bitterly
+  id: CE14HealingEffectHealPoison
+  name: CE14-reagent-name-basic-heal-poison
+  desc: CE14-reagent-desc-basic-heal-poison
+  group: CE14HealingEffect
+  flavor: CE14Bitterly
   color: "#82ba3d"
-  physicalDesc: cp14-reagent-physical-desc-viscous
+  physicalDesc: CE14-reagent-physical-desc-viscous
   worksOnTheDead: true
   metabolisms:
     Medicine:
@@ -103,10 +103,10 @@
   pricePerUnit: 3.5  # 1×Life (0.2) + 1×Poison (0.2) + 1×Order (0.25) + Water (0.1) = 0.75 → x4.66
 
 - type: reagent
-  id: CP14HealingEffectHealAirloss
-  name: cp14-reagent-name-basic-heal-airloss
-  desc: cp14-reagent-desc-basic-heal-airloss
-  group: CP14HealingEffect
+  id: CE14HealingEffectHealAirloss
+  name: CE14-reagent-name-basic-heal-airloss
+  desc: CE14-reagent-desc-basic-heal-airloss
+  group: CE14HealingEffect
   flavor: fizzy
   color: "#e6f4f5"
   worksOnTheDead: true
@@ -122,13 +122,13 @@
   pricePerUnit: 4.0  # 1×Life (0.2) + 1×Air (0.25) + 1×Order (0.25) + Water (0.1) = 0.8 → x5
 
 - type: reagent
-  id: CP14HealingEffectHealManaDepletion
-  name: cp14-reagent-name-basic-heal-manadepletion
-  desc: cp14-reagent-desc-basic-heal-manadepletion
-  group: CP14HealingEffect
-  flavor: CP14Bitterly
+  id: CE14HealingEffectHealManaDepletion
+  name: CE14-reagent-name-basic-heal-manadepletion
+  desc: CE14-reagent-desc-basic-heal-manadepletion
+  group: CE14HealingEffect
+  flavor: CE14Bitterly
   color: "#2d4d79"
-  physicalDesc: cp14-reagent-physical-desc-viscous
+  physicalDesc: CE14-reagent-physical-desc-viscous
   worksOnTheDead: true
   metabolisms:
     Medicine:
@@ -137,18 +137,18 @@
       - !type:HealthChange
         damage:
           types:
-            CP14ManaDepletion: -10
+            CE14ManaDepletion: -10
   pricePerUnit: 3.0  # 1×Life (0.2) + 2×Energia (0.4) + Water (0.1) = 0.7 → x4.28
 
 - type: reagent
-  id: CP14HealingEffectBloodRestore
-  name: cp14-reagent-name-basic-blood-restore
-  desc: cp14-reagent-desc-basic-blood-restore
-  group: CP14HealingEffect
-  flavor: CP14Metallic
+  id: CE14HealingEffectBloodRestore
+  name: CE14-reagent-name-basic-blood-restore
+  desc: CE14-reagent-desc-basic-blood-restore
+  group: CE14HealingEffect
+  flavor: CE14Metallic
   color: "#e31010"
   worksOnTheDead: true
-  physicalDesc: cp14-reagent-physical-desc-scarlet
+  physicalDesc: CE14-reagent-physical-desc-scarlet
   metabolisms:
     Poison:
       metabolismRate: 0.05

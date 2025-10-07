@@ -1,6 +1,6 @@
-namespace Content.Client._CP14.Roof;
+namespace Content.Client._CE14.Roof;
 
 [RegisterComponent]
-public sealed partial class CP14RoofMarkerComponent : Component
+public sealed partial class CE14RoofMarkerComponent : Component
 {
 }

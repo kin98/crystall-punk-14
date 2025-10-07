@@ -2,46 +2,46 @@
 # Splitting: Applying magical dispel to split precursor into essences.
 
 - type: reaction
-  id: CP14LumiMushroomSplitting
+  id: CE14LumiMushroomSplitting
   requiredMixerCategories:
-  - CP14MagicSplitting
+  - CE14MagicSplitting
   reactants:
-    CP14LumiMushroom:
+    CE14LumiMushroom:
       amount: 1
   products:
-    CP14EssenceLight: 0.5
-    CP14EssenceEarth: 0.5
+    CE14EssenceLight: 0.5
+    CE14EssenceEarth: 0.5
 
 # Admixture: By adding raw precursor to a potion with target solutions, we can reduce the amount of empty solution by modifying the target solutions.
 
 # Idea: Full randomness
 
 #- type: reaction
-#  id: CP14LumiMushroomAdmixture
+#  id: CE14LumiMushroomAdmixture
 #  minTemp: 500
 #  reactants:
-#    CP14LumiMushroom:
+#    CE14LumiMushroom:
 #      amount: 1
-#    CP14BasicEffectEmpty:
+#    CE14BasicEffectEmpty:
 #      amount: 1
-#  cp14RandomProducts:
-#  - CP14BasicEffectHealBrute: 2
-#  - CP14BasicEffectDamageBrute: 2
-#  - CP14BasicEffectHealHeat: 2
-#  - CP14BasicEffectDamageHeat: 2
-#  - CP14BasicEffectHealCold: 2
-#  - CP14BasicEffectDamageCold: 2
-#  - CP14BasicEffectHealPoison: 2
-#  - CP14BasicEffectDamagePoison: 2
-#  - CP14BasicEffectHealAirloss: 2
-#  - CP14BasicEffectDamageAirloss: 2
-#  - CP14BasicEffectBloodRestore: 2
-#  - CP14BasicEffectBloodAbsorption: 2
-#  - CP14BasicEffectSatiateHunger: 2
-#  - CP14BasicEffectSatiateThirst: 2
-#  - CP14BasicEffectHealMana: 2
-#  - CP14BasicEffectDamageMana: 2
-#  - CP14BasicEffectSpeedUp: 2
-#  - CP14BasicEffectSpeedDown: 2
-#  - CP14BasicEffectSleep: 2
-#  - CP14BasicEffectUnsleep: 2
+#  CE14RandomProducts:
+#  - CE14BasicEffectHealBrute: 2
+#  - CE14BasicEffectDamageBrute: 2
+#  - CE14BasicEffectHealHeat: 2
+#  - CE14BasicEffectDamageHeat: 2
+#  - CE14BasicEffectHealCold: 2
+#  - CE14BasicEffectDamageCold: 2
+#  - CE14BasicEffectHealPoison: 2
+#  - CE14BasicEffectDamagePoison: 2
+#  - CE14BasicEffectHealAirloss: 2
+#  - CE14BasicEffectDamageAirloss: 2
+#  - CE14BasicEffectBloodRestore: 2
+#  - CE14BasicEffectBloodAbsorption: 2
+#  - CE14BasicEffectSatiateHunger: 2
+#  - CE14BasicEffectSatiateThirst: 2
+#  - CE14BasicEffectHealMana: 2
+#  - CE14BasicEffectDamageMana: 2
+#  - CE14BasicEffectSpeedUp: 2
+#  - CE14BasicEffectSpeedDown: 2
+#  - CE14BasicEffectSleep: 2
+#  - CE14BasicEffectUnsleep: 2

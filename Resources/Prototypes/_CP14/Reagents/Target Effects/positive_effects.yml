@@ -1,11 +1,11 @@
 - type: reagent
-  id: CP14PositiveEffectSatiateHunger
-  name: cp14-reagent-name-basic-satiate-hunger
-  desc: cp14-reagent-desc-basic-satiate-hunger
-  group: CP14PositiveEffect
-  flavor: CP14Sweetly
+  id: CE14PositiveEffectSatiateHunger
+  name: CE14-reagent-name-basic-satiate-hunger
+  desc: CE14-reagent-desc-basic-satiate-hunger
+  group: CE14PositiveEffect
+  flavor: CE14Sweetly
   color: "#a35629"
-  physicalDesc: cp14-reagent-physical-desc-viscous
+  physicalDesc: CE14-reagent-physical-desc-viscous
   metabolisms:
     Food:
       metabolismRate: 0.05
@@ -14,25 +14,25 @@
         factor: 15
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
           shouldHave: false
   pricePerUnit: 1.5  # Simple effect, low cost
 
 - type: reagent
-  id: CP14PositiveEffectSatiateThirst
-  name: cp14-reagent-name-basic-satiate-thirst
-  desc: cp14-reagent-desc-basic-satiate-thirst
-  group: CP14PositiveEffect
-  flavor: CP14Water
+  id: CE14PositiveEffectSatiateThirst
+  name: CE14-reagent-name-basic-satiate-thirst
+  desc: CE14-reagent-desc-basic-satiate-thirst
+  group: CE14PositiveEffect
+  flavor: CE14Water
   color: "#2b7fed"
-  physicalDesc: cp14-reagent-physical-desc-colorless
+  physicalDesc: CE14-reagent-physical-desc-colorless
   metabolisms:
     Drink:
       metabolismRate: 0.05
       effects:
       - !type:SatiateThirst
         factor: 15
-      - !type:CP14ManaChange
+      - !type:CE14ManaChange
         manaDelta: 4
         safe: true
         conditions:
@@ -41,46 +41,46 @@
   pricePerUnit: 1.0  # Most basic effect
 
 - type: reagent
-  id: CP14PositiveEffectHealMana
-  name: cp14-reagent-name-basic-heal-mana
-  desc: cp14-reagent-desc-basic-heal-mana
-  group: CP14PositiveEffect
-  flavor: CP14Magic
+  id: CE14PositiveEffectHealMana
+  name: CE14-reagent-name-basic-heal-mana
+  desc: CE14-reagent-desc-basic-heal-mana
+  group: CE14PositiveEffect
+  flavor: CE14Magic
   color: "#1497e3"
-  physicalDesc: cp14-reagent-physical-desc-iridescent
+  physicalDesc: CE14-reagent-physical-desc-iridescent
   metabolisms:
     Medicine:
       metabolismRate: 0.05
       effects:
-      - !type:CP14ManaChange
+      - !type:CE14ManaChange
         manaDelta: 3
         safe: true
   pricePerUnit: 5.0  # 2×Energia (0.4) + 1×Motion (0.2) + Water (0.1) = 0.7 → x7.14 (high value)
 
 - type: reagent
-  id: CP14PositiveEffectHealStam
-  name: cp14-reagent-name-basic-heal-stam
-  desc: cp14-reagent-desc-basic-heal-stam
-  group: CP14PositiveEffect
-  flavor: CP14Magic
+  id: CE14PositiveEffectHealStam
+  name: CE14-reagent-name-basic-heal-stam
+  desc: CE14-reagent-desc-basic-heal-stam
+  group: CE14PositiveEffect
+  flavor: CE14Magic
   color: "#ebff6f"
-  physicalDesc: cp14-reagent-physical-desc-iridescent
+  physicalDesc: CE14-reagent-physical-desc-iridescent
   metabolisms:
     Medicine:
       metabolismRate: 0.05
       effects:
-      - !type:CP14StaminaChange
+      - !type:CE14StaminaChange
         staminaDelta: 3
   pricePerUnit: 5.0  # 1×Life (0.2) + 1×Motion (0.2) + 1xAir (0.25) + Water (0.1) = 0.75 → x6.67 (high value)
 
 - type: reagent
-  id: CP14PositiveEffectSpeedUp
-  name: cp14-reagent-name-basic-speed-up
-  desc: cp14-reagent-desc-basic-speed-up
-  group: CP14PositiveEffect
-  flavor: CP14Sweetly
+  id: CE14PositiveEffectSpeedUp
+  name: CE14-reagent-name-basic-speed-up
+  desc: CE14-reagent-desc-basic-speed-up
+  group: CE14PositiveEffect
+  flavor: CE14Sweetly
   color: "#dbff9c"
-  physicalDesc: cp14-reagent-physical-desc-viscous
+  physicalDesc: CE14-reagent-physical-desc-viscous
   metabolisms:
     Poison:
       metabolismRate: 0.1
@@ -95,13 +95,13 @@
   pricePerUnit: 4.0  # 2×Motion (0.4) + 1×Order (0.25) + Water (0.1) = 0.75 → x5.33
 
 - type: reagent
-  id: CP14PositiveEffectUnsleep
-  name: cp14-reagent-name-basic-unsleep
-  desc: cp14-reagent-desc-basic-unsleep
-  group: CP14PositiveEffect
-  flavor: CP14VerySweet
+  id: CE14PositiveEffectUnsleep
+  name: CE14-reagent-name-basic-unsleep
+  desc: CE14-reagent-desc-basic-unsleep
+  group: CE14PositiveEffect
+  flavor: CE14VerySweet
   color: "#6bc97e"
-  physicalDesc: cp14-reagent-physical-desc-viscous
+  physicalDesc: CE14-reagent-physical-desc-viscous
   metabolisms:
     Narcotic:
       metabolismRate: 0.1
@@ -122,20 +122,20 @@
       - !type:AdjustReagent
         conditions:
         - !type:ReagentThreshold
-          reagent: CP14NegativeEffectSleep
+          reagent: CE14NegativeEffectSleep
           min: 1
-        reagent: CP14NegativeEffectSleep
+        reagent: CE14NegativeEffectSleep
         amount: -10
   pricePerUnit: 2.0  # Cheaper than sleep as it's less in demand
 
 - type: reagent
-  id: CP14PositiveEffectConfuseAura
-  name: cp14-reagent-name-basic-confuse-aura
-  desc: cp14-reagent-desc-basic-confuse-aura
-  group: CP14PositiveEffect
-  flavor: CP14Vomit
+  id: CE14PositiveEffectConfuseAura
+  name: CE14-reagent-name-basic-confuse-aura
+  desc: CE14-reagent-desc-basic-confuse-aura
+  group: CE14PositiveEffect
+  flavor: CE14Vomit
   color: "#eb34b7"
-  physicalDesc: cp14-reagent-physical-desc-colorless
+  physicalDesc: CE14-reagent-physical-desc-colorless
   metabolisms:
     Food:
       metabolismRate: 0.05

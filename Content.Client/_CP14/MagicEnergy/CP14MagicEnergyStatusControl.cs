@@ -1,20 +1,20 @@
 using Content.Client.Stylesheets;
-using Content.Shared._CP14.MagicEnergy.Components;
+using Content.Shared._CE14.MagicEnergy.Components;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Timing;
 
-namespace Content.Client._CP14.MagicEnergy;
+namespace Content.Client._CE14.MagicEnergy;
 
-public sealed class CP14MagicEnergyStatusControl : Control
+public sealed class CE14MagicEnergyStatusControl : Control
 {
-    private readonly Entity<CP14MagicEnergyContainerComponent> _parent;
+    private readonly Entity<CE14MagicEnergyContainerComponent> _parent;
     private readonly IEntityManager _entMan;
     private readonly RichTextLabel _label;
     private readonly ProgressBar _progress;
 
-    public CP14MagicEnergyStatusControl(Entity<CP14MagicEnergyExaminableComponent> parent)
+    public CE14MagicEnergyStatusControl(Entity<CE14MagicEnergyExaminableComponent> parent)
     {
         _entMan = IoCManager.Resolve<IEntityManager>();
         _progress = new ProgressBar
@@ -28,7 +28,7 @@ public sealed class CP14MagicEnergyStatusControl : Control
         _progress.Margin = new Thickness(0, 4);
         _label = new RichTextLabel { StyleClasses = { StyleNano.StyleClassItemStatus } };
 
-        if (!_entMan.TryGetComponent<CP14MagicEnergyContainerComponent>(parent, out var container))
+        if (!_entMan.TryGetComponent<CE14MagicEnergyContainerComponent>(parent, out var container))
             return;
 
         _parent = (parent.Owner, container);

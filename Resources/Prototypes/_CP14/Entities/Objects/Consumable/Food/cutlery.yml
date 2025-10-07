@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14Fork
+  id: CE14Fork
   name: fork
   description: Thousands of years of progress, and there it is, the fork.
   categories: [ ForkFiltered ]
@@ -10,10 +10,10 @@
     - Hoe
     - Metal
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/cutlery.rsi
+    sprite: _CE14/Objects/Consumable/Food/cutlery.rsi
     state: fork
   - type: Item
-    sprite: _CP14/Objects/Consumable/Food/cutlery.rsi
+    sprite: _CE14/Objects/Consumable/Food/cutlery.rsi
     heldPrefix: fork
   - type: Utensil
     types:
@@ -26,11 +26,11 @@
         Piercing: 1
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 4
+      CE14Iron: 4
 
 - type: entity
   parent: BaseItem
-  id: CP14Spoon
+  id: CE14Spoon
   name: spoon
   description: It is considered the first tool for eating, not counting the hands.
   categories: [ ForkFiltered ]
@@ -39,10 +39,10 @@
     tags:
     - Metal
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/cutlery.rsi
+    sprite: _CE14/Objects/Consumable/Food/cutlery.rsi
     state: spoon
   - type: Item
-    sprite: _CP14/Objects/Consumable/Food/cutlery.rsi
+    sprite: _CE14/Objects/Consumable/Food/cutlery.rsi
     heldPrefix: spoon
   - type: Utensil
     types:
@@ -62,4 +62,4 @@
     - Stir
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 4
+      CE14Iron: 4

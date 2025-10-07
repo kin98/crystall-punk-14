@@ -1,23 +1,23 @@
 - type: entity
-  parent: CP14BaseMobSpeciesOrganic
-  id: CP14BaseMobTiefling
+  parent: CE14BaseMobSpeciesOrganic
+  id: CE14BaseMobTiefling
   name: Mr. Tiefling
   abstract: true
   components:
   - type: HumanoidAppearance
-    species: CP14Tiefling
+    species: CE14Tiefling
   - type: Icon
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: full
   - type: Body
-    prototype: CP14Tiefling
+    prototype: CE14Tiefling
     requiredLegs: 2
   - type: Wagging
   - type: Bloodstream
-    bloodReagent: CP14BloodTiefling
+    bloodReagent: CE14BloodTiefling
   - type: Damageable
-    damageContainer: CP14Biological
-    damageModifierSet: CP14Tiefling
+    damageContainer: CE14Biological
+    damageModifierSet: CE14Tiefling
   - type: PassiveDamage
     damageCap: 80
     allowedStates:
@@ -25,120 +25,120 @@
     damage:
       types:
         Heat: -0.14 # Around 8 damage a minute healed (9.6 with burn regeneration below)
-        CP14ManaDepletion: -0.05
+        CE14ManaDepletion: -0.05
       groups:
         Brute: -0.05
         Burn: -0.02
         Toxin: -0.03
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 0.75
     delay: 3 # 5m to full restore
-  - type: CP14MagicEnergyFromDamage
+  - type: CE14MagicEnergyFromDamage
     damage:
       Heat: 1 #Magic regen from fire
       Cold: -1
-  - type: CP14AuraImprint
+  - type: CE14AuraImprint
     imprintColor: "#e0762b"
-  - type: CP14SkillStorage #Innate pyrokinetic
+  - type: CE14SkillStorage #Innate pyrokinetic
     freeLearnedSkills:
     - PyrokineticT1
     - PyrokineticT2
   - type: Inventory
-    templateId: CP14Human
+    templateId: CE14Human
     displacements:
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: male_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: male_neck
     femaleDisplacements:
       outerClothing:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       cloak:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       gloves:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak #Its ok for gloves
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_pants
       shirt:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_shirt
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: female_neck
 
 
 - type: entity
-  parent: CP14BaseSpeciesDummy
-  id: CP14MobTieflingDummy
+  parent: CE14BaseSpeciesDummy
+  id: CE14MobTieflingDummy
   categories: [ HideSpawnMenu ]
   components:
   - type: HumanoidAppearance
-    species: CP14Tiefling
+    species: CE14Tiefling
   - type: Inventory
-    templateId: CP14Human
+    templateId: CE14Human
     displacements:
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: male_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: male_neck
     femaleDisplacements:
       cloak:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       outerClothing:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       gloves:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak #Its ok for gloves
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_pants
       shirt:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_shirt
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: female_neck

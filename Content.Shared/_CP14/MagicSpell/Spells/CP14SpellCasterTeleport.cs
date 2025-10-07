@@ -3,14 +3,14 @@ using Content.Shared.Popups;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellCasterTeleport : CP14SpellEffect
+public sealed partial class CE14SpellCasterTeleport : CE14SpellEffect
 {
     [DataField]
     public bool NeedVision = true;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         var net = IoCManager.Resolve<INetManager>();
         if (net.IsClient)

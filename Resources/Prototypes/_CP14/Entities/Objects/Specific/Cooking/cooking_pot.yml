@@ -1,15 +1,15 @@
 - type: entity
-  id: CP14CookingPot
-  parent: CP14CookerBase
+  id: CE14CookingPot
+  parent: CE14CookerBase
   name: cooking pot
   description: Container for cooking Grand Soup.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/Soups/cooking_pot.rsi
+    sprite: _CE14/Objects/Consumable/Food/Soups/cooking_pot.rsi
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
-    - map: ["cp14_foodLayers"]
+    - map: ["CE14_foodLayers"]
     - state: closed
       map: [ base ]
     - state: cooking
@@ -23,13 +23,13 @@
     solutions:
       cooker:
         maxVol: 150
-  - type: CP14FoodHolder
+  - type: CE14FoodHolder
     foodType: Soup
     solutionId: cooker
-    displacementRsiPath: _CP14/Objects/Consumable/Food/Soups/displacement_pot.rsi
+    displacementRsiPath: _CE14/Objects/Consumable/Food/Soups/displacement_pot.rsi
     maxDisplacementFillLevels: 2
     canGiveFood: true
-  - type: CP14FoodCooker
+  - type: CE14FoodCooker
     foodType: Soup
     solutionId: cooker
   - type: Item
@@ -45,18 +45,18 @@
     solution: cooker
   - type: AmbientSound
     sound:
-      path: /Audio/_CP14/Ambience/pot_brewing.ogg
+      path: /Audio/_CE14/Ambience/pot_brewing.ogg
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 30
+      CE14Iron: 30
   - type: Storage
-    storageOpenSound: /Audio/_CP14/Effects/pan_open.ogg
-    storageCloseSound: /Audio/_CP14/Effects/pan_close.ogg
+    storageOpenSound: /Audio/_CE14/Effects/pan_open.ogg
+    storageCloseSound: /Audio/_CE14/Effects/pan_close.ogg
     storageInsertSound: /Audio/Items/toolbox_insert.ogg
     storageRemoveSound: /Audio/Items/toolbox_insert.ogg
-    cP14Ignorelist:
+    CE14Ignorelist:
       components:
-        - CP14FoodHolder
+        - CE14FoodHolder
         - FoodSequenceStartPoint
         - Injector
         - SolutionTransfer

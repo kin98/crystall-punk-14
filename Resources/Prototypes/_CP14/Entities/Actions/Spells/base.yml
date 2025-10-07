@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14ActionSpellBase
+  id: CE14ActionSpellBase
   abstract: true
   components:
   - type: Action
@@ -8,7 +8,7 @@
       path: /Audio/Magic/rumble.ogg
 
 - type: entity
-  id: CP14BaseMagicRune
+  id: CE14BaseMagicRune
   name: magic rune
   description: manifestation of magical energy in the physical plane
   abstract: true
@@ -18,7 +18,7 @@
   - type: Sprite
     noRot: true
     drawDepth: FloorTiles
-    sprite: _CP14/Effects/Magic/cast_rune.rsi
+    sprite: _CE14/Effects/Magic/cast_rune.rsi
   - type: Tag
     tags:
     - HideContextMenu
@@ -28,7 +28,7 @@
     netsync: false
 
 - type: entity
-  id: CP14BaseMagicImpact
+  id: CE14BaseMagicImpact
   name: magic impact
   description: manifestation of magical energy in the physical plane
   abstract: true
@@ -41,11 +41,11 @@
       - HideContextMenu
   - type: Sprite
     drawdepth: Effects
-    sprite: _CP14/Effects/Magic/cast_impact.rsi
+    sprite: _CE14/Effects/Magic/cast_impact.rsi
     noRot: true
 
 - type: entity
-  id: CP14BaseMagicTrap
+  id: CE14BaseMagicTrap
   name: magic trap
   description: Manifestation of magical energy in the physical plane
   abstract: true
@@ -54,10 +54,10 @@
     anchored: false
   - type: InteractionOutline
   - type: Damageable
-    damageContainer: CP14Spectral
+    damageContainer: CE14Spectral
   - type: Physics
     bodyType: Static
   - type: Sprite
     noRot: true
     drawDepth: FloorTiles
-    sprite: _CP14/Effects/Magic/magic_trap.rsi
+    sprite: _CE14/Effects/Magic/magic_trap.rsi

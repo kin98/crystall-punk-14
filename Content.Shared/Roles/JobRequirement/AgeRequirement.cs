@@ -18,7 +18,7 @@ public sealed partial class AgeRequirement : JobRequirement
     [DataField(required: true)]
     public int RequiredAge;
 
-    public override bool Check(NetUserId? userId,  //CP14 Sponsorship Checks
+    public override bool Check(NetUserId? userId,  //CE14 Sponsorship Checks
         IEntityManager entManager,
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,

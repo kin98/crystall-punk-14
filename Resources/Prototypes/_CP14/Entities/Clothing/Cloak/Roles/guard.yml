@@ -1,38 +1,38 @@
 - type: entity
-  parent: CP14ClothingCloakBase
-  id: CP14ClothingCloakGuardBase
+  parent: CE14ClothingCloakBase
+  id: CE14ClothingCloakGuardBase
   abstract: true
   name: "guard's cloak"
   description: Shoulder cape in the standard Imperial Guard colors
 
 - type: entity
-  parent: CP14ClothingCloakGuardBase
-  id: CP14ClothingCloakGuardBlue
+  parent: CE14ClothingCloakGuardBase
+  id: CE14ClothingCloakGuardBlue
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/Roles/Guard/blue.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Guard/blue.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/Roles/Guard/blue.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Guard/blue.rsi
 
 - type: entity
-  parent: CP14ClothingCloakGuardBase
-  id: CP14ClothingCloakGuardSyurko
+  parent: CE14ClothingCloakGuardBase
+  id: CE14ClothingCloakGuardSyurko
   name: guard surcoats
   description: A long and roomy cloak that serves to protect your armour.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/Roles/Guard/guard_syurko.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Guard/guard_syurko.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/Roles/Guard/guard_syurko.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Guard/guard_syurko.rsi
 
 
 - type: entity
-  parent: CP14ClothingCloakGuardBase
-  id: CP14ClothingCloakGuardInvestigator
+  parent: CE14ClothingCloakGuardBase
+  id: CE14ClothingCloakGuardInvestigator
   name: investigator's cloak
   description: Cloaks that only senior investigators in the service of the empire are allowed to wear.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/Roles/Guard/investigator.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Guard/investigator.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/Roles/Guard/investigator.rsi
+    sprite: _CE14/Clothing/Cloak/Roles/Guard/investigator.rsi

@@ -9,9 +9,9 @@ using Robust.Shared.Player;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.IdentityRecognition;
+namespace Content.Shared._CE14.IdentityRecognition;
 
-public abstract class CP14SharedIdentityRecognitionSystem : EntitySystem
+public abstract class CE14SharedIdentityRecognitionSystem : EntitySystem
 {
     [Dependency] private readonly SharedUserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
@@ -21,15 +21,15 @@ public abstract class CP14SharedIdentityRecognitionSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14UnknownIdentityComponent, GetVerbsEvent<Verb>>(OnUnknownIdentityVerb);
-        SubscribeLocalEvent<CP14UnknownIdentityComponent, ExaminedEvent>(OnExaminedEvent);
+        SubscribeLocalEvent<CE14UnknownIdentityComponent, GetVerbsEvent<Verb>>(OnUnknownIdentityVerb);
+        SubscribeLocalEvent<CE14UnknownIdentityComponent, ExaminedEvent>(OnExaminedEvent);
 
-        SubscribeLocalEvent<MindContainerComponent, CP14RememberedNameChangedMessage>(OnRememberedNameChanged);
+        SubscribeLocalEvent<MindContainerComponent, CE14RememberedNameChangedMessage>(OnRememberedNameChanged);
 
-        SubscribeLocalEvent<CP14RememberedNamesComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<CE14RememberedNamesComponent, MapInitEvent>(OnMapInit);
     }
 
-    private void OnMapInit(Entity<CP14RememberedNamesComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<CE14RememberedNamesComponent> ent, ref MapInitEvent args)
     {
         if (!TryComp<MindComponent>(ent, out var mind))
             return;
@@ -43,7 +43,7 @@ public abstract class CP14SharedIdentityRecognitionSystem : EntitySystem
         RememberCharacter(ent, GetNetEntity(mind.OwnedEntity.Value), mind.CharacterName);
     }
 
-    private void OnUnknownIdentityVerb(Entity<CP14UnknownIdentityComponent> ent, ref GetVerbsEvent<Verb> args)
+    private void OnUnknownIdentityVerb(Entity<CE14UnknownIdentityComponent> ent, ref GetVerbsEvent<Verb> args)
     {
         if (HasComp<GhostComponent>(args.User))
             return;
@@ -57,7 +57,7 @@ public abstract class CP14SharedIdentityRecognitionSystem : EntitySystem
         if (args.User == ent.Owner)
             return;
 
-        EnsureComp<CP14RememberedNamesComponent>(mindId);
+        EnsureComp<CE14RememberedNamesComponent>(mindId);
 
         var seeAttemptEv = new SeeIdentityAttemptEvent();
         RaiseLocalEvent(ent.Owner, seeAttemptEv);
@@ -67,24 +67,24 @@ public abstract class CP14SharedIdentityRecognitionSystem : EntitySystem
         {
             Priority = 2,
             Icon =  new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/sentient.svg.192dpi.png")),
-            Text = Loc.GetString("cp14-remember-name-verb"),
+            Text = Loc.GetString("CE14-remember-name-verb"),
             Act = () =>
             {
                 if (seeAttemptEv.Cancelled)
                 {
-                    _popup.PopupClient(Loc.GetString("cp14-remember-fail-mask"), _args.Target, _args.User);
+                    _popup.PopupClient(Loc.GetString("CE14-remember-fail-mask"), _args.Target, _args.User);
                 }
                 else
                 {
-                    _uiSystem.SetUiState(_args.User, CP14RememberNameUiKey.Key, new CP14RememberNameUiState(GetNetEntity(ent)));
-                    _uiSystem.TryToggleUi(_args.User, CP14RememberNameUiKey.Key, actor.PlayerSession);
+                    _uiSystem.SetUiState(_args.User, CE14RememberNameUiKey.Key, new CE14RememberNameUiState(GetNetEntity(ent)));
+                    _uiSystem.TryToggleUi(_args.User, CE14RememberNameUiKey.Key, actor.PlayerSession);
                 }
             },
         };
         args.Verbs.Add(verb);
     }
 
-    private void OnExaminedEvent(Entity<CP14UnknownIdentityComponent> ent, ref ExaminedEvent args)
+    private void OnExaminedEvent(Entity<CE14UnknownIdentityComponent> ent, ref ExaminedEvent args)
     {
         var ev = new SeeIdentityAttemptEvent();
         RaiseLocalEvent(ent.Owner, ev);
@@ -95,16 +95,16 @@ public abstract class CP14SharedIdentityRecognitionSystem : EntitySystem
         if (!_mind.TryGetMind(args.Examiner, out var mindId, out var mind))
             return;
 
-        if (!TryComp<CP14RememberedNamesComponent>(mindId, out var knownNames))
+        if (!TryComp<CE14RememberedNamesComponent>(mindId, out var knownNames))
             return;
 
         if (knownNames.Names.TryGetValue(GetNetEntity(ent).Id, out var name))
         {
-            args.PushMarkup(Loc.GetString("cp14-remember-name-examine", ("name", name)), priority: -1);
+            args.PushMarkup(Loc.GetString("CE14-remember-name-examine", ("name", name)), priority: -1);
         }
     }
 
-    private void OnRememberedNameChanged(Entity<MindContainerComponent> ent, ref CP14RememberedNameChangedMessage args)
+    private void OnRememberedNameChanged(Entity<MindContainerComponent> ent, ref CE14RememberedNameChangedMessage args)
     {
         var mindEntity = ent.Comp.Mind;
 
@@ -116,7 +116,7 @@ public abstract class CP14SharedIdentityRecognitionSystem : EntitySystem
 
     private void RememberCharacter(EntityUid mindEntity, NetEntity targetId, string name)
     {
-        var knownNames = EnsureComp<CP14RememberedNamesComponent>(mindEntity);
+        var knownNames = EnsureComp<CE14RememberedNamesComponent>(mindEntity);
 
         knownNames.Names[targetId.Id] = name;
         Dirty(mindEntity, knownNames);
@@ -124,20 +124,20 @@ public abstract class CP14SharedIdentityRecognitionSystem : EntitySystem
 }
 
 [Serializable, NetSerializable]
-public sealed class CP14RememberedNameChangedMessage(string name, NetEntity target) : BoundUserInterfaceMessage
+public sealed class CE14RememberedNameChangedMessage(string name, NetEntity target) : BoundUserInterfaceMessage
 {
     public string Name { get; } = name;
     public NetEntity Target { get; } = target;
 }
 
 [Serializable, NetSerializable]
-public enum CP14RememberNameUiKey
+public enum CE14RememberNameUiKey
 {
     Key,
 }
 
 [Serializable, NetSerializable]
-public sealed class CP14RememberNameUiState(NetEntity target) : BoundUserInterfaceState
+public sealed class CE14RememberNameUiState(NetEntity target) : BoundUserInterfaceState
 {
     public NetEntity Target = target;
 }

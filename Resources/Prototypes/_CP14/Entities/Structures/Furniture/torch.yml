@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseTorch
+  id: CE14BaseTorch
   abstract: true
   description: A good, reliable light source. Too bad it doesn't last.
   categories: [ ForkFiltered ]
@@ -7,7 +7,7 @@
   - type: InteractionOutline
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
       - trigger:
@@ -16,7 +16,7 @@
         behaviors:
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
-  - type: CP14FlammableAmbientSound
+  - type: CE14FlammableAmbientSound
   - type: AmbientSound
     enabled: false
     volume: -15
@@ -36,25 +36,25 @@
     damage:
       types:
         Heat: 0
-  - type: CP14Fireplace
+  - type: CE14Fireplace
     deleteOnEmpty: true
     maxFuelLimit: 1800
     fuel: 1800
   - type: Appearance
-  - type: CP14IgnitionModifier
+  - type: CE14IgnitionModifier
     hideCaution: true
 
 - type: entity
-  id: CP14FloorTorch
+  id: CE14FloorTorch
   parent:
-  - CP14BaseTorch
+  - CE14BaseTorch
   - BaseStructure
   name: floor torch
   components:
   - type: Sprite
     noRot: true
     drawdepth: Mobs
-    sprite: _CP14/Structures/Furniture/torch_floor.rsi
+    sprite: _CE14/Structures/Furniture/torch_floor.rsi
     offset: 0, 0.3
     layers:
       - state: base
@@ -70,7 +70,7 @@
         - LowImpassable
         - MidImpassable
   - type: FireVisuals
-    sprite: _CP14/Structures/Furniture/torch_floor.rsi
+    sprite: _CE14/Structures/Furniture/torch_floor.rsi
     normalState: fire
   - type: GenericVisualizer
     visuals:
@@ -80,18 +80,18 @@
           Medium: { state: base }
           Full: { state: base }
   - type: Construction
-    graph: CP14FloorTorch
-    node: CP14FloorTorch
+    graph: CE14FloorTorch
+    node: CE14FloorTorch
 
 - type: entity
-  parent: CP14FloorTorch
-  id: CP14FloorTorchIgnited
+  parent: CE14FloorTorch
+  id: CE14FloorTorchIgnited
   suffix: Ignited
   components:
-  - type: CP14AutoIgnite
+  - type: CE14AutoIgnite
 
 - type: entity
-  id: CP14FloorTorchAlwaysPowered
+  id: CE14FloorTorchAlwaysPowered
   name: floor torch
   parent: BaseStructure
   categories: [ ForkFiltered ]
@@ -100,7 +100,7 @@
   - type: Sprite
     noRot: true
     drawdepth: Mobs
-    sprite: _CP14/Structures/Furniture/torch_floor.rsi
+    sprite: _CE14/Structures/Furniture/torch_floor.rsi
     offset: 0, 0.3
     layers:
       - state: base
@@ -128,19 +128,19 @@
       path: /Audio/Ambience/Objects/fireplace.ogg
 
 - type: entity
-  id: CP14WallmountTorch
+  id: CE14WallmountTorch
   parent:
-  - CP14BaseTorch
-  - CP14BaseWallmount
+  - CE14BaseTorch
+  - CE14BaseWallmount
   name: wallmount torch
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/wallmount_torch.rsi
+    sprite: _CE14/Structures/Furniture/wallmount_torch.rsi
     layers:
       - state: base
         map: ["fuel"]
   - type: FireVisuals
-    sprite: _CP14/Structures/Furniture/wallmount_torch.rsi
+    sprite: _CE14/Structures/Furniture/wallmount_torch.rsi
     normalState: fire
   - type: GenericVisualizer
     visuals:
@@ -150,24 +150,24 @@
           Medium: { state: base }
           Full: { state: base }
   - type: Construction
-    graph: CP14WallmountTorch
-    node: CP14WallmountTorch
+    graph: CE14WallmountTorch
+    node: CE14WallmountTorch
 
 - type: entity
-  parent: CP14WallmountTorch
-  id: CP14WallmountTorchIgnited
+  parent: CE14WallmountTorch
+  id: CE14WallmountTorchIgnited
   suffix: Ignited
   components:
-  - type: CP14AutoIgnite
+  - type: CE14AutoIgnite
 
 - type: entity
-  id: CP14WallmountTorchAlwaysPowered
+  id: CE14WallmountTorchAlwaysPowered
   name: wallmount torch
-  parent: CP14BaseWallmount
+  parent: CE14BaseWallmount
   suffix: Debug, Infinite
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Furniture/wallmount_torch.rsi
+    sprite: _CE14/Structures/Furniture/wallmount_torch.rsi
     layers:
       - state: base
       - state: fire

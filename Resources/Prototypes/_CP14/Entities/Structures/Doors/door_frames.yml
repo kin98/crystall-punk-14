@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseStructure
-  id: CP14BaseDoorFrame
+  id: CE14BaseDoorFrame
   categories: [ ForkFiltered ]
   abstract: true
   components:
@@ -19,18 +19,18 @@
         - AirlockLayer
 
 - type: entity
-  parent: CP14BaseDoorFrame
-  id: CP14WoodenDoorFrame
+  parent: CE14BaseDoorFrame
+  id: CE14WoodenDoorFrame
   name: wooden door frame
   description: An unfinished wooden door.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Doors/wooden_frame.rsi
+    sprite: _CE14/Structures/Doors/wooden_frame.rsi
     drawdepth: Mobs
     state: closed
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -39,38 +39,38 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Construction
-    graph: CP14WoodenDoor
-    node: CP14WoodenDoorFrame
+    graph: CE14WoodenDoor
+    node: CE14WoodenDoorFrame
 
 - type: entity
-  parent: CP14WoodenDoorFrame
-  id: CP14WoodenDoorFrameMirrored
+  parent: CE14WoodenDoorFrame
+  id: CE14WoodenDoorFrameMirrored
   components:
   - type: Sprite
     state: closed_mirrored
   - type: Construction
-    graph: CP14WoodenDoor
-    node: CP14WoodenDoorFrameMirrored
+    graph: CE14WoodenDoor
+    node: CE14WoodenDoorFrameMirrored
 
 - type: entity
-  parent: CP14BaseDoorFrame
-  id: CP14WoodenBirchDoorFrame
+  parent: CE14BaseDoorFrame
+  id: CE14WoodenBirchDoorFrame
   name: wooden birch door frame
   description: An unfinished wooden birch door.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Doors/wooden_birch_frame.rsi
+    sprite: _CE14/Structures/Doors/wooden_birch_frame.rsi
     drawdepth: Mobs
     state: closed
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -79,38 +79,38 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14BirchWoodenPlanks1:
+          CE14BirchWoodenPlanks1:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Construction
-    graph: CP14WoodenBirchDoor
-    node: CP14WoodenBirchDoorFrame
+    graph: CE14WoodenBirchDoor
+    node: CE14WoodenBirchDoorFrame
 
 - type: entity
-  parent: CP14WoodenBirchDoorFrame
-  id: CP14WoodenBirchDoorFrameMirrored
+  parent: CE14WoodenBirchDoorFrame
+  id: CE14WoodenBirchDoorFrameMirrored
   components:
   - type: Sprite
     state: closed_mirrored
   - type: Construction
-    graph: CP14WoodenBirchDoor
-    node: CP14WoodenBirchDoorFrameMirrored
+    graph: CE14WoodenBirchDoor
+    node: CE14WoodenBirchDoorFrameMirrored
 
 - type: entity
-  parent: CP14BaseDoorFrame
-  id: CP14IronDoorFrame
+  parent: CE14BaseDoorFrame
+  id: CE14IronDoorFrame
   name: iron door frame
   description: An unfinished iron door.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Doors/iron_frame.rsi
+    sprite: _CE14/Structures/Doors/iron_frame.rsi
     drawdepth: Mobs
     state: closed
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Metallic
+    damageModifierSet: CE14Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -119,22 +119,22 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14IronBar1:
+          CE14IronBar1:
             min: 1
             max: 2
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Construction
-    graph: CP14IronDoor
-    node: CP14IronDoorFrame
+    graph: CE14IronDoor
+    node: CE14IronDoorFrame
 
 - type: entity
-  parent: CP14IronDoorFrame
-  id: CP14IronDoorFrameMirrored
+  parent: CE14IronDoorFrame
+  id: CE14IronDoorFrameMirrored
   components:
   - type: Sprite
     state: closed_mirrored
   - type: Construction
-    graph: CP14IronDoor
-    node: CP14IronDoorFrameMirrored
+    graph: CE14IronDoor
+    node: CE14IronDoorFrameMirrored
 

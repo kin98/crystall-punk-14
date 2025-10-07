@@ -1,33 +1,33 @@
 - type: entity
-  id: CP14ActionSpellVampireResurrection
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellVampireResurrection
+  parent: CE14ActionSpellBase
   name: Resurrection
   description: You're trying to put the soul back into the body.
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.7
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 50
-  - type: CP14MagicEffectVampire
-  - type: CP14ActionSkillPointCost
+  - type: CE14MagicEffectVampire
+  - type: CE14ActionSkillPointCost
     skillPoint: Blood
     count: 1
-  - type: CP14ActionTargetMobStatusRequired
+  - type: CE14ActionTargetMobStatusRequired
     allowedStates:
     - Dead
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Redi animam meam..."
     endSpeech: "Eu rezei por ti"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneVampireResurrection
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneVampireResurrection
   - type: DoAfterArgs
     delay: 5
   - type: Action
     useDelay: 180
     sound: !type:SoundPathSpecifier
-      path: /Audio/_CP14/Effects/ritual_end.ogg
+      path: /Audio/_CE14/Effects/ritual_end.ogg
     icon:
-      sprite: _CP14/Actions/Spells/vampire.rsi
+      sprite: _CE14/Actions/Spells/vampire.rsi
       state: resurrection
   - type: TargetAction
     range: 7
@@ -37,17 +37,17 @@
     whitelist:
       components:
       - MobState
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectBloodEssenceInverse
+        - CE14ImpactEffectBloodEssenceInverse
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectBloodEssence2
-      - !type:CP14SpellResurrectionEffect
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectBloodEssence2
+      - !type:CE14SpellResurrectionEffect
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:ChemVomit
           probability: 0.25
@@ -63,8 +63,8 @@
         - !type:Jitter
 
 - type: entity
-  id: CP14RuneVampireResurrection
-  parent: CP14BaseMagicRune
+  id: CE14RuneVampireResurrection
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -84,4 +84,4 @@
       shader: unshaded
   - type: EmitSoundOnSpawn
     sound:
-      path: /Audio/_CP14/Effects/ritual_begin.ogg
+      path: /Audio/_CE14/Effects/ritual_begin.ogg

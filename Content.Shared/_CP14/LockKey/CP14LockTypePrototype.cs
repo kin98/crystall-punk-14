@@ -1,14 +1,14 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.LockKey;
+namespace Content.Shared._CE14.LockKey;
 
 /// <summary>
 /// A lock or key shape, pre-generated at the start of the round.
 /// Allows a group of doors and keys to have the same shape within the same round and fit together,
 /// but is randomized from round to round
 /// </summary>
-[Prototype("CP14LockType")]
-public sealed partial class CP14LockTypePrototype : IPrototype
+[Prototype("CE14LockType")]
+public sealed partial class CE14LockTypePrototype : IPrototype
 {
     [ViewVariables]
     [IdDataField]
@@ -25,7 +25,7 @@ public sealed partial class CP14LockTypePrototype : IPrototype
     /// where the key takes one of the free forms from identical rooms (10 different kinds of tavern rooms for example).
     /// </summary>
     [DataField]
-    public ProtoId<CP14LockGroupPrototype>? Group;
+    public ProtoId<CE14LockGroupPrototype>? Group;
 
     [DataField]
     public LocId? Name;

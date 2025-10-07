@@ -3,14 +3,14 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.Prototypes;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CP14.MagicEnergy.Components;
+namespace Content.Shared._CE14.MagicEnergy.Components;
 
 /// <summary>
 /// Allows an item to store magical energy within itself.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(CP14SharedMagicEnergySystem))]
-public sealed partial class CP14MagicEnergyContainerComponent : Component
+[Access(typeof(CE14SharedMagicEnergySystem))]
+public sealed partial class CE14MagicEnergyContainerComponent : Component
 {
     [DataField, AutoNetworkedField]
     public FixedPoint2 Energy = 0;

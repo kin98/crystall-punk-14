@@ -6,13 +6,13 @@
 using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Workbench.Prototypes;
+namespace Content.Shared._CE14.Workbench.Prototypes;
 
 /// <summary>
 /// Allows you to group several different kinds of stacks into one group. Can be used for situations where different stacks are appropriate for a particular situation
 /// </summary>
-[Prototype("CP14StackGroup")]
-public sealed class CP14StackGroupPrototype : IPrototype
+[Prototype("CE14StackGroup")]
+public sealed class CE14StackGroupPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;

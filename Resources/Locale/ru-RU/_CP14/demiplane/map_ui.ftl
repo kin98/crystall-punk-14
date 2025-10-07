@@ -1,1 +1,1 @@
-cp14-demiplane-map-title = Карта навигации демипланов
+CE14-demiplane-map-title = Карта навигации демипланов

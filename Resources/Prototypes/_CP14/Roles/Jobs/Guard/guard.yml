@@ -1,28 +1,28 @@
 - type: job
-  id: CP14Guard
+  id: CE14Guard
   setPreference: true
-  name: cp14-job-name-guard
-  description: cp14-job-desc-guard
-  playTimeTracker: CP14JobGuard
-  startingGear: CP14GuardGear
-  icon: "CP14JobIconGuard"
-  supervisors: cp14-job-supervisors-guard-commander
+  name: CE14-job-name-guard
+  description: CE14-job-desc-guard
+  playTimeTracker: CE14JobGuard
+  startingGear: CE14GuardGear
+  icon: "CE14JobIconGuard"
+  supervisors: CE14-job-supervisors-guard-commander
   canBeAntag: false
   special:
-    #- !type:CP14LearnSkillsSpecial
+    #- !type:CE14LearnSkillsSpecial
     #  skills:
     #  - SwordMastery
     - !type:AddComponentSpecial
       components:
-      - type: CP14SalaryCounter
+      - type: CE14SalaryCounter
         salary: 50
-    - !type:CP14AddTradingReputationSpecial
+    - !type:CE14AddTradingReputationSpecial
       factions:
       - Guards
 
 - type: startingGear
-  id: CP14GuardGear
+  id: CE14GuardGear
   equipment:
-    keys: CP14KeyRingGuard
-    belt: CP14WalletFilledTest
+    keys: CE14KeyRingGuard
+    belt: CE14WalletFilledTest
 

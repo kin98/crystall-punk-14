@@ -1,14 +1,14 @@
 - type: entity
   parent:
-  - CP14SimpleMobBase
+  - CE14SimpleMobBase
   - MobCombat
   abstract: true
-  id: CP14MobSpiderBase
+  id: CE14MobSpiderBase
   categories: [ ForkFiltered ]
   components:
   - type: HTN
     rootTask:
-      task: CP14MonsterCompound
+      task: CE14MonsterCompound
     blackboard:
       NavSmash: !type:Bool
         true
@@ -30,9 +30,9 @@
         - MobLayer
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatMonster #TODO
+    - id: CE14FoodMeatMonster #TODO
       amount: 2
-    - id: CP14FoodMeatMonsterLeg #TODO
+    - id: CE14FoodMeatMonsterLeg #TODO
       amount: 1
       prob: 0.6
       # TODO: Chitin drops
@@ -59,7 +59,7 @@
     solution: melee
     generated:
       reagents:
-      - ReagentId: CP14MonsterToxinSpider
+      - ReagentId: CE14MonsterToxinSpider
         Quantity: 1
   - type: MeleeChemicalInjector
     transferAmount: 0.75
@@ -77,7 +77,7 @@
   - type: IgnoreSpiderWeb
   - type: Bloodstream
     bloodMaxVolume: 150
-    bloodReagent: CP14BloodMonster
+    bloodReagent: CE14BloodMonster
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
@@ -103,14 +103,14 @@
         Brute: -0.07
         Burn: -0.07
   - type: NPCUseActionOnTarget
-    actionId: CP14ActionSpiderTrap
+    actionId: CE14ActionSpiderTrap
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
 
 - type: entity
-  parent: CP14MobSpiderBase
-  id: CP14MobSpiderBlackHunter
+  parent: CE14MobSpiderBase
+  id: CE14MobSpiderBlackHunter
   name: black hunter
   description: A giant predatory spider eager to eat your flesh.
   components:

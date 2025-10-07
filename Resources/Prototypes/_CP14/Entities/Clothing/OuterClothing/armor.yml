@@ -1,13 +1,13 @@
 - type: entity
-  parent: CP14ClothingOuterClothingBase
-  id: CP14ClothingOuterClothingBoneArmor
+  parent: CE14ClothingOuterClothingBase
+  id: CE14ClothingOuterClothingBoneArmor
   name: bone armor
   description: Bone armour... not the best or most attractive defence.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/OuterClothing/bone_armor.rsi
+    sprite: _CE14/Clothing/OuterClothing/bone_armor.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/OuterClothing/bone_armor.rsi
+    sprite: _CE14/Clothing/OuterClothing/bone_armor.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -19,11 +19,11 @@
     sprintModifier: 0.98
   - type: PhysicalComposition
     materialComposition:
-      CP14Bone: 120
+      CE14Bone: 120
 
 - type: entity
-  parent: CP14ClothingOuterClothingBoneArmor
-  id: CP14ClothingOuterClothingBoneArmorUpgrade
+  parent: CE14ClothingOuterClothingBoneArmor
+  id: CE14ClothingOuterClothingBoneArmorUpgrade
   name: reinforced bone armor
   description: Bone armour... not the best or most attractive defence.
   components:
@@ -38,15 +38,15 @@
     sprintModifier: 0.95
 
 - type: entity
-  parent: CP14ClothingOuterClothingBase
-  id: CP14ClothingOuterClothingFish
+  parent: CE14ClothingOuterClothingBase
+  id: CE14ClothingOuterClothingFish
   name: fish suit
   description: Smells horible....
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/OuterClothing/fish_suit.rsi
+    sprite: _CE14/Clothing/OuterClothing/fish_suit.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/OuterClothing/fish_suit.rsi
+    sprite: _CE14/Clothing/OuterClothing/fish_suit.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -54,18 +54,18 @@
         Cold: 0.9
         Slash: 0.92
   - type: FactionClothing
-    faction: CP14Fishies
+    faction: CE14Fishies
 
 - type: entity
-  parent: CP14ClothingOuterClothingBase
-  id: CP14ClothingOuterClothingChainmail
+  parent: CE14ClothingOuterClothingBase
+  id: CE14ClothingOuterClothingChainmail
   name: chainmail
   description: Ringed armour made of many small metal rings.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/OuterClothing/chainmail.rsi
+    sprite: _CE14/Clothing/OuterClothing/chainmail.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/OuterClothing/chainmail.rsi
+    sprite: _CE14/Clothing/OuterClothing/chainmail.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -75,22 +75,22 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
-  - type: CP14MagicManacostModify
+  - type: CE14MagicManacostModify
     globalModifier: 1.1
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 60
+      CE14Iron: 60
 
 - type: entity
-  parent: CP14ClothingOuterClothingBase
-  id: CP14ClothingOuterClothingCuirass
+  parent: CE14ClothingOuterClothingBase
+  id: CE14ClothingOuterClothingCuirass
   name: cuirass
   description: Light armour plate on the chest, little protection, little heaviness.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/OuterClothing/cuirass.rsi
+    sprite: _CE14/Clothing/OuterClothing/cuirass.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/OuterClothing/cuirass.rsi
+    sprite: _CE14/Clothing/OuterClothing/cuirass.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -100,22 +100,22 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
-  - type: CP14MagicManacostModify
+  - type: CE14MagicManacostModify
     globalModifier: 1.15
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 60
+      CE14Iron: 60
 
 - type: entity
-  parent: CP14ClothingOuterClothingBase
-  id: CP14ClothingOuterClothingInfantryCuirass
+  parent: CE14ClothingOuterClothingBase
+  id: CE14ClothingOuterClothingInfantryCuirass
   name: infantry cuirass
   description: Heavy armour for strong creatures. It is not easy to wear, but the protection is sometimes worth it.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/OuterClothing/infantry_cuirass.rsi
+    sprite: _CE14/Clothing/OuterClothing/infantry_cuirass.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/OuterClothing/infantry_cuirass.rsi
+    sprite: _CE14/Clothing/OuterClothing/infantry_cuirass.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -125,8 +125,8 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.90
     sprintModifier: 0.90
-  - type: CP14MagicManacostModify
+  - type: CE14MagicManacostModify
     globalModifier: 1.2
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 90
+      CE14Iron: 90

@@ -1,11 +1,11 @@
 - type: entity
-  id: CP14SkyLightning
+  id: CE14SkyLightning
   categories: [ ForkFiltered ]
   name: sky lighting
   save: false
   components:
   - type: Sprite
-    sprite: _CP14/Effects/sky_lightning.rsi
+    sprite: _CE14/Effects/sky_lightning.rsi
     drawdepth: Mobs
     noRot: true
     offset: 0,2.5
@@ -25,11 +25,11 @@
     netsync: false
   - type: LightFade
     duration: 1
-  - type: CP14PvsOverride
-  - type: CP14AreaEntityEffect
+  - type: CE14PvsOverride
+  - type: CE14AreaEntityEffect
     range: 1
     effects:
-    - !type:CP14SpellApplyEntityEffect
+    - !type:CE14SpellApplyEntityEffect
       effects:
       - !type:Electrocute
         electrocuteTime: 6
@@ -45,31 +45,31 @@
   - type: TriggerOnSpawn
   - type: FlashOnTrigger
     range: 4
-  - type: CP14FarSound
+  - type: CE14FarSound
     closeSound:
-      path: /Audio/_CP14/Ambience/Lightning/lightning_close1.ogg
+      path: /Audio/_CE14/Ambience/Lightning/lightning_close1.ogg
       params:
         variation: 0.2
         maxDistance: 20
         volume: 20
     farSound:
-      collection: CP14LightningFar
+      collection: CE14LightningFar
       params:
         variation: 0.2
 
 - type: entity
-  id: CP14SkyLightningPurple
-  parent: CP14SkyLightning
+  id: CE14SkyLightningPurple
+  parent: CE14SkyLightning
   suffix: Purple
   components:
   - type: PointLight
     color: "#8f42ff"
   - type: Sprite
     color: "#8f42ff"
-  - type: CP14AreaEntityEffect
+  - type: CE14AreaEntityEffect
     range: 1
     effects:
-    - !type:CP14SpellApplyEntityEffect
+    - !type:CE14SpellApplyEntityEffect
       effects:
       - !type:Electrocute
         electrocuteTime: 3
@@ -77,35 +77,35 @@
         damage:
           types:
             Shock: 0
-  - type: CP14FarSound
+  - type: CE14FarSound
     closeSound:
-      path: /Audio/_CP14/Ambience/Lightning/lightning_close1.ogg
+      path: /Audio/_CE14/Ambience/Lightning/lightning_close1.ogg
       params:
         variation: 0.2
         maxDistance: 20
         volume: 10
     farSound:
-      collection: CP14LightningFar
+      collection: CE14LightningFar
       params:
         variation: 0.2
         volume: -5
 
 - type: entity
-  id: CP14SkyLightningRed
-  parent: CP14SkyLightning
+  id: CE14SkyLightningRed
+  parent: CE14SkyLightning
   suffix: Red
   components:
   - type: PointLight
     color: "#f7112c"
   - type: Sprite
     color: "#f7112c"
-  - type: CP14AreaEntityEffect
+  - type: CE14AreaEntityEffect
     range: 1
     effects:
-    - !type:CP14SpellThrowFromUser
+    - !type:CE14SpellThrowFromUser
       throwPower: 4
       distance: 0.5
-    - !type:CP14SpellApplyEntityEffect
+    - !type:CE14SpellApplyEntityEffect
       effects:
       - !type:Electrocute
         electrocuteTime: 3
@@ -113,15 +113,15 @@
         damage:
           types:
             Shock: 0
-  - type: CP14FarSound
+  - type: CE14FarSound
     closeSound:
-      path: /Audio/_CP14/Ambience/Lightning/lightning_close1.ogg
+      path: /Audio/_CE14/Ambience/Lightning/lightning_close1.ogg
       params:
         variation: 0.2
         maxDistance: 20
         volume: 10
     farSound:
-      collection: CP14LightningFar
+      collection: CE14LightningFar
       params:
         variation: 0.2
         volume: -5

@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14PlateBase
+  id: CE14PlateBase
   parent: BaseItem
   description: This is your plate for a delicious meal!
   categories: [ ForkFiltered ]
@@ -7,7 +7,7 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Objects/Consumable/Food/Meals/plates.rsi
+    sprite: _CE14/Objects/Consumable/Food/Meals/plates.rsi
   - type: Item
     shape:
     - 0,0,1,0
@@ -15,8 +15,8 @@
     solutions:
       food:
         maxVol: 20
-  - type: CP14FoodHolder
-    displacementRsiPath: _CP14/Objects/Consumable/Food/Meals/displacement.rsi
+  - type: CE14FoodHolder
+    displacementRsiPath: _CE14/Objects/Consumable/Food/Meals/displacement.rsi
     foodType: Meal
     solutionId: food
     canAcceptFood: true
@@ -28,49 +28,49 @@
     solution: food
 
 - type: entity
-  id: CP14PlateWooden
-  parent: CP14PlateBase
+  id: CE14PlateWooden
+  parent: CE14PlateBase
   name: wooden plate
   components:
   - type: Sprite
     layers:
     - state: wooden
-    - map: ["cp14_foodLayers"]
+    - map: ["CE14_foodLayers"]
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 20
+      CE14WoodenPlanks: 20
   - type: Food
     trash: 
-    - CP14PlateWooden
+    - CE14PlateWooden
 
 - type: entity
-  id: CP14PlateIron
-  parent: CP14PlateBase
+  id: CE14PlateIron
+  parent: CE14PlateBase
   name: iron plate
   components:
   - type: Sprite
     layers:
     - state: iron
-    - map: ["cp14_foodLayers"]
+    - map: ["CE14_foodLayers"]
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 10
+      CE14Iron: 10
   - type: Food
     trash: 
-    - CP14PlateIron
+    - CE14PlateIron
 
 - type: entity
-  id: CP14PlateGold
-  parent: CP14PlateBase
+  id: CE14PlateGold
+  parent: CE14PlateBase
   name: gold plate
   components:
   - type: Sprite
     layers:
     - state: gold
-    - map: ["cp14_foodLayers"]
+    - map: ["CE14_foodLayers"]
   - type: PhysicalComposition
     materialComposition:
-      CP14Gold: 10
+      CE14Gold: 10
   - type: Food
     trash: 
-    - CP14PlateGold
+    - CE14PlateGold

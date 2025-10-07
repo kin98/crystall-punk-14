@@ -1,21 +1,21 @@
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14Rules
+  id: CE14Rules
   name: guide-entry-rules
   ruleEntry: true
-  text: "/ServerInfo/_CP14/Rules/CP14_Rules.xml"
+  text: "/ServerInfo/_CE14/Rules/CE14_Rules.xml"
   children:
-  - CP14RulesRU
-  - CP14RulesEN
+  - CE14RulesRU
+  - CE14RulesEN
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14RulesRU
+  id: CE14RulesRU
   name: "(RU) Правила сервера"
-  text: "/ServerInfo/_CP14/Rules/CP14_Rules_RU.xml"
+  text: "/ServerInfo/_CE14/Rules/CE14_Rules_RU.xml"
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14RulesEN
+  id: CE14RulesEN
   name: "(EN) Server rules"
-  text: "/ServerInfo/_CP14/Rules/CP14_Rules_EN.xml"
+  text: "/ServerInfo/_CE14/Rules/CE14_Rules_EN.xml"

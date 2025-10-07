@@ -8,9 +8,9 @@ using Robust.Server.Audio;
 using Robust.Shared.Audio;
 using Robust.Shared.Player;
 
-namespace Content.Server._CP14.PersonalSignature;
+namespace Content.Server._CE14.PersonalSignature;
 
-public sealed class CP14PersonalSignatureSystem : EntitySystem
+public sealed class CE14PersonalSignatureSystem : EntitySystem
 {
     [Dependency] private readonly AudioSystem _audio = default!;
     [Dependency] private readonly MindSystem _mind = default!;
@@ -46,7 +46,7 @@ public sealed class CP14PersonalSignatureSystem : EntitySystem
         });
     }
 
-    private bool CanSign(EntityUid? item, [NotNullWhen(true)] out CP14PersonalSignatureComponent? personalSignature)
+    private bool CanSign(EntityUid? item, [NotNullWhen(true)] out CE14PersonalSignatureComponent? personalSignature)
     {
         personalSignature = null;
         return item is not null && TryComp(item, out personalSignature);

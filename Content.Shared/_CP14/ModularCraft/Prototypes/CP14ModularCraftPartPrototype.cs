@@ -1,16 +1,16 @@
 using Content.Shared.Hands.Components;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.ModularCraft.Prototypes;
+namespace Content.Shared._CE14.ModularCraft.Prototypes;
 
 [Prototype("modularPart")]
-public sealed partial class CP14ModularCraftPartPrototype : IPrototype
+public sealed partial class CE14ModularCraftPartPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;
 
     [DataField]
-    public List<ProtoId<CP14ModularCraftSlotPrototype>> Slots = new();
+    public List<ProtoId<CE14ModularCraftSlotPrototype>> Slots = new();
 
     /// <summary>
     /// An entity that can drop out of the final modular item when destroyed.
@@ -23,7 +23,7 @@ public sealed partial class CP14ModularCraftPartPrototype : IPrototype
     public float DestroyProb;
 
     [DataField(serverOnly: true)]
-    public List<CP14ModularCraftModifier> Modifiers = new();
+    public List<CE14ModularCraftModifier> Modifiers = new();
 
     [DataField]
     public string? RsiPath;

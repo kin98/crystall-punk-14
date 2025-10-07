@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14IngredientBase # An item intended for crafting
+  id: CE14IngredientBase # An item intended for crafting
   parent: BaseItem
   abstract: true
   categories: [ ForkFiltered ]
@@ -9,16 +9,16 @@
 
 # Buckle
 - type: entity
-  id: CP14IronBuckle
-  parent: CP14IngredientBase
+  id: CE14IronBuckle
+  parent: CE14IngredientBase
   name: iron buckle
   description: A sturdy metal buckle for fastening straps and belts.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Ingredients/buckle.rsi
+    sprite: _CE14/Objects/Ingredients/buckle.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 2 # 1/5 iron bar (10u)
+      CE14Iron: 2 # 1/5 iron bar (10u)
   - type: StaticPrice
     price: 2

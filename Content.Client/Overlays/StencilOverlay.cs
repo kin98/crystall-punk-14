@@ -1,7 +1,7 @@
 using System.Numerics;
 using Content.Client.Parallax;
 using Content.Client.Weather;
-using Content.Shared._CP14.CloudShadow;
+using Content.Shared._CE14.CloudShadow;
 using Content.Shared.Salvage;
 using Content.Shared.Weather;
 using Robust.Client.GameObjects;
@@ -80,12 +80,12 @@ public sealed partial class StencilOverlay : Overlay
         }
 
 
-        //CP14 Overlays
-        if (_entManager.TryGetComponent<CP14CloudShadowsComponent>(mapUid, out var shadows))
+        //CE14 Overlays
+        if (_entManager.TryGetComponent<CE14CloudShadowsComponent>(mapUid, out var shadows))
         {
             DrawCloudShadows(args, shadows, invMatrix);
         }
-        //CP14 Overlays end
+        //CE14 Overlays end
 
         args.WorldHandle.UseShader(null);
         args.WorldHandle.SetTransform(Matrix3x2.Identity);

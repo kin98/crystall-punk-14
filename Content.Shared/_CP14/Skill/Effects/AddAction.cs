@@ -1,13 +1,13 @@
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Prototypes;
 using Content.Shared.Actions;
 using Content.Shared.Examine;
 using Content.Shared.Mind;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Skill.Effects;
+namespace Content.Shared._CE14.Skill.Effects;
 
-public sealed partial class AddAction : CP14SkillEffect
+public sealed partial class AddAction : CE14SkillEffect
 {
     [DataField(required: true)]
     public EntProtoId Action;
@@ -53,7 +53,7 @@ public sealed partial class AddAction : CP14SkillEffect
         return !protoManager.TryIndex(Action, out var indexedAction) ? string.Empty : indexedAction.Name;
     }
 
-    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CP14SkillPrototype> skill)
+    public override string? GetDescription(IEntityManager entMagager, IPrototypeManager protoManager, ProtoId<CE14SkillPrototype> skill)
     {
         var dummyAction = entMagager.Spawn(Action);
         var message = new FormattedMessage();

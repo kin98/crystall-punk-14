@@ -1,21 +1,21 @@
 using System.Numerics;
-using Content.Shared._CP14.UniqueLoot;
+using Content.Shared._CE14.UniqueLoot;
 using Content.Shared.Teleportation.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellTeleportToSingleton : CP14SpellEffect
+public sealed partial class CE14SpellTeleportToSingleton : CE14SpellEffect
 {
     [DataField]
-    public EntProtoId PortalProto = "CP14TempPortalRed";
+    public EntProtoId PortalProto = "CE14TempPortalRed";
 
     [DataField(required: true)]
     public string SingletonKey;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         if (args.Position is null)
             return;
@@ -27,7 +27,7 @@ public sealed partial class CP14SpellTeleportToSingleton : CP14SpellEffect
 
         var random = IoCManager.Resolve<IRobustRandom>();
         var linkSys = entManager.System<LinkedEntitySystem>();
-        var query = entManager.EntityQueryEnumerator<CP14SingletonComponent, TransformComponent>();
+        var query = entManager.EntityQueryEnumerator<CE14SingletonComponent, TransformComponent>();
 
         var first = entManager.SpawnAtPosition(PortalProto, args.Position.Value);
 

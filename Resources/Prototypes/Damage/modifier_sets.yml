@@ -272,8 +272,8 @@
     Shock: 0.0
     Slash: 0.25
     Structural: 0.0
-    #CP14
-    CP14ManaDepletion: 0.0
+    #CE14
+    CE14ManaDepletion: 0.0
 
 - type: damageModifierSet
   id: SlimePet # Very survivable slimes

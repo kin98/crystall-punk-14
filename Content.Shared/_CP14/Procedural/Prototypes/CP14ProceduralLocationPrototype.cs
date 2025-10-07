@@ -4,13 +4,13 @@ using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Procedural.Prototypes;
+namespace Content.Shared._CE14.Procedural.Prototypes;
 
 /// <summary>
 /// procedural location template. The answer to the question “Where” as far as the combinatorics of the generation is concerned.
 /// </summary>
-[Prototype("cp14Location")]
-public sealed partial class CP14ProceduralLocationPrototype : IPrototype
+[Prototype("CE14Location")]
+public sealed partial class CE14ProceduralLocationPrototype : IPrototype
 {
     [IdDataField] public string ID { get; } = default!;
 

@@ -2,64 +2,64 @@
 # Splitting: Applying magical dispel to split precursor into essences.
 
 - type: reaction
-  id: CP14ChromiumSlimeSplitting
+  id: CE14ChromiumSlimeSplitting
   requiredMixerCategories:
-  - CP14MagicSplitting
+  - CE14MagicSplitting
   reactants:
-    CP14ChromiumSlime:
+    CE14ChromiumSlime:
       amount: 1
   products:
-    CP14EssenceCycle: 1
+    CE14EssenceCycle: 1
 
 
 # Chromium slime is a special reagent that inverts solution properties.
 
 - type: reaction
-  id: CP14ChromiumInverseEffect
+  id: CE14ChromiumInverseEffect
   quantized: true
   minTemp: 350
   conserveEnergy: false
   reactants:
-    CP14ChromiumSlime:
+    CE14ChromiumSlime:
       amount: 1
   products:
-    CP14SideEffectEmpty: 1
+    CE14SideEffectEmpty: 1
   effects:
-  - !type:CP14InverseEffect
+  - !type:CE14InverseEffect
     inversion:
-      CP14HealingEffectHealBrute: CP14DamageEffectDamageBrute
-      CP14DamageEffectDamageBrute: CP14HealingEffectHealBrute
+      CE14HealingEffectHealBrute: CE14DamageEffectDamageBrute
+      CE14DamageEffectDamageBrute: CE14HealingEffectHealBrute
       #
-      CP14HealingEffectHealPoison: CP14DamageEffectDamagePoison
-      CP14DamageEffectDamagePoison: CP14HealingEffectHealPoison
+      CE14HealingEffectHealPoison: CE14DamageEffectDamagePoison
+      CE14DamageEffectDamagePoison: CE14HealingEffectHealPoison
       #
-      CP14DamageEffectDamageHeat: CP14HealingEffectHealHeat
-      CP14HealingEffectHealHeat: CP14DamageEffectDamageHeat
+      CE14DamageEffectDamageHeat: CE14HealingEffectHealHeat
+      CE14HealingEffectHealHeat: CE14DamageEffectDamageHeat
       #
-      CP14DamageEffectDamageCold: CP14HealingEffectHealCold
-      CP14HealingEffectHealCold: CP14DamageEffectDamageCold
+      CE14DamageEffectDamageCold: CE14HealingEffectHealCold
+      CE14HealingEffectHealCold: CE14DamageEffectDamageCold
       #
-      CP14PositiveEffectSatiateHunger: CP14SideEffectVomit
-      CP14PositiveEffectSatiateThirst: CP14PositiveEffectSatiateHunger
-      CP14SideEffectVomit: CP14PositiveEffectSatiateThirst
+      CE14PositiveEffectSatiateHunger: CE14SideEffectVomit
+      CE14PositiveEffectSatiateThirst: CE14PositiveEffectSatiateHunger
+      CE14SideEffectVomit: CE14PositiveEffectSatiateThirst
       #
-      CP14NegativeEffectDamageMana: CP14PositiveEffectHealMana
-      CP14PositiveEffectHealMana: CP14NegativeEffectDamageMana
+      CE14NegativeEffectDamageMana: CE14PositiveEffectHealMana
+      CE14PositiveEffectHealMana: CE14NegativeEffectDamageMana
       #
-      CP14DamageEffectBloodAbsorption: CP14HealingEffectBloodRestore
-      CP14HealingEffectBloodRestore: CP14DamageEffectBloodAbsorption
+      CE14DamageEffectBloodAbsorption: CE14HealingEffectBloodRestore
+      CE14HealingEffectBloodRestore: CE14DamageEffectBloodAbsorption
       #
-      CP14NegativeEffectSpeedDown: CP14PositiveEffectSpeedUp
-      CP14PositiveEffectSpeedUp: CP14NegativeEffectSpeedDown
+      CE14NegativeEffectSpeedDown: CE14PositiveEffectSpeedUp
+      CE14PositiveEffectSpeedUp: CE14NegativeEffectSpeedDown
       #
-      CP14DamageEffectDamageAirloss: CP14HealingEffectHealAirloss
-      CP14HealingEffectHealAirloss: CP14DamageEffectDamageAirloss
+      CE14DamageEffectDamageAirloss: CE14HealingEffectHealAirloss
+      CE14HealingEffectHealAirloss: CE14DamageEffectDamageAirloss
       #
-      CP14PositiveEffectUnsleep: CP14NegativeEffectSleep
-      CP14NegativeEffectSleep: CP14PositiveEffectUnsleep
+      CE14PositiveEffectUnsleep: CE14NegativeEffectSleep
+      CE14NegativeEffectSleep: CE14PositiveEffectUnsleep
       #
-      CP14SideEffectRainbow: CP14SideEffectEmoteCough
-      CP14SideEffectEmoteCough: CP14SideEffectRainbow
+      CE14SideEffectRainbow: CE14SideEffectEmoteCough
+      CE14SideEffectEmoteCough: CE14SideEffectRainbow
       #
-      CP14PositiveEffectHealStam: CP14NegativeEffectDamageStam
-      CP14NegativeEffectDamageStam: CP14PositiveEffectHealStam
+      CE14PositiveEffectHealStam: CE14NegativeEffectDamageStam
+      CE14NegativeEffectDamageStam: CE14PositiveEffectHealStam

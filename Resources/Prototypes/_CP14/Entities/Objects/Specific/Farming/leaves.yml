@@ -1,7 +1,7 @@
 - type: entity
   name: ground tobacco
   parent: BaseItem
-  id: CP14GroundTobacco
+  id: CE14GroundTobacco
   description: Grinded and dried tabac leaves, some like it is a cur.
   categories: [ ForkFiltered ]
   components:
@@ -14,7 +14,7 @@
         - ReagentId: Nicotine
           Quantity: 10
   - type: Sprite
-    sprite: _CP14/Objects/Misc/reagent_fillings.rsi
+    sprite: _CE14/Objects/Misc/reagent_fillings.rsi
     state: tobacco_small
   - type: Tag
     tags:
@@ -23,7 +23,7 @@
 - type: entity
   name: ground sage
   parent: BaseItem
-  id: CP14GroundSage
+  id: CE14GroundSage
   description: Ground and dried sage root as it turns out is an excellent substitute for tobacco.
   categories: [ ForkFiltered ]
   components:
@@ -38,7 +38,7 @@
         - ReagentId: Happiness
           Quantity: 2
   - type: Sprite
-    sprite: _CP14/Objects/Misc/reagent_fillings.rsi
+    sprite: _CE14/Objects/Misc/reagent_fillings.rsi
     state: sage_powder
   - type: Tag
     tags:

@@ -2,7 +2,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Content.Server.Construction.Components;
-using Content.Shared._CP14.Workbench.Prototypes;
+using Content.Shared._CE14.Workbench.Prototypes;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Construction;
 using Content.Shared.Construction.Prototypes;
@@ -237,8 +237,8 @@ namespace Content.Server.Construction
 
                         break;
 
-                    //CP14 stack group support
-                    case CP14StackGroupConstructionGraphStep stackGroupStep:
+                    //CE14 stack group support
+                    case CE14StackGroupConstructionGraphStep stackGroupStep:
                         foreach (var entity in new HashSet<EntityUid>(EnumerateNearby(user)))
                         {
                             if (!stackGroupStep.EntityValid(entity, out var stack))
@@ -265,7 +265,7 @@ namespace Content.Server.Construction
                         }
 
                         break;
-                    //CP14 stack group support end
+                    //CE14 stack group support end
                 }
 
                 if (handled == false)
@@ -375,8 +375,8 @@ namespace Content.Server.Construction
                 return false;
             }
 
-            //CP14 requirements
-            foreach (var req in constructionPrototype.CP14Restrictions)
+            //CE14 requirements
+            foreach (var req in constructionPrototype.CE14Restrictions)
             {
                 if (!req.Check(EntityManager, user))
                 {
@@ -384,7 +384,7 @@ namespace Content.Server.Construction
                     return false;
                 }
             }
-            //CP14 end
+            //CE14 end
 
             var startNode = constructionGraph.Nodes[constructionPrototype.StartNode];
             var targetNode = constructionGraph.Nodes[constructionPrototype.TargetNode];
@@ -471,8 +471,8 @@ namespace Content.Server.Construction
                 return;
             }
 
-            //CP14 requirements
-            foreach (var req in constructionPrototype.CP14Restrictions)
+            //CE14 requirements
+            foreach (var req in constructionPrototype.CE14Restrictions)
             {
                 if (!req.Check(EntityManager, user))
                 {
@@ -480,7 +480,7 @@ namespace Content.Server.Construction
                     return;
                 }
             }
-            //CP14 end
+            //CE14 end
 
             if (_container.IsEntityInContainer(user))
             {

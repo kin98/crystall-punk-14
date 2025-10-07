@@ -1,6 +1,6 @@
-namespace Content.Shared._CP14.Temperature;
+namespace Content.Shared._CE14.Temperature;
 
-[RegisterComponent, Access(typeof(CP14SharedFireSpreadSystem))]
-public sealed partial class CP14DespawnOnExtinguishComponent : Component
+[RegisterComponent, Access(typeof(CE14SharedFireSpreadSystem))]
+public sealed partial class CE14DespawnOnExtinguishComponent : Component
 {
 }

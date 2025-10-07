@@ -1,7 +1,7 @@
 using System.Linq;
-using Content.Server._CP14.Discord;
+using Content.Server._CE14.Discord;
 using Content.Server.Connection;
-using Content.Shared._CP14.JoinQueue;
+using Content.Shared._CE14.JoinQueue;
 using Content.Shared.CCVar;
 using Prometheus;
 using Robust.Server.Player;
@@ -11,7 +11,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.JoinQueue;
+namespace Content.Server._CE14.JoinQueue;
 
 /// <summary>
 ///     Manages new player connections when the server is full and queues them up, granting access when a slot becomes free

@@ -1,167 +1,167 @@
 - type: roleLoadout
-  id: JobCP14Adventurer
+  id: JobCE14Adventurer
   groups:
-  - CP14AdventureEquip
-  - CP14GeneralHead
-  - CP14GeneralOuterClothing
-  - CP14GeneralEyes
-  - CP14GeneralMask
-  - CP14GeneralCloak
-  - CP14GeneralGloves
-  - CP14GeneralShirt
-  - CP14GeneralPants
-  - CP14GeneralShoes
-  - CP14GeneralBack
-  - CP14GeneralTrinkets
-  - CP14GeneralKeys
+  - CE14AdventureEquip
+  - CE14GeneralHead
+  - CE14GeneralOuterClothing
+  - CE14GeneralEyes
+  - CE14GeneralMask
+  - CE14GeneralCloak
+  - CE14GeneralGloves
+  - CE14GeneralShirt
+  - CE14GeneralPants
+  - CE14GeneralShoes
+  - CE14GeneralBack
+  - CE14GeneralTrinkets
+  - CE14GeneralKeys
 
 - type: roleLoadout
-  id: JobCP14Apprentice
+  id: JobCE14Apprentice
   groups:
-  - CP14GeneralHead
-  - CP14GeneralOuterClothing
-  - CP14GeneralEyes
-  - CP14GeneralGloves
-  - CP14GeneralShirt
-  - CP14GeneralPants
-  - CP14GeneralShoes
-  - CP14GeneralVillagerBack
-  - CP14GeneralTrinkets
-  - CP14GeneralKeys
+  - CE14GeneralHead
+  - CE14GeneralOuterClothing
+  - CE14GeneralEyes
+  - CE14GeneralGloves
+  - CE14GeneralShirt
+  - CE14GeneralPants
+  - CE14GeneralShoes
+  - CE14GeneralVillagerBack
+  - CE14GeneralTrinkets
+  - CE14GeneralKeys
 
 - type: roleLoadout
-  id: JobCP14Alchemist
+  id: JobCE14Alchemist
   groups:
-  - CP14AlchemistHead #
-  - CP14GeneralOuterClothing
-  - CP14GeneralEyes #
-  - CP14AlchemistCloak #
-  - CP14GeneralGloves
-  - CP14GeneralShirt
-  - CP14AlchemistBelt #
-  - CP14GeneralPants
-  - CP14GeneralShoes
-  - CP14GeneralVillagerBack
-  - CP14GeneralTrinkets
+  - CE14AlchemistHead #
+  - CE14GeneralOuterClothing
+  - CE14GeneralEyes #
+  - CE14AlchemistCloak #
+  - CE14GeneralGloves
+  - CE14GeneralShirt
+  - CE14AlchemistBelt #
+  - CE14GeneralPants
+  - CE14GeneralShoes
+  - CE14GeneralVillagerBack
+  - CE14GeneralTrinkets
 
 - type: roleLoadout
-  id: JobCP14Innkeeper
+  id: JobCE14Innkeeper
   groups:
-  - CP14GeneralHead
-  - CP14GeneralOuterClothing
-  - CP14GeneralEyes
-  - CP14GeneralCloak
-  - CP14GeneralGloves
-  - CP14GeneralShirt
-  - CP14GeneralPants
-  - CP14GeneralShoes
-  - CP14GeneralVillagerBack
-  - CP14GeneralTrinkets
+  - CE14GeneralHead
+  - CE14GeneralOuterClothing
+  - CE14GeneralEyes
+  - CE14GeneralCloak
+  - CE14GeneralGloves
+  - CE14GeneralShirt
+  - CE14GeneralPants
+  - CE14GeneralShoes
+  - CE14GeneralVillagerBack
+  - CE14GeneralTrinkets
 
 - type: roleLoadout
-  id: JobCP14Blacksmith
+  id: JobCE14Blacksmith
   groups:
-  - CP14GeneralHead
-  - CP14GeneralOuterClothing
-  - CP14GeneralEyes
-  - CP14BlacksmithCloak
-  - CP14BlacksmithGloves
-  - CP14GeneralShirt
-  - CP14GeneralPants
-  - CP14GeneralShoes
-  - CP14GeneralVillagerBackCargo
-  - CP14GeneralTrinkets
+  - CE14GeneralHead
+  - CE14GeneralOuterClothing
+  - CE14GeneralEyes
+  - CE14BlacksmithCloak
+  - CE14BlacksmithGloves
+  - CE14GeneralShirt
+  - CE14GeneralPants
+  - CE14GeneralShoes
+  - CE14GeneralVillagerBackCargo
+  - CE14GeneralTrinkets
 
 - type: roleLoadout
-  id: JobCP14GuardCommander
+  id: JobCE14GuardCommander
   groups:
-  - CP14GuardHead
-  - CP14GeneralOuterClothing
-  - CP14GeneralEyes
-  - CP14GuardCommanderCloak #
-  - CP14GeneralGloves
-  - CP14GuardShirt
-  - CP14GuardPants
-  - CP14GeneralShoes
-  - CP14GeneralVillagerBackReinforced
-  - CP14GeneralTrinkets
-  - CP14GuardEquip
+  - CE14GuardHead
+  - CE14GeneralOuterClothing
+  - CE14GeneralEyes
+  - CE14GuardCommanderCloak #
+  - CE14GeneralGloves
+  - CE14GuardShirt
+  - CE14GuardPants
+  - CE14GeneralShoes
+  - CE14GeneralVillagerBackReinforced
+  - CE14GeneralTrinkets
+  - CE14GuardEquip
 
 - type: roleLoadout
-  id: JobCP14Investigator
+  id: JobCE14Investigator
   groups:
-  - CP14InvestigatorHead
-  - CP14GeneralOuterClothing
-  - CP14GeneralEyes
-  - CP14InvestigatorCloak #
-  - CP14GeneralGloves
-  - CP14GuardShirt
-  - CP14GuardPants
-  - CP14GeneralShoes
-  - CP14GeneralVillagerBackReinforced
-  - CP14GeneralBack
-  - CP14GeneralTrinkets
-  - CP14GuardEquip
+  - CE14InvestigatorHead
+  - CE14GeneralOuterClothing
+  - CE14GeneralEyes
+  - CE14InvestigatorCloak #
+  - CE14GeneralGloves
+  - CE14GuardShirt
+  - CE14GuardPants
+  - CE14GeneralShoes
+  - CE14GeneralVillagerBackReinforced
+  - CE14GeneralBack
+  - CE14GeneralTrinkets
+  - CE14GuardEquip
 
 - type: roleLoadout
-  id: JobCP14Guard
+  id: JobCE14Guard
   groups:
-  - CP14GuardHead
-  - CP14GeneralOuterClothing
-  - CP14GeneralEyes
-  - CP14GuardCloak #
-  - CP14GeneralGloves
-  - CP14GuardShirt
-  - CP14GuardPants
-  - CP14GeneralShoes
-  - CP14GeneralVillagerBackReinforced
-  - CP14GeneralTrinkets
-  - CP14GuardEquip
+  - CE14GuardHead
+  - CE14GeneralOuterClothing
+  - CE14GeneralEyes
+  - CE14GuardCloak #
+  - CE14GeneralGloves
+  - CE14GuardShirt
+  - CE14GuardPants
+  - CE14GeneralShoes
+  - CE14GeneralVillagerBackReinforced
+  - CE14GeneralTrinkets
+  - CE14GuardEquip
 
 - type: roleLoadout
-  id: JobCP14Commandant
+  id: JobCE14Commandant
   groups:
-  - CP14MerchantOuterClothing
-  - CP14GeneralEyes
-  - CP14MerchantShirt
-  - CP14MerchantPants
-  - CP14MerchantShoes
-  - CP14GeneralVillagerBackReinforced
-  - CP14GeneralTrinkets
+  - CE14MerchantOuterClothing
+  - CE14GeneralEyes
+  - CE14MerchantShirt
+  - CE14MerchantPants
+  - CE14MerchantShoes
+  - CE14GeneralVillagerBackReinforced
+  - CE14GeneralTrinkets
 
 - type: roleLoadout
-  id: JobCP14Guildmaster
+  id: JobCE14Guildmaster
   groups:
-  - CP14GuildmasterOuterClothing
-  - CP14GeneralEyes
-  - CP14GuildmasterHead
-  - CP14GuildmasterCloak
-  - CP14GuildmasterShirt
-  - CP14GuildmasterPants
-  - CP14GuildmasterShoes
-  - CP14GeneralVillagerBackReinforced
-  - CP14GeneralTrinkets
+  - CE14GuildmasterOuterClothing
+  - CE14GeneralEyes
+  - CE14GuildmasterHead
+  - CE14GuildmasterCloak
+  - CE14GuildmasterShirt
+  - CE14GuildmasterPants
+  - CE14GuildmasterShoes
+  - CE14GeneralVillagerBackReinforced
+  - CE14GeneralTrinkets
 
 - type: roleLoadout
-  id: JobCP14GuildWorker
+  id: JobCE14GuildWorker
   groups:
-  - CP14GuildmasterOuterClothing
-  - CP14GeneralEyes
-  - CP14GuildWorkerHead
-  - CP14GuildmasterShirt
-  - CP14GuildmasterPants
-  - CP14GuildmasterShoes
-  - CP14GeneralVillagerBackReinforced
-  - CP14GeneralTrinkets
+  - CE14GuildmasterOuterClothing
+  - CE14GeneralEyes
+  - CE14GuildWorkerHead
+  - CE14GuildmasterShirt
+  - CE14GuildmasterPants
+  - CE14GuildmasterShoes
+  - CE14GeneralVillagerBackReinforced
+  - CE14GeneralTrinkets
 
 - type: roleLoadout
-  id: JobCP14Merchant
+  id: JobCE14Merchant
   groups:
-  - CP14MerchantHead
-  - CP14MerchantOuterClothing
-  - CP14GeneralEyes
-  - CP14MerchantShirt
-  - CP14MerchantPants
-  - CP14MerchantShoes
-  - CP14GeneralVillagerBackCargo
-  - CP14GeneralTrinkets
+  - CE14MerchantHead
+  - CE14MerchantOuterClothing
+  - CE14GeneralEyes
+  - CE14MerchantShirt
+  - CE14MerchantPants
+  - CE14MerchantShoes
+  - CE14GeneralVillagerBackCargo
+  - CE14GeneralTrinkets

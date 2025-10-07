@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14MobRat
-  parent: CP14SimpleMobBase
+  id: CE14MobRat
+  parent: CE14SimpleMobBase
   name: rat
   description: An adorable rat. You see valor in it's eyes fit for a squire.
   categories: [ ForkFiltered ]
@@ -10,14 +10,14 @@
       task: RuminantHostileCompound
   - type: NpcFactionMember
     factions:
-    - CP14Rodent
+    - CE14Rodent
   - type: NPCRetaliation
     attackMemoryLength: 20
   - type: Sprite
     drawdepth: SmallMobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Pets/rat.rsi
+      sprite: _CE14/Mobs/Pets/rat.rsi
       state: rat
   - type: Fixtures
     fixtures:
@@ -32,7 +32,7 @@
         - SmallMobLayer
   - type: Tag
     tags:
-    - CP14Rat
+    - CE14Rat
   - type: Item
     size: Normal
   - type: CanEscapeInventory
@@ -77,7 +77,7 @@
         Base: rat_dead
   - type: Bloodstream
     bloodMaxVolume: 50
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
   - type: Thirst
     thresholds:
       OverHydrated: 150
@@ -107,10 +107,10 @@
         type: StrippableBoundUserInterface
   - type: InventorySlots
   - type: Inventory
-    speciesId: CP14Rat
-    templateId: CP14Rat
+    speciesId: CE14Rat
+    templateId: CE14Rat
   - type: Puller
     needsHands: false
-  - type: CP14NightVision
+  - type: CE14NightVision
   - type: Climbing
 

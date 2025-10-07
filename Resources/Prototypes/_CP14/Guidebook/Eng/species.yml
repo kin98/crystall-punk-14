@@ -1,56 +1,56 @@
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Species
+  id: CE14_EN_Species
   name: Playable species
-  text: "/ServerInfo/_CP14/Guidebook_EN/Species.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/Species.xml"
   children:
-  - CP14_EN_Human
-  - CP14_EN_Silva
-  - CP14_EN_Elf
-  - CP14_EN_Tiefling
-  - CP14_EN_Goblin
-  - CP14_EN_Carcat
+  - CE14_EN_Human
+  - CE14_EN_Silva
+  - CE14_EN_Elf
+  - CE14_EN_Tiefling
+  - CE14_EN_Goblin
+  - CE14_EN_Carcat
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Human
+  id: CE14_EN_Human
   name: Human
-  text: "/ServerInfo/_CP14/Guidebook_EN/SpeciesTabs/Human.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/SpeciesTabs/Human.xml"
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Silva
+  id: CE14_EN_Silva
   name: Silva
-  text: "/ServerInfo/_CP14/Guidebook_EN/SpeciesTabs/Silva.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/SpeciesTabs/Silva.xml"
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Elf
+  id: CE14_EN_Elf
   name: Elf
-  text: "/ServerInfo/_CP14/Guidebook_EN/SpeciesTabs/Elf.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/SpeciesTabs/Elf.xml"
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Tiefling
+  id: CE14_EN_Tiefling
   name: Tiefling
-  text: "/ServerInfo/_CP14/Guidebook_EN/SpeciesTabs/Tiefling.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/SpeciesTabs/Tiefling.xml"
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Goblin
+  id: CE14_EN_Goblin
   name: Goblin
-  text: "/ServerInfo/_CP14/Guidebook_EN/SpeciesTabs/Goblin.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/SpeciesTabs/Goblin.xml"
   filterEnabled: True
 
 - type: guideEntry
   crystallPunkAllowed: true
-  id: CP14_EN_Carcat
+  id: CE14_EN_Carcat
   name: Carcat
-  text: "/ServerInfo/_CP14/Guidebook_EN/SpeciesTabs/Carcat.xml"
+  text: "/ServerInfo/_CE14/Guidebook_EN/SpeciesTabs/Carcat.xml"
   filterEnabled: True
 

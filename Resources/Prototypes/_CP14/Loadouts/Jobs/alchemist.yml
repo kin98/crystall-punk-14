@@ -1,51 +1,51 @@
 # Head
 
 - type: loadoutGroup
-  id: CP14AlchemistHead
-  name: cp14-loadout-alchemist-head
+  id: CE14AlchemistHead
+  name: CE14-loadout-alchemist-head
   minLimit: 0
   loadouts:
-  - CP14ClothingHeadAlchemistBandana
-  - CP14ClothingHeadAlchemistBeret
+  - CE14ClothingHeadAlchemistBandana
+  - CE14ClothingHeadAlchemistBeret
 
 - type: loadout
-  id: CP14ClothingHeadAlchemistBandana
+  id: CE14ClothingHeadAlchemistBandana
   equipment:
-    head: CP14ClothingHeadAlchemistBandana
+    head: CE14ClothingHeadAlchemistBandana
 
 - type: loadout
-  id: CP14ClothingHeadAlchemistBeret
+  id: CE14ClothingHeadAlchemistBeret
   equipment:
-    head: CP14ClothingHeadAlchemistBeret
+    head: CE14ClothingHeadAlchemistBeret
 
 # Cloak
 
 - type: loadoutGroup
-  id: CP14AlchemistCloak
-  name: cp14-loadout-alchemist-cloak
+  id: CE14AlchemistCloak
+  name: CE14-loadout-alchemist-cloak
   loadouts:
-  - CP14ClothingCloakAlchemist
-  - CP14ClothingCloakAlchemistMantle
+  - CE14ClothingCloakAlchemist
+  - CE14ClothingCloakAlchemistMantle
 
 - type: loadout
-  id: CP14ClothingCloakAlchemist
+  id: CE14ClothingCloakAlchemist
   equipment:
-    cloak: CP14ClothingCloakAlchemist
+    cloak: CE14ClothingCloakAlchemist
 
 - type: loadout
-  id: CP14ClothingCloakAlchemistMantle
+  id: CE14ClothingCloakAlchemistMantle
   equipment:
-    cloak: CP14ClothingCloakAlchemistMantle
+    cloak: CE14ClothingCloakAlchemistMantle
 
 # Belt
 
 - type: loadoutGroup
-  id: CP14AlchemistBelt
-  name: cp14-loadout-alchemist-belt
+  id: CE14AlchemistBelt
+  name: CE14-loadout-alchemist-belt
   loadouts:
-  - CP14ClothingBeltPouchPotions
+  - CE14ClothingBeltPouchPotions
 
 - type: loadout
-  id: CP14ClothingBeltPouchPotions
+  id: CE14ClothingBeltPouchPotions
   equipment:
-    belt2: CP14ClothingBeltPouchPotions
+    belt2: CE14ClothingBeltPouchPotions

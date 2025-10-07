@@ -1,9 +1,9 @@
-using Content.Shared._CP14.Skill;
-using Content.Shared._CP14.Skill.Components;
-using Content.Shared._CP14.Skill.Prototypes;
-using Content.Shared._CP14.Trading.Prototypes;
-using Content.Shared._CP14.Trading.Systems;
-using Content.Shared._CP14.Vampire.Components;
+using Content.Shared._CE14.Skill;
+using Content.Shared._CE14.Skill.Components;
+using Content.Shared._CE14.Skill.Prototypes;
+using Content.Shared._CE14.Trading.Prototypes;
+using Content.Shared._CE14.Trading.Systems;
+using Content.Shared._CE14.Vampire.Components;
 using Content.Shared.Actions;
 using Content.Shared.Body.Systems;
 using Content.Shared.Buckle.Components;
@@ -17,54 +17,54 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.Vampire;
+namespace Content.Shared._CE14.Vampire;
 
-public abstract partial class CP14SharedVampireSystem : EntitySystem
+public abstract partial class CE14SharedVampireSystem : EntitySystem
 {
     [Dependency] private readonly SharedBloodstreamSystem _bloodstream = default!;
     [Dependency] private readonly SharedActionsSystem _action = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly SharedJitteringSystem _jitter = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly CP14SharedSkillSystem _skill = default!;
+    [Dependency] private readonly CE14SharedSkillSystem _skill = default!;
     [Dependency] protected readonly IPrototypeManager Proto = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly CP14SharedTradingPlatformSystem _trade = default!;
+    [Dependency] private readonly CE14SharedTradingPlatformSystem _trade = default!;
 
-    private readonly ProtoId<CP14SkillPointPrototype> _skillPointType = "Blood";
-    private readonly ProtoId<CP14SkillPointPrototype> _memorySkillPointType = "Memory";
-    private readonly ProtoId<CP14TradingFactionPrototype> _tradeFaction = "VampireMarket";
+    private readonly ProtoId<CE14SkillPointPrototype> _skillPointType = "Blood";
+    private readonly ProtoId<CE14SkillPointPrototype> _memorySkillPointType = "Memory";
+    private readonly ProtoId<CE14TradingFactionPrototype> _tradeFaction = "VampireMarket";
 
     public override void Initialize()
     {
         base.Initialize();
         InitializeSpell();
 
-        SubscribeLocalEvent<CP14VampireComponent, MapInitEvent>(OnVampireInit);
-        SubscribeLocalEvent<CP14VampireComponent, ComponentRemove>(OnVampireRemove);
+        SubscribeLocalEvent<CE14VampireComponent, MapInitEvent>(OnVampireInit);
+        SubscribeLocalEvent<CE14VampireComponent, ComponentRemove>(OnVampireRemove);
 
-        SubscribeLocalEvent<CP14VampireComponent, CP14ToggleVampireVisualsAction>(OnToggleVisuals);
-        SubscribeLocalEvent<CP14VampireComponent, CP14VampireToggleVisualsDoAfter>(OnToggleDoAfter);
+        SubscribeLocalEvent<CE14VampireComponent, CE14ToggleVampireVisualsAction>(OnToggleVisuals);
+        SubscribeLocalEvent<CE14VampireComponent, CE14VampireToggleVisualsDoAfter>(OnToggleDoAfter);
 
-        SubscribeLocalEvent<CP14VampireVisualsComponent, ComponentInit>(OnVampireVisualsInit);
-        SubscribeLocalEvent<CP14VampireVisualsComponent, ComponentShutdown>(OnVampireVisualsShutdown);
-        SubscribeLocalEvent<CP14VampireVisualsComponent, ExaminedEvent>(OnVampireExamine);
+        SubscribeLocalEvent<CE14VampireVisualsComponent, ComponentInit>(OnVampireVisualsInit);
+        SubscribeLocalEvent<CE14VampireVisualsComponent, ComponentShutdown>(OnVampireVisualsShutdown);
+        SubscribeLocalEvent<CE14VampireVisualsComponent, ExaminedEvent>(OnVampireExamine);
 
-        SubscribeLocalEvent<CP14VampireEssenceHolderComponent, ExaminedEvent>(OnEssenceHolderExamined);
+        SubscribeLocalEvent<CE14VampireEssenceHolderComponent, ExaminedEvent>(OnEssenceHolderExamined);
     }
 
-    private void OnEssenceHolderExamined(Entity<CP14VampireEssenceHolderComponent> ent, ref ExaminedEvent args)
+    private void OnEssenceHolderExamined(Entity<CE14VampireEssenceHolderComponent> ent, ref ExaminedEvent args)
     {
-        if (!HasComp<CP14ShowVampireEssenceComponent>(args.Examiner))
+        if (!HasComp<CE14ShowVampireEssenceComponent>(args.Examiner))
             return;
 
         if (!args.IsInDetailsRange)
             return;
 
-        args.PushMarkup(Loc.GetString("cp14-vampire-essence-holder-examine", ("essence", ent.Comp.Essence)));
+        args.PushMarkup(Loc.GetString("CE14-vampire-essence-holder-examine", ("essence", ent.Comp.Essence)));
     }
 
-    protected virtual void OnVampireInit(Entity<CP14VampireComponent> ent, ref MapInitEvent args)
+    protected virtual void OnVampireInit(Entity<CE14VampireComponent> ent, ref MapInitEvent args)
     {
         //Bloodstream
         _bloodstream.ChangeBloodReagent(ent.Owner, ent.Comp.NewBloodReagent);
@@ -84,7 +84,7 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
         _skill.RemoveSkillPoints(ent, _memorySkillPointType, 2, true);
 
         //Remove blood essence
-        if (TryComp<CP14VampireEssenceHolderComponent>(ent, out var essenceHolder))
+        if (TryComp<CE14VampireEssenceHolderComponent>(ent, out var essenceHolder))
         {
             essenceHolder.Essence = 0;
             Dirty(ent, essenceHolder);
@@ -94,9 +94,9 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
         _trade.AddReputation(ent.Owner, _tradeFaction, 1);
     }
 
-    private void OnVampireRemove(Entity<CP14VampireComponent> ent, ref ComponentRemove args)
+    private void OnVampireRemove(Entity<CE14VampireComponent> ent, ref ComponentRemove args)
     {
-        RemCompDeferred<CP14VampireVisualsComponent>(ent);
+        RemCompDeferred<CE14VampireVisualsComponent>(ent);
 
         //Bloodstream todo
 
@@ -110,7 +110,7 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
 
         //Skill tree
         _skill.RemoveSkillTree(ent, ent.Comp.SkillTreeProto);
-        if (TryComp<CP14SkillStorageComponent>(ent, out var storage))
+        if (TryComp<CE14SkillStorageComponent>(ent, out var storage))
         {
             foreach (var skill in storage.LearnedSkills)
             {
@@ -125,12 +125,12 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
         _skill.AddSkillPoints(ent, _memorySkillPointType, 2, null, true);
     }
 
-    private void OnToggleVisuals(Entity<CP14VampireComponent> ent, ref CP14ToggleVampireVisualsAction args)
+    private void OnToggleVisuals(Entity<CE14VampireComponent> ent, ref CE14ToggleVampireVisualsAction args)
     {
         if (_timing.IsFirstTimePredicted)
             _jitter.DoJitter(ent, ent.Comp.ToggleVisualsTime, true);
 
-        var doAfterArgs = new DoAfterArgs(EntityManager, ent, ent.Comp.ToggleVisualsTime, new CP14VampireToggleVisualsDoAfter(), ent)
+        var doAfterArgs = new DoAfterArgs(EntityManager, ent, ent.Comp.ToggleVisualsTime, new CE14VampireToggleVisualsDoAfter(), ent)
         {
             Hidden = true,
             NeedHand = false,
@@ -139,24 +139,24 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
         _doAfter.TryStartDoAfter(doAfterArgs);
     }
 
-    private void OnToggleDoAfter(Entity<CP14VampireComponent> ent, ref CP14VampireToggleVisualsDoAfter args)
+    private void OnToggleDoAfter(Entity<CE14VampireComponent> ent, ref CE14VampireToggleVisualsDoAfter args)
     {
         if (args.Cancelled || args.Handled)
             return;
 
-        if (HasComp<CP14VampireVisualsComponent>(ent))
+        if (HasComp<CE14VampireVisualsComponent>(ent))
         {
-            RemCompDeferred<CP14VampireVisualsComponent>(ent);
+            RemCompDeferred<CE14VampireVisualsComponent>(ent);
         }
         else
         {
-            EnsureComp<CP14VampireVisualsComponent>(ent);
+            EnsureComp<CE14VampireVisualsComponent>(ent);
         }
 
         args.Handled = true;
     }
 
-    protected virtual void OnVampireVisualsShutdown(Entity<CP14VampireVisualsComponent> vampire, ref ComponentShutdown args)
+    protected virtual void OnVampireVisualsShutdown(Entity<CE14VampireVisualsComponent> vampire, ref ComponentShutdown args)
     {
         if (!EntityManager.TryGetComponent(vampire, out HumanoidAppearanceComponent? humanoidAppearance))
             return;
@@ -166,7 +166,7 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
         Dirty(vampire, humanoidAppearance);
     }
 
-    protected virtual void OnVampireVisualsInit(Entity<CP14VampireVisualsComponent> vampire, ref ComponentInit args)
+    protected virtual void OnVampireVisualsInit(Entity<CE14VampireVisualsComponent> vampire, ref ComponentInit args)
     {
         if (!EntityManager.TryGetComponent(vampire, out HumanoidAppearanceComponent? humanoidAppearance))
             return;
@@ -177,13 +177,13 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
         Dirty(vampire, humanoidAppearance);
     }
 
-    private void OnVampireExamine(Entity<CP14VampireVisualsComponent> ent, ref ExaminedEvent args)
+    private void OnVampireExamine(Entity<CE14VampireVisualsComponent> ent, ref ExaminedEvent args)
     {
-        args.PushMarkup(Loc.GetString("cp14-vampire-examine"));
+        args.PushMarkup(Loc.GetString("CE14-vampire-examine"));
     }
 
-    public void GatherEssence(Entity<CP14VampireComponent?> vampire,
-        Entity<CP14VampireEssenceHolderComponent?> victim,
+    public void GatherEssence(Entity<CE14VampireComponent?> vampire,
+        Entity<CE14VampireEssenceHolderComponent?> victim,
         FixedPoint2 amount)
     {
         if (!Resolve(vampire, ref vampire.Comp, false))
@@ -196,7 +196,7 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
 
         if (TryComp<BuckleComponent>(victim, out var buckle) && buckle.BuckledTo is not null)
         {
-            if (TryComp<CP14VampireAltarComponent>(buckle.BuckledTo, out var altar))
+            if (TryComp<CE14VampireAltarComponent>(buckle.BuckledTo, out var altar))
             {
                 extractedEssence *= altar.Multiplier;
             }
@@ -204,7 +204,7 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
 
         if (extractedEssence <= 0)
         {
-            _popup.PopupClient(Loc.GetString("cp14-vampire-gather-essence-no-left"), victim, vampire, PopupType.SmallCaution);
+            _popup.PopupClient(Loc.GetString("CE14-vampire-gather-essence-no-left"), victim, vampire, PopupType.SmallCaution);
             return;
         }
 
@@ -216,10 +216,10 @@ public abstract partial class CP14SharedVampireSystem : EntitySystem
 }
 
 
-public sealed partial class CP14ToggleVampireVisualsAction : InstantActionEvent;
+public sealed partial class CE14ToggleVampireVisualsAction : InstantActionEvent;
 
 [Serializable, NetSerializable]
-public sealed partial class CP14VampireToggleVisualsDoAfter : SimpleDoAfterEvent;
+public sealed partial class CE14VampireToggleVisualsDoAfter : SimpleDoAfterEvent;
 
 
 // Appearance Data key

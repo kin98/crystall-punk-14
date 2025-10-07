@@ -1,1 +1,1 @@
-cp14-construction-step-condition-wall-required = Wall required.
+CE14-construction-step-condition-wall-required = Wall required.

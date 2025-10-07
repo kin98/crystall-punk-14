@@ -1,15 +1,15 @@
 - type: entity
-  id: CP14BookshelfWooden
+  id: CE14BookshelfWooden
   categories: [ ForkFiltered ]
   parent:
   - BaseStructureDynamic
-  - CP14BaseFlammable
+  - CE14BaseFlammable
   name: wooden bookshelf
   description: Mostly filled with books.
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Structures/Furniture/bookshelf.rsi
+    sprite: _CE14/Structures/Furniture/bookshelf.rsi
     layers:
       - state: base
       - state: book-0
@@ -56,7 +56,7 @@
         - MachineLayer
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -78,37 +78,37 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 2
             max: 4
 
 - type: entityTable
-  id: CP14BookshelfEntityTable
+  id: CE14BookshelfEntityTable
   table: !type:AllSelector
     children:
     #Guidebooks
     - !type:GroupSelector
       children:
-      - id: CP14GuidebookImperialLaws
-      - id: CP14GuidebookAlchemy
+      - id: CE14GuidebookImperialLaws
+      - id: CE14GuidebookAlchemy
     #Lore books
     - !type:GroupSelector
       children:
-      - id: CP14BookGuildMoral
-      - id: CP14BookPantheonGodsSileita
-      - id: CP14BookPantheonGodsSileitaImitators
+      - id: CE14BookGuildMoral
+      - id: CE14BookPantheonGodsSileita
+      - id: CE14BookPantheonGodsSileitaImitators
     #Empty random
-    - id: CP14BookRandom
+    - id: CE14BookRandom
       amount: !type:RangeNumberSelector
         range: 0, 15
 
 - type: entity
-  id: CP14BookshelfWoodenFilled
-  parent: CP14BookshelfWooden
+  id: CE14BookshelfWoodenFilled
+  parent: CE14BookshelfWooden
   suffix: Random filled
   components:
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:NestedSelector
-        tableId: CP14BookshelfEntityTable
+        tableId: CE14BookshelfEntityTable
 

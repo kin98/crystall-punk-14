@@ -1,4 +1,4 @@
-﻿using Content.Shared._CP14.Actions;
+﻿using Content.Shared._CE14.Actions;
 using Content.Shared.Actions.Components;
 using Content.Shared.Actions.Events;
 using Content.Shared.DoAfter;
@@ -23,7 +23,7 @@ public abstract partial class SharedActionsSystem
 
         var netEnt = GetNetEntity(performer);
 
-        //CP14 doAfter start event
+        //CE14 doAfter start event
         var target = GetEntity(input.EntityTarget);
         EntityUid? used = null;
 
@@ -32,13 +32,13 @@ public abstract partial class SharedActionsSystem
             used = action.Container;
         }
 
-        var cp14StartEv = new CP14ActionStartDoAfterEvent(netEnt, input);
-        RaiseLocalEvent(ent, cp14StartEv);
-        //CP14 end
+        var CE14StartEv = new CE14ActionStartDoAfterEvent(netEnt, input);
+        RaiseLocalEvent(ent, CE14StartEv);
+        //CE14 end
 
         var actionDoAfterEvent = new ActionDoAfterEvent(netEnt, originalUseDelay, input);
 
-        var doAfterArgs = new DoAfterArgs(EntityManager, performer, delay, actionDoAfterEvent, ent.Owner, target ?? performer, used) //CP14 edited target and added used
+        var doAfterArgs = new DoAfterArgs(EntityManager, performer, delay, actionDoAfterEvent, ent.Owner, target ?? performer, used) //CE14 edited target and added used
         {
             AttemptFrequency = ent.Comp.AttemptFrequency,
             Broadcast = ent.Comp.Broadcast,
@@ -84,10 +84,10 @@ public abstract partial class SharedActionsSystem
             SetUseDelay(action, TimeSpan.Zero);
         }
 
-        //CP14 start delay after cancelling for preventing spamming
+        //CE14 start delay after cancelling for preventing spamming
         if (args.Cancelled)
             StartUseDelay(action);
-        //CP14 end
+        //CE14 end
 
         if (args.Cancelled)
             return;

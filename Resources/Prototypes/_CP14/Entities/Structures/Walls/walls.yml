@@ -2,7 +2,7 @@
   abstract: true
   parent: BaseWall
   categories: [ ForkFiltered ]
-  id: CP14BaseWall
+  id: CE14BaseWall
   name: wall
   description: Sturdy enough to cover you from threats or cold winds.
   placement:
@@ -16,7 +16,7 @@
     drawdepth: Mobs
   - type: SpriteFade
   - type: IconSmooth
-    key: CP14wall
+    key: CE14wall
     base: stone
   - type: Icon
     state: full
@@ -24,7 +24,7 @@
     key: walls
 
 - type: entity
-  id: CP14BaseWallFrame
+  id: CE14BaseWallFrame
   categories: [ ForkFiltered ]
   parent: BaseStructure
   abstract: true
@@ -58,25 +58,25 @@
         density: 1000
 
 - type: entity
-  id: CP14WallWoodenPalisade
+  id: CE14WallWoodenPalisade
   name: palisade
   description: A wall of sharp logs. Not that it's a safe haven.
   parent:
-  - CP14BaseWall
-  - CP14BaseFlammableSpreading
+  - CE14BaseWall
+  - CE14BaseFlammableSpreading
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/wooden_palisad.rsi
+    sprite: _CE14/Structures/Walls/wooden_palisad.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/wooden_palisad.rsi
+    sprite: _CE14/Structures/Walls/wooden_palisad.rsi
   - type: IconSmooth
-    key: CP14palisade
+    key: CE14palisade
     additionalKeys:
-    - CP14wall
+    - CE14wall
     base: wood
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -94,6 +94,6 @@
   - type: Airtight
     airBlocked: false
   - type: Construction
-    graph: CP14WallWoodenPalisade
-    node: CP14WallWoodenPalisade
+    graph: CE14WallWoodenPalisade
+    node: CE14WallWoodenPalisade
 

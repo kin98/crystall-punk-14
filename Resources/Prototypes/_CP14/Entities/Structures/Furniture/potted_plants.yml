@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14PottedPlantBase
+  id: CE14PottedPlantBase
   parent: BaseStructureDynamic
   name: potted plant
   description: A domesticated plant in a clay pot, more plants.
@@ -25,7 +25,7 @@
     drawdepth: Mobs
     offset: "0.0,0.3"
     noRot: true
-    sprite: _CP14/Structures/Furniture/flowerpots.rsi
+    sprite: _CE14/Structures/Furniture/flowerpots.rsi
   - type: Speech
     speechVerb: Plant
   - type: SecretStash
@@ -53,8 +53,8 @@
     price: 15
 
 - type: entity
-  id: CP14PottedPlant1
-  parent: CP14PottedPlantBase
+  id: CE14PottedPlant1
+  parent: CE14PottedPlantBase
   components:
   - type: Sprite
     layers:
@@ -62,8 +62,8 @@
       - state: plant1
 
 - type: entity
-  id: CP14PottedPlant2
-  parent: CP14PottedPlantBase
+  id: CE14PottedPlant2
+  parent: CE14PottedPlantBase
   components:
   - type: Sprite
     layers:
@@ -71,8 +71,8 @@
       - state: plant2
 
 - type: entity
-  id: CP14PottedPlant3
-  parent: CP14PottedPlantBase
+  id: CE14PottedPlant3
+  parent: CE14PottedPlantBase
   components:
   - type: Sprite
     layers:
@@ -80,8 +80,8 @@
       - state: plant3
 
 - type: entity
-  id: CP14PottedPlant4
-  parent: CP14PottedPlantBase
+  id: CE14PottedPlant4
+  parent: CE14PottedPlantBase
   components:
   - type: Sprite
     layers:

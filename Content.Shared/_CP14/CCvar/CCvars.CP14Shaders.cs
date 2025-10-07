@@ -6,7 +6,7 @@ namespace Content.Shared.CCVar;
 public sealed partial class CCVars
 {
     public static readonly CVarDef<bool>
-        WaveShaderEnabled = CVarDef.Create("cp14_shaders.wave_shader_enabled", true, CVar.CLIENT | CVar.ARCHIVE);
+        WaveShaderEnabled = CVarDef.Create("CE14_shaders.wave_shader_enabled", true, CVar.CLIENT | CVar.ARCHIVE);
 
     /// <summary>
     /// Toggle for non-gameplay-affecting or otherwise status indicative post-process effects, such additive lighting.
@@ -14,5 +14,5 @@ public sealed partial class CCVars
     /// However, for now (mid-July of 2024), this only applies specifically to a particularly cheap shader: additive lighting.
     /// </summary>
     public static readonly CVarDef<bool>
-        PostProcess = CVarDef.Create("cp14_shaders.post_process", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+        PostProcess = CVarDef.Create("CE14_shaders.post_process", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 }

@@ -1,1 +1,1 @@
-cp14-construction-step-condition-wall-required = Необходима опора.
+CE14-construction-step-condition-wall-required = Необходима опора.

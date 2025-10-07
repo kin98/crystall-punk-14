@@ -1,16 +1,16 @@
-using Content.Shared._CP14.MagicSpell.Spells;
+using Content.Shared._CE14.MagicSpell.Spells;
 using Content.Shared.Whitelist;
 
-namespace Content.Server._CP14.MagicSpell;
+namespace Content.Server._CE14.MagicSpell;
 
 /// <summary>
 /// Component that allows an meleeWeapon to apply effects to other entities on melee attacks.
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14SpellEffectOnHitComponent : Component
+public sealed partial class CE14SpellEffectOnHitComponent : Component
 {
     [DataField(required: true, serverOnly: true)]
-    public List<CP14SpellEffect> Effects = new();
+    public List<CE14SpellEffect> Effects = new();
 
     [DataField]
     public EntityWhitelist? Whitelist;

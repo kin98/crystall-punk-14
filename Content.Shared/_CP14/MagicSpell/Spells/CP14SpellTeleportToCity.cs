@@ -1,17 +1,17 @@
 using System.Numerics;
-using Content.Shared._CP14.Demiplane.Components;
+using Content.Shared._CE14.Demiplane.Components;
 using Content.Shared.Teleportation.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellTeleportToCity : CP14SpellEffect
+public sealed partial class CE14SpellTeleportToCity : CE14SpellEffect
 {
     [DataField]
-    public EntProtoId PortalProto = "CP14TempPortalToCity";
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public EntProtoId PortalProto = "CE14TempPortalToCity";
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         if (args.Position is null)
             return;
@@ -23,7 +23,7 @@ public sealed partial class CP14SpellTeleportToCity : CP14SpellEffect
 
         var random = IoCManager.Resolve<IRobustRandom>();
         var linkSys = entManager.System<LinkedEntitySystem>();
-        var query = entManager.EntityQueryEnumerator<CP14DemiplaneNavigationMapComponent, TransformComponent>();
+        var query = entManager.EntityQueryEnumerator<CE14DemiplaneNavigationMapComponent, TransformComponent>();
 
         var first = entManager.SpawnAtPosition(PortalProto, args.Position.Value);
 

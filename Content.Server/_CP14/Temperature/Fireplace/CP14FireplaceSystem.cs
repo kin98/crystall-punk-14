@@ -1,5 +1,5 @@
 using Content.Server.Stack;
-using Content.Shared._CP14.Temperature;
+using Content.Shared._CE14.Temperature;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Stacks;
 using Robust.Server.Audio;
@@ -7,9 +7,9 @@ using Robust.Server.Containers;
 using Robust.Server.GameObjects;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.Temperature.Fireplace;
+namespace Content.Server._CE14.Temperature.Fireplace;
 
-public sealed partial class CP14FireplaceSystem : EntitySystem
+public sealed partial class CE14FireplaceSystem : EntitySystem
 {
     [Dependency] private readonly AppearanceSystem _appearance = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
@@ -21,10 +21,10 @@ public sealed partial class CP14FireplaceSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14FireplaceComponent, OnFireChangedEvent>(OnFireChanged);
+        SubscribeLocalEvent<CE14FireplaceComponent, OnFireChangedEvent>(OnFireChanged);
     }
 
-    private void OnFireChanged(Entity<CP14FireplaceComponent> fireplace, ref OnFireChangedEvent args)
+    private void OnFireChanged(Entity<CE14FireplaceComponent> fireplace, ref OnFireChangedEvent args)
     {
         if (!TryComp<FlammableComponent>(fireplace, out var flammable))
             return;
@@ -33,7 +33,7 @@ public sealed partial class CP14FireplaceSystem : EntitySystem
             flammable.FirestackFade = 0;
     }
 
-    private bool TryFoundFuelInStorage(Entity<CP14FireplaceComponent> fireplace, out Entity<FlammableComponent>? fuel)
+    private bool TryFoundFuelInStorage(Entity<CE14FireplaceComponent> fireplace, out Entity<FlammableComponent>? fuel)
     {
         fuel = null;
 
@@ -55,12 +55,12 @@ public sealed partial class CP14FireplaceSystem : EntitySystem
         return false;
     }
 
-    private void ConsumeFuel(EntityUid uid, CP14FireplaceComponent component, Entity<FlammableComponent> fuel)
+    private void ConsumeFuel(EntityUid uid, CE14FireplaceComponent component, Entity<FlammableComponent> fuel)
     {
         if (!TryComp<FlammableComponent>(uid, out var flammable))
             return;
 
-        component.Fuel += fuel.Comp.CP14FireplaceFuel;
+        component.Fuel += fuel.Comp.CE14FireplaceFuel;
 
         if (flammable.OnFire)
             _audio.PlayPvs(component.InsertFuelSound, uid);
@@ -79,7 +79,7 @@ public sealed partial class CP14FireplaceSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = AllEntityQuery<CP14FireplaceComponent, FlammableComponent>();
+        var query = AllEntityQuery<CE14FireplaceComponent, FlammableComponent>();
         while (query.MoveNext(out var uid, out var fireplace, out var flammable))
         {
             if (!flammable.OnFire)
@@ -98,7 +98,7 @@ public sealed partial class CP14FireplaceSystem : EntitySystem
             }
             else
             {
-                if (TryFoundFuelInStorage(new Entity<CP14FireplaceComponent>(uid, fireplace), out var fuel) && fuel != null)
+                if (TryFoundFuelInStorage(new Entity<CE14FireplaceComponent>(uid, fireplace), out var fuel) && fuel != null)
                     ConsumeFuel(uid, fireplace, fuel.Value);
 
                 flammable.FirestackFade = -fireplace.FireFadeDelta;
@@ -112,7 +112,7 @@ public sealed partial class CP14FireplaceSystem : EntitySystem
         }
     }
 
-    public void UpdateAppearance(EntityUid uid, CP14FireplaceComponent? fireplace = null, AppearanceComponent? appearance = null)
+    public void UpdateAppearance(EntityUid uid, CE14FireplaceComponent? fireplace = null, AppearanceComponent? appearance = null)
     {
         if (!Resolve(uid, ref fireplace, ref appearance))
             return;

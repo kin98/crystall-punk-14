@@ -1,13 +1,13 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Skill.Prototypes;
+namespace Content.Shared._CE14.Skill.Prototypes;
 
 /// <summary>
 /// A group of skills combined into one “branch”
 /// </summary>
-[Prototype("cp14SkillPoint")]
-public sealed partial class CP14SkillPointPrototype : IPrototype
+[Prototype("CE14SkillPoint")]
+public sealed partial class CE14SkillPointPrototype : IPrototype
 {
     [IdDataField] public string ID { get; } = default!;
 

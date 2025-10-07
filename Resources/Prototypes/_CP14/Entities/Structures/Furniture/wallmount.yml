@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseWallmount
+  id: CE14BaseWallmount
   abstract: true
   categories: [ ForkFiltered ]
   placement:
@@ -11,20 +11,20 @@
   - type: InteractionOutline
   - type: Sprite
     drawdepth: Mobs
-  - type: CP14Wallmount
+  - type: CE14Wallmount
   - type: Physics
     canCollide: false
 
 - type: entity
-  id: CP14WallmountBarShelfA
+  id: CE14WallmountBarShelfA
   name: bar shelf
   suffix: 1
-  parent: CP14BaseWallmount
+  parent: CE14BaseWallmount
   description: Wall shelves to store your wine collection
   components:
   - type: Appearance
   - type: Sprite
-    sprite: _CP14/Structures/Wallmount/wallmount_bar_shelf.rsi
+    sprite: _CE14/Structures/Wallmount/wallmount_bar_shelf.rsi
     layers:
     - state: shelf
     - state: bottleA-0
@@ -38,7 +38,7 @@
     maxItemSize: Normal
 ##   whitelist:                TODO
 ##     tags:
-##       - CP14Bottles
+##       - CE14Bottles
   - type: UserInterface
     interfaces:
       enum.StorageUiKey.Key:
@@ -47,13 +47,13 @@
     containers:
       storagebase: !type:Container
   - type: Construction
-    graph: CP14WallmountBarShelfA
-    node: CP14WallmountBarShelfA
+    graph: CE14WallmountBarShelfA
+    node: CE14WallmountBarShelfA
 
 - type: entity
-  id: CP14WallmountBarShelfB
+  id: CE14WallmountBarShelfB
   suffix: 2
-  parent: CP14WallmountBarShelfA
+  parent: CE14WallmountBarShelfA
   components:
   - type: Sprite
     layers:
@@ -63,5 +63,5 @@
   - type: StorageFillVisualizer
     fillBaseName: bottleB
   - type: Construction
-    graph: CP14WallmountBarShelfB
-    node: CP14WallmountBarShelfB
+    graph: CE14WallmountBarShelfB
+    node: CE14WallmountBarShelfB

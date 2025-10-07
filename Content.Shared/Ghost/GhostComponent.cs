@@ -43,19 +43,19 @@ public sealed partial class GhostComponent : Component
     [DataField, AutoNetworkedField]
     public EntityUid? BooActionEntity;
 
-    //CP14 Ghost abilities
+    //CE14 Ghost abilities
     [DataField]
-    public EntProtoId CP14ToggleRoofAction = "CP14ActionToggleRoofs";
+    public EntProtoId CE14ToggleRoofAction = "CE14ActionToggleRoofs";
 
     [DataField]
-    public EntProtoId CP14RespawnAction = "CP14ActionRespawn";
+    public EntProtoId CE14RespawnAction = "CE14ActionRespawn";
 
     [DataField, AutoNetworkedField]
-    public EntityUid? CP14ToggleRoofActionEntity;
+    public EntityUid? CE14ToggleRoofActionEntity;
 
     [DataField, AutoNetworkedField]
-    public EntityUid? CP14RespawnActionEntity;
-    //CP14 Ghost entities end
+    public EntityUid? CE14RespawnActionEntity;
+    //CE14 Ghost entities end
 
     // End actions
 

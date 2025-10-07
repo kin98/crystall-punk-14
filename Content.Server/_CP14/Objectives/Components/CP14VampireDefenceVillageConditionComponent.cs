@@ -1,11 +1,11 @@
-using Content.Server._CP14.Objectives.Systems;
+using Content.Server._CE14.Objectives.Systems;
 using Robust.Shared.Utility;
 
-namespace Content.Server._CP14.Objectives.Components;
+namespace Content.Server._CE14.Objectives.Components;
 
-[RegisterComponent, Access(typeof(CP14VampireObjectiveConditionsSystem))]
-public sealed partial class CP14VampireDefenceVillageConditionComponent : Component
+[RegisterComponent, Access(typeof(CE14VampireObjectiveConditionsSystem))]
+public sealed partial class CE14VampireDefenceVillageConditionComponent : Component
 {
     [DataField]
-    public SpriteSpecifier Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CP14/Actions/Spells/vampire.rsi"), "essence_create");
+    public SpriteSpecifier Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CE14/Actions/Spells/vampire.rsi"), "essence_create");
 }

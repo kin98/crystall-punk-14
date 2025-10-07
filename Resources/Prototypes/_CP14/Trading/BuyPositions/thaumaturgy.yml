@@ -1,258 +1,258 @@
 
 # Rep 0
 
-- type: cp14TradingPosition
-  id: CP14EnergyCrystalMediumEmpty
+- type: CE14TradingPosition
+  id: CE14EnergyCrystalMediumEmpty
   faction: Thaumaturgy
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Specific/Thaumaturgy/crystal.rsi
+    sprite: _CE14/Objects/Specific/Thaumaturgy/crystal.rsi
     state: medium
-  service: !type:CP14BuyItemsService
-    product: CP14EnergyCrystalMediumEmpty
+  service: !type:CE14BuyItemsService
+    product: CE14EnergyCrystalMediumEmpty
 
-- type: cp14TradingPosition
-  id: CP14Paper
+- type: CE14TradingPosition
+  id: CE14Paper
   faction: Thaumaturgy
   reputationLevel: 0
   uiPosition: 2
   icon:
-    sprite: _CP14/Objects/Bureaucracy/paper.rsi
+    sprite: _CE14/Objects/Bureaucracy/paper.rsi
     state: paper
-  service: !type:CP14BuyItemsService
-    product: CP14Paper
+  service: !type:CE14BuyItemsService
+    product: CE14Paper
 
-- type: cp14TradingPosition
-  id: CP14PenFeather
+- type: CE14TradingPosition
+  id: CE14PenFeather
   faction: Thaumaturgy
   reputationLevel: 0
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/Bureaucracy/pens.rsi
+    sprite: _CE14/Objects/Bureaucracy/pens.rsi
     state: feather
-  service: !type:CP14BuyItemsService
-    product: CP14PenFeather
+  service: !type:CE14BuyItemsService
+    product: CE14PenFeather
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollShadowGrab
+- type: CE14TradingPosition
+  id: CE14SpellScrollShadowGrab
   faction: Thaumaturgy
   priceMarkup: 5
   reputationLevel: 0
   uiPosition: 5
   icon:
-    sprite: _CP14/Actions/Spells/dimension.rsi
+    sprite: _CE14/Actions/Spells/dimension.rsi
     state: shadow_grab
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollShadowGrab
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollShadowGrab
 
-- type: cp14TradingPosition
-  id: CP14BaseSpellScrollPortalToCity
+- type: CE14TradingPosition
+  id: CE14BaseSpellScrollPortalToCity
   faction: Thaumaturgy
   priceMarkup: 1
   reputationLevel: 0
   uiPosition: 6
   icon:
-    sprite: _CP14/Actions/Spells/dimension.rsi
+    sprite: _CE14/Actions/Spells/dimension.rsi
     state: demi_arrow
-  service: !type:CP14BuyItemsService
-    product: CP14BaseSpellScrollPortalToCity
+  service: !type:CE14BuyItemsService
+    product: CE14BaseSpellScrollPortalToCity
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollFlameCreation
+- type: CE14TradingPosition
+  id: CE14SpellScrollFlameCreation
   faction: Thaumaturgy
   reputationLevel: 0
   uiPosition: 7
   icon:
-    sprite: _CP14/Actions/Spells/fire.rsi
+    sprite: _CE14/Actions/Spells/fire.rsi
     state: flame_creation
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollFlameCreation
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollFlameCreation
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollBloodPurification
+- type: CE14TradingPosition
+  id: CE14SpellScrollBloodPurification
   faction: Thaumaturgy
   reputationLevel: 0
   uiPosition: 8
   icon:
-    sprite: _CP14/Actions/Spells/healing.rsi
+    sprite: _CE14/Actions/Spells/healing.rsi
     state: cure_poison
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollBloodPurification
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollBloodPurification
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollSheepPolymorph
+- type: CE14TradingPosition
+  id: CE14SpellScrollSheepPolymorph
   faction: Thaumaturgy
   reputationLevel: 0
   uiPosition: 9
   icon:
-    sprite: _CP14/Actions/Spells/misc.rsi
+    sprite: _CE14/Actions/Spells/misc.rsi
     state: polymorph
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollSheepPolymorph
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollSheepPolymorph
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollSearchOfLife
+- type: CE14TradingPosition
+  id: CE14SpellScrollSearchOfLife
   faction: Thaumaturgy
   reputationLevel: 0
   uiPosition: 10
   icon:
-    sprite: _CP14/Actions/Spells/light.rsi
+    sprite: _CE14/Actions/Spells/light.rsi
     state: search_of_life
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollSearchOfLife
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollSearchOfLife
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollSphereOfLight
+- type: CE14TradingPosition
+  id: CE14SpellScrollSphereOfLight
   faction: Thaumaturgy
   reputationLevel: 0
   uiPosition: 11
   icon:
-    sprite: _CP14/Actions/Spells/light.rsi
+    sprite: _CE14/Actions/Spells/light.rsi
     state: sphere_of_light
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollSphereOfLight
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollSphereOfLight
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollWaterCreation
+- type: CE14TradingPosition
+  id: CE14SpellScrollWaterCreation
   faction: Thaumaturgy
   reputationLevel: 0
   uiPosition: 12
   icon:
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: water_creation
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollWaterCreation
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollWaterCreation
 
 # Rep 1
 
-- type: cp14TradingPosition
-  id: CP14ClothingEyesMerchantMonocle
+- type: CE14TradingPosition
+  id: CE14ClothingEyesMerchantMonocle
   faction: Thaumaturgy
   reputationLevel: 1
   uiPosition: 1
   icon:
-    sprite: _CP14/Clothing/Eyes/merchant_monocle.rsi
+    sprite: _CE14/Clothing/Eyes/merchant_monocle.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14ClothingEyesMerchantMonocle
+  service: !type:CE14BuyItemsService
+    product: CE14ClothingEyesMerchantMonocle
 
-- type: cp14TradingPosition
-  id: CP14ManaOperationGlove
+- type: CE14TradingPosition
+  id: CE14ManaOperationGlove
   faction: Thaumaturgy
   reputationLevel: 1
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Specific/Thaumaturgy/powerline_gauntlet.rsi
+    sprite: _CE14/Objects/Specific/Thaumaturgy/powerline_gauntlet.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14ManaOperationGlove
+  service: !type:CE14BuyItemsService
+    product: CE14ManaOperationGlove
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollEarthWall
+- type: CE14TradingPosition
+  id: CE14SpellScrollEarthWall
   faction: Thaumaturgy
   priceMarkup: 2
   reputationLevel: 1
   uiPosition: 6
   icon:
-    sprite: _CP14/Actions/Spells/earth.rsi
+    sprite: _CE14/Actions/Spells/earth.rsi
     state: earth_wall
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollEarthWall
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollEarthWall
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollCureBurn
+- type: CE14TradingPosition
+  id: CE14SpellScrollCureBurn
   faction: Thaumaturgy
   reputationLevel: 1
   uiPosition: 8
   icon:
-    sprite: _CP14/Actions/Spells/healing.rsi
+    sprite: _CE14/Actions/Spells/healing.rsi
     state: cure_burn
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollCureBurn
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollCureBurn
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollCureWounds
+- type: CE14TradingPosition
+  id: CE14SpellScrollCureWounds
   faction: Thaumaturgy
   reputationLevel: 1
   uiPosition: 9
   icon:
-    sprite: _CP14/Actions/Spells/healing.rsi
+    sprite: _CE14/Actions/Spells/healing.rsi
     state: cure_wounds
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollCureWounds
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollCureWounds
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollResurrection
+- type: CE14TradingPosition
+  id: CE14SpellScrollResurrection
   faction: Thaumaturgy
   reputationLevel: 1
   uiPosition: 10
   icon:
-    sprite: _CP14/Actions/Spells/healing.rsi
+    sprite: _CE14/Actions/Spells/healing.rsi
     state: resurrection
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollResurrection
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollResurrection
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollFlashLight
+- type: CE14TradingPosition
+  id: CE14SpellScrollFlashLight
   faction: Thaumaturgy
   reputationLevel: 1
   uiPosition: 11
   icon:
-    sprite: _CP14/Actions/Spells/light.rsi
+    sprite: _CE14/Actions/Spells/light.rsi
     state: flash_light
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollFlashLight
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollFlashLight
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollIceShards
+- type: CE14TradingPosition
+  id: CE14SpellScrollIceShards
   faction: Thaumaturgy
   reputationLevel: 1
   uiPosition: 12
   icon:
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: ice_shards
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollIceShards
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollIceShards
 
 # Rep 2
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollFireball
+- type: CE14TradingPosition
+  id: CE14SpellScrollFireball
   faction: Thaumaturgy
   reputationLevel: 2
   priceMarkup: 5
   uiPosition: 7
   icon:
-    sprite: _CP14/Actions/Spells/fire.rsi
+    sprite: _CE14/Actions/Spells/fire.rsi
     state: fireball
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollFireball
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollFireball
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollBeerCreation
+- type: CE14TradingPosition
+  id: CE14SpellScrollBeerCreation
   faction: Thaumaturgy
   priceMarkup: 5
   reputationLevel: 2
   uiPosition: 12
   icon:
-    sprite: _CP14/Actions/Spells/water.rsi
+    sprite: _CE14/Actions/Spells/water.rsi
     state: beer_creation
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollBeerCreation
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollBeerCreation
 
 # Rep 3
 
 
 # Rep 4
 
-- type: cp14TradingPosition
-  id: CP14SpellScrollShadowStep
+- type: CE14TradingPosition
+  id: CE14SpellScrollShadowStep
   priceMarkup: 15 #Unique trade spells
   faction: Thaumaturgy
   reputationLevel: 4
   uiPosition: 5
   icon:
-    sprite: _CP14/Actions/Spells/dimension.rsi
+    sprite: _CE14/Actions/Spells/dimension.rsi
     state: shadow_step
-  service: !type:CP14BuyItemsService
-    product: CP14SpellScrollShadowStep
+  service: !type:CE14BuyItemsService
+    product: CE14SpellScrollShadowStep

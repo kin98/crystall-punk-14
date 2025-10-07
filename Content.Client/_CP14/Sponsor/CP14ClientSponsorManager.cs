@@ -1,20 +1,20 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Shared._CP14.Sponsor;
+using Content.Shared._CE14.Sponsor;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._CP14.Sponsor;
+namespace Content.Client._CE14.Sponsor;
 
-public sealed class ClientSponsorSystem : ICP14SponsorManager
+public sealed class ClientSponsorSystem : ICE14SponsorManager
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IClientNetManager _net = default!;
 
-    private CP14SponsorRolePrototype? _sponsorRole;
+    private CE14SponsorRolePrototype? _sponsorRole;
 
     public void Initialize()
     {
-        _net.RegisterNetMessage<CP14SponsorRoleUpdate>(OnSponsorRoleUpdate);
+        _net.RegisterNetMessage<CE14SponsorRoleUpdate>(OnSponsorRoleUpdate);
         _net.Disconnect += NetOnDisconnected;
     }
 
@@ -23,7 +23,7 @@ public sealed class ClientSponsorSystem : ICP14SponsorManager
         _sponsorRole = null;
     }
 
-    private void OnSponsorRoleUpdate(CP14SponsorRoleUpdate msg)
+    private void OnSponsorRoleUpdate(CE14SponsorRoleUpdate msg)
     {
         if (!_proto.TryIndex(msg.Role, out var indexedRole))
             return;
@@ -36,7 +36,7 @@ public sealed class ClientSponsorSystem : ICP14SponsorManager
         throw new NotImplementedException();
     }
 
-    public bool UserHasFeature(NetUserId userId, ProtoId<CP14SponsorFeaturePrototype> feature, bool ifDisabledSponsorhip = true)
+    public bool UserHasFeature(NetUserId userId, ProtoId<CE14SponsorFeaturePrototype> feature, bool ifDisabledSponsorhip = true)
     {
         if (_sponsorRole is null)
             return false;

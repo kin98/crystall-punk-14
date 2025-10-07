@@ -1,14 +1,14 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CP14.MagicEnergy.Components;
+namespace Content.Shared._CE14.MagicEnergy.Components;
 
 /// <summary>
 /// Allows you to examine how much energy is in that object.
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-[Access(typeof(SharedCP14MagicEnergyCrystalSlotSystem))]
-public sealed partial class CP14MagicEnergyCrystalSlotComponent : Component
+[Access(typeof(SharedCE14MagicEnergyCrystalSlotSystem))]
+public sealed partial class CE14MagicEnergyCrystalSlotComponent : Component
 {
     [DataField(required: true)]
     public string SlotId = string.Empty;
@@ -17,7 +17,7 @@ public sealed partial class CP14MagicEnergyCrystalSlotComponent : Component
 }
 
 [Serializable, NetSerializable]
-public enum CP14MagicSlotVisuals : byte
+public enum CE14MagicSlotVisuals : byte
 {
     Inserted,
     Powered,
@@ -26,11 +26,11 @@ public enum CP14MagicSlotVisuals : byte
 /// <summary>
 /// Is called when the state of the crystal is changed: it is pulled out, inserted, or the amount of energy in it has changed.
 /// </summary>
-public sealed class CP14SlotCrystalChangedEvent : EntityEventArgs
+public sealed class CE14SlotCrystalChangedEvent : EntityEventArgs
 {
     public readonly bool Ejected;
 
-    public CP14SlotCrystalChangedEvent(bool ejected)
+    public CE14SlotCrystalChangedEvent(bool ejected)
     {
         Ejected = ejected;
     }
@@ -39,11 +39,11 @@ public sealed class CP14SlotCrystalChangedEvent : EntityEventArgs
 /// <summary>
 /// Is called when the power status of the device changes.
 /// </summary>
-public sealed class CP14SlotCrystalPowerChangedEvent : EntityEventArgs
+public sealed class CE14SlotCrystalPowerChangedEvent : EntityEventArgs
 {
     public readonly bool Powered;
 
-    public CP14SlotCrystalPowerChangedEvent(bool powered)
+    public CE14SlotCrystalPowerChangedEvent(bool powered)
     {
         Powered = powered;
     }

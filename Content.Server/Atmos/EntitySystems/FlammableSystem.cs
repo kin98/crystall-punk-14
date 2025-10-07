@@ -4,7 +4,7 @@ using Content.Server.Stunnable;
 using Content.Server.Temperature.Components;
 using Content.Server.Temperature.Systems;
 using Content.Server.Damage.Components;
-using Content.Shared._CP14.Temperature;
+using Content.Shared._CE14.Temperature;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
@@ -160,7 +160,7 @@ namespace Content.Server.Atmos.EntitySystems
             if (!isHotEvent.IsHot)
                 return;
 
-            /* //CP14 disabling igniting via direact interact. Only from DelayedIgnitionSource
+            /* //CE14 disabling igniting via direact interact. Only from DelayedIgnitionSource
             Ignite(uid, args.Used, flammable, args.User);
             args.Handled = true;
             */
@@ -464,7 +464,7 @@ namespace Content.Server.Atmos.EntitySystems
 
                 if (flammable.FireStacks > 0)
                 {
-/* CP14 Airtight walls should burn too!
+/* CE14 Airtight walls should burn too!
                     var air = _atmosphereSystem.GetContainingMixture(uid);
 
                     // If we're in an oxygenless environment, put the fire out.

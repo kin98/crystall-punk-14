@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14StatueGob
+  id: CE14StatueGob
   parent: BaseStructure
   name: statue of Gob
   description: It's beautiful.
@@ -8,7 +8,7 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Decoration/statue_gob.rsi
+    sprite: _CE14/Structures/Decoration/statue_gob.rsi
     layers:
     - state: gob
     - state: wire
@@ -32,7 +32,7 @@
         - MachineLayer
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Rock
+    damageModifierSet: CE14Rock
   - type: Destructible
     thresholds:
     - trigger:
@@ -48,7 +48,7 @@
             volume: -4
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14StoneBlock1:
+          CE14StoneBlock1:
             min: 4
             max: 5
   - type: Appearance
@@ -68,8 +68,8 @@
             shader: unshaded
 
 - type: entity
-  id: CP14StatueGobVines
-  parent: CP14StatueGob
+  id: CE14StatueGobVines
+  parent: CE14StatueGob
   name: statue of Gob
   suffix: Normal. Overgrown.
   components:
@@ -84,8 +84,8 @@
       visible: false
 
 - type: entity
-  id: CP14StatueGobRuined
-  parent: CP14StatueGob
+  id: CE14StatueGobRuined
+  parent: CE14StatueGob
   name: broken statue of Gob
   suffix: Ruined
   components:
@@ -100,8 +100,8 @@
       visible: false
 
 - type: entity
-  id: CP14StatueGobRuinedVines
-  parent: CP14StatueGob
+  id: CE14StatueGobRuinedVines
+  parent: CE14StatueGob
   name: broken statue of Gob
   suffix: Ruined. Overgrown.
   components:
@@ -116,7 +116,7 @@
       visible: false
 
 - type: entity
-  id: CP14StatueAngel
+  id: CE14StatueAngel
   parent: BaseStructure
   name: angel statue
   description: A divine statue of a praying angel.
@@ -125,7 +125,7 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Decoration/angel_statue.rsi
+    sprite: _CE14/Structures/Decoration/angel_statue.rsi
     layers:
     - state: statue1
     drawdepth: Mobs
@@ -143,7 +143,7 @@
         - MachineLayer
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Rock
+    damageModifierSet: CE14Rock
   - type: Destructible
     thresholds:
     - trigger:
@@ -159,14 +159,14 @@
             volume: -4
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14StoneBlock1:
+          CE14StoneBlock1:
             min: 4
             max: 5
   - type: Appearance
 
 - type: entity
-  id: CP14StatueAngelMarble
-  parent: CP14StatueAngel
+  id: CE14StatueAngelMarble
+  parent: CE14StatueAngel
   suffix: Marble
   components:
   - type: Sprite
@@ -174,8 +174,8 @@
     - state: statue2
 
 - type: entity
-  id: CP14StatueAngelLimestone
-  parent: CP14StatueAngel
+  id: CE14StatueAngelLimestone
+  parent: CE14StatueAngel
   suffix: Limestone
   components:
   - type: Sprite
@@ -183,7 +183,7 @@
     - state: statue3
 
 - type: entity
-  id: CP14StatueStoneHeadHigh
+  id: CE14StatueStoneHeadHigh
   parent: BaseStructure
   name: stone head
   description: Strange stone heads, they seem to be watching.
@@ -192,7 +192,7 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Decoration/stone_head_high.rsi
+    sprite: _CE14/Structures/Decoration/stone_head_high.rsi
     layers:
     - state: statue_head_h
     drawdepth: Mobs
@@ -210,7 +210,7 @@
         - MachineLayer
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Rock
+    damageModifierSet: CE14Rock
   - type: Destructible
     thresholds:
     - trigger:
@@ -226,22 +226,22 @@
             volume: -4
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14StoneBlock1:
+          CE14StoneBlock1:
             min: 4
             max: 5
 
 - type: entity
-  id: CP14StatueStoneHeadLow
-  parent: CP14StatueStoneHeadHigh
+  id: CE14StatueStoneHeadLow
+  parent: CE14StatueStoneHeadHigh
   suffix: Low
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Decoration/stone_head_low.rsi
+    sprite: _CE14/Structures/Decoration/stone_head_low.rsi
     layers:
     - state: statue_head_l
 
 - type: entity
-  id: CP14StatueWizard
+  id: CE14StatueWizard
   parent: BaseStructure
   name: statue wizard
   description: A statue of a magician holding magic.
@@ -249,7 +249,7 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Decoration/wizard_statue.rsi
+    sprite: _CE14/Structures/Decoration/wizard_statue.rsi
     layers:
     - state: statue_wizard
     drawdepth: Mobs
@@ -268,7 +268,7 @@
   - type: SpriteFade
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Rock
+    damageModifierSet: CE14Rock
   - type: Destructible
     thresholds:
     - trigger:
@@ -284,6 +284,6 @@
             volume: -4
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14StoneBlock1:
+          CE14StoneBlock1:
             min: 2
             max: 3

@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14WeaponArcSlash
+  id: CE14WeaponArcSlash
   parent: WeaponArcStatic
   categories: [ HideSpawnMenu ]
   save: false
@@ -8,7 +8,7 @@
       animation: CPSlash
 
 - type: entity
-  id: CP14WeaponArcThrust
+  id: CE14WeaponArcThrust
   parent: WeaponArcStatic
   categories: [ HideSpawnMenu ]
   save: false

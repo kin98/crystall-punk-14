@@ -1,10 +1,10 @@
-namespace Content.Shared._CP14.Temperature;
+namespace Content.Shared._CE14.Temperature;
 
 /// <summary>
-/// Modifies how the entity is set on fire. Given that in cp14 the ignition is done via doAfter by a separate add-on
+/// Modifies how the entity is set on fire. Given that in CE14 the ignition is done via doAfter by a separate add-on
 /// </summary>
-[RegisterComponent, Access(typeof(CP14SharedFireSpreadSystem))]
-public sealed partial class CP14IgnitionModifierComponent : Component
+[RegisterComponent, Access(typeof(CE14SharedFireSpreadSystem))]
+public sealed partial class CE14IgnitionModifierComponent : Component
 {
     /// <summary>
     /// Allows you to slow down or speed up doAfter the burning of this entity. (Example: candles are lit quickly, they should have a high value)

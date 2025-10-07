@@ -1,7 +1,7 @@
 - type: entity
   name: fairy
-  parent: CP14SimpleMobBase
-  id: CP14MobFairy
+  parent: CE14SimpleMobBase
+  id: CE14MobFairy
   description: It glows, squeaks and considers itself very important. It seems that ordinary weapons are incapable of killing her, and only the dissipation of magic will help.
   categories: [ ForkFiltered, HideSpawnMenu ] #Disable spawn in spawmenu
   components:
@@ -14,7 +14,7 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: fairy
-      sprite: _CP14/Mobs/Animals/fairy.rsi
+      sprite: _CE14/Mobs/Animals/fairy.rsi
   - type: Fixtures
     fixtures:
       fix1:
@@ -38,7 +38,7 @@
       Dead:
         Base: dead
   - type: Bloodstream
-    bloodReagent: CP14BloodAnimal
+    bloodReagent: CE14BloodAnimal
     bloodMaxVolume: 0.1
   - type: Destructible
     thresholds:
@@ -48,7 +48,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/_CP14/Effects/fairy_cry.ogg
+          path: /Audio/_CE14/Effects/fairy_cry.ogg
           params:
             volume: -2
       - !type:DoActsBehavior
@@ -60,25 +60,25 @@
     minInterval: 1
     maxInterval: 4
     sound:
-      collection: CP14Fairy
+      collection: CE14Fairy
       params:
         volume: -8
         variation: 0.125
         pitch: 1.1
   - type: SoundWhileAlive
-  - type: CP14MagicEnergyContainer
-    magicAlert: CP14MagicEnergy
+  - type: CE14MagicEnergyContainer
+    magicAlert: CE14MagicEnergy
     maxEnergy: 300
     energy: 1
     unsafeSupport: true
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: -10
     delay: 5
     safe: true # infinity mana sucking
-  - type: CP14MagicUnsafeDamage
+  - type: CE14MagicUnsafeDamage
   - type: HTN
     rootTask:
-      task: CP14ApproachEnemyCompound
+      task: CE14ApproachEnemyCompound
     blackboard:
       VisionRadius: !type:Single
         5
@@ -86,40 +86,40 @@
         5
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
   - type: NPCUseActionOnTarget
-    actionId: CP14ActionFairyManaConsume
+    actionId: CE14ActionFairyManaConsume
   - type: Damageable
-    damageContainer: CP14Spectral
+    damageContainer: CE14Spectral
 
 
 - type: entity
-  id: CP14ActionFairyManaConsume
+  id: CE14ActionFairyManaConsume
   name: Fairy Mana consume
   description: You absorb a small amount of mana from the target.
   components:
   - type: Sprite
-    sprite: _CP14/Actions/Spells/meta.rsi
+    sprite: _CE14/Actions/Spells/meta.rsi
     state: mana_consume
   - type: Action
     useDelay: 5
     icon:
-      sprite: _CP14/Actions/Spells/meta.rsi
+      sprite: _CE14/Actions/Spells/meta.rsi
       state: mana_consume
   - type: TargetAction
   - type: EntityTargetAction
     whitelist:
       components:
-      - CP14MagicEnergyContainer
-    event: !type:CP14EntityTargetModularEffectEvent
+      - CE14MagicEnergyContainer
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectManaConsume
+        - CE14ImpactEffectManaConsume
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectManaConsume
-      - !type:CP14SpellConsumeManaEffect
+        - CE14ImpactEffectManaConsume
+      - !type:CE14SpellConsumeManaEffect
         safe: false
         mana: 0.5

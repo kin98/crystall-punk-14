@@ -1,157 +1,157 @@
 # Combine 1
 
 - type: reaction
-  id: CP14EssenceFrost
+  id: CE14EssenceFrost
   minTemp: 600
   reactants:
-    CP14EssenceFire:
+    CE14EssenceFire:
       amount: 1
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
   products:
-    CP14EssenceFrost: 2
+    CE14EssenceFrost: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14EssenceLight
+  id: CE14EssenceLight
   minTemp: 600
   reactants:
-    CP14EssenceFire:
+    CE14EssenceFire:
       amount: 1
-    CP14EssenceAir:
+    CE14EssenceAir:
       amount: 1
   products:
-    CP14EssenceLight: 2
+    CE14EssenceLight: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14EssenceMotion
+  id: CE14EssenceMotion
   minTemp: 600
   reactants:
-    CP14EssenceOrder:
+    CE14EssenceOrder:
       amount: 1
-    CP14EssenceAir:
+    CE14EssenceAir:
       amount: 1
   products:
-    CP14EssenceMotion: 2
+    CE14EssenceMotion: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14EssenceCycle
+  id: CE14EssenceCycle
   minTemp: 600
   reactants:
-    CP14EssenceOrder:
+    CE14EssenceOrder:
       amount: 1
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
   products:
-    CP14EssenceCycle: 2
+    CE14EssenceCycle: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14EssenceEnergia
+  id: CE14EssenceEnergia
   minTemp: 600
   reactants:
-    CP14EssenceOrder:
+    CE14EssenceOrder:
       amount: 1
-    CP14EssenceFire:
+    CE14EssenceFire:
       amount: 1
   products:
-    CP14EssenceEnergia: 2
+    CE14EssenceEnergia: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14EssenceVoid
+  id: CE14EssenceVoid
   minTemp: 600
   reactants:
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
-    CP14EssenceAir:
+    CE14EssenceAir:
       amount: 1
   products:
-    CP14EssenceVoid: 2
+    CE14EssenceVoid: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14EssencePoison
+  id: CE14EssencePoison
   minTemp: 600
   reactants:
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
-    CP14EssenceWater:
+    CE14EssenceWater:
       amount: 1
   products:
-    CP14EssencePoison: 2
+    CE14EssencePoison: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14EssenceLife
+  id: CE14EssenceLife
   minTemp: 600
   reactants:
-    CP14EssenceEarth:
+    CE14EssenceEarth:
       amount: 1
-    CP14EssenceWater:
+    CE14EssenceWater:
       amount: 1
   products:
-    CP14EssenceLife: 2
+    CE14EssenceLife: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14EssenceCrystal
+  id: CE14EssenceCrystal
   minTemp: 600
   reactants:
-    CP14EssenceOrder:
+    CE14EssenceOrder:
       amount: 1
-    CP14EssenceEarth:
+    CE14EssenceEarth:
       amount: 1
   products:
-    CP14EssenceCrystal: 2
+    CE14EssenceCrystal: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 # Complex tier 2
 
 - type: reaction
-  id: CP14EssenceMagic
+  id: CE14EssenceMagic
   minTemp: 600
   reactants:
-    CP14EssenceVoid:
+    CE14EssenceVoid:
       amount: 1
-    CP14EssenceEnergia:
+    CE14EssenceEnergia:
       amount: 1
   products:
-    CP14EssenceMagic: 2
+    CE14EssenceMagic: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14EssenceBeast
+  id: CE14EssenceBeast
   minTemp: 600
   reactants:
-    CP14EssenceMotion:
+    CE14EssenceMotion:
       amount: 1
-    CP14EssenceLife:
+    CE14EssenceLife:
       amount: 1
   products:
-    CP14EssenceBeast: 2
+    CE14EssenceBeast: 2
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150

@@ -1,13 +1,13 @@
-namespace Content.Shared._CP14.Demiplane.Components;
+namespace Content.Shared._CE14.Demiplane.Components;
 
 /// <summary>
 /// A station component that stores information about the current map of demiplanes, their research status and relationships.
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14StationDemiplaneMapComponent : Component
+public sealed partial class CE14StationDemiplaneMapComponent : Component
 {
     [DataField]
-    public Dictionary<Vector2i, CP14DemiplaneMapNode> Nodes = new();
+    public Dictionary<Vector2i, CE14DemiplaneMapNode> Nodes = new();
 
     /// <summary>
     /// Connections between rooms. Order matters! The first element is the start, the second is the end.

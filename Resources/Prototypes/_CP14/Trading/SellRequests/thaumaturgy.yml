@@ -1,15 +1,15 @@
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: ThaumaturgyDimensit
   possibleFactions:
   - Thaumaturgy
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14DimensitCrystal
+    protoId: CE14DimensitCrystal
     count: 5
 
 # 30 minutes
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: ThaumaturgyGoldAmulet
   possibleFactions:
   - Thaumaturgy
@@ -17,5 +17,5 @@
   fromMinutes: 30
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14ClothingCloakAmuletGold
+    protoId: CE14ClothingCloakAmuletGold
     count: 2

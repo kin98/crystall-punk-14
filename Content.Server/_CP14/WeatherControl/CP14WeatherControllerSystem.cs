@@ -1,14 +1,14 @@
 using System.Linq;
 using Content.Server.Weather;
-using Content.Shared._CP14.WeatherControl;
+using Content.Shared._CE14.WeatherControl;
 using Content.Shared.Weather;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.WeatherControl;
+namespace Content.Server._CE14.WeatherControl;
 
-public sealed class CP14WeatherControllerSystem : EntitySystem
+public sealed class CE14WeatherControllerSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -19,7 +19,7 @@ public sealed class CP14WeatherControllerSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<CP14WeatherControllerComponent>();
+        var query = EntityQueryEnumerator<CE14WeatherControllerComponent>();
         while (query.MoveNext(out var uid, out var weather))
         {
             if (_timing.CurTime <= weather.NextWeatherTime)
@@ -48,9 +48,9 @@ public sealed class CP14WeatherControllerSystem : EntitySystem
         }
     }
 
-    private CP14WeatherData? PickWeatherDataByWeight(EntityUid map, HashSet<CP14WeatherData> entries)
+    private CE14WeatherData? PickWeatherDataByWeight(EntityUid map, HashSet<CE14WeatherData> entries)
     {
-        var filteredEntries = new HashSet<CP14WeatherData>(entries);
+        var filteredEntries = new HashSet<CE14WeatherData>(entries);
 
         if (TryComp<WeatherComponent>(map, out var currentWeather))
         {

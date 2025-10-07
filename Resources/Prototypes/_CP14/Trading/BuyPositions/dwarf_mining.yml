@@ -1,126 +1,126 @@
 
 # Rep 0
 
-- type: cp14TradingPosition
-  id: CP14OreCopper5
+- type: CE14TradingPosition
+  id: CE14OreCopper5
   faction: DwarfMining
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Materials/copper_ore.rsi
+    sprite: _CE14/Objects/Materials/copper_ore.rsi
     state: ore2
-  service: !type:CP14BuyItemsService
-    product: CP14OreCopper5
+  service: !type:CE14BuyItemsService
+    product: CE14OreCopper5
 
-- type: cp14TradingPosition
-  id: CP14CrystalShardQuartz
+- type: CE14TradingPosition
+  id: CE14CrystalShardQuartz
   faction: DwarfMining
   uiPosition: 1
   priceMarkup: 3
   icon:
-    sprite: _CP14/Structures/Flora/Crystal/crystal_shard.rsi
+    sprite: _CE14/Structures/Flora/Crystal/crystal_shard.rsi
     state: shard3
-  service: !type:CP14BuyItemsService
-    product: CP14CrystalShardQuartz
+  service: !type:CE14BuyItemsService
+    product: CE14CrystalShardQuartz
 
-- type: cp14TradingPosition
-  id: CP14Screwdriver
+- type: CE14TradingPosition
+  id: CE14Screwdriver
   faction: DwarfMining
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/Tools/screwdriver.rsi
+    sprite: _CE14/Objects/Tools/screwdriver.rsi
     state: screwdriver
-  service: !type:CP14BuyItemsService
-    product: CP14Screwdriver
+  service: !type:CE14BuyItemsService
+    product: CE14Screwdriver
 
-- type: cp14TradingPosition
-  id: CP14BaseWrench
+- type: CE14TradingPosition
+  id: CE14BaseWrench
   faction: DwarfMining
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/Tools/wrench.rsi
+    sprite: _CE14/Objects/Tools/wrench.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14BaseWrench
+  service: !type:CE14BuyItemsService
+    product: CE14BaseWrench
 
-- type: cp14TradingPosition
-  id: CP14BaseSharpeningStone
+- type: CE14TradingPosition
+  id: CE14BaseSharpeningStone
   faction: DwarfMining
   uiPosition: 5
   icon:
-    sprite: _CP14/Objects/sharpening_stone.rsi
+    sprite: _CE14/Objects/sharpening_stone.rsi
     state: base
-  service: !type:CP14BuyItemsService
-    product: CP14BaseSharpeningStone
+  service: !type:CE14BuyItemsService
+    product: CE14BaseSharpeningStone
 
 # Rep 1
 
-- type: cp14TradingPosition
-  id: CP14OreIron5
+- type: CE14TradingPosition
+  id: CE14OreIron5
   faction: DwarfMining
   reputationLevel: 1
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Materials/iron_ore.rsi
+    sprite: _CE14/Objects/Materials/iron_ore.rsi
     state: ore2
-  service: !type:CP14BuyItemsService
-    product: CP14OreIron5
+  service: !type:CE14BuyItemsService
+    product: CE14OreIron5
 
-- type: cp14TradingPosition #TODO: replace with copper pickaxe when those get added
-  id: CP14WeaponPickaxeIron
+- type: CE14TradingPosition #TODO: replace with copper pickaxe when those get added
+  id: CE14WeaponPickaxeIron
   faction: DwarfMining
   reputationLevel: 1
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/Weapons/Melee/Pickaxe/iron.rsi
+    sprite: _CE14/Objects/Weapons/Melee/Pickaxe/iron.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14WeaponPickaxeIron
+  service: !type:CE14BuyItemsService
+    product: CE14WeaponPickaxeIron
     count: 1
 
-- type: cp14TradingPosition
-  id: CP14Lighter
+- type: CE14TradingPosition
+  id: CE14Lighter
   faction: DwarfMining
   reputationLevel: 1
   uiPosition: 5
   priceMarkup: 5
   icon:
-    sprite: _CP14/Objects/Tools/flint.rsi
+    sprite: _CE14/Objects/Tools/flint.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14Lighter
+  service: !type:CE14BuyItemsService
+    product: CE14Lighter
 
 # Rep 2
 
-- type: cp14TradingPosition
-  id: CP14OreGold5
+- type: CE14TradingPosition
+  id: CE14OreGold5
   faction: DwarfMining
   reputationLevel: 2
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Materials/gold_ore.rsi
+    sprite: _CE14/Objects/Materials/gold_ore.rsi
     state: ore2
-  service: !type:CP14BuyItemsService
-    product: CP14OreGold5
+  service: !type:CE14BuyItemsService
+    product: CE14OreGold5
 
-#- type: cp14TradingPosition
-#  id: CP14OreMithril5
+#- type: CE14TradingPosition
+#  id: CE14OreMithril5
 #  faction: DwarfMining
 #  reputationLevel: 2
 #  uiPosition: 1
 #  icon:
-#    sprite: _CP14/Objects/Materials/mithril_ore.rsi
+#    sprite: _CE14/Objects/Materials/mithril_ore.rsi
 #    state: ore2
-#  service: !type:CP14BuyItemsService
-#    product: CP14OreMithril5
+#  service: !type:CE14BuyItemsService
+#    product: CE14OreMithril5
 
-- type: cp14TradingPosition
-  id: CP14BaseSharpeningStoneStructure
+- type: CE14TradingPosition
+  id: CE14BaseSharpeningStoneStructure
   faction: DwarfMining
   reputationLevel: 2
   priceMarkup: 5
   uiPosition: 5
   icon:
-    sprite: _CP14/Structures/Specific/Blacksmith/sharpening_stone.rsi
+    sprite: _CE14/Structures/Specific/Blacksmith/sharpening_stone.rsi
     state: base
-  service: !type:CP14BuyItemsService
-    product: CP14BaseSharpeningStoneStructure
+  service: !type:CE14BuyItemsService
+    product: CE14BaseSharpeningStoneStructure

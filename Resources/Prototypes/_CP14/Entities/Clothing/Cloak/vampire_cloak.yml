@@ -1,15 +1,15 @@
 - type: entity
   parent:
-  - CP14ClothingCloakBase
-  - CP14BaseMajorContraband
-  id: CP14ClothingCloakVampireBase
+  - CE14ClothingCloakBase
+  - CE14BaseMajorContraband
+  id: CE14ClothingCloakVampireBase
   abstract: true
   components:
   - type: ItemToggle
     onActivate: false
     onUse: false
   - type: ToggleClothing
-    action: CP14ActionToggleVampireCape
+    action: CE14ActionToggleVampireCape
     disableOnUnequip: true
   - type: ComponentToggler
     parent: true
@@ -22,11 +22,11 @@
     delay: 3
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 40
-      CP14BloodEssence: 1
+      CE14Cloth: 40
+      CE14BloodEssence: 1
 
 - type: entity
-  id: CP14ActionToggleVampireCape
+  id: CE14ActionToggleVampireCape
   parent: BaseAction
   name: Vampire cloak
   description: Gives the cape wearer the invisibility, but only if standing still.
@@ -35,34 +35,34 @@
     event: !type:ToggleActionEvent
 
 - type: entity
-  parent: CP14ClothingCloakVampireBase
-  id: CP14ClothingCloakVampireDevourers
+  parent: CE14ClothingCloakVampireBase
+  id: CE14ClothingCloakVampireDevourers
   name: crimson vampire cloak
   description: A traditional vampire cloak worn by members of the Devourers clan. Hides the owner from prying eyes, granting invisibility.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/Vampire/red.rsi
+    sprite: _CE14/Clothing/Cloak/Vampire/red.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/Vampire/red.rsi
+    sprite: _CE14/Clothing/Cloak/Vampire/red.rsi
 
 - type: entity
-  parent: CP14ClothingCloakVampireBase
-  id: CP14ClothingCloakVampireUnnameable
+  parent: CE14ClothingCloakVampireBase
+  id: CE14ClothingCloakVampireUnnameable
   name: white vampire cloak
   description: A traditional vampire cloak worn by members of the Unnameable clan. Hides the owner from prying eyes, granting invisibility.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/Vampire/white.rsi
+    sprite: _CE14/Clothing/Cloak/Vampire/white.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/Vampire/white.rsi
+    sprite: _CE14/Clothing/Cloak/Vampire/white.rsi
 
 - type: entity
-  parent: CP14ClothingCloakVampireBase
-  id: CP14ClothingCloakVampireNightChildrens
+  parent: CE14ClothingCloakVampireBase
+  id: CE14ClothingCloakVampireNightChildrens
   name: dark vampire cloak
   description: A traditional vampire cloak worn by members of the Childrens of the Night clan. Hides the owner from prying eyes, granting invisibility.
   components:
   - type: Sprite
-    sprite: _CP14/Clothing/Cloak/Vampire/blue.rsi
+    sprite: _CE14/Clothing/Cloak/Vampire/blue.rsi
   - type: Clothing
-    sprite: _CP14/Clothing/Cloak/Vampire/blue.rsi
+    sprite: _CE14/Clothing/Cloak/Vampire/blue.rsi

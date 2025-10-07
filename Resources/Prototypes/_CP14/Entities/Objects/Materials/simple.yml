@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14String
+  id: CE14String
   parent: BaseItem
   name: strings
   description: Thin thread. Material for mending clothes, or sewing new ones.
@@ -8,14 +8,14 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Materials/string.rsi
+    sprite: _CE14/Objects/Materials/string.rsi
     state: icon
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 5
+      CE14Cloth: 5
 
 - type: entity
-  id: CP14Web
+  id: CE14Web
   parent: BaseItem
   name: web
   description: A lump of nasty cobweb. If done correctly, this can be turned into threads.
@@ -24,7 +24,7 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Materials/web.rsi
+    sprite: _CE14/Objects/Materials/web.rsi
     state: icon
     layers:
     - state: icon
@@ -39,10 +39,10 @@
         icon4: ""
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 2
+      CE14Cloth: 2
 
 - type: entity
-  id: CP14Cloth1
+  id: CE14Cloth1
   parent: BaseItem
   categories: [ ForkFiltered ]
   name: cloth
@@ -52,13 +52,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/cloth.rsi
+    sprite: _CE14/Objects/Materials/cloth.rsi
     layers:
       - state: cloth_1
         map: ["base"]
   - type: Healing
     damageContainers:
-      - CP14Biological
+      - CE14Biological
     damage:
       types:
         Slash: -3
@@ -70,7 +70,7 @@
       path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Appearance
   - type: Stack
-    stackType: CP14Cloth
+    stackType: CE14Cloth
     count: 1
     baseLayer: base
     layerStates:
@@ -80,24 +80,24 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Cloth: 10
+      CE14Cloth: 10
 
 - type: entity
-  id: CP14Cloth10
-  parent: CP14Cloth1
+  id: CE14Cloth10
+  parent: CE14Cloth1
   suffix: 10
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  id: CP14GlassShard
+  id: CE14GlassShard
   parent: ShardGlass
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
     layers:
-      - sprite: _CP14/Objects/Materials/glass.rsi
+      - sprite: _CE14/Objects/Materials/glass.rsi
         state: shard1
         map: [ "enum.DamageStateVisualLayers.Base" ]
   - type: RandomSprite
@@ -107,10 +107,10 @@
           shard2: ""
   - type: PhysicalComposition
     materialComposition:
-      CP14Glass: 5
+      CE14Glass: 5
 
 - type: entity
-  id: CP14Snowball
+  id: CE14Snowball
   parent:
   - BaseItem
   - ItemHeftyBase
@@ -121,7 +121,7 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Materials/snowball.rsi
+    sprite: _CE14/Objects/Materials/snowball.rsi
     layers:
     - state: ball
   - type: Fixtures
@@ -135,7 +135,7 @@
         mask:
         - ItemMask
   - type: LandAtCursor
-  - type: CP14MeleeSelfDamage
+  - type: CE14MeleeSelfDamage
     damageToSelf:
       types:
         Blunt: 1 # 1 hits
@@ -147,12 +147,12 @@
   - type: MeleeWeapon
     attackRate: 1.8
     wideAnimationRotation: 225
-    wideAnimation: CP14WeaponArcSlash
+    wideAnimation: CE14WeaponArcSlash
     damage:
       types:
         Cold: 0
     soundHit:
-      path: /Audio/_CP14/Effects/snowball.ogg
+      path: /Audio/_CE14/Effects/snowball.ogg
       params:
         variation: 0.250
         volume: 15
@@ -179,13 +179,13 @@
         acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/_CP14/Effects/snowball.ogg
+          path: /Audio/_CE14/Effects/snowball.ogg
           params:
             variation: 0.250
             volume: 15
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SnowEffect:
+          CE14SnowEffect:
             min: 1
             max: 1
 

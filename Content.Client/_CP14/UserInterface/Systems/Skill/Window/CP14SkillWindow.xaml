@@ -1,11 +1,11 @@
-<window:CP14SkillWindow
+<window:CE14SkillWindow
     xmlns="https://spacestation14.io"
-    xmlns:window="clr-namespace:Content.Client._CP14.UserInterface.Systems.Skill.Window"
+    xmlns:window="clr-namespace:Content.Client._CE14.UserInterface.Systems.Skill.Window"
     xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
     xmlns:parallax="clr-namespace:Content.Client.Parallax"
-    xmlns:nodeTree="clr-namespace:Content.Client._CP14.UserInterface.Systems.NodeTree"
-    Title="{Loc 'cp14-skill-info-title'}"
+    xmlns:nodeTree="clr-namespace:Content.Client._CE14.UserInterface.Systems.NodeTree"
+    Title="{Loc 'CE14-skill-info-title'}"
     MinSize="700 350"
     SetSize="980 550">
 
@@ -46,7 +46,7 @@
                                 <RichTextLabel Name="SkillDescription" HorizontalExpand="True" Access="Public"/>
                             </BoxContainer>
                             <BoxContainer HorizontalExpand="True">
-                                <RichTextLabel Name="SkillFree" Text="{Loc 'cp14-skill-menu-free'}" HorizontalExpand="True" Access="Public" Visible="False"/>
+                                <RichTextLabel Name="SkillFree" Text="{Loc 'CE14-skill-menu-free'}" HorizontalExpand="True" Access="Public" Visible="False"/>
                             </BoxContainer>
                         </BoxContainer>
                     </BoxContainer>
@@ -54,7 +54,7 @@
                 <Control MinHeight="5"/>
                 <!-- Skill Buttons -->
                 <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
-                    <Button Name="LearnButton" Text="{Loc 'cp14-skill-menu-learn-button'}" StyleClasses="OpenRight" HorizontalExpand="True" MinHeight="35" Access="Public"/>
+                    <Button Name="LearnButton" Text="{Loc 'CE14-skill-menu-learn-button'}" StyleClasses="OpenRight" HorizontalExpand="True" MinHeight="35" Access="Public"/>
                 </BoxContainer>
             </BoxContainer>
         </BoxContainer>
@@ -70,7 +70,7 @@
             <PanelContainer Margin="10 10 10 10" HorizontalExpand="True" VerticalExpand="True" RectClipContent="True">
                 <parallax:ParallaxControl Name="ParallaxBackground" ScaleX="4" ScaleY="4" Access="Public" SpeedX="10" SpeedY="5"/>
                 <BoxContainer Margin="10 10 10 10" Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
-                    <nodeTree:CP14NodeTreeGraphControl Name="GraphControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Access="Public"/>
+                    <nodeTree:CE14NodeTreeGraphControl Name="GraphControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Access="Public"/>
                 </BoxContainer>
                 <!-- Tree Tabs -->
                 <BoxContainer Margin="10 10 10 10" VerticalAlignment="Top" HorizontalAlignment="Right" Orientation="Vertical" VerticalExpand="True">
@@ -84,4 +84,4 @@
             </PanelContainer>
         </BoxContainer>
     </BoxContainer>
-</window:CP14SkillWindow>
+</window:CE14SkillWindow>

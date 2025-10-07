@@ -1,31 +1,31 @@
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Prototypes;
 using Content.Shared.Body.Prototypes;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Vampire.Components;
+namespace Content.Shared._CE14.Vampire.Components;
 
 [RegisterComponent]
 [NetworkedComponent]
 [AutoGenerateComponentState]
-[Access(typeof(CP14SharedVampireSystem))]
-public sealed partial class CP14VampireComponent : Component
+[Access(typeof(CE14SharedVampireSystem))]
+public sealed partial class CE14VampireComponent : Component
 {
     [DataField]
-    public ProtoId<ReagentPrototype> NewBloodReagent = "CP14BloodVampire";
+    public ProtoId<ReagentPrototype> NewBloodReagent = "CE14BloodVampire";
     [DataField]
-    public ProtoId<CP14SkillTreePrototype> SkillTreeProto = "Vampire";
+    public ProtoId<CE14SkillTreePrototype> SkillTreeProto = "Vampire";
 
     [DataField]
-    public ProtoId<MetabolizerTypePrototype> MetabolizerType = "CP14Vampire";
+    public ProtoId<MetabolizerTypePrototype> MetabolizerType = "CE14Vampire";
 
     [DataField]
-    public ProtoId<CP14SkillPointPrototype> SkillPointProto = "Blood";
+    public ProtoId<CE14SkillPointPrototype> SkillPointProto = "Blood";
 
     [DataField(required: true), AutoNetworkedField]
-    public ProtoId<CP14VampireFactionPrototype>? Faction;
+    public ProtoId<CE14VampireFactionPrototype>? Faction;
 
     [DataField]
     public FixedPoint2 SkillPointCount = 2f;
@@ -37,7 +37,7 @@ public sealed partial class CP14VampireComponent : Component
     /// All this actions was granted to vampires on component added
     /// </summary>
     [DataField]
-    public List<EntProtoId> ActionsProto = new() { "CP14ActionVampireToggleVisuals" };
+    public List<EntProtoId> ActionsProto = new() { "CE14ActionVampireToggleVisuals" };
 
     /// <summary>
     /// For tracking granted actions, and removing them when component is removed.

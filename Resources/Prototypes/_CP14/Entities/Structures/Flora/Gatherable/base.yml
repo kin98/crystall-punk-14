@@ -1,11 +1,11 @@
 - type: entity
-  id: CP14GatherableBase
+  id: CE14GatherableBase
   parent: BaseStructure
   abstract: true
   categories: [ ForkFiltered ]
   components:
   - type: PlacementReplacement
-    key: CP14Plant
+    key: CE14Plant
   - type: Sprite
     snapCardinals: true
     drawdepth: FloorTiles
@@ -19,7 +19,7 @@
   - type: MeleeSound
     soundGroups:
       Brute:
-        collection: CP14GrassGathering
+        collection: CE14GrassGathering
         params:
           variation: 0.03
   - type: Destructible
@@ -59,23 +59,23 @@
         - FullTileMask
         layer:
         - Opaque
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     toolWhitelist:
       tags:
-        - CP14HerbalGathering
+        - CE14HerbalGathering
       components:
         - Sharp
   - type: Appearance
 
 - type: entity
-  id: CP14GatherablePlantBase
-  parent: CP14GatherableBase
+  id: CE14GatherablePlantBase
+  parent: CE14GatherableBase
   abstract: true
   components:
-  - type: CP14PlantVisuals
+  - type: CE14PlantVisuals
     growthSteps: 5
     growState: "grow-"
-  - type: CP14Plant
+  - type: CE14Plant
     resource: 30
     energy: 30
     growthLevel: 0
@@ -91,7 +91,7 @@
           Quantity: 25
   - type: Food
     delay: 1.5
-  - type: CP14WeatherRefillable
+  - type: CE14WeatherRefillable
     solution: plant
   - type: RefillableSolution
     solution: plant
@@ -119,7 +119,7 @@
             acts: [ "Destruction" ]
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14Ash1:
+              CE14Ash1:
                 min: 0
                 max: 2
       - trigger:
@@ -131,44 +131,44 @@
             acts: [ "Destruction" ]
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14FloraMaterial1:
+              CE14FloraMaterial1:
                 min: 2
                 max: 3
 
 - type: entity
-  id: CP14GatherablePlantSingleHarvestBase
+  id: CE14GatherablePlantSingleHarvestBase
   parent:
-  - CP14BaseFlammableSpreading
-  - CP14GatherablePlantBase
+  - CE14BaseFlammableSpreading
+  - CE14GatherablePlantBase
   abstract: true
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Specific/Farming/seedbed.rsi
-  - type: CP14PlantMetabolizer
+    sprite: _CE14/Structures/Specific/Farming/seedbed.rsi
+  - type: CE14PlantMetabolizer
     metabolizerId: Base
-  - type: CP14PlantEnergyFromLight
+  - type: CE14PlantEnergyFromLight
     energy: 0.5
     daytime: true
-  - type: CP14PlantVisuals
+  - type: CE14PlantVisuals
     growthSteps: 6
-  - type: CP14PlantGrowing
+  - type: CE14PlantGrowing
     energyCost: 0.25
     resourceCost: 0.25
     growthPerUpdate: 0.12 # 20 minute to full grow
   - type: FireVisuals
-    sprite: _CP14/Effects/fire.rsi
+    sprite: _CE14/Effects/fire.rsi
     normalState: full
     alternateState: full2
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     deleteAfterHarvest: true
 
 - type: entity
-  id: CP14GatherablePlantMultiHarvestBase
-  parent: CP14GatherablePlantSingleHarvestBase
+  id: CE14GatherablePlantMultiHarvestBase
+  parent: CE14GatherablePlantSingleHarvestBase
   abstract: true
   components:
-  - type: CP14PlantGrowing
+  - type: CE14PlantGrowing
     growthPerUpdate: 0.06
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     deleteAfterHarvest: false
 

@@ -1,16 +1,16 @@
-using Content.Shared._CP14.ModularCraft;
-using Content.Shared._CP14.ModularCraft.Components;
-using Content.Shared._CP14.ModularCraft.Prototypes;
+using Content.Shared._CE14.ModularCraft;
+using Content.Shared._CE14.ModularCraft.Components;
+using Content.Shared._CE14.ModularCraft.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.ModularCraft.Modifiers;
+namespace Content.Server._CE14.ModularCraft.Modifiers;
 
-public sealed partial class Inherit : CP14ModularCraftModifier
+public sealed partial class Inherit : CE14ModularCraftModifier
 {
     [DataField(required: true)]
-    public List<ProtoId<CP14ModularCraftPartPrototype>> CopyFrom = new();
+    public List<ProtoId<CE14ModularCraftPartPrototype>> CopyFrom = new();
 
-    public override void Effect(EntityManager entManager, Entity<CP14ModularCraftStartPointComponent> start, Entity<CP14ModularCraftPartComponent>? part)
+    public override void Effect(EntityManager entManager, Entity<CE14ModularCraftStartPointComponent> start, Entity<CE14ModularCraftPartComponent>? part)
     {
         var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
 

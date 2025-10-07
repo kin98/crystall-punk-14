@@ -1,1 +1,1 @@
-cp14-damage-group-magic = Магический
+CE14-damage-group-magic = Магический

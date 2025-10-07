@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseArrow
-  id: CP14BaseCrossbolt
+  id: CE14BaseCrossbolt
   categories: [ ForkFiltered ]
   abstract: true
   components:
@@ -8,18 +8,18 @@
     deleteOnCollide: false
     onlyCollideWhenShot: true
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Ranged/Projectiles/crossbolt.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/Projectiles/crossbolt.rsi
   - type: Item
     size: Tiny
     shape:
     - 0,0,0,0
   - type: Tag
     tags:
-    - CP14CrossbowBolt
+    - CE14CrossbowBolt
 
 - type: entity
   parent: BaseArrow
-  id: CP14BaseBigCrossbolt
+  id: CE14BaseBigCrossbolt
   categories: [ ForkFiltered ]
   abstract: true
   components:
@@ -27,18 +27,18 @@
     deleteOnCollide: false
     onlyCollideWhenShot: true
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Ranged/Projectiles/crossbolt.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/Projectiles/crossbolt.rsi
   - type: Item
     size: Small
     shape:
     - 0,0,0,1
   - type: Tag
     tags:
-    - CP14BigCrossbowBolt
+    - CE14BigCrossbowBolt
 
 - type: entity
-  id: CP14CrossboltIron
-  parent: CP14BaseCrossbolt
+  id: CE14CrossboltIron
+  parent: CE14BaseCrossbolt
   name: iron crossbow bolt
   description: Rod with a pointed spike in iron. No plumage, they're not bows.
   components:
@@ -54,11 +54,11 @@
       visible: false
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 2
+      CE14Iron: 2
 
 - type: entity
-  id: CP14CrossboltGold
-  parent: CP14BaseCrossbolt
+  id: CE14CrossboltGold
+  parent: CE14BaseCrossbolt
   name: gold crossbow bolt
   description: Rod with a pointed spike in gold. No plumage, they're not bows.
   components:
@@ -75,11 +75,11 @@
       visible: false
   - type: PhysicalComposition
     materialComposition:
-      CP14Gold: 2
+      CE14Gold: 2
 
 - type: entity
-  id: CP14CrossboltCopper
-  parent: CP14BaseCrossbolt
+  id: CE14CrossboltCopper
+  parent: CE14BaseCrossbolt
   name: copper crossbow bolt
   description: Rod with a pointed spike in copper. No plumage, they're not bows.
   components:
@@ -96,11 +96,11 @@
       visible: false
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 2
+      CE14Copper: 2
 
 - type: entity
-  id: CP14CrossboltMithril
-  parent: CP14BaseCrossbolt
+  id: CE14CrossboltMithril
+  parent: CE14BaseCrossbolt
   name: mithril crossbow bolt
   description: Rod with a pointed spike in mithril. No plumage, they're not bows.
   components:
@@ -117,11 +117,11 @@
       visible: false
   - type: PhysicalComposition
     materialComposition:
-      CP14Mithril: 2
+      CE14Mithril: 2
 
 - type: entity
-  id: CP14BigCrossboltIron
-  parent: CP14BaseBigCrossbolt
+  id: CE14BigCrossboltIron
+  parent: CE14BaseBigCrossbolt
   name: iron big crossbow bolt
   description: A large rod without plumage, for large crossbows. 
   components:
@@ -134,11 +134,11 @@
     - state: big_rod
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 5
+      CE14Iron: 5
 
 - type: entity
-  id: CP14BigCrossboltGold
-  parent: CP14BaseBigCrossbolt
+  id: CE14BigCrossboltGold
+  parent: CE14BaseBigCrossbolt
   name: gold big crossbow bolt
   description: A large rod without plumage, for large crossbows. 
   components:
@@ -152,11 +152,11 @@
       color: "#ffe269"
   - type: PhysicalComposition
     materialComposition:
-      CP14Gold: 5
+      CE14Gold: 5
 
 - type: entity
-  id: CP14BigCrossboltCopper
-  parent: CP14BaseBigCrossbolt
+  id: CE14BigCrossboltCopper
+  parent: CE14BaseBigCrossbolt
   name: copper big crossbow bolt
   description: A large rod without plumage, for large crossbows. 
   components:
@@ -170,11 +170,11 @@
       color: "#e28f08"
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 5
+      CE14Copper: 5
 
 - type: entity
-  id: CP14BigCrossboltMithril
-  parent: CP14BaseBigCrossbolt
+  id: CE14BigCrossboltMithril
+  parent: CE14BaseBigCrossbolt
   name: mithril big crossbow bolt
   description: A large rod without plumage, for large crossbows. 
   components:
@@ -188,4 +188,4 @@
       color: "#38f0b3"
   - type: PhysicalComposition
     materialComposition:
-      CP14Mithril: 5
+      CE14Mithril: 5

@@ -1,10 +1,10 @@
-using Content.Server._CP14.Objectives.Systems;
+using Content.Server._CE14.Objectives.Systems;
 using Robust.Shared.Utility;
 
-namespace Content.Server._CP14.Objectives.Components;
+namespace Content.Server._CE14.Objectives.Components;
 
-[RegisterComponent, Access(typeof(CP14CurrencyCollectConditionSystem))]
-public sealed partial class CP14CurrencyCollectConditionComponent : Component
+[RegisterComponent, Access(typeof(CE14CurrencyCollectConditionSystem))]
+public sealed partial class CE14CurrencyCollectConditionComponent : Component
 {
     [DataField]
     public int Currency = 1000;

@@ -1,25 +1,25 @@
-using Content.Server._CP14.MagicEnergy.Components;
-using Content.Shared._CP14.DayCycle;
-using Content.Shared._CP14.MagicEnergy.Components;
+using Content.Server._CE14.MagicEnergy.Components;
+using Content.Shared._CE14.DayCycle;
+using Content.Shared._CE14.MagicEnergy.Components;
 using Content.Shared.Damage;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.MagicEnergy;
+namespace Content.Server._CE14.MagicEnergy;
 
-public partial class CP14MagicEnergySystem
+public partial class CE14MagicEnergySystem
 {
     [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly CP14DayCycleSystem _dayCycle = default!;
+    [Dependency] private readonly CE14DayCycleSystem _dayCycle = default!;
 
     private void InitializeDraw()
     {
-        SubscribeLocalEvent<CP14MagicEnergyDrawComponent, MapInitEvent>(OnDrawMapInit);
-        SubscribeLocalEvent<CP14MagicEnergyFromDamageComponent, DamageChangedEvent>(OnDamageChanged);
+        SubscribeLocalEvent<CE14MagicEnergyDrawComponent, MapInitEvent>(OnDrawMapInit);
+        SubscribeLocalEvent<CE14MagicEnergyFromDamageComponent, DamageChangedEvent>(OnDamageChanged);
     }
 
-    private void OnDamageChanged(Entity<CP14MagicEnergyFromDamageComponent> ent, ref DamageChangedEvent args)
+    private void OnDamageChanged(Entity<CE14MagicEnergyFromDamageComponent> ent, ref DamageChangedEvent args)
     {
         if (args.DamageDelta is null || !args.DamageIncreased)
             return;
@@ -36,7 +36,7 @@ public partial class CP14MagicEnergySystem
         }
     }
 
-    private void OnDrawMapInit(Entity<CP14MagicEnergyDrawComponent> ent, ref MapInitEvent args)
+    private void OnDrawMapInit(Entity<CE14MagicEnergyDrawComponent> ent, ref MapInitEvent args)
     {
         ent.Comp.NextUpdateTime = _gameTiming.CurTime + TimeSpan.FromSeconds(ent.Comp.Delay);
     }
@@ -49,7 +49,7 @@ public partial class CP14MagicEnergySystem
 
     private void UpdateEnergyContainer()
     {
-        var query = EntityQueryEnumerator<CP14MagicEnergyDrawComponent, CP14MagicEnergyContainerComponent>();
+        var query = EntityQueryEnumerator<CE14MagicEnergyDrawComponent, CE14MagicEnergyContainerComponent>();
         while (query.MoveNext(out var uid, out var draw, out var magicContainer))
         {
             if (!draw.Enable)
@@ -66,7 +66,7 @@ public partial class CP14MagicEnergySystem
             ChangeEnergy((uid, magicContainer), draw.Energy, out _, out _, draw.Safe);
         }
 
-        var query2 = EntityQueryEnumerator<CP14MagicEnergyPhotosynthesisComponent, CP14MagicEnergyContainerComponent>();
+        var query2 = EntityQueryEnumerator<CE14MagicEnergyPhotosynthesisComponent, CE14MagicEnergyContainerComponent>();
         while (query2.MoveNext(out var uid, out var draw, out var magicContainer))
         {
             if (draw.NextUpdateTime >= _gameTiming.CurTime)
@@ -85,7 +85,7 @@ public partial class CP14MagicEnergySystem
 
     private void UpdateEnergyCrystalSlot()
     {
-        var query = EntityQueryEnumerator<CP14MagicEnergyDrawComponent, CP14MagicEnergyCrystalSlotComponent>();
+        var query = EntityQueryEnumerator<CE14MagicEnergyDrawComponent, CE14MagicEnergyCrystalSlotComponent>();
         while (query.MoveNext(out var uid, out var draw, out var slot))
         {
             if (!draw.Enable)

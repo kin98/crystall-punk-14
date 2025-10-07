@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseStructure
-  id: CP14BaseBoneStructure
+  id: CE14BaseBoneStructure
   categories: [ ForkFiltered ]
   abstract: true
   components:
@@ -8,17 +8,17 @@
     bodyType: Static
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14Skeleton
+    damageModifierSet: CE14Skeleton
 
 - type: entity
-  parent: CP14BaseBoneStructure
-  id: CP14BaseBoneRemains
+  parent: CE14BaseBoneStructure
+  id: CE14BaseBoneRemains
   name: bone remains
   description: The remains of bones have grown into the ground.
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Decoration/bone_remains.rsi
+    sprite: _CE14/Structures/Decoration/bone_remains.rsi
     drawdepth: BelowFloor
     layers:
       - state: bone_remains_1
@@ -43,7 +43,7 @@
         - ItemMask
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: CP14StepBones
+      collection: CE14StepBones
       params:
         volume: 4
   - type: Destructible
@@ -56,28 +56,28 @@
           acts: [ "Destruction" ]
         - !type:SpawnEntitiesBehavior
           spawn:
-            CP14Bone1:
+            CE14Bone1:
               min: 1
               max: 3
         - !type:PlaySoundBehavior
           sound:
-            collection: CP14BoneCrack
+            collection: CE14BoneCrack
 
 - type: entity
-  parent: CP14BaseBoneStructure
-  id: CP14BoneRemainsBoneHound
+  parent: CE14BaseBoneStructure
+  id: CE14BoneRemainsBoneHound
   name: bone remains hound
   description: The bones of a hound that died a long time ago... or very recently.
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Mobs/Monster/bone_hound.rsi
+    sprite: _CE14/Mobs/Monster/bone_hound.rsi
     drawdepth: BelowFloor
     layers:
       - state: dead
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: CP14StepBones
+      collection: CE14StepBones
       params:
         volume: 4
   - type: Fixtures
@@ -102,25 +102,25 @@
           acts: [ "Destruction" ]
         - !type:SpawnEntitiesBehavior
           spawn:
-            CP14Bone1:
+            CE14Bone1:
               min: 2
               max: 4
-            CP14ClothingMaskBoneHornedMask:
+            CE14ClothingMaskBoneHornedMask:
               min: 0
               max: 1
         - !type:PlaySoundBehavior
           sound:
-            collection: CP14BoneCrack
+            collection: CE14BoneCrack
 
 - type: entity
-  parent: CP14BaseBoneStructure
-  id: CP14BoneSpine
+  parent: CE14BaseBoneStructure
+  id: CE14BoneSpine
   name: bone spine 
   description: The large bony torso of an unknown creature, as if it had been torn to pieces.
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Decoration/bone_spine.rsi
+    sprite: _CE14/Structures/Decoration/bone_spine.rsi
     drawdepth: Mobs
     layers:
       - state: bone_spine
@@ -145,22 +145,22 @@
           acts: [ "Destruction" ]
         - !type:SpawnEntitiesBehavior
           spawn:
-            CP14Bone1:
+            CE14Bone1:
               min: 5
               max: 7
         - !type:PlaySoundBehavior
           sound:
-            collection: CP14BoneCrack
+            collection: CE14BoneCrack
 
 - type: entity
-  parent: CP14BaseBoneStructure
-  id: CP14BoneDragon
+  parent: CE14BaseBoneStructure
+  id: CE14BoneDragon
   name: bone dragon 
   description: The large skeleton of a dragon, the possibility of encountering such a creature is both fascinating and terrifying.
   components:
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Decoration/bone_dragon.rsi
+    sprite: _CE14/Structures/Decoration/bone_dragon.rsi
     layers:
       - state: bone_dragon
   - type: Fixtures
@@ -184,14 +184,14 @@
           acts: [ "Destruction" ]
         - !type:SpawnEntitiesBehavior
           spawn:
-            CP14Bone1:
+            CE14Bone1:
               min: 10
               max: 10
         - !type:SpawnEntitiesBehavior
           spawn:
-            CP14Bone1:
+            CE14Bone1:
               min: 5
               max: 10
         - !type:PlaySoundBehavior
           sound:
-            collection: CP14BoneCrack
+            collection: CE14BoneCrack

@@ -2,34 +2,34 @@
 # Content types
 
 - type: Tag
-  id: CP14DemiplaneOres
+  id: CE14DemiplaneOres
 
 - type: Tag
-  id: CP14DemiplanePeacefulAnimals
+  id: CE14DemiplanePeacefulAnimals
 
 - type: Tag
-  id: CP14DemiplaneAnimalsSwamp
+  id: CE14DemiplaneAnimalsSwamp
 
 - type: Tag
-  id: CP14DemiplaneHerbals
+  id: CE14DemiplaneHerbals
 
 - type: Tag
-  id: CP14DemiplaneMushrooms
+  id: CE14DemiplaneMushrooms
 
 # Demiplane features
 
 - type: Tag
-  id: CP14DemiplaneOpenSky
+  id: CE14DemiplaneOpenSky
 
 - type: Tag
-  id: CP14DemiplaneUnderground
+  id: CE14DemiplaneUnderground
 
 - type: Tag
-  id: CP14DemiplaneWater
+  id: CE14DemiplaneWater
 
 - type: Tag
-  id: CP14DemiplaneCold
+  id: CE14DemiplaneCold
 
 - type: Tag
-  id: CP14DemiplaneHot
+  id: CE14DemiplaneHot
 

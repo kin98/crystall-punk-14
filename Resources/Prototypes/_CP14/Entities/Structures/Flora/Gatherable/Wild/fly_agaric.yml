@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14GatherableFlyAgaric
-  parent: CP14GatherableBase
+  id: CE14GatherableFlyAgaric
+  parent: CE14GatherableBase
   name: fly agaric
   description: This poisonous mushroom can often be found near bodies of water or other wet areas. It is not recommended for consumption.
   suffix: Gatherable
   components:
   - type: Sprite
     drawdepth: FloorTiles
-    sprite: _CP14/Structures/Flora/Wild/agaric.rsi
+    sprite: _CE14/Structures/Flora/Wild/agaric.rsi
     layers:
       - state: world1
         map: ["random"]
@@ -20,12 +20,12 @@
         world4: ""
         world5: ""
         world6: ""
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     deleteAfterHarvest: true
     loot:
       All: !type:GroupSelector
         children:
-        - id: CP14AgaricMushroom
-        - id: CP14MobMonsterMyconideFlyagaric
+        - id: CE14AgaricMushroom
+        - id: CE14MobMonsterMyconideFlyagaric
           weight: 0.08
 

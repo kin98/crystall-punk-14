@@ -1,13 +1,13 @@
 - type: stack
-  id: CP14HerbalBandage
-  name: cp14-stack-pack-herbal-bandage
-  icon: { sprite: "_CP14/Objects/Specific/Medical/medical.rsi", state: herbbandage_3 }
-  spawn: CP14HerbalBandage
+  id: CE14HerbalBandage
+  name: CE14-stack-pack-herbal-bandage
+  icon: { sprite: "_CE14/Objects/Specific/Medical/medical.rsi", state: herbbandage_3 }
+  spawn: CE14HerbalBandage
   maxCount: 5
 
 - type: stack
-  id: CP14Gauze
-  name: cp14-stack-pack-gauze
-  icon: { sprite: "_CP14/Objects/Specific/Medical/medical.rsi", state: bandage_3 }
-  spawn: CP14Gauze
+  id: CE14Gauze
+  name: CE14-stack-pack-gauze
+  icon: { sprite: "_CE14/Objects/Specific/Medical/medical.rsi", state: bandage_3 }
+  spawn: CE14Gauze
   maxCount: 5

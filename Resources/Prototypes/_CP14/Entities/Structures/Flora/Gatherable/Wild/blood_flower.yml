@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14GatherableBloodFlower
-  parent: CP14GatherableBase
+  id: CE14GatherableBloodFlower
+  parent: CE14GatherableBase
   name: blood rose
   description: Scarlet flowers growing where blood has been spilled.
   suffix: Gatherable
   components:
   - type: Sprite
     drawdepth: FloorTiles
-    sprite: _CP14/Structures/Flora/Wild/blood_flower.rsi
+    sprite: _CE14/Structures/Flora/Wild/blood_flower.rsi
     layers:
       - state: world1
         map: ["random"]
@@ -17,10 +17,10 @@
         world1: ""
         world2: ""
         world3: ""
-  - type: CP14PlantGatherable
+  - type: CE14PlantGatherable
     deleteAfterHarvest: true
     loot:
       All: !type:GroupSelector
         children:
-        - id: CP14BloodFlower
+        - id: CE14BloodFlower
 

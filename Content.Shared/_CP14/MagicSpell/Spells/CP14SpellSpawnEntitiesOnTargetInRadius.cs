@@ -1,14 +1,14 @@
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellSpawnEntitiesOnTargetInRadius : CP14SpellEffect
+public sealed partial class CE14SpellSpawnEntitiesOnTargetInRadius : CE14SpellEffect
 {
     [DataField]
     public EntProtoId Spawn = new();
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         EntityCoordinates? targetPoint = null;
         if (args.Position is not null)

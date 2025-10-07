@@ -260,7 +260,7 @@
     shiveringHeatRegulation: 2000
     normalBodyTemperature: 310.15
     thermalRegulationTemperatureThreshold: 2
-  #- type: Perishable #CP14 - disable rotting
+  #- type: Perishable #CE14 - disable rotting
   - type: Butcherable
     butcheringType: Spike # TODO human.
     spawned:

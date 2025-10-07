@@ -1,16 +1,16 @@
-using Content.Shared._CP14.MeleeWeapon.Components;
-using Content.Shared._CP14.ModularCraft;
-using Content.Shared._CP14.ModularCraft.Components;
+using Content.Shared._CE14.MeleeWeapon.Components;
+using Content.Shared._CE14.ModularCraft;
+using Content.Shared._CE14.ModularCraft.Components;
 
-namespace Content.Server._CP14.ModularCraft.Modifiers;
+namespace Content.Server._CE14.ModularCraft.Modifiers;
 
-public sealed partial class EditSharpened : CP14ModularCraftModifier
+public sealed partial class EditSharpened : CE14ModularCraftModifier
 {
     [DataField]
     public float SharpnessDamageMultiplier = 1f;
-    public override void Effect(EntityManager entManager, Entity<CP14ModularCraftStartPointComponent> start, Entity<CP14ModularCraftPartComponent>? part)
+    public override void Effect(EntityManager entManager, Entity<CE14ModularCraftStartPointComponent> start, Entity<CE14ModularCraftPartComponent>? part)
     {
-        if (!entManager.TryGetComponent<CP14SharpenedComponent>(start, out var sharpened))
+        if (!entManager.TryGetComponent<CE14SharpenedComponent>(start, out var sharpened))
             return;
 
         sharpened.SharpnessDamageBy1Damage *= SharpnessDamageMultiplier;

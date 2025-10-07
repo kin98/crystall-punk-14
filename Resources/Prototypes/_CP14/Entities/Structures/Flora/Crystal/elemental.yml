@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14CrystalBase
+  id: CE14CrystalBase
   abstract: true
   parent: BaseRock
   name: quartz
@@ -8,7 +8,7 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Structures/Flora/Crystal/crystal.rsi
+    sprite: _CE14/Structures/Flora/Crystal/crystal.rsi
     layers:
       - state: medium1
         map: ["random"]
@@ -16,10 +16,10 @@
     offset: 0, 0.25
     noRot: true
   - type: InteractionPopup
-    interactSuccessString: popup-cp14crystal-ding
-    messagePerceivedByOthers: popup-cp14crystal-ding
+    interactSuccessString: popup-CE14crystal-ding
+    messagePerceivedByOthers: popup-CE14crystal-ding
     interactSuccessSound:
-      collection: CP14CrystalDings
+      collection: CE14CrystalDings
       params:
         variation: 0.03
   - type: Damageable
@@ -68,9 +68,9 @@
 # Normal
 
 - type: entity
-  id: CP14CrystalQuartz
+  id: CE14CrystalQuartz
   suffix: Normal
-  parent: CP14CrystalBase
+  parent: CE14CrystalBase
   components:
   - type: Sprite
     layers:
@@ -89,7 +89,7 @@
               collection: GlassBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14CrystalShardQuartz:
+              CE14CrystalShardQuartz:
                 min: 1
                 max: 2
           - !type:DoActsBehavior
@@ -98,9 +98,9 @@
 # Basic 6
 
 - type: entity
-  id: CP14CrystalQuartzEarth
+  id: CE14CrystalQuartzEarth
   suffix: Earth
-  parent: CP14CrystalBase
+  parent: CE14CrystalBase
   components:
   - type: Sprite
     color: "#1cea42"
@@ -117,21 +117,21 @@
               collection: GlassBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14CrystalShardQuartzEarth:
+              CE14CrystalShardQuartzEarth:
                 min: 1
                 max: 2
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14EssenceEarth:
+              CE14EssenceEarth:
                 min: 3
                 max: 5
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14CrystalQuartzFire
+  id: CE14CrystalQuartzFire
   suffix: Fire
-  parent: CP14CrystalBase
+  parent: CE14CrystalBase
   components:
   - type: Sprite
     color: "#d9741c"
@@ -148,21 +148,21 @@
               collection: GlassBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14CrystalShardQuartzFire:
+              CE14CrystalShardQuartzFire:
                 min: 1
                 max: 2
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14EssenceFire:
+              CE14EssenceFire:
                 min: 3
                 max: 5
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14CrystalQuartzWater
+  id: CE14CrystalQuartzWater
   suffix: Water
-  parent: CP14CrystalBase
+  parent: CE14CrystalBase
   components:
   - type: Sprite
     color: "#1c94d9"
@@ -179,21 +179,21 @@
               collection: GlassBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14CrystalShardQuartzWater:
+              CE14CrystalShardQuartzWater:
                 min: 1
                 max: 2
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14EssenceWater:
+              CE14EssenceWater:
                 min: 3
                 max: 5
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14CrystalQuartzAir
+  id: CE14CrystalQuartzAir
   suffix: Air
-  parent: CP14CrystalBase
+  parent: CE14CrystalBase
   components:
   - type: Sprite
     color: "#fdfe86"
@@ -210,21 +210,21 @@
               collection: GlassBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14CrystalShardQuartzAir:
+              CE14CrystalShardQuartzAir:
                 min: 1
                 max: 2
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14EssenceAir:
+              CE14EssenceAir:
                 min: 3
                 max: 5
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14CrystalQuartzOrder
+  id: CE14CrystalQuartzOrder
   suffix: Order
-  parent: CP14CrystalBase
+  parent: CE14CrystalBase
   components:
   - type: Sprite
     color: "#d9d9d9"
@@ -241,21 +241,21 @@
               collection: GlassBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14CrystalShardQuartzOrder:
+              CE14CrystalShardQuartzOrder:
                 min: 1
                 max: 2
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14EssenceOrder:
+              CE14EssenceOrder:
                 min: 3
                 max: 5
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
 
 - type: entity
-  id: CP14CrystalQuartzChaos
+  id: CE14CrystalQuartzChaos
   suffix: Chaos
-  parent: CP14CrystalBase
+  parent: CE14CrystalBase
   components:
   - type: Sprite
     color: "#4d4d4d"
@@ -272,12 +272,12 @@
               collection: GlassBreak
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14CrystalShardQuartzChaos:
+              CE14CrystalShardQuartzChaos:
                 min: 1
                 max: 2
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14EssenceChaos:
+              CE14EssenceChaos:
                 min: 3
                 max: 5
           - !type:DoActsBehavior

@@ -1,14 +1,14 @@
 - type: body
-  id: CP14Skeleton
+  id: CE14Skeleton
   name: skeleton
   root: torso
   slots:
     head:
-      part: CP14HeadSkeleton
+      part: CE14HeadSkeleton
       connections:
       - torso
       organs:
-        brain: CP14ClothingMaskBoneMaskMind
+        brain: CE14ClothingMaskBoneMaskMind
     torso:
       part: TorsoHuman
       connections:
@@ -17,26 +17,26 @@
       - right_leg
       - left_leg
     right_arm:
-      part: CP14RightArmSkeleton
+      part: CE14RightArmSkeleton
       connections:
       - right_hand
     left_arm:
-      part: CP14LeftArmSkeleton
+      part: CE14LeftArmSkeleton
       connections:
       - left_hand
     right_hand:
-      part: CP14RightHandSkeleton
+      part: CE14RightHandSkeleton
     left_hand:
-      part: CP14LeftHandSkeleton
+      part: CE14LeftHandSkeleton
     right_leg:
-      part: CP14RightLegSkeleton
+      part: CE14RightLegSkeleton
       connections:
       - right_foot
     left_leg:
-      part: CP14LeftLegSkeleton
+      part: CE14LeftLegSkeleton
       connections:
       - left_foot
     right_foot:
-      part: CP14RightFootSkeleton
+      part: CE14RightFootSkeleton
     left_foot:
-      part: CP14LeftFootSkeleton
+      part: CE14LeftFootSkeleton

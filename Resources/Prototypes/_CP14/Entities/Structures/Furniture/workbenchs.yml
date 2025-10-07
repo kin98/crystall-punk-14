@@ -1,33 +1,33 @@
 - type: entity
   parent:
   - BaseStructure
-  id: CP14BaseWorkbench
+  id: CE14BaseWorkbench
   categories: [ ForkFiltered ]
   abstract: true
   components:
   - type: Sprite
     snapCardinals: true
-    sprite: _CP14/Structures/Furniture/workbench.rsi
+    sprite: _CE14/Structures/Furniture/workbench.rsi
     state: filler
   - type: Icon
-    sprite: _CP14/Structures/Furniture/workbench.rsi
+    sprite: _CE14/Structures/Furniture/workbench.rsi
     state: filler
   - type: ActivatableUI
-    key: enum.CP14WorkbenchUiKey.Key
+    key: enum.CE14WorkbenchUiKey.Key
     requiresComplex: true
     singleUser: true
   - type: Climbable
   - type: Clickable
-  - type: CP14Workbench
+  - type: CE14Workbench
     craftSpeed: 1
   - type: InteractionOutline
   - type: UserInterface
     interfaces:
-      enum.CP14WorkbenchUiKey.Key:
-        type: CP14WorkbenchBoundUserInterface
+      enum.CE14WorkbenchUiKey.Key:
+        type: CE14WorkbenchBoundUserInterface
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -51,11 +51,11 @@
           collection: WoodDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
   - type: PlaceableSurface
-  - type: CP14WorkbenchPlaceableProvider
+  - type: CE14WorkbenchPlaceableProvider
   - type: ItemPlacer
     maxEntities: 0
   - type: Fixtures
@@ -83,9 +83,9 @@
 
 - type: entity
   parent:
-  - CP14BaseWorkbench
-  - CP14BaseFlammable
-  id: CP14Workbench
+  - CE14BaseWorkbench
+  - CE14BaseFlammable
+  id: CE14Workbench
   name: workbench
   description: Table for the production of various basic tools.
   components:
@@ -97,20 +97,20 @@
     footstepSoundCollection:
       collection: FootstepWood
   - type: FireVisuals
-    sprite: _CP14/Effects/fire.rsi
+    sprite: _CE14/Effects/fire.rsi
     normalState: full
   - type: Construction
-    graph: CP14Workbench
-    node: CP14Workbench
-  - type: CP14Workbench
+    graph: CE14Workbench
+    node: CE14Workbench
+  - type: CE14Workbench
     recipeTags:
-    - CP14RecipeWorkbench
+    - CE14RecipeWorkbench
 
 - type: entity
-  id: CP14WorkbenchCooking
+  id: CE14WorkbenchCooking
   parent:
-  - CP14BaseWorkbench
-  - CP14BaseFlammable
+  - CE14BaseWorkbench
+  - CE14BaseFlammable
   name: cooking table
   suffix: Workbench
   description: A table to work with food. Time to cook!
@@ -120,19 +120,19 @@
   - type: Icon
     state: cooking_table
   - type: Construction
-    graph: CP14WorkbenchCooking
-    node: CP14WorkbenchCooking
-  - type: CP14Workbench
+    graph: CE14WorkbenchCooking
+    node: CE14WorkbenchCooking
+  - type: CE14Workbench
     craftSound:
-      collection: CP14Sawing #TODO
+      collection: CE14Sawing #TODO
     recipeTags:
-    - CP14RecipeCooking
+    - CE14RecipeCooking
 
 - type: entity
-  id: CP14WorkbenchSewing
+  id: CE14WorkbenchSewing
   parent:
-  - CP14BaseWorkbench
-  - CP14BaseFlammable
+  - CE14BaseWorkbench
+  - CE14BaseFlammable
   name: sewing table
   suffix: Clothing Workbench
   description: A table with embroidery tools to create different clothing and materials.
@@ -142,19 +142,19 @@
   - type: Icon
     state: sewing_table
   - type: Construction
-    graph: CP14WorkbenchSewing
-    node: CP14WorkbenchSewing
-  - type: CP14Workbench
+    graph: CE14WorkbenchSewing
+    node: CE14WorkbenchSewing
+  - type: CE14Workbench
     craftSound:
-      collection: CP14Sawing #TODO
+      collection: CE14Sawing #TODO
     recipeTags:
-    - CP14RecipeSewing
+    - CE14RecipeSewing
 
 - type: entity
-  id: CP14WorkbenchLeather
+  id: CE14WorkbenchLeather
   parent:
-  - CP14BaseWorkbench
-  - CP14BaseFlammable
+  - CE14BaseWorkbench
+  - CE14BaseFlammable
   name: tanner table
   suffix: Leather Workbench
   description: Table for leather processing and creation of leather goods.
@@ -164,10 +164,10 @@
   - type: Icon
     state: tanner_table
   - type: Construction
-    graph: CP14WorkbenchLeather
-    node: CP14WorkbenchLeather
-  - type: CP14Workbench
+    graph: CE14WorkbenchLeather
+    node: CE14WorkbenchLeather
+  - type: CE14Workbench
     craftSound:
-      collection: CP14Sawing # TODO CP14Leather?
+      collection: CE14Sawing # TODO CE14Leather?
     recipeTags:
-    - CP14RecipeLeatherWorking
+    - CE14RecipeLeatherWorking

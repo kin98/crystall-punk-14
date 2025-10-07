@@ -1,180 +1,180 @@
-- type: CP14Recipe
-  id: CP14FloorTileFoundation
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileFoundation
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14Stone
+    stack: CE14Stone
     count: 1
-  result: CP14FloorTileFoundation
+  result: CE14FloorTileFoundation
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileMarbleBrick
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileMarbleBrick
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14MarbleStone
+    stack: CE14MarbleStone
     count: 1
-  result: CP14FloorTileMarbleBrick
+  result: CE14FloorTileMarbleBrick
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileMarbleSmallbricks
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileMarbleSmallbricks
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14MarbleStone
+    stack: CE14MarbleStone
     count: 1
-  result: CP14FloorTileMarbleSmallbricks
+  result: CE14FloorTileMarbleSmallbricks
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileStonebricks
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileStonebricks
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14Stone
+    stack: CE14Stone
     count: 1
-  result: CP14FloorTileStonebricks
+  result: CE14FloorTileStonebricks
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileStonebricksSmallCarved
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileStonebricksSmallCarved
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14Stone
+    stack: CE14Stone
     count: 1
-  result: CP14FloorTileStonebricksSmallCarved
+  result: CE14FloorTileStonebricksSmallCarved
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileStonebricksSmallCarved2
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileStonebricksSmallCarved2
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14Stone
+    stack: CE14Stone
     count: 1
-  result: CP14FloorTileStonebricksSmallCarved2
+  result: CE14FloorTileStonebricksSmallCarved2
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileStonebricksSquareCarved
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileStonebricksSquareCarved
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14Stone
+    stack: CE14Stone
     count: 1
-  result: CP14FloorTileStonebricksSquareCarved
+  result: CE14FloorTileStonebricksSquareCarved
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileOakWoodplanks
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileOakWoodplanks
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14WoodenPlanks
+    stack: CE14WoodenPlanks
     count: 1
-  result: CP14FloorTileOakWoodplanks
+  result: CE14FloorTileOakWoodplanks
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileOakWoodplanksBig
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileOakWoodplanksBig
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14WoodenPlanks
+    stack: CE14WoodenPlanks
     count: 1
-  result: CP14FloorTileOakWoodplanksBig
+  result: CE14FloorTileOakWoodplanksBig
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileOakWoodplanksCruciform
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileOakWoodplanksCruciform
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14WoodenPlanks
+    stack: CE14WoodenPlanks
     count: 1
-  result: CP14FloorTileOakWoodplanksCruciform
+  result: CE14FloorTileOakWoodplanksCruciform
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileOakWoodplanksStairs
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileOakWoodplanksStairs
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14WoodenPlanks
+    stack: CE14WoodenPlanks
     count: 1
-  result: CP14FloorTileOakWoodplanksStairs
+  result: CE14FloorTileOakWoodplanksStairs
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileBirchWoodplanks
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileBirchWoodplanks
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14BirchWoodenPlanks
+    stack: CE14BirchWoodenPlanks
     count: 1
-  result: CP14FloorTileBirchWoodplanks
+  result: CE14FloorTileBirchWoodplanks
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileBirchWoodplanksBig
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileBirchWoodplanksBig
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14BirchWoodenPlanks
+    stack: CE14BirchWoodenPlanks
     count: 1
-  result: CP14FloorTileBirchWoodplanksBig
+  result: CE14FloorTileBirchWoodplanksBig
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileBirchWoodplanksCruciform
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileBirchWoodplanksCruciform
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14BirchWoodenPlanks
+    stack: CE14BirchWoodenPlanks
     count: 1
-  result: CP14FloorTileBirchWoodplanksCruciform
+  result: CE14FloorTileBirchWoodplanksCruciform
   resultCount: 4
 
-- type: CP14Recipe
-  id: CP14FloorTileBirchWoodplanksStairs
-  tag: CP14RecipeWorkbench
+- type: CE14Recipe
+  id: CE14FloorTileBirchWoodplanksStairs
+  tag: CE14RecipeWorkbench
   category: FloorTile
   craftTime: 1
   requirements:
   - !type:StackResource
-    stack: CP14BirchWoodenPlanks
+    stack: CE14BirchWoodenPlanks
     count: 1
-  result: CP14FloorTileBirchWoodplanksStairs
+  result: CE14FloorTileBirchWoodplanksStairs
   resultCount: 4
 

@@ -1,19 +1,19 @@
 using System.Threading;
-using Content.Server._CP14.Demiplane;
-using Content.Server._CP14.Procedural.GlobalWorld.Components;
+using Content.Server._CE14.Demiplane;
+using Content.Server._CE14.Procedural.GlobalWorld.Components;
 using Content.Server.Procedural;
 using Content.Server.Station.Events;
 using Content.Server.Station.Systems;
-using Content.Shared._CP14.Procedural.Prototypes;
+using Content.Shared._CE14.Procedural.Prototypes;
 using Robust.Shared.CPUJob.JobQueues;
 using Robust.Shared.CPUJob.JobQueues.Queues;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.Procedural;
+namespace Content.Server._CE14.Procedural;
 
-public sealed class CP14LocationGenerationSystem : EntitySystem
+public sealed class CE14LocationGenerationSystem : EntitySystem
 {
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
@@ -27,19 +27,19 @@ public sealed class CP14LocationGenerationSystem : EntitySystem
 
     private const double JobMaxTime = 0.002;
     private readonly JobQueue _expeditionQueue = new();
-    private readonly List<(CP14SpawnProceduralLocationJob Job, CancellationTokenSource CancelToken)> _jobs = new();
+    private readonly List<(CE14SpawnProceduralLocationJob Job, CancellationTokenSource CancelToken)> _jobs = new();
 
     public override void Initialize()
     {
         base.Initialize();
 
-        _sawmill = _logManager.GetSawmill("cp14_procedural");
+        _sawmill = _logManager.GetSawmill("CE14_procedural");
 
-        SubscribeLocalEvent<CP14ActiveJobGenerationComponent, ComponentShutdown>(OnGenerationShutdown);
-        SubscribeLocalEvent<CP14StationProceduralLocationComponent, StationPostInitEvent>(OnStationPostInit);
+        SubscribeLocalEvent<CE14ActiveJobGenerationComponent, ComponentShutdown>(OnGenerationShutdown);
+        SubscribeLocalEvent<CE14StationProceduralLocationComponent, StationPostInitEvent>(OnStationPostInit);
     }
 
-    private void OnStationPostInit(Entity<CP14StationProceduralLocationComponent> ent, ref StationPostInitEvent args)
+    private void OnStationPostInit(Entity<CE14StationProceduralLocationComponent> ent, ref StationPostInitEvent args)
     {
         var largestStationGrid = _station.GetLargestGrid(ent.Owner);
 
@@ -65,10 +65,10 @@ public sealed class CP14LocationGenerationSystem : EntitySystem
                 case JobStatus.Finished:
                     if (job.JobName is not null)
                     {
-                        var ev = new CP14LocationGeneratedEvent();
+                        var ev = new CE14LocationGeneratedEvent();
                         RaiseLocalEvent(job.MapUid, ev);
                     }
-                    RemComp<CP14ActiveJobGenerationComponent>(job.MapUid);
+                    RemComp<CE14ActiveJobGenerationComponent>(job.MapUid);
 
                     _jobs.Remove((job, cancelToken));
                     break;
@@ -81,13 +81,13 @@ public sealed class CP14LocationGenerationSystem : EntitySystem
     /// Essentially, this is a wrapper for _dungeon.GenerateDungeon, which collects the necessary settings for the
     /// dungeon based on the location and modifiers.
     /// </summary>
-    public void GenerateLocation(EntityUid mapUid, MapId mapId, ProtoId<CP14ProceduralLocationPrototype> location, List<ProtoId<CP14ProceduralModifierPrototype>> modifiers, Vector2i position = new(), int? seed = null, string? jobName = null)
+    public void GenerateLocation(EntityUid mapUid, MapId mapId, ProtoId<CE14ProceduralLocationPrototype> location, List<ProtoId<CE14ProceduralModifierPrototype>> modifiers, Vector2i position = new(), int? seed = null, string? jobName = null)
     {
         var cancelToken = new CancellationTokenSource();
 
-        EnsureComp<CP14ActiveJobGenerationComponent>(mapUid);
+        EnsureComp<CE14ActiveJobGenerationComponent>(mapUid);
 
-        var job = new CP14SpawnProceduralLocationJob(
+        var job = new CE14SpawnProceduralLocationJob(
             JobMaxTime,
             EntityManager,
             _logManager,
@@ -108,7 +108,7 @@ public sealed class CP14LocationGenerationSystem : EntitySystem
     }
 
 
-    private void OnGenerationShutdown(Entity<CP14ActiveJobGenerationComponent> ent, ref ComponentShutdown args)
+    private void OnGenerationShutdown(Entity<CE14ActiveJobGenerationComponent> ent, ref ComponentShutdown args)
     {
         //We stop asynchronous generation of a location early if for some reason this location is deleted before generation is complete
         foreach (var (job, cancelToken) in _jobs.ToArray())

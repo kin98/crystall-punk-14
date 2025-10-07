@@ -1,11 +1,11 @@
-using Content.Shared._CP14.MagicSpell;
+using Content.Shared._CE14.MagicSpell;
 
-namespace Content.Shared._CP14.Actions.Components;
+namespace Content.Shared._CE14.Actions.Components;
 
 /// <summary>
 /// Blocks the user from using action against target target in SSD.
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14ActionSSDBlockComponent : Component
+public sealed partial class CE14ActionSSDBlockComponent : Component
 {
 }

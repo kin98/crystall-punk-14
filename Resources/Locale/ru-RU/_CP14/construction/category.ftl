@@ -1,1 +1,1 @@
-cp14-construction-category-vampire = Вампиры
+CE14-construction-category-vampire = Вампиры

@@ -1,5 +1,5 @@
 - type: inventoryTemplate
-  id: CP14Rat
+  id: CE14Rat
   slots:
     - name: outerClothing
       slotTexture: suit
@@ -9,7 +9,7 @@
       displayName: Armor
       whitelist:
         tags:
-          - CP14RatWearable
+          - CE14RatWearable
 
     # Little rat cloak might be cute idk
     # - name: cloak

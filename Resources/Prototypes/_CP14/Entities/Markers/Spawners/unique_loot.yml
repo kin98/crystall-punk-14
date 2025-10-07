@@ -1,21 +1,21 @@
 - type: entity
-  id: CP14SpawnUniqueBase
+  id: CE14SpawnUniqueBase
   abstract: true
   parent: MarkerBase
   categories: [ ForkFiltered, Spawner ]
 
 - type: entity
   name: random artifact spawner
-  id: CP14SpawnUniqueArtifact
-  parent: CP14SpawnUniqueBase
+  id: CE14SpawnUniqueArtifact
+  parent: CE14SpawnUniqueBase
   categories: [ DoNotMap ]
   components:
-  - type: CP14UniqueLootSpawner
-    tag: CP14UniqueSpawnDemiplanetLoot
+  - type: CE14UniqueLootSpawner
+    tag: CE14UniqueSpawnDemiplanetLoot
   - type: Sprite
     layers:
     - sprite: Markers/cross.rsi
       state: green
-    - sprite: _CP14/Clothing/Shoes/flightboots.rsi
+    - sprite: _CE14/Clothing/Shoes/flightboots.rsi
       state: icon
 

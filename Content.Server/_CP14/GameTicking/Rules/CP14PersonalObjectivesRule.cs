@@ -1,5 +1,5 @@
 using System.Text;
-using Content.Server._CP14.GameTicking.Rules.Components;
+using Content.Server._CE14.GameTicking.Rules.Components;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Mind;
@@ -14,9 +14,9 @@ using Robust.Server.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.GameTicking.Rules;
+namespace Content.Server._CE14.GameTicking.Rules;
 
-public sealed class CP14PersonalObjectivesRule : GameRuleSystem<CP14PersonalObjectivesRuleComponent>
+public sealed class CE14PersonalObjectivesRule : GameRuleSystem<CE14PersonalObjectivesRuleComponent>
 {
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
@@ -34,7 +34,7 @@ public sealed class CP14PersonalObjectivesRule : GameRuleSystem<CP14PersonalObje
 
     private void OnPlayerSpawning(PlayerSpawnCompleteEvent args)
     {
-        var query = EntityQueryEnumerator<CP14PersonalObjectivesRuleComponent>();
+        var query = EntityQueryEnumerator<CE14PersonalObjectivesRuleComponent>();
         while (query.MoveNext(out var uid, out var personalObj))
         {
             if (!_mind.TryGetMind(args.Player.UserId, out var mindId, out var mind))
@@ -97,23 +97,23 @@ public sealed class CP14PersonalObjectivesRule : GameRuleSystem<CP14PersonalObje
     }
 
     protected override void AppendRoundEndText(EntityUid uid,
-        CP14PersonalObjectivesRuleComponent component,
+        CE14PersonalObjectivesRuleComponent component,
         GameRuleComponent gameRule,
         ref RoundEndTextAppendEvent args)
     {
         base.AppendRoundEndText(uid, component, gameRule, ref args);
 
         var sb = new StringBuilder();
-        sb.Append($"[head=2]{Loc.GetString("cp14-objective-issuer-personal")}[/head]\n");
+        sb.Append($"[head=2]{Loc.GetString("CE14-objective-issuer-personal")}[/head]\n");
 
         foreach (var (mind, objectives) in component.PersonalObjectives)
         {
             if (!TryComp<MindComponent>(mind, out var mindComp))
                 continue;
 
-            var name = mindComp.CharacterName ?? Loc.GetString("cp14-objective-unknown");
-            var role = Loc.GetString("cp14-objective-unknown");
-            var ckey = Loc.GetString("cp14-objective-unknown");
+            var name = mindComp.CharacterName ?? Loc.GetString("CE14-objective-unknown");
+            var role = Loc.GetString("CE14-objective-unknown");
+            var ckey = Loc.GetString("CE14-objective-unknown");
 
             if (_jobs.MindTryGetJob(mind, out var job))
                 role = Loc.GetString(job.Name);
@@ -138,11 +138,11 @@ public sealed class CP14PersonalObjectivesRule : GameRuleSystem<CP14PersonalObje
                 if (progress <= 0.75f)
                     continue;
 
-                var status = "cp14-objective-endtext-status-failure";
+                var status = "CE14-objective-endtext-status-failure";
                 if (progress > 0.75f)
-                    status = "cp14-objective-endtext-status-success-a";
+                    status = "CE14-objective-endtext-status-success-a";
                 if (progress > 0.99f)
-                    status = "cp14-objective-endtext-status-success";
+                    status = "CE14-objective-endtext-status-success";
 
                 show = true;
 

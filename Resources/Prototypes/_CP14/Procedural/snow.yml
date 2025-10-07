@@ -1,11 +1,11 @@
 - type: biomeTemplate
-  id: CP14SnowFill
+  id: CE14SnowFill
   layers:
     - !type:BiomeTileLayer
       threshold: -1.0
-      tile: CP14FloorSnowDeepDeep
+      tile: CE14FloorSnowDeepDeep
     - !type:BiomeTileLayer
-      tile: CP14FloorSnowDeep
+      tile: CE14FloorSnowDeep
       threshold: 0
       noise:
         seed: 0
@@ -18,7 +18,7 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
     - !type:BiomeTileLayer
-      tile: CP14FloorSnow
+      tile: CE14FloorSnow
       threshold: 0.45
       noise:
         seed: 0
@@ -32,10 +32,10 @@
         domainWarpAmp: 120
 
 - type: biomeTemplate
-  id: CP14Snowland
+  id: CE14Snowland
   layers:
     - !type:BiomeMetaLayer
-      template: CP14SnowFill
+      template: CE14SnowFill
     - !type:BiomeEntityLayer # Snowdrifts
       threshold: 0.3
       noise:
@@ -49,11 +49,11 @@
         domainWarpType: OpenSimplex2
         domainWarpAmp: 120
       allowedTiles:
-        - CP14FloorSnow
-        - CP14FloorSnowDeep
-        - CP14FloorSnowDeepDeep
+        - CE14FloorSnow
+        - CE14FloorSnowDeep
+        - CE14FloorSnowDeepDeep
       entities:
-        - CP14Snowdrift
+        - CE14Snowdrift
     - !type:BiomeEntityLayer # Rare Trees
       threshold: 0.8
       noise:
@@ -62,22 +62,22 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorSnow
-        - CP14FloorSnowDeep
-        - CP14FloorSnowDeepDeep
+        - CE14FloorSnow
+        - CE14FloorSnowDeep
+        - CE14FloorSnowDeepDeep
       entities:
-        - CP14FloraTreeSnow
-        #- CP14FloraTreeGreenLarge
+        - CE14FloraTreeSnow
+        #- CE14FloraTreeGreenLarge
 
 # Subbiomes
 
 # Forest
 
 - type: biomeTemplate
-  id: CP14SnowlandForest
+  id: CE14SnowlandForest
   layers:
     - !type:BiomeMetaLayer
-      template: CP14Snowland
+      template: CE14Snowland
     - !type:BiomeEntityLayer # More Trees
       threshold: 0.2
       noise:
@@ -86,24 +86,24 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorSnow
-        - CP14FloorSnowDeep
-        - CP14FloorSnowDeepDeep
+        - CE14FloorSnow
+        - CE14FloorSnowDeep
+        - CE14FloorSnowDeepDeep
       entities:
-        - CP14FloraTreeDead
-        - CP14FloraTreeSnow
-        - CP14FloraTreeDeadSmall
-        #- CP14FloraTreeGreenLarge
+        - CE14FloraTreeDead
+        - CE14FloraTreeSnow
+        - CE14FloraTreeDeadSmall
+        #- CE14FloraTreeGreenLarge
 
 # Hills
 
 - type: biomeTemplate
-  id: CP14SnowlandHills # Холмы
+  id: CE14SnowlandHills # Холмы
   layers:
     - !type:BiomeMetaLayer
-      template: CP14SnowlandForest
+      template: CE14SnowlandForest
     - !type:BiomeTileLayer
-      tile: CP14FloorBase
+      tile: CE14FloorBase
       invert: true
       threshold: 0.5
       noise:
@@ -120,20 +120,20 @@
         domainWarpAmp: 285
     - !type:BiomeEntityLayer # Walls
       allowedTiles:
-        - CP14FloorBase
+        - CE14FloorBase
       threshold: -1.0
       entities:
-        - CP14WallSnow
+        - CE14WallSnow
 
 # Frozen swamp
 
 - type: biomeTemplate
-  id: CP14SnowlandSwamp
+  id: CE14SnowlandSwamp
   layers:
     - !type:BiomeMetaLayer
-      template: CP14Snowland
+      template: CE14Snowland
     - !type:BiomeTileLayer
-      tile: CP14FloorIce
+      tile: CE14FloorIce
       threshold: 0.0
       noise:
         seed: 14
@@ -148,27 +148,27 @@
         fractalType: FBm
         frequency: 2
       allowedTiles:
-        - CP14FloorSnow
-        - CP14FloorSnowDeep
-        - CP14FloorSnowDeepDeep
+        - CE14FloorSnow
+        - CE14FloorSnowDeep
+        - CE14FloorSnowDeepDeep
       entities:
-        - CP14FloraTreeSnow
-        #- CP14FloraTreeGreenLarge
+        - CE14FloraTreeSnow
+        #- CE14FloraTreeGreenLarge
 
 - type: biomeTemplate
-  id: CP14SnowlandTestResult
+  id: CE14SnowlandTestResult
   layers:
     - !type:BiomeMetaLayer
-      template: CP14Snowland
+      template: CE14Snowland
     - !type:BiomeMetaLayer
-      template: CP14SnowlandForest
+      template: CE14SnowlandForest
       threshold: 0.2
       noise:
         seed: 18
         frequency: 0.02
         fractalType: None
     - !type:BiomeMetaLayer
-      template: CP14SnowlandHills
+      template: CE14SnowlandHills
       threshold: 0.4
       noise:
         seed: 14

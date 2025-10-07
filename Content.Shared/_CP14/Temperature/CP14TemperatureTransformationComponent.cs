@@ -2,16 +2,16 @@ using System.Numerics;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Temperature;
+namespace Content.Shared._CE14.Temperature;
 
 /// <summary>
 /// passively returns the solution temperature to the standard
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-public sealed partial class CP14TemperatureTransformationComponent : Component
+public sealed partial class CE14TemperatureTransformationComponent : Component
 {
     [DataField(required: true)]
-    public List<CP14TemperatureTransformEntry> Entries = new();
+    public List<CE14TemperatureTransformEntry> Entries = new();
 
     /// <summary>
     /// solution where reagents will be added from newly added ingredients
@@ -27,7 +27,7 @@ public sealed partial class CP14TemperatureTransformationComponent : Component
 }
 
 [DataRecord]
-public record struct CP14TemperatureTransformEntry()
+public record struct CE14TemperatureTransformEntry()
 {
     public EntProtoId? TransformTo { get; set; } = null;
     public Vector2 TemperatureRange { get; set; } = new();

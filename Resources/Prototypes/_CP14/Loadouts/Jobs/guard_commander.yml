@@ -1,13 +1,13 @@
 # Cloak
 
 - type: loadoutGroup
-  id: CP14GuardCommanderCloak
-  name: cp14-loadout-guard-commander-cloak
+  id: CE14GuardCommanderCloak
+  name: CE14-loadout-guard-commander-cloak
   loadouts:
-  - CP14ClothingCloakGuardCommander
+  - CE14ClothingCloakGuardCommander
 
 - type: loadout
-  id: CP14ClothingCloakGuardCommander
+  id: CE14ClothingCloakGuardCommander
   equipment:
-    cloak: CP14ClothingCloakGuardCommander
+    cloak: CE14ClothingCloakGuardCommander
 

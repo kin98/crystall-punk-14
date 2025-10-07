@@ -1,13 +1,13 @@
 using Content.Shared.FixedPoint;
 using Content.Shared.Guidebook;
 
-namespace Content.Shared._CP14.MagicEnergy.Components;
+namespace Content.Shared._CE14.MagicEnergy.Components;
 
 /// <summary>
 /// Restores mana if the entity is in the sun, and wastes it if not
 /// </summary>
-[RegisterComponent, Access(typeof(CP14SharedMagicEnergySystem))]
-public sealed partial class CP14MagicEnergyPhotosynthesisComponent : Component
+[RegisterComponent, Access(typeof(CE14SharedMagicEnergySystem))]
+public sealed partial class CE14MagicEnergyPhotosynthesisComponent : Component
 {
     [DataField]
     [GuidebookData]

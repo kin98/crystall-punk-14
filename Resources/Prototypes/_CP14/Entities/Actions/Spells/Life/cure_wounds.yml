@@ -1,26 +1,26 @@
 - type: entity
-  id: CP14ActionSpellCureWounds
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellCureWounds
+  parent: CE14ActionSpellBase
   name: Cure wounds
   description: You heal the target from physical damage
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.5
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 10
   - type: DoAfterArgs
     delay: 1.5
     breakOnDamage: true
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Et curabuntur..."
     endSpeech: "vulnera tua"
-  - type: CP14ActionTargetMobStatusRequired
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneCureWounds
+  - type: CE14ActionTargetMobStatusRequired
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneCureWounds
   - type: Action
     useDelay: 5
     icon:
-      sprite: _CP14/Actions/Spells/healing.rsi
+      sprite: _CE14/Actions/Spells/healing.rsi
       state: cure_wounds
   - type: TargetAction
     range: 7
@@ -29,16 +29,16 @@
     whitelist:
       components:
       - MobState
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectCureWounds
+        - CE14ImpactEffectCureWounds
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectCureWounds
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectCureWounds
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:HealthChange
           damage:
@@ -51,8 +51,8 @@
           amount: -5
 
 - type: entity
-  id: CP14RuneCureWounds
-  parent: CP14BaseMagicRune
+  id: CE14RuneCureWounds
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -65,8 +65,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectCureWounds
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectCureWounds
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -77,10 +77,10 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14BaseSpellScrollHealing
-  id: CP14SpellScrollCureWounds
+  parent: CE14BaseSpellScrollHealing
+  id: CE14SpellScrollCureWounds
   name: cure wounds spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellCureWounds
+    - CE14ActionSpellCureWounds

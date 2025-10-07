@@ -1,10 +1,10 @@
 - type: entity
-  id: CP14ActionSpellManaGift
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellManaGift
+  parent: CE14ActionSpellBase
   name: Mana transfer
   description: You can transfer a small amount of your magical energy to a target entity or magical object.
   components:
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 10
     canModifyManacost: false
   - type: DoAfterArgs
@@ -12,59 +12,59 @@
     breakOnMove: true
     delay: 1
     breakOnDamage: true
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneManaGift
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneManaGift
   - type: Action
     useDelay: 2
     icon:
-      sprite: _CP14/Actions/Spells/meta.rsi
+      sprite: _CE14/Actions/Spells/meta.rsi
       state: mana_gift
   - type: TargetAction
     interactOnMiss: false
   - type: EntityTargetAction
     whitelist:
       components:
-      - CP14MagicEnergyContainer
-      - CP14MagicEnergyCrystalSlot
+      - CE14MagicEnergyContainer
+      - CE14MagicEnergyCrystalSlot
     canTargetSelf: true
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectManaGift
+        - CE14ImpactEffectManaGift
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectManaGift
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectManaGift
+      - !type:CE14SpellApplyEntityEffect
         effects:
-        - !type:CP14ManaChange
+        - !type:CE14ManaChange
           manaDelta: 10
           safe: false
 
 - type: entity
-  id: CP14ActionSpellManaGiftElf
-  parent: CP14ActionSpellManaGift
+  id: CE14ActionSpellManaGiftElf
+  parent: CE14ActionSpellManaGift
   name: Carefull mana transfer
   description: You transfer mana at a tremendous rate without dealing damage to the target.
   components:
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 20
   - type: EntityTargetAction
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectManaGift
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectManaGift
+      - !type:CE14SpellApplyEntityEffect
         effects:
-        - !type:CP14ManaChange
+        - !type:CE14ManaChange
           manaDelta: 20
           safe: true
 
 - type: entity
-  id: CP14RuneManaGift
-  parent: CP14BaseMagicRune
+  id: CE14RuneManaGift
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -80,8 +80,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectManaGift
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectManaGift
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   save: false
   components:
@@ -92,11 +92,11 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14BaseSpellScrollMeta
-  id: CP14SpellScrollManaGift
+  parent: CE14BaseSpellScrollMeta
+  id: CE14SpellScrollManaGift
   name: mana gift spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellManaGift
+    - CE14ActionSpellManaGift
 

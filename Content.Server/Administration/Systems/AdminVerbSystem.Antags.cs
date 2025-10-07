@@ -1,4 +1,4 @@
-using Content.Server._CP14.GameTicking.Rules.Components;
+using Content.Server._CE14.GameTicking.Rules.Components;
 using Content.Server.Administration.Commands;
 using Content.Server.Antag;
 using Content.Server.GameTicking;
@@ -33,11 +33,11 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId ParadoxCloneRuleId = "ParadoxCloneSpawn";
     private static readonly ProtoId<StartingGearPrototype> PirateGearId = "PirateGear";
 
-    //CP14
-    private static readonly EntProtoId CP14VampireUnnameable = "CP14GameRuleVampireClanUnnameable";
-    private static readonly EntProtoId CP14VampireDevourers = "CP14GameRuleVampireClanDevourers";
-    private static readonly EntProtoId CP14VampireNightChildrens = "CP14GameRuleVampireClanNightChildrens";
-    //CP14 end
+    //CE14
+    private static readonly EntProtoId CE14VampireUnnameable = "CE14GameRuleVampireClanUnnameable";
+    private static readonly EntProtoId CE14VampireDevourers = "CE14GameRuleVampireClanDevourers";
+    private static readonly EntProtoId CE14VampireNightChildrens = "CE14GameRuleVampireClanNightChildrens";
+    //CE14 end
 
     // All antag verbs have names so invokeverb works.
     private void AddAntagVerbs(GetVerbsEvent<Verb> args)
@@ -57,47 +57,47 @@ public sealed partial class AdminVerbSystem
 
         Verb vampire3 = new()
         {
-            Text = Loc.GetString("cp14-admin-verb-text-make-vampire") + ": " + Loc.GetString("cp14-vampire-fraction-name-night-childrens"),
+            Text = Loc.GetString("CE14-admin-verb-text-make-vampire") + ": " + Loc.GetString("CE14-vampire-fraction-name-night-childrens"),
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CP14/Interface/Misc/vampire_icons.rsi"), "NightChildrens"),
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CE14/Interface/Misc/vampire_icons.rsi"), "NightChildrens"),
             Act = () =>
             {
-                _antag.ForceMakeAntag<CP14VampireRuleComponent>(targetPlayer, CP14VampireNightChildrens);
+                _antag.ForceMakeAntag<CE14VampireRuleComponent>(targetPlayer, CE14VampireNightChildrens);
             },
             Impact = LogImpact.High,
-            Message = Loc.GetString("cp14-admin-verb-make-vampire"),
+            Message = Loc.GetString("CE14-admin-verb-make-vampire"),
         };
         args.Verbs.Add(vampire3);
 
         Verb vampire2 = new()
         {
-            Text = Loc.GetString("cp14-admin-verb-text-make-vampire") + ": " + Loc.GetString("cp14-vampire-fraction-name-devourers"),
+            Text = Loc.GetString("CE14-admin-verb-text-make-vampire") + ": " + Loc.GetString("CE14-vampire-fraction-name-devourers"),
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CP14/Interface/Misc/vampire_icons.rsi"), "Devourers"),
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CE14/Interface/Misc/vampire_icons.rsi"), "Devourers"),
             Act = () =>
             {
-                _antag.ForceMakeAntag<CP14VampireRuleComponent>(targetPlayer, CP14VampireDevourers);
+                _antag.ForceMakeAntag<CE14VampireRuleComponent>(targetPlayer, CE14VampireDevourers);
             },
             Impact = LogImpact.High,
-            Message = Loc.GetString("cp14-admin-verb-make-vampire"),
+            Message = Loc.GetString("CE14-admin-verb-make-vampire"),
         };
         args.Verbs.Add(vampire2);
 
         Verb vampire1 = new()
         {
-            Text = Loc.GetString("cp14-admin-verb-text-make-vampire") + ": " + Loc.GetString("cp14-vampire-fraction-name-unnameable"),
+            Text = Loc.GetString("CE14-admin-verb-text-make-vampire") + ": " + Loc.GetString("CE14-vampire-fraction-name-unnameable"),
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CP14/Interface/Misc/vampire_icons.rsi"), "Unnameable"),
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_CE14/Interface/Misc/vampire_icons.rsi"), "Unnameable"),
             Act = () =>
             {
-                _antag.ForceMakeAntag<CP14VampireRuleComponent>(targetPlayer, CP14VampireUnnameable);
+                _antag.ForceMakeAntag<CE14VampireRuleComponent>(targetPlayer, CE14VampireUnnameable);
             },
             Impact = LogImpact.High,
-            Message = Loc.GetString("cp14-admin-verb-make-vampire"),
+            Message = Loc.GetString("CE14-admin-verb-make-vampire"),
         };
         args.Verbs.Add(vampire1);
 
-        /* CP14 disable default antags
+        /* CE14 disable default antags
         var traitorName = Loc.GetString("admin-verb-text-make-traitor");
         Verb traitor = new()
         {

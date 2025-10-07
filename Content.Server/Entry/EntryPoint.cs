@@ -1,6 +1,6 @@
-using Content.Server._CP14.Discord;
-using Content.Server._CP14.JoinQueue;
-using Content.Server._CP14.Sponsor;
+using Content.Server._CE14.Discord;
+using Content.Server._CE14.JoinQueue;
+using Content.Server._CE14.Sponsor;
 using Content.Server.Acz;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
@@ -27,7 +27,7 @@ using Content.Server.Preferences.Managers;
 using Content.Server.ServerInfo;
 using Content.Server.ServerUpdates;
 using Content.Server.Voting.Managers;
-using Content.Shared._CP14.Sponsor;
+using Content.Shared._CE14.Sponsor;
 using Content.Shared.CCVar;
 using Content.Shared.Kitchen;
 using Content.Shared.Localizations;
@@ -106,11 +106,11 @@ namespace Content.Server.Entry
                 logManager.GetSawmill("Storage").Level = LogLevel.Info;
                 logManager.GetSawmill("db.ef").Level = LogLevel.Info;
 
-                //CP14
+                //CE14
                 IoCManager.Resolve<DiscordAuthManager>().Initialize();
                 IoCManager.Resolve<JoinQueueManager>().Initialize();
-                IoCManager.Resolve<ICP14SponsorManager>().Initialize();
-                //CP14 end
+                IoCManager.Resolve<ICE14SponsorManager>().Initialize();
+                //CE14 end
 
                 IoCManager.Resolve<IAdminLogManager>().Initialize();
                 IoCManager.Resolve<IConnectionManager>().Initialize();

@@ -1,11 +1,11 @@
-using Content.Shared._CP14.ModularCraft.Components;
+using Content.Shared._CE14.ModularCraft.Components;
 using JetBrains.Annotations;
 
-namespace Content.Shared._CP14.ModularCraft;
+namespace Content.Shared._CE14.ModularCraft;
 
 [ImplicitDataDefinitionForInheritors]
 [MeansImplicitUse]
-public abstract partial class CP14ModularCraftModifier
+public abstract partial class CE14ModularCraftModifier
 {
-    public abstract void Effect(EntityManager entManager, Entity<CP14ModularCraftStartPointComponent> start, Entity<CP14ModularCraftPartComponent>? part);
+    public abstract void Effect(EntityManager entManager, Entity<CE14ModularCraftStartPointComponent> start, Entity<CE14ModularCraftPartComponent>? part);
 }

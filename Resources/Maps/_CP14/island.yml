@@ -3,12 +3,12 @@ meta:
   postmapinit: false
 tilemap:
   0: Space
-  9: CP14FloorBase
-  10: CP14FloorBirchWoodPlanks
-  28: CP14FloorGrass
-  29: CP14FloorGrassLight
-  30: CP14FloorGrassTall
-  1: CP14FloorSand
+  9: CE14FloorBase
+  10: CE14FloorBirchWoodPlanks
+  28: CE14FloorGrass
+  29: CE14FloorGrassLight
+  30: CE14FloorGrassTall
+  1: CE14FloorSand
 entities:
 - proto: ""
   entities:
@@ -22,7 +22,7 @@ entities:
     - type: GridTree
     - type: Broadphase
     - type: OccluderTree
-    - type: CP14CloudShadows
+    - type: CE14CloudShadows
     - type: MapLight
     - type: MapAtmosphere
       space: False
@@ -51,7 +51,7 @@ entities:
       enabled: True
     - type: LoadedMap
     - type: Parallax
-      parallax: CP14Ocean
+      parallax: CE14Ocean
   - uid: 2
     components:
     - type: MetaData
@@ -182,7 +182,7 @@ entities:
           - 0
         chunkSize: 4
     - type: GasTileOverlay
-- proto: CP14BiomeSpawnerGrassland
+- proto: CE14BiomeSpawnerGrassland
   entities:
   - uid: 5
     components:
@@ -1769,7 +1769,7 @@ entities:
     - type: Transform
       pos: -9.5,-2.5
       parent: 2
-- proto: CP14Lamppost
+- proto: CE14Lamppost
   entities:
   - uid: 55
     components:
@@ -1781,7 +1781,7 @@ entities:
     - type: Transform
       pos: 10.507951,-0.49324775
       parent: 2
-- proto: CP14SpawnPointAdventurer
+- proto: CE14SpawnPointAdventurer
   entities:
   - uid: 58
     components:

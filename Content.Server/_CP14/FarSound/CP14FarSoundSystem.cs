@@ -1,12 +1,12 @@
 using Content.Server.Explosion.EntitySystems;
-using Content.Shared._CP14.FarSound;
+using Content.Shared._CE14.FarSound;
 using Content.Shared.Trigger;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 
-namespace Content.Server._CP14.FarSound;
+namespace Content.Server._CE14.FarSound;
 
-public sealed class CP14FarSoundSystem : EntitySystem
+public sealed class CE14FarSoundSystem : EntitySystem
 {
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -16,10 +16,10 @@ public sealed class CP14FarSoundSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14FarSoundComponent, TriggerEvent>(OnTrigger);
+        SubscribeLocalEvent<CE14FarSoundComponent, TriggerEvent>(OnTrigger);
     }
 
-    private void OnTrigger(Entity<CP14FarSoundComponent> ent, ref TriggerEvent args)
+    private void OnTrigger(Entity<CE14FarSoundComponent> ent, ref TriggerEvent args)
     {
         var mapPos =  _transform.GetMapCoordinates(ent);
         var entPos = Transform(ent).Coordinates;

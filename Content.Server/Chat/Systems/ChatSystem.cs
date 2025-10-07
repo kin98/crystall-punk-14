@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using Content.Server._CP14.Religion;
+using Content.Server._CE14.Religion;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
@@ -318,9 +318,9 @@ public sealed partial class ChatSystem : SharedChatSystem
         Color? colorOverride = null
         )
     {
-        sender ??= Loc.GetString("cp14-announcement-gamemaster"); //CP14 replaced
+        sender ??= Loc.GetString("CE14-announcement-gamemaster"); //CE14 replaced
 
-        var wrappedMessage = Loc.GetString("cp14-announcement-wrapped", ("sender", sender), ("message", FormattedMessage.EscapeText(message))); //CP14 replaced
+        var wrappedMessage = Loc.GetString("CE14-announcement-wrapped", ("sender", sender), ("message", FormattedMessage.EscapeText(message))); //CE14 replaced
         _chatManager.ChatMessageToAll(ChatChannel.Radio, message, wrappedMessage, default, false, true, colorOverride);
         if (playSound)
         {
@@ -348,9 +348,9 @@ public sealed partial class ChatSystem : SharedChatSystem
         SoundSpecifier? announcementSound = null,
         Color? colorOverride = null)
     {
-        sender ??= Loc.GetString("cp14-announcement-gamemaster"); //CP14 - replaced default sender
+        sender ??= Loc.GetString("CE14-announcement-gamemaster"); //CE14 - replaced default sender
 
-        var wrappedMessage = Loc.GetString("cp14-announcement-wrapped", ("sender", sender), ("message", FormattedMessage.EscapeText(message))); //CP14 - replaced default wrapped
+        var wrappedMessage = Loc.GetString("CE14-announcement-wrapped", ("sender", sender), ("message", FormattedMessage.EscapeText(message))); //CE14 - replaced default wrapped
         _chatManager.ChatMessageToManyFiltered(filter, ChatChannel.Radio, message, wrappedMessage, source ?? default, false, true, colorOverride);
         if (playSound)
         {

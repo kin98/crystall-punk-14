@@ -1,23 +1,23 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.ZLevel;
+namespace Content.Shared._CE14.ZLevel;
 
 /// <summary>
 /// component that allows you to quickly move between Z levels
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class CP14ZLevelMoverComponent : Component
+public sealed partial class CE14ZLevelMoverComponent : Component
 {
     [DataField]
-    public EntProtoId UpActionProto = "CP14ActionZLevelUp";
+    public EntProtoId UpActionProto = "CE14ActionZLevelUp";
 
     [DataField, AutoNetworkedField]
-    public EntityUid? CP14ZLevelUpActionEntity;
+    public EntityUid? CE14ZLevelUpActionEntity;
 
     [DataField]
-    public EntProtoId DownActionProto = "CP14ActionZLevelDown";
+    public EntProtoId DownActionProto = "CE14ActionZLevelDown";
 
     [DataField, AutoNetworkedField]
-    public EntityUid? CP14ZLevelDownActionEntity;
+    public EntityUid? CE14ZLevelDownActionEntity;
 }

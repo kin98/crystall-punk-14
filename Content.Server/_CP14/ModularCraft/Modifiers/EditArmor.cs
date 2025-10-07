@@ -1,16 +1,16 @@
-using Content.Shared._CP14.ModularCraft;
-using Content.Shared._CP14.ModularCraft.Components;
+using Content.Shared._CE14.ModularCraft;
+using Content.Shared._CE14.ModularCraft.Components;
 using Content.Shared.Armor;
 using Content.Shared.Damage;
 
-namespace Content.Server._CP14.ModularCraft.Modifiers;
+namespace Content.Server._CE14.ModularCraft.Modifiers;
 
-public sealed partial class EditArmor : CP14ModularCraftModifier
+public sealed partial class EditArmor : CE14ModularCraftModifier
 {
     [DataField(required: true)]
     public DamageModifierSet Modifiers = new();
 
-    public override void Effect(EntityManager entManager, Entity<CP14ModularCraftStartPointComponent> start, Entity<CP14ModularCraftPartComponent>? part)
+    public override void Effect(EntityManager entManager, Entity<CE14ModularCraftStartPointComponent> start, Entity<CE14ModularCraftPartComponent>? part)
     {
         if (!entManager.TryGetComponent<ArmorComponent>(start, out var armor))
             return;

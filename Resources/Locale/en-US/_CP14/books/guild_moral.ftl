@@ -1,4 +1,4 @@
-cp14-book-text-guild-moral = The Adventurer's Guild Morale is an unofficial set of principles that helps a group of adventurers interact in a fair and respectful manner. Following these rules not only builds team morale, but also makes adventures more harmonious and interesting.
+CE14-book-text-guild-moral = The Adventurer's Guild Morale is an unofficial set of principles that helps a group of adventurers interact in a fair and respectful manner. Following these rules not only builds team morale, but also makes adventures more harmonious and interesting.
 
       The following are the basic tenets of Guild morals:
     ________________________________________

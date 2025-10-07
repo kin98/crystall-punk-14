@@ -1,8 +1,8 @@
 using System.Linq;
 using System.Text;
-using Content.Shared._CP14.Skill.Components;
-using Content.Shared._CP14.Skill.Prototypes;
-using Content.Shared._CP14.Skill.Restrictions;
+using Content.Shared._CE14.Skill.Components;
+using Content.Shared._CE14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Restrictions;
 using Content.Shared.FixedPoint;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
@@ -14,32 +14,32 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.Skill;
+namespace Content.Shared._CE14.Skill;
 
-public abstract partial class CP14SharedSkillSystem : EntitySystem
+public abstract partial class CE14SharedSkillSystem : EntitySystem
 {
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
-    private EntityQuery<CP14SkillStorageComponent> _skillStorageQuery;
+    private EntityQuery<CE14SkillStorageComponent> _skillStorageQuery;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        _skillStorageQuery = GetEntityQuery<CP14SkillStorageComponent>();
+        _skillStorageQuery = GetEntityQuery<CE14SkillStorageComponent>();
 
-        SubscribeLocalEvent<CP14SkillStorageComponent, MapInitEvent>(OnMapInit);
-        SubscribeLocalEvent<CP14SkillPointConsumableComponent, UseInHandEvent>(OnInteracted);
+        SubscribeLocalEvent<CE14SkillStorageComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<CE14SkillPointConsumableComponent, UseInHandEvent>(OnInteracted);
 
         InitializeAdmin();
         InitializeChecks();
         InitializeScanning();
     }
 
-    private void OnInteracted(Entity<CP14SkillPointConsumableComponent> ent, ref UseInHandEvent args)
+    private void OnInteracted(Entity<CE14SkillPointConsumableComponent> ent, ref UseInHandEvent args)
     {
         if (!_timing.IsFirstTimePredicted)
             return;
@@ -68,7 +68,7 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
         PredictedQueueDel(ent.Owner);
     }
 
-    private void OnMapInit(Entity<CP14SkillStorageComponent> ent, ref MapInitEvent args)
+    private void OnMapInit(Entity<CE14SkillStorageComponent> ent, ref MapInitEvent args)
     {
         //If at initialization we have any skill records, we automatically give them to this entity
 
@@ -93,33 +93,33 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     ///  Adds a skill tree to the player, allowing them to learn skills from it.
     /// </summary>
     public void AddSkillTree(EntityUid target,
-        ProtoId<CP14SkillTreePrototype> tree,
-        CP14SkillStorageComponent? component = null)
+        ProtoId<CE14SkillTreePrototype> tree,
+        CE14SkillStorageComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return;
 
         component.AvailableSkillTrees.Add(tree);
-        DirtyField(target, component, nameof(CP14SkillStorageComponent.AvailableSkillTrees));
+        DirtyField(target, component, nameof(CE14SkillStorageComponent.AvailableSkillTrees));
     }
 
     public void RemoveSkillTree(EntityUid target,
-        ProtoId<CP14SkillTreePrototype> tree,
-        CP14SkillStorageComponent? component = null)
+        ProtoId<CE14SkillTreePrototype> tree,
+        CE14SkillStorageComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return;
 
         component.AvailableSkillTrees.Remove(tree);
-        DirtyField(target, component, nameof(CP14SkillStorageComponent.AvailableSkillTrees));
+        DirtyField(target, component, nameof(CE14SkillStorageComponent.AvailableSkillTrees));
     }
 
     /// <summary>
     /// Directly adds the skill to the player, bypassing any checks.
     /// </summary>
     public bool TryAddSkill(EntityUid target,
-        ProtoId<CP14SkillPrototype> skill,
-        CP14SkillStorageComponent? component = null,
+        ProtoId<CE14SkillPrototype> skill,
+        CE14SkillStorageComponent? component = null,
         bool free = false)
     {
         if (!Resolve(target, ref component, false))
@@ -152,7 +152,7 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
         component.LearnedSkills.Add(skill);
         Dirty(target, component);
 
-        var learnEv = new CP14SkillLearnedEvent(skill, target);
+        var learnEv = new CE14SkillLearnedEvent(skill, target);
         RaiseLocalEvent(target, ref learnEv);
 
         return true;
@@ -162,8 +162,8 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     ///  Removes the skill from the player, bypassing any checks.
     /// </summary>
     public bool TryRemoveSkill(EntityUid target,
-        ProtoId<CP14SkillPrototype> skill,
-        CP14SkillStorageComponent? component = null)
+        ProtoId<CE14SkillPrototype> skill,
+        CE14SkillStorageComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return false;
@@ -198,8 +198,8 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     ///  Checks if the player has the skill.
     /// </summary>
     public bool HaveSkill(EntityUid target,
-        ProtoId<CP14SkillPrototype> skill,
-        CP14SkillStorageComponent? component = null)
+        ProtoId<CE14SkillPrototype> skill,
+        CE14SkillStorageComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return false;
@@ -208,8 +208,8 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     }
 
     public bool HaveFreeSkill(EntityUid target,
-        ProtoId<CP14SkillPrototype> skill,
-        CP14SkillStorageComponent? component = null)
+        ProtoId<CE14SkillPrototype> skill,
+        CE14SkillStorageComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return false;
@@ -221,8 +221,8 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     ///  Checks if the player can learn the specified skill.
     /// </summary>
     public bool CanLearnSkill(EntityUid target,
-        ProtoId<CP14SkillPrototype> skill,
-        CP14SkillStorageComponent? component = null)
+        ProtoId<CE14SkillPrototype> skill,
+        CE14SkillStorageComponent? component = null)
     {
         if (!_proto.TryIndex(skill, out var indexedSkill))
             return false;
@@ -234,8 +234,8 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     ///  Checks if the player can learn the specified skill.
     /// </summary>
     public bool CanLearnSkill(EntityUid target,
-        CP14SkillPrototype skill,
-        CP14SkillStorageComponent? component = null)
+        CE14SkillPrototype skill,
+        CE14SkillStorageComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return false;
@@ -272,8 +272,8 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     ///  Tries to learn the specified skill for the player.
     /// </summary>
     public bool TryLearnSkill(EntityUid target,
-        ProtoId<CP14SkillPrototype> skill,
-        CP14SkillStorageComponent? component = null)
+        ProtoId<CE14SkillPrototype> skill,
+        CE14SkillStorageComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return false;
@@ -290,7 +290,7 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     /// <summary>
     ///  Helper function to get the skill name for a given skill prototype.
     /// </summary>
-    public string GetSkillName(ProtoId<CP14SkillPrototype> skill)
+    public string GetSkillName(ProtoId<CE14SkillPrototype> skill)
     {
         if (!_proto.TryIndex(skill, out var indexedSkill))
             return string.Empty;
@@ -310,7 +310,7 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     /// <summary>
     ///  Helper function to get the skill description for a given skill prototype.
     /// </summary>
-    public string GetSkillDescription(ProtoId<CP14SkillPrototype> skill)
+    public string GetSkillDescription(ProtoId<CE14SkillPrototype> skill)
     {
         if (!_proto.TryIndex(skill, out var indexedSkill))
             return string.Empty;
@@ -331,10 +331,10 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     /// <summary>
     /// Obtaining all skills that are not prerequisites for other skills of this creature
     /// </summary>
-    public HashSet<ProtoId<CP14SkillPrototype>> GetFrontierSkills(EntityUid target,
-        CP14SkillStorageComponent? component = null)
+    public HashSet<ProtoId<CE14SkillPrototype>> GetFrontierSkills(EntityUid target,
+        CE14SkillStorageComponent? component = null)
     {
-        var skills = new HashSet<ProtoId<CP14SkillPrototype>>();
+        var skills = new HashSet<ProtoId<CE14SkillPrototype>>();
         if (!Resolve(target, ref component, false))
             return skills;
 
@@ -364,7 +364,7 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     ///  Helper function to reset skills to only learned skills
     /// </summary>
     public bool TryResetSkills(EntityUid target,
-        CP14SkillStorageComponent? component = null)
+        CE14SkillStorageComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return false;
@@ -386,11 +386,11 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     /// Increases the number of memory points for a character, limited to a certain amount.
     /// </summary>
     public void AddSkillPoints(EntityUid target,
-        ProtoId<CP14SkillPointPrototype> type,
+        ProtoId<CE14SkillPointPrototype> type,
         FixedPoint2 points,
         FixedPoint2? limit = null,
         bool silent = false,
-        CP14SkillStorageComponent? component = null)
+        CE14SkillStorageComponent? component = null)
     {
         if (points <= 0)
             return;
@@ -403,7 +403,7 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
 
         if (!component.SkillPoints.TryGetValue(type, out var skillContainer))
         {
-            skillContainer = new CP14SkillPointContainerEntry();
+            skillContainer = new CE14SkillPointContainerEntry();
             component.SkillPoints[type] = skillContainer;
         }
 
@@ -411,7 +411,7 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
             ? FixedPoint2.Min(skillContainer.Max + points, limit.Value)
             : skillContainer.Max + points;
 
-        DirtyField(target, component, nameof(CP14SkillStorageComponent.SkillPoints));
+        DirtyField(target, component, nameof(CE14SkillStorageComponent.SkillPoints));
 
         if (indexedType.GetPointPopup is not null && !silent && _timing.IsFirstTimePredicted)
             _popup.PopupClient(Loc.GetString(indexedType.GetPointPopup, ("count", points)), target, target);
@@ -421,10 +421,10 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
     /// Removes memory points. If a character has accumulated skills exceeding the new memory limit, random skills will be removed.
     /// </summary>
     public void RemoveSkillPoints(EntityUid target,
-        ProtoId<CP14SkillPointPrototype> type,
+        ProtoId<CE14SkillPointPrototype> type,
         FixedPoint2 points,
         bool silent = false,
-        CP14SkillStorageComponent? component = null)
+        CE14SkillStorageComponent? component = null)
     {
         if (points <= 0)
             return;
@@ -458,4 +458,4 @@ public abstract partial class CP14SharedSkillSystem : EntitySystem
 }
 
 [ByRefEvent]
-public record struct CP14SkillLearnedEvent(ProtoId<CP14SkillPrototype> Skill, EntityUid User);
+public record struct CE14SkillLearnedEvent(ProtoId<CE14SkillPrototype> Skill, EntityUid User);

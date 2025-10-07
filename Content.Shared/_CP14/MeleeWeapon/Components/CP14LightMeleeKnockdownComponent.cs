@@ -1,12 +1,12 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CP14.MeleeWeapon.Components;
+namespace Content.Shared._CE14.MeleeWeapon.Components;
 
 /// <summary>
 /// After several wide attacks, a light attack deals additional damage.
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-public sealed partial class CP14LightMeleeKnockdownComponent : Component
+public sealed partial class CE14LightMeleeKnockdownComponent : Component
 {
     [DataField]
     public float ThrowDistance = 0.5f;

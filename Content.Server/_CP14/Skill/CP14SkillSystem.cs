@@ -1,18 +1,18 @@
-using Content.Shared._CP14.Skill;
-using Content.Shared._CP14.Skill.Components;
+using Content.Shared._CE14.Skill;
+using Content.Shared._CE14.Skill.Components;
 
-namespace Content.Server._CP14.Skill;
+namespace Content.Server._CE14.Skill;
 
-public sealed partial class CP14SkillSystem : CP14SharedSkillSystem
+public sealed partial class CE14SkillSystem : CE14SharedSkillSystem
 {
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeNetworkEvent<CP14TryLearnSkillMessage>(OnClientRequestLearnSkill);
+        SubscribeNetworkEvent<CE14TryLearnSkillMessage>(OnClientRequestLearnSkill);
     }
 
-    private void OnClientRequestLearnSkill(CP14TryLearnSkillMessage ev, EntitySessionEventArgs args)
+    private void OnClientRequestLearnSkill(CE14TryLearnSkillMessage ev, EntitySessionEventArgs args)
     {
         var entity = GetEntity(ev.Entity);
 

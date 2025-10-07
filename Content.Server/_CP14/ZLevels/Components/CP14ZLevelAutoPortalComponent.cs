@@ -1,13 +1,13 @@
-using Content.Server._CP14.ZLevels.EntitySystems;
+using Content.Server._CE14.ZLevels.EntitySystems;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.ZLevels.Components;
+namespace Content.Server._CE14.ZLevels.Components;
 
 /// <summary>
 /// automatically creates a linked portal at a different relative z-level, and then the component is removed
 /// </summary>
-[RegisterComponent, Access(typeof(CP14StationZLevelsSystem))]
-public sealed partial class CP14ZLevelAutoPortalComponent : Component
+[RegisterComponent, Access(typeof(CE14StationZLevelsSystem))]
+public sealed partial class CE14ZLevelAutoPortalComponent : Component
 {
     /// <summary>
     /// relative neighboring layer. Ideally, -1 is the neighboring bottom layer, +1 is the neighboring top layer

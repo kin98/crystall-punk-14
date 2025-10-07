@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14MobMonsterMyconideFlyagaric
-  parent: CP14SimpleMobBase
+  id: CE14MobMonsterMyconideFlyagaric
+  parent: CE14SimpleMobBase
   name: myconide flyagaric
   description: A running fly on legs, a strange phenomenon even for our crazy world.
   categories: [ ForkFiltered ]
   components:
   - type: HTN
     rootTask:
-      task: CP14MonsterCompound
+      task: CE14MonsterCompound
     blackboard:
       NavSmash: !type:Bool
         true
@@ -17,10 +17,10 @@
         12
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Mobs/Monster/flyagaric.rsi
+    sprite: _CE14/Mobs/Monster/flyagaric.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: flyagaric
@@ -65,9 +65,9 @@
         Base: dead
   - type: Butcherable
     spawned:
-    - id: CP14AgaricMushroom
+    - id: CE14AgaricMushroom
       amount: 2
-    - id: CP14ClothingHeadaAgaricHelmet
+    - id: CE14ClothingHeadaAgaricHelmet
       amount: 1
       prob: 0.05
   - type: Food
@@ -76,29 +76,29 @@
       food:
         maxVol: 8
         reagents:
-        - ReagentId: CP14AgaricMushroom
+        - ReagentId: CE14AgaricMushroom
           Quantity: 7
   - type: Bloodstream
     bloodMaxVolume: 50
-    bloodReagent: CP14AgaricMushroom
+    bloodReagent: CE14AgaricMushroom
   - type: Grammar
     attributes:
       gender: epicene
   - type: Tag
     tags:
       - FootstepSound
-      - CP14Mosquito
+      - CE14Mosquito
 
 - type: entity
-  id: CP14MobMonsterMyconideLumish
-  parent: CP14SimpleMobBase
+  id: CE14MobMonsterMyconideLumish
+  parent: CE14SimpleMobBase
   name: myconide lumish
   description: It's a mushroom with a glowing cap, and it hits you hard on the head.
   categories: [ ForkFiltered ]
   components:
   - type: HTN
     rootTask:
-      task: CP14MonsterCompound
+      task: CE14MonsterCompound
     blackboard:
       NavSmash: !type:Bool
         true
@@ -108,10 +108,10 @@
         12
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Mobs/Monster/lumish.rsi
+    sprite: _CE14/Mobs/Monster/lumish.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: lumishroom
@@ -161,7 +161,7 @@
         BaseUnshaded: dead_cap
   - type: Butcherable
     spawned:
-    - id: CP14LumiMushroom
+    - id: CE14LumiMushroom
       amount: 2
   - type: Food
   - type: SolutionContainerManager
@@ -169,15 +169,15 @@
       food:
         maxVol: 8
         reagents:
-        - ReagentId: CP14LumiMushroom
+        - ReagentId: CE14LumiMushroom
           Quantity: 7
   - type: Bloodstream
     bloodMaxVolume: 50
-    bloodReagent: CP14LumiMushroom
+    bloodReagent: CE14LumiMushroom
   - type: Grammar
     attributes:
       gender: epicene
   - type: Tag
     tags:
       - FootstepSound
-      - CP14Mosquito
+      - CE14Mosquito

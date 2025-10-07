@@ -36,7 +36,7 @@ public sealed partial class ContentAudioSystem : SharedContentAudioSystem
 
         UpdatesOutsidePrediction = true;
         InitializeAmbientMusic();
-        CP14InitializeAmbientLoops(); //CP14 ambient loops
+        CE14InitializeAmbientLoops(); //CE14 ambient loops
         InitializeLobbyMusic();
         SubscribeNetworkEvent<RoundRestartCleanupEvent>(OnRoundCleanup);
     }
@@ -83,7 +83,7 @@ public sealed partial class ContentAudioSystem : SharedContentAudioSystem
             return;
 
         UpdateAmbientMusic();
-        CP14UpdateAmbientLoops(); //CP14
+        CE14UpdateAmbientLoops(); //CE14
         UpdateLobbyMusic();
         UpdateFades(frameTime);
     }

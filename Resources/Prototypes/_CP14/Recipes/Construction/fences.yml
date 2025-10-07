@@ -1,9 +1,9 @@
 - type: construction
   crystallPunkAllowed: true
-  id: CP14FenceBigWooden
-  graph: CP14FenceBigWooden
+  id: CE14FenceBigWooden
+  graph: CE14FenceBigWooden
   startNode: start
-  targetNode: CP14FenceBigWooden
+  targetNode: CE14FenceBigWooden
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -13,10 +13,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14FenceBigWoodenBirch
-  graph: CP14FenceBigWoodenBirch
+  id: CE14FenceBigWoodenBirch
+  graph: CE14FenceBigWoodenBirch
   startNode: start
-  targetNode: CP14FenceBigWoodenBirch
+  targetNode: CE14FenceBigWoodenBirch
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -26,10 +26,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14FenceGateBigWooden
-  graph: CP14FenceGateBigWooden
+  id: CE14FenceGateBigWooden
+  graph: CE14FenceGateBigWooden
   startNode: start
-  targetNode: CP14FenceGateBigWooden
+  targetNode: CE14FenceGateBigWooden
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -39,10 +39,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14FenceGateBigWoodenBirch
-  graph: CP14FenceGateBigWoodenBirch
+  id: CE14FenceGateBigWoodenBirch
+  graph: CE14FenceGateBigWoodenBirch
   startNode: start
-  targetNode: CP14FenceGateBigWoodenBirch
+  targetNode: CE14FenceGateBigWoodenBirch
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -52,10 +52,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14FenceWooden
-  graph: CP14FenceWooden
+  id: CE14FenceWooden
+  graph: CE14FenceWooden
   startNode: start
-  targetNode: CP14FenceWooden
+  targetNode: CE14FenceWooden
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -65,10 +65,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14FenceWoodenBirch
-  graph: CP14FenceWoodenBirch
+  id: CE14FenceWoodenBirch
+  graph: CE14FenceWoodenBirch
   startNode: start
-  targetNode: CP14FenceWoodenBirch
+  targetNode: CE14FenceWoodenBirch
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -78,10 +78,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14FenceGateWooden
-  graph: CP14FenceGateWooden
+  id: CE14FenceGateWooden
+  graph: CE14FenceGateWooden
   startNode: start
-  targetNode: CP14FenceGateWooden
+  targetNode: CE14FenceGateWooden
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -91,10 +91,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14FenceGateWoodenBirch
-  graph: CP14FenceGateWoodenBirch
+  id: CE14FenceGateWoodenBirch
+  graph: CE14FenceGateWoodenBirch
   startNode: start
-  targetNode: CP14FenceGateWoodenBirch
+  targetNode: CE14FenceGateWoodenBirch
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter

@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14MobIceSpectre
+  id: CE14MobIceSpectre
   parent:
   - BaseMob
   - MobCombat
@@ -9,7 +9,7 @@
   components:
   - type: HTN
     rootTask:
-      task: CP14MonsterCompound
+      task: CE14MonsterCompound
     blackboard:
       NavSmash: !type:Bool
         true
@@ -30,10 +30,10 @@
         - FlyingMobLayer
         - Opaque
   - type: NPCUseActionOnTarget
-    actionId: CP14ActionSpellIceShardsGhost
+    actionId: CE14ActionSpellIceShardsGhost
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
   - type: MeleeWeapon
     angle: 0
     animation: WeaponArcBite
@@ -47,13 +47,13 @@
     friction: 0.5
     acceleration: 3
   - type: Sprite
-    sprite: _CP14/Mobs/Monster/ice_spectre.rsi
+    sprite: _CE14/Mobs/Monster/ice_spectre.rsi
     layers:
     - state: base
       shader: unshaded
     drawdepth: Mobs
   - type: Damageable
-    damageContainer: CP14Biological
+    damageContainer: CE14Biological
   - type: Destructible
     thresholds:
     - trigger:
@@ -62,29 +62,29 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: CP14MagicEnergyContainer
-    magicAlert: CP14MagicEnergy
+  - type: CE14MagicEnergyContainer
+    magicAlert: CE14MagicEnergy
     maxEnergy: 100
     energy: 100
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 2
     delay: 4
   - type: AmbientSound
     volume: -1
     range: 12
     sound:
-      path: /Audio/_CP14/Animals/ghost_ambi.ogg
+      path: /Audio/_CE14/Animals/ghost_ambi.ogg
 
 - type: entity
-  parent: CP14ActionSpellIceShards
-  id: CP14ActionSpellIceShardsGhost
+  parent: CE14ActionSpellIceShards
+  id: CE14ActionSpellIceShardsGhost
   components:
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: -2.0
   - type: Action
     useDelay: 1
   - type: TargetAction
     checkCanAccess: true
   - type: WorldTargetAction
-    event: !type:CP14WorldTargetModularEffectEvent
+    event: !type:CE14WorldTargetModularEffectEvent
 

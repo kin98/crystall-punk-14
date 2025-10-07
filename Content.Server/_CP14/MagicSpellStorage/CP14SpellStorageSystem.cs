@@ -1,16 +1,16 @@
-using Content.Server._CP14.MagicSpellStorage.Components;
-using Content.Shared._CP14.MagicSpell.Events;
-using Content.Shared._CP14.MagicSpellStorage;
+using Content.Server._CE14.MagicSpellStorage.Components;
+using Content.Shared._CE14.MagicSpell.Events;
+using Content.Shared._CE14.MagicSpellStorage;
 using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.Mind;
 
-namespace Content.Server._CP14.MagicSpellStorage;
+namespace Content.Server._CE14.MagicSpellStorage;
 
 /// <summary>
 /// this part of the system is responsible for storing spells in items, and the methods players use to obtain them.
 /// </summary>
-public sealed partial class CP14SpellStorageSystem : CP14SharedSpellStorageSystem
+public sealed partial class CE14SpellStorageSystem : CE14SharedSpellStorageSystem
 {
     [Dependency] private readonly ActionContainerSystem _actionContainer = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
@@ -21,13 +21,13 @@ public sealed partial class CP14SpellStorageSystem : CP14SharedSpellStorageSyste
     {
         InitializeAccess();
 
-        SubscribeLocalEvent<CP14SpellStorageComponent, MapInitEvent>(OnMagicStorageInit);
-        SubscribeLocalEvent<CP14SpellStorageComponent, ComponentShutdown>(OnMagicStorageShutdown);
+        SubscribeLocalEvent<CE14SpellStorageComponent, MapInitEvent>(OnMagicStorageInit);
+        SubscribeLocalEvent<CE14SpellStorageComponent, ComponentShutdown>(OnMagicStorageShutdown);
 
-        SubscribeLocalEvent<CP14SpellStorageUseDamageComponent, CP14SpellFromSpellStorageUsedEvent>(OnSpellUsed);
+        SubscribeLocalEvent<CE14SpellStorageUseDamageComponent, CE14SpellFromSpellStorageUsedEvent>(OnSpellUsed);
     }
 
-    private void OnSpellUsed(Entity<CP14SpellStorageUseDamageComponent> ent, ref CP14SpellFromSpellStorageUsedEvent args)
+    private void OnSpellUsed(Entity<CE14SpellStorageUseDamageComponent> ent, ref CE14SpellFromSpellStorageUsedEvent args)
     {
         _damageable.TryChangeDamage(ent, ent.Comp.DamagePerMana * args.Manacost);
     }
@@ -35,7 +35,7 @@ public sealed partial class CP14SpellStorageSystem : CP14SharedSpellStorageSyste
     /// <summary>
     /// When we initialize, we create action entities, and add them to this item.
     /// </summary>
-    private void OnMagicStorageInit(Entity<CP14SpellStorageComponent> storage, ref MapInitEvent args)
+    private void OnMagicStorageInit(Entity<CE14SpellStorageComponent> storage, ref MapInitEvent args)
     {
         foreach (var spell in storage.Comp.Spells)
         {
@@ -60,7 +60,7 @@ public sealed partial class CP14SpellStorageSystem : CP14SharedSpellStorageSyste
         }
     }
 
-    private void OnMagicStorageShutdown(Entity<CP14SpellStorageComponent> mStorage, ref ComponentShutdown args)
+    private void OnMagicStorageShutdown(Entity<CE14SpellStorageComponent> mStorage, ref ComponentShutdown args)
     {
         foreach (var spell in mStorage.Comp.SpellEntities)
         {
@@ -68,7 +68,7 @@ public sealed partial class CP14SpellStorageSystem : CP14SharedSpellStorageSyste
         }
     }
 
-    private bool TryGrantAccess(Entity<CP14SpellStorageComponent> storage, EntityUid user)
+    private bool TryGrantAccess(Entity<CE14SpellStorageComponent> storage, EntityUid user)
     {
         if (!_mind.TryGetMind(user, out var mindId, out var mind))
             return false;

@@ -1,7 +1,7 @@
 - type: mixingCategory
-  id: CP14MagicSplitting
-  verbText: cp14-mixing-verb-magic-splitting
+  id: CE14MagicSplitting
+  verbText: CE14-mixing-verb-magic-splitting
   icon:
-    sprite: _CP14/Actions/Spells/meta.rsi
+    sprite: _CE14/Actions/Spells/meta.rsi
     state: counter_spell
 

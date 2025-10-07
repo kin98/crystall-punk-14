@@ -1,13 +1,13 @@
 using Content.Shared.EntityEffects;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellApplyEntityEffectOnUser : CP14SpellEffect
+public sealed partial class CE14SpellApplyEntityEffectOnUser : CE14SpellEffect
 {
     [DataField(required: true, serverOnly: true)]
     public List<EntityEffect> Effects = new();
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         if (args.User == null)
             return;

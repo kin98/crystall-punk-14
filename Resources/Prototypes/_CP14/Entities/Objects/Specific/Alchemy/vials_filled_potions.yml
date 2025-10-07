@@ -1,7 +1,7 @@
 
 - type: entity
-  id: CP14VialSmallHealingBrute
-  parent: CP14VialSmall
+  id: CE14VialSmallHealingBrute
+  parent: CE14VialSmall
   name: "brad's healing potion"
   suffix: Healing brute 10%
   components:
@@ -9,14 +9,14 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 9
-        - ReagentId: CP14HealingEffectHealBrute
+        - ReagentId: CE14HealingEffectHealBrute
           Quantity: 1
 
 - type: entity
-  id: CP14VialSmallHealingPoison
-  parent: CP14VialSmall
+  id: CE14VialSmallHealingPoison
+  parent: CE14VialSmall
   name: "brad's antidote potion"
   suffix: Healing poison 10%
   components:
@@ -24,14 +24,14 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 9
-        - ReagentId: CP14HealingEffectHealPoison
+        - ReagentId: CE14HealingEffectHealPoison
           Quantity: 1
 
 - type: entity
-  id: CP14VialSmallHealingAirloss
-  parent: CP14VialSmall
+  id: CE14VialSmallHealingAirloss
+  parent: CE14VialSmall
   name: "brad's airloss healing potion"
   suffix: Healing airloss 10%
   components:
@@ -39,14 +39,14 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 9
-        - ReagentId: CP14HealingEffectHealAirloss
+        - ReagentId: CE14HealingEffectHealAirloss
           Quantity: 1
 
 - type: entity
-  id: CP14VialSmallHealingBlood
-  parent: CP14VialSmall
+  id: CE14VialSmallHealingBlood
+  parent: CE14VialSmall
   name: "brad's blood restoration potion"
   suffix: Blood restore 10%
   components:
@@ -54,14 +54,14 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 9
-        - ReagentId: CP14HealingEffectBloodRestore
+        - ReagentId: CE14HealingEffectBloodRestore
           Quantity: 1
 
 - type: entity
-  id: CP14VialSmallHealingMana
-  parent: CP14VialSmall
+  id: CE14VialSmallHealingMana
+  parent: CE14VialSmall
   name: "brad's mana potion"
   suffix: Mana restore 10%
   components:
@@ -69,14 +69,14 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 9
-        - ReagentId: CP14PositiveEffectHealMana
+        - ReagentId: CE14PositiveEffectHealMana
           Quantity: 1
 
 - type: entity
-  id: CP14VialSmallSpeedUp
-  parent: CP14VialSmall
+  id: CE14VialSmallSpeedUp
+  parent: CE14VialSmall
   name: "brad's accseleration potion"
   suffix: Speed up 10%
   components:
@@ -84,14 +84,14 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 9
-        - ReagentId: CP14PositiveEffectSpeedUp
+        - ReagentId: CE14PositiveEffectSpeedUp
           Quantity: 1
 
 - type: entity
-  id: CP14VialSmallRainbow
-  parent: CP14VialSmall
+  id: CE14VialSmallRainbow
+  parent: CE14VialSmall
   name: "brad's funny potion"
   suffix: Rainbow and Drunk 20%
   components:
@@ -99,16 +99,16 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 6
-        - ReagentId: CP14SideEffectRainbow
+        - ReagentId: CE14SideEffectRainbow
           Quantity: 2
-        - ReagentId: CP14SideEffectDrunk
+        - ReagentId: CE14SideEffectDrunk
           Quantity: 2
 
 - type: entity
-  id: CP14VialSmallHealingManaDepletion
-  parent: CP14VialSmall
+  id: CE14VialSmallHealingManaDepletion
+  parent: CE14VialSmall
   name: "brad's mana-healing potion"
   suffix: Healing mana 10%
   components:
@@ -116,14 +116,14 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 9
-        - ReagentId: CP14HealingEffectHealManaDepletion
+        - ReagentId: CE14HealingEffectHealManaDepletion
           Quantity: 1
 
 - type: entity
-  id: CP14BasicEffectConfuseAura
-  parent: CP14VialSmall
+  id: CE14BasicEffectConfuseAura
+  parent: CE14VialSmall
   name: "brad's aura confusion potion"
   suffix: Aura confusion 10%
   components:
@@ -131,7 +131,7 @@
     solutions:
       vial:
         reagents:
-        - ReagentId: CP14SideEffectEmpty
+        - ReagentId: CE14SideEffectEmpty
           Quantity: 8
-        - ReagentId: CP14PositiveEffectConfuseAura
+        - ReagentId: CE14PositiveEffectConfuseAura
           Quantity: 2

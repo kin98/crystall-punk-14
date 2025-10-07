@@ -1,14 +1,14 @@
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: VictoriaGardensBreadBuns
   possibleFactions:
   - VictoriaGardens
   - Dairy
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodBreadBun
+    protoId: CE14FoodBreadBun
     count: 6
 
-- type: cp14TradingRequest
+- type: CE14TradingRequest
   id: ButchersBread
   possibleFactions:
   - VictoriaGardens
@@ -16,5 +16,5 @@
   fromMinutes: 30
   requirements:
   - !type:ProtoIdResource
-    protoId: CP14FoodBread
+    protoId: CE14FoodBread
     count: 2

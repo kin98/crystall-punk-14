@@ -36,7 +36,7 @@
           bounds: "-0.25,-0.25,0.25,0.25"
         density: 20
         mask:
-        #- ItemMask # CP14 swap ItemMask to Impassable only
+        #- ItemMask # CE14 swap ItemMask to Impassable only
         - Impassable
         restitution: 0.3  # fite me
         friction: 0.2

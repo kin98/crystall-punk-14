@@ -1,84 +1,84 @@
 # Basic Dairy Products
-- type: cp14TradingPosition
-  id: CP14FoodEgg
+- type: CE14TradingPosition
+  id: CE14FoodEgg
   faction: Dairy
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Consumable/Food/egg.rsi
+    sprite: _CE14/Objects/Consumable/Food/egg.rsi
     state: brown
-  service: !type:CP14BuyItemsService
-    product: CP14FoodEgg
+  service: !type:CE14BuyItemsService
+    product: CE14FoodEgg
     count: 6
 
-- type: cp14TradingPosition
-  id: CP14FoodCheeseWheel
+- type: CE14TradingPosition
+  id: CE14FoodCheeseWheel
   faction: Dairy
   uiPosition: 1
   icon:
-    sprite: _CP14/Objects/Consumable/Food/cheese.rsi
+    sprite: _CE14/Objects/Consumable/Food/cheese.rsi
     state: cheese_wheel
-  service: !type:CP14BuyItemsService
-    product: CP14FoodCheeseWheel
+  service: !type:CE14BuyItemsService
+    product: CE14FoodCheeseWheel
     count: 1
 
-- type: cp14TradingPosition
-  id: CP14FoodCheesePart
+- type: CE14TradingPosition
+  id: CE14FoodCheesePart
   faction: Dairy
   uiPosition: 2
   icon:
-    sprite: _CP14/Objects/Consumable/Food/cheese.rsi
+    sprite: _CE14/Objects/Consumable/Food/cheese.rsi
     state: cheese_part
-  service: !type:CP14BuyItemsService
-    product: CP14FoodCheesePart
+  service: !type:CE14BuyItemsService
+    product: CE14FoodCheesePart
     count: 3
 
 # Rep 1
 
-- type: cp14TradingPosition
-  id: CP14FoodBlueCheeseWheel
+- type: CE14TradingPosition
+  id: CE14FoodBlueCheeseWheel
   faction: Dairy
   reputationLevel: 1
   uiPosition: 1
   icon:
-    sprite: _CP14/Objects/Consumable/Food/cheese.rsi
+    sprite: _CE14/Objects/Consumable/Food/cheese.rsi
     state: blue_cheese_wheel
-  service: !type:CP14BuyItemsService
-    product: CP14FoodBlueCheeseWheel
+  service: !type:CE14BuyItemsService
+    product: CE14FoodBlueCheeseWheel
     count: 1
 
-- type: cp14TradingPosition
-  id: CP14FryingPan
+- type: CE14TradingPosition
+  id: CE14FryingPan
   faction: Dairy
   reputationLevel: 1
   uiPosition: 2
   icon:
-    sprite: _CP14/Objects/Consumable/Food/Meals/frying_pan.rsi
+    sprite: _CE14/Objects/Consumable/Food/Meals/frying_pan.rsi
     state: base
-  service: !type:CP14BuyItemsService
-    product: CP14FryingPan
+  service: !type:CE14BuyItemsService
+    product: CE14FryingPan
     count: 1
 
-- type: cp14TradingPosition
-  id: CP14CookingPot
+- type: CE14TradingPosition
+  id: CE14CookingPot
   faction: Dairy
   reputationLevel: 1
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/Consumable/Food/Soups/cooking_pot.rsi
+    sprite: _CE14/Objects/Consumable/Food/Soups/cooking_pot.rsi
     state: base
-  service: !type:CP14BuyItemsService
-    product: CP14CookingPot
+  service: !type:CE14BuyItemsService
+    product: CE14CookingPot
     count: 1
 
 # Rep 2
-- type: cp14TradingPosition
-  id: CP14FoodAgedCheeseWheel
+- type: CE14TradingPosition
+  id: CE14FoodAgedCheeseWheel
   faction: Dairy
   reputationLevel: 2
   uiPosition: 1
   icon:
-    sprite: _CP14/Objects/Consumable/Food/cheese.rsi
+    sprite: _CE14/Objects/Consumable/Food/cheese.rsi
     state: aged_cheese_wheel
-  service: !type:CP14BuyItemsService
-    product: CP14FoodAgedCheeseWheel
+  service: !type:CE14BuyItemsService
+    product: CE14FoodAgedCheeseWheel
     count: 1

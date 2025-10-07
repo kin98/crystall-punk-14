@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Numerics;
-using Content.Server._CP14.GameTicking.Rules.Components;
-using Content.Server._CP14.Procedural;
+using Content.Server._CE14.GameTicking.Rules.Components;
+using Content.Server._CE14.Procedural;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
@@ -10,26 +10,26 @@ using Content.Shared.GameTicking.Components;
 using Content.Shared.Station.Components;
 using Robust.Shared.Map;
 
-namespace Content.Server._CP14.GameTicking.Rules;
+namespace Content.Server._CE14.GameTicking.Rules;
 
-public sealed class CP14ExpeditionToWindlandsRule : GameRuleSystem<CP14ExpeditionToWindlandsRuleComponent>
+public sealed class CE14ExpeditionToWindlandsRule : GameRuleSystem<CE14ExpeditionToWindlandsRuleComponent>
 {
     [Dependency] private readonly ShuttleSystem _shuttles = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
-    [Dependency] private readonly CP14LocationGenerationSystem _generation = default!;
+    [Dependency] private readonly CE14LocationGenerationSystem _generation = default!;
 
     private ISawmill _sawmill = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        _sawmill = _logManager.GetSawmill("cp14_expedition_to_windlands_rule");
+        _sawmill = _logManager.GetSawmill("CE14_expedition_to_windlands_rule");
     }
 
     protected override void Started(EntityUid uid,
-        CP14ExpeditionToWindlandsRuleComponent component,
+        CE14ExpeditionToWindlandsRuleComponent component,
         GameRuleComponent gameRule,
         GameRuleStartedEvent args)
     {

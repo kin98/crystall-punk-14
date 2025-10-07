@@ -1,12 +1,12 @@
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill.Prototypes;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill.Restrictions;
+namespace Content.Shared._CE14.Skill.Restrictions;
 
 [ImplicitDataDefinitionForInheritors]
 [MeansImplicitUse]
-public abstract partial class CP14SkillRestriction
+public abstract partial class CE14SkillRestriction
 {
     /// <summary>
     /// If true - this skill won't be shown in skill tree if user doesn't meet this restriction

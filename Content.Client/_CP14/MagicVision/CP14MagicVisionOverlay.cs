@@ -1,4 +1,4 @@
-using Content.Shared._CP14.MagicVision;
+using Content.Shared._CE14.MagicVision;
 using Content.Shared.CCVar;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
@@ -7,9 +7,9 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Client._CP14.MagicVision;
+namespace Content.Client._CE14.MagicVision;
 
-public sealed class CP14MagicVisionOverlay : Overlay
+public sealed class CE14MagicVisionOverlay : Overlay
 {
     [Dependency] private readonly IConfigurationManager _config = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
@@ -29,7 +29,7 @@ public sealed class CP14MagicVisionOverlay : Overlay
     private float _intensity = 0.2f; // for adjusting the visual scale
     private float _visualScale = 0; // between 0 and 1
 
-    public CP14MagicVisionOverlay()
+    public CE14MagicVisionOverlay()
     {
         IoCManager.InjectDependencies(this);
         _drowsinessShader = _prototypeManager.Index<ShaderPrototype>("Drowsiness").InstanceUnique();
@@ -44,7 +44,7 @@ public sealed class CP14MagicVisionOverlay : Overlay
         if (playerEntity == null)
             return;
 
-        if (!_entityManager.HasComponent<CP14MagicVisionComponent>(playerEntity))
+        if (!_entityManager.HasComponent<CE14MagicVisionComponent>(playerEntity))
             return;
 
         var curTime = _timing.CurTime;

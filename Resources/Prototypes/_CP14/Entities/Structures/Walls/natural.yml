@@ -1,18 +1,18 @@
 - type: entity
-  id: CP14WallStone
+  id: CE14WallStone
   name: rock
-  parent: CP14BaseWall
+  parent: CE14BaseWall
   description: A solid stone natural wall. It has a cave-like coldness to it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/cave_stone.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/cave_stone.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone.rsi
   - type: IconSmooth
     base: wall
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14RockStructural
+    damageModifierSet: CE14RockStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -32,21 +32,21 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14StoneBlock1:
+          CE14StoneBlock1:
             min: 5
             max: 7
       - !type:DoActsBehavior
         acts: ["Destruction"]
 
 - type: entity
-  id: CP14WallMarbleStone
+  id: CE14WallMarbleStone
   name: marble
-  parent: CP14WallStone
+  parent: CE14WallStone
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/marble_stone.rsi
+    sprite: _CE14/Structures/Walls/Natural/marble_stone.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/marble_stone.rsi
+    sprite: _CE14/Structures/Walls/Natural/marble_stone.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -66,36 +66,36 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14MarbleBlock1:
+          CE14MarbleBlock1:
             min: 5
             max: 7
       - !type:DoActsBehavior
         acts: ["Destruction"]
 
 - type: entity
-  id: CP14WallStoneIndestructable
+  id: CE14WallStoneIndestructable
   name: dense rock
-  parent: CP14BaseWall
+  parent: CE14BaseWall
   suffix: Undestructable
   description: An extremely durable stone. Your tools don't seem to be enough to break through it.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_strong.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_strong.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/cave_stone_strong.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_stone_strong.rsi
   - type: IconSmooth
     base: wall
 
 - type: entity
-  id: CP14WallDirt
+  id: CE14WallDirt
   name: earth wall
-  parent: CP14BaseWall
+  parent: CE14BaseWall
   description: A tall pile of dirt. Can a house be built from it?
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/dirt_wall.rsi
+    sprite: _CE14/Structures/Walls/Natural/dirt_wall.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/dirt_wall.rsi
+    sprite: _CE14/Structures/Walls/Natural/dirt_wall.rsi
   - type: IconSmooth
     base: wall
   - type: Damageable
@@ -120,29 +120,29 @@
             volume: -6
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14DirtBlock1:
+          CE14DirtBlock1:
             min: 3
             max: 5
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Construction
-    graph: CP14WallDirt
+    graph: CE14WallDirt
     node: WallDirt
 
 - type: entity
-  id: CP14WallLeaf
+  id: CE14WallLeaf
   parent:
-  - CP14BaseFlammableSpreading
-  - CP14BaseWall
+  - CE14BaseFlammableSpreading
+  - CE14BaseWall
   name: leaf wall
   description: Dense, marginal bushes. You can climb through them, but watch out for thorny branches!
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/leaf.rsi
+    sprite: _CE14/Structures/Walls/Natural/leaf.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/leaf.rsi
+    sprite: _CE14/Structures/Walls/Natural/leaf.rsi
   - type: IconSmooth
-    key: CP14wallLeaf
+    key: CE14wallLeaf
     base: wall
   - type: Damageable
     damageContainer: Inorganic
@@ -150,7 +150,7 @@
   - type: MeleeSound
     soundGroups:
       Brute:
-        collection: CP14GrassGathering
+        collection: CE14GrassGathering
         params:
           variation: 0.05
   - type: Fixtures
@@ -188,7 +188,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          collection: CP14GrassGathering
+          collection: CE14GrassGathering
           params:
             volume: 5
             variation: 0.05
@@ -196,7 +196,7 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14FloraMaterial1:
+          CE14FloraMaterial1:
             min: 1
             max: 3
   - type: SpeedModifierContacts
@@ -206,22 +206,22 @@
     sound:
       params:
         volume: -8
-      collection: CP14GrassGathering
+      collection: CE14GrassGathering
   - type: TriggerOnCollide
     fixtureID: fix1
   - type: Airtight
     airBlocked: false
 
 - type: entity
-  id: CP14WallSnow
+  id: CE14WallSnow
   name: snow wall
-  parent: CP14BaseWall
+  parent: CE14BaseWall
   description: A tall pile of snow. Can a house be built from it?
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/snow_wall.rsi
+    sprite: _CE14/Structures/Walls/Natural/snow_wall.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/snow_wall.rsi
+    sprite: _CE14/Structures/Walls/Natural/snow_wall.rsi
   - type: IconSmooth
     base: wall
   - type: Damageable
@@ -241,38 +241,38 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/_CP14/Effects/snowball.ogg
+          path: /Audio/_CE14/Effects/snowball.ogg
           params:
             variation: 0.250
             volume: 15
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14Snowball:
+          CE14Snowball:
             min: 3
             max: 5
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14SnowEffect:
+          CE14SnowEffect:
             min: 2
             max: 3
       - !type:DoActsBehavior
         acts: ["Destruction"]
 
 - type: entity
-  id: CP14WallDimensit
-  parent: CP14BaseWall
+  id: CE14WallDimensit
+  parent: CE14BaseWall
   name: dimensit wall
   description: The solid form of the interdimensional continuum.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Walls/Natural/cave_dimensit.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_dimensit.rsi
   - type: Icon
-    sprite: _CP14/Structures/Walls/Natural/cave_dimensit.rsi
+    sprite: _CE14/Structures/Walls/Natural/cave_dimensit.rsi
   - type: IconSmooth
     base: wall
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Rock
+    damageModifierSet: CE14Rock
   - type: MeleeSound
     soundGroups:
       Brute:

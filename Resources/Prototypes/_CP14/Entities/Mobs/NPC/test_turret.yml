@@ -1,11 +1,11 @@
 - type: entity
-  id: CP14XenoTurret
+  id: CE14XenoTurret
   parent: WeaponTurretXeno
   categories: [ ForkFiltered ]
   components:
   - type: NpcFactionMember
     factions:
-      - CP14Monster
+      - CE14Monster
   - type: Destructible
     thresholds:
       - trigger:
@@ -19,12 +19,12 @@
               path: /Audio/Effects/gib1.ogg
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14FoodEgg:
+              CE14FoodEgg:
                 min: 1
                 max: 2
           - !type:SpawnEntitiesBehavior
             spawn:
-              CP14String:
+              CE14String:
                 min: 1
                 max: 2
 

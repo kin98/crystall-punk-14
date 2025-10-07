@@ -1,34 +1,34 @@
 - type: job
-  id: CP14Guildmaster
+  id: CE14Guildmaster
   setPreference: true
-  name: cp14-job-name-guildmaster
-  description: cp14-job-desc-guildmaster
-  playTimeTracker: CP14JobGuildmaster
-  startingGear: CP14GuildmasterGear
-  icon: "CP14JobIconGuildmaster"
+  name: CE14-job-name-guildmaster
+  description: CE14-job-desc-guildmaster
+  playTimeTracker: CE14JobGuildmaster
+  startingGear: CE14GuildmasterGear
+  icon: "CE14JobIconGuildmaster"
   requireAdminNotify: true
   joinNotifyCrew: true
   canBeAntag: false
-  supervisors: cp14-job-supervisors-command
+  supervisors: CE14-job-supervisors-command
   weight: 3
   requirements:
     #- !type:RoleTimeRequirement
-    #  role: CP14JobGuildWorker
+    #  role: CE14JobGuildWorker
     #  time: 7200 # 2 hours
     - !type:RoleTimeRequirement
-      role: CP14JobAdventurer
+      role: CE14JobAdventurer
       time: 18000 # 5 hours
   special:
     - !type:AddComponentSpecial
       components:
-      - type: CP14SalaryCounter
+      - type: CE14SalaryCounter
         salary: 200
 
 - type: startingGear
-  id: CP14GuildmasterGear
+  id: CE14GuildmasterGear
   storage:
     back:
-    - CP14EnergyCrystalMedium
+    - CE14EnergyCrystalMedium
   equipment:
-    belt: CP14WalletFilledTest
-    keys: CP14KeyRingGuildmaster
+    belt: CE14WalletFilledTest
+    keys: CE14KeyRingGuildmaster

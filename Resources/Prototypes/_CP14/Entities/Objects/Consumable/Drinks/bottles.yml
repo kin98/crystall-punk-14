@@ -1,8 +1,8 @@
 ﻿#Base for future bottles
 - type: entity
   name: green bottle
-  parent: CP14BaseVialFragile
-  id: CP14GreenBottle
+  parent: CE14BaseVialFragile
+  id: CE14GreenBottle
   suffix: Empty
   categories: [ ForkFiltered ]
   description: A green bottle perfect for drinking beer.
@@ -20,7 +20,7 @@
           True: {state: "icon_open"}
           False: {state: "icon_empty"}
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Drinks/green2_bottle.rsi
+    sprite: _CE14/Objects/Consumable/Drinks/green2_bottle.rsi
     layers:
     - state: fill-1
       map: ["enum.SolutionContainerLayers.Fill"]
@@ -37,12 +37,12 @@
 
 - type: entity
   name: blue bottle
-  parent: CP14GreenBottle
-  id: CP14BlueBottle
+  parent: CE14GreenBottle
+  id: CE14BlueBottle
   description: A blue vial perfect for drinking whiskey.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Drinks/blue_bottle.rsi
+    sprite: _CE14/Objects/Consumable/Drinks/blue_bottle.rsi
   - type: SolutionContainerManager
     solutions:
       vial:
@@ -53,12 +53,12 @@
 
 - type: entity
   name: green bottle
-  parent: CP14GreenBottle
-  id: CP14GreenBottle2
+  parent: CE14GreenBottle
+  id: CE14GreenBottle2
   description: Just a little green vial.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Drinks/green_bottle.rsi
+    sprite: _CE14/Objects/Consumable/Drinks/green_bottle.rsi
   - type: SolutionContainerManager
     solutions:
       vial:
@@ -66,18 +66,18 @@
 
 - type: entity
   name: orange bottle
-  parent: CP14GreenBottle
-  id: CP14OrangeBottle
+  parent: CE14GreenBottle
+  id: CE14OrangeBottle
   description: Just a orange bottle.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Drinks/orange_bottle.rsi
+    sprite: _CE14/Objects/Consumable/Drinks/orange_bottle.rsi
 
 - type: entity
   name: red bottle
-  parent: CP14GreenBottle
-  id: CP14RedBottle
+  parent: CE14GreenBottle
+  id: CE14RedBottle
   description: A red bottle perfect for drinking wine.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Drinks/red_bottle.rsi
+    sprite: _CE14/Objects/Consumable/Drinks/red_bottle.rsi

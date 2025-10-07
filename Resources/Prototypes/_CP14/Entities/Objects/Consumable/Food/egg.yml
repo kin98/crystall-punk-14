@@ -2,16 +2,16 @@
 
 - type: entity
   parent: [FoodInjectableBase, ItemHeftyBase]
-  id: CP14FoodEggBase
+  id: CE14FoodEggBase
   description: An egg!
   abstract: true
   categories: [ ForkFiltered ]
   components:
   - type: Food
     trash:
-    - CP14Eggshells
+    - CE14Eggshells
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/egg.rsi
+    sprite: _CE14/Objects/Consumable/Food/egg.rsi
     state: brown
   - type: Item
     size: Tiny
@@ -47,7 +47,7 @@
         solution: food
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14Eggshells:
+          CE14Eggshells:
             min: 1
             max: 1
           # Wow double-yolk you're so lucky!
@@ -63,20 +63,20 @@
     conductivity: 0.456
   - type: Tag
     tags:
-    - CP14Egg
-    - CP14FitInFryingPan
+    - CE14Egg
+    - CE14FitInFryingPan
 
 # Splat
 - type: entity
   name: eggshells
   parent: BaseItem
-  id: CP14Eggshells
+  id: CE14Eggshells
   description: You're walkin' on 'em bud.
   categories: [ ForkFiltered ]
   components:
   - type: Food
   - type: Sprite
-    sprite: _CP14/Objects/Consumable/Food/egg.rsi
+    sprite: _CE14/Objects/Consumable/Food/egg.rsi
     state: brown_shell
   - type: Item
     size: Tiny
@@ -89,8 +89,8 @@
           Quantity: 1
 
 - type: entity
-  parent: CP14FoodEggBase
-  id: CP14FoodEgg
+  parent: CE14FoodEggBase
+  id: CE14FoodEgg
   name: egg
   components:
   - type: Sprite
@@ -102,14 +102,14 @@
       - random:
           brown: ""
           icon: ""
-  - type: CP14TemperatureTransformation
+  - type: CE14TemperatureTransformation
     entries:
     - temperatureRange: 400, 500
-      transformTo: CP14FoodEgg
+      transformTo: CE14FoodEgg
 
 - type: entity
-  id: CP14FoodEggCooked
-  parent: CP14FoodEgg
+  id: CE14FoodEggCooked
+  parent: CE14FoodEgg
   name: cooked egg
   components:
   - type: Food

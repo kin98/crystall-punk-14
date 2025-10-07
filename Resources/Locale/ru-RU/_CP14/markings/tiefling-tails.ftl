@@ -1,2 +1,2 @@
-marking-CP14TieflingTail = Хвост
-marking-CP14TieflingTailSpades = Заостренный хвост
+marking-CE14TieflingTail = Хвост
+marking-CE14TieflingTailSpades = Заостренный хвост

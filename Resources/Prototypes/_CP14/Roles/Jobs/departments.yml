@@ -1,58 +1,58 @@
 - type: department
-  id: CP14Demigods
-  name: department-CP14Demigods
-  description: department-CP14Demigods-desc
+  id: CE14Demigods
+  name: department-CE14Demigods
+  description: department-CE14Demigods-desc
   weight: 666 # >:)
   color: "#ffffff"
   editorHidden: true
   roles:
-  - CP14GodLumera
-  - CP14GodMerkas
+  - CE14GodLumera
+  - CE14GodMerkas
 
 - type: department
-  id: CP14Command
-  name: department-CP14Command
-  description: department-CP14Command-desc
+  id: CE14Command
+  name: department-CE14Command
+  description: department-CE14Command-desc
   primary: false
   weight: 10
   color: "#3ec8fa"
   editorHidden: true
   roles:
-  - CP14GuardCommander
-  - CP14Guildmaster
+  - CE14GuardCommander
+  - CE14Guildmaster
 
 - type: department
-  id: CP14Guard
-  name: department-CP14Guard
-  description: department-CP14Guard-desc
+  id: CE14Guard
+  name: department-CE14Guard
+  description: department-CE14Guard-desc
   weight: 9
   color: "#576384"
   editorHidden: false
   roles:
-  - CP14GuardCommander
-  - CP14Investigator
-  - CP14Guard
+  - CE14GuardCommander
+  - CE14Investigator
+  - CE14Guard
 
 - type: department
-  id: CP14Artisan
-  name: department-CP14Artisan
-  description: department-CP14Artisan-desc
+  id: CE14Artisan
+  name: department-CE14Artisan
+  description: department-CE14Artisan-desc
   weight: 7
   color: "#834833"
   roles:
-  - CP14Merchant
-  - CP14Alchemist
-  - CP14Blacksmith
-  - CP14Apprentice
-  - CP14Innkeeper
+  - CE14Merchant
+  - CE14Alchemist
+  - CE14Blacksmith
+  - CE14Apprentice
+  - CE14Innkeeper
 
 - type: department
-  id: CP14Mercenary
-  name: department-CP14Mercenary
-  description: department-CP14Mercenary-desc
+  id: CE14Mercenary
+  name: department-CE14Mercenary
+  description: department-CE14Mercenary-desc
   weight: 6
   color: "#588151"
   roles:
-  - CP14Guildmaster
-  - CP14GuildWorker
-  - CP14Adventurer
+  - CE14Guildmaster
+  - CE14GuildWorker
+  - CE14Adventurer

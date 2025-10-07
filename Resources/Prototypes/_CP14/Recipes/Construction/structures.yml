@@ -1,9 +1,9 @@
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WallmountTorch
-  graph: CP14WallmountTorch
+  id: CE14WallmountTorch
+  graph: CE14WallmountTorch
   startNode: start
-  targetNode: CP14WallmountTorch
+  targetNode: CE14WallmountTorch
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -11,14 +11,14 @@
   canRotate: true
   conditions:
     - !type:TileNotBlocked
-    - !type:CP14WallRequired
+    - !type:CE14WallRequired
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14FloorTorch
-  graph: CP14FloorTorch
+  id: CE14FloorTorch
+  graph: CE14FloorTorch
   startNode: start
-  targetNode: CP14FloorTorch
+  targetNode: CE14FloorTorch
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -28,10 +28,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WallmountLampEmpty
-  graph: CP14WallmountLampEmpty
+  id: CE14WallmountLampEmpty
+  graph: CE14WallmountLampEmpty
   startNode: start
-  targetNode: CP14WallmountLampEmpty
+  targetNode: CE14WallmountLampEmpty
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -39,14 +39,14 @@
   canRotate: true
   conditions:
     - !type:TileNotBlocked
-    - !type:CP14WallRequired
+    - !type:CE14WallRequired
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WallmountBarShelfA
-  graph: CP14WallmountBarShelfA
+  id: CE14WallmountBarShelfA
+  graph: CE14WallmountBarShelfA
   startNode: start
-  targetNode: CP14WallmountBarShelfA
+  targetNode: CE14WallmountBarShelfA
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -54,5 +54,5 @@
   canRotate: true
   conditions:
     - !type:TileNotBlocked
-    - !type:CP14WallRequired
+    - !type:CE14WallRequired
 

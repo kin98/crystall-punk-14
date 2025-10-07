@@ -1,14 +1,14 @@
-using Content.Shared._CP14.Dash;
+using Content.Shared._CE14.Dash;
 
-namespace Content.Client._CP14.Dash;
+namespace Content.Client._CE14.Dash;
 
-public sealed partial class CP14ClientDashSystem : EntitySystem
+public sealed partial class CE14ClientDashSystem : EntitySystem
 {
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<CP14DashComponent>();
+        var query = EntityQueryEnumerator<CE14DashComponent>();
         while (query.MoveNext(out var uid, out var dash))
         {
             SpawnAtPosition(dash.DashEffect, Transform(uid).Coordinates);

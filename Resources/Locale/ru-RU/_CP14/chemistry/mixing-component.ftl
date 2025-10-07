@@ -1,1 +1,1 @@
-cp14-mixing-verb-magic-splitting = магическое расщепление
+CE14-mixing-verb-magic-splitting = магическое расщепление

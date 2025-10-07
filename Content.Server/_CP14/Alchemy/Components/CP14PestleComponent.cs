@@ -1,13 +1,13 @@
 using Robust.Shared.Audio;
 
-namespace Content.Server._CP14.Alchemy;
+namespace Content.Server._CE14.Alchemy;
 
-[RegisterComponent, Access(typeof(CP14AlchemyExtractionSystem))]
-public sealed partial class CP14PestleComponent : Component
+[RegisterComponent, Access(typeof(CE14AlchemyExtractionSystem))]
+public sealed partial class CE14PestleComponent : Component
 {
     [DataField]
     public float Probability = 0.1f;
 
     [DataField]
-    public SoundSpecifier HitSound = new SoundCollectionSpecifier("CP14Pestle", AudioParams.Default.WithVariation(0.2f));
+    public SoundSpecifier HitSound = new SoundCollectionSpecifier("CE14Pestle", AudioParams.Default.WithVariation(0.2f));
 }

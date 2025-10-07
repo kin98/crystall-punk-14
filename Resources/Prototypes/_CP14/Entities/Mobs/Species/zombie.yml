@@ -1,15 +1,15 @@
 - type: entity
   parent:
-  - CP14MobDamageable
+  - CE14MobDamageable
   - BaseSimpleMob
   - MobFlammable
   - MobCombat
-  id: CP14BaseMobZombie
+  id: CE14BaseMobZombie
   name: Mr. Zombie
   abstract: true
   components:
   - type: HumanoidAppearance
-    species: CP14Zombie
+    species: CE14Zombie
   - type: Sprite
     layers:
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
@@ -40,7 +40,7 @@
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
     - map: [ "vampire_fangs" ]
-      sprite: _CP14/Mobs/Species/Vampire/fangs.rsi
+      sprite: _CE14/Mobs/Species/Vampire/fangs.rsi
       state: human
       visible: false #Zombie vampire?
     - map: [ "mask" ]
@@ -56,15 +56,15 @@
   - type: Hands
   - type: ComplexInteraction
   - type: Icon
-    sprite: _CP14/Mobs/Species/Zombie/parts.rsi
+    sprite: _CE14/Mobs/Species/Zombie/parts.rsi
     state: full
   - type: Butcherable
     butcheringType: Spike
     spawned:
-      - id: CP14FoodMeatHuman
+      - id: CE14FoodMeatHuman
         amount: 4
   - type: Body
-    prototype: CP14Zombie
+    prototype: CE14Zombie
     requiredLegs: 2
   - type: MobState
     allowedStates:
@@ -105,8 +105,8 @@
         layer:
           - MobLayer
   - type: Damageable
-    damageContainer: CP14Biological
-    damageModifierSet: CP14Zombie
+    damageContainer: CE14Biological
+    damageModifierSet: CE14Zombie
   - type: PassiveDamage
     allowedStates:
     - Alive
@@ -148,97 +148,97 @@
   - type: FloorOcclusion
   - type: Tag
     tags:
-      - CP14Mosquito
+      - CE14Mosquito
   - type: Inventory
-    templateId: CP14Partial
+    templateId: CE14Partial
     displacements:
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: male_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: male_neck
     femaleDisplacements:
       outerClothing:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       cloak:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_pants
       shirt:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_shirt
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: female_neck
 
 - type: entity
-  parent: CP14BaseSpeciesDummy
-  id: CP14MobZombieDummy
+  parent: CE14BaseSpeciesDummy
+  id: CE14MobZombieDummy
   categories: [ HideSpawnMenu ]
   components:
   - type: HumanoidAppearance
-    species: CP14Zombie
+    species: CE14Zombie
   - type: Inventory
-    templateId: CP14Partial
+    templateId: CE14Partial
     displacements:
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: male_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: male_neck
     femaleDisplacements:
       cloak:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       outerClothing:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak
       gloves:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_cloak #Its ok for gloves
       pants:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_pants
       shirt:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_shirt
       neck:
         sizeMaps:
           32:
-            sprite: _CP14/Mobs/Species/Human/displacement.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement.rsi
             state: female_neck
           48:
-            sprite: _CP14/Mobs/Species/Human/displacement48.rsi
+            sprite: _CE14/Mobs/Species/Human/displacement48.rsi
             state: female_neck

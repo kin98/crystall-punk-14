@@ -10,9 +10,9 @@ using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
 using YamlDotNet.Serialization.Schemas;
 
-namespace Content.Shared._CP14.Cooking.Requirements;
+namespace Content.Shared._CE14.Cooking.Requirements;
 
-public sealed partial class ReagentRequired : CP14CookingCraftRequirement
+public sealed partial class ReagentRequired : CE14CookingCraftRequirement
 {
     [DataField(required: true)]
     public HashSet<ProtoId<ReagentPrototype>> Reagents = default!;

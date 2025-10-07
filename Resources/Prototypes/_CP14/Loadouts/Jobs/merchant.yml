@@ -2,88 +2,88 @@
 # Head
 
 - type: loadoutGroup
-  id: CP14MerchantHead
-  name: cp14-loadout-merchant-head
+  id: CE14MerchantHead
+  name: CE14-loadout-merchant-head
   minLimit: 0
   loadouts:
-  - CP14ClothingHeadBowler
+  - CE14ClothingHeadBowler
 
 - type: loadout
-  id: CP14ClothingHeadBowler
+  id: CE14ClothingHeadBowler
   equipment:
-    head: CP14ClothingHeadBowler
+    head: CE14ClothingHeadBowler
 
 # Cloak
 
 - type: loadoutGroup
-  id: CP14MerchantCloak
-  name: cp14-loadout-merchant-cloak
+  id: CE14MerchantCloak
+  name: CE14-loadout-merchant-cloak
   loadouts:
-  - CP14ClothingCloakCommandantJacket
+  - CE14ClothingCloakCommandantJacket
 
 - type: loadout
-  id: CP14ClothingCloakCommandantJacket
+  id: CE14ClothingCloakCommandantJacket
   equipment:
-    cloak: CP14ClothingCloakCommandantJacket
+    cloak: CE14ClothingCloakCommandantJacket
 
 # OuterClothing
 
 - type: loadoutGroup
-  id: CP14MerchantOuterClothing
-  name: cp14-loadout-merchant-outer
+  id: CE14MerchantOuterClothing
+  name: CE14-loadout-merchant-outer
   minLimit: 0
   loadouts:
-  - CP14ClothingOuterClothingMerchantWaistCoat
+  - CE14ClothingOuterClothingMerchantWaistCoat
 
 - type: loadout
-  id: CP14ClothingOuterClothingMerchantWaistCoat
+  id: CE14ClothingOuterClothingMerchantWaistCoat
   equipment:
-    outerClothing: CP14ClothingOuterClothingMerchantWaistCoat
+    outerClothing: CE14ClothingOuterClothingMerchantWaistCoat
 
 # Shirt
 
 - type: loadoutGroup
-  id: CP14MerchantShirt
-  name: cp14-loadout-merchant-shirt
+  id: CE14MerchantShirt
+  name: CE14-loadout-merchant-shirt
   loadouts:
-  - CP14ClothingShirtMerchant
-  - CP14ClothingShirtMerchantDress
+  - CE14ClothingShirtMerchant
+  - CE14ClothingShirtMerchantDress
 
 - type: loadout
-  id: CP14ClothingShirtMerchant
+  id: CE14ClothingShirtMerchant
   equipment:
-    shirt: CP14ClothingShirtMerchant
+    shirt: CE14ClothingShirtMerchant
 
 - type: loadout
-  id: CP14ClothingShirtMerchantDress
+  id: CE14ClothingShirtMerchantDress
   equipment:
-    shirt: CP14ClothingShirtMerchantDress
+    shirt: CE14ClothingShirtMerchantDress
 
 # Pants
 
 - type: loadoutGroup
-  id: CP14MerchantPants
-  name: cp14-loadout-merchant-pants
+  id: CE14MerchantPants
+  name: CE14-loadout-merchant-pants
   loadouts:
-  - CP14ClothingPantsAristocratic
-  - CP14ClothingPantsMerchantsPantaloons
+  - CE14ClothingPantsAristocratic
+  - CE14ClothingPantsMerchantsPantaloons
 
 - type: loadout
-  id: CP14ClothingPantsMerchantsPantaloons
+  id: CE14ClothingPantsMerchantsPantaloons
   equipment:
-    pants: CP14ClothingPantsMerchantsPantaloons
+    pants: CE14ClothingPantsMerchantsPantaloons
 
 # Shoes
 
 - type: loadoutGroup
-  id: CP14MerchantShoes
-  name: cp14-loadout-merchant-shoes
+  id: CE14MerchantShoes
+  name: CE14-loadout-merchant-shoes
   loadouts:
-  - CP14ShoesAristocraticBlack
-  - CP14ClothingShoesSandals
+  - CE14ShoesAristocraticBlack
+  - CE14ClothingShoesSandals
 
 - type: loadout
-  id: CP14ClothingShoesSandals
+  id: CE14ClothingShoesSandals
   equipment:
-    shoes: CP14ClothingShoesSandals
+    shoes: CE14ClothingShoesSandals
 

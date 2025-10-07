@@ -13,12 +13,12 @@ public sealed partial class ContentAudioSystem
     private const float AmbientLoopFadeInTime = 1f;
     private const float AmbientLoopFadeOutTime = 4f;
 
-    private Dictionary<CP14AmbientLoopPrototype, EntityUid> _loopStreams = new();
+    private Dictionary<CE14AmbientLoopPrototype, EntityUid> _loopStreams = new();
 
     private TimeSpan _nextUpdateTime = TimeSpan.Zero;
     private readonly TimeSpan _updateFrequency = TimeSpan.FromSeconds(1f);
 
-    private void CP14InitializeAmbientLoops()
+    private void CE14InitializeAmbientLoops()
     {
         Subs.CVar(_configManager, CCVars.AmbientMusicVolume, AmbienceCVarChangedAmbientMusic, true);
     }
@@ -41,7 +41,7 @@ public sealed partial class ContentAudioSystem
        }
    }
 
-   private void CP14UpdateAmbientLoops()
+   private void CE14UpdateAmbientLoops()
    {
        if (_timing.CurTime <= _nextUpdateTime)
            return;
@@ -66,7 +66,7 @@ public sealed partial class ContentAudioSystem
        }
    }
 
-   private void StartAmbientLoop(CP14AmbientLoopPrototype proto)
+   private void StartAmbientLoop(CE14AmbientLoopPrototype proto)
    {
        if (_loopStreams.ContainsKey(proto))
            return;
@@ -88,7 +88,7 @@ public sealed partial class ContentAudioSystem
        FadeIn(newLoop.Value.Entity, newLoop.Value.Component, AmbientLoopFadeInTime);
    }
 
-   private void StopAmbientLoop(CP14AmbientLoopPrototype proto)
+   private void StopAmbientLoop(CE14AmbientLoopPrototype proto)
    {
        if (!_loopStreams.TryGetValue(proto, out var audioEntity))
            return;
@@ -101,16 +101,16 @@ public sealed partial class ContentAudioSystem
    /// Checks the player's environment, and returns a list of all ambients that should currently be playing around the player
    /// </summary>
    /// <returns></returns>
-   private List<CP14AmbientLoopPrototype> GetAmbientLoops()
+   private List<CE14AmbientLoopPrototype> GetAmbientLoops()
    {
-       List<CP14AmbientLoopPrototype> list = new();
+       List<CE14AmbientLoopPrototype> list = new();
 
        var player = _player.LocalEntity;
 
        if (player == null)
            return list;
 
-       var ambientLoops = _proto.EnumeratePrototypes<CP14AmbientLoopPrototype>().ToList();
+       var ambientLoops = _proto.EnumeratePrototypes<CE14AmbientLoopPrototype>().ToList();
 
        foreach (var loop in ambientLoops)
        {

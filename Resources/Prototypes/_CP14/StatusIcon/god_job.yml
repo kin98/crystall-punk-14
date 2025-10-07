@@ -1,15 +1,15 @@
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconGodMerkas
+  parent: CE14JobIcon
+  id: CE14JobIconGodMerkas
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_god_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_god_icons.rsi
     state: Merkas
-  jobName: cp14-job-name-god-merkas
+  jobName: CE14-job-name-god-merkas
 
 - type: jobIcon
-  parent: CP14JobIcon
-  id: CP14JobIconGodLumera
+  parent: CE14JobIcon
+  id: CE14JobIconGodLumera
   icon:
-    sprite: /Textures/_CP14/Interface/Misc/job_god_icons.rsi
+    sprite: /Textures/_CE14/Interface/Misc/job_god_icons.rsi
     state: Lumera
-  jobName: cp14-job-name-god-lumera
+  jobName: CE14-job-name-god-lumera

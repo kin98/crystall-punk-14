@@ -1,25 +1,25 @@
-using Content.Shared._CP14.MagicSpell.Spells;
+using Content.Shared._CE14.MagicSpell.Spells;
 using Content.Shared.Damage;
 using Content.Shared.StatusEffectNew;
 using Content.Shared.StatusEffectNew.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.StatusEffect;
+namespace Content.Shared._CE14.StatusEffect;
 
-public sealed partial class CP14ApplySpellStatusEffectSystem : EntitySystem
+public sealed partial class CE14ApplySpellStatusEffectSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14ApplySpellStatusEffectComponent, StatusEffectAppliedEvent>(SpellEffectApply);
-        SubscribeLocalEvent<CP14ApplySpellStatusEffectComponent, StatusEffectRemovedEvent>(SpellEffectRemove);
+        SubscribeLocalEvent<CE14ApplySpellStatusEffectComponent, StatusEffectAppliedEvent>(SpellEffectApply);
+        SubscribeLocalEvent<CE14ApplySpellStatusEffectComponent, StatusEffectRemovedEvent>(SpellEffectRemove);
 
-        SubscribeLocalEvent<CP14DamageModifierStatusEffectComponent, StatusEffectRelayedEvent<DamageModifyEvent>>(OnDamageModify);
+        SubscribeLocalEvent<CE14DamageModifierStatusEffectComponent, StatusEffectRelayedEvent<DamageModifyEvent>>(OnDamageModify);
     }
 
-    private void OnDamageModify(Entity<CP14DamageModifierStatusEffectComponent> ent, ref StatusEffectRelayedEvent<DamageModifyEvent> args)
+    private void OnDamageModify(Entity<CE14DamageModifierStatusEffectComponent> ent, ref StatusEffectRelayedEvent<DamageModifyEvent> args)
     {
         DamageSpecifier newDamage = new();
         foreach (var (type, damage) in args.Args.Damage.DamageDict)
@@ -38,7 +38,7 @@ public sealed partial class CP14ApplySpellStatusEffectSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<CP14ApplySpellStatusEffectComponent, StatusEffectComponent>();
+        var query = EntityQueryEnumerator<CE14ApplySpellStatusEffectComponent, StatusEffectComponent>();
         while (query.MoveNext(out var ent, out var spellEffect, out var statusEffect))
         {
             if (spellEffect.NextUpdateTime > _timing.CurTime)
@@ -51,24 +51,24 @@ public sealed partial class CP14ApplySpellStatusEffectSystem : EntitySystem
 
             foreach (var effect in spellEffect.UpdateEffect)
             {
-                effect.Effect(EntityManager, new CP14SpellEffectBaseArgs(null, null, statusEffect.AppliedTo, Transform(statusEffect.AppliedTo.Value).Coordinates));
+                effect.Effect(EntityManager, new CE14SpellEffectBaseArgs(null, null, statusEffect.AppliedTo, Transform(statusEffect.AppliedTo.Value).Coordinates));
             }
         }
     }
 
-    private void SpellEffectApply(Entity<CP14ApplySpellStatusEffectComponent> ent, ref StatusEffectAppliedEvent args)
+    private void SpellEffectApply(Entity<CE14ApplySpellStatusEffectComponent> ent, ref StatusEffectAppliedEvent args)
     {
         foreach (var effect in ent.Comp.StartEffect)
         {
-            effect.Effect(EntityManager, new CP14SpellEffectBaseArgs(null, null, args.Target, Transform(args.Target).Coordinates));
+            effect.Effect(EntityManager, new CE14SpellEffectBaseArgs(null, null, args.Target, Transform(args.Target).Coordinates));
         }
     }
 
-    private void SpellEffectRemove(Entity<CP14ApplySpellStatusEffectComponent> ent, ref StatusEffectRemovedEvent args)
+    private void SpellEffectRemove(Entity<CE14ApplySpellStatusEffectComponent> ent, ref StatusEffectRemovedEvent args)
     {
         foreach (var effect in ent.Comp.EndEffect)
         {
-            effect.Effect(EntityManager, new CP14SpellEffectBaseArgs(null, null, args.Target, Transform(args.Target).Coordinates));
+            effect.Effect(EntityManager, new CE14SpellEffectBaseArgs(null, null, args.Target, Transform(args.Target).Coordinates));
         }
     }
 }

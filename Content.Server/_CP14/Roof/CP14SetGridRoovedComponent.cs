@@ -1,10 +1,10 @@
-namespace Content.Server._CP14.Roof;
+namespace Content.Server._CE14.Roof;
 
 /// <summary>
 /// When added, marks ALL tiles on grid as rooved
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14SetGridRoovedComponent : Component
+public sealed partial class CE14SetGridRoovedComponent : Component
 {
 }
 
@@ -12,6 +12,6 @@ public sealed partial class CP14SetGridRoovedComponent : Component
 /// When added, marks ALL tiles on grid as unrooved
 /// </summary>
 [RegisterComponent]
-public sealed partial class CP14SetGridUnroovedComponent : Component
+public sealed partial class CE14SetGridUnroovedComponent : Component
 {
 }

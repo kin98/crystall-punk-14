@@ -12,9 +12,9 @@
 
 - type: tile
   editorHidden: false
-  id: CP14FloorBase
-  name: cp14-tiles-base
-  sprite: /Textures/_CP14/Tiles/cave.png
+  id: CE14FloorBase
+  name: CE14-tiles-base
+  sprite: /Textures/_CE14/Tiles/cave.png
   variants: 14
   placementVariants:
   - 1.0
@@ -31,7 +31,7 @@
   - 1.0
   - 1.0
   - 1.0
-  baseTurf: CP14FloorBase #Recursivle indestructible
+  baseTurf: CE14FloorBase #Recursivle indestructible
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid

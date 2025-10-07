@@ -1,9 +1,9 @@
 using Robust.Shared.Audio;
 
-namespace Content.Shared._CP14.FarSound;
+namespace Content.Shared._CE14.FarSound;
 
 [RegisterComponent]
-public sealed partial class CP14FarSoundComponent : Component
+public sealed partial class CE14FarSoundComponent : Component
 {
     [DataField]
     public SoundSpecifier? CloseSound;

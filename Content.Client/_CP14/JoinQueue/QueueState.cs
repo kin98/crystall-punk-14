@@ -1,11 +1,11 @@
-using Content.Shared._CP14.JoinQueue;
+using Content.Shared._CE14.JoinQueue;
 using Robust.Client.Audio;
 using Robust.Client.Console;
 using Robust.Client.State;
 using Robust.Client.UserInterface;
 using Robust.Shared.Player;
 
-namespace Content.Client._CP14.JoinQueue;
+namespace Content.Client._CE14.JoinQueue;
 
 public sealed class QueueState : State
 {

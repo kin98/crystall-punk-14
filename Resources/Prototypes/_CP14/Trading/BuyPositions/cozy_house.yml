@@ -1,203 +1,203 @@
 
 # Rep 0
 
-- type: cp14TradingPosition
-  id: CP14Candle
+- type: CE14TradingPosition
+  id: CE14Candle
   faction: HomeDecor
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Misc/candles.rsi
+    sprite: _CE14/Objects/Misc/candles.rsi
     state: small1
-  service: !type:CP14BuyItemsService
-    product: CP14Candle
+  service: !type:CE14BuyItemsService
+    product: CE14Candle
 
-- type: cp14TradingPosition
-  id: CP14Bell
+- type: CE14TradingPosition
+  id: CE14Bell
   faction: HomeDecor
   uiPosition: 1
   icon:
-    sprite: _CP14/Objects/Misc/bell.rsi
+    sprite: _CE14/Objects/Misc/bell.rsi
     state: icon
-  service: !type:CP14BuyItemsService
-    product: CP14Bell
+  service: !type:CE14BuyItemsService
+    product: CE14Bell
 
-- type: cp14TradingPosition
-  id: CP14KeyCopperBlank
+- type: CE14TradingPosition
+  id: CE14KeyCopperBlank
   faction: HomeDecor
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
     state: key_copper
-  service: !type:CP14BuyItemsService
-    product: CP14KeyCopperBlank
+  service: !type:CE14BuyItemsService
+    product: CE14KeyCopperBlank
 
-- type: cp14TradingPosition
-  id: CP14LockCopper
+- type: CE14TradingPosition
+  id: CE14LockCopper
   faction: HomeDecor
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
     state: lock_copper
-  service: !type:CP14BuyItemsService
-    product: CP14LockCopper
+  service: !type:CE14BuyItemsService
+    product: CE14LockCopper
 
 
-- type: cp14TradingPosition
-  id: CP14WallpaperBlack
+- type: CE14TradingPosition
+  id: CE14WallpaperBlack
   faction: HomeDecor
   reputationLevel: 0
   uiPosition: 6
   icon:
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
     state: black
-  service: !type:CP14BuyItemsService
-    product: CP14WallpaperBlack
+  service: !type:CE14BuyItemsService
+    product: CE14WallpaperBlack
 
-- type: cp14TradingPosition
-  id: CP14WallpaperGreen
+- type: CE14TradingPosition
+  id: CE14WallpaperGreen
   faction: HomeDecor
   reputationLevel: 0
   uiPosition: 7
   icon:
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
     state: green
-  service: !type:CP14BuyItemsService
-    product: CP14WallpaperGreen
+  service: !type:CE14BuyItemsService
+    product: CE14WallpaperGreen
 
-- type: cp14TradingPosition
-  id: CP14WallpaperPurple
+- type: CE14TradingPosition
+  id: CE14WallpaperPurple
   faction: HomeDecor
   reputationLevel: 0
   uiPosition: 8
   icon:
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
     state: purple
-  service: !type:CP14BuyItemsService
-    product: CP14WallpaperPurple
+  service: !type:CE14BuyItemsService
+    product: CE14WallpaperPurple
 
-- type: cp14TradingPosition
-  id: CP14WallpaperRed
+- type: CE14TradingPosition
+  id: CE14WallpaperRed
   faction: HomeDecor
   reputationLevel: 0
   uiPosition: 9
   icon:
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
     state: red
-  service: !type:CP14BuyItemsService
-    product: CP14WallpaperRed
+  service: !type:CE14BuyItemsService
+    product: CE14WallpaperRed
 
-- type: cp14TradingPosition
-  id: CP14WallpaperWhite
+- type: CE14TradingPosition
+  id: CE14WallpaperWhite
   faction: HomeDecor
   reputationLevel: 0
   uiPosition: 10
   icon:
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
     state: white
-  service: !type:CP14BuyItemsService
-    product: CP14WallpaperWhite
+  service: !type:CE14BuyItemsService
+    product: CE14WallpaperWhite
 
-- type: cp14TradingPosition
-  id: CP14WallpaperWhite2
+- type: CE14TradingPosition
+  id: CE14WallpaperWhite2
   faction: HomeDecor
   reputationLevel: 0
   uiPosition: 11
   icon:
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
     state: white2
-  service: !type:CP14BuyItemsService
-    product: CP14WallpaperWhite2
+  service: !type:CE14BuyItemsService
+    product: CE14WallpaperWhite2
 
-- type: cp14TradingPosition
-  id: CP14WallpaperYellow
+- type: CE14TradingPosition
+  id: CE14WallpaperYellow
   faction: HomeDecor
   reputationLevel: 0
   uiPosition: 12
   icon:
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
     state: yellow
-  service: !type:CP14BuyItemsService
-    product: CP14WallpaperYellow
+  service: !type:CE14BuyItemsService
+    product: CE14WallpaperYellow
 
 # Rep 1
 
-- type: cp14TradingPosition
-  id: CP14Candelabra
+- type: CE14TradingPosition
+  id: CE14Candelabra
   faction: HomeDecor
   reputationLevel: 1
   uiPosition: 0
   icon:
-    sprite: _CP14/Objects/Misc/candelabra.rsi
+    sprite: _CE14/Objects/Misc/candelabra.rsi
     state: triple
-  service: !type:CP14BuyItemsService
-    product: CP14Candelabra
+  service: !type:CE14BuyItemsService
+    product: CE14Candelabra
 
-- type: cp14TradingPosition
-  id: CP14KeyIronBlank
+- type: CE14TradingPosition
+  id: CE14KeyIronBlank
   faction: HomeDecor
   reputationLevel: 1
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
     state: key_iron
-  service: !type:CP14BuyItemsService
-    product: CP14KeyIronBlank
+  service: !type:CE14BuyItemsService
+    product: CE14KeyIronBlank
 
-- type: cp14TradingPosition
-  id: CP14LockIron
+- type: CE14TradingPosition
+  id: CE14LockIron
   faction: HomeDecor
   reputationLevel: 1
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
     state: lock_iron
-  service: !type:CP14BuyItemsService
-    product: CP14LockIron
+  service: !type:CE14BuyItemsService
+    product: CE14LockIron
 
-- type: cp14TradingPosition
-  id: CP14WallpaperBank
+- type: CE14TradingPosition
+  id: CE14WallpaperBank
   faction: HomeDecor
   priceMarkup: 5
   reputationLevel: 1
   uiPosition: 6
   icon:
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
     state: bank
-  service: !type:CP14BuyItemsService
-    product: CP14WallpaperBank
+  service: !type:CE14BuyItemsService
+    product: CE14WallpaperBank
 
-- type: cp14TradingPosition
-  id: CP14WallpaperBank2
+- type: CE14TradingPosition
+  id: CE14WallpaperBank2
   faction: HomeDecor
   priceMarkup: 5
   reputationLevel: 1
   uiPosition: 7
   icon:
-    sprite: _CP14/Structures/Wallpaper/icons.rsi
+    sprite: _CE14/Structures/Wallpaper/icons.rsi
     state: bank2
-  service: !type:CP14BuyItemsService
-    product: CP14WallpaperBank2
+  service: !type:CE14BuyItemsService
+    product: CE14WallpaperBank2
 
 # Rep 2
 
-- type: cp14TradingPosition
-  id: CP14KeyGoldBlank
+- type: CE14TradingPosition
+  id: CE14KeyGoldBlank
   faction: HomeDecor
   reputationLevel: 2
   uiPosition: 3
   icon:
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
     state: key_gold
-  service: !type:CP14BuyItemsService
-    product: CP14KeyGoldBlank
+  service: !type:CE14BuyItemsService
+    product: CE14KeyGoldBlank
 
-- type: cp14TradingPosition
-  id: CP14LockGold
+- type: CE14TradingPosition
+  id: CE14LockGold
   faction: HomeDecor
   reputationLevel: 2
   uiPosition: 4
   icon:
-    sprite: _CP14/Objects/keys.rsi
+    sprite: _CE14/Objects/keys.rsi
     state: lock_gold
-  service: !type:CP14BuyItemsService
-    product: CP14LockGold
+  service: !type:CE14BuyItemsService
+    product: CE14LockGold

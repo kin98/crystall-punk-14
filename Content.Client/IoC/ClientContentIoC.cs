@@ -1,6 +1,6 @@
-using Content.Client._CP14.Discord;
-using Content.Client._CP14.JoinQueue;
-using Content.Client._CP14.Sponsor;
+using Content.Client._CE14.Discord;
+using Content.Client._CE14.JoinQueue;
+using Content.Client._CE14.Sponsor;
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
@@ -24,7 +24,7 @@ using Content.Client.Voting;
 using Content.Shared.Administration.Logs;
 using Content.Client.Lobby;
 using Content.Client.Players.RateLimiting;
-using Content.Shared._CP14.Sponsor;
+using Content.Shared._CE14.Sponsor;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Chat;
 using Content.Shared.Players.PlayTimeTracking;
@@ -38,11 +38,11 @@ namespace Content.Client.IoC
         {
             var collection = IoCManager.Instance!;
 
-            //CP14
+            //CE14
             collection.Register<DiscordAuthManager>();
             collection.Register<JoinQueueManager>();
-            collection.Register<ICP14SponsorManager, ClientSponsorSystem>();
-            //CP14 end
+            collection.Register<ICE14SponsorManager, ClientSponsorSystem>();
+            //CE14 end
             collection.Register<IParallaxManager, ParallaxManager>();
             collection.Register<GeneratedParallaxCache>();
             collection.Register<IChatManager, ChatManager>();

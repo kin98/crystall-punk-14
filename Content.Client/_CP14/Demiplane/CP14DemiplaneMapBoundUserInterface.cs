@@ -1,13 +1,13 @@
-using Content.Shared._CP14.Demiplane;
+using Content.Shared._CE14.Demiplane;
 using Robust.Client.UserInterface;
 
-namespace Content.Client._CP14.Demiplane;
+namespace Content.Client._CE14.Demiplane;
 
-public sealed class CP14DemiplaneMapBoundUserInterface : BoundUserInterface
+public sealed class CE14DemiplaneMapBoundUserInterface : BoundUserInterface
 {
-    private CP14DemiplaneMapWindow? _window;
+    private CE14DemiplaneMapWindow? _window;
 
-    public CP14DemiplaneMapBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
+    public CE14DemiplaneMapBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
         IoCManager.InjectDependencies(this);
     }
@@ -16,14 +16,14 @@ public sealed class CP14DemiplaneMapBoundUserInterface : BoundUserInterface
     {
         base.Open();
 
-        _window = this.CreateWindow<CP14DemiplaneMapWindow>();
+        _window = this.CreateWindow<CE14DemiplaneMapWindow>();
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)
     {
         base.UpdateState(state);
 
-        if (_window == null || state is not CP14DemiplaneMapUiState mapState)
+        if (_window == null || state is not CE14DemiplaneMapUiState mapState)
             return;
 
         _window?.UpdateState(mapState);

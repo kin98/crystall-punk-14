@@ -1,4 +1,4 @@
-using Content.Shared._CP14.DayCycle;
+using Content.Shared._CE14.DayCycle;
 using Content.Shared.Light.Components;
 using Robust.Shared.Map.Components;
 
@@ -15,9 +15,9 @@ public abstract class SharedLightCycleSystem : EntitySystem
 
     protected virtual void OnCycleMapInit(Entity<LightCycleComponent> ent, ref MapInitEvent args)
     {
-        //CP14DayCycleSystem
-        EnsureComp<CP14DayCycleComponent>(ent);
-        //CP14DayCycleSystem end
+        //CE14DayCycleSystem
+        EnsureComp<CE14DayCycleComponent>(ent);
+        //CE14DayCycleSystem end
 
         if (TryComp(ent.Owner, out MapLightComponent? mapLight))
         {
@@ -125,7 +125,7 @@ public abstract class SharedLightCycleSystem : EntitySystem
         float phase = 0)
     {
         //var sen = MathF.Pow(MathF.Sin((MathF.PI * (phase + x)) / waveLength), exponent);
-        var sen = MathF.Pow(MathF.Cos((MathF.PI * (phase + x)) / waveLength), exponent); //CP14 edited light curve calculation
+        var sen = MathF.Pow(MathF.Cos((MathF.PI * (phase + x)) / waveLength), exponent); //CE14 edited light curve calculation
 
         return (crest - shift) * sen + shift;
     }

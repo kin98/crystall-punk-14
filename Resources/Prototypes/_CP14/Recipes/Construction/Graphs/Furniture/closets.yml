@@ -1,20 +1,20 @@
 - type: constructionGraph
-  id: CP14WoodenCloset
+  id: CE14WoodenCloset
   start: start
   graph:
     - node: start
       actions:
       - !type:DestroyEntity {}
       edges:
-        - to: CP14WoodenCloset
+        - to: CE14WoodenCloset
           completed:
             - !type:SnapToGrid
           steps:
             - stackGroup: WoodenPlanks
               amount: 4
               doAfter: 2
-    - node: CP14WoodenCloset
-      entity: CP14WoodenCloset
+    - node: CE14WoodenCloset
+      entity: CE14WoodenCloset
       edges:
       - to: start
         steps:
@@ -22,5 +22,5 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14WoodenPlanks1
+          prototype: CE14WoodenPlanks1
           amount: 4

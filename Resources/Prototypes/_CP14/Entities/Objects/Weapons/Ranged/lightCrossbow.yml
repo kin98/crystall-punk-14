@@ -1,12 +1,12 @@
 - type: entity
-  id: CP14BaseLightCrossbow
+  id: CE14BaseLightCrossbow
   name: light crossbow
   parent: BaseItem
   categories: [ ForkFiltered ]
   description: A small, compact crossbow that is comfortable to hold with one hand. Not too accurate on the reverse side.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Ranged/light_crossbow.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/light_crossbow.rsi
     layers:
     - state: unwielded
       map: [ base ]
@@ -15,7 +15,7 @@
   - type: Clothing
     equipDelay: 0.45
     unequipDelay: 0.45
-    sprite: _CP14/Objects/Weapons/Ranged/light_crossbow.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/light_crossbow.rsi
     quickEquip: false
     breakOnMove: false
     slots:
@@ -40,7 +40,7 @@
         insertSound: /Audio/Weapons/Guns/Misc/arrow_nock.ogg
         whitelist:
           tags:
-          - CP14CrossbowBolt
+          - CE14CrossbowBolt
   - type: ContainerContainer
     containers:
       projectiles: !type:ContainerSlot
@@ -52,9 +52,9 @@
       unwielded-arrow:
         whitelist:
           tags:
-            - CP14CrossbowBolt
+            - CE14CrossbowBolt
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 10
-      CP14Iron: 30
-      CP14Cloth: 5
+      CE14Copper: 10
+      CE14Iron: 30
+      CE14Cloth: 5

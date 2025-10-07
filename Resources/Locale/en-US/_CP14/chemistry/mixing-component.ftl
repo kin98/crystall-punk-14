@@ -1,1 +1,1 @@
-cp14-mixing-verb-magic-splitting = magic splitting
+CE14-mixing-verb-magic-splitting = magic splitting

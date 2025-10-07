@@ -8,7 +8,7 @@ namespace Content.Shared.Procedural.DungeonLayers;
 /// Generates random placed rooms across the grid
 /// </summary>
 [Virtual]
-public partial class CP14RoomsDunGen : IDunGenLayer
+public partial class CE14RoomsDunGen : IDunGenLayer
 {
     /// <summary>
     /// This rooms can only be generated on the specified tiles

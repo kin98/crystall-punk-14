@@ -1,16 +1,16 @@
 using System.Numerics;
-using Content.Shared._CP14.Skill.Effects;
-using Content.Shared._CP14.Skill.Restrictions;
+using Content.Shared._CE14.Skill.Effects;
+using Content.Shared._CE14.Skill.Restrictions;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Skill.Prototypes;
+namespace Content.Shared._CE14.Skill.Prototypes;
 
 /// <summary>
 /// A skill that can be learned by the player. Skills are grouped into trees, and each skill has a cost to learn, prerequisites, and an effect.
 /// </summary>
-[Prototype("cp14Skill")]
-public sealed partial class CP14SkillPrototype : IPrototype
+[Prototype("CE14Skill")]
+public sealed partial class CE14SkillPrototype : IPrototype
 {
     [IdDataField] public string ID { get; } = default!;
 
@@ -30,7 +30,7 @@ public sealed partial class CP14SkillPrototype : IPrototype
     /// The tree this skill belongs to. This is used to group skills together in the UI.
     /// </summary>
     [DataField(required: true)]
-    public ProtoId<CP14SkillTreePrototype> Tree = default!;
+    public ProtoId<CE14SkillTreePrototype> Tree = default!;
 
     /// <summary>
     ///  The cost to learn this skill. This is used to determine how many progress points are needed to learn the skill.
@@ -55,11 +55,11 @@ public sealed partial class CP14SkillPrototype : IPrototype
     ///  But the presence of the skill itself can affect some systems that check for the presence of certain skills.
     /// </summary>
     [DataField]
-    public List<CP14SkillEffect> Effects = new();
+    public List<CE14SkillEffect> Effects = new();
 
     /// <summary>
     /// Skill restriction. Limiters on learning. Any reason why a player cannot learn this skill.
     /// </summary>
     [DataField]
-    public List<CP14SkillRestriction> Restrictions = new();
+    public List<CE14SkillRestriction> Restrictions = new();
 }

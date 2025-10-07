@@ -1,9 +1,9 @@
 # GENERAL
 
-cp14-food-sequence-content-pumpkin = pumpkin
-cp14-food-sequence-content-cucumber = cucumber
-cp14-food-sequence-content-pepper = pepper
+CE14-food-sequence-content-pumpkin = pumpkin
+CE14-food-sequence-content-cucumber = cucumber
+CE14-food-sequence-content-pepper = pepper
 
 # SANDWICH
 
-cp14-food-sequence-sandwich-gen = sandwich with {$content}
+CE14-food-sequence-sandwich-gen = sandwich with {$content}

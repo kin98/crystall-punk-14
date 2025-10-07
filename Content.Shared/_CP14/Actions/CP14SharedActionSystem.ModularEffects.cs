@@ -1,21 +1,21 @@
-using Content.Shared._CP14.MagicSpell.Spells;
+using Content.Shared._CE14.MagicSpell.Spells;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
 
-namespace Content.Shared._CP14.Actions;
+namespace Content.Shared._CE14.Actions;
 
-public abstract partial class CP14SharedActionSystem
+public abstract partial class CE14SharedActionSystem
 {
     private void InitializeModularEffects()
     {
-        SubscribeLocalEvent<TransformComponent, CP14ActionStartDoAfterEvent>(OnActionTelegraphy);
+        SubscribeLocalEvent<TransformComponent, CE14ActionStartDoAfterEvent>(OnActionTelegraphy);
 
-        SubscribeLocalEvent<TransformComponent, CP14InstantModularEffectEvent>(OnInstantCast);
-        SubscribeLocalEvent<TransformComponent, CP14WorldTargetModularEffectEvent>(OnWorldTargetCast);
-        SubscribeLocalEvent<TransformComponent, CP14EntityTargetModularEffectEvent>(OnEntityTargetCast);
+        SubscribeLocalEvent<TransformComponent, CE14InstantModularEffectEvent>(OnInstantCast);
+        SubscribeLocalEvent<TransformComponent, CE14WorldTargetModularEffectEvent>(OnWorldTargetCast);
+        SubscribeLocalEvent<TransformComponent, CE14EntityTargetModularEffectEvent>(OnEntityTargetCast);
     }
 
-    private void OnActionTelegraphy(Entity<TransformComponent> ent, ref CP14ActionStartDoAfterEvent args)
+    private void OnActionTelegraphy(Entity<TransformComponent> ent, ref CE14ActionStartDoAfterEvent args)
     {
         if (!_timing.IsFirstTimePredicted)
             return;
@@ -29,9 +29,9 @@ public abstract partial class CP14SharedActionSystem
             return;
 
         //Instant
-        if (TryComp<InstantActionComponent>(action, out var instant) && instant.Event is CP14InstantModularEffectEvent instantModular)
+        if (TryComp<InstantActionComponent>(action, out var instant) && instant.Event is CE14InstantModularEffectEvent instantModular)
         {
-            var spellArgs = new CP14SpellEffectBaseArgs(performer, actionComp.Container, performer, Transform(performer).Coordinates);
+            var spellArgs = new CE14SpellEffectBaseArgs(performer, actionComp.Container, performer, Transform(performer).Coordinates);
 
             foreach (var effect in instantModular.TelegraphyEffects)
             {
@@ -40,9 +40,9 @@ public abstract partial class CP14SharedActionSystem
         }
 
         //World Target
-        if (TryComp<WorldTargetActionComponent>(action, out var worldTarget) && worldTarget.Event is CP14WorldTargetModularEffectEvent worldModular && targetPosition is not null)
+        if (TryComp<WorldTargetActionComponent>(action, out var worldTarget) && worldTarget.Event is CE14WorldTargetModularEffectEvent worldModular && targetPosition is not null)
         {
-            var spellArgs = new CP14SpellEffectBaseArgs(performer, actionComp.Container, null, targetPosition.Value);
+            var spellArgs = new CE14SpellEffectBaseArgs(performer, actionComp.Container, null, targetPosition.Value);
 
             foreach (var effect in worldModular.TelegraphyEffects)
             {
@@ -51,9 +51,9 @@ public abstract partial class CP14SharedActionSystem
         }
 
         //Entity Target
-        if (TryComp<EntityTargetActionComponent>(action, out var entityTarget) && entityTarget.Event is CP14EntityTargetModularEffectEvent entityModular && target is not null)
+        if (TryComp<EntityTargetActionComponent>(action, out var entityTarget) && entityTarget.Event is CE14EntityTargetModularEffectEvent entityModular && target is not null)
         {
-            var spellArgs = new CP14SpellEffectBaseArgs(performer, actionComp.Container, target, Transform(target.Value).Coordinates);
+            var spellArgs = new CE14SpellEffectBaseArgs(performer, actionComp.Container, target, Transform(target.Value).Coordinates);
 
             foreach (var effect in entityModular.TelegraphyEffects)
             {
@@ -62,12 +62,12 @@ public abstract partial class CP14SharedActionSystem
         }
     }
 
-    private void OnInstantCast(Entity<TransformComponent> ent, ref CP14InstantModularEffectEvent args)
+    private void OnInstantCast(Entity<TransformComponent> ent, ref CE14InstantModularEffectEvent args)
     {
         if (!_timing.IsFirstTimePredicted)
             return;
 
-        var spellArgs = new CP14SpellEffectBaseArgs(args.Performer, args.Action.Comp.Container, args.Performer, Transform(args.Performer).Coordinates);
+        var spellArgs = new CE14SpellEffectBaseArgs(args.Performer, args.Action.Comp.Container, args.Performer, Transform(args.Performer).Coordinates);
 
         foreach (var effect in args.Effects)
         {
@@ -77,12 +77,12 @@ public abstract partial class CP14SharedActionSystem
         args.Handled = true;
     }
 
-    private void OnWorldTargetCast(Entity<TransformComponent> ent, ref CP14WorldTargetModularEffectEvent args)
+    private void OnWorldTargetCast(Entity<TransformComponent> ent, ref CE14WorldTargetModularEffectEvent args)
     {
         if (!_timing.IsFirstTimePredicted)
             return;
 
-        var spellArgs = new CP14SpellEffectBaseArgs(args.Performer, args.Action.Comp.Container, null, args.Target);
+        var spellArgs = new CE14SpellEffectBaseArgs(args.Performer, args.Action.Comp.Container, null, args.Target);
 
         foreach (var effect in args.Effects)
         {
@@ -92,12 +92,12 @@ public abstract partial class CP14SharedActionSystem
         args.Handled = true;
     }
 
-    private void OnEntityTargetCast(Entity<TransformComponent> ent, ref CP14EntityTargetModularEffectEvent args)
+    private void OnEntityTargetCast(Entity<TransformComponent> ent, ref CE14EntityTargetModularEffectEvent args)
     {
         if (!_timing.IsFirstTimePredicted)
             return;
 
-        var spellArgs = new CP14SpellEffectBaseArgs(args.Performer, args.Action.Comp.Container, args.Target, Transform(args.Target).Coordinates);
+        var spellArgs = new CE14SpellEffectBaseArgs(args.Performer, args.Action.Comp.Container, args.Target, Transform(args.Target).Coordinates);
 
         foreach (var effect in args.Effects)
         {
@@ -108,38 +108,38 @@ public abstract partial class CP14SharedActionSystem
     }
 }
 
-public sealed partial class CP14InstantModularEffectEvent : InstantActionEvent
+public sealed partial class CE14InstantModularEffectEvent : InstantActionEvent
 {
     /// <summary>
     /// Effects that will trigger at the beginning of the cast, before mana is spent. Should have no gameplay importance, just special effects, popups and sounds.
     /// </summary>
     [DataField]
-    public List<CP14SpellEffect> TelegraphyEffects = new();
+    public List<CE14SpellEffect> TelegraphyEffects = new();
 
     [DataField]
-    public List<CP14SpellEffect> Effects = new();
+    public List<CE14SpellEffect> Effects = new();
 }
 
-public sealed partial class CP14WorldTargetModularEffectEvent : WorldTargetActionEvent
+public sealed partial class CE14WorldTargetModularEffectEvent : WorldTargetActionEvent
 {
     /// <summary>
     /// Effects that will trigger at the beginning of the cast, before mana is spent. Should have no gameplay importance, just special effects, popups and sounds.
     /// </summary>
     [DataField]
-    public List<CP14SpellEffect> TelegraphyEffects = new();
+    public List<CE14SpellEffect> TelegraphyEffects = new();
 
     [DataField]
-    public List<CP14SpellEffect> Effects = new();
+    public List<CE14SpellEffect> Effects = new();
 }
 
-public sealed partial class CP14EntityTargetModularEffectEvent : EntityTargetActionEvent
+public sealed partial class CE14EntityTargetModularEffectEvent : EntityTargetActionEvent
 {
     /// <summary>
     /// Effects that will trigger at the beginning of the cast, before mana is spent. Should have no gameplay importance, just special effects, popups and sounds.
     /// </summary>
     [DataField]
-    public List<CP14SpellEffect> TelegraphyEffects = new();
+    public List<CE14SpellEffect> TelegraphyEffects = new();
 
     [DataField]
-    public List<CP14SpellEffect> Effects = new();
+    public List<CE14SpellEffect> Effects = new();
 }

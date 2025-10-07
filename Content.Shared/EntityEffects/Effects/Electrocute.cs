@@ -5,7 +5,7 @@ namespace Content.Shared.EntityEffects.Effects;
 
 public sealed partial class Electrocute : EntityEffect
 {
-    [DataField] public float ElectrocuteTime = 2; //CP14 - float
+    [DataField] public float ElectrocuteTime = 2; //CE14 - float
 
     [DataField] public int ElectrocuteDamageScale = 5;
 

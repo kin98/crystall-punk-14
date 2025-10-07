@@ -1,5 +1,5 @@
 using System.Numerics;
-using Content.Shared._CP14.WeatherEffect.Effects;
+using Content.Shared._CE14.WeatherEffect.Effects;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -24,20 +24,20 @@ public sealed partial class WeatherPrototype : IPrototype
     public SoundSpecifier? Sound;
 
     /// <summary>
-    /// CP14 offset speed
+    /// CE14 offset speed
     /// </summary>
     [DataField]
     public Vector2 OffsetSpeed = Vector2.Zero;
 
     /// <summary>
-    /// CP14 alpha
+    /// CE14 alpha
     /// </summary>
     [DataField]
     public float Alpha = 1f;
 
     /// <summary>
-    /// CP14 Effects
+    /// CE14 Effects
     /// </summary>
     [DataField]
-    public List<CP14WeatherEffectConfig> Config = new();
+    public List<CE14WeatherEffectConfig> Config = new();
 }

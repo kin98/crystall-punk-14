@@ -6,37 +6,37 @@ Minimal units of being. By obtaining them from splitting items and precursers, a
 
 ## Basic 6 essences:
 <Box>
-<GuideEntityEmbed Entity="CP14EssenceAir"/>
-<GuideEntityEmbed Entity="CP14EssenceWater"/>
-<GuideEntityEmbed Entity="CP14EssenceFire"/>
-<GuideEntityEmbed Entity="CP14EssenceOrder"/>
-<GuideEntityEmbed Entity="CP14EssenceChaos"/>
-<GuideEntityEmbed Entity="CP14EssenceEarth"/>
+<GuideEntityEmbed Entity="CE14EssenceAir"/>
+<GuideEntityEmbed Entity="CE14EssenceWater"/>
+<GuideEntityEmbed Entity="CE14EssenceFire"/>
+<GuideEntityEmbed Entity="CE14EssenceOrder"/>
+<GuideEntityEmbed Entity="CE14EssenceChaos"/>
+<GuideEntityEmbed Entity="CE14EssenceEarth"/>
 </Box>
 
-<GuideReagentGroupEmbed Group="CP14MagicEssenceT0"/>
+<GuideReagentGroupEmbed Group="CE14MagicEssenceT0"/>
 
 ## First Compound Essences:
 <Box>
-<GuideEntityEmbed Entity="CP14EssenceFrost"/>
-<GuideEntityEmbed Entity="CP14EssenceLight"/>
-<GuideEntityEmbed Entity="CP14EssenceMotion"/>
-<GuideEntityEmbed Entity="CP14EssenceCycle"/>
-<GuideEntityEmbed Entity="CP14EssenceEnergia"/>
-<GuideEntityEmbed Entity="CP14EssenceVoid"/>
+<GuideEntityEmbed Entity="CE14EssenceFrost"/>
+<GuideEntityEmbed Entity="CE14EssenceLight"/>
+<GuideEntityEmbed Entity="CE14EssenceMotion"/>
+<GuideEntityEmbed Entity="CE14EssenceCycle"/>
+<GuideEntityEmbed Entity="CE14EssenceEnergia"/>
+<GuideEntityEmbed Entity="CE14EssenceVoid"/>
 </Box>
 <Box>
-<GuideEntityEmbed Entity="CP14EssencePoison"/>
-<GuideEntityEmbed Entity="CP14EssenceLife"/>
-<GuideEntityEmbed Entity="CP14EssenceCrystal"/>
+<GuideEntityEmbed Entity="CE14EssencePoison"/>
+<GuideEntityEmbed Entity="CE14EssenceLife"/>
+<GuideEntityEmbed Entity="CE14EssenceCrystal"/>
 </Box>
-<GuideReagentGroupEmbed Group="CP14MagicEssenceT1"/>
+<GuideReagentGroupEmbed Group="CE14MagicEssenceT1"/>
 
 ## Second Compound Essences:
 <Box>
-<GuideEntityEmbed Entity="CP14EssenceMagic"/>
-<GuideEntityEmbed Entity="CP14EssenceBeast"/>
+<GuideEntityEmbed Entity="CE14EssenceMagic"/>
+<GuideEntityEmbed Entity="CE14EssenceBeast"/>
 </Box>
-<GuideReagentGroupEmbed Group="CP14MagicEssenceT2"/>
+<GuideReagentGroupEmbed Group="CE14MagicEssenceT2"/>
 
 </Document>

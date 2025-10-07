@@ -1,7 +1,7 @@
-namespace Content.Server._CP14.Salary;
+namespace Content.Server._CE14.Salary;
 
-[RegisterComponent, Access(typeof(CP14SalarySystem))]
-public sealed partial class CP14SalaryCounterComponent : Component
+[RegisterComponent, Access(typeof(CE14SalarySystem))]
+public sealed partial class CE14SalaryCounterComponent : Component
 {
     [DataField, AutoNetworkedField]
     public TimeSpan NextSalaryTime = TimeSpan.Zero;

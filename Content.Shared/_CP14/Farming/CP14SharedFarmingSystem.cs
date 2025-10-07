@@ -1,4 +1,4 @@
-using Content.Shared._CP14.Farming.Components;
+using Content.Shared._CE14.Farming.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Destructible;
 using Content.Shared.DoAfter;
@@ -12,9 +12,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._CP14.Farming;
+namespace Content.Shared._CE14.Farming;
 
-public abstract partial class CP14SharedFarmingSystem : EntitySystem
+public abstract partial class CE14SharedFarmingSystem : EntitySystem
 {
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
@@ -26,8 +26,8 @@ public abstract partial class CP14SharedFarmingSystem : EntitySystem
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
 
-    protected EntityQuery<CP14PlantComponent> PlantQuery;
-    protected EntityQuery<CP14SeedComponent> SeedQuery;
+    protected EntityQuery<CE14PlantComponent> PlantQuery;
+    protected EntityQuery<CE14SeedComponent> SeedQuery;
     protected EntityQuery<SolutionContainerManagerComponent> SolutionQuery;
 
     public override void Initialize()
@@ -35,23 +35,23 @@ public abstract partial class CP14SharedFarmingSystem : EntitySystem
         base.Initialize();
         InitializeInteractions();
 
-        PlantQuery = GetEntityQuery<CP14PlantComponent>();
-        SeedQuery = GetEntityQuery<CP14SeedComponent>();
+        PlantQuery = GetEntityQuery<CE14PlantComponent>();
+        SeedQuery = GetEntityQuery<CE14SeedComponent>();
         SolutionQuery = GetEntityQuery<SolutionContainerManagerComponent>();
 
-        SubscribeLocalEvent<CP14PlantComponent, ExaminedEvent>(OnExamine);
+        SubscribeLocalEvent<CE14PlantComponent, ExaminedEvent>(OnExamine);
     }
 
-    private void OnExamine(EntityUid uid, CP14PlantComponent component, ExaminedEvent args)
+    private void OnExamine(EntityUid uid, CE14PlantComponent component, ExaminedEvent args)
     {
         if (component.Energy <= 0)
-            args.PushMarkup(Loc.GetString("cp14-farming-low-energy"));
+            args.PushMarkup(Loc.GetString("CE14-farming-low-energy"));
 
         if (component.Resource <= 0)
-            args.PushMarkup(Loc.GetString("cp14-farming-low-resources"));
+            args.PushMarkup(Loc.GetString("CE14-farming-low-resources"));
     }
 
-    public void AffectEnergy(Entity<CP14PlantComponent> ent, float energyDelta)
+    public void AffectEnergy(Entity<CE14PlantComponent> ent, float energyDelta)
     {
         if (energyDelta == 0)
             return;
@@ -60,7 +60,7 @@ public abstract partial class CP14SharedFarmingSystem : EntitySystem
         Dirty(ent);
     }
 
-    public void AffectResource(Entity<CP14PlantComponent> ent, float resourceDelta)
+    public void AffectResource(Entity<CE14PlantComponent> ent, float resourceDelta)
     {
         if (resourceDelta == 0)
             return;
@@ -69,7 +69,7 @@ public abstract partial class CP14SharedFarmingSystem : EntitySystem
         Dirty(ent);
     }
 
-    public void AffectGrowth(Entity<CP14PlantComponent> ent, float growthDelta)
+    public void AffectGrowth(Entity<CE14PlantComponent> ent, float growthDelta)
     {
         if (growthDelta == 0)
             return;
@@ -79,12 +79,12 @@ public abstract partial class CP14SharedFarmingSystem : EntitySystem
     }
 
     [Serializable, NetSerializable]
-    public sealed partial class CP14PlantSeedDoAfterEvent : DoAfterEvent
+    public sealed partial class CE14PlantSeedDoAfterEvent : DoAfterEvent
     {
         [DataField(required:true)]
         public NetCoordinates Coordinates;
 
-        public CP14PlantSeedDoAfterEvent(NetCoordinates coordinates)
+        public CE14PlantSeedDoAfterEvent(NetCoordinates coordinates)
         {
             Coordinates = coordinates;
         }
@@ -93,5 +93,5 @@ public abstract partial class CP14SharedFarmingSystem : EntitySystem
     }
 
     [Serializable, NetSerializable]
-    public sealed partial class CP14PlantGatherDoAfterEvent : SimpleDoAfterEvent;
+    public sealed partial class CE14PlantGatherDoAfterEvent : SimpleDoAfterEvent;
 }

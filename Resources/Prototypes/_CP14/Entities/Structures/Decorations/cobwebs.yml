@@ -1,8 +1,8 @@
 - type: entity
-  id: CP14CobwebRight1
+  id: CE14CobwebRight1
   parent:
-  - CP14BaseWallmount
-  - CP14BaseFlammable
+  - CE14BaseWallmount
+  - CE14BaseFlammable
   name: cobweb
   description: The sticky web is surprisingly strong and unpleasant.
   categories: [ ForkFiltered ]
@@ -12,13 +12,13 @@
   components:
   - type: Clickable
   - type: Sprite
-    sprite: _CP14/Structures/Decoration/cobweb.rsi
+    sprite: _CE14/Structures/Decoration/cobweb.rsi
     state: cobweb_right1
   - type: Transform
     anchored: true
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: CP14Wood
+    damageModifierSet: CE14Wood
   - type: Destructible
     thresholds:
     - trigger:
@@ -31,7 +31,7 @@
   - type: SpeedModifierContacts
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5
-  - type: CP14IgnitionModifier
+  - type: CE14IgnitionModifier
     ignitionTimeModifier: 0.75
     hideCaution: true
   - type: FireVisuals
@@ -39,28 +39,28 @@
     normalState: Mouse_burning # I need a burning sprite on the Wallmount
 
 - type: entity
-  id: CP14CobwebLeft1
-  parent: CP14CobwebRight1
+  id: CE14CobwebLeft1
+  parent: CE14CobwebRight1
   suffix: Left. Corner.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Decoration/cobweb.rsi
+    sprite: _CE14/Structures/Decoration/cobweb.rsi
     state: cobweb_left1
 
 - type: entity
-  id: CP14CobwebLeft2
-  parent: CP14CobwebRight1
+  id: CE14CobwebLeft2
+  parent: CE14CobwebRight1
   suffix: Left. Flat.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Decoration/cobweb.rsi
+    sprite: _CE14/Structures/Decoration/cobweb.rsi
     state: cobweb_left2
 
 - type: entity
-  id: CP14CobwebRight2
-  parent: CP14CobwebLeft2
+  id: CE14CobwebRight2
+  parent: CE14CobwebLeft2
   suffix: Right. Flat.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Decoration/cobweb.rsi
+    sprite: _CE14/Structures/Decoration/cobweb.rsi
     state: cobweb_right2

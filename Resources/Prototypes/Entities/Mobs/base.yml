@@ -233,7 +233,7 @@
   abstract: true
   components:
   - type: AtmosExposed
-  #- type: Internals #Not required for CP14
+  #- type: Internals #Not required for CE14
   - type: Respirator
     damage:
       types:

@@ -1,13 +1,13 @@
 using Content.Server.Chat.Systems;
 using Content.Server.Instruments;
-using Content.Shared._CP14.Actions;
-using Content.Shared._CP14.Actions.Components;
+using Content.Shared._CE14.Actions;
+using Content.Shared._CE14.Actions.Components;
 using Content.Shared.Actions.Events;
 using Content.Shared.Instruments;
 
-namespace Content.Server._CP14.Actions;
+namespace Content.Server._CE14.Actions;
 
-public sealed partial class CP14ActionSystem : CP14SharedActionSystem
+public sealed partial class CE14ActionSystem : CE14SharedActionSystem
 {
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
@@ -17,10 +17,10 @@ public sealed partial class CP14ActionSystem : CP14SharedActionSystem
         base.Initialize();
         InitializeDoAfter();
 
-        SubscribeLocalEvent<CP14ActionRequiredMusicToolComponent, ActionAttemptEvent>(OnActionMusicAttempt);
+        SubscribeLocalEvent<CE14ActionRequiredMusicToolComponent, ActionAttemptEvent>(OnActionMusicAttempt);
     }
 
-    private void OnActionMusicAttempt(Entity<CP14ActionRequiredMusicToolComponent> ent, ref ActionAttemptEvent args)
+    private void OnActionMusicAttempt(Entity<CE14ActionRequiredMusicToolComponent> ent, ref ActionAttemptEvent args)
     {
         if (args.Cancelled)
             return;
@@ -42,7 +42,7 @@ public sealed partial class CP14ActionSystem : CP14SharedActionSystem
         if (passed)
             return;
 
-        Popup.PopupClient(Loc.GetString("cp14-magic-music-aspect"), args.User, args.User);
+        Popup.PopupClient(Loc.GetString("CE14-magic-music-aspect"), args.User, args.User);
         args.Cancelled = true;
     }
 }

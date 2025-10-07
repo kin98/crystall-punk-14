@@ -1,11 +1,11 @@
 - type: entity
   parent: BaseItem
-  id: CP14BaseBow
+  id: CE14BaseBow
   abstract: true
   categories: [ ForkFiltered ]
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Ranged/bow.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/bow.rsi
   - type: Item
     size: Huge
     shape:
@@ -13,7 +13,7 @@
   - type: Clothing
     equipDelay: 0.45
     unequipDelay: 0.45
-    sprite: _CP14/Objects/Weapons/Ranged/bow.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/bow.rsi
     quickEquip: false
     breakOnMove: false
     slots:
@@ -42,7 +42,7 @@
         insertSound: /Audio/Weapons/Guns/Misc/arrow_nock.ogg
         whitelist:
           tags:
-          - CP14Arrow
+          - CE14Arrow
   - type: ContainerContainer
     containers:
       projectiles: !type:ContainerSlot
@@ -52,8 +52,8 @@
 - type: entity
   name: combat bow
   description: A standard ranged weapon, and even without magic.
-  id: CP14BowCombat
-  parent: CP14BaseBow
+  id: CE14BowCombat
+  parent: CE14BaseBow
   components:
   - type: Sprite
     layers:
@@ -70,7 +70,7 @@
       arrow:
         whitelist:
           tags:
-          - CP14Arrow
+          - CE14Arrow
   - type: GenericVisualizer
     visuals:
       enum.WieldableVisuals.Wielded:
@@ -82,23 +82,23 @@
           False: { state: unwielded }
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 40
-      CP14Cloth: 5
+      CE14WoodenPlanks: 40
+      CE14Cloth: 5
 
 - type: entity
   name: ice bow
   description: A magic bow that needs no ammunition.
-  id: CP14BowIceArtifact
-  parent: CP14BowCombat
+  id: CE14BowIceArtifact
+  parent: CE14BowCombat
   categories: [ DoNotMap ]
   suffix: Artifact
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Ranged/ice_bow.rsi
-  - type: CP14SpellStorage
+    sprite: _CE14/Objects/Weapons/Ranged/ice_bow.rsi
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellIceArrow
-  - type: CP14SpellStorageAccessHolding
+    - CE14ActionSpellIceArrow
+  - type: CE14SpellStorageAccessHolding
   - type: StaticPrice
     price: 300
 

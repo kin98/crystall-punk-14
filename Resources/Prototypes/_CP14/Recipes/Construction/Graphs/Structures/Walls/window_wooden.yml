@@ -1,63 +1,63 @@
 - type: constructionGraph
-  id: CP14WindowWooden
+  id: CE14WindowWooden
   start: start
   graph:
     - node: start
       edges:
-        - to: CP14WindowFrameWooden
+        - to: CE14WindowFrameWooden
           completed:
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 2
               doAfter: 2
-        - to: CP14WindowFrameWoodenBirch
+        - to: CE14WindowFrameWoodenBirch
           completed:
           - !type:SnapToGrid
             southRotation: true
           steps:
-          - material: CP14BirchWoodenPlanks
+          - material: CE14BirchWoodenPlanks
             amount: 2
             doAfter: 2
 
-    - node: CP14WindowFrameWooden
-      entity: CP14WindowFrameWooden
+    - node: CE14WindowFrameWooden
+      entity: CE14WindowFrameWooden
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 2
             - !type:DeleteEntity {}
           steps:
             - tool: Prying
               doAfter: 2
-        - to: CP14WindowWooden
+        - to: CE14WindowWooden
           steps:
-            - material: CP14GlassSheet
+            - material: CE14GlassSheet
               amount: 2
               doAfter: 2
 
-    - node: CP14WindowFrameWoodenBirch
-      entity: CP14WindowFrameWoodenBirch
+    - node: CE14WindowFrameWoodenBirch
+      entity: CE14WindowFrameWoodenBirch
       edges:
         - to: start
           completed:
           - !type:SpawnPrototype
-            prototype: CP14BirchWoodenPlanks1
+            prototype: CE14BirchWoodenPlanks1
             amount: 2
           - !type:DeleteEntity { }
-        - to: CP14WindowWoodenBirch
+        - to: CE14WindowWoodenBirch
           steps:
-          - material: CP14GlassSheet
+          - material: CE14GlassSheet
             amount: 2
             doAfter: 2
 
-    - node: CP14WindowWooden
-      entity: CP14WindowWooden
+    - node: CE14WindowWooden
+      entity: CE14WindowWooden
       edges:
-        - to: CP14WindowFrameWooden
+        - to: CE14WindowFrameWooden
           steps:
             - tool: Screwing
               doAfter: 1
@@ -65,13 +65,13 @@
               doAfter: 2
           completed:
             - !type:SpawnPrototype
-              prototype: CP14GlassSheet1
+              prototype: CE14GlassSheet1
               amount: 2
 
-    - node: CP14WindowWoodenBirch
-      entity: CP14WindowWoodenBirch
+    - node: CE14WindowWoodenBirch
+      entity: CE14WindowWoodenBirch
       edges:
-      - to: CP14WindowFrameWoodenBirch
+      - to: CE14WindowFrameWoodenBirch
         steps:
         - tool: Screwing
           doAfter: 1
@@ -79,29 +79,29 @@
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14GlassSheet1
+          prototype: CE14GlassSheet1
           amount: 2
 
-    - node: CP14WindowWoodenBroken
-      entity: CP14WindowWoodenBroken
+    - node: CE14WindowWoodenBroken
+      entity: CE14WindowWoodenBroken
       edges:
-        - to: CP14WindowFrameWooden
+        - to: CE14WindowFrameWooden
           steps:
             - tool: Anchoring
               doAfter: 2
           completed:
             - !type:SpawnPrototype
-              prototype: CP14GlassShard
+              prototype: CE14GlassShard
               amount: 1
 
-    - node: CP14WindowWoodenBirchBroken
-      entity: CP14WindowWoodenBirchBroken
+    - node: CE14WindowWoodenBirchBroken
+      entity: CE14WindowWoodenBirchBroken
       edges:
-      - to: CP14WindowFrameWoodenBirch
+      - to: CE14WindowFrameWoodenBirch
         steps:
         - tool: Anchoring
           doAfter: 2
         completed:
         - !type:SpawnPrototype
-          prototype: CP14GlassShard
+          prototype: CE14GlassShard
           amount: 1

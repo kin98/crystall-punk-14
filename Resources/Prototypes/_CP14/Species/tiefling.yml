@@ -1,15 +1,15 @@
 - type: species
-  id: CP14Tiefling
-  name: cp14-species-name-tiefling
+  id: CE14Tiefling
+  name: CE14-species-name-tiefling
   roundStart: true
-  prototype: CP14MobTiefling
-  sprites: CP14MobTieflingSprites
-  markingLimits: CP14MobTieflingMarkingLimits
-  dollPrototype: CP14MobTieflingDummy
-  skinColoration: CP14TieflingHues
-  maleFirstNames: CP14_Names_Tiefling_Male_First
-  femaleFirstNames: CP14_Names_Tiefling_Female_First
-  lastNames: CP14_Names_Tiefling_Last
+  prototype: CE14MobTiefling
+  sprites: CE14MobTieflingSprites
+  markingLimits: CE14MobTieflingMarkingLimits
+  dollPrototype: CE14MobTieflingDummy
+  skinColoration: CE14TieflingHues
+  maleFirstNames: CE14_Names_Tiefling_Male_First
+  femaleFirstNames: CE14_Names_Tiefling_Female_First
+  lastNames: CE14_Names_Tiefling_Last
 
 # The lack of a layer means that
 # this person cannot have round-start anything
@@ -18,27 +18,27 @@
 # in either the mob's starting marking prototype,
 # or it has to be added in C#.
 - type: speciesBaseSprites
-  id: CP14MobTieflingSprites
+  id: CE14MobTieflingSprites
   sprites:
-    Head: CP14MobTieflingHead
-    HeadTop: CP14MobTieflingAnyMarking
-    Hair: CP14MobTieflingAnyMarking
-    FacialHair: CP14MobTieflingAnyMarking
-    Snout: CP14MobTieflingMarkingMatchSkin
-    Tail: CP14MobTieflingMarkingMatchSkin
-    Chest: CP14MobTieflingTorso
-    Eyes: CP14MobTieflingEyes
-    LArm: CP14MobTieflingLArm
-    RArm: CP14MobTieflingRArm
-    LHand: CP14MobTieflingLHand
-    RHand: CP14MobTieflingRHand
-    LLeg: CP14MobTieflingLLeg
-    RLeg: CP14MobTieflingRLeg
-    LFoot: CP14MobTieflingLFoot
-    RFoot: CP14MobTieflingRFoot
+    Head: CE14MobTieflingHead
+    HeadTop: CE14MobTieflingAnyMarking
+    Hair: CE14MobTieflingAnyMarking
+    FacialHair: CE14MobTieflingAnyMarking
+    Snout: CE14MobTieflingMarkingMatchSkin
+    Tail: CE14MobTieflingMarkingMatchSkin
+    Chest: CE14MobTieflingTorso
+    Eyes: CE14MobTieflingEyes
+    LArm: CE14MobTieflingLArm
+    RArm: CE14MobTieflingRArm
+    LHand: CE14MobTieflingLHand
+    RHand: CE14MobTieflingRHand
+    LLeg: CE14MobTieflingLLeg
+    RLeg: CE14MobTieflingRLeg
+    LFoot: CE14MobTieflingLFoot
+    RFoot: CE14MobTieflingRFoot
 
 - type: markingPoints
-  id: CP14MobTieflingMarkingLimits
+  id: CE14MobTieflingMarkingLimits
   points:
     Hair:
       points: 1
@@ -52,11 +52,11 @@
     Tail:
       points: 1
       required: true
-      defaultMarkings: [ CP14TieflingTail ]
+      defaultMarkings: [ CE14TieflingTail ]
     HeadTop:
       points: 1
       required: true
-      defaultMarkings: [ CP14TieflingHorns ]
+      defaultMarkings: [ CE14TieflingHorns ]
     Chest:
       points: 1
       required: false
@@ -68,135 +68,135 @@
       required: false
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingEyes
+  id: CE14MobTieflingEyes
   baseSprite:
-    sprite: _CP14/Mobs/Customization/eyes.rsi
+    sprite: _CE14/Mobs/Customization/eyes.rsi
     state: eyes
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingAnyMarking
+  id: CE14MobTieflingAnyMarking
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingMarkingMatchSkin
+  id: CE14MobTieflingMarkingMatchSkin
   markingsMatchSkin: true
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingHead
+  id: CE14MobTieflingHead
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: head
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingHeadFemale
+  id: CE14MobTieflingHeadFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: head
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingTorso
+  id: CE14MobTieflingTorso
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: torso
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingTorsoFemale
+  id: CE14MobTieflingTorsoFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: torso
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingLLeg
+  id: CE14MobTieflingLLeg
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: l_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingLLegFemale
+  id: CE14MobTieflingLLegFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: l_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingLArm
+  id: CE14MobTieflingLArm
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: l_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingLArmFemale
+  id: CE14MobTieflingLArmFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: l_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingLHand
+  id: CE14MobTieflingLHand
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingLHandFemale
+  id: CE14MobTieflingLHandFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingLFoot
+  id: CE14MobTieflingLFoot
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: l_foot
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingLFootFemale
+  id: CE14MobTieflingLFootFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: l_foot
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingRLeg
+  id: CE14MobTieflingRLeg
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: r_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingRLegFemale
+  id: CE14MobTieflingRLegFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: r_leg
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingRArm
+  id: CE14MobTieflingRArm
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: r_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingRArmFemale
+  id: CE14MobTieflingRArmFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: r_arm
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingRHand
+  id: CE14MobTieflingRHand
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: r_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingRHandFemale
+  id: CE14MobTieflingRHandFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: r_hand
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingRFoot
+  id: CE14MobTieflingRFoot
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/parts.rsi
     state: r_foot
 
 
 - type: humanoidBaseSprite
-  id: CP14MobTieflingRFootFemale
+  id: CE14MobTieflingRFootFemale
   baseSprite:
-    sprite: _CP14/Mobs/Species/Tiefling/female_parts.rsi
+    sprite: _CE14/Mobs/Species/Tiefling/female_parts.rsi
     state: r_foot

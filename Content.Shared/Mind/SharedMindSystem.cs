@@ -384,7 +384,7 @@ public abstract partial class SharedMindSystem : EntitySystem
     }
 
     /// <summary>
-    /// CP14 Extension - Tries to create and add an objective from its prototype id, and return objective uid.
+    /// CE14 Extension - Tries to create and add an objective from its prototype id, and return objective uid.
     /// </summary>
     /// <returns>Returns true if adding the objective succeeded.</returns>
     public bool TryAddObjective(EntityUid mindId, MindComponent mind, string proto, out EntityUid? objective)

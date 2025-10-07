@@ -1,14 +1,14 @@
 # Base Alcohol
 
 - type: reagent
-  id: CP14DwarfBeer
-  name: cp14-reagent-name-dwarfbeer
+  id: CE14DwarfBeer
+  name: CE14-reagent-name-dwarfbeer
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-beer
+  desc: CE14-reagent-desc-beer
   slipData:
     requiredSlipSpeed: 3.5
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: CP14dwarfbeer
+  flavor: CE14dwarfbeer
   color: "#4b3620"
   boilingPoint: 78.2
   meltingPoint: -114.1
@@ -20,7 +20,7 @@
         - !type:ReagentThreshold
           min: 10
         - !type:OrganType
-          type: CP14Dwarf
+          type: CE14Dwarf
           shouldHave: false
         damage:
           types:
@@ -31,7 +31,7 @@
         - !type:ReagentThreshold
           min: 10
         - !type:OrganType
-          type: CP14Dwarf
+          type: CE14Dwarf
         damage:
           types:
             Poison: 0.2
@@ -40,7 +40,7 @@
         - !type:ReagentThreshold
           min: 10
         - !type:OrganType
-          type: CP14Dwarf
+          type: CE14Dwarf
         damage:
           groups:
             Brute: -1
@@ -48,10 +48,10 @@
         probability: 0.04
         conditions:
         - !type:ReagentThreshold
-          reagent: CP14DwarfBeer
+          reagent: CE14DwarfBeer
           min: 8
         - !type:OrganType
-          type: CP14Dwarf
+          type: CE14Dwarf
           shouldHave: false
       - !type:Drunk
         boozePower: 2
@@ -59,12 +59,12 @@
   pricePerUnit: 4
 
 - type: reagent
-  id: CP14Beer
-  name: cp14-reagent-name-beer
+  id: CE14Beer
+  name: CE14-reagent-name-beer
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-beer
+  desc: CE14-reagent-desc-beer
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: CP14beer
+  flavor: CE14beer
   color: "#e3e77b"
   recognizable: true
   fizziness: 0.6
@@ -78,12 +78,12 @@
   pricePerUnit: 0.23
 
 - type: reagent
-  id: CP14BeerGerbil
-  name: cp14-reagent-name-gerbil
+  id: CE14BeerGerbil
+  name: CE14-reagent-name-gerbil
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-beer
+  desc: CE14-reagent-desc-beer
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: CP14gerbil
+  flavor: CE14gerbil
   color: "#3c1e14"
   metabolisms:
     Drink:
@@ -91,17 +91,17 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: CP14Beer
+        reagent: CE14Beer
         amount: 0.2
   pricePerUnit: 0.26
 
 - type: reagent
-  id: CP14BeerBreeze
-  name: cp14-reagent-name-breeze
+  id: CE14BeerBreeze
+  name: CE14-reagent-name-breeze
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-beer
+  desc: CE14-reagent-desc-beer
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: CP14breeze
+  flavor: CE14breeze
   color: "#ffdc64"
   metabolisms:
     Drink:
@@ -109,17 +109,17 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: CP14Beer
+        reagent: CE14Beer
         amount: 0.2
   pricePerUnit: 0.15
 
 - type: reagent
-  id: CP14BeerBlowLaw
-  name: cp14-reagent-name-blowlaw
+  id: CE14BeerBlowLaw
+  name: CE14-reagent-name-blowlaw
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-beer
+  desc: CE14-reagent-desc-beer
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: CP14blowLaw
+  flavor: CE14blowLaw
   color: "#f0d778"
   metabolisms:
     Drink:
@@ -127,17 +127,17 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: CP14Beer
+        reagent: CE14Beer
         amount: 0.3
   pricePerUnit: 0.35
 
 - type: reagent
-  id: CP14Wine
-  name: cp14-reagent-name-wine
+  id: CE14Wine
+  name: CE14-reagent-name-wine
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-wine
+  desc: CE14-reagent-desc-wine
   physicalDesc: reagent-physical-desc-translucent
-  flavor: CP14wine
+  flavor: CE14wine
   color: "#7E4043"
   recognizable: true
   metabolisms:
@@ -148,12 +148,12 @@
   pricePerUnit: 0.5
 
 - type: reagent
-  id: CP14WineZellasianPleasure
-  name: cp14-reagent-name-zellasian-pleasure
+  id: CE14WineZellasianPleasure
+  name: CE14-reagent-name-zellasian-pleasure
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-wine
+  desc: CE14-reagent-desc-wine
   physicalDesc: reagent-physical-desc-translucent
-  flavor: CP14zellasianPleasure
+  flavor: CE14zellasianPleasure
   color: "#5a1e1e"
   recognizable: true
   metabolisms:
@@ -162,17 +162,17 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: CP14Wine
+        reagent: CE14Wine
         amount: 0.3
   pricePerUnit: 1.5
 
 - type: reagent
-  id: CP14WineLeeks
-  name: cp14-reagent-name-leeks
+  id: CE14WineLeeks
+  name: CE14-reagent-name-leeks
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-wine
+  desc: CE14-reagent-desc-wine
   physicalDesc: reagent-physical-desc-translucent
-  flavor: CP14leeks
+  flavor: CE14leeks
   color: "#961e32"
   metabolisms:
     Drink:
@@ -180,17 +180,17 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: CP14Wine
+        reagent: CE14Wine
         amount: 0.2
   pricePerUnit: 0.2
 
 - type: reagent
-  id: CP14WineDurandate
-  name: cp14-reagent-name-durandate
+  id: CE14WineDurandate
+  name: CE14-reagent-name-durandate
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-wine
+  desc: CE14-reagent-desc-wine
   physicalDesc: reagent-physical-desc-translucent
-  flavor: CP14durandate
+  flavor: CE14durandate
   color: "#8c3c32"
   recognizable: true
   metabolisms:
@@ -199,17 +199,17 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: CP14Wine
+        reagent: CE14Wine
         amount: 0.01
   pricePerUnit: 1
 
 - type: reagent
-  id: CP14Ale
-  name: cp14-reagent-name-ale
+  id: CE14Ale
+  name: CE14-reagent-name-ale
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-ale
+  desc: CE14-reagent-desc-ale
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: CP14ale
+  flavor: CE14ale
   color: "#663100"
   recognizable: true
   fizziness: 0.6
@@ -223,12 +223,12 @@
   pricePerUnit: 0.1
 
 - type: reagent
-  id: CP14AleBloodyTear
-  name: cp14-reagent-name-bloody-tear
+  id: CE14AleBloodyTear
+  name: CE14-reagent-name-bloody-tear
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-ale
+  desc: CE14-reagent-desc-ale
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: CP14bloodyTear
+  flavor: CE14bloodyTear
   color: "#993333"
   metabolisms:
     Drink:
@@ -236,17 +236,17 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: CP14Ale
+        reagent: CE14Ale
         amount: 0.2
   pricePerUnit: 0.2
 
 - type: reagent
-  id: CP14AleBottomless
-  name: cp14-reagent-name-bottomless
+  id: CE14AleBottomless
+  name: CE14-reagent-name-bottomless
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-ale
+  desc: CE14-reagent-desc-ale
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: CP14bottomless
+  flavor: CE14bottomless
   color: "#2d1914"
   recognizable: true
   metabolisms:
@@ -255,18 +255,18 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: CP14Ale
+        reagent: CE14Ale
         amount: 0.2
   pricePerUnit: 0.35
 
 # Magic beer from spell, cost nothing
 - type: reagent
-  id: CP14MagicBeer
-  name: cp14-reagent-name-bottomless
+  id: CE14MagicBeer
+  name: CE14-reagent-name-bottomless
   parent: BaseAlcohol
-  desc: cp14-reagent-desc-ale
+  desc: CE14-reagent-desc-ale
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: CP14bottomless
+  flavor: CE14bottomless
   color: "#2d1914"
   recognizable: true
   metabolisms:
@@ -275,6 +275,6 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: CP14Ale
+        reagent: CE14Ale
         amount: 0.2
   pricePerUnit: 0

@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: Clothing
-  id: CP14ClothingHeadBase
+  id: CE14ClothingHeadBase
   categories: [ ForkFiltered ]
   components:
   - type: Clothing

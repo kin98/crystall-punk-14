@@ -3,14 +3,14 @@ using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client._CP14.Skill.Ui;
+namespace Content.Client._CE14.Skill.Ui;
 
 [GenerateTypedNameReferences]
-public sealed partial class CP14SkillTreeButtonControl : Control
+public sealed partial class CE14SkillTreeButtonControl : Control
 {
     public event Action? OnPressed;
 
-    public CP14SkillTreeButtonControl(Color color, string label, float skillpoints, Texture? icon)
+    public CE14SkillTreeButtonControl(Color color, string label, float skillpoints, Texture? icon)
     {
         RobustXamlLoader.Load(this);
 

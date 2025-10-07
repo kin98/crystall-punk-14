@@ -1,18 +1,18 @@
 using System.Numerics;
 using Content.Server.Destructible;
 using Content.Server.Destructible.Thresholds.Behaviors;
-using Content.Shared._CP14.Vampire.Components;
+using Content.Shared._CE14.Vampire.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._CP14.Vampire;
+namespace Content.Server._CE14.Vampire;
 
 [Serializable]
 [DataDefinition]
-public sealed partial class CP14VampireAltarExplodeBehavior : IThresholdBehavior
+public sealed partial class CE14VampireAltarExplodeBehavior : IThresholdBehavior
 {
     [DataField]
-    public EntProtoId Essence = "CP14BloodEssence";
+    public EntProtoId Essence = "CE14BloodEssence";
 
     [DataField]
     public float ExtractionPercentage = 0.5f;
@@ -22,7 +22,7 @@ public sealed partial class CP14VampireAltarExplodeBehavior : IThresholdBehavior
         if(!system.EntityManager.TryGetComponent<TransformComponent>(owner, out var transform))
             return;
 
-        if(!system.EntityManager.TryGetComponent<CP14VampireClanHeartComponent>(owner, out var clanHeart))
+        if(!system.EntityManager.TryGetComponent<CE14VampireClanHeartComponent>(owner, out var clanHeart))
             return;
 
         var random = IoCManager.Resolve<IRobustRandom>();

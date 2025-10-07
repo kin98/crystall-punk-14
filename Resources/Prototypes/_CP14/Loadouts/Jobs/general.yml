@@ -1,810 +1,810 @@
 # Cloak
 
 - type: loadoutGroup
-  id: CP14GeneralCloak
-  name: cp14-loadout-general-cloak
+  id: CE14GeneralCloak
+  name: CE14-loadout-general-cloak
   minLimit: 0
   loadouts:
-  - CP14ClothingCloakFurcapeBlack
-  - CP14ClothingCloakFurcapeBlue
-  - CP14ClothingCloakMaidArpon
-  - CP14ClothingCloakRitualAttireLeather
-  - CP14ClothingCloakWhite
-  - CP14ClothingCloakGreen
-  - CP14ClothingCloakBlue
-  - CP14ClothingCloakFurCoat
-  - CP14ClothingCloakBrownFurCoat
-  - CP14ClothingCloakInsulated
-  - CP14ClothingCloakBlackSyurko
-  - CP14ClothingCloakRedSyurko
-  - CP14ClothingCloakBlueSyurko
-  - CP14ClothingCloakGreenSyurko
-  - CP14ClothingCloakWhiteSyurko
-  - CP14ClothingCloakYellowSyurko
-  - CP14ClothingCloakHaori
+  - CE14ClothingCloakFurcapeBlack
+  - CE14ClothingCloakFurcapeBlue
+  - CE14ClothingCloakMaidArpon
+  - CE14ClothingCloakRitualAttireLeather
+  - CE14ClothingCloakWhite
+  - CE14ClothingCloakGreen
+  - CE14ClothingCloakBlue
+  - CE14ClothingCloakFurCoat
+  - CE14ClothingCloakBrownFurCoat
+  - CE14ClothingCloakInsulated
+  - CE14ClothingCloakBlackSyurko
+  - CE14ClothingCloakRedSyurko
+  - CE14ClothingCloakBlueSyurko
+  - CE14ClothingCloakGreenSyurko
+  - CE14ClothingCloakWhiteSyurko
+  - CE14ClothingCloakYellowSyurko
+  - CE14ClothingCloakHaori
 
 - type: loadout
-  id: CP14ClothingCloakFurcapeBlack
+  id: CE14ClothingCloakFurcapeBlack
   equipment:
-    cloak: CP14ClothingCloakFurcapeBlack
+    cloak: CE14ClothingCloakFurcapeBlack
 
 - type: loadout
-  id: CP14ClothingCloakFurcapeBlue
+  id: CE14ClothingCloakFurcapeBlue
   equipment:
-    cloak: CP14ClothingCloakFurcapeBlue
+    cloak: CE14ClothingCloakFurcapeBlue
 
 - type: loadout
-  id: CP14ClothingCloakBlackSyurko
+  id: CE14ClothingCloakBlackSyurko
   equipment:
-    cloak: CP14ClothingCloakBlackSyurko
+    cloak: CE14ClothingCloakBlackSyurko
 
 - type: loadout
-  id: CP14ClothingCloakRedSyurko
+  id: CE14ClothingCloakRedSyurko
   equipment:
-    cloak: CP14ClothingCloakRedSyurko
+    cloak: CE14ClothingCloakRedSyurko
 
 - type: loadout
-  id: CP14ClothingCloakMaidArpon
+  id: CE14ClothingCloakMaidArpon
   equipment:
-    cloak: CP14ClothingCloakMaidArpon
+    cloak: CE14ClothingCloakMaidArpon
 
 - type: loadout
-  id: CP14ClothingCloakRitualAttireLeather
+  id: CE14ClothingCloakRitualAttireLeather
   equipment:
-    cloak: CP14ClothingCloakRitualAttireLeather
+    cloak: CE14ClothingCloakRitualAttireLeather
 
 - type: loadout
-  id: CP14ClothingCloakWhite
+  id: CE14ClothingCloakWhite
   equipment:
-    cloak: CP14ClothingCloakWhite
+    cloak: CE14ClothingCloakWhite
 
 - type: loadout
-  id: CP14ClothingCloakGreen
+  id: CE14ClothingCloakGreen
   equipment:
-    cloak: CP14ClothingCloakGreen
+    cloak: CE14ClothingCloakGreen
 
 - type: loadout
-  id: CP14ClothingCloakBlue
+  id: CE14ClothingCloakBlue
   equipment:
-    cloak: CP14ClothingCloakBlue
+    cloak: CE14ClothingCloakBlue
 
 - type: loadout
-  id: CP14ClothingCloakFurCoat
+  id: CE14ClothingCloakFurCoat
   equipment:
-    cloak: CP14ClothingCloakFurCoat
+    cloak: CE14ClothingCloakFurCoat
 
 - type: loadout
-  id: CP14ClothingCloakInsulated
+  id: CE14ClothingCloakInsulated
   equipment:
-    cloak: CP14ClothingCloakInsulated
+    cloak: CE14ClothingCloakInsulated
 
 - type: loadout
-  id: CP14ClothingCloakBrownFurCoat
+  id: CE14ClothingCloakBrownFurCoat
   equipment:
-    cloak: CP14ClothingCloakBrownFurCoat
+    cloak: CE14ClothingCloakBrownFurCoat
 
 - type: loadout
-  id: CP14ClothingCloakBlueSyurko
+  id: CE14ClothingCloakBlueSyurko
   equipment:
-    cloak: CP14ClothingCloakBlueSyurko
+    cloak: CE14ClothingCloakBlueSyurko
 
 - type: loadout
-  id: CP14ClothingCloakGreenSyurko
+  id: CE14ClothingCloakGreenSyurko
   equipment:
-    cloak: CP14ClothingCloakGreenSyurko
+    cloak: CE14ClothingCloakGreenSyurko
 
 - type: loadout
-  id: CP14ClothingCloakWhiteSyurko
+  id: CE14ClothingCloakWhiteSyurko
   equipment:
-    cloak: CP14ClothingCloakWhiteSyurko
+    cloak: CE14ClothingCloakWhiteSyurko
 
 - type: loadout
-  id: CP14ClothingCloakYellowSyurko
+  id: CE14ClothingCloakYellowSyurko
   equipment:
-    cloak: CP14ClothingCloakYellowSyurko
+    cloak: CE14ClothingCloakYellowSyurko
 
 - type: loadout
-  id: CP14ClothingCloakHaori
+  id: CE14ClothingCloakHaori
   equipment:
-    cloak: CP14ClothingCloakHaori
+    cloak: CE14ClothingCloakHaori
 
 # OuterClothing
 
 - type: loadoutGroup
-  id: CP14GeneralOuterClothing
-  name: cp14-loadout-general-outer
+  id: CE14GeneralOuterClothing
+  name: CE14-loadout-general-outer
   minLimit: 0
   loadouts:
-  - CP14ClothingOuterClothingBrownVest1
-  - CP14ClothingOuterClothingBrownVest2
-  - CP14ClothingOuterClothingBrownVest3
-  - CP14ClothingOuterClothingJagermeisterWaistcoat
-  - CP14ClothingOuterClothingRedVest
-  - CP14ClothingOuterClothingPurple
+  - CE14ClothingOuterClothingBrownVest1
+  - CE14ClothingOuterClothingBrownVest2
+  - CE14ClothingOuterClothingBrownVest3
+  - CE14ClothingOuterClothingJagermeisterWaistcoat
+  - CE14ClothingOuterClothingRedVest
+  - CE14ClothingOuterClothingPurple
 
 - type: loadout
-  id: CP14ClothingOuterClothingBrownVest1
+  id: CE14ClothingOuterClothingBrownVest1
   equipment:
-    outerClothing: CP14ClothingOuterClothingBrownVest1
+    outerClothing: CE14ClothingOuterClothingBrownVest1
 
 - type: loadout
-  id: CP14ClothingOuterClothingBrownVest2
+  id: CE14ClothingOuterClothingBrownVest2
   equipment:
-    outerClothing: CP14ClothingOuterClothingBrownVest2
+    outerClothing: CE14ClothingOuterClothingBrownVest2
 
 - type: loadout
-  id: CP14ClothingOuterClothingBrownVest3
+  id: CE14ClothingOuterClothingBrownVest3
   equipment:
-    outerClothing: CP14ClothingOuterClothingBrownVest3
+    outerClothing: CE14ClothingOuterClothingBrownVest3
 
 - type: loadout
-  id: CP14ClothingOuterClothingRedVest
+  id: CE14ClothingOuterClothingRedVest
   equipment:
-    outerClothing: CP14ClothingOuterClothingRedVest
+    outerClothing: CE14ClothingOuterClothingRedVest
 
 - type: loadout
-  id: CP14ClothingOuterClothingJagermeisterWaistcoat
+  id: CE14ClothingOuterClothingJagermeisterWaistcoat
   equipment:
-    outerClothing: CP14ClothingOuterClothingJagermeisterWaistcoat
+    outerClothing: CE14ClothingOuterClothingJagermeisterWaistcoat
 
 - type: loadout
-  id: CP14ClothingOuterClothingPurple
+  id: CE14ClothingOuterClothingPurple
   equipment:
-    outerClothing: CP14ClothingOuterClothingPurple
+    outerClothing: CE14ClothingOuterClothingPurple
 
 # Eyes
 
 - type: loadoutGroup
-  id: CP14GeneralEyes
-  name: cp14-loadout-general-eyes
+  id: CE14GeneralEyes
+  name: CE14-loadout-general-eyes
   minLimit: 0
   loadouts:
-  - CP14ClothingEyesMonocle
-  - CP14ClothingEyesGlasses
-  - CP14ClothingEyesEyePatch
+  - CE14ClothingEyesMonocle
+  - CE14ClothingEyesGlasses
+  - CE14ClothingEyesEyePatch
 
 - type: loadout
-  id: CP14ClothingEyesMonocle
+  id: CE14ClothingEyesMonocle
   equipment:
-    eyes: CP14ClothingEyesMonocle
+    eyes: CE14ClothingEyesMonocle
 
 - type: loadout
-  id: CP14ClothingEyesGlasses
+  id: CE14ClothingEyesGlasses
   equipment:
-    eyes: CP14ClothingEyesGlasses
+    eyes: CE14ClothingEyesGlasses
 
 - type: loadout
-  id: CP14ClothingEyesEyePatch
+  id: CE14ClothingEyesEyePatch
   equipment:
-    eyes: CP14ClothingEyesEyePatch
+    eyes: CE14ClothingEyesEyePatch
 
 # Gloves
 
 - type: loadoutGroup
-  id: CP14GeneralGloves
-  name: cp14-loadout-general-gloves
+  id: CE14GeneralGloves
+  name: CE14-loadout-general-gloves
   minLimit: 0
   loadouts:
-  - CP14Girdles
-  - CP14ClothingGlovesJagermeister
+  - CE14Girdles
+  - CE14ClothingGlovesJagermeister
 
 - type: loadout
-  id: CP14Girdles
+  id: CE14Girdles
   equipment:
-    gloves: CP14ClothingGlovesGirdles
+    gloves: CE14ClothingGlovesGirdles
 
 - type: loadout
-  id: CP14ClothingGlovesJagermeister
+  id: CE14ClothingGlovesJagermeister
   equipment:
-    gloves: CP14ClothingGlovesJagermeister
+    gloves: CE14ClothingGlovesJagermeister
 
 # Mask
 
 - type: loadoutGroup
-  id: CP14GeneralMask
-  name: cp14-loadout-general-mask
+  id: CE14GeneralMask
+  name: CE14-loadout-general-mask
   minLimit: 0
   loadouts:
-  - CP14ClothingMaskSinner
-  - CP14ClothingMaskSteelMask
-  - CP14ClothingMaskNeckerchief
-  - CP14ClothingMaskRedNeckerchief
-  - CP14ClothingMaskGreenNeckerchief
-  - CP14ClothingMaskMime
+  - CE14ClothingMaskSinner
+  - CE14ClothingMaskSteelMask
+  - CE14ClothingMaskNeckerchief
+  - CE14ClothingMaskRedNeckerchief
+  - CE14ClothingMaskGreenNeckerchief
+  - CE14ClothingMaskMime
 
 - type: loadout
-  id: CP14ClothingMaskSinner
+  id: CE14ClothingMaskSinner
   equipment:
-    mask: CP14ClothingMaskSinner
+    mask: CE14ClothingMaskSinner
 
 - type: loadout
-  id: CP14ClothingMaskSteelMask
+  id: CE14ClothingMaskSteelMask
   equipment:
-    mask: CP14ClothingMaskSteelMask
+    mask: CE14ClothingMaskSteelMask
 
 - type: loadout
-  id: CP14ClothingMaskNeckerchief
+  id: CE14ClothingMaskNeckerchief
   equipment:
-    mask: CP14ClothingMaskNeckerchief
+    mask: CE14ClothingMaskNeckerchief
 
 - type: loadout
-  id: CP14ClothingMaskMime
+  id: CE14ClothingMaskMime
   equipment:
-    mask: CP14ClothingMaskMime
+    mask: CE14ClothingMaskMime
 
 - type: loadout
-  id: CP14ClothingMaskRedNeckerchief
+  id: CE14ClothingMaskRedNeckerchief
   equipment:
-    mask: CP14ClothingMaskRedNeckerchief
+    mask: CE14ClothingMaskRedNeckerchief
 
 - type: loadout
-  id: CP14ClothingMaskGreenNeckerchief
+  id: CE14ClothingMaskGreenNeckerchief
   equipment:
-    mask: CP14ClothingMaskGreenNeckerchief
+    mask: CE14ClothingMaskGreenNeckerchief
 
 # Head
 
 - type: loadoutGroup
-  id: CP14GeneralHead
-  name: cp14-loadout-general-head
+  id: CE14GeneralHead
+  name: CE14-loadout-general-head
   minLimit: 0
   loadouts:
-  - CP14ClothingHeadMetalHeadband
-  - CP14ClothingHeadTriangularHat
-  - CP14ClothingHeadTriangularHatGolden
-  - CP14ClothingHeadJestersCap
-  - CP14ClothingHeadHuntersHat
-  - CP14ClothingHeadGreenHuntersHat
-  - CP14ClothingHeadRedHuntersHat
-  - CP14ClothingHeadJagermeisterHat
-  - CP14ClothingHeadStrawHat
-  - CP14ClothingHeadKasaHat
-  - CP14ClothingHeadBeretMercenary
+  - CE14ClothingHeadMetalHeadband
+  - CE14ClothingHeadTriangularHat
+  - CE14ClothingHeadTriangularHatGolden
+  - CE14ClothingHeadJestersCap
+  - CE14ClothingHeadHuntersHat
+  - CE14ClothingHeadGreenHuntersHat
+  - CE14ClothingHeadRedHuntersHat
+  - CE14ClothingHeadJagermeisterHat
+  - CE14ClothingHeadStrawHat
+  - CE14ClothingHeadKasaHat
+  - CE14ClothingHeadBeretMercenary
 
 - type: loadout
-  id: CP14ClothingHeadMetalHeadband
+  id: CE14ClothingHeadMetalHeadband
   equipment:
-    head: CP14ClothingHeadMetalHeadband
+    head: CE14ClothingHeadMetalHeadband
 
 - type: loadout
-  id: CP14ClothingHeadTriangularHat
+  id: CE14ClothingHeadTriangularHat
   equipment:
-    head: CP14ClothingHeadTriangularHat
+    head: CE14ClothingHeadTriangularHat
 
 - type: loadout
-  id: CP14ClothingHeadTriangularHatGolden
+  id: CE14ClothingHeadTriangularHatGolden
   equipment:
-    head: CP14ClothingHeadTriangularHatGolden
+    head: CE14ClothingHeadTriangularHatGolden
 
 - type: loadout
-  id: CP14ClothingHeadJestersCap
+  id: CE14ClothingHeadJestersCap
   equipment:
-    head: CP14ClothingHeadJestersCap
+    head: CE14ClothingHeadJestersCap
 
 - type: loadout
-  id: CP14ClothingHeadStrawHat
+  id: CE14ClothingHeadStrawHat
   equipment:
-    head: CP14ClothingHeadStrawHat
+    head: CE14ClothingHeadStrawHat
 
 - type: loadout
-  id: CP14ClothingHeadHuntersHat
+  id: CE14ClothingHeadHuntersHat
   equipment:
-    head: CP14ClothingHeadHuntersHat
+    head: CE14ClothingHeadHuntersHat
 
 - type: loadout
-  id: CP14ClothingHeadJagermeisterHat
+  id: CE14ClothingHeadJagermeisterHat
   equipment:
-    head: CP14ClothingHeadJagermeisterHat
+    head: CE14ClothingHeadJagermeisterHat
 
 - type: loadout
-  id: CP14ClothingHeadGreenHuntersHat
+  id: CE14ClothingHeadGreenHuntersHat
   equipment:
-    head: CP14ClothingHeadGreenHuntersHat
+    head: CE14ClothingHeadGreenHuntersHat
 
 - type: loadout
-  id: CP14ClothingHeadRedHuntersHat
+  id: CE14ClothingHeadRedHuntersHat
   equipment:
-    head: CP14ClothingHeadRedHuntersHat
+    head: CE14ClothingHeadRedHuntersHat
 
 - type: loadout
-  id: CP14ClothingHeadKasaHat
+  id: CE14ClothingHeadKasaHat
   equipment:
-    head: CP14ClothingHeadKasaHat
+    head: CE14ClothingHeadKasaHat
 
 - type: loadout
-  id: CP14ClothingHeadBeretMercenary
+  id: CE14ClothingHeadBeretMercenary
   equipment:
-    head: CP14ClothingHeadBeretMercenary
+    head: CE14ClothingHeadBeretMercenary
 
 # Pants
 
 - type: loadoutGroup
-  id: CP14GeneralPants
-  name: cp14-loadout-general-pants
+  id: CE14GeneralPants
+  name: CE14-loadout-general-pants
   loadouts:
-  - CP14ClothingPantsTrouserWhite
-  - CP14ClothingPantsTrouserDarkBlue
-  - CP14ClothingPantsJestersPantaloons
-  - CP14ClothingPantsAristocratic
-  - CP14ClothingPantsJagermeisterTrousers
-  - CP14ClothingPantsGreen
-  - CP14ClothingPantsBrown
-  - CP14ClothingPantsHakama
-  - CP14ClothingPantsMercenaryTrousers
+  - CE14ClothingPantsTrouserWhite
+  - CE14ClothingPantsTrouserDarkBlue
+  - CE14ClothingPantsJestersPantaloons
+  - CE14ClothingPantsAristocratic
+  - CE14ClothingPantsJagermeisterTrousers
+  - CE14ClothingPantsGreen
+  - CE14ClothingPantsBrown
+  - CE14ClothingPantsHakama
+  - CE14ClothingPantsMercenaryTrousers
 
 - type: loadout
-  id: CP14ClothingPantsTrouserWhite
+  id: CE14ClothingPantsTrouserWhite
   equipment:
-    pants: CP14ClothingPantsTrouserWhite
+    pants: CE14ClothingPantsTrouserWhite
 
 - type: loadout
-  id: CP14ClothingPantsTrouserDarkBlue
+  id: CE14ClothingPantsTrouserDarkBlue
   equipment:
-    pants: CP14ClothingPantsTrouserDarkBlue
+    pants: CE14ClothingPantsTrouserDarkBlue
 
 - type: loadout
-  id: CP14ClothingPantsJestersPantaloons
+  id: CE14ClothingPantsJestersPantaloons
   equipment:
-    pants: CP14ClothingPantsJestersPantaloons
+    pants: CE14ClothingPantsJestersPantaloons
 
 - type: loadout
-  id: CP14ClothingPantsAristocratic
+  id: CE14ClothingPantsAristocratic
   equipment:
-    pants: CP14ClothingPantsAristocratic
+    pants: CE14ClothingPantsAristocratic
 
 - type: loadout
-  id: CP14ClothingPantsGreen
+  id: CE14ClothingPantsGreen
   equipment:
-    pants: CP14ClothingPantsGreen
+    pants: CE14ClothingPantsGreen
 
 - type: loadout
-  id: CP14ClothingPantsBrown
+  id: CE14ClothingPantsBrown
   equipment:
-    pants: CP14ClothingPantsBrown
+    pants: CE14ClothingPantsBrown
 
 - type: loadout
-  id: CP14ClothingPantsJagermeisterTrousers
+  id: CE14ClothingPantsJagermeisterTrousers
   equipment:
-    pants: CP14ClothingPantsJagermeisterTrousers
+    pants: CE14ClothingPantsJagermeisterTrousers
 
 - type: loadout
-  id: CP14ClothingPantsHakama
+  id: CE14ClothingPantsHakama
   equipment:
-    pants: CP14ClothingPantsHakama
+    pants: CE14ClothingPantsHakama
 
 - type: loadout
-  id: CP14ClothingPantsMercenaryTrousers
+  id: CE14ClothingPantsMercenaryTrousers
   equipment:
-    pants: CP14ClothingPantsMercenaryTrousers
+    pants: CE14ClothingPantsMercenaryTrousers
 
 # Shirt
 
 - type: loadoutGroup
-  id: CP14GeneralShirt
-  name: cp14-loadout-general-shirt
+  id: CE14GeneralShirt
+  name: CE14-loadout-general-shirt
   loadouts:
-  - CP14ClothingShirtCottonBlack
-  - CP14ClothinShirtGray
-  - CP14ClothingShirtBlackDress
-  - CP14ClothinShirtMaidDress
-  - CP14ClothingShirtCottonBlue
-  - CP14ClothingShirtCottonBlueCollar
-  - CP14ClothingShirtBlueCollarDress
-  - CP14ClothingShirtBlueOpen
-  - CP14ClothingShirtBlueOpenDress
-  - CP14ClothinShirtWhiteBlueDress
-  - CP14ClothinShirtWhiteBlue2Dress
-  - CP14ClothinShirtRedBlueDress
-  - CP14ClothingShirtJestersAttire
-  - CP14ClothingShirtRedOpen
-  - CP14ClothingShirtRedOpenDress
-  - CP14ClothingShirtYellowOpen
-  - CP14ClothingShirtYellowOpenDress
-  - CP14ClothinShirtBlueYellowDress
-  - CP14ClothingShirtCottonPurple
-  - CP14ClothingShirtCottonRed
-  - CP14ClothingShirtCottonRedDress
-  - CP14ClothingShirtCottonWhite
-  - CP14ClothingShirtCottonWhiteDress
-  - CP14ClothingShirtCottonWhiteCollar
-  - CP14ClothingShirtCottonWhiteCollarDress
-  - CP14ClothinShirtWhiteBrown
-  - CP14ClothinShirtBrown2Dress
-  - CP14ClothinShirtBrown3Dress
-  - CP14ClothingShirtGreenBeltDress
-  - CP14ClothingShirtGreenBeltDress2
-  - CP14ClothinShirtWhiteGreenDress
-  - CP14ClothinShirtwhiteGreenYellowDress
-  - CP14ClothinShirtGreenYellow
-  - CP14ClothinShirtBlueGreen
-  - CP14ClothingShirtGreenLightDress
-  - CP14ClothingShirtCottonYellow
-  - CP14ClothingShirtCottonYellowCollar
-  - CP14ClothingShirtCottonYellowCollarDress
-  - CP14ClothinShirtYellowBlueDress
-  - CP14ClothingShirtWarriorsGarbDress
-  - CP14ClothingShirtMercenary
+  - CE14ClothingShirtCottonBlack
+  - CE14ClothinShirtGray
+  - CE14ClothingShirtBlackDress
+  - CE14ClothinShirtMaidDress
+  - CE14ClothingShirtCottonBlue
+  - CE14ClothingShirtCottonBlueCollar
+  - CE14ClothingShirtBlueCollarDress
+  - CE14ClothingShirtBlueOpen
+  - CE14ClothingShirtBlueOpenDress
+  - CE14ClothinShirtWhiteBlueDress
+  - CE14ClothinShirtWhiteBlue2Dress
+  - CE14ClothinShirtRedBlueDress
+  - CE14ClothingShirtJestersAttire
+  - CE14ClothingShirtRedOpen
+  - CE14ClothingShirtRedOpenDress
+  - CE14ClothingShirtYellowOpen
+  - CE14ClothingShirtYellowOpenDress
+  - CE14ClothinShirtBlueYellowDress
+  - CE14ClothingShirtCottonPurple
+  - CE14ClothingShirtCottonRed
+  - CE14ClothingShirtCottonRedDress
+  - CE14ClothingShirtCottonWhite
+  - CE14ClothingShirtCottonWhiteDress
+  - CE14ClothingShirtCottonWhiteCollar
+  - CE14ClothingShirtCottonWhiteCollarDress
+  - CE14ClothinShirtWhiteBrown
+  - CE14ClothinShirtBrown2Dress
+  - CE14ClothinShirtBrown3Dress
+  - CE14ClothingShirtGreenBeltDress
+  - CE14ClothingShirtGreenBeltDress2
+  - CE14ClothinShirtWhiteGreenDress
+  - CE14ClothinShirtwhiteGreenYellowDress
+  - CE14ClothinShirtGreenYellow
+  - CE14ClothinShirtBlueGreen
+  - CE14ClothingShirtGreenLightDress
+  - CE14ClothingShirtCottonYellow
+  - CE14ClothingShirtCottonYellowCollar
+  - CE14ClothingShirtCottonYellowCollarDress
+  - CE14ClothinShirtYellowBlueDress
+  - CE14ClothingShirtWarriorsGarbDress
+  - CE14ClothingShirtMercenary
 
 - type: loadout
-  id: CP14ClothingShirtCottonBlack
+  id: CE14ClothingShirtCottonBlack
   equipment:
-    shirt: CP14ClothingShirtCottonBlack
+    shirt: CE14ClothingShirtCottonBlack
 
 - type: loadout
-  id: CP14ClothingShirtBlackDress
+  id: CE14ClothingShirtBlackDress
   equipment:
-    shirt: CP14ClothingShirtBlackDress
+    shirt: CE14ClothingShirtBlackDress
 
 - type: loadout
-  id: CP14ClothinShirtMaidDress
+  id: CE14ClothinShirtMaidDress
   equipment:
-    shirt: CP14ClothinShirtMaidDress
+    shirt: CE14ClothinShirtMaidDress
 
 - type: loadout
-  id: CP14ClothingShirtCottonBlue
+  id: CE14ClothingShirtCottonBlue
   equipment:
-    shirt: CP14ClothingShirtCottonBlue
+    shirt: CE14ClothingShirtCottonBlue
 
 - type: loadout
-  id: CP14ClothingShirtCottonBlueCollar
+  id: CE14ClothingShirtCottonBlueCollar
   equipment:
-    shirt: CP14ClothingShirtCottonBlueCollar
+    shirt: CE14ClothingShirtCottonBlueCollar
 
 - type: loadout
-  id: CP14ClothingShirtBlueCollarDress
+  id: CE14ClothingShirtBlueCollarDress
   equipment:
-    shirt: CP14ClothingShirtBlueCollarDress
+    shirt: CE14ClothingShirtBlueCollarDress
 
 - type: loadout
-  id: CP14ClothingShirtBlueOpen
+  id: CE14ClothingShirtBlueOpen
   equipment:
-    shirt: CP14ClothingShirtBlueOpen
+    shirt: CE14ClothingShirtBlueOpen
 
 - type: loadout
-  id: CP14ClothingShirtBlueOpenDress
+  id: CE14ClothingShirtBlueOpenDress
   equipment:
-    shirt: CP14ClothingShirtBlueOpenDress
+    shirt: CE14ClothingShirtBlueOpenDress
 
 - type: loadout
-  id: CP14ClothingShirtJestersAttire
+  id: CE14ClothingShirtJestersAttire
   equipment:
-    shirt: CP14ClothingShirtJestersAttire
+    shirt: CE14ClothingShirtJestersAttire
 
 - type: loadout
-  id: CP14ClothingShirtRedOpen
+  id: CE14ClothingShirtRedOpen
   equipment:
-    shirt: CP14ClothingShirtRedOpen
+    shirt: CE14ClothingShirtRedOpen
 
 - type: loadout
-  id: CP14ClothingShirtRedOpenDress
+  id: CE14ClothingShirtRedOpenDress
   equipment:
-    shirt: CP14ClothingShirtRedOpenDress
+    shirt: CE14ClothingShirtRedOpenDress
 
 - type: loadout
-  id: CP14ClothingShirtYellowOpen
+  id: CE14ClothingShirtYellowOpen
   equipment:
-    shirt: CP14ClothingShirtYellowOpen
+    shirt: CE14ClothingShirtYellowOpen
 
 - type: loadout
-  id: CP14ClothingShirtYellowOpenDress
+  id: CE14ClothingShirtYellowOpenDress
   equipment:
-    shirt: CP14ClothingShirtYellowOpenDress
+    shirt: CE14ClothingShirtYellowOpenDress
 
 - type: loadout
-  id: CP14ClothingShirtCottonPurple
+  id: CE14ClothingShirtCottonPurple
   equipment:
-    shirt: CP14ClothingShirtCottonPurple
+    shirt: CE14ClothingShirtCottonPurple
 
 - type: loadout
-  id: CP14ClothingShirtCottonRed
+  id: CE14ClothingShirtCottonRed
   equipment:
-    shirt: CP14ClothingShirtCottonRed
+    shirt: CE14ClothingShirtCottonRed
 
 - type: loadout
-  id: CP14ClothingShirtCottonRedDress
+  id: CE14ClothingShirtCottonRedDress
   equipment:
-    shirt: CP14ClothingShirtCottonRedDress
+    shirt: CE14ClothingShirtCottonRedDress
 
 - type: loadout
-  id: CP14ClothingShirtCottonWhite
+  id: CE14ClothingShirtCottonWhite
   equipment:
-    shirt: CP14ClothingShirtCottonWhite
+    shirt: CE14ClothingShirtCottonWhite
 
 - type: loadout
-  id: CP14ClothingShirtCottonWhiteDress
+  id: CE14ClothingShirtCottonWhiteDress
   equipment:
-    shirt: CP14ClothingShirtCottonWhiteDress
+    shirt: CE14ClothingShirtCottonWhiteDress
 
 - type: loadout
-  id: CP14ClothingShirtCottonWhiteCollar
+  id: CE14ClothingShirtCottonWhiteCollar
   equipment:
-    shirt: CP14ClothingShirtCottonWhiteCollar
+    shirt: CE14ClothingShirtCottonWhiteCollar
 
 - type: loadout
-  id: CP14ClothingShirtCottonWhiteCollarDress
+  id: CE14ClothingShirtCottonWhiteCollarDress
   equipment:
-    shirt: CP14ClothingShirtCottonWhiteCollarDress
+    shirt: CE14ClothingShirtCottonWhiteCollarDress
 
 - type: loadout
-  id: CP14ClothingShirtGreenBeltDress
+  id: CE14ClothingShirtGreenBeltDress
   equipment:
-    shirt: CP14ClothingShirtGreenBeltDress
+    shirt: CE14ClothingShirtGreenBeltDress
 
 - type: loadout
-  id: CP14ClothingShirtGreenBeltDress2
+  id: CE14ClothingShirtGreenBeltDress2
   equipment:
-    shirt: CP14ClothingShirtGreenBeltDress2
+    shirt: CE14ClothingShirtGreenBeltDress2
 
 - type: loadout
-  id: CP14ClothingShirtGreenLightDress
+  id: CE14ClothingShirtGreenLightDress
   equipment:
-    shirt: CP14ClothingShirtGreenLightDress
+    shirt: CE14ClothingShirtGreenLightDress
 
 - type: loadout
-  id: CP14ClothingShirtCottonYellow
+  id: CE14ClothingShirtCottonYellow
   equipment:
-    shirt: CP14ClothingShirtCottonYellow
+    shirt: CE14ClothingShirtCottonYellow
 
 - type: loadout
-  id: CP14ClothingShirtCottonYellowCollar
+  id: CE14ClothingShirtCottonYellowCollar
   equipment:
-    shirt: CP14ClothingShirtCottonYellowCollar
+    shirt: CE14ClothingShirtCottonYellowCollar
 
 - type: loadout
-  id: CP14ClothingShirtCottonYellowCollarDress
+  id: CE14ClothingShirtCottonYellowCollarDress
   equipment:
-    shirt: CP14ClothingShirtCottonYellowCollarDress
+    shirt: CE14ClothingShirtCottonYellowCollarDress
 
 - type: loadout
-  id: CP14ClothingShirtWarriorsGarbDress
+  id: CE14ClothingShirtWarriorsGarbDress
   equipment:
-    shirt: CP14ClothingShirtWarriorsGarbDress
+    shirt: CE14ClothingShirtWarriorsGarbDress
 
 - type: loadout
-  id: CP14ClothinShirtBlueYellowDress
+  id: CE14ClothinShirtBlueYellowDress
   equipment:
-    shirt: CP14ClothinShirtBlueYellowDress
+    shirt: CE14ClothinShirtBlueYellowDress
 
 - type: loadout
-  id: CP14ClothinShirtWhiteBlueDress
+  id: CE14ClothinShirtWhiteBlueDress
   equipment:
-    shirt: CP14ClothinShirtWhiteBlueDress
+    shirt: CE14ClothinShirtWhiteBlueDress
 
 - type: loadout
-  id: CP14ClothinShirtWhiteBlue2Dress
+  id: CE14ClothinShirtWhiteBlue2Dress
   equipment:
-    shirt: CP14ClothinShirtWhiteBlue2Dress
+    shirt: CE14ClothinShirtWhiteBlue2Dress
 
 - type: loadout
-  id: CP14ClothinShirtBrown2Dress
+  id: CE14ClothinShirtBrown2Dress
   equipment:
-    shirt: CP14ClothinShirtBrown2Dress
+    shirt: CE14ClothinShirtBrown2Dress
 
 - type: loadout
-  id: CP14ClothinShirtBrown3Dress
+  id: CE14ClothinShirtBrown3Dress
   equipment:
-    shirt: CP14ClothinShirtBrown3Dress
+    shirt: CE14ClothinShirtBrown3Dress
 
 - type: loadout
-  id: CP14ClothinShirtWhiteGreenDress
+  id: CE14ClothinShirtWhiteGreenDress
   equipment:
-    shirt: CP14ClothinShirtWhiteGreenDress
+    shirt: CE14ClothinShirtWhiteGreenDress
 
 - type: loadout
-  id: CP14ClothinShirtwhiteGreenYellowDress
+  id: CE14ClothinShirtwhiteGreenYellowDress
   equipment:
-    shirt: CP14ClothinShirtwhiteGreenYellowDress
+    shirt: CE14ClothinShirtwhiteGreenYellowDress
 
 - type: loadout
-  id: CP14ClothinShirtRedBlueDress
+  id: CE14ClothinShirtRedBlueDress
   equipment:
-    shirt: CP14ClothinShirtRedBlueDress
+    shirt: CE14ClothinShirtRedBlueDress
 
 - type: loadout
-  id: CP14ClothinShirtYellowBlueDress
+  id: CE14ClothinShirtYellowBlueDress
   equipment:
-    shirt: CP14ClothinShirtYellowBlueDress
+    shirt: CE14ClothinShirtYellowBlueDress
 
 - type: loadout
-  id: CP14ClothinShirtBlueGreen
+  id: CE14ClothinShirtBlueGreen
   equipment:
-    shirt: CP14ClothinShirtBlueGreen
+    shirt: CE14ClothinShirtBlueGreen
 
 - type: loadout
-  id: CP14ClothinShirtGray
+  id: CE14ClothinShirtGray
   equipment:
-    shirt: CP14ClothinShirtGray
+    shirt: CE14ClothinShirtGray
 
 - type: loadout
-  id: CP14ClothinShirtGreenYellow
+  id: CE14ClothinShirtGreenYellow
   equipment:
-    shirt: CP14ClothinShirtGreenYellow
+    shirt: CE14ClothinShirtGreenYellow
 
 - type: loadout
-  id: CP14ClothinShirtWhiteBrown
+  id: CE14ClothinShirtWhiteBrown
   equipment:
-    shirt: CP14ClothinShirtWhiteBrown
+    shirt: CE14ClothinShirtWhiteBrown
 
 - type: loadout
-  id: CP14ClothingShirtMercenary
+  id: CE14ClothingShirtMercenary
   equipment:
-    shirt: CP14ClothingShirtMercenary
+    shirt: CE14ClothingShirtMercenary
 
 # Shoes
 
 - type: loadoutGroup
-  id: CP14GeneralShoes
-  name: cp14-loadout-general-shoes
+  id: CE14GeneralShoes
+  name: CE14-loadout-general-shoes
   loadouts:
-  - CP14ShoesBlack
-  - CP14ShoesAristocraticBlack
-  - CP14ShoesSandals
-  - CP14ClothingShoesLongLeatherBoots
-  - CP14ClothingShoesJestersRingers
+  - CE14ShoesBlack
+  - CE14ShoesAristocraticBlack
+  - CE14ShoesSandals
+  - CE14ClothingShoesLongLeatherBoots
+  - CE14ClothingShoesJestersRingers
 
 - type: loadout
-  id: CP14ShoesBlack
+  id: CE14ShoesBlack
   equipment:
-    shoes: CP14ClothingShoesBlack
+    shoes: CE14ClothingShoesBlack
 
 - type: loadout
-  id: CP14ShoesAristocraticBlack
+  id: CE14ShoesAristocraticBlack
   equipment:
-    shoes: CP14ClothingShoesAristocraticBlack
+    shoes: CE14ClothingShoesAristocraticBlack
 
 - type: loadout
-  id: CP14ShoesSandals
+  id: CE14ShoesSandals
   equipment:
-    shoes: CP14ClothingShoesSandals
+    shoes: CE14ClothingShoesSandals
 
 - type: loadout
-  id: CP14ClothingShoesLongLeatherBoots
+  id: CE14ClothingShoesLongLeatherBoots
   equipment:
-    shoes: CP14ClothingShoesLongLeatherBoots
+    shoes: CE14ClothingShoesLongLeatherBoots
 
 - type: loadout
-  id: CP14ClothingShoesJestersRingers
+  id: CE14ClothingShoesJestersRingers
   equipment:
-    shoes: CP14ClothingShoesJestersRingers
+    shoes: CE14ClothingShoesJestersRingers
 
 # Back
 
 - type: loadoutGroup
-  id: CP14GeneralBack
-  name: cp14-loadout-general-back
+  id: CE14GeneralBack
+  name: CE14-loadout-general-back
   loadouts:
-  - CP14ClothingBackBackpackT0
-  - CP14ClothingBackSatchelT0
-#  - CP14ClothingBackExplorerBackpackT0
+  - CE14ClothingBackBackpackT0
+  - CE14ClothingBackSatchelT0
+#  - CE14ClothingBackExplorerBackpackT0
 
 - type: loadout
-  id: CP14ClothingBackBackpackT0
+  id: CE14ClothingBackBackpackT0
   equipment:
-    back: CP14ClothingBackBackpackT0
+    back: CE14ClothingBackBackpackT0
 
 - type: loadout
-  id: CP14ClothingBackSatchelT0
+  id: CE14ClothingBackSatchelT0
   equipment:
-    back: CP14ClothingBackSatchelT0
+    back: CE14ClothingBackSatchelT0
 
 # - type: loadout
-#   id: CP14ClothingBackExplorerBackpackT0
+#   id: CE14ClothingBackExplorerBackpackT0
 #   equipment:
-#     back: CP14ClothingBackExplorerBackpackT0
+#     back: CE14ClothingBackExplorerBackpackT0
 
 # Trinkets
 
 - type: loadoutGroup
-  id: CP14GeneralTrinkets
-  name: cp14-loadout-general-trinkets
+  id: CE14GeneralTrinkets
+  name: CE14-loadout-general-trinkets
   minLimit: 0
   maxLimit: 2
   loadouts:
-  - CP14ManaOperationGlove
-  - CP14CrystalLampOrangeEmpty
-  - CP14BaseSharpeningStone
-  - CP14Scissors
-  - CP14Rope
-  - CP14SilverCoin
-  - CP14Lighter
-  - CP14Torch
-  - CP14SmokingPipeFilledTobacco
-  - CP14FluteInstrument
-  - CP14LuteInstrument
-  - CP14LyraInstrument
-  - CP14SpellScrollResurrection
+  - CE14ManaOperationGlove
+  - CE14CrystalLampOrangeEmpty
+  - CE14BaseSharpeningStone
+  - CE14Scissors
+  - CE14Rope
+  - CE14SilverCoin
+  - CE14Lighter
+  - CE14Torch
+  - CE14SmokingPipeFilledTobacco
+  - CE14FluteInstrument
+  - CE14LuteInstrument
+  - CE14LyraInstrument
+  - CE14SpellScrollResurrection
 
 - type: loadout
-  id: CP14ManaOperationGlove
+  id: CE14ManaOperationGlove
   storage:
     back:
-    - CP14ManaOperationGlove
+    - CE14ManaOperationGlove
 
 - type: loadout
-  id: CP14CrystalLampOrangeEmpty
+  id: CE14CrystalLampOrangeEmpty
   storage:
     back:
-    - CP14CrystalLampOrangeEmpty
+    - CE14CrystalLampOrangeEmpty
 
 - type: loadout
-  id: CP14BaseSharpeningStone
+  id: CE14BaseSharpeningStone
   storage:
     back:
-    - CP14BaseSharpeningStone
+    - CE14BaseSharpeningStone
 
 - type: loadout
-  id: CP14Scissors
+  id: CE14Scissors
   storage:
     back:
-    - CP14Scissors
+    - CE14Scissors
 
 - type: loadout
-  id: CP14Rope
+  id: CE14Rope
   storage:
     back:
-    - CP14Rope
+    - CE14Rope
 
 - type: loadout
-  id: CP14SilverCoin
+  id: CE14SilverCoin
   storage:
     back:
-    - CP14SilverCoin
+    - CE14SilverCoin
 
 - type: loadout
-  id: CP14Lighter
+  id: CE14Lighter
   storage:
     back:
-    - CP14Lighter
+    - CE14Lighter
 
 - type: loadout
-  id: CP14Torch
+  id: CE14Torch
   storage:
     back:
-    - CP14Torch
+    - CE14Torch
 
 - type: loadout
-  id: CP14SmokingPipeFilledTobacco
+  id: CE14SmokingPipeFilledTobacco
   storage:
     back:
-    - CP14SmokingPipeFilledTobacco
+    - CE14SmokingPipeFilledTobacco
 
 - type: loadout
-  id: CP14LyraInstrument
+  id: CE14LyraInstrument
   storage:
     back:
-    - CP14LyraInstrument
+    - CE14LyraInstrument
 
 - type: loadout
-  id: CP14LuteInstrument
+  id: CE14LuteInstrument
   storage:
     back:
-    - CP14LuteInstrument
+    - CE14LuteInstrument
 
 - type: loadout
-  id: CP14FluteInstrument
+  id: CE14FluteInstrument
   storage:
     back:
-    - CP14FluteInstrument
+    - CE14FluteInstrument
 
 - type: loadout
-  id: CP14SpellScrollResurrection
+  id: CE14SpellScrollResurrection
   storage:
     back:
-    - CP14SpellScrollResurrection
+    - CE14SpellScrollResurrection
 
 # Keys
 
 - type: loadoutGroup
-  id: CP14GeneralKeys
-  name: cp14-loadout-general-keys
+  id: CE14GeneralKeys
+  name: CE14-loadout-general-keys
   minLimit: 0
   maxLimit: 1
   loadouts:
-  - CP14KeyPersonalHouseAbstract
+  - CE14KeyPersonalHouseAbstract
 
 - type: loadout
-  id: CP14KeyPersonalHouseAbstract
-  dummyEntity: CP14KeyPersonalHouseAbstractLoadoutDummy
+  id: CE14KeyPersonalHouseAbstract
+  dummyEntity: CE14KeyPersonalHouseAbstractLoadoutDummy
   storage:
     back:
-    - CP14KeyPersonalHouseAbstract
+    - CE14KeyPersonalHouseAbstract

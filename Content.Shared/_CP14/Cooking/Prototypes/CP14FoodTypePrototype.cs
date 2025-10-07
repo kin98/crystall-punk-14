@@ -5,10 +5,10 @@
 
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Cooking.Prototypes;
+namespace Content.Shared._CE14.Cooking.Prototypes;
 
-[Prototype("CP14FoodType")]
-public sealed class CP14FoodTypePrototype : IPrototype
+[Prototype("CE14FoodType")]
+public sealed class CE14FoodTypePrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;

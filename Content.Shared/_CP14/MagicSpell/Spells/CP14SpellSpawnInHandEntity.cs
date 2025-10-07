@@ -1,9 +1,9 @@
 using Content.Shared.Hands.EntitySystems;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellSpawnInHandEntity : CP14SpellEffect
+public sealed partial class CE14SpellSpawnInHandEntity : CE14SpellEffect
 {
     [DataField]
     public List<EntProtoId> Spawns = new();
@@ -11,7 +11,7 @@ public sealed partial class CP14SpellSpawnInHandEntity : CP14SpellEffect
     [DataField]
     public bool DeleteIfCantPickup = false;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         if (args.Target is null)
             return;

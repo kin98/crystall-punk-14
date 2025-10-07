@@ -1,1 +1,1 @@
-cp14-construction-category-vampire = Vampires
+CE14-construction-category-vampire = Vampires

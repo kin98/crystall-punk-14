@@ -1,14 +1,14 @@
-using Content.Shared._CP14.Farming;
-using Content.Shared._CP14.Farming.Components;
+using Content.Shared._CE14.Farming;
+using Content.Shared._CE14.Farming.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Damage;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.Farming;
+namespace Content.Server._CE14.Farming;
 
-public sealed partial class CP14FarmingSystem : CP14SharedFarmingSystem
+public sealed partial class CE14FarmingSystem : CE14SharedFarmingSystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -22,14 +22,14 @@ public sealed partial class CP14FarmingSystem : CP14SharedFarmingSystem
 
         InitializeResources();
 
-        SubscribeLocalEvent<CP14PlantComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<CE14PlantComponent, MapInitEvent>(OnMapInit);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<CP14PlantComponent>();
+        var query = EntityQueryEnumerator<CE14PlantComponent>();
         while (query.MoveNext(out var uid, out var plant))
         {
             if (_timing.CurTime <= plant.NextUpdateTime)
@@ -38,20 +38,20 @@ public sealed partial class CP14FarmingSystem : CP14SharedFarmingSystem
             var newTime = _random.NextFloat(plant.UpdateFrequency);
             plant.NextUpdateTime = _timing.CurTime + TimeSpan.FromSeconds(newTime);
 
-            var ev = new CP14PlantUpdateEvent((uid, plant));
+            var ev = new CE14PlantUpdateEvent((uid, plant));
             RaiseLocalEvent(uid, ev);
 
             AffectResource((uid, plant), ev.ResourceDelta);
             AffectEnergy((uid, plant), ev.EnergyDelta);
 
-            var ev2 = new CP14AfterPlantUpdateEvent((uid, plant));
+            var ev2 = new CE14AfterPlantUpdateEvent((uid, plant));
             RaiseLocalEvent(uid, ev2);
 
             Dirty(uid, plant);
         }
     }
 
-    private void OnMapInit(Entity<CP14PlantComponent> plant, ref MapInitEvent args)
+    private void OnMapInit(Entity<CE14PlantComponent> plant, ref MapInitEvent args)
     {
         var newTime = _random.NextFloat(plant.Comp.UpdateFrequency);
         plant.Comp.NextUpdateTime = _timing.CurTime + TimeSpan.FromSeconds(newTime);

@@ -1,51 +1,51 @@
 - type: entity
-  id: CP14ActionSpellIceArrow
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellIceArrow
+  parent: CE14ActionSpellBase
   name: Ice arrow
   description: You create a temporary sharp ice arrow that can be used as a disposable bow projectile.
   components:
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 7
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Sagitta glaciei..."
     endSpeech: "in manu mea"
-  - type: CP14ActionFreeHandsRequired
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneWaterCreation
+  - type: CE14ActionFreeHandsRequired
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneWaterCreation
   - type: DoAfterArgs
     delay: 0.5
   - type: Action
     useDelay: 5
     icon:
-      sprite: _CP14/Actions/Spells/water.rsi
+      sprite: _CE14/Actions/Spells/water.rsi
       state: ice_arrow
   - type: InstantAction
-    event: !type:CP14InstantModularEffectEvent
+    event: !type:CE14InstantModularEffectEvent
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectWaterCreation
-      - !type:CP14SpellSpawnInHandEntity
+        - CE14ImpactEffectWaterCreation
+      - !type:CE14SpellSpawnInHandEntity
         spawns:
-        - CP14IceArrow
+        - CE14IceArrow
 
 - type: entity
-  parent: CP14BaseSpellScrollWater
-  id: CP14SpellScrollIceArrow
+  parent: CE14BaseSpellScrollWater
+  id: CE14SpellScrollIceArrow
   name: ice arrow spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellIceArrow
+    - CE14ActionSpellIceArrow
 
 - type: entity
-  id: CP14IceArrow
-  parent: CP14ArrowBase
+  id: CE14IceArrow
+  parent: CE14ArrowBase
   name: ice arrow
   description: A sharp ice arrow created with magic. It melts and will soon disappear, but you can shoot it once with your bow.
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Weapons/Ranged/Projectiles/ice_arrow.rsi
+    sprite: _CE14/Objects/Weapons/Ranged/Projectiles/ice_arrow.rsi
     layers: 
     - state: icon
     - state: solution1

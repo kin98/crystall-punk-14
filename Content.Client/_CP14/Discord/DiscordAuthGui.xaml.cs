@@ -4,7 +4,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client._CP14.Discord;
+namespace Content.Client._CE14.Discord;
 
 [GenerateTypedNameReferences]
 public sealed partial class DiscordAuthGui : Control
@@ -25,7 +25,7 @@ public sealed partial class DiscordAuthGui : Control
 
         AuthLinkEdit.SetText(link);
         DLinkEdit.SetText(DiscordLink);
-        InfoLabel.SetMessage(Loc.GetString("cp14-discord-info"));
+        InfoLabel.SetMessage(Loc.GetString("CE14-discord-info"));
 
         var uriOpener = IoCManager.Resolve<IUriOpener>();
 

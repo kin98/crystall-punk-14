@@ -1,12 +1,12 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CP14.Farming.Components;
+namespace Content.Shared._CE14.Farming.Components;
 
 /// <summary>
 /// The backbone of any plant. Provides common variables for the plant to other components
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentPause, AutoGenerateComponentState(true), Access(typeof(CP14SharedFarmingSystem))]
-public sealed partial class CP14PlantComponent : Component
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentPause, AutoGenerateComponentState(true), Access(typeof(CE14SharedFarmingSystem))]
+public sealed partial class CE14PlantComponent : Component
 {
     /// <summary>
     /// The ability to consume a resource for growing
@@ -48,17 +48,17 @@ public sealed partial class CP14PlantComponent : Component
 /// <summary>
 /// Is called periodically at random intervals on the plant.
 /// </summary>
-public sealed class CP14PlantUpdateEvent(Entity<CP14PlantComponent> comp) : EntityEventArgs
+public sealed class CE14PlantUpdateEvent(Entity<CE14PlantComponent> comp) : EntityEventArgs
 {
-    public readonly Entity<CP14PlantComponent> Plant = comp;
+    public readonly Entity<CE14PlantComponent> Plant = comp;
     public float EnergyDelta = 0f;
     public float ResourceDelta = 0f;
 }
 
 /// <summary>
-/// is called after CP14PlantUpdateEvent when all value changes have already been calculated.
+/// is called after CE14PlantUpdateEvent when all value changes have already been calculated.
 /// </summary>
-public sealed class CP14AfterPlantUpdateEvent(Entity<CP14PlantComponent> comp) : EntityEventArgs
+public sealed class CE14AfterPlantUpdateEvent(Entity<CE14PlantComponent> comp) : EntityEventArgs
 {
-    public readonly Entity<CP14PlantComponent> Plant = comp;
+    public readonly Entity<CE14PlantComponent> Plant = comp;
 }

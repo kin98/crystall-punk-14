@@ -3,9 +3,9 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Popups;
 using Robust.Shared.Timing;
 
-namespace Content.Server._CP14.DPSMeter;
+namespace Content.Server._CE14.DPSMeter;
 
-public sealed class CP14DPSMeterSystem : EntitySystem
+public sealed class CE14DPSMeterSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
@@ -13,14 +13,14 @@ public sealed class CP14DPSMeterSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14DPSMeterComponent, DamageChangedEvent>(OnDamageChanged);
+        SubscribeLocalEvent<CE14DPSMeterComponent, DamageChangedEvent>(OnDamageChanged);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<CP14DPSMeterComponent>();
+        var query = EntityQueryEnumerator<CE14DPSMeterComponent>();
         while (query.MoveNext(out var uid, out var meter))
         {
             if (_timing.CurTime < meter.EndTrackTime || meter.EndTrackTime == TimeSpan.Zero)
@@ -34,7 +34,7 @@ public sealed class CP14DPSMeterSystem : EntitySystem
         }
     }
 
-    private void OnDamageChanged(Entity<CP14DPSMeterComponent> ent, ref DamageChangedEvent args)
+    private void OnDamageChanged(Entity<CE14DPSMeterComponent> ent, ref DamageChangedEvent args)
     {
         if (args.DamageDelta is null)
             return;
@@ -50,7 +50,7 @@ public sealed class CP14DPSMeterSystem : EntitySystem
         _popup.PopupEntity($"DPS: {GetDPS(ent)}", ent);
     }
 
-    private FixedPoint2 GetDPS(Entity<CP14DPSMeterComponent> ent)
+    private FixedPoint2 GetDPS(Entity<CE14DPSMeterComponent> ent)
     {
         var totalDamage = ent.Comp.TotalDamage.GetTotal();
         var totalSeconds = (ent.Comp.LastHitTime - ent.Comp.StartTrackTime).TotalSeconds;

@@ -1,4 +1,4 @@
-using Content.Server._CP14.ModularCraft;
+using Content.Server._CE14.ModularCraft;
 using Content.Server.Destructible;
 using Content.Server.Destructible.Thresholds.Behaviors;
 using Content.Server.Fluids.EntitySystems;
@@ -9,17 +9,17 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.Chemistry.SmokeBomb;
+namespace Content.Server._CE14.Chemistry.SmokeBomb;
 
 [Serializable]
 [DataDefinition]
-public sealed partial class CP14AreaEffectBehavior : IThresholdBehavior
+public sealed partial class CE14AreaEffectBehavior : IThresholdBehavior
 {
     [DataField]
     public string? Solution;
 
     [DataField]
-    public EntProtoId SmokeProto = "CP14Mist";
+    public EntProtoId SmokeProto = "CE14Mist";
 
     [DataField]
     public SoundSpecifier Sound = new SoundPathSpecifier("/Audio/Effects/smoke.ogg");

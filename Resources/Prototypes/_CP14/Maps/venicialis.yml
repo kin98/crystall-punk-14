@@ -1,38 +1,38 @@
 - type: gameMap
   id: Venicialis
   mapName: "Venicialis fort"
-  mapPath: /Maps/_CP14/venicialis.yml
+  mapPath: /Maps/_CE14/venicialis.yml
   maxRandomOffset: 0
   randomRotation: false
   minPlayers: 0
   stations:
     Venicialis:
-      stationProto: CP14BaseExpedition
+      stationProto: CE14BaseExpedition
       components:
         - type: StationNameSetup
           mapNameTemplate: "Venicialis fort"
         - type: StationJobs
           availableJobs:
             #Mercenary
-            CP14Guildmaster: [1, 1]
-            CP14GuildWorker: [2, 2]
-            CP14Adventurer: [ -1, -1 ]
+            CE14Guildmaster: [1, 1]
+            CE14GuildWorker: [2, 2]
+            CE14Adventurer: [ -1, -1 ]
             #Artisans
-            CP14Apprentice: [ 3, 3 ]
-            CP14Alchemist: [ 2, 2 ]
-            #CP14Blacksmith: [ 2, 2 ]
-            CP14Innkeeper: [ 2, 3 ]
-            CP14Merchant: [2, 2]
+            CE14Apprentice: [ 3, 3 ]
+            CE14Alchemist: [ 2, 2 ]
+            #CE14Blacksmith: [ 2, 2 ]
+            CE14Innkeeper: [ 2, 3 ]
+            CE14Merchant: [2, 2]
             #Guard
-            CP14Guard: [4, 4]
-            CP14Investigator: [2, 2]
-            CP14GuardCommander: [1, 1]
-        - type: CP14StationZLevels
+            CE14Guard: [4, 4]
+            CE14Investigator: [2, 2]
+            CE14GuardCommander: [1, 1]
+        - type: CE14StationZLevels
           defaultMapLevel: 0
           levels:
             -1:
-              path: /Maps/_CP14/venicialis_d.yml
-        - type: CP14StationKeyDistribution
+              path: /Maps/_CE14/venicialis_d.yml
+        - type: CE14StationKeyDistribution
           keys:
           - Alchemy1
           - Alchemy2
@@ -46,7 +46,7 @@
           - PersonalHouse4
           - PersonalHouse5
           - PersonalHouse6
-        - type: CP14StationProceduralLocation
+        - type: CE14StationProceduralLocation
           location: VenicialistFort
           modifiers:
           - DemiplaneArcSingle
@@ -54,7 +54,7 @@
           - CopperOre
           - CopperOre
           - CoalOre
-          - CP14CrystalQuartzWater
+          - CE14CrystalQuartzWater
           - Quartz
           - Ruins
           - Boar

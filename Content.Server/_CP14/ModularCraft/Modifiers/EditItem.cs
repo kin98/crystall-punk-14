@@ -1,12 +1,12 @@
 using System.Linq;
-using Content.Shared._CP14.ModularCraft;
-using Content.Shared._CP14.ModularCraft.Components;
+using Content.Shared._CE14.ModularCraft;
+using Content.Shared._CE14.ModularCraft.Components;
 using Content.Shared.Item;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._CP14.ModularCraft.Modifiers;
+namespace Content.Server._CE14.ModularCraft.Modifiers;
 
-public sealed partial class EditItem : CP14ModularCraftModifier
+public sealed partial class EditItem : CE14ModularCraftModifier
 {
     [DataField]
     public ProtoId<ItemSizePrototype>? NewSize;
@@ -20,7 +20,7 @@ public sealed partial class EditItem : CP14ModularCraftModifier
     [DataField]
     public Vector2i? StoredOffsetBonus;
 
-    public override void Effect(EntityManager entManager, Entity<CP14ModularCraftStartPointComponent> start, Entity<CP14ModularCraftPartComponent>? part)
+    public override void Effect(EntityManager entManager, Entity<CE14ModularCraftStartPointComponent> start, Entity<CE14ModularCraftPartComponent>? part)
     {
         if (!entManager.TryGetComponent<ItemComponent>(start, out var itemComp) || itemComp.Shape is null)
             return;

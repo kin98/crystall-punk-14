@@ -1,9 +1,9 @@
 - type: construction
   crystallPunkAllowed: true
-  id: CP14Workbench
-  graph: CP14Workbench
+  id: CE14Workbench
+  graph: CE14Workbench
   startNode: start
-  targetNode: CP14Workbench
+  targetNode: CE14Workbench
   category: construction-category-machines
   objectType: Structure
   placementMode: SnapgridCenter
@@ -13,10 +13,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WorkbenchCooking
-  graph: CP14WorkbenchCooking
+  id: CE14WorkbenchCooking
+  graph: CE14WorkbenchCooking
   startNode: start
-  targetNode: CP14WorkbenchCooking
+  targetNode: CE14WorkbenchCooking
   category: construction-category-machines
   objectType: Structure
   placementMode: SnapgridCenter
@@ -26,10 +26,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WorkbenchSewing
-  graph: CP14WorkbenchSewing
+  id: CE14WorkbenchSewing
+  graph: CE14WorkbenchSewing
   startNode: start
-  targetNode: CP14WorkbenchSewing
+  targetNode: CE14WorkbenchSewing
   category: construction-category-machines
   objectType: Structure
   placementMode: SnapgridCenter
@@ -39,10 +39,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WorkbenchLeather
-  graph: CP14WorkbenchLeather
+  id: CE14WorkbenchLeather
+  graph: CE14WorkbenchLeather
   startNode: start
-  targetNode: CP14WorkbenchLeather
+  targetNode: CE14WorkbenchLeather
   category: construction-category-machines
   objectType: Structure
   placementMode: SnapgridCenter

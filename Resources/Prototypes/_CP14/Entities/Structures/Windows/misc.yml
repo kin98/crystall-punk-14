@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14WindowIceBlock
-  parent: CP14WindowBase
+  id: CE14WindowIceBlock
+  parent: CE14WindowBase
   name: ice block
   description: Smooth and translucent ice.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Windows/ice_block.rsi
+    sprite: _CE14/Structures/Windows/ice_block.rsi
   - type: Icon
-    sprite: _CP14/Structures/Windows/ice_block.rsi
+    sprite: _CE14/Structures/Windows/ice_block.rsi
     state: full
   - type: Destructible
     thresholds:
@@ -25,15 +25,15 @@
       Brute:
         collection: GlassSmash
   - type: InteractionPopup
-    interactSuccessString: popup-cp14crystal-ding
-    messagePerceivedByOthers: popup-cp14crystal-ding
+    interactSuccessString: popup-CE14crystal-ding
+    messagePerceivedByOthers: popup-CE14crystal-ding
     interactSuccessSound:
-      collection: CP14CrystalDings
+      collection: CE14CrystalDings
       params:
         variation: 0.03
 
 - type: entity
-  id: CP14WindowMagicIceBlock
+  id: CE14WindowMagicIceBlock
   name: magic ice block
   description: Ice created by magic with a distinct purple hue.
   categories: [ ForkFiltered ]
@@ -44,13 +44,13 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _CP14/Structures/Windows/ice_block.rsi
+    sprite: _CE14/Structures/Windows/ice_block.rsi
     color: "#5eabeb"
   - type: Icon
-    sprite: _CP14/Structures/Windows/ice_block.rsi
+    sprite: _CE14/Structures/Windows/ice_block.rsi
     state: full
   - type: IconSmooth
-    key: CP14window
+    key: CE14window
     base: window
   - type: PlacementReplacement
     key: walls

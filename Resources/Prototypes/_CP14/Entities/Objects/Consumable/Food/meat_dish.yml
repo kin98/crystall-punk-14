@@ -2,8 +2,8 @@
   name: Klanir stuffed pumpkin
   parent: 
   - FoodInjectableBase
-  - CP14BurnsAsh
-  id: CP14FoodStuffedPumpkin
+  - CE14BurnsAsh
+  id: CE14FoodStuffedPumpkin
   description: Pumpkin stuffed with meat and vegetables is very popular among the people of the Kingdom of Klanir.
   categories: [ ForkFiltered ]
   components:
@@ -11,10 +11,10 @@
     flavors:
       - meaty
       - pumpkin
-      - CP14HotPotato
+      - CE14HotPotato
   - type: Sprite
     layers:
-    - sprite: _CP14/Objects/Consumable/Food/stuffed_pumpkin.rsi
+    - sprite: _CE14/Objects/Consumable/Food/stuffed_pumpkin.rsi
       state: stuffed_pumpkin1
       map: [ "random" ]
   - type: RandomSprite

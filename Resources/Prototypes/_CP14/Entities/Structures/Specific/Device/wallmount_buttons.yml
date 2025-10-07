@@ -1,14 +1,14 @@
 - type: entity
-  id: CP14WallmountButtonBase
+  id: CE14WallmountButtonBase
   abstract: true
   parent:
-  - CP14BaseWallmount
+  - CE14BaseWallmount
   categories: [ ForkFiltered ]
   name: wall button
   description: This button can activate something!
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Specific/Device/wallmount_buttons.rsi
+    sprite: _CE14/Structures/Specific/Device/wallmount_buttons.rsi
   - type: Clickable
   - type: InteractionOutline
   - type: Physics
@@ -16,9 +16,9 @@
   - type: UseDelay
     delay: 0.5 # prevent light-toggling auto-clickers.
   - type: SignalSwitch
-    onPort: CP14Pressed
-    offPort: CP14Pressed
-    statusPort: CP14Pressed
+    onPort: CE14Pressed
+    offPort: CE14Pressed
+    statusPort: CE14Pressed
   - type: Fixtures
   - type: DeviceNetwork
     deviceNetId: Wireless
@@ -26,18 +26,18 @@
     range: 10
   - type: DeviceLinkSource
     ports:
-      - CP14Pressed
+      - CE14Pressed
 
 - type: entity
-  id: CP14WallmouontButtonWooden
-  parent: CP14WallmountButtonBase
+  id: CE14WallmouontButtonWooden
+  parent: CE14WallmountButtonBase
   components:
   - type: Sprite
     state: wooden
 
 - type: entity
-  id: CP14WallmouontButtonStone
-  parent: CP14WallmountButtonBase
+  id: CE14WallmouontButtonStone
+  parent: CE14WallmountButtonBase
   components:
   - type: Sprite
     state: stone

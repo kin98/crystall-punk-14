@@ -1,6 +1,6 @@
 using System.Text;
-using Content.Shared._CP14.MagicEnergy;
-using Content.Shared._CP14.MagicEnergy.Components;
+using Content.Shared._CE14.MagicEnergy;
+using Content.Shared._CE14.MagicEnergy.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Examine;
@@ -14,9 +14,9 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Shared._CP14.MagicEssence;
+namespace Content.Shared._CE14.MagicEssence;
 
-public partial class CP14MagicEssenceSystem : EntitySystem
+public partial class CE14MagicEssenceSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
@@ -25,7 +25,7 @@ public partial class CP14MagicEssenceSystem : EntitySystem
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly INetManager _net = default!;
-    [Dependency] private readonly CP14SharedMagicEnergySystem _magicEnergy = default!;
+    [Dependency] private readonly CE14SharedMagicEnergySystem _magicEnergy = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solution = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
@@ -33,34 +33,34 @@ public partial class CP14MagicEssenceSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14MagicEssenceContainerComponent, ExaminedEvent>(OnExamine);
+        SubscribeLocalEvent<CE14MagicEssenceContainerComponent, ExaminedEvent>(OnExamine);
 
-        SubscribeLocalEvent<CP14MagicEssenceScannerComponent, CP14MagicEssenceScanEvent>(OnMagicScanAttempt);
-        SubscribeLocalEvent<CP14MagicEssenceScannerComponent, InventoryRelayedEvent<CP14MagicEssenceScanEvent>>((e, c, ev) => OnMagicScanAttempt(e, c, ev.Args));
+        SubscribeLocalEvent<CE14MagicEssenceScannerComponent, CE14MagicEssenceScanEvent>(OnMagicScanAttempt);
+        SubscribeLocalEvent<CE14MagicEssenceScannerComponent, InventoryRelayedEvent<CE14MagicEssenceScanEvent>>((e, c, ev) => OnMagicScanAttempt(e, c, ev.Args));
 
-        SubscribeLocalEvent<CP14MagicEssenceSplitterComponent, CP14MagicEnergyOverloadEvent>(OnEnergyOverload);
+        SubscribeLocalEvent<CE14MagicEssenceSplitterComponent, CE14MagicEnergyOverloadEvent>(OnEnergyOverload);
 
-        SubscribeLocalEvent<CP14MagicEssenceCollectorComponent, CP14SlotCrystalPowerChangedEvent>(OnPowerChanged);
-        SubscribeLocalEvent<CP14MagicEssenceCollectorComponent, StartCollideEvent>(OnCollectorCollide);
+        SubscribeLocalEvent<CE14MagicEssenceCollectorComponent, CE14SlotCrystalPowerChangedEvent>(OnPowerChanged);
+        SubscribeLocalEvent<CE14MagicEssenceCollectorComponent, StartCollideEvent>(OnCollectorCollide);
     }
 
-    private void OnPowerChanged(Entity<CP14MagicEssenceCollectorComponent> ent, ref CP14SlotCrystalPowerChangedEvent args)
+    private void OnPowerChanged(Entity<CE14MagicEssenceCollectorComponent> ent, ref CE14SlotCrystalPowerChangedEvent args)
     {
         if (args.Powered)
         {
-            EnsureComp<CP14MagicEssenceAttractorComponent>(ent);
+            EnsureComp<CE14MagicEssenceAttractorComponent>(ent);
             return;
         }
 
-        RemCompDeferred<CP14MagicEssenceAttractorComponent>(ent);
+        RemCompDeferred<CE14MagicEssenceAttractorComponent>(ent);
     }
 
-    private void OnCollectorCollide(Entity<CP14MagicEssenceCollectorComponent> ent, ref StartCollideEvent args)
+    private void OnCollectorCollide(Entity<CE14MagicEssenceCollectorComponent> ent, ref StartCollideEvent args)
     {
-        if (TryComp<CP14MagicEnergyCrystalSlotComponent>(ent, out var energySlot) && !energySlot.Powered)
+        if (TryComp<CE14MagicEnergyCrystalSlotComponent>(ent, out var energySlot) && !energySlot.Powered)
             return;
 
-        if (!TryComp<CP14MagicEssenceComponent>(args.OtherEntity, out var essenceComp))
+        if (!TryComp<CE14MagicEssenceComponent>(args.OtherEntity, out var essenceComp))
             return;
 
         if (!TryComp<SolutionContainerManagerComponent>(args.OtherEntity, out var essenceSolutionManager))
@@ -84,9 +84,9 @@ public partial class CP14MagicEssenceSystem : EntitySystem
             QueueDel(args.OtherEntity);
     }
 
-    private void OnEnergyOverload(Entity<CP14MagicEssenceSplitterComponent> ent, ref CP14MagicEnergyOverloadEvent args)
+    private void OnEnergyOverload(Entity<CE14MagicEssenceSplitterComponent> ent, ref CE14MagicEnergyOverloadEvent args)
     {
-        if (!TryComp<CP14MagicEnergyContainerComponent>(ent, out var energyContainer))
+        if (!TryComp<CE14MagicEnergyContainerComponent>(ent, out var energyContainer))
             return;
 
         _magicEnergy.ChangeEnergy((ent, energyContainer), -energyContainer.Energy, out _, out _, safe: true);
@@ -109,14 +109,14 @@ public partial class CP14MagicEssenceSystem : EntitySystem
         SpawnAttachedTo(ent.Comp.ImpactEffect, Transform(ent).Coordinates);
     }
 
-    private void OnMagicScanAttempt(EntityUid uid, CP14MagicEssenceScannerComponent component, CP14MagicEssenceScanEvent args)
+    private void OnMagicScanAttempt(EntityUid uid, CE14MagicEssenceScannerComponent component, CE14MagicEssenceScanEvent args)
     {
         args.CanScan = true;
     }
 
     private bool TrySplitToEssence(EntityUid uid)
     {
-        if (!TryComp<CP14MagicEssenceContainerComponent>(uid, out var essenceContainer))
+        if (!TryComp<CE14MagicEssenceContainerComponent>(uid, out var essenceContainer))
             return false;
 
    	    var count = 1;
@@ -145,9 +145,9 @@ public partial class CP14MagicEssenceSystem : EntitySystem
         return true;
     }
 
-    private void OnExamine(Entity<CP14MagicEssenceContainerComponent> ent, ref ExaminedEvent args)
+    private void OnExamine(Entity<CE14MagicEssenceContainerComponent> ent, ref ExaminedEvent args)
     {
-        var scanEvent = new CP14MagicEssenceScanEvent();
+        var scanEvent = new CE14MagicEssenceScanEvent();
         RaiseLocalEvent(args.Examiner, scanEvent);
 
         if (!scanEvent.CanScan)
@@ -162,7 +162,7 @@ public partial class CP14MagicEssenceSystem : EntitySystem
 
 
         var sb = new StringBuilder();
-        sb.Append(Loc.GetString("cp14-magic-essence-title") + "\n");
+        sb.Append(Loc.GetString("CE14-magic-essence-title") + "\n");
         foreach (var essence in ent.Comp.Essences)
         {
             if (_proto.TryIndex(essence.Key, out var magicType))
@@ -175,7 +175,7 @@ public partial class CP14MagicEssenceSystem : EntitySystem
     }
 }
 
-public sealed class CP14MagicEssenceScanEvent : EntityEventArgs, IInventoryRelayEvent
+public sealed class CE14MagicEssenceScanEvent : EntityEventArgs, IInventoryRelayEvent
 {
     public bool CanScan;
     public SlotFlags TargetSlots { get; } = SlotFlags.EYES;

@@ -1,1 +1,1 @@
-changelog-tab-title-CP14_Changelog = CrystallEdge Changelog
+changelog-tab-title-CE14_Changelog = CrystallEdge Changelog

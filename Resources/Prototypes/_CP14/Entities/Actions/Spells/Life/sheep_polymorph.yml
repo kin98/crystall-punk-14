@@ -1,26 +1,26 @@
 - type: entity
-  id: CP14ActionSpellSheepPolymorph
-  parent: CP14ActionSpellBase
+  id: CE14ActionSpellSheepPolymorph
+  parent: CE14ActionSpellBase
   name: Sheep polymorph
   description: You curse the target, turning it into a silly sheep for a short period of time.
   components:
   - type: Sprite
-    sprite: _CP14/Actions/Spells/misc.rsi
+    sprite: _CE14/Actions/Spells/misc.rsi
     state: polymorph
-  - type: CP14ActionDoAfterSlowdown
+  - type: CE14ActionDoAfterSlowdown
     speedMultiplier: 0.5
-  - type: CP14ActionManaCost
+  - type: CE14ActionManaCost
     manaCost: 30
-  - type: CP14ActionSpeaking
+  - type: CE14ActionSpeaking
     startSpeech: "Pascam et custodiam..."
     endSpeech: "pecora tua"
-  - type: CP14ActionDoAfterVisuals
-    proto: CP14RuneSheepPolymorph
-  - type: CP14ActionTargetMobStatusRequired
+  - type: CE14ActionDoAfterVisuals
+    proto: CE14RuneSheepPolymorph
+  - type: CE14ActionTargetMobStatusRequired
   - type: Action
     useDelay: 30
     icon:
-      sprite: _CP14/Actions/Spells/misc.rsi
+      sprite: _CE14/Actions/Spells/misc.rsi
       state: polymorph
   - type: TargetAction
     range: 3
@@ -32,23 +32,23 @@
     whitelist:
       components:
       - MobState
-    event: !type:CP14EntityTargetModularEffectEvent
+    event: !type:CE14EntityTargetModularEffectEvent
       telegraphyEffects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectSheepPolymorph
+        - CE14ImpactEffectSheepPolymorph
       effects:
-      - !type:CP14SpellSpawnEntityOnTarget
+      - !type:CE14SpellSpawnEntityOnTarget
         spawns:
-        - CP14ImpactEffectSheepPolymorph
-      - !type:CP14SpellApplyEntityEffect
+        - CE14ImpactEffectSheepPolymorph
+      - !type:CE14SpellApplyEntityEffect
         effects:
         - !type:Polymorph
-          prototype: CP14Sheep
+          prototype: CE14Sheep
 
 - type: entity
-  id: CP14RuneSheepPolymorph
-  parent: CP14BaseMagicRune
+  id: CE14RuneSheepPolymorph
+  parent: CE14BaseMagicRune
   categories: [ HideSpawnMenu ]
   components:
   - type: PointLight
@@ -63,8 +63,8 @@
       shader: unshaded
 
 - type: entity
-  id: CP14ImpactEffectSheepPolymorph
-  parent: CP14BaseMagicImpact
+  id: CE14ImpactEffectSheepPolymorph
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -74,10 +74,10 @@
       shader: unshaded
 
 - type: entity
-  parent: CP14BaseSpellScrollHealing
-  id: CP14SpellScrollSheepPolymorph
+  parent: CE14BaseSpellScrollHealing
+  id: CE14SpellScrollSheepPolymorph
   name: sheep polymorph spell scroll
   components:
-  - type: CP14SpellStorage
+  - type: CE14SpellStorage
     spells:
-    - CP14ActionSpellSheepPolymorph
+    - CE14ActionSpellSheepPolymorph

@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: Clothing
-  id: CP14ClothingOuterClothingBase
+  id: CE14ClothingOuterClothingBase
   categories: [ ForkFiltered ]
   components:
   - type: Clothing
@@ -14,8 +14,8 @@
 
 - type: entity
   abstract: true
-  parent: [ CP14ClothingOuterClothingBase, BaseFoldable ]
-  id: CP14ClothingOuterFoldableBase
+  parent: [ CE14ClothingOuterClothingBase, BaseFoldable ]
+  id: CE14ClothingOuterFoldableBase
   components:
   - type: Appearance
   - type: Foldable

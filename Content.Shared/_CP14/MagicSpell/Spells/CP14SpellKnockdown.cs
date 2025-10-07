@@ -1,8 +1,8 @@
 using Content.Shared.Stunnable;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellKnockdown : CP14SpellEffect
+public sealed partial class CE14SpellKnockdown : CE14SpellEffect
 {
     [DataField]
     public float ThrowPower = 10f;
@@ -13,7 +13,7 @@ public sealed partial class CP14SpellKnockdown : CP14SpellEffect
     [DataField]
     public bool DropItems = false;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         if (args.Target is null || args.User is null)
             return;

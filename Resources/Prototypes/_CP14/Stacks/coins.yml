@@ -1,36 +1,36 @@
 - type: stack
-  id: CP14CopperCoin
-  name: cp14-stack-copper-coin
-  spawn: CP14CopperCoin1
+  id: CE14CopperCoin
+  name: CE14-stack-copper-coin
+  spawn: CE14CopperCoin1
   icon:
-    sprite: /Textures/_CP14/Objects/Economy/cp_coin.rsi
+    sprite: /Textures/_CE14/Objects/Economy/cp_coin.rsi
     state: coin1
   maxCount: 10
 
 - type: stack
-  id: CP14SilverCoin
-  name: cp14-stack-silver-coin
-  spawn: CP14SilverCoin1
+  id: CE14SilverCoin
+  name: CE14-stack-silver-coin
+  spawn: CE14SilverCoin1
   icon:
-    sprite: /Textures/_CP14/Objects/Economy/sp_coin.rsi
+    sprite: /Textures/_CE14/Objects/Economy/sp_coin.rsi
     state: coin1
   maxCount: 10
 
 - type: stack
-  id: CP14GoldCoin
-  name: cp14-stack-gold-coin
-  spawn: CP14GoldCoin1
+  id: CE14GoldCoin
+  name: CE14-stack-gold-coin
+  spawn: CE14GoldCoin1
   icon:
-    sprite: /Textures/_CP14/Objects/Economy/gp_coin.rsi
+    sprite: /Textures/_CE14/Objects/Economy/gp_coin.rsi
     state: coin1
   maxCount: 10
 
 - type: stack
-  id: CP14PlatinumCoin
-  name: cp14-stack-platinum-coin
-  spawn: CP14PlatinumCoin1
+  id: CE14PlatinumCoin
+  name: CE14-stack-platinum-coin
+  spawn: CE14PlatinumCoin1
   icon:
-    sprite: /Textures/_CP14/Objects/Economy/pp_coin.rsi
+    sprite: /Textures/_CE14/Objects/Economy/pp_coin.rsi
     state: coin1
   maxCount: 10
 

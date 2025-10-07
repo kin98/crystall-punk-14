@@ -1,25 +1,25 @@
 - type: antag
-  id: CP14DemiplaneAntag
-  name: cp14-role-type-demiplane-antag-name
+  id: CE14DemiplaneAntag
+  name: CE14-role-type-demiplane-antag-name
   antagonist: true
   setPreference: false
-  objective: cp14-ghost-role-information-rules-demiplane
+  objective: CE14-ghost-role-information-rules-demiplane
 
 - type: antag
-  id: CP14Vampire
-  name: cp14-roles-antag-vampire-name
+  id: CE14Vampire
+  name: CE14-roles-antag-vampire-name
   antagonist: true
   setPreference: true
-  objective: cp14-roles-antag-vampire-objective
+  objective: CE14-roles-antag-vampire-objective
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 7200 # 2h
   #guides: TODO
 
 - type: antag
-  id: CP14BloodMoonCursed
-  name: cp14-roles-antag-blood-moon-cursed-name
+  id: CE14BloodMoonCursed
+  name: CE14-roles-antag-blood-moon-cursed-name
   antagonist: true
   setPreference: false
-  objective: cp14-roles-antag-blood-moon-cursed-objective
+  objective: CE14-roles-antag-blood-moon-cursed-objective
 

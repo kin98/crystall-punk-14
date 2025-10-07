@@ -7,10 +7,10 @@ using Content.Shared.Materials;
 using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Trading.Systems;
+namespace Content.Shared._CE14.Trading.Systems;
 
 //TODO: All of this should be removed when PricingSystem in the upstream moves to Shared.
-public abstract partial class CP14SharedStationEconomySystem
+public abstract partial class CE14SharedStationEconomySystem
 {
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -61,8 +61,8 @@ public abstract partial class CP14SharedStationEconomySystem
     {
         double price = 0;
 
-        //CP14 We take materials into account when calculating the price in any case.
-        if ((prototype.Components.ContainsKey(Factory.GetComponentName<MaterialComponent>()) || prototype.ID.StartsWith("CP14")) &&
+        //CE14 We take materials into account when calculating the price in any case.
+        if ((prototype.Components.ContainsKey(Factory.GetComponentName<MaterialComponent>()) || prototype.ID.StartsWith("CE14")) &&
             prototype.Components.TryGetValue(Factory.GetComponentName<PhysicalCompositionComponent>(), out var composition))
         {
             var compositionComp = (PhysicalCompositionComponent) composition.Component;

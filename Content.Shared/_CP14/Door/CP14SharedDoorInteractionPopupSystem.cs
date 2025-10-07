@@ -4,9 +4,9 @@ using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._CP14.Door;
+namespace Content.Shared._CE14.Door;
 
-public sealed class CP14DoorInteractionPopupSystem : EntitySystem
+public sealed class CE14DoorInteractionPopupSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
@@ -15,10 +15,10 @@ public sealed class CP14DoorInteractionPopupSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<CP14DoorInteractionPopupComponent, ActivateInWorldEvent>(OnActivatedInWorld);
+        SubscribeLocalEvent<CE14DoorInteractionPopupComponent, ActivateInWorldEvent>(OnActivatedInWorld);
     }
 
-    private void OnActivatedInWorld(Entity<CP14DoorInteractionPopupComponent> door, ref ActivateInWorldEvent args)
+    private void OnActivatedInWorld(Entity<CE14DoorInteractionPopupComponent> door, ref ActivateInWorldEvent args)
     {
         if (TryComp<LockComponent>(args.Target, out var lockComponent) && !lockComponent.Locked)
             return;

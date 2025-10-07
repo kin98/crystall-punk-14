@@ -1,21 +1,21 @@
 - type: constructionGraph
-  id: CP14VampireStoneAltar
+  id: CE14VampireStoneAltar
   start: start
   graph:
     - node: start
       edges:
-        - to: CP14VampireStoneAltar
+        - to: CE14VampireStoneAltar
           completed:
             - !type:SnapToGrid
           steps:
-            - material: CP14Stone
+            - material: CE14Stone
               amount: 5
               doAfter: 2
-            - material: CP14IronBar
+            - material: CE14IronBar
               amount: 2
               doAfter: 2
-            - material: CP14BloodEssence
+            - material: CE14BloodEssence
               amount: 1
               doAfter: 2
-    - node: CP14VampireStoneAltar
-      entity: CP14VampireStoneAltar
+    - node: CE14VampireStoneAltar
+      entity: CE14VampireStoneAltar

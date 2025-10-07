@@ -1,25 +1,25 @@
 - type: constructionGraph
-  id: CP14FenceWooden
+  id: CE14FenceWooden
   start: start
   graph:
     - node: start
       edges:
-        - to: CP14FenceWooden
+        - to: CE14FenceWooden
           completed:
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 2
               doAfter: 2
 
-    - node: CP14FenceWooden
-      entity: CP14FenceWooden
+    - node: CE14FenceWooden
+      entity: CE14FenceWooden
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 2
             - !type:DeleteEntity {}
           steps:
@@ -27,27 +27,27 @@
               doAfter: 2
 
 - type: constructionGraph
-  id: CP14FenceWoodenBirch
+  id: CE14FenceWoodenBirch
   start: start
   graph:
     - node: start
       edges:
-        - to: CP14FenceWoodenBirch
+        - to: CE14FenceWoodenBirch
           completed:
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: CP14BirchWoodenPlanks
+            - material: CE14BirchWoodenPlanks
               amount: 2
               doAfter: 2
 
-    - node: CP14FenceWoodenBirch
-      entity: CP14FenceWoodenBirch
+    - node: CE14FenceWoodenBirch
+      entity: CE14FenceWoodenBirch
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14BirchWoodenPlanks1
+              prototype: CE14BirchWoodenPlanks1
               amount: 2
             - !type:DeleteEntity {}
           steps:
@@ -55,24 +55,24 @@
               doAfter: 2
 
 - type: constructionGraph
-  id: CP14FenceGateWooden
+  id: CE14FenceGateWooden
   start: start
   graph:
     - node: start
       edges:
-        - to: CP14FenceGateWooden
+        - to: CE14FenceGateWooden
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 2
               doAfter: 2
 
-    - node: CP14FenceGateWooden
-      entity: CP14FenceGateWooden
+    - node: CE14FenceGateWooden
+      entity: CE14FenceGateWooden
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14WoodenPlanks1
+              prototype: CE14WoodenPlanks1
               amount: 2
             - !type:DeleteEntity {}
           steps:
@@ -80,24 +80,24 @@
               doAfter: 2
 
 - type: constructionGraph
-  id: CP14FenceGateWoodenBirch
+  id: CE14FenceGateWoodenBirch
   start: start
   graph:
     - node: start
       edges:
-        - to: CP14FenceGateWoodenBirch
+        - to: CE14FenceGateWoodenBirch
           steps:
-            - material: CP14BirchWoodenPlanks
+            - material: CE14BirchWoodenPlanks
               amount: 2
               doAfter: 2
 
-    - node: CP14FenceGateWoodenBirch
-      entity: CP14FenceGateWoodenBirch
+    - node: CE14FenceGateWoodenBirch
+      entity: CE14FenceGateWoodenBirch
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14BirchWoodenPlanks1
+              prototype: CE14BirchWoodenPlanks1
               amount: 2
             - !type:DeleteEntity {}
           steps:

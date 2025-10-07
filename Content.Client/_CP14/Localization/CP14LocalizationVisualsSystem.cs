@@ -3,19 +3,19 @@ using Content.Shared.Localizations;
 using Robust.Client.GameObjects;
 using Robust.Shared.Configuration;
 
-namespace Content.Client._CP14.Localization;
+namespace Content.Client._CE14.Localization;
 
-public sealed class CP14LocalizationVisualsSystem : EntitySystem
+public sealed class CE14LocalizationVisualsSystem : EntitySystem
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<CP14LocalizationVisualsComponent, ComponentInit>(OnCompInit);
+        SubscribeLocalEvent<CE14LocalizationVisualsComponent, ComponentInit>(OnCompInit);
     }
 
-    private void OnCompInit(Entity<CP14LocalizationVisualsComponent> visuals, ref ComponentInit args)
+    private void OnCompInit(Entity<CE14LocalizationVisualsComponent> visuals, ref ComponentInit args)
     {
         if (!TryComp<SpriteComponent>(visuals, out var sprite))
             return;

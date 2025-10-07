@@ -1,33 +1,33 @@
-using Content.Shared._CP14.MagicEnergy.Components;
-using Content.Shared._CP14.Religion.Components;
-using Content.Shared._CP14.Religion.Systems;
+using Content.Shared._CE14.MagicEnergy.Components;
+using Content.Shared._CE14.Religion.Components;
+using Content.Shared._CE14.Religion.Systems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Follower;
 using Robust.Server.GameObjects;
 
-namespace Content.Server._CP14.Religion;
+namespace Content.Server._CE14.Religion;
 
-public sealed partial class CP14ReligionGodSystem
+public sealed partial class CE14ReligionGodSystem
 {
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly FollowerSystem _follower = default!;
     private void InitializeUI()
     {
-        SubscribeLocalEvent<CP14ReligionEntityComponent, OpenBoundInterfaceMessage>(OnOpenInterface);
-        SubscribeLocalEvent<CP14ReligionEntityComponent, CP14ReligionEntityTeleportAttempt>(OnTeleportAttempt);
+        SubscribeLocalEvent<CE14ReligionEntityComponent, OpenBoundInterfaceMessage>(OnOpenInterface);
+        SubscribeLocalEvent<CE14ReligionEntityComponent, CE14ReligionEntityTeleportAttempt>(OnTeleportAttempt);
     }
 
-    private void OnTeleportAttempt(Entity<CP14ReligionEntityComponent> ent, ref CP14ReligionEntityTeleportAttempt args)
+    private void OnTeleportAttempt(Entity<CE14ReligionEntityComponent> ent, ref CE14ReligionEntityTeleportAttempt args)
     {
         var target = GetEntity(args.Entity);
 
         var canTeleport = false;
-        if (TryComp<CP14ReligionAltarComponent>(target, out var altar))
+        if (TryComp<CE14ReligionAltarComponent>(target, out var altar))
         {
             if (altar.Religion == ent.Comp.Religion)
                 canTeleport = true;
         }
-        else if (TryComp<CP14ReligionFollowerComponent>(target, out var follower))
+        else if (TryComp<CE14ReligionFollowerComponent>(target, out var follower))
         {
             if (follower.Religion == ent.Comp.Religion)
                 canTeleport = true;
@@ -39,13 +39,13 @@ public sealed partial class CP14ReligionGodSystem
         _follower.StartFollowingEntity(ent, target);
     }
 
-    private void OnOpenInterface(Entity<CP14ReligionEntityComponent> ent, ref OpenBoundInterfaceMessage args)
+    private void OnOpenInterface(Entity<CE14ReligionEntityComponent> ent, ref OpenBoundInterfaceMessage args)
     {
         if (ent.Comp.Religion is null)
             return;
 
         var altars = new Dictionary<NetEntity, string>();
-        var queryAltars = EntityQueryEnumerator<CP14ReligionAltarComponent, MetaDataComponent>();
+        var queryAltars = EntityQueryEnumerator<CE14ReligionAltarComponent, MetaDataComponent>();
         while (queryAltars.MoveNext(out var uid, out var altar, out var meta))
         {
             if (altar.Religion != ent.Comp.Religion)
@@ -55,7 +55,7 @@ public sealed partial class CP14ReligionGodSystem
         }
 
         var followers = new Dictionary<NetEntity, string>();
-        var queryFollowers = EntityQueryEnumerator<CP14ReligionFollowerComponent, MetaDataComponent>();
+        var queryFollowers = EntityQueryEnumerator<CE14ReligionFollowerComponent, MetaDataComponent>();
         while (queryFollowers.MoveNext(out var uid, out var follower, out var meta))
         {
             if (follower.Religion != ent.Comp.Religion)
@@ -69,11 +69,11 @@ public sealed partial class CP14ReligionGodSystem
         Dirty(ent);
 
         FixedPoint2 manaPercentage = 0f;
-        if (TryComp<CP14MagicEnergyContainerComponent>(ent, out var manaContainerComponent))
+        if (TryComp<CE14MagicEnergyContainerComponent>(ent, out var manaContainerComponent))
         {
             manaPercentage = manaContainerComponent.Energy / manaContainerComponent.MaxEnergy;
         }
 
-        _userInterface.SetUiState(ent.Owner, CP14ReligionEntityUiKey.Key, new CP14ReligionEntityUiState(altars, followers, followerPercentage, manaPercentage));
+        _userInterface.SetUiState(ent.Owner, CE14ReligionEntityUiKey.Key, new CE14ReligionEntityUiState(altars, followers, followerPercentage, manaPercentage));
     }
 }

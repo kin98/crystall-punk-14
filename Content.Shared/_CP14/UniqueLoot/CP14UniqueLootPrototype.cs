@@ -1,13 +1,13 @@
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.UniqueLoot;
+namespace Content.Shared._CE14.UniqueLoot;
 
 /// <summary>
 /// Defines a unique loot that can only be generated a specified number of times per round.
 /// </summary>
 [Prototype("uniqueSpawn")]
-public sealed partial class CP14UniqueLootPrototype : IPrototype
+public sealed partial class CE14UniqueLootPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;

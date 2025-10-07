@@ -1,131 +1,131 @@
 # General
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WorkbenchVampire
-  graph: CP14WorkbenchVampire
+  id: CE14WorkbenchVampire
+  graph: CE14WorkbenchVampire
   startNode: start
-  targetNode: CP14WorkbenchVampire
-  category: cp14-construction-category-vampire
+  targetNode: CE14WorkbenchVampire
+  category: CE14-construction-category-vampire
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-  cP14Restrictions:
+  CE14Restrictions:
     - !type:NeedPrerequisite
       prerequisite: BloodEssenceCreation
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14VampireStoneAltar
-  graph: CP14VampireStoneAltar
+  id: CE14VampireStoneAltar
+  graph: CE14VampireStoneAltar
   startNode: start
-  targetNode: CP14VampireStoneAltar
-  category: cp14-construction-category-vampire
+  targetNode: CE14VampireStoneAltar
+  category: CE14-construction-category-vampire
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-  cP14Restrictions:
+  CE14Restrictions:
     - !type:NeedPrerequisite
       prerequisite: BloodEssenceCreation
 
 # Unnameable
 - type: construction
   crystallPunkAllowed: true
-  id: CP14VampireClanHeartUnnameable
-  graph: CP14VampireClanHeartUnnameable
+  id: CE14VampireClanHeartUnnameable
+  graph: CE14VampireClanHeartUnnameable
   startNode: start
-  targetNode: CP14VampireClanHeartUnnameable
-  category: cp14-construction-category-vampire
+  targetNode: CE14VampireClanHeartUnnameable
+  category: CE14-construction-category-vampire
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-  cP14Restrictions:
+  CE14Restrictions:
     - !type:NeedPrerequisite
       prerequisite: VampireTransmutateUnnameable
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14VampirePortalGlyphUnnameable
-  graph: CP14VampirePortalGlyphUnnameable
+  id: CE14VampirePortalGlyphUnnameable
+  graph: CE14VampirePortalGlyphUnnameable
   startNode: start
-  targetNode: CP14VampirePortalGlyphUnnameable
-  category: cp14-construction-category-vampire
+  targetNode: CE14VampirePortalGlyphUnnameable
+  category: CE14-construction-category-vampire
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-  cP14Restrictions:
+  CE14Restrictions:
     - !type:NeedPrerequisite
       prerequisite: VampireTransmutateUnnameable
 
 # Devourers
 - type: construction
   crystallPunkAllowed: true
-  id: CP14VampireClanHeartDevourers
-  graph: CP14VampireClanHeartDevourers
+  id: CE14VampireClanHeartDevourers
+  graph: CE14VampireClanHeartDevourers
   startNode: start
-  targetNode: CP14VampireClanHeartDevourers
-  category: cp14-construction-category-vampire
+  targetNode: CE14VampireClanHeartDevourers
+  category: CE14-construction-category-vampire
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-  cP14Restrictions:
+  CE14Restrictions:
     - !type:NeedPrerequisite
       prerequisite: VampireTransmutateDevourers
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14VampirePortalGlyphDevourers
-  graph: CP14VampirePortalGlyphDevourers
+  id: CE14VampirePortalGlyphDevourers
+  graph: CE14VampirePortalGlyphDevourers
   startNode: start
-  targetNode: CP14VampirePortalGlyphDevourers
-  category: cp14-construction-category-vampire
+  targetNode: CE14VampirePortalGlyphDevourers
+  category: CE14-construction-category-vampire
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-  cP14Restrictions:
+  CE14Restrictions:
     - !type:NeedPrerequisite
       prerequisite: VampireTransmutateDevourers
 
 # Night childrens
 - type: construction
   crystallPunkAllowed: true
-  id: CP14VampireClanHeartNightChildren
-  graph: CP14VampireClanHeartNightChildren
+  id: CE14VampireClanHeartNightChildren
+  graph: CE14VampireClanHeartNightChildren
   startNode: start
-  targetNode: CP14VampireClanHeartNightChildren
-  category: cp14-construction-category-vampire
+  targetNode: CE14VampireClanHeartNightChildren
+  category: CE14-construction-category-vampire
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-  cP14Restrictions:
+  CE14Restrictions:
     - !type:NeedPrerequisite
       prerequisite: VampireTransmutateNightChildrens
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14VampirePortalGlyphNightChildrens
-  graph: CP14VampirePortalGlyphNightChildrens
+  id: CE14VampirePortalGlyphNightChildrens
+  graph: CE14VampirePortalGlyphNightChildrens
   startNode: start
-  targetNode: CP14VampirePortalGlyphNightChildrens
-  category: cp14-construction-category-vampire
+  targetNode: CE14VampirePortalGlyphNightChildrens
+  category: CE14-construction-category-vampire
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-  cP14Restrictions:
+  CE14Restrictions:
     - !type:NeedPrerequisite
       prerequisite: VampireTransmutateNightChildrens

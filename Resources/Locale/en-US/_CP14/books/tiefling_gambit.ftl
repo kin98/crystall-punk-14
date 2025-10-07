@@ -1,4 +1,4 @@
-cp14-book-text-tiefling-gambit = [head=1]Tiefling's Gambit[/head]
+CE14-book-text-tiefling-gambit = [head=1]Tiefling's Gambit[/head]
     Recommended for 3+ players
     
     

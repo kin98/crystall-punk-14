@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
-using Content.Server._CP14.Respawn;
+using Content.Server._CE14.Respawn;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
 using Content.Server.GameTicking.Events;
@@ -213,12 +213,12 @@ namespace Content.Server.GameTicking
                 character = HumanoidCharacterProfile.RandomWithSpecies(speciesId);
             }
 
-            //CP14 blocking rejoining to game with same character
-            var CP14Ev = new CP14PlayerSpawnAttemptEvent(player, character, jobId, lateJoin, station);
-            RaiseLocalEvent(CP14Ev);
-            if (CP14Ev.Cancelled)
+            //CE14 blocking rejoining to game with same character
+            var CE14Ev = new CE14PlayerSpawnAttemptEvent(player, character, jobId, lateJoin, station);
+            RaiseLocalEvent(CE14Ev);
+            if (CE14Ev.Cancelled)
                 return;
-            //CP14 end
+            //CE14 end
 
             // We raise this event to allow other systems to handle spawning this player themselves. (e.g. late-join wizard, etc)
             var bev = new PlayerBeforeSpawnEvent(player, character, jobId, lateJoin, station);
@@ -284,7 +284,7 @@ namespace Content.Server.GameTicking
             var jobName = _jobs.MindTryGetJobName(newMind);
             _admin.UpdatePlayerList(player);
 
-            if (lateJoin && !silent && false) //CP14 disable arrival snnouncement
+            if (lateJoin && !silent && false) //CE14 disable arrival snnouncement
             {
                 if (jobPrototype.JoinNotifyCrew)
                 {

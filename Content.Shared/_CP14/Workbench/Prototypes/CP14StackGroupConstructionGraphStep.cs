@@ -11,13 +11,13 @@ using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._CP14.Workbench.Prototypes;
+namespace Content.Shared._CE14.Workbench.Prototypes;
 
 [DataDefinition]
-public sealed partial class CP14StackGroupConstructionGraphStep : EntityInsertConstructionGraphStep
+public sealed partial class CE14StackGroupConstructionGraphStep : EntityInsertConstructionGraphStep
 {
     [DataField]
-    public ProtoId<CP14StackGroupPrototype> StackGroup = default!;
+    public ProtoId<CE14StackGroupPrototype> StackGroup = default!;
 
     [DataField]
     public int Amount = 1;

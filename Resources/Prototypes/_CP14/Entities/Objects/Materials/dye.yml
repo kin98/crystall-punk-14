@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BaseDye
+  id: CE14BaseDye
   parent: BaseItem
   abstract: true
   name: dye
@@ -9,13 +9,13 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _CP14/Objects/Materials/dye.rsi
+    sprite: _CE14/Objects/Materials/dye.rsi
   - type: StaticPrice
     price: 6
 
 - type: entity
-  id: CP14DyeRed
-  parent: CP14BaseDye
+  id: CE14DyeRed
+  parent: CE14BaseDye
   name: red dye
   components:
   - type: Sprite
@@ -27,8 +27,8 @@
     price: 4
 
 - type: entity
-  id: CP14DyeYellow
-  parent: CP14BaseDye
+  id: CE14DyeYellow
+  parent: CE14BaseDye
   name: yellow dye
   components:
   - type: Sprite
@@ -40,8 +40,8 @@
     price: 3.5
 
 - type: entity
-  id: CP14DyeBlue
-  parent: CP14BaseDye
+  id: CE14DyeBlue
+  parent: CE14BaseDye
   name: blue dye
   components:
   - type: Sprite
@@ -53,8 +53,8 @@
     price: 8.6
 
 - type: entity
-  id: CP14DyeGreen
-  parent: CP14BaseDye
+  id: CE14DyeGreen
+  parent: CE14BaseDye
   name: green dye
   components:
   - type: Sprite
@@ -64,8 +64,8 @@
       color: "#85903e"
 
 - type: entity
-  id: CP14DyePurple
-  parent: CP14BaseDye
+  id: CE14DyePurple
+  parent: CE14BaseDye
   name: purple dye
   components:
   - type: Sprite
@@ -77,8 +77,8 @@
     price: 4.4
 
 - type: entity
-  id: CP14DyeBlack
-  parent: CP14BaseDye
+  id: CE14DyeBlack
+  parent: CE14BaseDye
   name: black dye
   components:
   - type: Sprite

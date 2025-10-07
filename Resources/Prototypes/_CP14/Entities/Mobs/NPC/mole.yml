@@ -1,13 +1,13 @@
 - type: entity
-  id: CP14MobMonsterMole
-  parent: CP14SimpleMobBase
+  id: CE14MobMonsterMole
+  parent: CE14SimpleMobBase
   name: predatory mole
   description: Hunts in the dark and loves the taste of meat and blood in its mouth.
   categories: [ ForkFiltered ]
   components:
   - type: HTN
     rootTask:
-      task: CP14MonsterCompound
+      task: CE14MonsterCompound
     blackboard:
       NavSmash: !type:Bool
         true
@@ -17,14 +17,14 @@
         12
   - type: NpcFactionMember
     factions:
-    - CP14Monster
+    - CE14Monster
   - type: NPCUseActionOnTarget
-    actionId: CP14ActionMoleSpellSubterraneanLeap
+    actionId: CE14ActionMoleSpellSubterraneanLeap
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _CP14/Mobs/Monster/mole.rsi
+      sprite: _CE14/Mobs/Monster/mole.rsi
       state: live
   - type: Fixtures
     fixtures:
@@ -71,44 +71,44 @@
         Base: dead
   - type: Butcherable
     spawned:
-    - id: CP14FoodMeatMonster
+    - id: CE14FoodMeatMonster
       amount: 3
-    - id: CP14FoodMeatPig
+    - id: CE14FoodMeatPig
       amount: 1
       prob: 0.3
-    - id: CP14FoodMeatMonsterLeg
+    - id: CE14FoodMeatMonsterLeg
       amount: 1
       prob: 0.6
-    - id: CP14RuggedLeather1
+    - id: CE14RuggedLeather1
       amount: 1
       prob: 0.2
-    - id: CP14Leather1
+    - id: CE14Leather1
       amount: 1
       maxAmount: 4
-    - id: CP14ScrapLeather
+    - id: CE14ScrapLeather
       amount: 1
       maxAmount: 2
       prob: 0.5
-    - id: CP14CheapFur
+    - id: CE14CheapFur
       amount: 1
       prob: 0.25
-    - id: CP14Bone1
+    - id: CE14Bone1
       amount: 2
       maxAmount: 3
   - type: Bloodstream
     bloodMaxVolume: 200
-    bloodReagent: CP14BloodMonster
+    bloodReagent: CE14BloodMonster
   - type: Grammar
     attributes:
       gender: epicene
-  - type: CP14MagicEnergyContainer
-    magicAlert: CP14MagicEnergy
+  - type: CE14MagicEnergyContainer
+    magicAlert: CE14MagicEnergy
     maxEnergy: 100
     energy: 100
-  - type: CP14MagicEnergyDraw
+  - type: CE14MagicEnergyDraw
     energy: 2
     delay: 4
   - type: Tag
     tags:
       - FootstepSound
-      - CP14Mosquito
+      - CE14Mosquito

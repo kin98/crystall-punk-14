@@ -1,16 +1,16 @@
-using Content.Shared._CP14.MagicRitual.Prototypes;
+using Content.Shared._CE14.MagicRitual.Prototypes;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.MagicEssence;
+namespace Content.Shared._CE14.MagicEssence;
 
 /// <summary>
 /// Reflects the amount of essence stored in this item. The item can be destroyed to release the essence from it.
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-[Access(typeof(CP14MagicEssenceSystem))]
-public sealed partial class CP14MagicEssenceContainerComponent : Component
+[Access(typeof(CE14MagicEssenceSystem))]
+public sealed partial class CE14MagicEssenceContainerComponent : Component
 {
     [DataField]
-    public Dictionary<ProtoId<CP14MagicTypePrototype>, int> Essences = new();
+    public Dictionary<ProtoId<CE14MagicTypePrototype>, int> Essences = new();
 }

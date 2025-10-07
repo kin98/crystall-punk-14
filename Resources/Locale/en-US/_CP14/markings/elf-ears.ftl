@@ -1,4 +1,4 @@
-marking-CP14ElfEars = Elf benchmark
-marking-CP14ElfEars2 = Lop-eared
-marking-CP14ElfEars3 = Low landing
-marking-CP14ElfEars3Broken = Lobes
+marking-CE14ElfEars = Elf benchmark
+marking-CE14ElfEars2 = Lop-eared
+marking-CE14ElfEars3 = Low landing
+marking-CE14ElfEars3Broken = Lobes

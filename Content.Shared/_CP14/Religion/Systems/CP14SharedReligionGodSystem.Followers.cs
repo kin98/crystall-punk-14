@@ -1,6 +1,6 @@
-using Content.Shared._CP14.MagicSpell.Spells;
-using Content.Shared._CP14.Religion.Components;
-using Content.Shared._CP14.Religion.Prototypes;
+using Content.Shared._CE14.MagicSpell.Spells;
+using Content.Shared._CE14.Religion.Components;
+using Content.Shared._CE14.Religion.Prototypes;
 using Content.Shared.Actions;
 using Content.Shared.Alert;
 using Content.Shared.Follower;
@@ -9,9 +9,9 @@ using Content.Shared.Mobs;
 using Content.Shared.Verbs;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Religion.Systems;
+namespace Content.Shared._CE14.Religion.Systems;
 
-public abstract partial class CP14SharedReligionGodSystem
+public abstract partial class CE14SharedReligionGodSystem
 {
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
@@ -19,28 +19,28 @@ public abstract partial class CP14SharedReligionGodSystem
     [Dependency] private readonly FollowerSystem _follower = default!;
 
     [ValidatePrototypeId<AlertPrototype>]
-    public const string AlertProto = "CP14DivineOffer";
+    public const string AlertProto = "CE14DivineOffer";
 
     private void InitializeFollowers()
     {
-        SubscribeLocalEvent<CP14ReligionPendingFollowerComponent, MapInitEvent>(OnPendingFollowerInit);
-        SubscribeLocalEvent<CP14ReligionPendingFollowerComponent, ComponentShutdown>(OnPendingFollowerShutdown);
-        SubscribeLocalEvent<CP14ReligionPendingFollowerComponent, CP14BreakDivineOfferEvent>(OnBreakDivineOffer);
-        SubscribeLocalEvent<CP14ReligionPendingFollowerComponent, CP14GodTouchEvent>(OnGodTouch);
+        SubscribeLocalEvent<CE14ReligionPendingFollowerComponent, MapInitEvent>(OnPendingFollowerInit);
+        SubscribeLocalEvent<CE14ReligionPendingFollowerComponent, ComponentShutdown>(OnPendingFollowerShutdown);
+        SubscribeLocalEvent<CE14ReligionPendingFollowerComponent, CE14BreakDivineOfferEvent>(OnBreakDivineOffer);
+        SubscribeLocalEvent<CE14ReligionPendingFollowerComponent, CE14GodTouchEvent>(OnGodTouch);
 
-        SubscribeLocalEvent<CP14ReligionAltarComponent, CP14AltarOfferDoAfter>(OnOfferDoAfter);
+        SubscribeLocalEvent<CE14ReligionAltarComponent, CE14AltarOfferDoAfter>(OnOfferDoAfter);
 
-        SubscribeLocalEvent<CP14ReligionFollowerComponent, CP14RenounceFromGodEvent>(OnRenounceFromGod);
-        SubscribeLocalEvent<CP14ReligionFollowerComponent, GetVerbsEvent<AlternativeVerb>>(OnGetAltVerbs);
-        SubscribeLocalEvent<CP14ReligionFollowerComponent, MobStateChangedEvent>(OnFollowerStateChange);
+        SubscribeLocalEvent<CE14ReligionFollowerComponent, CE14RenounceFromGodEvent>(OnRenounceFromGod);
+        SubscribeLocalEvent<CE14ReligionFollowerComponent, GetVerbsEvent<AlternativeVerb>>(OnGetAltVerbs);
+        SubscribeLocalEvent<CE14ReligionFollowerComponent, MobStateChangedEvent>(OnFollowerStateChange);
     }
 
-    private void OnFollowerStateChange(Entity<CP14ReligionFollowerComponent> ent, ref MobStateChangedEvent args)
+    private void OnFollowerStateChange(Entity<CE14ReligionFollowerComponent> ent, ref MobStateChangedEvent args)
     {
         if (ent.Comp.Religion is null)
             return;
 
-        EnsureComp<CP14ReligionObserverComponent>(ent, out var observer);
+        EnsureComp<CE14ReligionObserverComponent>(ent, out var observer);
 
         if (!_proto.TryIndex(observer.Religion, out var indexedReligion))
             return;
@@ -53,12 +53,12 @@ public abstract partial class CP14SharedReligionGodSystem
                 break;
 
             case MobState.Critical:
-                SendMessageToGods(ent.Comp.Religion.Value, Loc.GetString("cp14-critical-follower-message", ("name", MetaData(ent).EntityName)), ent);
+                SendMessageToGods(ent.Comp.Religion.Value, Loc.GetString("CE14-critical-follower-message", ("name", MetaData(ent).EntityName)), ent);
                 observer.Radius = baseObservation * 0.25f;
                 break;
 
             case MobState.Dead:
-                SendMessageToGods(ent.Comp.Religion.Value, Loc.GetString("cp14-dead-follower-message", ("name", MetaData(ent).EntityName)), ent);
+                SendMessageToGods(ent.Comp.Religion.Value, Loc.GetString("CE14-dead-follower-message", ("name", MetaData(ent).EntityName)), ent);
                 observer.Radius = 0f;
                 break;
         }
@@ -66,9 +66,9 @@ public abstract partial class CP14SharedReligionGodSystem
         Dirty(ent.Owner, observer);
     }
 
-    private void OnGetAltVerbs(EntityUid uid, CP14ReligionFollowerComponent component, GetVerbsEvent<AlternativeVerb> args)
+    private void OnGetAltVerbs(EntityUid uid, CE14ReligionFollowerComponent component, GetVerbsEvent<AlternativeVerb> args)
     {
-        if (!TryComp<CP14ReligionEntityComponent>(args.User, out var god))
+        if (!TryComp<CE14ReligionEntityComponent>(args.User, out var god))
             return;
 
         if (god.Religion != component.Religion)
@@ -84,12 +84,12 @@ public abstract partial class CP14SharedReligionGodSystem
         });
     }
 
-    private void OnRenounceFromGod(Entity<CP14ReligionFollowerComponent> ent, ref CP14RenounceFromGodEvent args)
+    private void OnRenounceFromGod(Entity<CE14ReligionFollowerComponent> ent, ref CE14RenounceFromGodEvent args)
     {
         ToDisbelieve(ent);
     }
 
-    private void OnOfferDoAfter(Entity<CP14ReligionAltarComponent> ent, ref CP14AltarOfferDoAfter args)
+    private void OnOfferDoAfter(Entity<CE14ReligionAltarComponent> ent, ref CE14AltarOfferDoAfter args)
     {
         if (args.Handled || args.Cancelled)
             return;
@@ -102,7 +102,7 @@ public abstract partial class CP14SharedReligionGodSystem
         args.Handled = true;
     }
 
-    private void OnGodTouch(Entity<CP14ReligionPendingFollowerComponent> ent, ref CP14GodTouchEvent args)
+    private void OnGodTouch(Entity<CE14ReligionPendingFollowerComponent> ent, ref CE14GodTouchEvent args)
     {
         if (args.Religion != ent.Comp.Religion)
             return;
@@ -110,32 +110,32 @@ public abstract partial class CP14SharedReligionGodSystem
         TryToBelieve(ent);
     }
 
-    private void OnBreakDivineOffer(Entity<CP14ReligionPendingFollowerComponent> ent, ref CP14BreakDivineOfferEvent args)
+    private void OnBreakDivineOffer(Entity<CE14ReligionPendingFollowerComponent> ent, ref CE14BreakDivineOfferEvent args)
     {
-        RemCompDeferred<CP14ReligionPendingFollowerComponent>(ent);
+        RemCompDeferred<CE14ReligionPendingFollowerComponent>(ent);
 
         if (ent.Comp.Religion is null)
             return;
 
-        SendMessageToGods(ent.Comp.Religion.Value, Loc.GetString("cp14-unoffer-soul-god-message", ("name", MetaData(ent).EntityName)), ent);
+        SendMessageToGods(ent.Comp.Religion.Value, Loc.GetString("CE14-unoffer-soul-god-message", ("name", MetaData(ent).EntityName)), ent);
     }
 
-    private void OnPendingFollowerInit(Entity<CP14ReligionPendingFollowerComponent> ent, ref MapInitEvent args)
+    private void OnPendingFollowerInit(Entity<CE14ReligionPendingFollowerComponent> ent, ref MapInitEvent args)
     {
         _alerts.ShowAlert(ent.Owner, AlertProto);
     }
 
-    private void OnPendingFollowerShutdown(Entity<CP14ReligionPendingFollowerComponent> ent, ref ComponentShutdown args)
+    private void OnPendingFollowerShutdown(Entity<CE14ReligionPendingFollowerComponent> ent, ref ComponentShutdown args)
     {
         _alerts.ClearAlert(ent.Owner, AlertProto);
     }
 
-    private bool CanBecomeFollower(EntityUid target, ProtoId<CP14ReligionPrototype> religion)
+    private bool CanBecomeFollower(EntityUid target, ProtoId<CE14ReligionPrototype> religion)
     {
-        if (HasComp<CP14ReligionEntityComponent>(target))
+        if (HasComp<CE14ReligionEntityComponent>(target))
             return false;
 
-        EnsureComp<CP14ReligionFollowerComponent>(target, out var follower);
+        EnsureComp<CE14ReligionFollowerComponent>(target, out var follower);
 
         if (follower.Religion is not null)
             return false;
@@ -143,18 +143,18 @@ public abstract partial class CP14SharedReligionGodSystem
         return !follower.RejectedReligions.Contains(religion);
     }
 
-    private void TryAddPendingFollower(EntityUid target, ProtoId<CP14ReligionPrototype> religion)
+    private void TryAddPendingFollower(EntityUid target, ProtoId<CE14ReligionPrototype> religion)
     {
         if (!CanBecomeFollower(target, religion))
             return;
 
-        EnsureComp<CP14ReligionPendingFollowerComponent>(target, out var pendingFollower);
+        EnsureComp<CE14ReligionPendingFollowerComponent>(target, out var pendingFollower);
         pendingFollower.Religion = religion;
 
-        SendMessageToGods(religion, Loc.GetString("cp14-offer-soul-god-message", ("name", MetaData(target).EntityName)), target);
+        SendMessageToGods(religion, Loc.GetString("CE14-offer-soul-god-message", ("name", MetaData(target).EntityName)), target);
     }
 
-    private bool TryToBelieve(Entity<CP14ReligionPendingFollowerComponent> pending)
+    private bool TryToBelieve(Entity<CE14ReligionPendingFollowerComponent> pending)
     {
         if (pending.Comp.Religion is null)
             return false;
@@ -165,8 +165,8 @@ public abstract partial class CP14SharedReligionGodSystem
         if (!CanBecomeFollower(pending, pending.Comp.Religion.Value))
             return false;
 
-        EnsureComp<CP14ReligionFollowerComponent>(pending, out var follower);
-        EnsureComp<CP14ReligionObserverComponent>(pending, out var observer);
+        EnsureComp<CE14ReligionFollowerComponent>(pending, out var follower);
+        EnsureComp<CE14ReligionObserverComponent>(pending, out var observer);
         observer.Religion = indexedReligion;
         observer.Radius = indexedReligion.FollowerObservationRadius;
 
@@ -175,11 +175,11 @@ public abstract partial class CP14SharedReligionGodSystem
         Dirty(pending, follower);
         Dirty(pending, observer);
 
-        var ev = new CP14ReligionChangedEvent(oldReligion, pending.Comp.Religion);
+        var ev = new CE14ReligionChangedEvent(oldReligion, pending.Comp.Religion);
         RaiseLocalEvent(pending, ev);
 
-        RemCompDeferred<CP14ReligionPendingFollowerComponent>(pending);
-        SendMessageToGods(pending.Comp.Religion.Value, Loc.GetString("cp14-become-follower-message", ("name", MetaData(pending).EntityName)), pending);
+        RemCompDeferred<CE14ReligionPendingFollowerComponent>(pending);
+        SendMessageToGods(pending.Comp.Religion.Value, Loc.GetString("CE14-become-follower-message", ("name", MetaData(pending).EntityName)), pending);
 
         _actions.AddAction(pending, ref follower.RenounceAction, follower.RenounceActionProto);
         _actions.AddAction(pending, ref follower.AppealAction, follower.AppealToGofProto);
@@ -188,22 +188,22 @@ public abstract partial class CP14SharedReligionGodSystem
 
     public void ToDisbelieve(EntityUid target)
     {
-        if (!TryComp<CP14ReligionFollowerComponent>(target, out var follower))
+        if (!TryComp<CE14ReligionFollowerComponent>(target, out var follower))
             return;
 
         if (follower.Religion is null)
             return;
 
-        RemCompDeferred<CP14ReligionObserverComponent>(target);
+        RemCompDeferred<CE14ReligionObserverComponent>(target);
 
-        SendMessageToGods(follower.Religion.Value, Loc.GetString("cp14-remove-follower-message", ("name", MetaData(target).EntityName)), target);
+        SendMessageToGods(follower.Religion.Value, Loc.GetString("CE14-remove-follower-message", ("name", MetaData(target).EntityName)), target);
 
         var oldReligion = follower.Religion;
         follower.Religion = null;
         if (oldReligion is not null)
             follower.RejectedReligions.Add(oldReligion.Value);
 
-        var ev = new CP14ReligionChangedEvent(oldReligion, null);
+        var ev = new CE14ReligionChangedEvent(oldReligion, null);
         RaiseLocalEvent(target, ev);
 
         Dirty(target, follower);
@@ -213,6 +213,6 @@ public abstract partial class CP14SharedReligionGodSystem
     }
 }
 
-public sealed partial class CP14BreakDivineOfferEvent : BaseAlertEvent;
+public sealed partial class CE14BreakDivineOfferEvent : BaseAlertEvent;
 
-public sealed partial class CP14RenounceFromGodEvent : InstantActionEvent;
+public sealed partial class CE14RenounceFromGodEvent : InstantActionEvent;

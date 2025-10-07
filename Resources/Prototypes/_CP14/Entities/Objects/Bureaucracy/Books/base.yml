@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14BookBase
+  id: CE14BookBase
   name: book
   description: A hardcover book.
   abstract: true
@@ -7,7 +7,7 @@
   parent: BaseItem
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Bureaucracy/books.rsi
+    sprite: _CE14/Objects/Bureaucracy/books.rsi
     layers:
     - state: paper
     - state: cover_base
@@ -35,9 +35,9 @@
         Blunt: 1
 
 - type: entity
-  id: CP14BookWriteableBase
+  id: CE14BookWriteableBase
   abstract: true
-  parent: CP14BookBase
+  parent: CE14BookBase
   components:
   - type: Paper
     contentSize: 12000
@@ -54,10 +54,10 @@
     contentMargin: 20.0, 20.0, 20.0, 20.0
 
 - type: entity
-  id: CP14GuidebookBase
+  id: CE14GuidebookBase
   abstract: true
   suffix: Guidebook
-  parent: CP14BookBase
+  parent: CE14BookBase
   components:
   - type: GuideHelp
     openOnActivation: true

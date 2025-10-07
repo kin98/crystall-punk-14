@@ -3,144 +3,144 @@
 # The result is always 75% empty solution
 
 - type: reaction
-  id: CP14WaterBrewingDamageBrute
+  id: CE14WaterBrewingDamageBrute
   minTemp: 500
   priority: 1
   reactants:
-    CP14EssenceLife:
+    CE14EssenceLife:
       amount: 2
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
     Water:
       amount: 1
   products:
-    CP14SideEffectEmpty: 2
-    CP14SideEffectEmoteCough: 1
-    CP14DamageEffectDamageBrute: 1
+    CE14SideEffectEmpty: 2
+    CE14SideEffectEmoteCough: 1
+    CE14DamageEffectDamageBrute: 1
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14WaterBrewingDamageHeat
+  id: CE14WaterBrewingDamageHeat
   minTemp: 500
   priority: 2
   reactants:
-    CP14EssenceLife:
+    CE14EssenceLife:
       amount: 1
-    CP14EssenceFire:
+    CE14EssenceFire:
       amount: 1
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
     Water:
       amount: 1
   products:
-    CP14SideEffectEmpty: 2
-    CP14SideEffectEmoteCough: 1
-    CP14DamageEffectDamageHeat: 1
+    CE14SideEffectEmpty: 2
+    CE14SideEffectEmoteCough: 1
+    CE14DamageEffectDamageHeat: 1
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14WaterBrewingDamageCold
+  id: CE14WaterBrewingDamageCold
   minTemp: 500
   priority: 2
   reactants:
-    CP14EssenceLife:
+    CE14EssenceLife:
       amount: 1
-    CP14EssenceFrost:
+    CE14EssenceFrost:
       amount: 1
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
     Water:
       amount: 1
   products:
-    CP14SideEffectEmpty: 2
-    CP14SideEffectEmoteCough: 1
-    CP14DamageEffectDamageCold: 1
+    CE14SideEffectEmpty: 2
+    CE14SideEffectEmoteCough: 1
+    CE14DamageEffectDamageCold: 1
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14WaterBrewingDamagePoison
+  id: CE14WaterBrewingDamagePoison
   minTemp: 500
   priority: 2
   reactants:
-    CP14EssenceLife:
+    CE14EssenceLife:
       amount: 1
-    CP14EssencePoison:
+    CE14EssencePoison:
       amount: 1
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
     Water:
       amount: 1
   products:
-    CP14SideEffectEmpty: 2
-    CP14SideEffectEmoteCough: 1
-    CP14DamageEffectDamagePoison: 1
+    CE14SideEffectEmpty: 2
+    CE14SideEffectEmoteCough: 1
+    CE14DamageEffectDamagePoison: 1
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14WaterBrewingDamageAirloss
+  id: CE14WaterBrewingDamageAirloss
   minTemp: 500
   priority: 2
   reactants:
-    CP14EssenceLife:
+    CE14EssenceLife:
       amount: 1
-    CP14EssenceAir:
+    CE14EssenceAir:
       amount: 1
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
     Water:
       amount: 1
   products:
-    CP14SideEffectEmpty: 2
-    CP14SideEffectEmoteCough: 1
-    CP14DamageEffectDamageAirloss: 1
+    CE14SideEffectEmpty: 2
+    CE14SideEffectEmoteCough: 1
+    CE14DamageEffectDamageAirloss: 1
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14WaterBrewingBloodAbsorption
+  id: CE14WaterBrewingBloodAbsorption
   minTemp: 500
   priority: 2
   reactants:
-    CP14EssenceLife:
+    CE14EssenceLife:
       amount: 1
-    CP14EssenceWater:
+    CE14EssenceWater:
       amount: 1
-    CP14EssenceChaos:
+    CE14EssenceChaos:
       amount: 1
     Water:
       amount: 1
   products:
-    CP14SideEffectEmpty: 2
-    CP14SideEffectRainbow: 1
-    CP14DamageEffectBloodAbsorption: 1
+    CE14SideEffectEmpty: 2
+    CE14SideEffectRainbow: 1
+    CE14DamageEffectBloodAbsorption: 1
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150
 
 - type: reaction
-  id: CP14WaterBrewingDamageManaDepletion
+  id: CE14WaterBrewingDamageManaDepletion
   minTemp: 500
   priority: 1
   reactants:
-    CP14EssenceEnergia:
+    CE14EssenceEnergia:
       amount: 2
-    CP14EssencePoison:
+    CE14EssencePoison:
       amount: 1
     Water:
       amount: 1
   products:
-    CP14SideEffectEmpty: 2
-    CP14SideEffectDrunk: 1
-    CP14DamageEffectDamageManaDepletion: 1
+    CE14SideEffectEmpty: 2
+    CE14SideEffectDrunk: 1
+    CE14DamageEffectDamageManaDepletion: 1
   effects:
-  - !type:CP14AffectSolutionTemperature
+  - !type:CE14AffectSolutionTemperature
     addTemperature: -150

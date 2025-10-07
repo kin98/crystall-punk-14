@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14OreCopper1
+  id: CE14OreCopper1
   parent: BaseItem
   name: copper ore
   description: A piece of pale, heavy copper.
@@ -8,13 +8,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/copper_ore.rsi
+    sprite: _CE14/Objects/Materials/copper_ore.rsi
     layers:
       - state: ore1
         map: ["base"]
   - type: Appearance
   - type: Stack
-    stackType: CP14OreCopper
+    stackType: CE14OreCopper
     count: 1
     baseLayer: base
     layerStates:
@@ -24,19 +24,19 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Copper: 2
+      CE14Copper: 2
 
 - type: entity
-  id: CP14OreCopper5
-  parent: CP14OreCopper1
+  id: CE14OreCopper5
+  parent: CE14OreCopper1
   suffix: 5
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  id: CP14OreCopper10
-  parent: CP14OreCopper1
+  id: CE14OreCopper10
+  parent: CE14OreCopper1
   suffix: 10
   components:
   - type: Stack
@@ -45,7 +45,7 @@
 
 
 - type: entity
-  id: CP14OreIron1
+  id: CE14OreIron1
   parent: BaseItem
   name: iron ore
   description: A piece of cold, heavy iron.
@@ -54,13 +54,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/iron_ore.rsi
+    sprite: _CE14/Objects/Materials/iron_ore.rsi
     layers:
       - state: ore1
         map: ["base"]
   - type: Appearance
   - type: Stack
-    stackType: CP14OreIron
+    stackType: CE14OreIron
     count: 1
     baseLayer: base
     layerStates:
@@ -70,19 +70,19 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Iron: 2
+      CE14Iron: 2
 
 - type: entity
-  id: CP14OreIron5
-  parent: CP14OreIron1
+  id: CE14OreIron5
+  parent: CE14OreIron1
   suffix: 5
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  id: CP14OreIron10
-  parent: CP14OreIron1
+  id: CE14OreIron10
+  parent: CE14OreIron1
   suffix: 10
   components:
   - type: Stack
@@ -91,7 +91,7 @@
 
 
 - type: entity
-  id: CP14OreGold1
+  id: CE14OreGold1
   parent: BaseItem
   name: gold ore
   description: A piece of soft, pure gold.
@@ -100,13 +100,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/gold_ore.rsi
+    sprite: _CE14/Objects/Materials/gold_ore.rsi
     layers:
       - state: ore1
         map: ["base"]
   - type: Appearance
   - type: Stack
-    stackType: CP14OreGold
+    stackType: CE14OreGold
     count: 1
     baseLayer: base
     layerStates:
@@ -116,11 +116,11 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Gold: 2
+      CE14Gold: 2
 
 - type: entity
-  id: CP14OreGold5
-  parent: CP14OreGold1
+  id: CE14OreGold5
+  parent: CE14OreGold1
   categories: [ DoNotMap ]
   suffix: 5
   components:
@@ -128,8 +128,8 @@
     count: 5
 
 - type: entity
-  id: CP14OreGold10
-  parent: CP14OreGold1
+  id: CE14OreGold10
+  parent: CE14OreGold1
   categories: [ DoNotMap ]
   suffix: 10
   components:
@@ -139,7 +139,7 @@
 
 
 - type: entity
-  id: CP14OreMithril1
+  id: CE14OreMithril1
   parent: BaseItem
   name: mithril ore
   description: A piece of enchanted, pure mithril.
@@ -148,13 +148,13 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/mithril_ore.rsi
+    sprite: _CE14/Objects/Materials/mithril_ore.rsi
     layers:
       - state: ore1
         map: ["base"]
   - type: Appearance
   - type: Stack
-    stackType: CP14OreMithril
+    stackType: CE14OreMithril
     count: 1
     baseLayer: base
     layerStates:
@@ -164,11 +164,11 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14Mithril: 2
+      CE14Mithril: 2
 
 - type: entity
-  id: CP14OreMithril5
-  parent: CP14OreMithril1
+  id: CE14OreMithril5
+  parent: CE14OreMithril1
   categories: [ DoNotMap ]
   suffix: 5
   components:
@@ -176,8 +176,8 @@
     count: 5
 
 - type: entity
-  id: CP14OreMithril10
-  parent: CP14OreMithril1
+  id: CE14OreMithril10
+  parent: CE14OreMithril1
   categories: [ DoNotMap ]
   suffix: 10
   components:
@@ -185,7 +185,7 @@
     count: 10
 
 - type: entity
-  id: CP14OreCoal1
+  id: CE14OreCoal1
   parent: BaseItem
   name: coal
   description: This is coal! It burns very well!
@@ -194,25 +194,25 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: _CP14/Objects/Materials/coal_ore.rsi
+    sprite: _CE14/Objects/Materials/coal_ore.rsi
     layers:
       - state: ore1
         map: ["base"]
   - type: Tag
     tags:
-    - CP14FireplaceFuel
+    - CE14FireplaceFuel
   - type: Flammable
     fireSpread: false
     canResistFire: false
     alwaysCombustible: true
     canExtinguish: true
-    cP14FireplaceFuel: 30
+    CE14FireplaceFuel: 30
     damage:
       types:
         Heat: 2
   - type: Appearance
   - type: Stack
-    stackType: CP14OreCoal
+    stackType: CE14OreCoal
     count: 1
     baseLayer: base
     layerStates:
@@ -222,19 +222,19 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      CP14OreCoal: 2
+      CE14OreCoal: 2
 
 - type: entity
-  id: CP14OreCoal5
-  parent: CP14OreCoal1
+  id: CE14OreCoal5
+  parent: CE14OreCoal1
   suffix: 5
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  id: CP14OreCoal10
-  parent: CP14OreCoal1
+  id: CE14OreCoal10
+  parent: CE14OreCoal1
   suffix: 10
   components:
   - type: Stack

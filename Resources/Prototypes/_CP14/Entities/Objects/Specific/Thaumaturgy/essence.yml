@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  id: CP14BaseEssence
+  id: CE14BaseEssence
   categories: [ ForkFiltered ]
   name: magic essence
   description: Particles of magical energy polarised into a particular type of magic. Will be gone soon, so try to collect them as soon as possible!
@@ -9,7 +9,7 @@
   - type: Sprite
     noRot: true
     drawdepth: Mobs
-    sprite: _CP14/Objects/Specific/Thaumaturgy/essence.rsi
+    sprite: _CE14/Objects/Specific/Thaumaturgy/essence.rsi
     layers:
     - state: small
       shader: unshaded
@@ -30,7 +30,7 @@
           bounds: "-0.25,-0.25,0.25,0.25"
         density: 20
         mask:
-        #- ItemMask # CP14 swap ItemMask to Impassable only
+        #- ItemMask # CE14 swap ItemMask to Impassable only
         - Impassable
         restitution: 0.3  # fite me
         friction: 0.2
@@ -39,14 +39,14 @@
     minSpeed: 0.5
     maxSpeed: 1
     chasingComponent:
-    - type: CP14MagicEssenceAttractor
-  - type: CP14MagicEssence
+    - type: CE14MagicEssenceAttractor
+  - type: CE14MagicEssence
 
 # Basic 6
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceEarth
+  parent: CE14BaseEssence
+  id: CE14EssenceEarth
   name: terra
   components:
   - type: Sprite
@@ -56,12 +56,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceEarth
+        - ReagentId: CE14EssenceEarth
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceFire
+  parent: CE14BaseEssence
+  id: CE14EssenceFire
   name: ignis
   components:
   - type: Sprite
@@ -71,12 +71,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceFire
+        - ReagentId: CE14EssenceFire
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceWater
+  parent: CE14BaseEssence
+  id: CE14EssenceWater
   name: aqua
   components:
   - type: Sprite
@@ -86,12 +86,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceWater
+        - ReagentId: CE14EssenceWater
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceAir
+  parent: CE14BaseEssence
+  id: CE14EssenceAir
   name: aer
   components:
   - type: Sprite
@@ -101,12 +101,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceAir
+        - ReagentId: CE14EssenceAir
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceOrder
+  parent: CE14BaseEssence
+  id: CE14EssenceOrder
   name: ordo
   components:
   - type: Sprite
@@ -116,12 +116,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceOrder
+        - ReagentId: CE14EssenceOrder
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceChaos
+  parent: CE14BaseEssence
+  id: CE14EssenceChaos
   name: perditio
   components:
   - type: Sprite
@@ -131,14 +131,14 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceChaos
+        - ReagentId: CE14EssenceChaos
           Quantity: 1
 
 # Complex tier 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceFrost
+  parent: CE14BaseEssence
+  id: CE14EssenceFrost
   name: gelum
   components:
   - type: Sprite
@@ -148,12 +148,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceFrost
+        - ReagentId: CE14EssenceFrost
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceLight
+  parent: CE14BaseEssence
+  id: CE14EssenceLight
   name: lux
   components:
   - type: Sprite
@@ -163,12 +163,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceLight
+        - ReagentId: CE14EssenceLight
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceMotion
+  parent: CE14BaseEssence
+  id: CE14EssenceMotion
   name: motus
   components:
   - type: Sprite
@@ -178,12 +178,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceMotion
+        - ReagentId: CE14EssenceMotion
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceCycle
+  parent: CE14BaseEssence
+  id: CE14EssenceCycle
   name: permutatio
   components:
   - type: Sprite
@@ -193,12 +193,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceCycle
+        - ReagentId: CE14EssenceCycle
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceEnergia
+  parent: CE14BaseEssence
+  id: CE14EssenceEnergia
   name: energia
   components:
   - type: Sprite
@@ -208,12 +208,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceEnergia
+        - ReagentId: CE14EssenceEnergia
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssencePoison
+  parent: CE14BaseEssence
+  id: CE14EssencePoison
   name: venenum
   components:
   - type: Sprite
@@ -223,12 +223,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssencePoison
+        - ReagentId: CE14EssencePoison
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceVoid
+  parent: CE14BaseEssence
+  id: CE14EssenceVoid
   name: vacuos
   components:
   - type: Sprite
@@ -238,12 +238,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceVoid
+        - ReagentId: CE14EssenceVoid
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceLife
+  parent: CE14BaseEssence
+  id: CE14EssenceLife
   name: victus
   components:
   - type: Sprite
@@ -253,12 +253,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceLife
+        - ReagentId: CE14EssenceLife
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceCrystal
+  parent: CE14BaseEssence
+  id: CE14EssenceCrystal
   name: vitreus
   components:
   - type: Sprite
@@ -268,14 +268,14 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceCrystal
+        - ReagentId: CE14EssenceCrystal
           Quantity: 1
 
 # Complex tier 2
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceMagic
+  parent: CE14BaseEssence
+  id: CE14EssenceMagic
   name: praecantatio
   components:
   - type: Sprite
@@ -285,12 +285,12 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceMagic
+        - ReagentId: CE14EssenceMagic
           Quantity: 1
 
 - type: entity
-  parent: CP14BaseEssence
-  id: CP14EssenceBeast
+  parent: CE14BaseEssence
+  id: CE14EssenceBeast
   name: bestia
   components:
   - type: Sprite
@@ -300,5 +300,5 @@
       essence:
         maxVol: 1
         reagents:
-        - ReagentId: CP14EssenceBeast
+        - ReagentId: CE14EssenceBeast
           Quantity: 1

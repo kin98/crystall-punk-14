@@ -216,20 +216,20 @@ public sealed partial class DungeonJob : Job<List<Dungeon>>
 
         switch (layer)
         {
-            //CP14 zone
-            case CP14OreDunGen cp14OreDunGen:
-                await PostGen(cp14OreDunGen, dungeons, reservedTiles, random);
+            //CE14 zone
+            case CE14OreDunGen CE14OreDunGen:
+                await PostGen(CE14OreDunGen, dungeons, reservedTiles, random);
                 break;
-            case CP14RoomsDunGen cp14RoomsDunGen:
-                await PostGen(cp14RoomsDunGen, dungeons, reservedTiles, random);
+            case CE14RoomsDunGen CE14RoomsDunGen:
+                await PostGen(CE14RoomsDunGen, dungeons, reservedTiles, random);
                 break;
-            case CP14BiomeDunGen cp14BiomesDunGen:
-                await PostGen(cp14BiomesDunGen, dungeons, reservedTiles, random);
+            case CE14BiomeDunGen CE14BiomesDunGen:
+                await PostGen(CE14BiomesDunGen, dungeons, reservedTiles, random);
                 break;
-            case CP14ReserveGrid cp14ReserveGrid:
-                await PostGen(cp14ReserveGrid, reservedTiles);
+            case CE14ReserveGrid CE14ReserveGrid:
+                await PostGen(CE14ReserveGrid, reservedTiles);
                 break;
-            //CP14 zone end
+            //CE14 zone end
             case AutoCablingDunGen cabling:
                 await PostGen(cabling, dungeons[^1], reservedTiles, random);
                 break;

@@ -1,6 +1,6 @@
 - type: entity
-  id: CP14MobSlimeElectric
-  parent: CP14MobSlimeBase
+  id: CE14MobSlimeElectric
+  parent: CE14MobSlimeBase
   name: electric slime
   components:
   - type: Sprite
@@ -18,27 +18,27 @@
       slime:
         maxVol: 50
         reagents:
-        - ReagentId: CP14ChromiumSlime
+        - ReagentId: CE14ChromiumSlime
           Quantity: 20
-        - ReagentId: CP14EssenceEnergia
+        - ReagentId: CE14EssenceEnergia
           Quantity: 30
   - type: MeleeWeapon
     damage:
       types:
         Blunt: 3
         Shock: 3
-  - type: CP14SpellEffectOnHit
+  - type: CE14SpellEffectOnHit
     effects:
-    - !type:CP14SpellApplyEntityEffect
+    - !type:CE14SpellApplyEntityEffect
       effects:
       - !type:Jitter
-      - !type:CP14StaminaChange
+      - !type:CE14StaminaChange
         staminaDelta: -10
-    - !type:CP14SpellSpawnEntityOnTarget
+    - !type:CE14SpellSpawnEntityOnTarget
       spawns:
-      - CP14ElectrifiedEffect
+      - CE14ElectrifiedEffect
   - type: Damageable
-    damageModifierSet: CP14SlimeElectric
+    damageModifierSet: CE14SlimeElectric
   - type: Destructible
     thresholds:
     - trigger:
@@ -49,7 +49,7 @@
         solution: slime
       - !type:SpawnEntitiesBehavior
         spawn:
-            CP14AreaEntityEffectSlimeShock:
+            CE14AreaEntityEffectSlimeShock:
               min: 1
               max: 1
       - !type:DoActsBehavior
@@ -60,16 +60,16 @@
         children:
         - !type:GroupSelector
           children:
-          - id: CP14OreCopper1
-          - id: CP14OreIron1
-          - id: CP14ScrapCopper
-          - id: CP14ScrapIron
-          - id: CP14CopperCoin1
+          - id: CE14OreCopper1
+          - id: CE14OreIron1
+          - id: CE14ScrapCopper
+          - id: CE14ScrapIron
+          - id: CE14CopperCoin1
             weight: 3
 
 - type: entity
-  id: CP14AreaEntityEffectSlimeShock
-  parent: CP14BaseMagicImpact
+  id: CE14AreaEntityEffectSlimeShock
+  parent: CE14BaseMagicImpact
   categories: [ HideSpawnMenu ]
   components:
   - type: PointLight
@@ -77,7 +77,7 @@
   - type: Sprite
     noRot: true
     drawdepth: BelowFloor
-    sprite: _CP14/Effects/Magic/area_impact.rsi
+    sprite: _CE14/Effects/Magic/area_impact.rsi
     layers:
     - state: area_impact_out
       color: "#f7f00c"
@@ -85,17 +85,17 @@
       shader: unshaded
   - type: TimedDespawn
     lifetime: 0.2
-  - type: CP14AreaEntityEffect
+  - type: CE14AreaEntityEffect
     range: 2
     whitelist:
       components:
       - Damageable
     effects:
-    - !type:CP14SpellSpawnEntityOnTarget
+    - !type:CE14SpellSpawnEntityOnTarget
       spawns:
-      - CP14ElectrifiedEffect
-    - !type:CP14SpellApplyEntityEffect
+      - CE14ElectrifiedEffect
+    - !type:CE14SpellApplyEntityEffect
       effects:
       - !type:Jitter
-      - !type:CP14StaminaChange
+      - !type:CE14StaminaChange
         staminaDelta: -30

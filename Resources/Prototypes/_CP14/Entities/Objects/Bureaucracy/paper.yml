@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: CP14BasePaper
+  id: CE14BasePaper
   categories: [ ForkFiltered ]
   abstract: true
   components:
@@ -37,7 +37,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-            CP14Ash1:
+            CE14Ash1:
               min: 1
               max: 1
       - !type:DoActsBehavior
@@ -64,13 +64,13 @@
     price: 2
 
 - type: entity
-  parent: CP14BasePaper
-  id: CP14Paper
+  parent: CE14BasePaper
+  id: CE14Paper
   name: paper
   description: A piece of white paper
   components:
   - type: Sprite
-    sprite: _CP14/Objects/Bureaucracy/paper.rsi
+    sprite: _CE14/Objects/Bureaucracy/paper.rsi
     layers:
     - state: paper
     - state: paper_filled

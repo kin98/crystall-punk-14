@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: Clothing
-  id: CP14ClothingPantsBase
+  id: CE14ClothingPantsBase
   categories: [ ForkFiltered ]
   description: Pants to cover my thighs from the cold.
   components:
@@ -15,12 +15,12 @@
   - type: Butcherable
     butcheringType: Knife
     spawned:
-    - id: CP14Cloth1
+    - id: CE14Cloth1
       amount: 1
 
 - type: entity
-  parent: CP14ClothingPantsBase
-  id: CP14ClothingPantsDress
+  parent: CE14ClothingPantsBase
+  id: CE14ClothingPantsDress
   abstract: true
   description: A roomy, feminine skirt
   components:

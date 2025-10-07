@@ -1,14 +1,14 @@
 - type: constructionGraph
-  id: CP14Gauze
+  id: CE14Gauze
   start: start
   graph:
   - node: start
     edges:
-    - to: cp14gauze
+    - to: CE14gauze
       steps:
-      - material: CP14Cloth
+      - material: CE14Cloth
         amount: 2
         doAfter: 3
 
-  - node: cp14gauze
-    entity: CP14Gauze1
+  - node: CE14gauze
+    entity: CE14Gauze1

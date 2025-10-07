@@ -1,20 +1,20 @@
 # Entities that are entirely magical and can be destroyed by dispelling magic.
 - type: entity
-  id: CP14SpectralBase
+  id: CE14SpectralBase
   categories: [ ForkFiltered ]
   abstract: true
   components:
-  - type: CP14MagicEnergyContainer
-    magicAlert: CP14MagicEnergy
+  - type: CE14MagicEnergyContainer
+    magicAlert: CE14MagicEnergy
     maxEnergy: 1
     energy: 1
     unsafeSupport: true
-  - type: CP14MagicUnsafeDamage
+  - type: CE14MagicUnsafeDamage
     damagePerEnergy:
       types:
-        CP14ManaDepletion: 1
+        CE14ManaDepletion: 1
   - type: Damageable
-    damageContainer: CP14Spectral
+    damageContainer: CE14Spectral
   - type: Destructible
     thresholds:
     - trigger:

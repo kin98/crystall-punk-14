@@ -1,9 +1,9 @@
 - type: construction
   crystallPunkAllowed: true
-  id: CP14Bonfire
-  graph: CP14Bonfire
+  id: CE14Bonfire
+  graph: CE14Bonfire
   startNode: start
-  targetNode: CP14Bonfire
+  targetNode: CE14Bonfire
   category: construction-category-misc
   objectType: Structure
   placementMode: SnapgridCenter
@@ -13,10 +13,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14BaseTombstone
-  graph: CP14BaseTombstone
+  id: CE14BaseTombstone
+  graph: CE14BaseTombstone
   startNode: start
-  targetNode: CP14BaseTombstone
+  targetNode: CE14BaseTombstone
   category: construction-category-misc
   objectType: Structure
   placementMode: SnapgridCenter
@@ -26,10 +26,10 @@
 
 - type: construction
   crystallPunkAllowed: true
-  id: CP14WoodenPallet
-  graph: CP14WoodenPallet
+  id: CE14WoodenPallet
+  graph: CE14WoodenPallet
   startNode: start
-  targetNode: CP14WoodenPallet
+  targetNode: CE14WoodenPallet
   category: construction-category-misc
   objectType: Structure
   placementMode: SnapgridCenter

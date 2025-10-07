@@ -2,9 +2,9 @@ using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Skill.Restrictions;
+namespace Content.Shared._CE14.Skill.Restrictions;
 
-public sealed partial class SpeciesWhitelist : CP14SkillRestriction
+public sealed partial class SpeciesWhitelist : CE14SkillRestriction
 {
     public override bool HideFromUI => true;
 
@@ -23,6 +23,6 @@ public sealed partial class SpeciesWhitelist : CP14SkillRestriction
     {
         var species = protoManager.Index(Species);
 
-        return Loc.GetString("cp14-skill-req-species", ("name", Loc.GetString(species.Name)));
+        return Loc.GetString("CE14-skill-req-species", ("name", Loc.GetString(species.Name)));
     }
 }

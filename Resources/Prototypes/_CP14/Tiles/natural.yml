@@ -4,9 +4,9 @@
 
 - type: tile
   editorHidden: false
-  id: CP14FloorMarbleCave
-  name: cp14-tiles-marble-cave
-  sprite: /Textures/_CP14/Tiles/marble_cave.png
+  id: CE14FloorMarbleCave
+  name: CE14-tiles-marble-cave
+  sprite: /Textures/_CE14/Tiles/marble_cave.png
   variants: 14
   placementVariants:
   - 1.0
@@ -23,10 +23,10 @@
   - 1.0
   - 1.0
   - 1.0
-  baseTurf: CP14FloorBase
-  deconstructTools: [ CP14Digging ]
+  baseTurf: CE14FloorBase
+  deconstructTools: [ CE14Digging ]
   isSubfloor: true
-  itemDrop: CP14MarbleBlock1
+  itemDrop: CE14MarbleBlock1
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
@@ -34,17 +34,17 @@
   indestructible: true
 
 - type: tile
-  id: CP14FloorIce
+  id: CE14FloorIce
   editorHidden: false
   name: tiles-ice
-  sprite: /Textures/_CP14/Tiles/ice.png
+  sprite: /Textures/_CE14/Tiles/ice.png
   variants: 4
   placementVariants:
   - 1.0
   - 1.0
   - 1.0
   - 1.0
-  baseTurf: CP14FloorBase
+  baseTurf: CE14FloorBase
   isSubfloor: false
   heatCapacity: 10000
   friction: 0.05
@@ -53,9 +53,9 @@
   
 - type: tile
   editorHidden: false
-  id: CP14FloorDirt
-  name: cp14-tiles-dirt
-  sprite: /Textures/_CP14/Tiles/Dirt/cavedrought.png
+  id: CE14FloorDirt
+  name: CE14-tiles-dirt
+  sprite: /Textures/_CE14/Tiles/Dirt/cavedrought.png
   variants: 16
   placementVariants:
   - 1.0
@@ -76,17 +76,17 @@
   - 1.0
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/_CP14/Tiles/Dirt/single_edge_SE.png
-    NorthEast: /Textures/_CP14/Tiles/Dirt/single_edge_NE.png
-    NorthWest: /Textures/_CP14/Tiles/Dirt/single_edge_NW.png
-    SouthWest: /Textures/_CP14/Tiles/Dirt/single_edge_SW.png
-    South: /Textures/_CP14/Tiles/Dirt/double_edge_S.png
-    East: /Textures/_CP14/Tiles/Dirt/double_edge_E.png
-    North: /Textures/_CP14/Tiles/Dirt/double_edge_N.png
-    West: /Textures/_CP14/Tiles/Dirt/double_edge_W.png
-  baseTurf: CP14FloorBase
-  deconstructTools: [ CP14Digging ]
-  itemDrop: CP14RandomDirtLootSpawner
+    SouthEast: /Textures/_CE14/Tiles/Dirt/single_edge_SE.png
+    NorthEast: /Textures/_CE14/Tiles/Dirt/single_edge_NE.png
+    NorthWest: /Textures/_CE14/Tiles/Dirt/single_edge_NW.png
+    SouthWest: /Textures/_CE14/Tiles/Dirt/single_edge_SW.png
+    South: /Textures/_CE14/Tiles/Dirt/double_edge_S.png
+    East: /Textures/_CE14/Tiles/Dirt/double_edge_E.png
+    North: /Textures/_CE14/Tiles/Dirt/double_edge_N.png
+    West: /Textures/_CE14/Tiles/Dirt/double_edge_W.png
+  baseTurf: CE14FloorBase
+  deconstructTools: [ CE14Digging ]
+  itemDrop: CE14RandomDirtLootSpawner
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
@@ -95,9 +95,9 @@
 
 - type: tile
   editorHidden: false
-  id: CP14FloorCobblestone
-  name: cp14-tiles-cobblestone
-  sprite: /Textures/_CP14/Tiles/Cobblestone/cobble.png
+  id: CE14FloorCobblestone
+  name: CE14-tiles-cobblestone
+  sprite: /Textures/_CE14/Tiles/Cobblestone/cobble.png
   variants: 5
   placementVariants:
   - 1.0
@@ -107,17 +107,17 @@
   - 1.0
   edgeSpritePriority: 2
   edgeSprites:
-    SouthEast: /Textures/_CP14/Tiles/Cobblestone/single_edge_SE.png
-    NorthEast: /Textures/_CP14/Tiles/Cobblestone/single_edge_NE.png
-    NorthWest: /Textures/_CP14/Tiles/Cobblestone/single_edge_NW.png
-    SouthWest: /Textures/_CP14/Tiles/Cobblestone/single_edge_SW.png
-    South: /Textures/_CP14/Tiles/Cobblestone/double_edge_S.png
-    East: /Textures/_CP14/Tiles/Cobblestone/double_edge_E.png
-    North: /Textures/_CP14/Tiles/Cobblestone/double_edge_N.png
-    West: /Textures/_CP14/Tiles/Cobblestone/double_edge_W.png
-  baseTurf: CP14FloorDirt
-  deconstructTools: [ CP14Digging ]
-  itemDrop: CP14RandomStoneLootSpawner
+    SouthEast: /Textures/_CE14/Tiles/Cobblestone/single_edge_SE.png
+    NorthEast: /Textures/_CE14/Tiles/Cobblestone/single_edge_NE.png
+    NorthWest: /Textures/_CE14/Tiles/Cobblestone/single_edge_NW.png
+    SouthWest: /Textures/_CE14/Tiles/Cobblestone/single_edge_SW.png
+    South: /Textures/_CE14/Tiles/Cobblestone/double_edge_S.png
+    East: /Textures/_CE14/Tiles/Cobblestone/double_edge_E.png
+    North: /Textures/_CE14/Tiles/Cobblestone/double_edge_N.png
+    West: /Textures/_CE14/Tiles/Cobblestone/double_edge_W.png
+  baseTurf: CE14FloorDirt
+  deconstructTools: [ CE14Digging ]
+  itemDrop: CE14RandomStoneLootSpawner
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
@@ -125,10 +125,10 @@
   weather: true
 
 - type: tile
-  id: CP14FloorMycelium
+  id: CE14FloorMycelium
   editorHidden: false
-  name: cp14-tiles-mycelium
-  sprite: /Textures/_CP14/Tiles/Mycelium/tile.png
+  name: CE14-tiles-mycelium
+  sprite: /Textures/_CE14/Tiles/Mycelium/tile.png
   variants: 12
   placementVariants:
   - 1.0
@@ -145,13 +145,13 @@
   - 1.0
   edgeSpritePriority: 3
   edgeSprites:
-    South: /Textures/_CP14/Tiles/Mycelium/double_edge_S.png
-    East: /Textures/_CP14/Tiles/Mycelium/double_edge_E.png
-    North: /Textures/_CP14/Tiles/Mycelium/double_edge_N.png
-    West: /Textures/_CP14/Tiles/Mycelium/double_edge_W.png
-  baseTurf: CP14FloorDirt
-  deconstructTools: [ CP14Digging ]
-  itemDrop: CP14RandomDirtLootSpawner
+    South: /Textures/_CE14/Tiles/Mycelium/double_edge_S.png
+    East: /Textures/_CE14/Tiles/Mycelium/double_edge_E.png
+    North: /Textures/_CE14/Tiles/Mycelium/double_edge_N.png
+    West: /Textures/_CE14/Tiles/Mycelium/double_edge_W.png
+  baseTurf: CE14FloorDirt
+  deconstructTools: [ CE14Digging ]
+  itemDrop: CE14RandomDirtLootSpawner
   isSubfloor: false
   footstepSounds:
     collection: FootstepGrass
@@ -159,10 +159,10 @@
   weather: true
 
 - type: tile
-  id: CP14FloorMyceliumLight
+  id: CE14FloorMyceliumLight
   editorHidden: false
-  name: cp14-tiles-mycelium-light
-  sprite: /Textures/_CP14/Tiles/MyceliumLight/tile.png
+  name: CE14-tiles-mycelium-light
+  sprite: /Textures/_CE14/Tiles/MyceliumLight/tile.png
   variants: 12
   placementVariants:
   - 1.0
@@ -179,13 +179,13 @@
   - 1.0
   edgeSpritePriority: 4
   edgeSprites:
-    South: /Textures/_CP14/Tiles/MyceliumLight/double_edge_S.png
-    East: /Textures/_CP14/Tiles/MyceliumLight/double_edge_E.png
-    North: /Textures/_CP14/Tiles/MyceliumLight/double_edge_N.png
-    West: /Textures/_CP14/Tiles/MyceliumLight/double_edge_W.png
-  baseTurf: CP14FloorDirt
-  deconstructTools: [ CP14Digging ]
-  itemDrop: CP14RandomDirtLootSpawner
+    South: /Textures/_CE14/Tiles/MyceliumLight/double_edge_S.png
+    East: /Textures/_CE14/Tiles/MyceliumLight/double_edge_E.png
+    North: /Textures/_CE14/Tiles/MyceliumLight/double_edge_N.png
+    West: /Textures/_CE14/Tiles/MyceliumLight/double_edge_W.png
+  baseTurf: CE14FloorDirt
+  deconstructTools: [ CE14Digging ]
+  itemDrop: CE14RandomDirtLootSpawner
   isSubfloor: false
   footstepSounds:
     collection: FootstepGrass
@@ -194,9 +194,9 @@
 
 - type: tile
   editorHidden: false
-  id: CP14FloorSand
-  name: cp14-tiles-sand
-  sprite: /Textures/_CP14/Tiles/Sand/sand.png
+  id: CE14FloorSand
+  name: CE14-tiles-sand
+  sprite: /Textures/_CE14/Tiles/Sand/sand.png
   variants: 5
   placementVariants:
   - 1.0
@@ -206,17 +206,17 @@
   - 1.0
   edgeSpritePriority: 5
   edgeSprites:
-    SouthEast: /Textures/_CP14/Tiles/Sand/single_edge_SE.png
-    NorthEast: /Textures/_CP14/Tiles/Sand/single_edge_NE.png
-    NorthWest: /Textures/_CP14/Tiles/Sand/single_edge_NW.png
-    SouthWest: /Textures/_CP14/Tiles/Sand/single_edge_SW.png
-    South: /Textures/_CP14/Tiles/Sand/double_edge_S.png
-    East: /Textures/_CP14/Tiles/Sand/double_edge_E.png
-    North: /Textures/_CP14/Tiles/Sand/double_edge_N.png
-    West: /Textures/_CP14/Tiles/Sand/double_edge_W.png
-  baseTurf: CP14FloorBase
-  deconstructTools: [ CP14Digging ]
-  itemDrop: CP14DirtEffect #TODO sand variant
+    SouthEast: /Textures/_CE14/Tiles/Sand/single_edge_SE.png
+    NorthEast: /Textures/_CE14/Tiles/Sand/single_edge_NE.png
+    NorthWest: /Textures/_CE14/Tiles/Sand/single_edge_NW.png
+    SouthWest: /Textures/_CE14/Tiles/Sand/single_edge_SW.png
+    South: /Textures/_CE14/Tiles/Sand/double_edge_S.png
+    East: /Textures/_CE14/Tiles/Sand/double_edge_E.png
+    North: /Textures/_CE14/Tiles/Sand/double_edge_N.png
+    West: /Textures/_CE14/Tiles/Sand/double_edge_W.png
+  baseTurf: CE14FloorBase
+  deconstructTools: [ CE14Digging ]
+  itemDrop: CE14DirtEffect #TODO sand variant
   isSubfloor: true
   footstepSounds:
     collection: FootstepSnow #TODO
@@ -224,10 +224,10 @@
   weather: true
 
 - type: tile
-  id: CP14FloorSnowDeepDeep
+  id: CE14FloorSnowDeepDeep
   editorHidden: false
-  name: cp14-tiles-snow-deep-deep
-  sprite: /Textures/_CP14/Tiles/SnowDeepDeep/snow.png
+  name: CE14-tiles-snow-deep-deep
+  sprite: /Textures/_CE14/Tiles/SnowDeepDeep/snow.png
   variants: 6
   placementVariants:
   - 1.0
@@ -238,17 +238,17 @@
   - 1.0
   edgeSpritePriority: 1000 # Because snowfall!
   edgeSprites:
-    SouthEast: /Textures/_CP14/Tiles/SnowDeepDeep/single_edge_SE.png
-    NorthEast: /Textures/_CP14/Tiles/SnowDeepDeep/single_edge_NE.png
-    NorthWest: /Textures/_CP14/Tiles/SnowDeepDeep/single_edge_NW.png
-    SouthWest: /Textures/_CP14/Tiles/SnowDeepDeep/single_edge_SW.png
-    South: /Textures/_CP14/Tiles/SnowDeepDeep/double_edge_S.png
-    East: /Textures/_CP14/Tiles/SnowDeepDeep/double_edge_E.png
-    North: /Textures/_CP14/Tiles/SnowDeepDeep/double_edge_N.png
-    West: /Textures/_CP14/Tiles/SnowDeepDeep/double_edge_W.png
-  baseTurf: CP14FloorDirt
-  deconstructTools: [ CP14Digging ]
-  itemDrop: CP14RandomSnowLootSpawner
+    SouthEast: /Textures/_CE14/Tiles/SnowDeepDeep/single_edge_SE.png
+    NorthEast: /Textures/_CE14/Tiles/SnowDeepDeep/single_edge_NE.png
+    NorthWest: /Textures/_CE14/Tiles/SnowDeepDeep/single_edge_NW.png
+    SouthWest: /Textures/_CE14/Tiles/SnowDeepDeep/single_edge_SW.png
+    South: /Textures/_CE14/Tiles/SnowDeepDeep/double_edge_S.png
+    East: /Textures/_CE14/Tiles/SnowDeepDeep/double_edge_E.png
+    North: /Textures/_CE14/Tiles/SnowDeepDeep/double_edge_N.png
+    West: /Textures/_CE14/Tiles/SnowDeepDeep/double_edge_W.png
+  baseTurf: CE14FloorDirt
+  deconstructTools: [ CE14Digging ]
+  itemDrop: CE14RandomSnowLootSpawner
   isSubfloor: false
   footstepSounds:
     collection: FootstepSnow
@@ -256,10 +256,10 @@
   weather: true
 
 - type: tile
-  id: CP14FloorSnowDeep
+  id: CE14FloorSnowDeep
   editorHidden: false
-  name: cp14-tiles-snow-deep
-  sprite: /Textures/_CP14/Tiles/SnowDeep/snow.png
+  name: CE14-tiles-snow-deep
+  sprite: /Textures/_CE14/Tiles/SnowDeep/snow.png
   variants: 6
   placementVariants:
   - 1.0
@@ -270,17 +270,17 @@
   - 1.0
   edgeSpritePriority: 1001 # Because snowfall!
   edgeSprites:
-    SouthEast: /Textures/_CP14/Tiles/SnowDeep/single_edge_SE.png
-    NorthEast: /Textures/_CP14/Tiles/SnowDeep/single_edge_NE.png
-    NorthWest: /Textures/_CP14/Tiles/SnowDeep/single_edge_NW.png
-    SouthWest: /Textures/_CP14/Tiles/SnowDeep/single_edge_SW.png
-    South: /Textures/_CP14/Tiles/SnowDeep/double_edge_S.png
-    East: /Textures/_CP14/Tiles/SnowDeep/double_edge_E.png
-    North: /Textures/_CP14/Tiles/SnowDeep/double_edge_N.png
-    West: /Textures/_CP14/Tiles/SnowDeep/double_edge_W.png
-  baseTurf: CP14FloorSnowDeepDeep
-  deconstructTools: [ CP14Digging ]
-  itemDrop: CP14RandomSnowLootSpawner
+    SouthEast: /Textures/_CE14/Tiles/SnowDeep/single_edge_SE.png
+    NorthEast: /Textures/_CE14/Tiles/SnowDeep/single_edge_NE.png
+    NorthWest: /Textures/_CE14/Tiles/SnowDeep/single_edge_NW.png
+    SouthWest: /Textures/_CE14/Tiles/SnowDeep/single_edge_SW.png
+    South: /Textures/_CE14/Tiles/SnowDeep/double_edge_S.png
+    East: /Textures/_CE14/Tiles/SnowDeep/double_edge_E.png
+    North: /Textures/_CE14/Tiles/SnowDeep/double_edge_N.png
+    West: /Textures/_CE14/Tiles/SnowDeep/double_edge_W.png
+  baseTurf: CE14FloorSnowDeepDeep
+  deconstructTools: [ CE14Digging ]
+  itemDrop: CE14RandomSnowLootSpawner
   isSubfloor: false
   footstepSounds:
     collection: FootstepSnow
@@ -288,10 +288,10 @@
   weather: true
 
 - type: tile
-  id: CP14FloorSnow
+  id: CE14FloorSnow
   editorHidden: false
-  name: cp14-tiles-snow
-  sprite: /Textures/_CP14/Tiles/Snow/snow.png
+  name: CE14-tiles-snow
+  sprite: /Textures/_CE14/Tiles/Snow/snow.png
   variants: 6
   placementVariants:
   - 1.0
@@ -302,17 +302,17 @@
   - 1.0
   edgeSpritePriority: 1002 # Because snowfall!
   edgeSprites:
-    SouthEast: /Textures/_CP14/Tiles/Snow/single_edge_SE.png
-    NorthEast: /Textures/_CP14/Tiles/Snow/single_edge_NE.png
-    NorthWest: /Textures/_CP14/Tiles/Snow/single_edge_NW.png
-    SouthWest: /Textures/_CP14/Tiles/Snow/single_edge_SW.png
-    South: /Textures/_CP14/Tiles/Snow/double_edge_S.png
-    East: /Textures/_CP14/Tiles/Snow/double_edge_E.png
-    North: /Textures/_CP14/Tiles/Snow/double_edge_N.png
-    West: /Textures/_CP14/Tiles/Snow/double_edge_W.png
-  baseTurf: CP14FloorSnowDeep
-  deconstructTools: [ CP14Digging ]
-  itemDrop: CP14RandomSnowLootSpawner
+    SouthEast: /Textures/_CE14/Tiles/Snow/single_edge_SE.png
+    NorthEast: /Textures/_CE14/Tiles/Snow/single_edge_NE.png
+    NorthWest: /Textures/_CE14/Tiles/Snow/single_edge_NW.png
+    SouthWest: /Textures/_CE14/Tiles/Snow/single_edge_SW.png
+    South: /Textures/_CE14/Tiles/Snow/double_edge_S.png
+    East: /Textures/_CE14/Tiles/Snow/double_edge_E.png
+    North: /Textures/_CE14/Tiles/Snow/double_edge_N.png
+    West: /Textures/_CE14/Tiles/Snow/double_edge_W.png
+  baseTurf: CE14FloorSnowDeep
+  deconstructTools: [ CE14Digging ]
+  itemDrop: CE14RandomSnowLootSpawner
   isSubfloor: false
   footstepSounds:
     collection: FootstepSnow

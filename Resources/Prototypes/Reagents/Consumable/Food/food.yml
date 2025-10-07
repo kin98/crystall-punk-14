@@ -13,7 +13,7 @@
       - !type:SatiateHunger
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
           shouldHave: false
   plantMetabolism:
   - !type:PlantAdjustNutrition
@@ -45,7 +45,7 @@
       - !type:SatiateHunger #Numbers are balanced with this in mind + it helps limit how much healing you can get from food
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
           shouldHave: false
   # Lets plants benefit too
   plantMetabolism:
@@ -76,7 +76,7 @@
       - !type:SatiateHunger
         conditions:
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
           shouldHave: false
   pricePerUnit: 1.13
 
@@ -98,7 +98,7 @@
           reagent: Nutriment
           min: 0.1
         - !type:OrganType
-          type: CP14Vampire
+          type: CE14Vampire
           shouldHave: false
         factor: 1
   plantMetabolism:

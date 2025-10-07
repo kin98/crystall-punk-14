@@ -1,18 +1,18 @@
 - type: entity
-  id: CP14HighBush
+  id: CE14HighBush
   name: high bush
-  parent: CP14BaseFlammableSpreading
+  parent: CE14BaseFlammableSpreading
   categories: [ ForkFiltered ]
   description: Very tall and dense thickets. Perhaps someone is watching you from them
   components:
-  - type: CP14WaveShader
+  - type: CE14WaveShader
     speed: 2.5
     dis: 4
   #- type: SpriteFade #Hard to attack
   - type: Clickable
   - type: Sprite
     noRot: true
-    sprite: _CP14/Structures/Flora/high_bush.rsi
+    sprite: _CE14/Structures/Flora/high_bush.rsi
     drawdepth: Mobs
     offset: 0,0.3
     layers:
@@ -45,7 +45,7 @@
   - type: MeleeSound
     soundGroups:
       Brute:
-        collection: CP14GrassGathering
+        collection: CE14GrassGathering
         params:
           variation: 0.05
   - type: Destructible
@@ -62,7 +62,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          collection: CP14GrassGathering
+          collection: CE14GrassGathering
           params:
             volume: 5
             variation: 0.05
@@ -70,7 +70,7 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14FloraMaterial1:
+          CE14FloraMaterial1:
             min: 0
             max: 2
   - type: SpeedModifierContacts
@@ -80,15 +80,15 @@
     sound:
       params:
         volume: -8
-      collection: CP14GrassGathering
+      collection: CE14GrassGathering
   - type: TriggerOnCollide
     fixtureID: fix1
-  - type: CP14IgnitionModifier
+  - type: CE14IgnitionModifier
     ignitionTimeModifier: 0.75
     hideCaution: true
 
 - type: entity
-  id: CP14RandomBushOffsetSpawner
+  id: CE14RandomBushOffsetSpawner
   name: random bush offset spawner
   parent: MarkerBase
   categories: [ ForkFiltered ]
@@ -96,11 +96,11 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: _CP14/Structures/Flora/high_bush.rsi
+    - sprite: _CE14/Structures/Flora/high_bush.rsi
       state: grass_high_bush1
   - type: RandomSpawner
     prototypes:
-    - CP14HighBush
+    - CE14HighBush
     chance: 1
     offset: 0.35
 

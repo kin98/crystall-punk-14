@@ -1,13 +1,13 @@
 using Robust.Shared.Audio;
 
-namespace Content.Server._CP14.Temperature.Fireplace;
+namespace Content.Server._CE14.Temperature.Fireplace;
 
 /// <summary>
 /// component for player-controlled fire. Can be fueled.
 /// </summary>
 
-[RegisterComponent, Access(typeof(CP14FireplaceSystem))]
-public sealed partial class CP14FireplaceComponent : Component
+[RegisterComponent, Access(typeof(CE14FireplaceSystem))]
+public sealed partial class CE14FireplaceComponent : Component
 {
     [DataField]
     public string ContainerId = "storagebase";
@@ -46,5 +46,5 @@ public sealed partial class CP14FireplaceComponent : Component
     public TimeSpan NextUpdateTime = TimeSpan.Zero;
 
     [DataField]
-    public SoundSpecifier InsertFuelSound = new SoundPathSpecifier("/Audio/_CP14/Items/campfire_whoosh.ogg");
+    public SoundSpecifier InsertFuelSound = new SoundPathSpecifier("/Audio/_CE14/Items/campfire_whoosh.ogg");
 }

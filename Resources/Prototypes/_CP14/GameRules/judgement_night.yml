@@ -1,34 +1,34 @@
 - type: entity
-  id: CP14BloodMoonRule
-  parent: CP14BaseGameRule
+  id: CE14BloodMoonRule
+  parent: CE14BaseGameRule
   components:
-  - type: CP14BloodMoonRule
-    curseRule: CP14BloodMoonCurseRule
+  - type: CE14BloodMoonRule
+    curseRule: CE14BloodMoonCurseRule
     announceSound:
-       path: /Audio/_CP14/Announce/darkness_boom.ogg
+       path: /Audio/_CE14/Announce/darkness_boom.ogg
   - type: GameRule
     delay:
       min:  30
       max:  60
 
 - type: entity
-  id: CP14BloodMoonCurseRule
-  parent: CP14BaseGameRule
+  id: CE14BloodMoonCurseRule
+  parent: CE14BaseGameRule
   components:
-  - type: CP14BloodMoonCurseRule
+  - type: CE14BloodMoonCurseRule
     announcementColor: "#e32759"
   - type: AntagSelection
     definitions:
-    - prefRoles: [ CP14BloodMoonCursed ]
+    - prefRoles: [ CE14BloodMoonCursed ]
       max: 15
       playerRatio: 2
       multiAntagSetting: NotExclusive
       lateJoinAdditional: true
       allowNonHumans: true
       mindRoles:
-      - CP14MindRoleBloodMoonCursed
+      - CE14MindRoleBloodMoonCursed
       briefing:
-        text: cp14-roles-antag-blood-moon-cursed-briefing
+        text: CE14-roles-antag-blood-moon-cursed-briefing
         color: "#630f24"
-        sound: "/Audio/_CP14/Announce/darkness_boom_2.ogg"
+        sound: "/Audio/_CE14/Announce/darkness_boom_2.ogg"
 

@@ -3,11 +3,11 @@ meta:
   postmapinit: false
 tilemap:
   0: Space
-  9: CP14FloorBase
-  10: CP14FloorBirchWoodPlanks
-  28: CP14FloorGrass
-  29: CP14FloorGrassLight
-  30: CP14FloorGrassTall
+  9: CE14FloorBase
+  10: CE14FloorBirchWoodPlanks
+  28: CE14FloorGrass
+  29: CE14FloorGrassLight
+  30: CE14FloorGrassTall
 entities:
 - proto: ""
   entities:
@@ -21,7 +21,7 @@ entities:
     - type: GridTree
     - type: Broadphase
     - type: OccluderTree
-    - type: CP14CloudShadows
+    - type: CE14CloudShadows
     - type: MapLight
     - type: LightCycle
     - type: Gravity

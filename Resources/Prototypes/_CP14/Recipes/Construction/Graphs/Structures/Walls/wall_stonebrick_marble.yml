@@ -1,49 +1,49 @@
 - type: constructionGraph
-  id: CP14WallMarbleBrick
+  id: CE14WallMarbleBrick
   start: start
   graph:
     - node: start
       edges:
-        - to: CP14WallFrameMarbleBrick
+        - to: CE14WallFrameMarbleBrick
           completed:
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: CP14MarbleStone
+            - material: CE14MarbleStone
               amount: 2
               doAfter: 5
 
-    - node: CP14WallFrameMarbleBrick
-      entity: CP14WallFrameMarblebrick
+    - node: CE14WallFrameMarbleBrick
+      entity: CE14WallFrameMarblebrick
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: CP14MarbleBlock1
+              prototype: CE14MarbleBlock1
               amount: 2
             - !type:DeleteEntity {}
           steps:
             - tool: Prying
               doAfter: 4
-        - to: CP14WallMarbleBrick
+        - to: CE14WallMarbleBrick
           steps:
-            - material: CP14MarbleStone
+            - material: CE14MarbleStone
               amount: 2
               doAfter: 5
 
-    - node: CP14WallMarbleBrick
-      entity: CP14WallMarbleBrick
+    - node: CE14WallMarbleBrick
+      entity: CE14WallMarbleBrick
       edges:
-        - to: CP14WallFrameMarbleBrick
+        - to: CE14WallFrameMarbleBrick
           steps:
-            - tool: CP14Hammering
+            - tool: CE14Hammering
               doAfter: 2
             - tool: Prying
               doAfter: 4
-            - tool: CP14Hammering
+            - tool: CE14Hammering
               doAfter: 6
           completed:
             - !type:SpawnPrototype
-              prototype: CP14MarbleBlock1
+              prototype: CE14MarbleBlock1
               amount: 2
 

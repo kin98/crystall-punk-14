@@ -1,12 +1,12 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.MagicRitual.Prototypes;
+namespace Content.Shared._CE14.MagicRitual.Prototypes;
 
 /// <summary>
 /// Represents a type of magic
 /// </summary>
 [Prototype("magicType")]
-public sealed class CP14MagicTypePrototype : IPrototype
+public sealed class CE14MagicTypePrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;

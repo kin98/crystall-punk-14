@@ -1,2 +1,2 @@
-cp14-modular-craft-examine = Модульные части
-cp14-modular-craft-examine-freeslots = Сюда можно прикрепить:
+CE14-modular-craft-examine = Модульные части
+CE14-modular-craft-examine-freeslots = Сюда можно прикрепить:

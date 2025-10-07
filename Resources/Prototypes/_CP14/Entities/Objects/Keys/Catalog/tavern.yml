@@ -1,64 +1,64 @@
 - type: entity
-  parent: CP14KeyCopperBlank
-  id: CP14KeyTavernHall
+  parent: CE14KeyCopperBlank
+  id: CE14KeyTavernHall
   suffix: Tavern Hall
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: TavernHall
 
 - type: entity
-  parent: CP14KeyCopperBlank
-  id: CP14KeyTavernStaff
+  parent: CE14KeyCopperBlank
+  id: CE14KeyTavernStaff
   suffix: Tavern Staff
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: TavernStaff
 
 - type: entity
-  parent: CP14KeyCopperBlank
-  id: CP14KeyTavernDormsAbstract
+  parent: CE14KeyCopperBlank
+  id: CE14KeyTavernDormsAbstract
   suffix: Abstract Tavern Dorms
   components:
-  - type: CP14AbstractKey
+  - type: CE14AbstractKey
     group: TavernDorms
 
 - type: entity
-  parent: CP14KeyCopperBlank
-  id: CP14KeyTavernDorms1
+  parent: CE14KeyCopperBlank
+  id: CE14KeyTavernDorms1
   suffix: Tavern Dorms 1
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: TavernDorms1
 
 - type: entity
-  parent: CP14KeyCopperBlank
-  id: CP14KeyTavernDorms2
+  parent: CE14KeyCopperBlank
+  id: CE14KeyTavernDorms2
   suffix: Tavern Dorms 2
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: TavernDorms2
 
 - type: entity
-  parent: CP14KeyCopperBlank
-  id: CP14KeyTavernDorms3
+  parent: CE14KeyCopperBlank
+  id: CE14KeyTavernDorms3
   suffix: Tavern Dorms 3
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: TavernDorms3
 
 - type: entity
-  parent: CP14KeyCopperBlank
-  id: CP14KeyTavernDorms4
+  parent: CE14KeyCopperBlank
+  id: CE14KeyTavernDorms4
   suffix: Tavern Dorms 4
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: TavernDorms4
 
 - type: entity
-  parent: CP14KeyCopperBlank
-  id: CP14KeyTavernDorms5
+  parent: CE14KeyCopperBlank
+  id: CE14KeyTavernDorms5
   suffix: Tavern Dorms 5
   components:
-  - type: CP14Key
+  - type: CE14Key
     autoGenerateShape: TavernDorms5
 

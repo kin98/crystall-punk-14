@@ -1,4 +1,4 @@
-using Content.Shared._CP14.Input;
+using Content.Shared._CE14.Input;
 using System.Numerics;
 using Content.Client.Stylesheets;
 using Content.Shared.CCVar;
@@ -313,12 +313,12 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(EngineKeyFunctions.TextCompleteNext);
             AddButton(EngineKeyFunctions.TextCompletePrev);
 
-            //CP14
-            AddHeader("ui-options-header-cp14");
-            AddButton(CP14ContentKeyFunctions.CP14OpenSkillMenu);
-            AddButton(CP14ContentKeyFunctions.OpenBelt2);
-            AddButton(CP14ContentKeyFunctions.SmartEquipBelt2);
-            //CP14 end
+            //CE14
+            AddHeader("ui-options-header-CE14");
+            AddButton(CE14ContentKeyFunctions.CE14OpenSkillMenu);
+            AddButton(CE14ContentKeyFunctions.OpenBelt2);
+            AddButton(CE14ContentKeyFunctions.SmartEquipBelt2);
+            //CE14 end
 
             foreach (var control in _keyControls.Values)
             {

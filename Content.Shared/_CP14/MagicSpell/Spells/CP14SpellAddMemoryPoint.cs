@@ -1,10 +1,10 @@
-using Content.Shared._CP14.Skill;
-using Content.Shared._CP14.Skill.Prototypes;
+using Content.Shared._CE14.Skill;
+using Content.Shared._CE14.Skill.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellAddMemoryPoint : CP14SpellEffect
+public sealed partial class CE14SpellAddMemoryPoint : CE14SpellEffect
 {
     [DataField]
     public float AddedPoints = 0.5f;
@@ -13,14 +13,14 @@ public sealed partial class CP14SpellAddMemoryPoint : CP14SpellEffect
     public float Limit = 6.5f;
 
     [DataField]
-    public ProtoId<CP14SkillPointPrototype> SkillPointType = "Memory";
+    public ProtoId<CE14SkillPointPrototype> SkillPointType = "Memory";
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         if (args.Target is null)
             return;
 
-        var skillSys = entManager.System<CP14SharedSkillSystem>();
+        var skillSys = entManager.System<CE14SharedSkillSystem>();
 
         skillSys.AddSkillPoints(args.Target.Value, SkillPointType, AddedPoints, Limit);
     }

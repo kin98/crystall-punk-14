@@ -1,10 +1,10 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._CP14.Vampire;
+namespace Content.Shared._CE14.Vampire;
 
 [RegisterComponent, NetworkedComponent]
-public sealed partial class CP14VampireVisualsComponent : Component
+public sealed partial class CE14VampireVisualsComponent : Component
 {
     [DataField]
     public Color EyesColor = Color.Red;
@@ -16,8 +16,8 @@ public sealed partial class CP14VampireVisualsComponent : Component
     public string FangsMap = "vampire_fangs";
 
     [DataField]
-    public EntProtoId EnableVFX = "CP14ImpactEffectBloodEssence2";
+    public EntProtoId EnableVFX = "CE14ImpactEffectBloodEssence2";
 
     [DataField]
-    public EntProtoId DisableVFX = "CP14ImpactEffectBloodEssenceInverse";
+    public EntProtoId DisableVFX = "CE14ImpactEffectBloodEssenceInverse";
 }

@@ -1,61 +1,61 @@
-- type: CP14CookingRecipe
+- type: CE14CookingRecipe
   id: InediblePie
   foodType: Pie
   foodData:
-    name: cp14-soup-recipe-pie-name
-    desc: cp14-soup-recipe-pie-desc
+    name: CE14-soup-recipe-pie-name
+    desc: CE14-soup-recipe-pie-desc
     visuals:
-    - sprite: _CP14/Objects/Consumable/Food/Pies/misc.rsi
+    - sprite: _CE14/Objects/Consumable/Food/Pies/misc.rsi
       state: veg
-    sliceProto: CP14FoodPiePieceTrash
+    sliceProto: CE14FoodPiePieceTrash
   requirements:
   - !type:AlwaysMet
 
 # 1 Req
 
-- type: CP14CookingRecipe
+- type: CE14CookingRecipe
   id: PieVeg
   foodType: Pie
   foodData:
-    name: cp14-soup-recipe-pie-name
-    desc: cp14-soup-recipe-pie-desc
+    name: CE14-soup-recipe-pie-name
+    desc: CE14-soup-recipe-pie-desc
     visuals:
-    - sprite: _CP14/Objects/Consumable/Food/Pies/misc.rsi
+    - sprite: _CE14/Objects/Consumable/Food/Pies/misc.rsi
       state: veg
-    sliceProto: CP14FoodPiePieceVeg
+    sliceProto: CE14FoodPiePieceVeg
   requirements:
   - !type:TagRequired
     tags:
-    - CP14Salad
-    - CP14Vegetable
+    - CE14Salad
+    - CE14Vegetable
 
-- type: CP14CookingRecipe
+- type: CE14CookingRecipe
   id: PieMeat
   foodType: Pie
   foodData:
-    name: cp14-soup-recipe-pie-name
-    desc: cp14-soup-recipe-pie-desc
+    name: CE14-soup-recipe-pie-name
+    desc: CE14-soup-recipe-pie-desc
     visuals:
-    - sprite: _CP14/Objects/Consumable/Food/Pies/misc.rsi
+    - sprite: _CE14/Objects/Consumable/Food/Pies/misc.rsi
       state: meat
-    sliceProto: CP14FoodPiePieceMeat
+    sliceProto: CE14FoodPiePieceMeat
   requirements:
   - !type:TagRequired
     tags: 
-    - CP14Meat
-    - CP14MeatSlice
+    - CE14Meat
+    - CE14MeatSlice
 
-- type: CP14CookingRecipe
+- type: CE14CookingRecipe
   id: PiePumpkin
   foodType: Pie
   foodData:
-    name: cp14-soup-recipe-pie-name
-    desc: cp14-soup-recipe-pie-desc
+    name: CE14-soup-recipe-pie-name
+    desc: CE14-soup-recipe-pie-desc
     visuals:
-    - sprite: _CP14/Objects/Consumable/Food/Pies/misc.rsi
+    - sprite: _CE14/Objects/Consumable/Food/Pies/misc.rsi
       state: meat
-    sliceProto: CP14FoodPiePiecePumpkin
+    sliceProto: CE14FoodPiePiecePumpkin
   requirements:
   - !type:TagRequired
     tags: 
-    - CP14Pumpkin
+    - CE14Pumpkin

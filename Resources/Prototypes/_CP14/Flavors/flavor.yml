@@ -1,128 +1,128 @@
 # Basic
 
 - type: flavor
-  id: CP14Metallic
+  id: CE14Metallic
   flavorType: Base
-  description: cp14-flavor-base-metallic
+  description: CE14-flavor-base-metallic
 
 - type: flavor
-  id: CP14Invigorating
+  id: CE14Invigorating
   flavorType: Base
-  description: cp14-flavor-base-invigorating
+  description: CE14-flavor-base-invigorating
 
 - type: flavor
-  id: CP14Bitterly
+  id: CE14Bitterly
   flavorType: Base
-  description: cp14-flavor-base-bitterly
+  description: CE14-flavor-base-bitterly
 
 - type: flavor
-  id: CP14Sweetly
+  id: CE14Sweetly
   flavorType: Base
-  description: cp14-flavor-base-sweetly
+  description: CE14-flavor-base-sweetly
 
 - type: flavor
-  id: CP14Stinging
+  id: CE14Stinging
   flavorType: Base
-  description: cp14-flavor-base-stinging
+  description: CE14-flavor-base-stinging
 
 - type: flavor
-  id: CP14Magic
+  id: CE14Magic
   flavorType: Base
-  description: cp14-flavor-base-magic
+  description: CE14-flavor-base-magic
 
 - type: flavor
-  id: CP14Salty
+  id: CE14Salty
   flavorType: Base
-  description: cp14-flavor-base-salt
+  description: CE14-flavor-base-salt
 
 - type: flavor
-  id: CP14VerySweet
+  id: CE14VerySweet
   flavorType: Base
-  description: cp14-flavor-base-very-sweet
+  description: CE14-flavor-base-very-sweet
 
 # Complex
 
 - type: flavor
-  id: CP14Water
+  id: CE14Water
   flavorType: Complex
-  description: cp14-flavor-complex-water
+  description: CE14-flavor-complex-water
 
 - type: flavor
-  id: CP14Vomit
+  id: CE14Vomit
   flavorType: Complex
-  description: cp14-flavor-complex-vomit
+  description: CE14-flavor-complex-vomit
 
 - type: flavor
-  id: CP14Quartz
+  id: CE14Quartz
   flavorType: Complex
-  description: cp14-flavor-complex-quartz
+  description: CE14-flavor-complex-quartz
 
 - type: flavor
-  id: CP14beer
+  id: CE14beer
   flavorType: Complex
-  description: cp14-flavor-complex-beer
+  description: CE14-flavor-complex-beer
 
 - type: flavor
-  id: CP14dwarfbeer
+  id: CE14dwarfbeer
   flavorType: Complex
-  description: cp14-flavor-complex-dwarfbeer
+  description: CE14-flavor-complex-dwarfbeer
 
 - type: flavor
-  id: CP14gerbil
+  id: CE14gerbil
   flavorType: Complex
-  description: cp14-flavor-complex-gerbil
+  description: CE14-flavor-complex-gerbil
 
 - type: flavor
-  id: CP14breeze
+  id: CE14breeze
   flavorType: Complex
-  description: cp14-flavor-complex-breeze
+  description: CE14-flavor-complex-breeze
 
 - type: flavor
-  id: CP14blowLaw
+  id: CE14blowLaw
   flavorType: Complex
-  description: cp14-flavor-complex-blowlaw
+  description: CE14-flavor-complex-blowlaw
 
 - type: flavor
-  id: CP14wine
+  id: CE14wine
   flavorType: Complex
-  description: cp14-flavor-complex-wine
+  description: CE14-flavor-complex-wine
 
 - type: flavor
-  id: CP14zellasianPleasure
+  id: CE14zellasianPleasure
   flavorType: Complex
-  description: cp14-flavor-complex-zellasian-pleasure
+  description: CE14-flavor-complex-zellasian-pleasure
 
 - type: flavor
-  id: CP14leeks
+  id: CE14leeks
   flavorType: Complex
-  description: cp14-flavor-complex-leeks
+  description: CE14-flavor-complex-leeks
 
 - type: flavor
-  id: CP14durandate
+  id: CE14durandate
   flavorType: Complex
-  description: cp14-flavor-complex-durandate
+  description: CE14-flavor-complex-durandate
 
 - type: flavor
-  id: CP14ale
+  id: CE14ale
   flavorType: Complex
-  description: cp14-flavor-complex-ale
+  description: CE14-flavor-complex-ale
 
 - type: flavor
-  id: CP14bloodyTear
+  id: CE14bloodyTear
   flavorType: Complex
-  description: cp14-flavor-complex-bloody-tear
+  description: CE14-flavor-complex-bloody-tear
 
 - type: flavor
-  id: CP14bottomless
+  id: CE14bottomless
   flavorType: Complex
-  description: cp14-flavor-complex-bottomless
+  description: CE14-flavor-complex-bottomless
 
 - type: flavor
-  id: CP14cucumber
+  id: CE14cucumber
   flavorType: Complex
-  description: cp14-flavor-complex-cucumber
+  description: CE14-flavor-complex-cucumber
 
 - type: flavor
-  id: CP14HotPotato
+  id: CE14HotPotato
   flavorType: Complex
-  description: cp14-flavor-complex-hot-potato
+  description: CE14-flavor-complex-hot-potato

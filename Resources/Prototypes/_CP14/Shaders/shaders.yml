@@ -1,13 +1,13 @@
 - type: shader
   id: Wave
   kind: source
-  path: "/Textures/_CP14/Shaders/wave.swsl"
+  path: "/Textures/_CE14/Shaders/wave.swsl"
 
 # Base post-processing
 - type: shader
   id: BasePostProcess
   kind: source
-  path: "/Textures/_CP14/Shaders/base_postprocess.swsl"
+  path: "/Textures/_CE14/Shaders/base_postprocess.swsl"
   params:
     CircleRadius: 420.0
     CircleMinDist: 0.0
@@ -21,12 +21,12 @@
     HDR: 1.5
 
 - type: shader
-  id: CP14ReligionVision
+  id: CE14ReligionVision
   kind: source
-  path: "/Textures/_CP14/Shaders/religion.swsl"
+  path: "/Textures/_CE14/Shaders/religion.swsl"
 
 
 - type: shader
-  id: CP14BlueNoir
+  id: CE14BlueNoir
   kind: source
-  path: "/Textures/_CP14/Shaders/blue_noir.swsl"
+  path: "/Textures/_CE14/Shaders/blue_noir.swsl"

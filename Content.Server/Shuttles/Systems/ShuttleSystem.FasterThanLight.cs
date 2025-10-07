@@ -37,12 +37,12 @@ public sealed partial class ShuttleSystem
      * This is a way to move a shuttle from one location to another, via an intermediate map for fanciness.
      */
 
-    private readonly SoundSpecifier _startupSound = new SoundPathSpecifier("/Audio/_CP14/Effects/ship_start.ogg") //CP14 sound replaced
+    private readonly SoundSpecifier _startupSound = new SoundPathSpecifier("/Audio/_CE14/Effects/ship_start.ogg") //CE14 sound replaced
     {
         Params = AudioParams.Default.WithVolume(-5f),
     };
 
-    private readonly SoundSpecifier _arrivalSound = new SoundPathSpecifier("/Audio/_CP14/Effects/ship_end.ogg") //CP14 sound replaced
+    private readonly SoundSpecifier _arrivalSound = new SoundPathSpecifier("/Audio/_CE14/Effects/ship_end.ogg") //CE14 sound replaced
     {
         Params = AudioParams.Default.WithVolume(-5f),
     };
@@ -137,7 +137,7 @@ public sealed partial class ShuttleSystem
         var parallax = EnsureComp<ParallaxComponent>(mapUid);
         parallax.Parallax = ftlMap.Parallax;
 
-        //CP14 FTL map tweaks
+        //CE14 FTL map tweaks
         var mapLight = EnsureComp<MapLightComponent>(mapUid);
         mapLight.AmbientLightColor = ftlMap.AmbientColor;
 
@@ -152,7 +152,7 @@ public sealed partial class ShuttleSystem
         var gravity = EnsureComp<GravityComponent>(mapUid);
         gravity.Enabled = true;
         gravity.Inherent = true;
-        //CP14 FTL map tweaks ends
+        //CE14 FTL map tweaks ends
 
         return mapUid;
     }
@@ -390,7 +390,7 @@ public sealed partial class ShuttleSystem
         var uid = entity.Owner;
         var comp = entity.Comp1;
         var xform = _xformQuery.GetComponent(entity);
-        //DoTheDinosaur(xform); //CP14 without stunning
+        //DoTheDinosaur(xform); //CE14 without stunning
 
         comp.State = FTLState.Travelling;
         var fromMapUid = xform.MapUid;

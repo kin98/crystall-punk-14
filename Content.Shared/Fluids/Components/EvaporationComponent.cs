@@ -34,5 +34,5 @@ public sealed partial class EvaporationComponent : Component
     /// forcibly vaporizes ALL the chemicals
     /// </summary>
     [DataField]
-    public bool CP14ForceEvaporation = false;
+    public bool CE14ForceEvaporation = false;
 }

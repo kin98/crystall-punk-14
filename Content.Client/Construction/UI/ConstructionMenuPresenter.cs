@@ -273,9 +273,9 @@ namespace Content.Client.Construction.UI
                     || _whitelistSystem.IsWhitelistFail(recipe.EntityWhitelist, _playerManager.LocalEntity.Value))
                     continue;
 
-                //CP14 requirements
+                //CE14 requirements
                 var requirementsMet = true;
-                foreach (var req in recipe.CP14Restrictions)
+                foreach (var req in recipe.CE14Restrictions)
                 {
                     if (!req.Check(_entManager, _playerManager.LocalEntity.Value))
                     {
@@ -286,7 +286,7 @@ namespace Content.Client.Construction.UI
 
                 if (!requirementsMet)
                     continue;
-                //CP14
+                //CE14
 
                 if (!string.IsNullOrEmpty(search) && (recipe.Name is { } name &&
                                                       !name.Contains(search.Trim(),

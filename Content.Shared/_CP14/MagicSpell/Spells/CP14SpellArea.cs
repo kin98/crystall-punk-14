@@ -1,12 +1,12 @@
 using Content.Shared.Whitelist;
 using Robust.Shared.Map;
 
-namespace Content.Shared._CP14.MagicSpell.Spells;
+namespace Content.Shared._CE14.MagicSpell.Spells;
 
-public sealed partial class CP14SpellArea : CP14SpellEffect
+public sealed partial class CE14SpellArea : CE14SpellEffect
 {
     [DataField(required: true)]
-    public List<CP14SpellEffect> Effects { get; set; } = new();
+    public List<CE14SpellEffect> Effects { get; set; } = new();
 
     [DataField]
     public EntityWhitelist? Whitelist;
@@ -23,7 +23,7 @@ public sealed partial class CP14SpellArea : CP14SpellEffect
     [DataField]
     public bool AffectCaster = false;
 
-    public override void Effect(EntityManager entManager, CP14SpellEffectBaseArgs args)
+    public override void Effect(EntityManager entManager, CE14SpellEffectBaseArgs args)
     {
         EntityCoordinates? targetPoint = null;
 
@@ -52,7 +52,7 @@ public sealed partial class CP14SpellArea : CP14SpellEffect
 
             foreach (var effect in Effects)
             {
-                effect.Effect(entManager, new CP14SpellEffectBaseArgs(args.User, null, entity,  targetPoint));
+                effect.Effect(entManager, new CE14SpellEffectBaseArgs(args.User, null, entity,  targetPoint));
             }
 
             count++;

@@ -35,19 +35,19 @@ namespace Content.Shared.Verbs
             IconsOnly = iconsOnly;
         }
 
-        //CP14 verbs
-        public static readonly VerbCategory CP14LockPick =
+        //CE14 verbs
+        public static readonly VerbCategory CE14LockPick =
             new("verb-categories-lock-pick", "/Textures/Interface/VerbIcons/lock.svg.192dpi.png");
-        public static readonly VerbCategory CP14KeyFile =
+        public static readonly VerbCategory CE14KeyFile =
             new("verb-categories-key-file", "/Textures/Interface/VerbIcons/lock.svg.192dpi.png");
-        public static readonly VerbCategory CP14EditLock =
+        public static readonly VerbCategory CE14EditLock =
             new("verb-categories-edit-lock", "/Textures/Interface/VerbIcons/lock.svg.192dpi.png");
 
-        public static readonly VerbCategory CP14ModularCraft =
+        public static readonly VerbCategory CE14ModularCraft =
             new("verb-categories-modular-craft", "/Textures/Interface/AdminActions/unbolt.png");
 
-        public static readonly VerbCategory CP14CurrencyConvert = new("cp14-verb-categories-currency-converter", null); //CP14
-        //CP14 verbs
+        public static readonly VerbCategory CE14CurrencyConvert = new("CE14-verb-categories-currency-converter", null); //CE14
+        //CE14 verbs
 
         public static readonly VerbCategory Admin =
             new("verb-categories-admin", "/Textures/Interface/character.svg.192dpi.png");

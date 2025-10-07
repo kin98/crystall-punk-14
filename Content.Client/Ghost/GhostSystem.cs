@@ -133,11 +133,11 @@ namespace Content.Client.Ghost
             _actions.RemoveAction(uid, component.ToggleLightingActionEntity);
             _actions.RemoveAction(uid, component.ToggleFoVActionEntity);
             _actions.RemoveAction(uid, component.ToggleGhostsActionEntity);
-            //_actions.RemoveAction(uid, component.ToggleGhostHearingActionEntity); //Dont need in CP14
-            //CP14
-            _actions.RemoveAction(uid, component.CP14ToggleRoofActionEntity);
-            _actions.RemoveAction(uid, component.CP14RespawnActionEntity);
-            //CP14 end
+            //_actions.RemoveAction(uid, component.ToggleGhostHearingActionEntity); //Dont need in CE14
+            //CE14
+            _actions.RemoveAction(uid, component.CE14ToggleRoofActionEntity);
+            _actions.RemoveAction(uid, component.CE14RespawnActionEntity);
+            //CE14 end
 
             if (uid != _playerManager.LocalEntity)
                 return;

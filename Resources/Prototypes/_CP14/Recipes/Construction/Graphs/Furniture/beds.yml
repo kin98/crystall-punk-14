@@ -1,26 +1,26 @@
 - type: constructionGraph
-  id: CP14WoodenBed
+  id: CE14WoodenBed
   start: start
   graph:
     - node: start
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: CP14WoodenBed
+        - to: CE14WoodenBed
           steps:
-            - material: CP14WoodenPlanks
+            - material: CE14WoodenPlanks
               amount: 2
-            - material: CP14Cloth
+            - material: CE14Cloth
               amount: 1
               doAfter: 2
-        - to: CP14BirchWoodenBed
+        - to: CE14BirchWoodenBed
           steps:
-          - material: CP14BirchWoodenPlanks
+          - material: CE14BirchWoodenPlanks
             amount: 2
-          - material: CP14Cloth
+          - material: CE14Cloth
             amount: 1
             doAfter: 2
-    - node: CP14WoodenBed
-      entity: CP14WoodenBed
-    - node: CP14BirchWoodenBed
-      entity: CP14BirchWoodenBed
+    - node: CE14WoodenBed
+      entity: CE14WoodenBed
+    - node: CE14BirchWoodenBed
+      entity: CE14BirchWoodenBed

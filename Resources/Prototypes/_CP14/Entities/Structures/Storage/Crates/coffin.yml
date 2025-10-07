@@ -1,13 +1,13 @@
 - type: entity
   parent:
-  - CP14ChestGeneric
-  - CP14BaseFlammable
-  id: CP14CrateCoffin
+  - CE14ChestGeneric
+  - CE14BaseFlammable
+  id: CE14CrateCoffin
   name: coffin
   description: A comfortable and nice looking coffin to comfortably await your resurrection.
   components:
   - type: Sprite
-    sprite: _CP14/Structures/Storage/Crates/coffin.rsi
+    sprite: _CE14/Structures/Storage/Crates/coffin.rsi
     layers:
     - state: base
     - state: closed
@@ -15,11 +15,11 @@
     - state: paper
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Icon
-    sprite: _CP14/Structures/Storage/Crates/coffin.rsi
+    sprite: _CE14/Structures/Storage/Crates/coffin.rsi
     state: base
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: CP14WoodStructural
+    damageModifierSet: CE14WoodStructural
   - type: Destructible
     thresholds:
     - trigger:
@@ -28,7 +28,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          CP14WoodenPlanks1:
+          CE14WoodenPlanks1:
             min: 1
             max: 2
       - !type:PlaySoundBehavior
@@ -37,13 +37,13 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    graph: CP14CrateCoffin
-    node: CP14CrateCoffin
+    graph: CE14CrateCoffin
+    node: CE14CrateCoffin
     containers:
     - entity_storage
   - type: PhysicalComposition
     materialComposition:
-      CP14WoodenPlanks: 30
-      CP14Cloth: 20
+      CE14WoodenPlanks: 30
+      CE14Cloth: 20
   - type: EntityStorage
     capacity: 1

@@ -1,5 +1,5 @@
 - type: entity
-  id: CP14PressurePlateBase
+  id: CE14PressurePlateBase
   abstract: true
   parent: BaseStructure
   placement:
@@ -24,13 +24,13 @@
   - type: Sprite
     snapCardinals: true
     drawdepth: FloorObjects
-    sprite: _CP14/Structures/Specific/Device/pressure_plate.rsi
+    sprite: _CE14/Structures/Specific/Device/pressure_plate.rsi
   - type: ItemPlacer
     maxEntities: 5
   - type: Appearance
   - type: CollisionWake
     enabled: false
-  - type: CP14PressurePlate
+  - type: CE14PressurePlate
     pressedSound:
       path: /Audio/Machines/button.ogg
       params:
@@ -51,13 +51,13 @@
     range: 10
   - type: DeviceLinkSource
     ports:
-      - CP14Pressed
+      - CE14Pressed
       - Status
-      - CP14Released
+      - CE14Released
 
 - type: entity
-  parent: CP14PressurePlateBase
-  id: CP14PressurePlateWooden
+  parent: CE14PressurePlateBase
+  id: CE14PressurePlateWooden
   components:
   - type: Sprite
     layers:

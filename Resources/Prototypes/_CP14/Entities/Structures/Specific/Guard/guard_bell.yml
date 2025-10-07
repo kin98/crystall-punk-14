@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseStructure
-  id: CP14BaseGuardBell
+  id: CE14BaseGuardBell
   name: guard bell
   description: A strong bell to alert the entire settlement of a possible threat.
   categories: [ ForkFiltered ]
@@ -10,68 +10,68 @@
     drawdepth: Mobs
     noRot: true
     offset: 0, 0.2
-    sprite: _CP14/Structures/Specific/Guard/guard_bell.rsi
+    sprite: _CE14/Structures/Specific/Guard/guard_bell.rsi
     layers:
     - state: base
   - type: Damageable
     damageContainer: Inorganic
   - type: TriggerOnActivate
-  - type: CP14TriggerOnDamageReceived
+  - type: CE14TriggerOnDamageReceived
   - type: SpawnOnTrigger
     proto: GuardBellEffect1
   - type: UseDelay
     delay: 2.0
 
 - type: entity
-  id: CP14GuardBell
-  parent: CP14BaseGuardBell
+  id: CE14GuardBell
+  parent: CE14BaseGuardBell
   components:
   - type: Sprite
     layers:
     - state: base
   - type: SpawnOnTrigger
-    proto: CP14GuardBellEffect1
+    proto: CE14GuardBellEffect1
 
 - type: entity
-  id: CP14GuardBell2
-  parent: CP14BaseGuardBell
+  id: CE14GuardBell2
+  parent: CE14BaseGuardBell
   components:
   - type: Sprite
     layers:
     - state: base-2
   - type: SpawnOnTrigger
-    proto: CP14GuardBellEffect2
+    proto: CE14GuardBellEffect2
 
 - type: entity
-  id: CP14GuardBell3
-  parent: CP14BaseGuardBell
+  id: CE14GuardBell3
+  parent: CE14BaseGuardBell
   components:
   - type: Sprite
     layers:
     - state: base-3
   - type: SpawnOnTrigger
-    proto: CP14GuardBellEffect3
+    proto: CE14GuardBellEffect3
 
 - type: entity
-  id: CP14GuardBell4
-  parent: CP14BaseGuardBell
+  id: CE14GuardBell4
+  parent: CE14BaseGuardBell
   components:
   - type: Sprite
     layers:
     - state: base-4
   - type: SpawnOnTrigger
-    proto: CP14GuardBellEffect4
+    proto: CE14GuardBellEffect4
 
 # Effects
 - type: entity
-  id: CP14BaseGuardBellEffect
+  id: CE14BaseGuardBellEffect
   categories: [ HideSpawnMenu ]
   abstract: true
   components:
-  - type: CP14PvsOverride
+  - type: CE14PvsOverride
   - type: EmitSoundOnSpawn
     sound:
-      path: /Audio/_CP14/Misc/scary-bell-short.ogg
+      path: /Audio/_CE14/Misc/scary-bell-short.ogg
       params:
         variation: 0.1
         maxDistance: 200
@@ -82,54 +82,54 @@
     offset: 0, 0.5
     layers:
     - state: circle_increase
-      sprite: _CP14/Effects/Magic/cast_impact.rsi
+      sprite: _CE14/Effects/Magic/cast_impact.rsi
       shader: unshaded
 
 - type: entity
-  id: CP14GuardBellEffect1
-  parent: CP14BaseGuardBellEffect
+  id: CE14GuardBellEffect1
+  parent: CE14BaseGuardBellEffect
   categories: [ HideSpawnMenu ]
   components:
   - type: EmitSoundOnSpawn
     sound:
-      path: /Audio/_CP14/Misc/scary-bell-short.ogg
+      path: /Audio/_CE14/Misc/scary-bell-short.ogg
       params:
         variation: 0.1
         maxDistance: 200
 
 - type: entity
-  id: CP14GuardBellEffect2
-  parent: CP14BaseGuardBellEffect
+  id: CE14GuardBellEffect2
+  parent: CE14BaseGuardBellEffect
   categories: [ HideSpawnMenu ]
   components:
   - type: EmitSoundOnSpawn
     sound:
-      path: /Audio/_CP14/Misc/doom-bell-short.ogg
+      path: /Audio/_CE14/Misc/doom-bell-short.ogg
       params:
         variation: 0.1
         maxDistance: 200
 
 - type: entity
-  id: CP14GuardBellEffect3
-  parent: CP14BaseGuardBellEffect
+  id: CE14GuardBellEffect3
+  parent: CE14BaseGuardBellEffect
   categories: [ HideSpawnMenu ]
   components:
   - type: EmitSoundOnSpawn
     sound:
-      path: /Audio/_CP14/Misc/minor-alert-short.ogg
+      path: /Audio/_CE14/Misc/minor-alert-short.ogg
       params:
         volume: 20
         variation: 0.1
         maxDistance: 200
 
 - type: entity
-  id: CP14GuardBellEffect4
-  parent: CP14BaseGuardBellEffect
+  id: CE14GuardBellEffect4
+  parent: CE14BaseGuardBellEffect
   categories: [ HideSpawnMenu ]
   components:
   - type: EmitSoundOnSpawn
     sound:
-      path: /Audio/_CP14/Misc/major-alert-short.ogg
+      path: /Audio/_CE14/Misc/major-alert-short.ogg
       params:
         variation: 0.1
         maxDistance: 200
